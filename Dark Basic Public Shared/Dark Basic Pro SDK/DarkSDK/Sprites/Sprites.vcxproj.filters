@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Error">
+      <UniqueIdentifier>{f3292f95-8f74-483b-a1fe-0a1edc24f1de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sprites">
+      <UniqueIdentifier>{c4513aad-5370-4a42-a726-3ec8f19c8353}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Sprites\CSpriteManagerC.cpp">
+      <Filter>Sprites</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Sprites\CSpritesC.cpp">
+      <Filter>Sprites</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLMain.cpp" />
+    <ClCompile Include="..\..\Shared\Core\SteamCheckForWorkshop.cpp">
+      <Filter>Sprites</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\Error\CError.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CRuntimeErrors.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Sprites\CSpriteDataC.h">
+      <Filter>Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Sprites\CSpriteManagerC.h">
+      <Filter>Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Sprites\CSpritesC.h">
+      <Filter>Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Sprites\ImageSupport.h">
+      <Filter>Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Sprites.rc" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR>
+<BR>
+<FONT SIZE=3><B><FONT SIZE=3><CENTER>Reserved Words, Remarks and Spacing<BR>
+</CENTER></FONT></B></FONT><BR>
+RESERVED WORDS<BR>
+<BR>
+Words that are deemed to be reserved are the commands of the language. You will not be able to name your variables, arrays or user functions if they exist as part of the language as commands. As you become more familiar with the language, you will be able to naturally avoid using reserved words for your variable and array names.<BR>
+<BR>
+<BR>
+REMARKS<BR>
+<BR>
+You are able to write statements in your program that will be completely ignored when run. This may seem strange at first, but actually provides one of the most important features of your programming armoury. Remarks, also known as code commentary or documentation, are the plain English descriptions of what your program does at any point in the code.<BR>
+<BR>
+Although BASIC is quite concise as a readable language, it"s never entirely clear what a piece of code is supposed to do if you read it for the first time. Do not be fooled into thinking the code you write yourself is for your eyes only. Returning to a piece of code you write 3 months previous will dispel any concerns you may have over the importance of remarks.<BR>
+<BR>
+The trick is to write only a summary of what a piece of code does. Leave out details, data and snippets that may change or be removed. Avoid typing a half-page description as the likelihood is that you"ll never find the time to read it. Remarks become a highly powerful part of your program if used correctly.<BR>
+<BR>
+You can use the REM command to make a comment, as follows:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>REM Print a greeting for the user
+PRINT "Hello World"
+</FONT></PRE>There are other ways to make remarks in a program, such as the single open quote symbol:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>` Print a greeting for the user
+PRINT "Hello World"
+</FONT></PRE>If you wish to "comment out" a number of lines in your program, you can avoid adding a REM command at the start of each line by using the following:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>REMSTART
+PRINT "Hello World"
+PRINT "Hello World"
+PRINT "Hello World"
+REMEND
+</FONT></PRE>Anything between the REMSTART command and the REMEND command will be ignored when the program is run. These commands are especially useful for temporarily removing parts of the program for testing purposes.<BR>
+<BR>
+<BR>
+USE OF SPACING<BR>
+<BR>
+Unlike other BASIC languages, spaces are very important in your programs. It is important to separate commands and parameters, otherwise your program will not be understood. Take for example the line:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>FOR T=1 TO 10
+</FONT></PRE>This would not be recognized if written as:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>FORT=1TO10
+</FONT></PRE>Nor would this be easy to read either. Providing you use spaces to separate commands and parameters, you will encounter no problems with spacing.<BR>
+<BR>
+</td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

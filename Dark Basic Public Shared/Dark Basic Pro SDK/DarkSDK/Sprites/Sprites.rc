@@ -1,0 +1,188 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL"
+            VALUE "CompanyName", "Dark Basic Software Ltd"
+            VALUE "FileDescription", "Dark Basic Professional DLL"
+            VALUE "FileVersion", "V1.0"
+            VALUE "InternalName", "Dark Basic Professional DLL"
+            VALUE "LegalCopyright", "Copyright © 2002"
+            VALUE "LegalTrademarks", "DarkBASIC"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll"
+            VALUE "ProductName", "Dark Basic Professional DLL"
+            VALUE "ProductVersion", "V1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING1             "SPRITE%LLLL%?Sprite@@YAXHHHH@Z%Sprite Number, XPos, YPos, Image Number"
+    IDS_STRING2             "SET SPRITE%LLL%?SetSprite@@YAXHHH@Z%Sprite Number, Backsave, Transparency"
+    IDS_STRING3             "SIZE SPRITE%LLL%?Size@@YAXHHH@Z%Sprite Number, XSize, YSize"
+    IDS_STRING4             "SCALE SPRITE%LF%?Scale@@YAXHM@Z%Sprite Number, Scale"
+    IDS_STRING5             "STRETCH SPRITE%LLL%?Stretch@@YAXHHH@Z%Sprite Number, XScale, YScale"
+    IDS_STRING6             "OFFSET SPRITE%LLL%?Offset@@YAXHHH@Z%Sprite Number, XOffset, YOffset"
+    IDS_STRING7             "MIRROR SPRITE%L%?Mirror@@YAXH@Z%Sprite Number"
+    IDS_STRING8             "FLIP SPRITE%L%?Flip@@YAXH@Z%Sprite Number"
+    IDS_STRING9             "DELETE SPRITE%L%?Delete@@YAXH@Z%Sprite Number"
+    IDS_STRING10            "PASTE SPRITE%LLL%?Paste@@YAXHHH@Z%Sprite Number, XPos, YPos"
+    IDS_STRING11            "HIDE SPRITE%L%?Hide@@YAXH@Z%Sprite Number"
+    IDS_STRING12            "SHOW SPRITE%L%?Show@@YAXH@Z%Sprite Number"
+    IDS_STRING13            "HIDE ALL SPRITES%0%?HideAllSprites@@YAXXZ"
+    IDS_STRING14            "SHOW ALL SPRITES%0%?ShowAllSprites@@YAXXZ"
+    IDS_STRING15            "SPRITE EXIST[%LL%?GetExist@@YAHH@Z%Sprite Number"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING16            "SPRITE X[%LL%?GetX@@YAHH@Z%Sprite Number"
+    IDS_STRING17            "SPRITE Y[%LL%?GetY@@YAHH@Z%Sprite Number"
+    IDS_STRING18            "SPRITE OFFSET X[%LL%?GetXOffset@@YAHH@Z%Sprite Number"
+    IDS_STRING19            "SPRITE OFFSET Y[%LL%?GetYOffset@@YAHH@Z%Sprite Number"
+    IDS_STRING20            "SPRITE WIDTH[%LL%?GetWidth@@YAHH@Z%Sprite Number"
+    IDS_STRING21            "SPRITE HEIGHT[%LL%?GetHeight@@YAHH@Z%Sprite Number"
+    IDS_STRING22            "SPRITE IMAGE[%LL%?GetImage@@YAHH@Z%Sprite Number"
+    IDS_STRING23            "SPRITE SCALE X[%LL%?GetXScale@@YAHH@Z%Sprite Number"
+    IDS_STRING24            "SPRITE SCALE Y[%LL%?GetYScale@@YAHH@Z%Sprite Number"
+    IDS_STRING25            "SPRITE MIRRORED[%LL%?GetMirrored@@YAHH@Z%Sprite Number"
+    IDS_STRING26            "SPRITE FLIPPED[%LL%?GetFlipped@@YAHH@Z%Sprite Number"
+    IDS_STRING27            "SPRITE HIT[%LLL%?GetHit@@YAHHH@Z%Sprite Number, Target Sprite Number"
+    IDS_STRING28            "SPRITE COLLISION[%LLL%?GetCollision@@YAHHH@Z%Sprite Number, Target Sprite Number"
+    IDS_STRING29            "ROTATE SPRITE%LF%?Rotate@@YAXHM@Z%Sprite Number, Angle"
+    IDS_STRING30            "SET SPRITE ALPHA%LL%?SetAlpha@@YAXHH@Z%Sprite Number, Alpha Value"
+    IDS_STRING31            "SET SPRITE DIFFUSE%LLLL%?SetDiffuse@@YAXHHHH@Z%Sprite Number, Red Value, Green Value, Blue Value"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING32            "CREATE ANIMATED SPRITE%LSLLL%?CreateAnimatedSprite@@YAXHPADHHH@Z%Sprite Number, Filename, Across, Down, Image Number"
+    IDS_STRING33            "SET SPRITE TEXTURE COORD%LLFF%?SetTextureCoordinates@@YAXHHMM@Z%Sprite Number, Vertex Index, UValue, VValue"
+    IDS_STRING34            "PLAY SPRITE%LLLL%?Play@@YAXHHHH@Z%Sprite Number, Start Frame, End Frame, Delay Value"
+    IDS_STRING35            "SET SPRITE FRAME%LL%?SetFrame@@YAXHH@Z%Sprite Number, Frame Value"
+    IDS_STRING36            "SET SPRITE IMAGE%LL%?SetImage@@YAXHH@Z%Sprite Number, Image Number"
+    IDS_STRING37            "CLONE SPRITE%LL%?Clone@@YAXHH@Z%Sprite Number, Destination Sprite Number"
+    IDS_STRING38            "SPRITE ANGLE[%FL%?GetAngle@@YAKH@Z%Sprite Number"
+    IDS_STRING39            "SPRITE ALPHA[%LL%?GetAlpha@@YAHH@Z%Sprite Number"
+    IDS_STRING40            "SPRITE RED[%LL%?GetRed@@YAHH@Z%Sprite Number"
+    IDS_STRING41            "SPRITE GREEN[%LL%?GetGreen@@YAHH@Z%Sprite Number"
+    IDS_STRING42            "SPRITE BLUE[%LL%?GetBlue@@YAHH@Z%Sprite Number"
+    IDS_STRING43            "SPRITE FRAME[%LL%?GetFrame@@YAHH@Z%Sprite Number"
+    IDS_STRING44            "MOVE SPRITE%LF%?Move@@YAXHM@Z%Sprite Number, Velocity"
+    IDS_STRING45            "SET SPRITE PRIORITY%LL%?SetPriority@@YAXHH@Z%Sprite Number, Priority"
+    IDS_STRING46            "SPRITE VISIBLE[%LL%?GetVisible@@YAHH@Z%Sprite Number"
+    IDS_STRING47            "SET SPRITE RESIZE%L%?SetSpriteResize@@YAXH@Z%Mode"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING48            "SPRITE PRIORITY[%LL%?GetPriority@@YAHH@Z%Sprite Number"
+    IDS_STRING49            "SET SPRITE FILTER MODE%L%?SetSpriteFilterMode@@YAXH@Z%Clamp Mode"
+    IDS_STRING50            "SET SPRITE RESIZE%LFF%?SetSpriteResize@@YAXHMM@Z%Mode, Global X Offset, Global X Scale"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

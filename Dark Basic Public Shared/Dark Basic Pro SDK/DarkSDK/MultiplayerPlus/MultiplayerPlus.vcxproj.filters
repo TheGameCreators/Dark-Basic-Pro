@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Error">
+      <UniqueIdentifier>{8182b89b-63f8-4e54-91ed-134c0001b02a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\SHARED\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SHARED\MultiplayerPlus\Multiplayer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\SHARED\Error\CError.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SHARED\Error\CRuntimeErrors.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SHARED\MultiplayerPlus\Multiplayer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Script1.rc" />
+  </ItemGroup>
+</Project>

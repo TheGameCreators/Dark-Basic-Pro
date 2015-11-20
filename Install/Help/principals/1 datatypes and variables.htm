@@ -1,0 +1,251 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR>
+<BR>
+<B><FONT SIZE=3><CENTER><FONT SIZE=3>Data Types, Variables and Arrays<BR>
+</FONT></CENTER></FONT></B><BR>
+DATA TYPES<BR>
+<BR>
+We have established that statements are used to write a program. A statement can be broken up into a command and its data. The command is the operation, or task you wish to perform. The data is that which must be used by the command to complete the operation. The data is also referred to as the parameter(s).<BR>
+<BR>
+There are many types of data you can use, including integer numbers, real numbers and string. Each type of data holds a slightly different type of value.<BR>
+<BR>
+Integer Numbers<BR>
+<BR>
+An integer number can hold a whole number, but no fraction. For the value to be negative, you must place a hyphen symbol (-) before the value. You must not use commas as part of the number as this would generate a Syntax Error. Examples of integer numbers:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>42
+10000
+-233000
+-100
+</FONT></PRE>Real Numbers<BR>
+<BR>
+A real number can hold a whole number or a fractional number that uses a decimal point. For the value to be negative, you must place a hyphen symbol (-) before the value. Examples of real numbers:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>20.0005
+99.9
+-5000.12
+-9999.9991
+</FONT></PRE>Strings<BR>
+<BR>
+String data is non-numerical, and is used to store characters and words. All strings consist of characters enclosed within double quotation marks. The string data can include numbers and other numerical symbols but will be treated as text. Examples of strings are:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>"A"
+"Hello World"
+"Telephone"
+"I am 99 years old"
+"1.2.3.4.5.6.7.8.9"
+</FONT></PRE>Each string can consist of as many characters as the memory allows. You can also have a string with no data whatsoever, represented by an empty pair of double quotation marks.<BR>
+<BR>
+DATA TYPE RANGES<BR>
+<BR>
+Each type of data has a maximum and minimum value known as the range. It is important to know these ranges, especially when dealing with smaller datatypes. Below is a list of datatypes and their ranges:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>INTEGER Range : –2,147,483,648 to 2,147,483,647
+REAL Range : 3.4E +/- 38 (7 digits)
+BOOLEAN Range : 0 to 1
+BYTE Range : 0 to 255
+WORD Range : 0 to 65535
+DWORD Range : 0 to 4,294,967,295
+DOUBLE INTEGER Range : –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+DOUBLE FLOAT Range : 1.7E +/- 308 (15 digits)
+</FONT></PRE>VARIABLES<BR>
+<BR>
+The best way to demonstrate what a variable does is by way of an example. Take the calculation:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>A = 3 + 4
+</FONT></PRE>A variable is used to store a value. It"s that simple. You can have a variable that stores any type of data, and you can have as many as you want. The following program shows you how the contents of the variable can be output to the screen:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>A = 3 + 4
+PRINT A
+</FONT></PRE>Now take the next example to show you how variables can be used as freely as standard number types:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>A = 2
+B = 8
+C = A + B
+PRINT C
+</FONT></PRE>In the preceding example, 3 is stored in the A variable, 4 is stored in the B variable and C is given the result of the calculation between A and B. The calculation is based on the values stored within the variables and so the calculation is actually C = 2 + 8. The result, which in this case is 10, is stored as the new value of C and this is the value that eventually gets printed to the screen.<BR>
+<BR>
+So far, we have seen variables used to store and recall integer values. Variables can also store real numbers and strings. In order to allow a variable to store these other types of data, you must make sure the variable is recognized as an integer, real or string variable. To name a real number variable, you must add a hash character (#) as the last character of the variable name. If you want your variable to store a string, you must add a dollar character ($) as the last character of the variable name. Let"s see these new variables used to store and recall real values:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>mydata#=42.5
+PRINT mydata#
+</FONT></PRE>By adding the (#) symbol, we are instructing the program to treat the variable as a real number variable. Exactly the same rule applies to a string variable:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>myname$="Lee"
+PRINT myname$
+</FONT></PRE>All variable names can use either upper or lower case characters, which means a variable called NAME$ is the same variable as name$ or Name$. String variables even support the use of limited maths. The following example adds two strings together and the result is a concatenation of the two strings:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>a$="Hello"
+b$="World"
+c$=a$+b$
+print c$
+</FONT></PRE>To run this example, the text "HelloWorld" will be printed to the screen. Would you be able to alter this example to place a space between "Hello" and "World"?<BR>
+<BR>
+<BR>
+ARRAYS<BR>
+<BR>
+Arrays are going to be a very important part of your future programs. They allow you to store large amounts of data under a single name. You can then access the data by index rather than by name alone.<BR>
+<BR>
+If you had to write a program that stored each weeks lottery numbers, typing out 52 unique variable names is a lot of work, hard to maintain and quite unnecessary. Arrays allow you to create a special kind of variable that can store more than one item of data. You might start your program like this:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>lottery1$="43,76,12,34,12,11"
+lottery2$="76,12,34,12,11,44"
+lottery3$="12,34,12,02,05,07"
+etc..
+</FONT></PRE>Two hours later, you realize you could have written it like this:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>DIM lottery$(52)
+lottery$(1)="43,76,12,34,12,11"
+lottery$(2)="76,12,34,12,11,44"
+lottery$(3)="12,34,12,02,05,07"
+etc..
+</FONT></PRE>We declare a string array using the DIM command followed by a name for our array. Like variables, when we use a dollar symbol after the name we instruct the program to use the array to store only strings. We then enclose in brackets how many items of data we wish the array to store. The array can be filled almost like a variable, but you must also provide the position within the array you wish to store your data.<BR>
+<BR>
+But you then ask yourself what benefits I would have gained using the second approach. If you where also required to print out all 52 lottery numbers to the screen with your first approach you would have to add another 52 statements that printed each variable:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>PRINT lottery1$
+PRINT lottery2$
+PRINT lottery3$
+etc..
+</FONT></PRE>But if you had used an array, the same example would look like this:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>PRINT lottery$(1)
+PRINT lottery$(2)
+PRINT lottery$(3)
+etc..
+</FONT></PRE>You will have noticed that by using an array, you no longer have to refer to your data using a unique variable name. You can now point to the data you want using a position number. Accessing data this way has a thousand advantages over trying to access data by variable name alone, as you will discover. One example would be to improve the above like this:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>FOR T=1 TO 52
+PRINT lottery$(T)
+NEXT T
+</FONT></PRE>Incredibly the above code replaced 52 PRINT statements with just 3 statements. With the above example, T is incremented from 1 to 52 within a loop that prints out the contents of the array at that position.<BR>
+<BR>
+Arrays can also store multiple levels of data. At the moment our lottery entries are stored as strings and the numbers are hard to get at. Let"s say we wanted to store all six numbers for every lottery week, we would create an array like this:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>DIM lottery(52,6)
+</FONT></PRE>Without the dollar symbol($), we are declaring the array to store integer numbers instead of strings. You will also notice we have a second number separated by a comma. This means for every array position from 1 to 52, there is a sub-set numbered 1 to 6 in which multiple data can be stored. You can visualize an array as a filing cabinet with large draws numbered 1 to 52. Within each of the 52 draws is a tray with 6 boxes inside. You can store a value in each box. In all you can store 312 (52 x 6) values in this array. You can have up to five dimensions in your array, which means you can create an array as big as (1,2,3,4,5). Be careful when declaring dimensions, as large arrays consume large amounts of memory and may reduce overall performance of your program.<BR>
+<BR>
+Entering data into our new array is elementary:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>lottery(1,1)=43
+lottery(1,2)=76
+lottery(1,3)=12
+lottery(1,4)=34
+lottery(1,5)=12
+lottery(1,6)=11
+lottery(2,1)=43
+lottery(2,2)=76
+lottery(2,3)=12
+lottery(2,4)=34
+lottery(2,5)=12
+lottery(2,6)=11
+</FONT></PRE>You are now able to give your program access to much more useful data. Unlike the string approach, you could make your program count how many times a certain number has appeared.<BR>
+<BR>
+As you have determined, arrays need to be declared as a particular type. You can have an array of integer numbers, real numbers or strings. You cannot have multiple types in the same array, but you can declare new arrays dedicated to holding such data.<BR>
+<BR>
+You can also declare arrays as global or local. Global arrays are the ones you are familiar with, and can be accessed by any part of the program. Local arrays can only be accessed by the function in which it was created. It is important to note that the global array must be delcared at the top of the main source code of the program as arrays are dynamically created only when the DIM command is executed. Placing DIM commands at the top of included source code will not dynamically create the array unless it lies within a subroutine called from the main program.<BR>
+<BR>
+To re-enforce the variable is global, you can declare it as follows:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>GLOBAL myglobal AS INTEGER
+</FONT></PRE>For local variables, you can re-enforce the declaration as follows<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>FUNCTION myfunction()
+ LOCAL mylocal as INTEGER
+ENDFUNCTION
+</FONT></PRE>USER DEFINED TYPES<BR>
+<BR>
+If the current set of datatypes is inadequate for your needs, you can can create your own data types using user-defined-type. User defined types are useful for storing data using logical fields rather than the unfriendly list of subscripts used by arrays.<BR>
+<BR>
+To create a user defined type, you must first declare it at the top of your program. To do so, you would give your type a name and a list of fields it contains:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>TYPE MyType
+ Fieldname1
+ Fieldname2
+ Fieldname3
+ENDTYPE
+</FONT></PRE>The above code creates a type called MyType with three fields contained within it. As the fields have no declaration, they are assumed to be integers. The same code could also be truncated to a single line like so:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>TYPE MyType Fieldname1 Fieldname2 Fieldname3 ENDTYPE
+</FONT></PRE>To use your type, you simply create a variable and declare it with your new type. To declare a variable as a specific type, you would use the AS statement:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>MyVariable AS MyType
+</FONT></PRE>You can then assign data to your variable as normal, with the added bonus of the fields you have given your variable like so:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>MyVariable.Fieldname1 = 41
+MyVariable.Fieldname2 = 42
+MyVariable.Fieldname3 = 43
+</FONT></PRE>At the moment, the type is assuming our fields are integers. We may wish to declare our fields as a real number, string or other datatype. We can do so using the same AS statement within the type definition. So the following code makes more sense we shall give our type and fields sensible names:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>TYPE AccountEntryType
+ Number AS INTEGER
+ Name AS STRING
+ Amount AS FLOAT
+ENDTYPE
+</FONT></PRE>You can use a type like any other, so creating and using an array of the above is simply a case of declaring the array with your new type:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>DIM Accounts(100) AS AccountEntryType
+Accounts(1).Number=12345
+Accounts(1).Name="Lee"
+Accounts(1).Amount=0.42
+</FONT></PRE>As you will eventually discover you can have types within types for more complex data structures so we can imagine one of the fields contains more than one value. We would define two user defined types, and then use one of them in the declaration of one of the fields of the section user defined type, as follows:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>TYPE AmountsType
+ CurrentBalance AS FLOAT
+ SavingsBalance AS FLOAT
+ CreditCardBalance AS FLOAT
+ENDTYPE
+
+TYPE AccountEntryType
+ Number AS INTEGER
+ Name AS STRING
+ Amount AS AmountsType
+ENDTYPE
+
+DIM Accounts(100) AS AccountEntryType
+Accounts(1).Number=12345
+Accounts(1).Name="Lee"
+Accounts(1).Amount.CurrentBalance=0.42
+Accounts(1).Amount.SavingsBalance=100.0
+Accounts(1).Amount.CreditCardBalance=-5000.0
+</FONT></PRE>As you can see, user defined types are not only powerful, they make the readability of your programs far easier. Using named fields instead of a subscript value within an array, you can save yourself many hours all for the sake of an incorrect subscript value throwing out your program results.<BR>
+<BR>
+POINTERS<BR>
+<BR>
+You can use the value of a variable to specify, read and write the contents of an address by using the "*" indirect symbol. This is useful for obtaining areas of memory you wish to read from or write to and control the pointer into this memory using a standard variable.<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>Ptr as DWORD
+Ptr=Make Memory(4)
+*Ptr=42
+PRINT *Ptr
+</FONT></PRE>The above code simply declares Ptr as a DWORD variable, assigns the variable a created area of memory, writes the value 42 into that location of memory and then reads the same address back, the contents of which is to be printed to the screen. You would never use an absolute address to assign a pointer. There are commands such as GET BACKBUFFER PTR and MAKE MEMORY which return such address values. You can only use a standard variable with indirection, and array and type variables are not valid. This is an advanced feature and as such potentially dangerous. Writing into invalid memory can cause unexpected program behaviour and even crashing. Use caution when employing the indirect symbol.<BR>
+<BR>
+Pointer based memory access is limited to 32-bit DWORD datatypes only, and does not support advanced pointer concepts such as pointer addition, data type casting or non-32-bit data access. To achieve these concepts, use your own code to manage pointer address values and bitwise commands.<BR>
+</td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR>
+<BR>
+<FONT SIZE=3><B><FONT SIZE=3><CENTER>Numerical Bases<BR>
+</CENTER></FONT></B></FONT><BR>
+Numerical bases are the method by which a value is represented. Most number systems use Base 10 which essentially consists of digits zero through nine. This however is not the only method of representing a value. There are many other forms of numerical representation, some of which are supported below.<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>BINARY
+</FONT></PRE>numerical value representing Base 2 and consists only of values zero and one. Counting from zero through to ten, the binary values would look like 0, 01, 10, 11, 100, 101, 110, 111, 1000, 1001, 1010. A binary value is coded with a "%" symbol prefix to inform the compiler that the value is binary. In binary, the value ten would be coded %1010.<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>OCTAL
+</FONT></PRE>numerical value representing Base 8 and consists of values zero through seven. Counting from zero through to ten, the octal values would look like 00, 01, 02, 03, 04, 05, 06, 07, 10, 11, 12. An octal value is coded with a "0c" prefix to inform the compiler that the value is octal. In octal, the value ten would be coded 0c12.<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>HEXADECIMAL
+</FONT></PRE>numerical value representing Base 16 and consists of values 0 through F. Counting from zero through to twenty, the hexadecimal values would look like 00, 01, 02, 03, 04, 05, 06, 07, 08, 09, 0A, 0B, 0C, 0D, 0E, 0F, 10, 11, 12, 13, 14. A hexadecimal value is coded with a "0x" prefix to inform the compiler that the value is hex. In hexadecimal, the value twenty would be coded 0x14.<BR>
+<BR>
+Be aware that hexidecimal, binary and octal literals are limited to 32-bit values. In order to assign non-base-10 literals to a 64-bit double variable, you must apply an addition or multiplication to assign the value.<BR>
+<BR>
+Literals are only defined as integer, float or string. If you wish to perform maths on other data types such as double integer or double float, you must store your literal values inside a variable of the desired type. For example instead of the code X AS DOUBLE INTEGER : X=10^10 you must code X AS DOUBLE INTEGER : A AS DOUBLE INTEGER : A=10 : X=A^A When assigning a literal value to a variable in one command such as GLOBAL VAR = 42, this is acceptable. You cannot however feed a value from an expression to initialise a variable in this way. Instead break the code apart, such as GLOBAL VAR : VAR=RGB(0,0,0)<BR>
+<BR>
+</td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

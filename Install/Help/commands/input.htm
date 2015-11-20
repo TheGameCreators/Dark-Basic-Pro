@@ -1,0 +1,115 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+</td></tr></table>
+<center><table width="340" border="0" cellpadding="0" cellspacing="0"><tr><td ALIGN="center"><FONT SIZE=4 FACE=Verdana><B>input</B></FONT><BR><IMG SRC=..\gfx\divide.jpg width="340" height=5><BR>
+</td></tr></table></center><br><table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+This command set can detect, select and read any game controller device, keyboard or mouse device connected to your computer. Force feedback actions are also supported.<BR>
+<BR>
+<PRE><FONT FACE=Verdana SIZE=1><a href="input\SHOW MOUSE.htm">SHOW MOUSE</a> : SHOW MOUSE
+<a href="input\HIDE MOUSE.htm">HIDE MOUSE</a> : HIDE MOUSE
+<a href="input\POSITION MOUSE.htm">POSITION MOUSE</a> : POSITION MOUSE X,Y
+<a href="input\CHANGE MOUSE.htm">CHANGE MOUSE</a> : CHANGE MOUSE Cursor Number
+<BR>
+<a href="input\CLEAR ENTRY BUFFER.htm">CLEAR ENTRY BUFFER</a> : CLEAR ENTRY BUFFER
+<a href="input\WRITE TO CLIPBOARD.htm">WRITE TO CLIPBOARD</a> : WRITE TO CLIPBOARD String
+<a href="input\WRITE TO REGISTRY.htm">WRITE TO REGISTRY</a> : WRITE TO REGISTRY Folder Name, Key Name, Value
+<a href="input\WRITE STRING TO REGISTRY.htm">WRITE STRING TO REGISTRY</a> : WRITE STRING TO REGISTRY Folder Name, Key Name, String
+<BR>
+<a href="input\PERFORM CHECKLIST FOR CONTROL DEVICES.htm">PERFORM CHECKLIST FOR CONTROL DEVICES</a> : PERFORM CHECKLIST FOR CONTROL DEVICES
+<a href="input\SET CONTROL DEVICE INDEX.htm">SET CONTROL DEVICE INDEX</a> : SET CONTROL DEVICE INDEX Index Value
+<a href="input\CONTROL DEVICE INDEX.htm">CONTROL DEVICE INDEX</a> : Return Integer=CONTROL DEVICE INDEX()
+<a href="input\SET CONTROL DEVICE.htm">SET CONTROL DEVICE</a> : SET CONTROL DEVICE Device Name$
+<a href="input\FORCE UP.htm">FORCE UP</a> : FORCE UP Magnitude Value
+<a href="input\FORCE DOWN.htm">FORCE DOWN</a> : FORCE DOWN Magnitude Value
+<a href="input\FORCE LEFT.htm">FORCE LEFT</a> : FORCE LEFT Magnitude Value
+<a href="input\FORCE RIGHT.htm">FORCE RIGHT</a> : FORCE RIGHT Magnitude Value
+<a href="input\FORCE ANGLE.htm">FORCE ANGLE</a> : FORCE ANGLE Magnitude Value, Angle Value, Delay Value
+<a href="input\FORCE NO EFFECT.htm">FORCE NO EFFECT</a> : FORCE NO EFFECT
+<a href="input\FORCE WATER EFFECT.htm">FORCE WATER EFFECT</a> : FORCE WATER EFFECT Magnitude Value, Delay Value
+<a href="input\FORCE SHOOT.htm">FORCE SHOOT</a> : FORCE SHOOT Magnitude Value, Delay Value
+<a href="input\FORCE CHAINSAW.htm">FORCE CHAINSAW</a> : FORCE CHAINSAW Magnitude Value, Delay Value
+<a href="input\FORCE IMPACT.htm">FORCE IMPACT</a> : FORCE IMPACT Magnitude Value, Delay Value
+<a href="input\FORCE AUTO CENTER ON.htm">FORCE AUTO CENTER ON</a> : FORCE AUTO CENTER ON
+<a href="input\FORCE AUTO CENTER OFF.htm">FORCE AUTO CENTER OFF</a> : FORCE AUTO CENTER OFF
+<BR>
+<a href="input\MOUSECLICK.htm">MOUSECLICK</a> : Return Integer=MOUSECLICK()
+<a href="input\MOUSEMOVEX.htm">MOUSEMOVEX</a> : Return Integer=MOUSEMOVEX()
+<a href="input\MOUSEMOVEY.htm">MOUSEMOVEY</a> : Return Integer=MOUSEMOVEY()
+<a href="input\MOUSEMOVEZ.htm">MOUSEMOVEZ</a> : Return Integer=MOUSEMOVEZ()
+<a href="input\MOUSEX.htm">MOUSEX</a> : Return Integer=MOUSEX()
+<a href="input\MOUSEY.htm">MOUSEY</a> : Return Integer=MOUSEY()
+<a href="input\MOUSEZ.htm">MOUSEZ</a> : Return Integer=MOUSEZ()
+<BR>
+<a href="input\UPKEY.htm">UPKEY</a> : Return Integer=UPKEY()
+<a href="input\DOWNKEY.htm">DOWNKEY</a> : Return Integer=DOWNKEY()
+<a href="input\LEFTKEY.htm">LEFTKEY</a> : Return Integer=LEFTKEY()
+<a href="input\RIGHTKEY.htm">RIGHTKEY</a> : Return Integer=RIGHTKEY()
+<a href="input\CONTROLKEY.htm">CONTROLKEY</a> : Return Integer=CONTROLKEY()
+<a href="input\SHIFTKEY.htm">SHIFTKEY</a> : Return Integer=SHIFTKEY()
+<a href="input\RETURNKEY.htm">RETURNKEY</a> : Return Integer=RETURNKEY()
+<a href="input\ESCAPEKEY.htm">ESCAPEKEY</a> : Return Integer=ESCAPEKEY()
+<a href="input\SPACEKEY.htm">SPACEKEY</a> : Return Integer=SPACEKEY()
+<a href="input\SCANCODE.htm">SCANCODE</a> : Return Integer=SCANCODE()
+<a href="input\KEYSTATE.htm">KEYSTATE</a> : Return Integer=KEYSTATE(Scancode)
+<a href="input\ENTRY$.htm">ENTRY$</a> : Return String=ENTRY$()
+<a href="input\GET CLIPBOARD$.htm">GET CLIPBOARD$</a> : Return String=GET CLIPBOARD$()
+<a href="input\GET REGISTRY.htm">GET REGISTRY</a> : Return Integer=GET REGISTRY(Folder Name, Key Name)
+<a href="input\GET REGISTRY$.htm">GET REGISTRY$</a> : Return String=GET REGISTRY$(Folder Name, Key Name)
+<a href="input\GET KEY STATE.htm">GET KEY STATE</a> : Return Integer=GET KEY STATE(Virtual Key Value)
+<a href="input\SET KEY STATE TOGGLE.htm">SET KEY STATE TOGGLE</a> : SET KEY STATE TOGGLE Virtual Key Value, Index Value
+<BR>
+<a href="input\JOYSTICK UP.htm">JOYSTICK UP</a> : Return Integer=JOYSTICK UP()
+<a href="input\JOYSTICK DOWN.htm">JOYSTICK DOWN</a> : Return Integer=JOYSTICK DOWN()
+<a href="input\JOYSTICK LEFT.htm">JOYSTICK LEFT</a> : Return Integer=JOYSTICK LEFT()
+<a href="input\JOYSTICK RIGHT.htm">JOYSTICK RIGHT</a> : Return Integer=JOYSTICK RIGHT()
+<a href="input\JOYSTICK X.htm">JOYSTICK X</a> : Return Integer=JOYSTICK X()
+<a href="input\JOYSTICK Y.htm">JOYSTICK Y</a> : Return Integer=JOYSTICK Y()
+<a href="input\JOYSTICK Z.htm">JOYSTICK Z</a> : Return Integer=JOYSTICK Z()
+<a href="input\JOYSTICK FIRE A.htm">JOYSTICK FIRE A</a> : Return Integer=JOYSTICK FIRE A()
+<a href="input\JOYSTICK FIRE B.htm">JOYSTICK FIRE B</a> : Return Integer=JOYSTICK FIRE B()
+<a href="input\JOYSTICK FIRE C.htm">JOYSTICK FIRE C</a> : Return Integer=JOYSTICK FIRE C()
+<a href="input\JOYSTICK FIRE D.htm">JOYSTICK FIRE D</a> : Return Integer=JOYSTICK FIRE D()
+<a href="input\JOYSTICK FIRE X.htm">JOYSTICK FIRE X</a> : Return Integer=JOYSTICK FIRE X(Button Number)
+<a href="input\JOYSTICK SLIDER A.htm">JOYSTICK SLIDER A</a> : Return Integer=JOYSTICK SLIDER A()
+<a href="input\JOYSTICK SLIDER B.htm">JOYSTICK SLIDER B</a> : Return Integer=JOYSTICK SLIDER B()
+<a href="input\JOYSTICK SLIDER C.htm">JOYSTICK SLIDER C</a> : Return Integer=JOYSTICK SLIDER C()
+<a href="input\JOYSTICK SLIDER D.htm">JOYSTICK SLIDER D</a> : Return Integer=JOYSTICK SLIDER D()
+<a href="input\JOYSTICK TWIST X.htm">JOYSTICK TWIST X</a> : Return Integer=JOYSTICK TWIST X()
+<a href="input\JOYSTICK TWIST Y.htm">JOYSTICK TWIST Y</a> : Return Integer=JOYSTICK TWIST Y()
+<a href="input\JOYSTICK TWIST Z.htm">JOYSTICK TWIST Z</a> : Return Integer=JOYSTICK TWIST Z()
+<a href="input\JOYSTICK HAT ANGLE.htm">JOYSTICK HAT ANGLE</a> : Return Integer=JOYSTICK HAT ANGLE(Hat Number)
+<a href="input\SET JOYSTICK DEADZONE.htm">SET JOYSTICK DEADZONE</a> : SET JOYSTICK DEADZONE Percentage Value
+<a href="input\JOYSTICK INFORMATION.htm">JOYSTICK INFORMATION</a> : Return Integer=JOYSTICK INFORMATION(Integer Value)
+<BR>
+<a href="input\CONTROL DEVICE NAME$.htm">CONTROL DEVICE NAME$</a> : Return String=CONTROL DEVICE NAME$()
+<a href="input\CONTROL DEVICE X.htm">CONTROL DEVICE X</a> : Return Integer=CONTROL DEVICE X()
+<a href="input\CONTROL DEVICE Y.htm">CONTROL DEVICE Y</a> : Return Integer=CONTROL DEVICE Y()
+<a href="input\CONTROL DEVICE Z.htm">CONTROL DEVICE Z</a> : Return Integer=CONTROL DEVICE Z()
+</PRE></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\..\main.htm"><img src="..\..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\commands.htm"><img src="..\..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\..\examples.htm"><img src="..\..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\documents.htm"><img src="..\..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\..\index.htm"><img src="..\..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<!-- Function Head -->
+<font face="Verdana" size="5">
+<b>
+SET EFFECT ON
+</b>
+<font face="Verdana" size="2">
+<p>
+This command will load and apply an FX file to an object. 
+</p>
+</font>
+<!-- Synopsis -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Syntax
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+SET EFFECT ON Object Number, Effect Filename, Texture Flag
+</pre>
+</font>
+<!-- Parameters -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Parameters
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+Object Number
+</pre>
+<blockquote>
+Integer
+<br>
+The object number
+</blockquote>
+<pre>
+Effect Filename
+</pre>
+<blockquote>
+String
+<br>
+The effect number
+</blockquote>
+<pre>
+Texture Flag
+</pre>
+<blockquote>
+Integer
+<br>
+The texture flag
+</blockquote>
+</font>
+<BR>
+<!-- Returns -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Returns
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+This command does not return a value.
+</p>
+</font>
+<!-- Description -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Description
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+If the object does not exist onto which an effect is set, a default model is created either specified by the FX file or if none is specified, an internal pyramid model. The FX filename must point to an FX file that is compatible with the DX9 effect framework and typically uses the extension ".fx". If the Texture Flag is set to zero, the effect will use the textures already mapped to the model, and a value of one will discard the current textures and load the textures specified in the FX file. Typically, effects rely on the specified model and textures in the FX file to function properly. Be aware that if you want the X file specified in the effect to load automatically, that X file must be completely compatible with the latest DirectX 9.0c loader, otherwise the model will not be used. The DirectX mesh loader differs from the DBPro object loader, in that the DBP loader can parse and handle more variants of X file.
+</p>
+</font>
+<!-- Examples -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Example Code
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+backdrop off : cls : sync on : sync rate 0 : hide mouse:cls 0<BR>
+cd "fx\bubble"<BR>
+load effect "bubble.fx",1,1<BR>
+load object "sphere.x",1<BR>
+if effect exist(1)=1 then set object effect 1,1<BR>
+position object 1,0,0,0<BR>
+while mouseclick()=0:sync:endwhile<BR>
+while mouseclick()=1:endwhile<BR>
+delete object 1<BR>
+delete effect 1<BR>
+end<BR>
+</pre>
+</font>
+<!-- See Also -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+See also
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+<a href="..\basic3d.htm">BASIC3D Commands Menu<BR>
+</a>
+<a href="..\..\index.htm">Index</a><BR>
+</p>
+</font>
+<BR>
+<!-- Function Footer -->
+</font>
+</td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

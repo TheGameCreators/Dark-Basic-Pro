@@ -1,0 +1,485 @@
+rem
+rem Browse Media In DBPro
+rem
+
+rem Auto globals
+global autotest : autotest=0
+global autodelay : autodelay=10000
+
+rem choose text font
+set display mode 800,600,32,1
+set text font "courier new"
+set text size 16
+
+rem Images needed
+load image "BrowseMedia.png",3
+
+rem set correct media folder
+if cl$()=""
+ if path exist("Downloads")=1
+  set dir "Downloads"
+ endif
+else
+ if path exist(cl$())=1
+  set dir cl$()
+ endif
+endif
+
+rem sprite for image preview
+global imgmax
+global imgindex
+global imgtimer as DWORD
+global dim imgx(300)
+global dim imgy(300)
+global dim img$(300)
+global dim imgmode(300)
+
+rem Init program
+sync on : sync rate 120 : disable escapekey
+
+rem Create 3D camera
+make camera 1 : set camera to image 1,100,512,512,0
+color backdrop 1,rgb(0,128,0) : set current camera 0
+
+rem logo sprite
+set sprite 1,0,0
+
+rem If this an FPSC browse?
+tokay=0
+dr$=lower$(get dir$())
+fd$="fps creator"
+drn=len(dr$)-len(fd$)
+for n=1 to drn
+ if left$(dr$,len(fd$))=fd$ then tokay=1
+ dr$=right$(dr$,len(dr$)-1)
+next n
+if tokay=1
+ `
+ rem If FPSC platform, find through recursing entitybank & segments purchased folders
+ listindex=addfpscmedia("files\entitybank\purchased","",0)
+ listindex=addfpscmedia("files\segments\purchased","",listindex)
+ if listindex=0
+  exit prompt "No media is present in Game Creator Store folder","Media Browser" : end
+ endif
+ `
+else
+ `
+ rem If non-FPSC, a pure folder of items to scan
+ listindex=0
+ perform checklist for files
+ for c=1 to checklist quantity()
+  if checklist value a(c)=1
+   file$=checklist string$(c)
+   if file$<>"." and file$<>".."
+    inc listindex
+    dim list$(listindex)
+    list$(listindex)=file$
+   endif
+  endif
+ next c
+ if listindex=0
+  exit prompt "No media is present in Game Creator Store folder","Media Browser" : end
+ endif
+ `
+endif
+
+rem generate display name
+dim listname$(listindex)
+for l=0 to listindex
+ listname$(l)=getfile$(list$(l))
+next l
+
+rem set vars
+high=1 : scrollpos=1
+
+rem cause 3D to go in front of images and text
+draw to back : backdrop off
+
+rem main loop
+f$="backdrop.dds" : if file exist(f$)=1 then load image f$,1
+mainloop=1
+noescapepause=0
+while mainloop=1
+ `
+ rem backdrop
+ `cls rgb(0,0,64) : if image exist(1)=1 then paste image 1,0,0
+ if image exist(3)=1 then paste image 3,0,0
+ `
+ rem control
+ ink rgb(225,225,255),0
+ if scancode()=33 and enterkeyword=0 then enterkeyword=1 : clear entry buffer
+ if scancode()=49 and nextkeyword=0 and pressed=0 then nextkeyword=2 : pressed=timer() : nextprompt=10
+ if nextkeyword=3 then nextkeyword=2
+ if nextkeyword<>0 or previewline<>showpreviewline or nextprompt>0
+  rem prompt next search
+  if nextprompt>0 then dec nextprompt
+  center text 320+((750-320)/2),34+(33*15),"SEARCHING FOR '"+findkeyword$+"'"
+ else
+  if enterkeyword=1
+   rem find keyword entry
+   center text 320+((750-320)/2),35+(33*15),"ENTER KEYWORD TO SEARCH FOR MEDIA"
+   center text 320+((750-320)/2),35+(35*15),">"+entry$(1)+"<"
+   if escapekey()=1 then enterkeyword=0 : noescapepause=50
+   if returnkey()=1
+    while returnkey()<>0 : sleep 1 : endwhile
+    enterkeyword=0 : findkeyword$=lower$(left$(entry$(1),len(entry$(1))-1)) : clear entry buffer
+    nextkeyword=3 : pressed=timer()
+   endif
+  else
+   rem regular browsing
+   if scancode()=0 then pressed=0
+   if pressed<>0 and timer()-pressed>150 and scancode()<>49 then pressed=0
+   if pressed=0
+    if upkey()=1 and high>1 then dec high : pressed=timer() : foundline=-1
+    if downkey()=1 and high<listindex then inc high : pressed=timer() : foundline=-1
+    if keystate(201)=1 and high>1
+     dec high,30 : pressed=timer() : foundline=-1
+     if high<1 then high=1
+    endif
+    if keystate(209)=1 and high<listindex
+     inc high,30 : pressed=timer() : foundline=-1
+     if high>listindex then high=listindex
+    endif
+   endif
+  endif
+ endif
+ `
+ rem preview triggered
+ if triggerpreviewnextcycle>0 and scancode()=0
+  previewmedia(list$(triggerpreviewnextcycle-1))
+  triggerpreviewnextcycle=0
+ endif
+ `
+ rem control preview
+ scrollpos=high-15
+ if scrollpos<1 then scrollpos=1
+ if high<>previewindex
+  previewindex=high
+  previewline=0
+  showpreviewline=0
+  triggerpreviewnextcycle=1+high
+  automatedcycling=1
+ endif
+ `
+ rem display
+ set cursor 0,25
+ ink rgb(225,225,255),0
+ print "    ";"Viewing media "+str$(high)+" of "+str$(listindex)
+ set cursor 0,18+35
+ scrollposmax=scrollpos+27 : rem 30
+ if scrollposmax>listindex then scrollposmax=listindex
+ for i=scrollpos to scrollposmax
+  if high=i
+   ink rgb(255,255,255),0
+  else
+   ink rgb(205,205,255),0
+  endif
+  print "    ";right$(listname$(i),33)
+ next i
+ rem show preview
+ ink rgb(255,255,0),0
+ if triggerpreviewnextcycle=0
+  if imgmax>=123
+   if spacekey()=1 then automatedcycling=0
+   if automatedcycling=0
+    if spacekey()=0 then spacedpressed=0
+    if spacekey()=1 and spacedpressed=0
+     spacedpressed=1
+     inc imgindex : if imgindex>imgmax then imgindex=123
+    endif
+   else
+    if timer()>imgtimer
+     inc imgindex : if imgindex>imgmax then imgindex=123
+     if imgmode(imgindex)=1 or imgmode(imgindex)=3
+      rem models and sound have longer prview
+      imgtimer=timer()+2000
+     else
+      imgtimer=timer()+1000
+     endif
+    endif
+   endif
+   center text 335+215,35+460,img$(imgindex)+" ("+str$(imgindex-122)+"/"+str$(imgmax-122)+")"
+   if imgmode(imgindex)=1
+    for i=0 to 100
+     if object exist(123+i)=1 then hide object 123+i
+     if sound exist(123+i)=1 then stop sound 123+i
+    next i
+    show object imgindex
+    yrotate object imgindex,object angle y(imgindex)+1.0
+    sprite 1,335,35,100
+    size sprite 1,430,460
+    show sprite 1
+   endif
+   if imgmode(imgindex)=2
+    for i=0 to 100
+     if object exist(123+i)=1 then hide object 123+i
+     if sound exist(123+i)=1 then stop sound 123+i
+    next i
+    if image exist(imgindex)=1
+     imgposx=(430-imgx(imgindex))/2
+     imgposy=(460-imgy(imgindex))/2
+     sprite 1,335+imgposx,35+imgposy,imgindex
+     size sprite 1,imgx(imgindex),imgy(imgindex)
+     show sprite 1
+    else
+     hide sprite 1
+    endif
+   endif
+   if imgmode(imgindex)=3
+    for i=0 to 100
+     if object exist(123+i)=1 then hide object 123+i
+     if sound exist(123+i)=1 and imgindex<>123+i then stop sound 123+i
+    next i
+    if sound playing(imgindex)=0 then loop sound imgindex
+    center text 335+215,35+445,"..sound looping.."
+    hide sprite 1
+   endif
+  else
+   center text 335+215,35+460,"no media found in folder"
+   hide sprite 1
+  endif
+ else
+  center text 335+215,35+460,"..loading media from folder.."
+  hide sprite 1
+ endif
+ `
+ rem escape exits browser, but if noescape set, must release escape key before can quit
+ if escapekey()<>0 and noescapepause=0 then mainloop=0
+ if noescapepause>0
+  if noescapepause>1
+   dec noescapepause
+  else
+   if escapekey()=0 then noescapepause=0
+  endif
+ endif
+ `
+ rem update screen
+ sync : sleep 1
+ `
+endwhile
+end
+
+function previewmedia(folderorfile$)
+ `
+ rem go into dir
+ storeddir$=get dir$()
+ `
+ rem remove old image
+ imgmax=123
+ imgindex=123
+ for i=0 to 100
+  if object exist(123+i)=1 then delete object 123+i
+  if image exist(123+i)=1 then delete image 123+i
+  if sound exist(123+i)=1 then delete sound 123+i
+ next i
+ `
+ rem look for media
+ ext$=lower$(right$(folderorfile$,4))
+ if ext$=".fpe" or ext$=".fps"
+  previewfpscfile(folderorfile$)
+ else
+  folder$=folderorfile$
+  scandir(folder$,"")
+ endif
+ dec imgmax
+ `
+ rem restore dir
+ set dir storeddir$
+ `
+endfunction
+
+function scandir(folder$,rel$)
+ `
+ set dir folder$
+ find first : fin=0
+ while get file type()>-1
+  file$=lower$(get file name$())
+  if file$="." or file$=".."
+   rem ignore . and ..
+  else
+   if get file type()=1
+    rem folder
+    scandir(file$,rel$+file$+"\")
+    find first
+    if fin>0
+     t=1
+     while t<=fin and get file type()>-1
+      find next
+      inc t
+     endwhile
+    endif
+   else
+    rem file
+    previewfile(file$)
+   endif
+  endif
+  if get file type()>-1 then find next
+  fin=fin+1
+ endwhile
+ set dir ".."
+ `
+endfunction
+
+function previewfile(file$)
+ `
+ if len(file$)>0
+    `
+    rem make sure it has not already been previewed
+    justfile$=getfile$(file$)
+    for check=123 to imgmax-1
+     if img$(check)=justfile$ then exitfunction
+    next check
+    `
+    rem get ext string
+    ext1$=lower$(right$(file$,2))
+    ext3$=lower$(right$(file$,4))
+    `
+    rem load asset
+    mode=0
+    if ext1$=".x" then mode=1
+    if ext3$=".bmp" then mode=2
+    if ext3$=".tga" then mode=2
+    if ext3$=".dds" then mode=2
+    if ext3$=".png" then mode=2
+    if ext3$=".jpg" then mode=2
+    if ext3$=".wav" then mode=3
+    if ext3$=".mp3" then mode=3
+    if ext3$=".ogg" then mode=3
+    if mode=1
+     load object file$,imgmax
+     loop object imgmax
+     set object speed imgmax,10
+     set object transparency imgmax,2
+     move camera -25
+     position object imgmax,0,-10000,0
+     position camera 1,camera position x(0),camera position y(0)-10000,camera position z(0)
+     img$(imgmax)=getfile$(file$)
+     imgmode(imgmax)=mode
+     inc imgmax
+    endif
+    if mode=2
+     load image file$,imgmax
+     img$(imgmax)=getfile$(file$)
+     imgmode(imgmax)=mode
+     imgx(imgmax)=image width(imgmax) : if imgx(imgmax)>430 then imgx(imgmax)=430
+     imgy(imgmax)=image height(imgmax) : if imgy(imgmax)>460 then imgy(imgmax)=460
+     inc imgmax
+    endif
+    if mode=3
+     load sound file$,imgmax
+     img$(imgmax)=getfile$(file$)
+     imgmode(imgmax)=mode
+     inc imgmax
+    endif
+    `
+ endif
+ `
+endfunction
+
+function addfpscmedia(folder$,rel$,listindex)
+ `
+ olddir$=get dir$()
+ if path exist(folder$)=0
+  exit prompt "Could not navigate to path:"+folder$,"Media Browser Error" : end
+ else
+  set dir folder$
+ endif
+ find first : fin=0
+ while get file type()>-1
+  file$=lower$(get file name$())
+  if file$="." or file$=".."
+   rem ignore . and ..
+  else
+   if get file type()=1
+    rem folder
+    listindex=addfpscmedia(file$,rel$+file$+"\",listindex)
+    find first
+    if fin>0
+     t=1
+     while t<=fin and get file type()>-1
+      find next
+      inc t
+     endwhile
+    endif
+   else
+    rem file
+    ext$=lower$(right$(file$,4))
+    if ext$=".fpe" or ext$=".fps"
+     inc listindex
+     dim list$(listindex)
+     if ext$=".fpe"
+      list$(listindex)="files\entitybank\purchased\"+rel$+"\"+file$
+     endif
+     if ext$=".fps"
+      list$(listindex)="files\segments\purchased\"+rel$+"\"+file$
+     endif
+    endif
+   endif
+  endif
+  if get file type()>-1 then find next
+  fin=fin+1
+ endwhile
+ set dir olddir$
+ `
+endfunction listindex
+
+function previewfpscfile(file$)
+ `
+ dim page$(9999)
+ load array file$,page$()
+ for l=0 to 9999
+  line$=lower$(page$(l))
+  data$=""
+  if left$(line$,5)="model" then data$=afterequal(line$)
+  if left$(line$,8)="meshname" then data$=afterequal(line$)
+  if left$(line$,7)="texture" then data$=afterequal(line$)
+  if left$(line$,8)="soundset" then data$=afterequal(line$)
+  if len(data$)>2
+   path$=getpath$(file$)
+   if file exist(path$+data$)=0
+    rem try from root
+    path$="files\"
+    if file exist(path$+data$)=0
+     rem try changing TGA to DDS
+     data$=left$(data$,len(data$)-4)+".dds"
+     if file exist(path$+data$)=0
+      rem try from relative folder as DDS
+      path$=getpath$(file$)
+     endif
+    endif
+   endif
+   if file exist(path$+data$)=1
+    previewfile(path$+data$)
+   else
+    rem ignore
+   endif
+  endif
+ next l
+ undim page$()
+ `
+endfunction
+
+function afterequal(line$)
+ data$=""
+ for n=1 to len(line$)
+  if mid$(line$,n)="=" then data$=right$(line$,len(line$)-n) : exit
+ next n
+ while mid$(data$,1)=" "
+  data$=right$(data$,len(data$)-1)
+ endwhile
+endfunction data$
+
+function getpath$(file$)
+ path$=""
+ for n=len(file$)-1 to 1 step -1
+  if mid$(file$,n)="\" or mid$(file$,n)="/" then path$=left$(file$,n) : exit
+ next n
+endfunction path$
+
+function getfile$(file$)
+ filename$=file$
+ for n=len(file$)-1 to 1 step -1
+  if mid$(file$,n)="\" or mid$(file$,n)="/" then filename$=right$(file$,len(file$)-n) : exit
+ next n
+endfunction filename$
+

@@ -1,0 +1,160 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL\0"
+            VALUE "CompanyName", "Dark Basic Software Ltd\0"
+            VALUE "FileDescription", "Dark Basic Professional DLL\0"
+            VALUE "FileVersion", "V1.0\0"
+            VALUE "InternalName", "Dark Basic Professional DLL\0"
+            VALUE "LegalCopyright", "Copyright © 2002\0"
+            VALUE "LegalTrademarks", "DarkBASIC\0"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Dark Basic Professional DLL\0"
+            VALUE "ProductVersion", "V1.0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING1             "CHANGE MESH FROM MEMBLOCK%LL%?ChangeMeshFromMemblock@@YAXHH@Z%Mesh Number,Memblock Number"
+    IDS_STRING2             "COPY MEMBLOCK%LLLLL%?CopyMemblock@@YAXHHHHH@Z%From,To,PosFrom,PosTo,Bytes"
+    IDS_STRING3             "MAKE BITMAP FROM MEMBLOCK%LL%?CreateBitmapFromMemblock@@YAXHH@Z%Bitmap Number,Memblock Number"
+    IDS_STRING4             "MAKE IMAGE FROM MEMBLOCK%LL%?CreateImageFromMemblock@@YAXHH@Z%Image Number, Memblock Number"
+    IDS_STRING5             "MAKE MEMBLOCK FROM BITMAP%LL%?CreateMemblockFromBitmap@@YAXHH@Z%Memblock Number, Bitmap Number"
+    IDS_STRING6             "MAKE MEMBLOCK FROM IMAGE%LL%?CreateMemblockFromImage@@YAXHH@Z%Memblock Number,Image Number"
+    IDS_STRING7             "MAKE MEMBLOCK FROM MESH%LL%?CreateMemblockFromMesh@@YAXHH@Z%Memblock Number,Mesh Number"
+    IDS_STRING8             "MAKE MEMBLOCK FROM SOUND%LL%?CreateMemblockFromSound@@YAXHH@Z%Memblock Number, Sound Number"
+    IDS_STRING9             "MAKE MESH FROM MEMBLOCK%LL%?CreateMeshFromMemblock@@YAXHH@Z%Mesh Number, Memblock Number"
+    IDS_STRING10            "MAKE SOUND FROM MEMBLOCK%LL%?CreateSoundFromMemblock@@YAXHH@Z%Sound Number, Memblock Number"
+    IDS_STRING11            "DELETE MEMBLOCK%L%?DeleteMemblock@@YAXH@Z%Memblock Number"
+    IDS_STRING12            "GET MEMBLOCK PTR[%DL%?GetMemblockPtr@@YAKH@Z%Memblock Number"
+    IDS_STRING13            "GET MEMBLOCK SIZE[%LL%?GetMemblockSize@@YAHH@Z%Memblock Number"
+    IDS_STRING14            "MAKE MEMBLOCK%LL%?MakeMemblock@@YAXHH@Z%Memblock Number, Size in Bytes"
+    IDS_STRING15            "MEMBLOCK EXIST[%LL%?MemblockExist@@YAHH@Z%Memblock Number"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING16            "MEMBLOCK BYTE[%LLL%?ReadMemblockByte@@YAHHH@Z%Memblock Number, Position"
+    IDS_STRING17            "MEMBLOCK DWORD[%DLL%?ReadMemblockDWord@@YAKHH@Z%Memblock Number, Position"
+    IDS_STRING18            "MEMBLOCK FLOAT[%FLL%?ReadMemblockFloat@@YAKHH@Z%Memblock Number, Position"
+    IDS_STRING19            "MEMBLOCK WORD[%LLL%?ReadMemblockWordLLL@@YAHHH@Z%Memblock Number, Position"
+    IDS_STRING20            "WRITE MEMBLOCK BYTE%LLL%?WriteMemblockByte@@YAXHHH@Z%Memblock Number, Position, Byte"
+    IDS_STRING21            "WRITE MEMBLOCK DWORD%LLD%?WriteMemblockDWord@@YAXHHK@Z%Memblock Number, Position, DWord"
+    IDS_STRING22            "WRITE MEMBLOCK FLOAT%LLF%?WriteMemblockFloat@@YAXHHM@Z%Memblock Number, Position, Float"
+    IDS_STRING23            "WRITE MEMBLOCK WORD%LLL%?WriteMemblockWord@@YAXHHH@Z%Memblock Number, Position, Word"
+    IDS_STRING24            "MAKE MEMBLOCK FROM ARRAY%LH%?CreateMemblockFromArray@@YAXHK@Z%Memblock Number, Array Name(0)"
+    IDS_STRING25            "MAKE ARRAY FROM MEMBLOCK%HL%?CreateArrayFromMemblock@@YAXKH@Z%Array Name(0), Memblock Number"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

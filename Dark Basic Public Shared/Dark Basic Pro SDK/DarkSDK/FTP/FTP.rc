@@ -1,0 +1,157 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL"
+            VALUE "CompanyName", "Dark Basic Software Ltd"
+            VALUE "FileDescription", "Dark Basic Professional DLL"
+            VALUE "FileVersion", "V1.0"
+            VALUE "InternalName", "Dark Basic Professional DLL"
+            VALUE "LegalCopyright", "Copyright © 2002"
+            VALUE "LegalTrademarks", "DarkBASIC"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll"
+            VALUE "ProductName", "Dark Basic Professional DLL"
+            VALUE "ProductVersion", "V1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING1             "FTP CONNECT%SSS%?Connect@@YAXKKK@Z%Url String, User String, Password String"
+    IDS_STRING2             "FTP DELETE FILE%S%?DeleteFileA@@YAXK@Z%Ftp Filename String"
+    IDS_STRING3             "FTP DISCONNECT%0%?Disconnect@@YAXXZ"
+    IDS_STRING4             "FTP DISCONNECT%L%?DisconnectEx@@YAXH@Z%Dial-Up-Disconnect Flag"
+    IDS_STRING5             "FTP FIND FIRST%0%?FindFirst@@YAXXZ"
+    IDS_STRING6             "FTP FIND NEXT%0%?FindNext@@YAXXZ"
+    IDS_STRING7             "GET FTP DIR$[%S%?GetDir@@YAKK@Z"
+    IDS_STRING8             "GET FTP ERROR$[%S%?GetError@@YAKK@Z"
+    IDS_STRING9             "GET FTP FAILURE[%L%?GetFailure@@YAHXZ"
+    IDS_STRING10            "FTP GET FILE%SS%?GetFile@@YAXKK@Z%Ftp Filename String"
+    IDS_STRING11            "FTP GET FILE%SSL%?GetFile@@YAXKKH@Z%Ftp Filename String, Local Filename String, GrabInBits Flag"
+    IDS_STRING12            "GET FTP FILE NAME$[%S%?GetFileName@@YAKK@Z"
+    IDS_STRING13            "GET FTP FILE SIZE[%L%?GetFileSize@@YAHXZ"
+    IDS_STRING14            "GET FTP FILE TYPE[%L%?GetFileType@@YAHXZ"
+    IDS_STRING15            "GET FTP PROGRESS[%L%?GetProgress@@YAHXZ"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING16            "GET FTP STATUS[%L%?GetStatus@@YAHXZ"
+    IDS_STRING17            "FTP PROCEED%0%?Proceed@@YAXXZ"
+    IDS_STRING18            "FTP PUT FILE%S%?PutFile@@YAXK@Z%Local Filename String"
+    IDS_STRING19            "FTP SET DIR%S%?SetDir@@YAXK@Z%Directory String"
+    IDS_STRING20            "FTP TERMINATE%0%?Terminate@@YAXXZ"
+    IDS_STRING21            "FTP CONNECT%SSSL%?ConnectEx@@YAXKKKH@Z%Url String, User String, Password String, Window Mode"
+    IDS_STRING22            "HTTP CONNECT%S%?HTTPConnect@@YAXK@Z%URL String"
+    IDS_STRING23            "HTTP DISCONNECT%0%?HTTPDisconnect@@YAXXZ"
+    IDS_STRING24            "HTTP REQUEST DATA[%SSSS%?HTTPRequestData@@YAKKKKK@Z%Verb, Object, String To Send"
+    IDS_STRING25            "HTTP CONNECT%SL%?HTTPConnect@@YAXKK@Z%URL String, Port"
+    IDS_STRING26            "HTTP REQUEST DATA[%SSSSL%?HTTPRequestData@@YAKKKKKK@Z%Verb, Object, String To Send, Access Flag"
+    IDS_STRING27            "HTTP CONNECT%SLL%?HTTPConnect@@YAXKKH@Z%URL String, Port, Secure Flag"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

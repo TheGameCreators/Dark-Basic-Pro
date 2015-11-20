@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Loader">
+      <UniqueIdentifier>{dcfa2cb4-0250-4003-8db6-e2ac824180a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Error">
+      <UniqueIdentifier>{303440e2-2fa3-49e6-abe4-66c4c24d4f5c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\Q2BSP\Collision.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Q2BSP\CQ2BSP.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Q2BSP\Loader.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Q2BSP\Textures.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Q2BSP\Unzip.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\Q2BSP\Collision.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Q2BSP\CQ2BSP.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Q2BSP\Loader.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Q2BSP\Q2Data.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Q2BSP\Textures.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Q2BSP\Unzip.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CError.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Q2BSP.rc" />
+  </ItemGroup>
+</Project>

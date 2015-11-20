@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR>
+<BR>
+<FONT SIZE=3><B><FONT SIZE=3><CENTER>Errors and Warnings<BR>
+</CENTER></FONT></B></FONT><BR>
+There are many types of errors you will encounter while programming and running your creations, but they fall into four main categories:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>"SYNTAX ERROR"
+</FONT></PRE>ans you have tried to compile your program but a command statement was not recognized or understood.<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>"PARAMETER MISMATCH"
+</FONT></PRE>ans you have tried to compile your program but a known command has been given the wrong parameter data. You must provide the correct types of parameters for the command, and in the right order.<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>"RUNTIME WARNING"
+</FONT></PRE>ans the program has compiled and run successfully, but the command failed due to the reasons given with the warning. A warning will not be given in a standalone executable version of the program!<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>"RUNTIME ERROR"
+</FONT></PRE>ans the program has compiled and run successfully, but the command failed due to the reasons given with the error. An error will terminate a standalone executable version of the program and provide a reason for the error!<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>THE COMPILER
+</FONT></PRE>To help understand the compiler better, here are a few notes that will help as you start to compile your programs. Some of the notes may be a little advanced, and is not essential reading for the beginner.<BR>
+<BR>
+1. To reduce iterations, the compiler will process TYPE declarations and FUNCTION declarations in the same sweep, so if you place the TYPE ENDTYPE command after the function, the function will not be able to compile as it will not know what the TYPE is. Other compilers to process TYPEs before FUNCTIONs. Make sure you declare all your types before declaring any functions that use them.<BR>
+<BR>
+2. Comments can be created as an appendage to an existing line, or as a command in itself. To append a comment to a line, simply use the ` symbol before adding the descriptive text you wish to apply. Comments can also be created as standalone commands using the REM statement, which you can abbreviate to the ` symbol if you wish. You should only place "appendage" comments inside type declarations or select statements. You can place a command comment anywhere a normal command can go. Common mistakes is to try and place REM commands inside TYPE or SELECT statements, which the compiler finds illegal.<BR>
+<BR>
+3. The compiler only supports the creation of executables that contain the following icon formats; 16x16 with 256 colours and 32x32 with 256 colours. Icons which are either specified through the IDE for use as an executable icon, or imported from a third party icon replacing utility must be aware of these basic icon requirements. Moving outside of these three icon slots may produce undesirable results.<BR>
+<BR>
+4. The compiler will treat an ambiguous name as an array before a user function, which can share similar syntax. A name will be treated as a user function call only if there is a FUNCTION declaration elsewhere in the program.<BR>
+<BR>
+5. When the compiler processes a program that includes more than one DBA module, it must first produce a single listing before it can be processed. This single listing can be found in the TEMP\FullSourceDump.dba file for reference. If the resulting executables throws a runtime error during its execution, the line number it reports refers to this TEMP file, and not the project from which the executable came.<BR>
+<BR>
+6. TYPE declarations must be placed "before" the code that uses those types. In the case of included files, you must make sure the type declaration is encountered before any of the included files subroutines or functions are called.<BR>
+<BR>
+7. Error messages can sometimes be confusing if read out of context. Here is an explanation of an error that might cause confusion;<BR>
+<BR>
+CODE: print "X: " + camera position x() + " Y:"<BR>
+ERROR: Types "$$1" and "@$F0" are incompatible at line X.<BR>
+EXPLANATION: This means the string and value returned from the command cannot be added. The $$ symbol refers to a string, the @ refers to a temporary variable internally required by the compiler and the $F0 is a temporary float value also generated internally by the compiler.<BR>
+<BR>
+</td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

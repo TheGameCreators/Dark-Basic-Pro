@@ -1,0 +1,181 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL"
+            VALUE "CompanyName", "Dark Basic Software Ltd"
+            VALUE "FileDescription", "Dark Basic Professional DLL"
+            VALUE "FileVersion", "V1.0"
+            VALUE "InternalName", "Dark Basic Professional DLL"
+            VALUE "LegalCopyright", "Copyright © 2002"
+            VALUE "LegalTrademarks", "DarkBASIC"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll"
+            VALUE "ProductName", "Dark Basic Professional DLL"
+            VALUE "ProductVersion", "V1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING1             "EMPTY CHECKLIST%0%?EmptyChecklist@@YAXXZ"
+    IDS_STRING2             "CHECKLIST QUANTITY[%L%?ChecklistQuantity@@YAHXZ"
+    IDS_STRING3             "CHECKLIST VALUE A[%LL%?ChecklistValueA@@YAHH@Z"
+    IDS_STRING4             "CHECKLIST VALUE B[%LL%?ChecklistValueB@@YAHH@Z"
+    IDS_STRING5             "CHECKLIST VALUE C[%LL%?ChecklistValueC@@YAHH@Z"
+    IDS_STRING6             "CHECKLIST VALUE D[%LL%?ChecklistValueD@@YAHH@Z"
+    IDS_STRING7             "CHECKLIST STRING$[%SL%?ChecklistString@@YAKKH@Z"
+    IDS_STRING8             "LOAD DLL%SL%?DLLLoad@@YAXKH@Z%DLLName, DLL Number"
+    IDS_STRING9             "DELETE DLL%L%?DLLDelete@@YAXH@Z%DLL Number"
+    IDS_STRING10            "DLL EXIST[%LL%?DLLExist@@YAHH@Z%DLL Number"
+    IDS_STRING11            "DLL CALL EXIST[%LLS%?DLLCallExist@@YAHHK@Z%DLL Number, Function Name"
+    IDS_STRING12            "CALL DLL%LS%?_CallDLL@@YAXHK@Z%DLL Number, Function Name"
+    IDS_STRING13            "CALL DLL%LSX%?_CallDLL@@YAXHKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING14            "CALL DLL%LSXX%?_CallDLL@@YAXHKKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING15            "CALL DLL%LSXXX%?_CallDLL@@YAXHKKKK@Z%DLL Number, Function Name, [ Params ]"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING16            "CALL DLL%LSXXXX%?_CallDLL@@YAXHKKKKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING17            "CALL DLL%LSXXXXX%?_CallDLL@@YAXHKKKKKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING18            "CALL DLL%LSXXXXXX%?_CallDLL@@YAXHKKKKKKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING19            "CALL DLL%LSXXXXXXX%?_CallDLL@@YAXHKKKKKKKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING20            "CALL DLL%LSXXXXXXXX%?_CallDLL@@YAXHKKKKKKKKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING21            "CALL DLL%LSXXXXXXXXX%?_CallDLL@@YAXHKKKKKKKKKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING22            "CALL DLL[%XLS%?CallDLL@@YAKHK@Z%DLL Number, Function Name"
+    IDS_STRING23            "CALL DLL[%XLSX%?CallDLL@@YAKHKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING24            "CALL DLL[%XLSXX%?CallDLL@@YAKHKKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING25            "CALL DLL[%XLSXXX%?CallDLL@@YAKHKKKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING26            "CALL DLL[%XLSXXXX%?CallDLL@@YAKHKKKKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING27            "CALL DLL[%XLSXXXXX%?CallDLL@@YAKHKKKKKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING28            "CALL DLL[%XLSXXXXXX%?CallDLL@@YAKHKKKKKKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING29            "CALL DLL[%XLSXXXXXXX%?CallDLL@@YAKHKKKKKKKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING30            "CALL DLL[%XLSXXXXXXXX%?CallDLL@@YAKHKKKKKKKKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING31            "CALL DLL[%XLSXXXXXXXXX%?CallDLL@@YAKHKKKKKKKKKK@Z%DLL Number, Function Name, [ Params ]"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING32            "SYSTEM TMEM AVAILABLE[%L%?TMEMAvailable@@YAHXZ"
+    IDS_STRING33            "SYSTEM DMEM AVAILABLE[%L%?DMEMAvailable@@YAHXZ"
+    IDS_STRING34            "SYSTEM SMEM AVAILABLE[%L%?SMEMAvailable@@YAHXZ"
+    IDS_STRING35            "DISABLE ESCAPEKEY%0%?DisableEscapeKey@@YAXXZ"
+    IDS_STRING36            "ENABLE ESCAPEKEY%0%?EnableEscapeKey@@YAXXZ"
+    IDS_STRING37            "DISABLE SYSTEMKEYS%0%?DisableSystemKeys@@YAXXZ"
+    IDS_STRING38            "ENABLE SYSTEMKEYS%0%?EnableSystemKeys@@YAXXZ"
+    IDS_STRING39            "EXIT PROMPT%SS%?ExitPrompt@@YAXKK@Z%Message String, Caption String"
+    IDS_STRING40            "CALL DLL[%XLSXXXXXXXXXX%?CallDLL@@YAKHKKKKKKKKKKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING41            "CALL DLL%LSXXXXXXXXXX%?_CallDLL@@YAXHKKKKKKKKKKK@Z%DLL Number, Function Name, [ Params ]"
+    IDS_STRING42            "CALL DLL X[%XLSXL%?CallDLLX@@YAKHKKK@Z%DLL Number, Function Name, Parameter Pointer, Number Of Params"
+    IDS_STRING43            "CHECKLIST FVALUE A[%FL%?ChecklistFValueA@@YAKH@Z%Index"
+    IDS_STRING44            "CHECKLIST FVALUE B[%FL%?ChecklistFValueB@@YAKH@Z%Index"
+    IDS_STRING45            "CHECKLIST FVALUE C[%FL%?ChecklistFValueC@@YAKH@Z%Index"
+    IDS_STRING46            "CHECKLIST FVALUE D[%FL%?ChecklistFValueD@@YAKH@Z%Index"
+    IDS_STRING47            "SYSTEM SMEM AVAILABLE[%LL%?SMEMAvailable@@YAHH@Z%Mode"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

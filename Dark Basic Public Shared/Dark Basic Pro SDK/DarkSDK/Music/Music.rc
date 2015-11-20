@@ -1,0 +1,151 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL\0"
+            VALUE "CompanyName", "Dark Basic Software Ltd\0"
+            VALUE "FileDescription", "Dark Basic Professional DLL\0"
+            VALUE "FileVersion", "V1.0\0"
+            VALUE "InternalName", "Dark Basic Professional DLL\0"
+            VALUE "LegalCopyright", "Copyright © 2002\0"
+            VALUE "LegalTrademarks", "DarkBASIC\0"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Dark Basic Professional DLL\0"
+            VALUE "ProductVersion", "V1.0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING1             "LOAD MUSIC%SL%?LoadMusic@@YAXPADH@Z%Filename,Music Number"
+    IDS_STRING2             "LOOP MUSIC%L%?LoopMusic@@YAXH@Z%Music Number"
+    IDS_STRING3             "DELETE MUSIC%L%?DeleteMusic@@YAXH@Z%Music Number"
+    IDS_STRING4             "LOAD CDMUSIC%LL%?LoadCDMusic@@YAXHH@Z%Track Number,Music Number"
+    IDS_STRING5             "PAUSE MUSIC%L%?PauseMusic@@YAXH@Z%Music Number"
+    IDS_STRING6             "PLAY MUSIC%L%?PlayMusic@@YAXH@Z%Music Number"
+    IDS_STRING7             "RESUME MUSIC%L%?ResumeMusic@@YAXH@Z%Music Number"
+    IDS_STRING8             "SET MUSIC VOLUME%LL%?SetMusicVolume@@YAXHH@Z%Music Number,Volume"
+    IDS_STRING9             "STOP MUSIC%L%?StopMusic@@YAXH@Z%Music Number"
+    IDS_STRING10            "MUSIC EXIST[%LL%?GetMusicExist@@YAHH@Z%Music Number"
+    IDS_STRING11            "MUSIC LOOPING[%LL%?GetMusicLooping@@YAHH@Z%Music Number"
+    IDS_STRING12            "MUSIC PAUSED[%LL%?GetMusicPaused@@YAHH@Z%Music Number"
+    IDS_STRING13            "MUSIC PLAYING[%LL%?GetMusicPlaying@@YAHH@Z%Music Number"
+    IDS_STRING14            "GET NUMBER OF CD TRACKS[%L%?GetNumberOfCDTracks@@YAHXZ"
+    IDS_STRING15            "MUSIC SPEED[%LL%?GetMusicSpeed@@YAHH@Z%Music Number"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING16            "MUSIC VOLUME[%LL%?GetMusicVolume@@YAHH@Z%Music Number"
+    IDS_STRING17            "SET MUSIC SPEED%LL%?SetMusicSpeed@@YAXHH@Z%Music Number,Speed"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

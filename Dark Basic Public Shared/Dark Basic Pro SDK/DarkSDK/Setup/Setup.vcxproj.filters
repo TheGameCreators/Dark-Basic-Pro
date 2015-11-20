@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Error">
+      <UniqueIdentifier>{6fb176cf-e890-41b0-8514-8750ef9e3dbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Setup">
+      <UniqueIdentifier>{b26dc245-848d-4846-b7fd-7b2d5d081143}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Setup\Wrap920">
+      <UniqueIdentifier>{15c3628e-2f85-4832-8430-57d3b4506b65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hardware">
+      <UniqueIdentifier>{45eef331-6351-45c5-b813-bbdec054353e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Setup\CGfxC.cpp">
+      <Filter>Setup</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLMain.cpp" />
+    <ClCompile Include="..\..\Shared\Core\globstruct.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\Error\CError.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CRuntimeErrors.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Setup\CGfxC.h">
+      <Filter>Setup</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Core\globstruct.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon.bmp" />
+    <None Include="..\..\Shared\Hardware\icon1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Setup.rc" />
+  </ItemGroup>
+</Project>

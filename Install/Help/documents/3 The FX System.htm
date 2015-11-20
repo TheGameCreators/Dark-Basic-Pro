@@ -1,0 +1,108 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR>
+<BR>
+</td></tr></table><CENTER>
+<B><FONT SIZE=3><CENTER><FONT SIZE=3>The FX System<BR>
+</FONT><FONT SIZE=1>for use with Dark Basic Professional V1.05 and above<BR>
+</FONT></CENTER></FONT></B></CENTER><br><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td>
+<BR>
+This document describes the use of the FX System and a brief overview of the issues that arise from using FX files from sources other than from the DBPro FX library.<BR>
+<BR>
+<FONT SIZE=3>Technical Brief<BR>
+</FONT><BR>
+The FX System is the DBPro equivilant of the DirectX Effect Framework, and uses the DirectX parser to read and apply the FX files. DBPro additionally adds additional processes into the loading of FX files in order to resolve some incompatibilities. An FX file can be thought of as a file that describes a special effect that can be applied to an object. These effects can be quite advanced and use many techniques such as multitexturing, multi-pass rendering, shaders and render settings.<BR>
+<BR>
+<FONT SIZE=3>1. Finding and loading an FX file<BR>
+</FONT><BR>
+There are many sources of FX files on the internet, and can be easily identified by their ".FX" extension. DBPro can load these files directly, and furthermore display an FX file in a single command:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> SET EFFECT ON 1,"bump2.fx",1
+</FONT></PRE>This will load the default model as specified within the FX file, load any default textures the FX file uses and applies the first technique stored in the FX file to the loaded and textured object. A sort of one stop shop for the FX System. For greater control, a set of effect commands exist to allow full management of the FX System. Using these commands, the same code would look like:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> LOAD EFFECT "bump2.fx",1
+ LOAD OBJECT "sphere.x",1
+ SET OBJECT EFFECT 1,1,1
+</FONT></PRE>Notice the textures are still being specified by the FX file. This is due to the last parameter in SET OBJECT EFFECT. To use the textures already existing for the object, you set this parameter to zero, like so:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> LOAD EFFECT "bump2.fx",1
+ LOAD OBJECT "sphere.x",1
+ LOAD IMAGE "base.tga",1
+ TEXTURE OBJECT 1,1
+ SET OBJECT EFFECT 1,1,0
+</FONT></PRE>Given this level of control over what is "default" and what is "user specified" is important. Some FX files require that certain textures exist, and those textures are specified in the FX file so the final effect looks correct. It is often best to leave the default textures intact and modify the texture files themselves at source to avoid undesirable results.<BR>
+<BR>
+<BR>
+<FONT SIZE=3>2. When FX files do not load<BR>
+</FONT><BR>
+When using FX files obtained from the internet, it is likely the FX file will not load right away. The reasons for this are varied, however there is a command which will tell you why the FX file did not load. Use the code below:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> LOAD EFFECT "bump2.fx",1
+ IF EFFECT EXIST(1)=0
+  PERFORM CHECKLIST FOR EFFECT ERRORS
+  FOR C=1 TO CHECKLIST QUANTITY()
+   PRINT CHECKLIST STRING$(C)
+  NEXT C
+ ENDIF
+</FONT></PRE>The common reasons is that the shader code contain inside the FX file cannot parse due to compiler errors such as uninitialised variables, unrecognised terms or formats and types the compiler does not know about. The only way to resolve such issues is to learn about shaders and make the necessary corrections.<BR>
+<BR>
+<BR>
+<FONT SIZE=3>3. When FX files load but look wrong<BR>
+</FONT><BR>
+When using FX files obtained from the internet, the FX file may load and produce no error. When the FX effect is applied to an object, you may notice the effect does not look correct. This can manifest itself as object warping, no textures, no colour, no light or any combination of them. This is because the FX effect is not getting the application data it needs to complete the effect. Some data is provided by the application automatically such as light and camera positions, matrices and important vectors. DBPro also provides the FX effect with sundry data such as time, however it cannot anticipate what every FX file will require. To this end, the programmer must provide this data manually. Each FX file requires different data, and this "constant data" can be determined with the following command:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> LOAD EFFECT "bump2.fx",1
+ IF EFFECT EXIST(1)=0
+  PERFORM CHECKLIST FOR EFFECT VALUES
+  FOR C=1 TO CHECKLIST QUANTITY()
+   PRINT "Name:";CHECKLIST STRING$(C);"  Vartype:";CHECKLIST VALUE A(C);"  Hook:";CHECKLIST VALUE B(C)
+  NEXT C
+ ENDIF
+</FONT></PRE>The checklist string will give the name of the "constant". Checklist value a will give the constant variable type and value b will give the constant hook flag. The variable type determines whether the constant required by the FX effect should be a Boolean, Integer, Float, Vector or Matrix (1-5). A hook flag value of one indicates that DBPro has understood what the FX effect wanted and is providing that data to the effect automatically.<BR>
+<BR>
+Once you have a list of constant data the FX effect requires, you can set that data using the following commands:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> SET EFFECT CONSTANT BOOLEAN 1,"Flag",1
+ SET EFFECT CONSTANT INTEGER 1,"Count",1
+ SET EFFECT CONSTANT FLOAT 1,"Intensity",1
+ SET VECTOR4 vectorNumber,1,1,1,1 : SET EFFECT CONSTANT VECTOR 1,"Position",VectorNumber
+ SET MATRIX4 IDENTITY MatrixNumber : SET EFFECT CONSTANT MATRIX 1,"Projection",MatrixNumber
+</FONT></PRE>In addition to correcting missing data within the FX effect, these commands allow you to dynamically specify variables used within the shader and represent one of the most powerful features of the whole system.<BR>
+<BR>
+<BR>
+<FONT SIZE=3>4. Authors Notes<BR>
+</FONT><BR>
+The FX System was born at Upgrade 5 and represents an on-going feature within DBPro. Any suggestions for changes, improvements and additions to the system are most welcome and can be submitted to lee@thegamecreators.com<BR>
+<BR>
+The DBPro FX Library is an internal resource at the moment and does not currently exist publically. If you have an FX file that does not work, and you would like to see working under DBPro, please send it to us with all the required media and an explanation of what you think the FX file does. We will endevour to correct the file for inclusion into our library which will be made available at some future date.<BR>
+<BR>
+Lee Bamber<BR>
+The Game Creators<BR>
+www.thegamecreators.com<BR>
+</td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

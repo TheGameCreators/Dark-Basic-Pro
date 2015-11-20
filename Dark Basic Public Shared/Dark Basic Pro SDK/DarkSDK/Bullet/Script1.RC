@@ -1,0 +1,260 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United Kingdom) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_STRING1             "ODE START%0%?ODE_Start@@YAXXZ%"
+    IDS_STRING2             "ODE UPDATE%0%?ODE_Update@@YAXXZ%"
+    IDS_STRING3             "ODE SET WORLD GRAVITY%FFF%?ODE_SetWorldGravity@@YAXMMM@Z%"
+    IDS_STRING4             "ODE SET WORLD ERP%F%?ODE_SetWorldERP@@YAXM@Z%"
+    IDS_STRING5             "ODE SET WORLD CFM%F%?ODE_SetWorldCFM@@YAXM@Z%"
+    IDS_STRING6             "ODE SET WORLD STEP%F%?ODE_SetWorldStep@@YAXM@Z%"
+    IDS_STRING7             "ODE SET WORLD QUICK STEP NUM ITERATIONS%L%?ODE_SetWorldQuickStepNumIterations@@YAXH@Z%"
+    IDS_STRING8             "ODE SET STEP MODE%L%?ODE_SetStepMode@@YAXH@Z%"
+    IDS_STRING9             "ODE CREATE STATIC SPHERE%L%ODE_CreateStaticSphere@@YAXH@Z%"
+    IDS_STRING10            "ODE CREATE STATIC BOX%L%?ODE_CreateStaticBox@@YAXH@Z%"
+    IDS_STRING11            "ODE CREATE STATIC TRIANGLE MESH%L%?ODE_CreateStaticTriangleMesh@@YAXH@Z%"
+    IDS_STRING12            "ODE CREATE DYNAMIC SPHERE%L%?ODE_CreateDynamicSphere@@YAXH@Z%"
+    IDS_STRING13            "ODE CREATE DYNAMIC BOX%L%?ODE_CreateDynamicBox@@YAXH@Z%"
+    IDS_STRING14            "ODE CREATE DYNAMIC BOX%LFFF%?ODE_CreateDynamicBox@@YAXHMMM@Z%"
+    IDS_STRING15            "ODE CREATE DYNAMIC TRIANGLE MESH%L%?ODE_CreateDynamicTriangleMesh@@YAXH@Z%"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING16            "ODE DESTROY OBJECT%L%?ODE_DestroyObject@@YAXH@Z%"
+    IDS_STRING17            "ODE SET LINEAR VELOCITY%LFFF%?ODE_SetLinearVelocity@@YAXHMMM@Z%"
+    IDS_STRING18            "ODE SET ANGULAR VELOCITY%LFFF%?ODE_SetAngularVelocity@@YAXHMMM@Z%"
+    IDS_STRING19            "ODE SET BODY ROTATION%LFFF%?ODE_SetBodyRotation@@YAXHMMM@Z"
+    IDS_STRING20            "ODE SET BODY MASS%LF%?ODE_SetBodyMass@@YAXHM@Z%"
+    IDS_STRING21            "ODE SETSURFACE MODE%LLL%?ODE_SetSurfaceMode@@YAXHHH@Z%"
+    IDS_STRING22            "ODE SETSURFACE MODE CONTACT MU2%LL%?ODE_SetSurfaceModeContactMu2@@YAXHH@Z%"
+    IDS_STRING23            "ODE SETSURFACE MODE CONTACT BOUNCE%LL%?ODE_SetSurfaceModeContactMu2@@YAXHH@Z%"
+    IDS_STRING24            "ODE SETSURFACE MODE CONTACT SOFT ERP%LL%?ODE_SetSurfaceModeContactMu2@@YAXHH@Z%"
+    IDS_STRING25            "ODE SETSURFACE MODE CONTACT SOFT CFM%LL%?ODE_SetSurfaceModeContactSoftCFM@@YAXHH@Z%"
+    IDS_STRING26            "ODE SETSURFACE MODE CONTACT MOTION1%LL%?ODE_SetSurfaceModeContactMotion1@@YAXHH@Z%"
+    IDS_STRING27            "ODE SETSURFACE MODE CONTACT MOTION2%LL%?ODE_SetSurfaceModeContactMotion2@@YAXHH@Z%"
+    IDS_STRING28            "ODE SETSURFACE MODE CONTACT SLIP1%LL%?ODE_SetSurfaceModeContactSlip1@@YAXHH@Z%"
+    IDS_STRING29            "ODE SETSURFACE MODE CONTACT SLIP2%LL%?ODE_SetSurfaceModeContactSlip2@@YAXHH@Z%"
+    IDS_STRING30            "ODE SETSURFACE MODE CONTACT APPROX0%LL%?ODE_SetSurfaceModeContactApprox0@@YAXHH@Z%"
+    IDS_STRING31            "ODE SETSURFACE MODE CONTACT APPROX11%LL%?ODE_SetSurfaceModeContactApprox11@@YAXHH@Z%"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING32            "ODE SETSURFACE MODE CONTACT APPROX12%LL%?ODE_SetSurfaceModeContactApprox12@@YAXHH@Z%"
+    IDS_STRING33            "ODE SETSURFACE MODE CONTACT APPROX1%LL%?ODE_SetSurfaceModeContactApprox1@@YAXHH@Z%"
+    IDS_STRING34            "ODE SET CONTACT%LLL%?ODE_SetContact@@YAXHHM@Z%"
+    IDS_STRING35            "ODE SET CONTACT MU2%LF%?ODE_SetContactMu2@@YAXHM@Z%"
+    IDS_STRING36            "ODE SET CONTACT FDIR1%LF%?ODE_SetContactFDir1@@YAXHM@Z%"
+    IDS_STRING37            "ODE SET CONTACT BOUNCE%LF%?ODE_SetContactBounce@@YAXHM@Z%"
+    IDS_STRING38            "ODE SET CONTACT VELOCITY%LF%?ODE_SetContactVelocity@@YAXHM@Z%"
+    IDS_STRING39            "ODE SET CONTACT SOFT ERP%LF%?ODE_SetContactSoftERP@@YAXHM@Z%"
+    IDS_STRING40            "ODE SET CONTACT SOFT CFM%LF%?ODE_SetContactSoftCFM@@YAXHM@Z%"
+    IDS_STRING41            "ODE SET CONTACT MOTION1%LF%?ODE_SetContactMotion1@@YAXHM@Z%"
+    IDS_STRING42            "ODE SET CONTACT MOTION2%LF%?ODE_SetContactMotion2@@YAXHM@Z%"
+    IDS_STRING43            "ODE SET CONTACT SLIP1%LF%?ODE_SetContactSlip1@@YAXHM@Z%"
+    IDS_STRING44            "ODE SET CONTACT SLIP2%LF%?ODE_SetContactSlip2@@YAXHM@Z%"
+    IDS_STRING45            "ODE CREATE STATIC UNIVERSE%0%?ODE_CreateStaticUniverse@@YAXXZ"
+    IDS_STRING46            "ODE COLLISION MESSAGE EXISTS[%L%?ODE_CollisionMessageExists@@YAHXZ%"
+    IDS_STRING47            "ODE COLLISION GET MESSAGE%0%?ODE_CollisionGetMessage@@YAXXZ%"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING48            "ODE GET OBJECT A[%L%?ODE_GetObjectA@@YAHXZ%"
+    IDS_STRING49            "ODE GET OBJECT B[%L%?ODE_GetObjectB@@YAHXZ%"
+    IDS_STRING50            "ODE GET OBJECT A VELOCITY X[%F%?ODE_GetObjectAVelocityX@@YAKXZ%"
+    IDS_STRING51            "ODE GET OBJECT A VELOCITY Y[%F%?ODE_GetObjectAVelocityY@@YAKXZ%"
+    IDS_STRING52            "ODE GET OBJECT A VELOCITY Z[%F%?ODE_GetObjectAVelocityZ@@YAKXZ%"
+    IDS_STRING53            "ODE GET OBJECT B VELOCITY X[%F%?ODE_GetObjectBVelocityX@@YAKXZ%"
+    IDS_STRING54            "ODE GET OBJECT B VELOCITY Y[%F%?ODE_GetObjectBVelocityY@@YAKXZ%"
+    IDS_STRING55            "ODE GET OBJECT B VELOCITY Z[%F%?ODE_GetObjectBVelocityZ@@YAKXZ%"
+    IDS_STRING56            "ODE GET BODY LINEAR VELOCITY X[%FL%?ODE_GetBodyLinearVelocityX@@YAKH@Z%"
+    IDS_STRING57            "ODE GET BODY LINEAR VELOCITY Y[%FL%?ODE_GetBodyLinearVelocityY@@YAKH@Z%"
+    IDS_STRING58            "ODE GET BODY LINEAR VELOCITY Z[%FL%?ODE_GetBodyLinearVelocityZ@@YAKH@Z%"
+    IDS_STRING59            "ODE CREATE DYNAMIC CYLINDER%L%?ODE_CreateDynamicCylinder@@YAXH@Z%"
+    IDS_STRING60            "ODE GET OBJECT A ANGULAR VELOCITY X[%F%?ODE_GetObjectAAngularVelocityX@@YAKXZ%"
+    IDS_STRING61            "ODE GET OBJECT A ANGULAR VELOCITY Y[%F%?ODE_GetObjectAAngularVelocityY@@YAKXZ%"
+    IDS_STRING62            "ODE GET OBJECT A ANGULAR VELOCITY Z[%F%?ODE_GetObjectAAngularVelocityZ@@YAKXZ%"
+    IDS_STRING63            "ODE GET OBJECT B ANGULAR VELOCITY X[%F%?ODE_GetObjectBAngularVelocityX@@YAKXZ%"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING64            "ODE GET OBJECT B ANGULAR VELOCITY Y[%F%?ODE_GetObjectBAngularVelocityY@@YAKXZ%"
+    IDS_STRING65            "ODE GET OBJECT B ANGULAR VELOCITY Z[%F%?ODE_GetObjectBAngularVelocityZ@@YAKXZ%"
+    IDS_STRING66            "ODE SET GRAVITY%LL%?ODE_SetGravity@@YAXHH@Z%"
+    IDS_STRING67            "ODE END%0%?ODE_End@@YAXXZ%"
+    IDS_STRING68            "ODE ADD FORCE%LFFFFFF%?ODE_AddBodyForce@@YAXHMMMMMM@Z%"
+    IDS_STRING69            "ODE GET BODY HEIGHT[%FL%?ODE_GetBodyHeight@@YAKH@Z%"
+    IDS_STRING70            "ODE Create Hinge Joint%LLFFFFFF%ODE_CreateHingeJoint@@YAXHHHMMMMMM@Z%"
+    IDS_STRING71            "ODE GET BODY ADJUSTMENT X[%FL%?ODE_GetBodyAdjustmentX@@YAKH@Z%"
+    IDS_STRING72            "ODE GET BODY ADJUSTMENT Y[%FL%?ODE_GetBodyAdjustmentY@@YAKH@Z%"
+    IDS_STRING73            "ODE GET BODY ADJUSTMENT Z[%FL%?ODE_GetBodyAdjustmentZ@@YAKH@Z%"
+    IDS_STRING74            "ODE SET RESPONSE%LL%?ODE_SetBodyResponse@@YAXHH@Z%"
+    IDS_STRING75            "ODE GET OBJECT A CONTACT[%F%?ODE_GetObjectAContact@@YAKXZ%"
+    IDS_STRING76            "ODE GET OBJECT B CONTACT[%F%?ODE_GetObjectBContact@@YAKXZ%"
+    IDS_STRING77            "ODE Create Hinge Joint%LLLFFFFFF%?ODE_CreateHingeJoint@@YAXHHHMMMMMM@Z%"
+    IDS_STRING78            "ODE Create Ball Joint%LLLFFF%?ODE_CreateBallJoint@@YAXHHHMMM@Z%"
+    IDS_STRING79            "ODE Set Hinge Joint Limit%LFF%?ODE_SetHingeJointLimit@@YAXHMM@Z%"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING80            "ODE Create Ragdoll From Bone Model%LF%?ODE_CreateRagdollFromBoneModel@@YAXHM@Z%"
+    IDS_STRING81            "ODE Destroy Ragdoll%L%?ODE_DestroyRagdoll@@YAXH@Z%"
+    IDS_STRING82            "ODE UPDATE%F%?ODE_Update@@YAXM@Z"
+    IDS_STRING83            "ODE Create Ragdoll From Bone Model%LFL%?ODE_CreateRagdollFromBoneModel@@YAXHMH@Z%"
+    IDS_STRING84            "ODE GET BODY TRAVEL DISTANCE X[%FL%?ODE_GetBodyTravelDistanceX@@YAKH@Z%"
+    IDS_STRING85            "ODE GET BODY TRAVEL DISTANCE Y[%FL%?ODE_GetBodyTravelDistanceY@@YAKH@Z%"
+    IDS_STRING86            "ODE GET BODY TRAVEL DISTANCE Z[%FL%?ODE_GetBodyTravelDistanceZ@@YAKH@Z%"
+    IDS_STRING87            "ODE SET ACTIVE%LL%?ODE_SetActive@@YAXHH@Z%"
+    IDS_STRING88            "ODE SET CONTACT BOUNCE VELOCITY%LF%?ODE_SetContactBounceVelocity@@YAXHM@Z%"
+    IDS_STRING89            "ODE SET ENABLED%LL%?ODE_SetEnabled@@YAXHH@Z%"
+    IDS_STRING90            "ODE RAY CAST[%LLFFFFFF%?ODE_RayCast@@YAHHMMMMMM@Z%"
+    IDS_STRING91            "ODE GET RAY COLLISION X[%F%?ODE_GetRayCollisionX@@YAKXZ%"
+    IDS_STRING92            "ODE GET RAY COLLISION Y[%F%?ODE_GetRayCollisionY@@YAKXZ%"
+    IDS_STRING93            "ODE GET RAY COLLISION Z[%F%?ODE_GetRayCollisionZ@@YAKXZ%"
+    IDS_STRING94            "ODE GET RAY NORMAL X[%F%?ODE_GetRayNormalX@@YAKXZ%"
+    IDS_STRING95            "ODE GET RAY NORMAL Y[%F%?ODE_GetRayNormalY@@YAKXZ%"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING96            "ODE GET RAY NORMAL Z[%F%?ODE_GetRayNormalZ@@YAKXZ%"
+    IDS_STRING97            "ODE SET RAY CAST%LL%?ODE_SetRayCast@@YAXHH@Z%"
+    IDS_STRING98            "ODE SET RAGDOLL MODE%L%?ODE_SetRagdollMode@@YAXH@Z%"
+    IDS_STRING99            "ODE CREATE STATIC TERRAIN%LLLD%?ODE_CreateStaticTerrain@@YAXHHHK@Z%"
+    IDS_STRING100           "ODE CREATE CHARACTER CONTROLLER%LFFF%?ODE_CreateDynamicCharacterController@@YAXHMMM@Z%"
+    IDS_STRING101           "ODE CONTROL CHARACTER CONTROLLER%LFFFFFFFF%?ODE_ControlDynamicCharacterController@@YAXHMMMMMMMM@Z%"
+    IDS_STRING102           "ODE CREATE DYNAMIC CAPSULE%LFF%?ODE_CreateDynamicCapsule@@YAXHMM@Z%"
+    IDS_STRING103           "ODE CREATE STATIC CAPSULE%L%?ODE_CreateStaticCapsule@@YAXH@Z%"
+    IDS_STRING104           "ODE SET BODY POSITION%LFFF%?ODE_SetBodyPosition@@YAXHMMM@Z"
+    IDS_STRING105           "ODE GET CHARACTER CONTROLLER DUCKING[%FL%?ODE_GetCharacterControllerDucking@@YAKH@Z%"
+    IDS_STRING106           "ODE CREATE STATIC BOX LIMB%LL%?ODE_CreateStaticBox@@YAXHH@Z%"
+    IDS_STRING107           "ODE RAY FORCE[%LFFFFFFF%?ODE_RayForce@@YAHMMMMMMM@Z%"
+    IDS_STRING108           "ODE GET RAY OBJECT HIT[%L%?ODE_GetRayObjectHit@@YAHXZ%"
+    IDS_STRING109           "ODE CREATE STATIC TRIANGLE MESH LIMB%LL%?ODE_CreateStaticTriangleMesh@@YAXHH@Z%"
+    IDS_STRING110           "ODE UPDATE STATIC TERRAIN%LLLDLLLL%?ODE_UpdateStaticTerrain@@YAXHHHKHHHH@Z%"
+    IDS_STRING111           "ODE GET CHARACTER FALL DISTANCE[%F%?ODE_GetCharacterFallDistance@@YAKXZ%"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING112           "ODE GET CHARACTER HIT FLOOR[%L%?ODE_GetCharacterHitFloor@@YAHXZ%"
+    IDS_STRING113           "ODE RAY TERRAIN[%LFFFFFF%?ODE_RayTerrain@@YAHMMMMMM@Z%"
+    IDS_STRING114           "ODE CREATE STATIC TERRAIN MESH%L%?ODE_CreateStaticTerrainMesh@@YAXH@Z%"
+    IDS_STRING115           "ODE CREATE STATIC CYLINDER%LFFFFFFFFF%?ODE_CreateStaticCylinder@@YAXHMMMMMMMMM@Z%"
+    IDS_STRING116           "ODE CREATE TREE CYLINDER%L%?ODE_CreateTreeCylinder@@YAXH@Z"
+    IDS_STRING117           "ODE START STATIC OBJECT%L%?ODE_StartStaticObject@@YAXH@Z"
+    IDS_STRING118           "ODE END STATIC OBJECT%LL%?ODE_EndStaticObject@@YAXHH@Z"
+    IDS_STRING119           "ODE ADD STATIC OBJECT BOX%LL%?ODE_AddStaticObjectBox@@YAXHH@Z"
+    IDS_STRING120           "ODE SET BODY FRICTION%LF%?ODE_SetBodyFriction@@YAXHM@Z%"
+    IDS_STRING121           "BPhys_RagDollAddBone2[%LLLFFLL%?BPhys_RagDollAddBone2@@YAHHHMMHH@Z"
+    IDS_STRING122           "ODE CREATE DYNAMIC BOX%LLL%?ODE_CreateDynamicBox@@YAXHHH@Z%"
+    IDS_STRING123           "BPhys_RagDollApplyForce%LLFFFFFFF%?BPhys_RagDollApplyForce@@YAXHHMMMMMMM@Z"
+    IDS_STRING124           "ODE SET CHARACTER CONTROLLER%LFFFFFFF%?ODE_SetDynamicCharacterController@@YAXHMMMMMMM@Z%"
+    IDS_STRING125           "BPhys_SetNoGravity%LL%?ODE_SetNoGravity@@YAXHH@Z"
+    IDS_STRING126           "ODE CREATE DYNAMIC BOX%LLLFFF%?ODE_CreateDynamicBox@@YAXHHHMMM@Z%"
+    IDS_STRING127           "ODE CREATE SWINGDOOR HINGE[%LLFFFF%?ODE_CreateSwingDoorHinge@@YAHHMMMM@Z"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING155           "BPhys_RagDollBegin%LF%?BPhys_RagDollBegin@@YAXHM@Z"
+    IDS_STRING156           "BPhys_RagDollGetIDFromBoneObject[%LL%?BPhys_RagDollGetIDFromBoneObject@@YAHH@Z"
+    IDS_STRING157           "BPhys_RagDollAddBone[%LLLFLL%?BPhys_RagDollAddBone@@YAHHHMHH@Z"
+    IDS_STRING158           "BPhys_RagDollBoneAddLimbID%LL%?BPhys_RagDollBoneAddLimbID@@YAXHH@Z"
+    IDS_STRING159           "BPhys_RagDollAddHingeJoint%LLLLL%?BPhys_RagDollAddHingeJoint@@YAXHHHHH@Z"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING160           "BPhys_RagDollAddTwistJoint%LLLLL%?BPhys_RagDollAddTwistJoint@@YAXHHHHH@Z"
+    IDS_STRING161           "BPhys_RagdollGetBoneObjID[%LLL%?BPhys_RagdollGetBoneObjID@@YAHHH@Z"
+    IDS_STRING162           "BPhys_RagDollEnd%0%?BPhys_RagDollEnd@@YAXXZ"
+    IDS_STRING163           "BPhys_RagdollExist[%LL%?BPhys_RagdollExist@@YAHH@Z"
+    IDS_STRING164           "BPhys_DeleteRagdoll[%LL%?BPhys_DeleteRagdoll@@YAHH@Z"
+    IDS_STRING165           "BPhys_RagdollIsStatic[%LL%?BPhys_RagdollIsStatic@@YAHH@Z"
+    IDS_STRING166           "BPhys_RagdollSetStatic[%LLL%?BPhys_RagdollSetStatic@@YAHHH@Z"
+    IDS_STRING167           "BPhys_RagDollHideBones[%LL%?BPhys_RagDollHideBones@@YAHH@Z"
+    IDS_STRING168           "BPhys_RagDollShowBones[%LL%?BPhys_RagDollShowBones@@YAHH@Z"
+    IDS_STRING169           "BPhys_RagDollSetDamping%FF%?BPhys_RagDollSetDamping@@YAXMM@Z"
+    IDS_STRING170           "BPhys_RagDollSetSleepingThresholds%FF%?BPhys_RagDollSetSleepingThresholds@@YAXMM@Z"
+    IDS_STRING171           "BPhys_RagDollSetDeactivationTime%F%?BPhys_RagDollSetDeactivationTime@@YAXM@Z"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING128           "ODE CREATE DYNAMIC BOX MANUAL%LFFFFFFFFF%?ODE_CreateDynamicBoxManual@@YAXHMMMMMMMMM@Z"
+    IDS_STRING129           "ODE CREATE STATIC TRIANGLE MESH%LLL%?ODE_CreateStaticTriangleMesh@@YAXHHH@Z%"
+    IDS_STRING130           "ODE SET WATER LINE%F%?ODE_SetWaterLine@@YAXM@Z%"
+    IDS_STRING131           "ODE RAY[%LFFFFFFL%?ODE_RayTerrainEx@@YAHMMMMMMH@Z%"
+    IDS_STRING132           "ODE CREATE STATIC TRIANGLE MESH%LLLL%?ODE_CreateStaticTriangleMesh@@YAXHHHH@Z%"
+END
+
+#endif    // English (United Kingdom) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2bab2c65-f468-4235-80b5-6724564c432e}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Error">
+      <UniqueIdentifier>{9fe35e6c-91ed-4d9a-b545-196df9e9d1c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Bitmap">
+      <UniqueIdentifier>{cca5ee59-0f52-45e0-b6b2-de4e26065db8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9cb74c70-ec45-4823-8a74-ea8a9d9f3d98}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{498356a6-4d9c-498f-a11a-cbed09fc901a}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Bitmap.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DLLMain.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Source Files\Error</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Bitmap\CBitmapC.cpp">
+      <Filter>Source Files\Bitmap</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Core\SteamCheckForWorkshop.cpp">
+      <Filter>Source Files\Bitmap</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\Error\CError.h">
+      <Filter>Source Files\Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Bitmap\CBitmapC.h">
+      <Filter>Source Files\Bitmap</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Core\globstruct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cursor1.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

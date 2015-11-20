@@ -1,0 +1,608 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugAPP|Win32">
+      <Configuration>DebugAPP</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugFPSC|Win32">
+      <Configuration>DebugFPSC</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugLM|Win32">
+      <Configuration>DebugLM</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDEBUG|Win32">
+      <Configuration>ReleaseDEBUG</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4A04C2F5-7052-47E2-AC88-2BA8AE2DD9F3}</ProjectGuid>
+    <RootNamespace>ODE</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugFPSC|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugAPP|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLM|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v100</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugFPSC|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugAPP|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugLM|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)..\..\..\..\Install\Compiler\plugins-user\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">$(ProjectDir)..\..\..\..\Install\Compiler\plugins-user\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">$(ProjectDir)$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)..\..\..\..\Install\Compiler\plugins-user\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugAPP|Win32'">$(ProjectDir)..\..\..\..\Install\Compiler\plugins-user\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugLM|Win32'">$(ProjectDir)..\..\..\..\Install\Compiler\plugins-user\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugAPP|Win32'">$(ProjectDir)$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugLM|Win32'">$(ProjectDir)$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='DebugAPP|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='DebugLM|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugFPSC|Win32'">F:\TGCSHARED\fpsc-reloaded\FPS Creator Files\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugFPSC|Win32'">$(ProjectDir)$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='DebugFPSC|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='DebugFPSC|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='DebugFPSC|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='DebugFPSC|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='DebugAPP|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='DebugLM|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='DebugAPP|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='DebugLM|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='DebugAPP|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='DebugLM|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'" />
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.0A\Include;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\include;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\atlmfc\include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28August 2007%29\Include;$(SolutionDir)SDK\DB3\;$(SolutionDir)SDK\BaseClasses\;$(SolutionDir)SDK\EAX2\Include\;$(SolutionDir)SDK\NVAPI;$(SolutionDir)SDK\BULLET\bullet-2.81-rev2613\src;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugAPP|Win32'">C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.0A\Include;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\include;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\atlmfc\include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28August 2007%29\Include;$(SolutionDir)SDK\DB3\;$(SolutionDir)SDK\BaseClasses\;$(SolutionDir)SDK\EAX2\Include\;$(SolutionDir)SDK\NVAPI;$(SolutionDir)SDK\BULLET\bullet-2.81-rev2613\src;$(IncludePath)</IncludePath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugLM|Win32'">C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.0A\Include;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\include;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\atlmfc\include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28August 2007%29\Include;$(SolutionDir)SDK\DB3\;$(SolutionDir)SDK\BaseClasses\;$(SolutionDir)SDK\EAX2\Include\;$(SolutionDir)SDK\NVAPI;$(SolutionDir)SDK\BULLET\bullet-2.81-rev2613\src;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\atlmfc\lib;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.0A\Lib;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\lib;C:\Program Files %28x86%29\Microsoft DirectX SDK %28August 2007%29\Lib\x86;$(SolutionDir)SDK\NVAPI\x86;$(SolutionDir)SDK\BaseClasses\;$(SolutionDir)SDK\BCG\Bin7\;$(SolutionDir)SDK\EAX2\Libs\;$(SolutionDir)SDK\BULLET\bullet-2.81-rev2613\lib\;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='DebugAPP|Win32'">C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\atlmfc\lib;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.0A\Lib;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\lib;C:\Program Files %28x86%29\Microsoft DirectX SDK %28August 2007%29\Lib\x86;$(SolutionDir)SDK\NVAPI\x86;$(SolutionDir)SDK\BaseClasses\;$(SolutionDir)SDK\BCG\Bin7\;$(SolutionDir)SDK\EAX2\Libs\;$(SolutionDir)SDK\BULLET\bullet-2.81-rev2613\lib\;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='DebugLM|Win32'">C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\atlmfc\lib;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.0A\Lib;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\lib;C:\Program Files %28x86%29\Microsoft DirectX SDK %28August 2007%29\Lib\x86;$(SolutionDir)SDK\NVAPI\x86;$(SolutionDir)SDK\BaseClasses\;$(SolutionDir)SDK\BCG\Bin7\;$(SolutionDir)SDK\EAX2\Libs\;$(SolutionDir)SDK\BULLET\bullet-2.81-rev2613\lib\;$(LibraryPath)</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='DebugFPSC|Win32'">C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.0A\Include;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\include;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\atlmfc\include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28August 2007%29\Include;$(SolutionDir)SDK\DB3\;$(SolutionDir)SDK\BaseClasses\;$(SolutionDir)SDK\EAX2\Include\;$(SolutionDir)SDK\NVAPI;$(SolutionDir)SDK\BULLET\bullet-2.81-rev2613\src;$(IncludePath);C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\atlmfc\lib;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.0A\Lib;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\lib;C:\Program Files %28x86%29\Microsoft DirectX SDK %28August 2007%29\Lib\x86;$(SolutionDir)SDK\NVAPI\x86;$(SolutionDir)SDK\BaseClasses\;$(SolutionDir)SDK\BCG\Bin7\;$(SolutionDir)SDK\EAX2\Libs\;$(LibraryPath);D:\Apps\Microsoft DirectX SDK (August 2007)\Include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.0A\Include;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\include;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\atlmfc\include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28August 2007%29\Include;$(SolutionDir)SDK\DB3\;$(SolutionDir)SDK\BaseClasses\;$(SolutionDir)SDK\EAX2\Include\;$(SolutionDir)SDK\NVAPI;$(SolutionDir)SDK\BULLET\bullet-2.81-rev2613\src;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\atlmfc\lib;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.0A\Lib;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\lib;C:\Program Files %28x86%29\Microsoft DirectX SDK %28August 2007%29\Lib\x86;$(SolutionDir)SDK\NVAPI\x86;$(SolutionDir)SDK\BaseClasses\;$(SolutionDir)SDK\BCG\Bin7\;$(SolutionDir)SDK\EAX2\Libs\;$(SolutionDir)SDK\BULLET\bullet-2.81-rev2613\lib\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">
+    <IncludePath>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.0A\Include;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\include;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\atlmfc\include;C:\Program Files %28x86%29\Microsoft DirectX SDK %28August 2007%29\Include;$(SolutionDir)SDK\DB3\;$(SolutionDir)SDK\BaseClasses\;$(SolutionDir)SDK\EAX2\Include\;$(SolutionDir)SDK\NVAPI;$(SolutionDir)SDK\BULLET\bullet-2.81-rev2613\src;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\atlmfc\lib;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.0A\Lib;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\lib;C:\Program Files %28x86%29\Microsoft DirectX SDK %28August 2007%29\Lib\x86;$(SolutionDir)SDK\NVAPI\x86;$(SolutionDir)SDK\BaseClasses\;$(SolutionDir)SDK\BCG\Bin7\;$(SolutionDir)SDK\EAX2\Libs\;$(SolutionDir)SDK\BULLET\bullet-2.81-rev2613\lib\;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugFPSC|Win32'">
+    <LibraryPath>C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\atlmfc\lib;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.0A\Lib;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\lib;C:\Program Files %28x86%29\Microsoft DirectX SDK %28August 2007%29\Lib\x86;$(SolutionDir)SDK\NVAPI\x86;$(SolutionDir)SDK\BaseClasses\;$(SolutionDir)SDK\BCG\Bin7\;$(SolutionDir)SDK\EAX2\Libs\;$(SolutionDir)SDK\BULLET\bullet-2.81-rev2613\lib\;$(LibraryPath);C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\atlmfc\lib;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.0A\Lib;C:\Program Files %28x86%29\Microsoft Visual Studio 10.0\VC\lib;C:\Program Files %28x86%29\Microsoft DirectX SDK %28August 2007%29\Lib\x86;$(SolutionDir)SDK\NVAPI\x86;$(SolutionDir)SDK\BaseClasses\;$(SolutionDir)SDK\BCG\Bin7\;$(SolutionDir)SDK\EAX2\Libs\;$(LibraryPath);D:\Apps\Microsoft DirectX SDK (August 2007)\Lib\x86</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/ODE.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.\..\..\Shared\Bullet\Ragdoll\DBPro\include;.\..\..\ode\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;ODE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\Release/ODE.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>D3dx9.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)DBProODEDebug.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>.\..\..\ode\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>.\Release/DBProODEDebug.pdb</ProgramDatabaseFile>
+      <StackReserveSize>0</StackReserveSize>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\Release/DBProODEDebug.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/ODE.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.\..\..\Shared\Bullet\Ragdoll\DBPro\include;.\..\..\ode\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;ODE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\Release/ODE.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ode.lib;D3dx9.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)DBProODEDebug.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>.\..\..\ode\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ProgramDatabaseFile>.\Release/DBProODEDebug.pdb</ProgramDatabaseFile>
+      <StackReserveSize>0</StackReserveSize>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\Release/DBProODEDebug.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/ODE.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\..\..\Shared\Bullet\Ragdoll\DBPro\include;.\..\..\ode\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;ODE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\Debug/ODE.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>D3dx9.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)DBPro$(TargetName)Debug.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>.\..\..\ode\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/DBProODEDebug.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\Debug/DBProODEDebug.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugAPP|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/ODE.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\..\..\Shared\Bullet\Ragdoll\DBPro\include;.\..\..\ode\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;ODE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\Debug/ODE.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>D3dx9.lib;winmm.lib;BulletDynamics_vs2008_debug.lib;BulletCollision_vs2008_debug.lib;LinearMath_vs2008_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>F:\TGCSHARED\fpsc-reloaded\FPS Creator Files\DBProODEDebug.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>.\..\..\ode\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/DBProODEDebug.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\Debug/DBProODEDebug.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugLM|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/ODE.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\..\..\Shared\Bullet\Ragdoll\DBPro\include;.\..\..\ode\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_USRDLL;ODE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\Debug/ODE.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>D3dx9.lib;winmm.lib;BulletDynamics_vs2008_debug.lib;BulletCollision_vs2008_debug.lib;LinearMath_vs2008_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>F:\TGCSHARED\fpsc-reloaded\FPS Creator Files\DBProODEDebug.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>.\..\..\ode\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/DBProODEDebug.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\Debug/DBProODEDebug.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugFPSC|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/ODE.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\..\..\Shared\Bullet\Ragdoll\DBPro\include;.\..\..\ode\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;ODE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+      <ForceConformanceInForLoopScope>false</ForceConformanceInForLoopScope>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <PrecompiledHeaderOutputFile>.\Debug/ODE.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>D3dx9.lib;winmm.lib;BulletDynamics_vs2008_debug.lib;BulletCollision_vs2008_debug.lib;LinearMath_vs2008_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>F:\TGCSHARED\fpsc-reloaded\FPS Creator Files\DBProODEDebug.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <AdditionalLibraryDirectories>.\..\..\ode\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcmt.lib;libc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/DBProODEDebug.pdb</ProgramDatabaseFile>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\Debug/DBProODEDebug.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\Bullet\BulletPhysics.H" />
+    <ClInclude Include="..\..\Shared\Bullet\Ragdoll\BaseItem.h" />
+    <ClInclude Include="..\..\Shared\Bullet\Ragdoll\BaseItemManager.h" />
+    <ClInclude Include="..\..\Shared\Bullet\Ragdoll\BT2DX.h" />
+    <ClInclude Include="..\..\Shared\Bullet\Ragdoll\DBProJoint.h" />
+    <ClInclude Include="..\..\Shared\Bullet\Ragdoll\DBProJointManager.h" />
+    <ClInclude Include="..\..\Shared\Bullet\Ragdoll\DBProJoints.h" />
+    <ClInclude Include="..\..\Shared\Bullet\Ragdoll\DBProMotionState.h" />
+    <ClInclude Include="..\..\Shared\Bullet\Ragdoll\DBProRagDoll.h" />
+    <ClInclude Include="..\..\Shared\Bullet\Ragdoll\DBProRagDollBone.h" />
+    <ClInclude Include="..\..\Shared\Bullet\Ragdoll\DBProRagdollManager.h" />
+    <ClInclude Include="..\..\Shared\Bullet\Ragdoll\DBProToBullet.h" />
+    <ClInclude Include="..\..\Shared\Bullet\Ragdoll\DBPro\include\DBPro.hpp" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Script1.RC" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\BroadphaseCollision\btAxisSweep3.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\BroadphaseCollision\btBroadphaseProxy.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\BroadphaseCollision\btCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\BroadphaseCollision\btDbvt.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\BroadphaseCollision\btDbvtBroadphase.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\BroadphaseCollision\btDispatcher.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\BroadphaseCollision\btMultiSapBroadphase.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\BroadphaseCollision\btOverlappingPairCache.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\BroadphaseCollision\btQuantizedBvh.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\BroadphaseCollision\btSimpleBroadphase.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btActivatingCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btBox2dBox2dCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btBoxBoxCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btBoxBoxDetector.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btCollisionDispatcher.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btCollisionObject.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btCollisionWorld.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btCompoundCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btConvex2dConvex2dAlgorithm.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btConvexConcaveCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btConvexConvexAlgorithm.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btConvexPlaneCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btDefaultCollisionConfiguration.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btEmptyCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btGhostObject.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btInternalEdgeUtility.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btManifoldResult.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btSimulationIslandManager.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btSphereBoxCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btSphereSphereCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btSphereTriangleCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\btUnionFind.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionDispatch\SphereTriangleDetector.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btBox2dShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btBoxShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btBvhTriangleMeshShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btCapsuleShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btCollisionShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btCompoundShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btConcaveShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btConeShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btConvex2dShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btConvexHullShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btConvexInternalShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btConvexPointCloudShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btConvexPolyhedron.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btConvexShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btConvexTriangleMeshShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btCylinderShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btEmptyShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btHeightfieldTerrainShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btMinkowskiSumShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btMultimaterialTriangleMeshShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btMultiSphereShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btOptimizedBvh.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btPolyhedralConvexShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btScaledBvhTriangleMeshShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btShapeHull.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btSphereShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btStaticPlaneShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btStridingMeshInterface.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btTetrahedronShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btTriangleBuffer.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btTriangleCallback.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btTriangleIndexVertexArray.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btTriangleIndexVertexMaterialArray.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btTriangleMesh.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btTriangleMeshShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\CollisionShapes\btUniformScalingShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\Gimpact\btContactProcessing.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\Gimpact\btGenericPoolAllocator.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\Gimpact\btGImpactBvh.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\Gimpact\btGImpactCollisionAlgorithm.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\Gimpact\btGImpactQuantizedBvh.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\Gimpact\btGImpactShape.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\Gimpact\btTriangleShapeEx.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\Gimpact\gim_box_set.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\Gimpact\gim_contact.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\Gimpact\gim_memory.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\Gimpact\gim_tri_collision.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\NarrowPhaseCollision\btContinuousConvexCollision.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\NarrowPhaseCollision\btConvexCast.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\NarrowPhaseCollision\btGjkConvexCast.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\NarrowPhaseCollision\btGjkEpa2.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\NarrowPhaseCollision\btGjkEpaPenetrationDepthSolver.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\NarrowPhaseCollision\btGjkPairDetector.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\NarrowPhaseCollision\btMinkowskiPenetrationDepthSolver.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\NarrowPhaseCollision\btPersistentManifold.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\NarrowPhaseCollision\btPolyhedralContactClipping.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\NarrowPhaseCollision\btRaycastCallback.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\NarrowPhaseCollision\btSubSimplexConvexCast.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletCollision\NarrowPhaseCollision\btVoronoiSimplexSolver.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\Character\btKinematicCharacterController.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btConeTwistConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btContactConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btFixedConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btGearConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btGeneric6DofConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btGeneric6DofSpringConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btHinge2Constraint.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btHingeConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btPoint2PointConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btSequentialImpulseConstraintSolver.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btSliderConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btSolve2LinearConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btTypedConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\ConstraintSolver\btUniversalConstraint.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\Dynamics\btDiscreteDynamicsWorld.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\Dynamics\btRigidBody.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\Dynamics\btSimpleDynamicsWorld.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\Dynamics\Bullet-C-API.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\Vehicle\btRaycastVehicle.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\BulletDynamics\Vehicle\btWheelInfo.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\LinearMath\btAlignedAllocator.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\LinearMath\btConvexHull.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\LinearMath\btConvexHullComputer.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\LinearMath\btGeometryUtil.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\LinearMath\btPolarDecomposition.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\LinearMath\btQuickprof.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\LinearMath\btSerializer.cpp" />
+    <ClCompile Include="..\..\..\..\SDK\BULLET\bullet-2.81-rev2613\src\LinearMath\btVector3.cpp" />
+    <ClCompile Include="..\..\Shared\Bullet\BulletPhysics.CPP" />
+    <ClCompile Include="..\..\Shared\Bullet\Ragdoll\BaseItem.cpp" />
+    <ClCompile Include="..\..\Shared\Bullet\Ragdoll\BaseItemManager.cpp" />
+    <ClCompile Include="..\..\Shared\Bullet\Ragdoll\BT2DX.cpp" />
+    <ClCompile Include="..\..\Shared\Bullet\Ragdoll\DBProJoint.cpp" />
+    <ClCompile Include="..\..\Shared\Bullet\Ragdoll\DBProJointManager.cpp" />
+    <ClCompile Include="..\..\Shared\Bullet\Ragdoll\DBProJoints.cpp" />
+    <ClCompile Include="..\..\Shared\Bullet\Ragdoll\DBProMotionState.cpp" />
+    <ClCompile Include="..\..\Shared\Bullet\Ragdoll\DBProRagDoll.cpp" />
+    <ClCompile Include="..\..\Shared\Bullet\Ragdoll\DBProRagDollBone.cpp" />
+    <ClCompile Include="..\..\Shared\Bullet\Ragdoll\DBProRagdollManager.cpp" />
+    <ClCompile Include="..\..\Shared\Bullet\Ragdoll\DBProToBullet.cpp" />
+    <ClCompile Include="..\..\Shared\Bullet\Ragdoll\DBPro\include\DBPro.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

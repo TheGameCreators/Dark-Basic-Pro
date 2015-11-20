@@ -1,0 +1,181 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL"
+            VALUE "CompanyName", "Dark Basic Software Ltd"
+            VALUE "FileDescription", "Dark Basic Professional DLL"
+            VALUE "FileVersion", "V1.0"
+            VALUE "InternalName", "Dark Basic Professional DLL"
+            VALUE "LegalCopyright", "Copyright © 2002"
+            VALUE "LegalTrademarks", "DarkBASIC"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll"
+            VALUE "ProductName", "Dark Basic Professional DLL"
+            VALUE "ProductVersion", "V1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING1             "CLONE SOUND%LL%?CloneSound@@YAXHH@Z%Destination Sound,Source Sound"
+    IDS_STRING2             "DELETE SOUND%L%?DeleteSound@@YAXH@Z%Sound Number"
+    IDS_STRING3             "LOAD 3DSOUND%SL%?Load3DSound@@YAXPADH@Z%Filename,Sound Number"
+    IDS_STRING4             "LOAD SOUND%SL%?LoadSound@@YAXPADH@Z%Filename,Sound Number"
+    IDS_STRING5             "LOOP SOUND%L%?LoopSound@@YAXH@Z%Sound Number"
+    IDS_STRING6             "PAUSE SOUND%L%?PauseSound@@YAXH@Z%Sound Number"
+    IDS_STRING7             "PLAY SOUND%L%?PlaySoundA@@YAXH@Z%Sound Number"
+    IDS_STRING8             "PLAY SOUND%LL%?PlaySoundOffset@@YAXHH@Z%Sound Number,Start Position"
+    IDS_STRING9             "POSITION SOUND%LFFF%?PositionSound@@YAXHMMM@Z%Sound Number,X,Y,Z"
+    IDS_STRING10            "POSITION LISTENER%FFF%?PositionListener@@YAXMMM@Z%X,Y,Z"
+    IDS_STRING11            "RECORD SOUND%L%?RecordSound@@YAXH@Z%Sound Number"
+    IDS_STRING12            "RESUME SOUND%L%?ResumeSound@@YAXH@Z%Sound Number"
+    IDS_STRING13            "ROTATE LISTENER%FFF%?RotateListener@@YAXMMM@Z%X,Y,Z"
+    IDS_STRING14            "SAVE SOUND%SL%?SaveSound@@YAXPADH@Z%Filename,Sound Number"
+    IDS_STRING15            "SET SOUND PAN%LL%?SetSoundPan@@YAXHH@Z%Sound Number,Pan Value"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING16            "SET SOUND SPEED%LL%?SetSoundSpeed@@YAXHH@Z%Sound Number,Frequency Value"
+    IDS_STRING17            "SET SOUND VOLUME%LL%?SetSoundVolume@@YAXHH@Z%Sound Number,Volume Number"
+    IDS_STRING18            "STOP RECORDING SOUND%0%?StopRecordingSound@@YAXXZ%Sound Number"
+    IDS_STRING19            "STOP SOUND%L%?StopSound@@YAXH@Z%Sound Number"
+    IDS_STRING20            "LISTENER ANGLE X[%F%?GetListenerAngleXEx@@YAKXZ"
+    IDS_STRING21            "LISTENER ANGLE Y[%F%?GetListenerAngleYEx@@YAKXZ"
+    IDS_STRING22            "LISTENER ANGLE Z[%F%?GetListenerAngleZEx@@YAKXZ"
+    IDS_STRING23            "LISTENER POSITION X[%F%?GetListenerPositionXEx@@YAKXZ"
+    IDS_STRING24            "LISTENER POSITION Y[%F%?GetListenerPositionYEx@@YAKXZ"
+    IDS_STRING25            "LISTENER POSITION Z[%F%?GetListenerPositionZEx@@YAKXZ"
+    IDS_STRING26            "SOUND EXIST[%LL%?GetSoundExist@@YAHH@Z%Sound Number"
+    IDS_STRING27            "SOUND LOOPING[%LL%?GetSoundLooping@@YAHH@Z%Sound Number"
+    IDS_STRING28            "SOUND PAN[%LL%?GetSoundPan@@YAHH@Z%Sound Number"
+    IDS_STRING29            "SOUND PAUSED[%LL%?GetSoundPaused@@YAHH@Z%Sound Number"
+    IDS_STRING30            "SOUND PLAYING[%LL%?GetSoundPlaying@@YAHH@Z%Sound Number"
+    IDS_STRING31            "SOUND POSITION X[%FL%?GetSoundPositionXEx@@YAKH@Z%Sound Number"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING32            "SOUND POSITION Y[%FL%?GetSoundPositionYEx@@YAKH@Z%Sound Number"
+    IDS_STRING33            "SOUND POSITION Z[%FL%?GetSoundPositionZEx@@YAKH@Z%Sound Number"
+    IDS_STRING34            "SOUND SPEED[%LL%?GetSoundSpeed@@YAHH@Z%Sound Number"
+    IDS_STRING35            "SOUND TYPE[%LL%?GetSoundType@@YAHH@Z%Sound Number"
+    IDS_STRING36            "SOUND VOLUME[%LL%?GetSoundVolume@@YAHH@Z%Sound Number"
+    IDS_STRING37            "LOAD SOUND%SLL%?LoadSound@@YAXPADHH@Z%Filename, Sound Number, Flag"
+    IDS_STRING38            "LOOP SOUND%LL%?LoopSound@@YAXHH@Z%Sound Number,Start Position"
+    IDS_STRING39            "LOOP SOUND%LLL%?LoopSound@@YAXHHH@Z%Sound Number,Start Position,End Position"
+    IDS_STRING40            "LOOP SOUND%LLLL%?LoopSound@@YAXHHHH@Z%Sound Number,Start Position,End Position,Initial Position"
+    IDS_STRING41            "RECORD SOUND%LL%?RecordSound@@YAXHH@Z%Sound Number, Duration"
+    IDS_STRING42            "SCALE LISTENER%F%?ScaleListener@@YAXM@Z%Scaling Factor"
+    IDS_STRING43            "SET EAX%L%?SetEAX@@YAXH@Z%Preset Effect Value"
+    IDS_STRING44            "LOAD 3DSOUND%SLL%?Load3DSound@@YAXPADHH@Z%Filename,Sound Number,Silent Fail"
+    IDS_STRING45            "LOAD SOUND%SLLL%?LoadSound@@YAXPADHHH@Z%Filename,Sound Number,Flag,Silent Fail"
+    IDS_STRING46            "LOAD SOUND%SLLLL%?LoadSound@@YAXPADHHHH@Z%Filename,Sound Number,Flag,Silent Fail, Global Sound Flag"
+    IDS_STRING47            "LOAD 3DSOUND%SLLL%?Load3DSound@@YAXPADHHH@Z%Filename,Sound Number,Silent Fail, Global Sound Flag"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

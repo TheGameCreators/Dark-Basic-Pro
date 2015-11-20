@@ -1,0 +1,173 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL\0"
+            VALUE "CompanyName", "Dark Basic Software Ltd\0"
+            VALUE "FileDescription", "Dark Basic Professional DLL\0"
+            VALUE "FileVersion", "V1.0\0"
+            VALUE "InternalName", "Dark Basic Professional DLL\0"
+            VALUE "LegalCopyright", "Copyright © 2002\0"
+            VALUE "LegalTrademarks", "DarkBASIC\0"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Dark Basic Professional DLL\0"
+            VALUE "ProductVersion", "V1.0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING1             "MAKE MATRIX%LFFLL%?MakeEx@@YAXHMMHH@Z%Matrix Number, Width, Height, XSegments, ZSegments"
+    IDS_STRING2             "SET MATRIX WIREFRAME ON%L%?SetWireframeOn@@YAXH@Z%Matrix Number"
+    IDS_STRING3             "DELETE MATRIX%L%?Delete@@YAXH@Z%Matrix Number"
+    IDS_STRING4             "FILL MATRIX%LFL%?Fill@@YAXHMH@Z%Matrix Number, Height, Tile Number"
+    IDS_STRING5             "GHOST MATRIX ON%L%?SetTransparencyOn@@YAXH@Z%Matrix Number"
+    IDS_STRING6             "GHOST MATRIX OFF%L%?SetTransparencyOff@@YAXH@Z%Matrix Number"
+    IDS_STRING7             "POSITION MATRIX%LFFF%?PositionEx@@YAXHMMM@Z%Matrix Number, X, Y, Z"
+    IDS_STRING8             "PREPARE MATRIX TEXTURE%LLLL%?PrepareTexture@@YAXHHHH@Z%Matrix Number, Image Number, Across, Down"
+    IDS_STRING9             "RANDOMIZE MATRIX%LL%?Randomize@@YAXHH@Z%Matrix Number, Maximum Height"
+    IDS_STRING10            "SET MATRIX HEIGHT%LLLF%?SetHeight@@YAXHHHM@Z%Matrix Number, TileX, TileZ, Height"
+    IDS_STRING11            "SET MATRIX NORMAL%LLLFFF%?SetNormal@@YAXHHHMMM@Z%Matrix Number, TileX, TileZ, NX, NY, NZ"
+    IDS_STRING12            "SET MATRIX TEXTURE%LLL%?SetTexture@@YAXHHH@Z%Matrix Number, Texture Mode, Mip Mode"
+    IDS_STRING13            "SET MATRIX TILE%LLLL%?SetTile@@YAXHHHH@Z%Matrix Number, TileX, TileZ, Tile Number"
+    IDS_STRING14            "SET MATRIX WIREFRAME OFF%L%?SetWireframeOff@@YAXH@Z%Matrix Number"
+    IDS_STRING15            "SET MATRIX%LLLLLLLL%?SetEx@@YAXHHHHHHHH@Z%Matrix Number, Wire, Transparency, Cull, Filter, Light, Fog, Ambient"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING16            "SHIFT MATRIX DOWN%L%?ShiftDown@@YAXH@Z%Matrix Number"
+    IDS_STRING18            "SHIFT MATRIX LEFT%L%?ShiftLeft@@YAXH@Z%Matrix Number"
+    IDS_STRING20            "SHIFT MATRIX RIGHT%L%?ShiftRight@@YAXH@Z%Matrix Number"
+    IDS_STRING22            "SHIFT MATRIX UP%L%?ShiftUp@@YAXH@Z%Matrix Number"
+    IDS_STRING24            "UPDATE MATRIX%L%?Apply@@YAXH@Z%Matrix Number"
+    IDS_STRING25            "GET GROUND HEIGHT[%FLFF%?GetGroundHeightEx@@YAKHMM@Z%Matrix Number, X, Z"
+    IDS_STRING26            "GET MATRIX HEIGHT[%FLLL%?GetHeightEx@@YAKHHH@Z%Matrix Number, TileX, TileZ"
+    IDS_STRING27            "MATRIX EXIST[%LL%?GetExistEx@@YAHH@Z%Matrix Number"
+    IDS_STRING28            "MATRIX POSITION X[%FL%?GetPositionXEx@@YAKH@Z%Matrix Number"
+    IDS_STRING29            "MATRIX POSITION Y[%FL%?GetPositionYEx@@YAKH@Z%Matrix Number"
+    IDS_STRING30            "MATRIX POSITION Z[%FL%?GetPositionZEx@@YAKH@Z%Matrix Number"
+    IDS_STRING31            "MATRIX TILE COUNT[%LL%?GetTileCountEx@@YAHH@Z%Matrix Number"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING32            "MATRIX TILES EXIST[%LL%?GetTilesExistEx@@YAHH@Z%Matrix Number"
+    IDS_STRING33            "MATRIX WIREFRAME STATE[%LL%?GetWireframeEx@@YAHH@Z%Matrix Number"
+    IDS_STRING34            "POSITION MATRIX%LL%?SetPositionVector3@@YAXHH@Z%Matrix Number, Vector"
+    IDS_STRING35            "SET VECTOR3 TO MATRIX POSITION%LL%?GetPositionVector3@@YAXHH@Z%Vector, Matrix Number"
+    IDS_STRING36            "GHOST MATRIX ON%LL%?SetTransparencyOn@@YAXHH@Z%Matrix Number, Mode"
+    IDS_STRING37            "SET MATRIX TRIM%LFF%?SetTrim@@YAXHMM@Z%Matrix Number, TrimX, TrimY"
+    IDS_STRING38            "SET MATRIX PRIORITY%LL%?SetPriority@@YAXHH@Z%Matrix Number, Priority Flag"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

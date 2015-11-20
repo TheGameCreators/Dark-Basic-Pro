@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR>
+<BR>
+</td></tr></table><CENTER>
+<B><FONT SIZE=3><CENTER><FONT SIZE=3>DBO Format<BR>
+</FONT><FONT SIZE=1>for use with Dark Basic Professional V1.06 and above<BR>
+</FONT></CENTER></FONT></B></CENTER><br><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td>
+<BR>
+This document introduces the DBO file format, which describes a typical 3D object for loading into Dark Basic Professional. As the file format is perfectly aligned to the engine, the files are loaded much quicker than any other 3D file format.<BR>
+<BR>
+<FONT SIZE=3>Technical Brief<BR>
+</FONT><BR>
+The traditional way to load in a 3D model would be to be use the X file format published by Microsoft, and this continues to be fully supported in all versions. Each time an X file is loaded, it must be parsed from its raw binary or text format into a structure that the engine can use to render that model to the screen. The model is stored internally as a Dark Basic Object, DBO for short. Therefore, the DBO file format is an almost identical representation of that internal structure making it a perfect choice for final release media in terms of compatibility and performance.<BR>
+<BR>
+<FONT SIZE=3>1. The DBO File Format Document<BR>
+</FONT><BR>
+In the "Help\documents\Files" folder you will find the "DBO Loader" directory containing a C++ project and a DOC file which fully describes the format entitled "DBO Format.doc".<BR>
+<BR>
+<BR>
+<FONT SIZE=3>2. The DBO Loader Project<BR>
+</FONT><BR>
+A project has been provided complete with full C++ source code which shows how a DBO file is loaded into the internal data structure which holds the various components of the object. This article does not attempt to explain the code, and it is recommended for experienced coders only.<BR>
+<BR>
+<BR>
+<FONT SIZE=3>3. Authors Notes<BR>
+</FONT><BR>
+I am eager to help third party tool authors support the DBO file format and if you contact me with details of what your issues are I will be happy to assist you in this. Emails to lee@thegamecreators.com<BR>
+<BR>
+Lee Bamber<BR>
+The Game Creators<BR>
+www.thegamecreators.com<BR>
+</td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

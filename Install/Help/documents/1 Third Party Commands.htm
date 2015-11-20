@@ -1,0 +1,272 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR>
+<BR>
+<B><FONT SIZE=3><CENTER><FONT SIZE=3>Third Party Commands SDK V1.2<BR>
+</FONT><FONT SIZE=1>for use with Dark Basic Professional V1.03 and above<BR>
+</FONT></CENTER></FONT></B><BR>
+</td></tr></table><CENTER>
+<IMG SRC=gfx\TPCSDK.jpg><BR>
+</CENTER><br><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td>
+<BR>
+This document describes how to create your own commands using Visual C++. In order that every chance be given to advance your programming skills into the world of C++, these steps are intended for the most novice of Visual C++ users.<BR>
+<BR>
+<FONT SIZE=3>Technical Brief<BR>
+</FONT><BR>
+You can add your own commands to DBPro by creating a DLL and placing it in a special folder. The DLL contains regular C++ functions and a string table. The string table describes each command and the function it is associated with. DBPro can automatically scan DLLs for this information and add the commands to the existing language expanding your possibilities. The goal here is to create two commands. PRINT TEXT will create a message box with a string of your choice. GET VALUE will return a value to the DBPro program.<BR>
+<BR>
+<FONT SIZE=3>1. Creating your DLL Functions<BR>
+</FONT><BR>
+1.1. Open Visual C++ 6.0 and select NEW, choose Win32 Dynamic-Link Library, call your project TESTCOMMANDS and click OK<BR>
+1.2. Select "Create a SIMPLE DLL Project".<BR>
+1.3. Click FILE VIEW, double click TESTCOMMANDS files, then Source Files, then TESTCOMMANDS.CPP<BR>
+1.4. When you double click on TESTCOMMANDS.CPP, you will see the DLLMAIN function common to most DLLs<BR>
+1.5. Create your first two functions by typing out:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> #define MYCOMMAND __declspec ( dllexport )
+
+ MYCOMMAND void PrintText( LPSTR pString )
+ {
+	if(pString)
+	{
+		MessageBox(NULL, pString, "", MB_OK);
+	}
+ }
+
+ MYCOMMAND int GetValue( void )
+ { 
+	return 42;
+ }
+</FONT></PRE>1.6. The DEFINE statement creates a special macro called MYCOMMAND which when parsed will replace all instanced of MYCOMMAND with the __declspec(dllexport) code. This code tells your DLL that this function is going to be exported. This means that other executables can use the function from outside the DLL. This is vital if DBPro is to use your function.<BR>
+<BR>
+1.7. The PRINTTEXT function returns no value, denoted by the VOID code and accepts one string in using the LPSTR type. We know that when this function is called, pString may contain a string. If the string is not null, it will contain some text so we create a message box with the text and display it.<BR>
+<BR>
+1.8. The GETVALUE function returns an integer value denoted by the INT code and accepts no input parameters denoted by the VOID code. We use RETURN 42 to simply return a value into DBPro when this function is called.<BR>
+<BR>
+1.9. Press F7 to compile your DLL. If the compilation fails, ensure the code has been copied into TESTCOMMANDS.CPP at the bottom of the page below the DLLMAIN function and that no spelling mistakes have been made.<BR>
+<BR>
+<BR>
+<FONT SIZE=3>2. Creating your DLL String Table<BR>
+</FONT><BR>
+2.1. Your string table will let DBPro know what commands your DLL has and what functions each command uses. It also tells DBPro what parameters to expect and optionally what those parameters actually mean.<BR>
+<BR>
+2.2. Click INSERT from the Menu, then RESOURCE..<BR>
+<BR>
+2.3. Select STRING TABLE to highlight it and then click NEW to create a new string table<BR>
+<BR>
+2.4. Double click the highlighted box under ID and then click in the caption box where we will type out our first command:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> PRINT TEXT%S%?PrintText@@YAXPAD@Z%String
+</FONT></PRE>2.5. The format of this line must be very carefully obeyed or your command will not work and may even crash the compiler. The first part is the command itself PRINT TEXT. The percentage symbol (%) is used as a seperator between parts. The second part is the parameter symbol. S denotes a string. L would denote an integer. F would denote a float. D would denote a pure unsigned 4 byte dword. In this case we have one string as an input parameter. The next part is a rather garbled function name ?PrintText@@YAXPAD@Z, which is the decorated form of your function. To find the decorated form of your function, simply load your DLL into NOTEPAD, and search for your function name, and you will find it. The last part is a description of the parameter in plain english, which can be used at a future date to automatically generate help pages for your commands.<BR>
+<BR>
+2.6. Now go to the FILE menu and click SAVE. Navigate to the TESTCOMMANDS folder and type TESTCOMMANDS.RC as the file and then click the SAVE button.<BR>
+<BR>
+2.7. Now select the PROJECT menu and click ADD TO PROJECT and then FILES. Select TESTCOMMANDS.RC and click OK. To make sure, click F7 to compile your DLL. It will now contain a string table describing your first command.<BR>
+<BR>
+2.8. Now we will add our second command. The main difference is that this will be an expression in DBPro. A command that returns a value is called an expression, and can be denoted by adding a [ bracket after the command, as follows:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> GET VALUE[%L%?GetValue@@YAHXZ
+</FONT></PRE>2.9. Notice we do not need to add a parameter description if there are no input parameters. pressing F7 again will recompile now with two commands in the string table. You will find the DLL in the Debug folder of your TESTCOMMANDS project folder called TESTCOMMANDS.DLL. Try viewing it with NOTEPAD and search for those decorated names. It is worth noting that if you encased your function declarations with the extern "C" {} block, the DLL will contain undecorated names that are much easier to understand and integrate into your table.<BR>
+<BR>
+<BR>
+<FONT SIZE=3>3. Testing your commands in DBPro<BR>
+</FONT><BR>
+3.1. Locate the TESTCOMMANDS.DLL in the Debug folder of TESTCOMMANDS project directory. If you compile in Release mode, you will find the file in the Release folder.<BR>
+<BR>
+3.2. Copy this file to the PLUGINS-USER folder of DBPro. The default path to this folder would be "C:\Program Files\Dark Basic Software\Dark Basic Professional\Compiler\plugins-user"<BR>
+<BR>
+3.3. Now run DBPro as normal, and type out the following program:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> PRINT TEXT "Hello World"
+</FONT></PRE>3.4. Press F5 to run the program and see your message box speaking to you. You have created and ran your first command.<BR>
+<BR>
+3.5. Now to see an expression is use, type out and run the following program:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> A=GET VALUE()
+ PRINT "My Value : ";A
+ WAIT KEY
+</FONT></PRE>3.6. And there you have it. Data goes in, data comes out. You have up to 999 commands in a single DLL, and as many DLLs as you want. We felt that DBPro should be expandable from day one, as we have found there is always something new coming along and the fastest way to get it is to write it yourself!<BR>
+<BR>
+<BR>
+<FONT SIZE=3>4. Technical Issues<BR>
+</FONT><BR>
+Parameter Type Symbols are used when specifying the command in the string table:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> L = Integer                           ( IN use "int" )      ( OUT use "int" )
+ F = Float                             ( IN use "float" )    ( OUT use "DWORD" )
+ S = String                            ( IN use "LPSTR" )    ( OUT use "DWORD" )
+ O = Double Float (capital o)          ( IN use "double" )   ( OUT use "double" ) 
+ R = Double Integer (capital r)        ( IN use "LONGLONG" ) ( OUT use "LONGLONG" ) 
+ D = Boolean, BYTE, WORD and DWORD     ( IN use "DWORD" )    ( OUT use "DWORD" )
+ 0 = Zero Character (no param)         ( IN use "VOID" )     ( n/a )
+</FONT></PRE>Returning FLOAT values is not as straight forward as you might think. Floats as input parameters are fine, but to return a float you must use the following approach:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> MYCOMMAND DWORD ReturnAFloat(void)
+ {
+	float fValue = 42.05f;
+	return *(DWORD*)&fValue;
+ }
+</FONT></PRE>Returning STRING values is not as straight forward as you might think. Strings are managed by the core memory management functions and so you have to do several things to return a string. The reason for this is that the DBPro engine needs to free existing string allocations to maintain leak free operations. Fail to follow this approach and your newly returned string will simply overwrite the string pointer used by DBPro, discarding the old string pointer forever. When the DBPro executable exits, this discarded string memory cannot be unallocated and results in a memory leak. Details on accessing the core is described in the following sections. For now, the function which returns a string would look something like this:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> DWORD ReverseString( DWORD pOldString, DWORD pStringIn )
+ {
+	// Delete old string
+	if(pOldString) g_pGlob->CreateDeleteString ( (DWORD*)&pOldString, 0 );
+
+	// Return string pointer
+	LPSTR pReturnString=NULL;
+
+	// If input string valid
+	if(pStringIn)
+	{
+		// Create a new string and copy input string to it
+		DWORD dwSize=strlen( (LPSTR)pStringIn );
+		g_pGlob->CreateDeleteString ( (DWORD*)&pReturnString, dwSize+1 );
+		strcpy(pReturnString, (LPSTR)pStringIn);
+
+		// Reverse the new string
+		strrev(pReturnString);
+	}
+
+	// Return new string pointer
+	return (DWORD)pReturnString;
+ }
+</FONT></PRE>You will notice references to g_pGlob which is explained later. Also notice the extra pOldString DWORD parameter in the function declaration. This is the pointer to the area of memory containing any old string that occupies the place the new string will be written to. For good memory management, you must free this string if it exists before overwriting it with the new string pointer.<BR>
+<BR>
+<BR>
+<FONT SIZE=3>5. Example String Table Entries<BR>
+</FONT><BR>
+String Table Entry: ROTATE OBJECT%LFFF%?Rotate@@YAXHMMM@Z%Object Number, XAngle, YAngle, ZAngle<BR>
+Breaks Up Into-<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> ROTATE OBJECT                           = Command Name
+ LFFF                                    = First Param is Integer, Next Three are Floats
+ ?Rotate@@YAXHMMM@Z                      = Decorated Function Name from DLL
+ Object Number, XAngle, YAngle, ZAngle   = Optional Parameter Description
+</FONT></PRE>String Table Entry: OBJECT COLLISION[%LLL%?GetCollision@@YAHHH@Z%ObjectA Number, ObjectB Number<BR>
+Breaks Up Into-<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> OBJECT COLLISION[                       = Expression Name ( denoted by the open [ square bracket )
+ LLL                                     = First is an Integer Return Type, followed by two Input Integers 
+ ?GetCollision@@YAHHH@Z                  = Decorated Function Name from DLL
+ ObjectA Number, ObjectB Number          = Optional Parameter Description
+</FONT></PRE><BR>
+<FONT SIZE=3>6. Adding a Constructor, Destructor and a ReceiveCoreDataPtr function<BR>
+</FONT><BR>
+These three functions are useful for maintaining a clean memory leak free DLL and to get access to some of the internal data of the engine. The primary use of the core data is for string management. To add these functions you must use the following format:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> // Include Core (optional)
+ #include "globstruct.h"
+ GlobStruct* g_pGlob = NULL;
+
+ MYCOMMAND void Constructor ( void )
+ {
+	// Create memory here
+ }
+ MYCOMMAND void Destructor ( void )
+ {
+	// Free memory here
+ }
+ MYCOMMAND void ReceiveCoreDataPtr ( LPVOID pCore )
+ {
+	// Get Core Data Pointer here
+	g_pGlob = (GlobStruct*)pCore;
+ }
+</FONT></PRE>Providing you have the globstruct.h file in your project folder, this will compile into your DLL allow you to perform code when the application is first run and when it terminates. You will also get access to the g_pGlob global variable which contains a pointer to the core data.<BR>
+<BR>
+Amonst other things, the core data has a few functions that may come in handy when writing your own DLL commands, such as:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE> // Use Core PRINT to display output
+ g_pGlob->PrintStringFunction ( "HELLO WORLD", true );
+</FONT></PRE>This piece of code will use the PRINT functionality of the engine to paste some text to the screen. There is also a function to handle the creation and destruction of strings, which you will need for correct string manipulation.<BR>
+<BR>
+<BR>
+<FONT SIZE=3>7. Source Code References<BR>
+</FONT><BR>
+Several source code examples have been created to assist in the production of your own DLL commands. You will find the source code projects included with this document pack:<BR>
+<BR>
+TESTCOMMANDS      - A very simple project with a single CPP file showing how easy it is<BR>
+TESTCOMMANDS2     - A better way of laying out your DLL code with access to the core data pointer<BR>
+<BR>
+<BR>
+<FONT SIZE=3>8. User Reported Footnotes<BR>
+</FONT><BR>
+All DLLs written in languages other than C++ should use the cdecl calling convention.  This is important to ensure that your commands work properly when called from inside functions in the DBA code.  DLLs written in Delphi should also use the PChar type to pass strings rather than Delphi"s native string type:<BR>
+<BR>
+  Delphi Function Declaration Example:  function MyFunction(StringIn: PChar):Int64;cdecl;<BR>
+<BR>
+For Borland users, here is some additional help provided by a fellow Borland 4.0 user:<BR>
+ <BR>
+/****************************************************************************<BR>
+STRINGTA.rc<BR>
+produced by Borland Resource Workshop<BR>
+*****************************************************************************/<BR>
+ <BR>
+ <BR>
+STRINGTABLE<BR>
+{<BR>
+ IDS_STRING1, "PRINT TEXT%S%@PrintText$qpc%String"<BR>
+ IDS_STRING2, "GET VALUE[%L%@GetValue$qv"<BR>
+}<BR>
+ <BR>
+/****************************************************************************<BR>
+PrintText.cpp<BR>
+*****************************************************************************/<BR>
+<BR>
+<BR>
+USERC("STRINGTA.RC");  // the significant macro for C++ Borland 4.0<BR>
+ <BR>
+int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void*)<BR>
+{<BR>
+        return 1;<BR>
+}<BR>
+ <BR>
+MYCOMMAND void PrintText( LPSTR pString )<BR>
+{<BR>
+ if(pString)<BR>
+ {<BR>
+  MessageBox(NULL, pString, "", MB_OK);<BR>
+ }<BR>
+}<BR>
+MYCOMMAND int GetValue( void )<BR>
+{<BR>
+ return 42;<BR>
+}<BR>
+<BR>
+<FONT SIZE=3>9. Authors Notes<BR>
+</FONT><BR>
+You will not be able to generate internal runtime errors within your DLL command set. You must provide support for your own errors either via message boxes, error code return functions or something more creative. Providing you allow your users to handle failures, you can do almost anything you like.<BR>
+<BR>
+Althought there is no way to get the address of a variable passed into the commands, you can pass in a DWORD value that stores an address, and the use the "*" indirect symbol in DBPro to access that address. There is also no way to pass in other non standard parameters such as types or arrays. There are creative ways to get large blocks of data into your commands such as creating a memory area or memblock and passing in the pointer for direct access.<BR>
+<BR>
+If any part of this document is inaccurate or you feel it could be expanded in areas, please email me directly at lee@darkbasic.com. I wish this document to be the one stop shop for any questions potential command writers have about integrating new features into DBPro.<BR>
+<BR>
+Lee Bamber<BR>
+The Game Creators<BR>
+www.thegamecreators.com<BR>
+<BR>
+</td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

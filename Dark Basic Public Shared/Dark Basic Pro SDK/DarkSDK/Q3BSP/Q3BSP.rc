@@ -1,0 +1,152 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL\0"
+            VALUE "CompanyName", "Dark Basic Software Ltd\0"
+            VALUE "FileDescription", "Dark Basic Professional DLL\0"
+            VALUE "FileVersion", "V1.0\0"
+            VALUE "InternalName", "Dark Basic Professional DLL\0"
+            VALUE "LegalCopyright", "Copyright © 2002\0"
+            VALUE "LegalTrademarks", "DarkBASIC\0"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Dark Basic Professional DLL\0"
+            VALUE "ProductVersion", "V1.0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING1             "LOAD BSP%SS%?LoadEx@@YAXKK@Z%PK3 Filename, BSP Filename"
+    IDS_STRING2             "SET BSP CAMERA COLLISION%LLFL%?SetupCameraCollisionEx@@YAXHHMH@Z%Collision Index, Camera Number, Radius, Response"
+    IDS_STRING3             "SET BSP OBJECT COLLISION%LLFL%?SetupObjectCollisionEx@@YAXHHMH@Z%Collision Index, Object Number, Radius, Response"
+    IDS_STRING4             "SET BSP CAMERA%L%?SetupCullingCameraEx@@YAXH@Z%Camera Number"
+    IDS_STRING5             "SET BSP COLLISION OFF%L%?SetupCollisionOffEx@@YAXH@Z%Collision Index"
+    IDS_STRING6             "DELETE BSP%0%?DeleteEx@@YAXXZ"
+    IDS_STRING7             "BSP COLLISION HIT[%LL%?GetCollisionResponseEx@@YAHH@Z%Collision Index"
+    IDS_STRING8             "BSP COLLISION X[%FL%?GetCollisionXEx@@YAKH@Z%Collision Index"
+    IDS_STRING9             "BSP COLLISION Y[%FL%?GetCollisionYEx@@YAKH@Z%Collision Index"
+    IDS_STRING10            "BSP COLLISION Z[%FL%?GetCollisionZEx@@YAKH@Z%Collision Index"
+    IDS_STRING11            "SET BSP COLLISION THRESHHOLD%LF%?SetCollisionThreshholdEx@@YAXHM@Z%Collision Index, Sensitivity"
+    IDS_STRING12            "SET BSP CAMERA COLLISION RADIUS%LLFFF%?SetCameraCollisionRadiusEx@@YAXHHMMM@Z%Collision Index, Camera Number, X, Y, Z"
+    IDS_STRING13            "SET BSP MULTITEXTURING ON%0%?SetHardwareMultiTexturingOnEx@@YAXXZ"
+    IDS_STRING14            "SET BSP MULTITEXTURING OFF%0%?SetHardwareMultiTexturingOffEx@@YAXXZ"
+    IDS_STRING15            "SET BSP OBJECT COLLISION RADIUS%LLFFF%?SetObjectCollisionRadiusEx@@YAXHHMMM@Z%Collision Index, Object Number, X, Y, Z"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING16            "PROCESS BSP COLLISION%L%?ProcessCollisionEx@@YAXH@Z%Collision Index"
+    IDS_STRING17            "SET BSP COLLISION HEIGHT ADJUSTMENT%LF%?SetCollisionHeightAdjustmentEx@@YAXHM@Z%Collision Index, Height"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="FTP">
+      <UniqueIdentifier>{d4c39667-6ac1-4a00-8441-131fcfd7e629}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Error">
+      <UniqueIdentifier>{2f1059f8-8602-4294-a562-263c52ad5571}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HTTP">
+      <UniqueIdentifier>{e2cb999a-616a-4c80-a2e4-28a3d37cb8a6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\FTP\CFTPC.cpp">
+      <Filter>FTP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\FTP\ftp.cpp">
+      <Filter>FTP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\FTP\HTTPComm.cpp">
+      <Filter>HTTP</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLMain.cpp" />
+    <ClCompile Include="..\..\Shared\Core\globstruct.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\FTP\CFTPC.h">
+      <Filter>FTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\FTP\ftp.h">
+      <Filter>FTP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CError.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\FTP\HTTPComm.h">
+      <Filter>HTTP</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Ftp.rc" />
+  </ItemGroup>
+</Project>

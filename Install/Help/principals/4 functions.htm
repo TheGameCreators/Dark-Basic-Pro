@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR>
+<BR>
+<FONT SIZE=3><B><FONT SIZE=3><CENTER>Common and User Functions<BR>
+</CENTER></FONT></B></FONT><BR>
+COMMON FUNCTIONS<BR>
+<BR>
+Functions can be described as commands that return a value. Dark Basic Professional uses arithmetic functions, string functions, command specific functions and user-defined functions. They all share commonalties that will help you recognize what they look like and how they are used.<BR>
+<BR>
+A simple arithmetic function is the ABS command, which takes a negative value and converts it to positive:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>PRINT ABS(-100)
+</FONT></PRE>Will print 100 as the result of the function<BR>
+<BR>
+The same function can be used in a calculation:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>A = B + ABS(-100)
+</FONT></PRE>Or used with a variable:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>A = ABS( B )
+</FONT></PRE>Or used as part of a conditional expression:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>IF ABS( A ) > 180 THEN PRINT "ok"
+</FONT></PRE>Just as you have become accustomed to using variables in place of standard numbers and strings, you can use functions in the same way. As shown, functions can take data but they don"t have to. Some functions merely return a value, such as:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>DO
+PRINT TIMER()
+LOOP
+</FONT></PRE>You will notice that even though no parameter data is required, you still need to add the brackets. The brackets instruct Dark Basic Professional it is a function and is a handy way of quickly determining whether it"s a variable or function. Unlike variable and array names, functions only require a dollar symbol ($) if a string is to be returned. You do not need to specify a hash symbol (#) if the function is to return a real number, as the individual commands help will reveal.<BR>
+<BR>
+<BR>
+USER DEFINED FUNCTIONS<BR>
+<BR>
+There will come a time when the ability to create your own functions will be priceless. Experienced programmers would not be able to write effective code without them. Although GOSUB commands and subroutines have been provided for compatibility and learning, it is expected that you will progress to use functions as soon as possible.<BR>
+<BR>
+Functions are blocks of commands that usually perform a recursive or isolated task that is frequently used by your program. Variables and arrays used within the function are isolated from the rest of the program. If you use a variable name of FRED in your function, it will not affect another variable called FRED in your main program, nor any other function that happens to use a similar variable name. This may seem to be a restriction, but forces you to think about cutting up your program into exclusive tasks which is a very important lesson.<BR>
+<BR>
+You can pass up to 255 parameters into your function, and have the option of returning a value when the function returns. Functions that do not return a value can also be used as normal commands in your main program.<BR>
+<BR>
+Declaring a function couldn"t be simpler. To use the FUNCTION command, simply provide it with a name and a list of parameters in brackets and your declaration is half-complete. Enter the commands you want on the following lines and then end the function declaration with the command ENDFUNCTION. The following example declares a function that returns half of a value passed in:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>FUNCTION halfvalue(value)
+value=value/2
+ENDFUNCTION value
+</FONT></PRE>This declaration creates a function that can be used as a better print command:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>REM Start of program
+BetterPrint(10, 10, "Hello world")
+END
+
+FUNCTION BetterPrint(x, y, t$)
+SET CURSOR x,y
+PRINT t$
+ENDFUNCTION
+</FONT></PRE></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

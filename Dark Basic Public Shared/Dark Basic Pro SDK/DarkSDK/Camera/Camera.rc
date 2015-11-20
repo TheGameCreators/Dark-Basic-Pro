@@ -1,0 +1,226 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL"
+            VALUE "CompanyName", "Dark Basic Software Ltd"
+            VALUE "FileDescription", "Dark Basic Professional DLL"
+            VALUE "FileVersion", "V1.0"
+            VALUE "InternalName", "Dark Basic Professional DLL"
+            VALUE "LegalCopyright", "Copyright © 2002"
+            VALUE "LegalTrademarks", "DarkBASIC"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll"
+            VALUE "ProductName", "Dark Basic Professional DLL"
+            VALUE "ProductVersion", "V1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United Kingdom) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_STRING1             "CLEAR CAMERA VIEW%L%?ClearView@@YAXK@Z%Color Value"
+    IDS_STRING2             "AUTOCAM ON%0%?SetAutoCamOn@@YAXXZ"
+    IDS_STRING3             "AUTOCAM OFF%0%?SetAutoCamOff@@YAXXZ"
+    IDS_STRING4             "MOVE CAMERA%F%?Move@@YAXM@Z%Distance Value"
+    IDS_STRING5             "PITCH CAMERA UP%F%?PitchUp@@YAXM@Z%Angle Value"
+    IDS_STRING6             "PITCH CAMERA DOWN%F%?PitchDown@@YAXM@Z%Angle Value"
+    IDS_STRING7             "TURN CAMERA LEFT%F%?TurnLeft@@YAXM@Z%Angle Value"
+    IDS_STRING8             "TURN CAMERA RIGHT%F%?TurnRight@@YAXM@Z%Angle Value"
+    IDS_STRING9             "ROLL CAMERA LEFT%F%?RollLeft@@YAXM@Z%Angle Value"
+    IDS_STRING10            "ROLL CAMERA RIGHT%F%?RollRight@@YAXM@Z%Angle Value"
+    IDS_STRING11            "POINT CAMERA%FFF%?Point@@YAXMMM@Z%X, Y, Z"
+    IDS_STRING12            "POSITION CAMERA%FFF%?Position@@YAXMMM@Z%X, Y, Z"
+    IDS_STRING13            "ROTATE CAMERA%FFF%?SetRotate@@YAXMMM@Z%XAngle, YAngle, ZAngle"
+    IDS_STRING14            "SET CAMERA FOV%F%?SetFOV@@YAXM@Z%Field-Of-View Angle"
+    IDS_STRING15            "SET CAMERA RANGE%FF%?SetRange@@YAXMM@Z%Near Value, Far Value"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING16            "SET CAMERA VIEW%LLLL%?SetView@@YAXHHHH@Z%Left, Top, Right, Bottom"
+    IDS_STRING17            "SET CAMERA ROTATION XYZ%0%?SetRotationXYZ@@YAXXZ"
+    IDS_STRING18            "SET CAMERA ROTATION ZYX%0%?SetRotationZYX@@YAXXZ"
+    IDS_STRING19            "SET CAMERA TO FOLLOW%FFFFFFFL%?Follow@@YAXMMMMMMMH@Z%X, Y, Z, Angle, Distance, Height, Smooth, Collision"
+    IDS_STRING20            "SET CAMERA TO OBJECT ORIENTATION%L%?SetToObjectOrientation@@YAXH@Z%Object Number"
+    IDS_STRING21            "XROTATE CAMERA%F%?SetXRotate@@YAXM@Z%XAngle"
+    IDS_STRING22            "YROTATE CAMERA%F%?SetYRotate@@YAXM@Z%YAngle"
+    IDS_STRING23            "ZROTATE CAMERA%F%?SetZRotate@@YAXM@Z%ZAngle"
+    IDS_STRING24            "CAMERA POSITION X[%F%?GetXPositionEx@@YAKXZ"
+    IDS_STRING25            "CAMERA POSITION Y[%F%?GetYPositionEx@@YAKXZ"
+    IDS_STRING26            "CAMERA POSITION Z[%F%?GetZPositionEx@@YAKXZ"
+    IDS_STRING27            "CAMERA ANGLE X[%F%?GetXAngleEx@@YAKXZ"
+    IDS_STRING28            "CAMERA ANGLE Y[%F%?GetYAngleEx@@YAKXZ"
+    IDS_STRING29            "CAMERA ANGLE Z[%F%?GetZAngleEx@@YAKXZ"
+    IDS_STRING30            "CLEAR CAMERA VIEW%LD%?ClearViewEx@@YAXHK@Z%Camera Number, Color Value"
+    IDS_STRING31            "MOVE CAMERA%LF%?Move@@YAXHM@Z%Camera Number, Distance Value"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING32            "PITCH CAMERA UP%LF%?PitchUp@@YAXHM@Z%Camera Number, Angle Value"
+    IDS_STRING33            "BACKDROP ON%0%?BackdropOn@@YAXXZ"
+    IDS_STRING34            "BACKDROP OFF%0%?BackdropOff@@YAXXZ"
+    IDS_STRING35            "COLOR BACKDROP%D%?BackdropColor@@YAXK@Z%Color Value"
+    IDS_STRING36            "TEXTURE BACKDROP%L%?BackdropTexture@@YAXH@Z%Image Number"
+    IDS_STRING37            "SCROLL BACKDROP%LL%?BackdropScroll@@YAXHH@Z%U, V"
+    IDS_STRING38            "MAKE CAMERA%L%?CreateEx@@YAXH@Z%Camera Number"
+    IDS_STRING39            "DELETE CAMERA%L%?DestroyEx@@YAXH@Z%Camera Number"
+    IDS_STRING40            "SET CURRENT CAMERA%L%?SetCurrentCamera@@YAXH@Z%Camera Number"
+    IDS_STRING41            "PITCH CAMERA DOWN%LF%?PitchDown@@YAXHM@Z%Camera Number, Angle Value"
+    IDS_STRING42            "TURN CAMERA LEFT%LF%?TurnLeft@@YAXHM@Z%Camera Number, Angle Value"
+    IDS_STRING43            "TURN CAMERA RIGHT%LF%?TurnRight@@YAXHM@Z%Camera Number, Angle Value"
+    IDS_STRING44            "ROLL CAMERA LEFT%LF%?RollLeft@@YAXHM@Z%Camera Number, Angle Value"
+    IDS_STRING45            "ROLL CAMERA RIGHT%LF%?RollRight@@YAXHM@Z%Camera Number, Angle Value"
+    IDS_STRING46            "POINT CAMERA%LFFF%?Point@@YAXHMMM@Z%Camera Number, X, Y, Z"
+    IDS_STRING47            "POSITION CAMERA%LFFF%?Position@@YAXHMMM@Z%Camera Number, X, Y, Z"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING48            "ROTATE CAMERA%LFFF%?SetRotate@@YAXHMMM@Z%Camera Number, XAngle, YAngle, ZAngle"
+    IDS_STRING49            "SET CAMERA FOV%LF%?SetFOV@@YAXHM@Z%Camera Number, Field-Of-View Angle"
+    IDS_STRING50            "SET CAMERA RANGE%LFF%?SetRange@@YAXHMM@Z%Camera Number, Near Value, Far Value"
+    IDS_STRING51            "SET CAMERA VIEW%LLLLL%?SetView@@YAXHHHHH@Z%Camera Number, Left, Top, Right, Bottom"
+    IDS_STRING52            "SET CAMERA ROTATION XYZ%L%?SetRotationXYZ@@YAXH@Z%Camera Number"
+    IDS_STRING53            "SET CAMERA ROTATION ZYX%L%?SetRotationZYX@@YAXH@Z%Camera Number"
+    IDS_STRING54            "SET CAMERA TO FOLLOW%LFFFFFFFL%?Follow@@YAXHMMMMMMMH@Z%Camera Number, X, Y, Z, Angle, Distance, Height, Smooth, Collision"
+    IDS_STRING55            "SET CAMERA TO OBJECT ORIENTATION%LL%?SetToObjectOrientation@@YAXHH@Z%Camera Number, Object Number"
+    IDS_STRING56            "XROTATE CAMERA%LF%?SetXRotate@@YAXHM@Z%Camera Number, XAngle"
+    IDS_STRING57            "YROTATE CAMERA%LF%?SetYRotate@@YAXHM@Z%Camera Number, YAngle"
+    IDS_STRING58            "ZROTATE CAMERA%LF%?SetZRotate@@YAXHM@Z%Camera Number, ZAngle"
+    IDS_STRING59            "CAMERA POSITION X[%FL%?GetXPositionEx@@YAKH@Z%Camera Number"
+    IDS_STRING60            "CAMERA POSITION Y[%FL%?GetYPositionEx@@YAKH@Z%Camera Number"
+    IDS_STRING61            "CAMERA POSITION Z[%FL%?GetZPositionEx@@YAKH@Z%Camera Number"
+    IDS_STRING62            "CAMERA ANGLE X[%FL%?GetXAngleEx@@YAKH@Z%Camera Number"
+    IDS_STRING63            "CAMERA ANGLE Y[%FL%?GetYAngleEx@@YAKH@Z%Camera Number"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING64            "CAMERA ANGLE Z[%FL%?GetZAngleEx@@YAKH@Z%Camera Number"
+    IDS_STRING65            "BACKDROP ON%L%?BackdropOn@@YAXH@Z%Camera Number"
+    IDS_STRING66            "BACKDROP OFF%L%?BackdropOff@@YAXH@Z%Camera Number"
+    IDS_STRING67            "COLOR BACKDROP%LD%?BackdropColor@@YAXHK@Z%Camera Number, Color Value"
+    IDS_STRING68            "TEXTURE BACKDROP%LL%?BackdropTexture@@YAXHH@Z%Camera Number, Image Number"
+    IDS_STRING69            "SCROLL BACKDROP%LLL%?BackdropScroll@@YAXHHH@Z%Camera Number, U, V"
+    IDS_STRING70            "SET CAMERA TO IMAGE%LLLL%?SetCameraToImage@@YAXHHHH@Z%Camera Number, Image Number, Width, Height"
+    IDS_STRING71            "CONTROL CAMERA USING ARROWKEYS%LFF%?ControlWithArrowKeys@@YAXHMM@Z%Camera Number, MoveSpeed, TurnSpeed"
+    IDS_STRING72            "POSITION CAMERA%LL%?SetPositionVector3@@YAXHH@Z%Camera Number, Vector"
+    IDS_STRING73            "ROTATE CAMERA%LL%?SetRotationVector3@@YAXHH@Z%Camera Number, Vector"
+    IDS_STRING74            "SET VECTOR3 TO CAMERA POSITION%LL%?GetPositionVector3@@YAXHH@Z%Vector, Camera Number"
+    IDS_STRING75            "SET VECTOR3 TO CAMERA ROTATION%LL%?GetRotationVector3@@YAXHH@Z%Vector, Camera Number"
+    IDS_STRING76            "SET CAMERA ASPECT%F%?SetAspect@@YAXM@Z% Aspect Ratio"
+    IDS_STRING77            "SET CAMERA ASPECT%LF%?SetAspect@@YAXHM@Z%Camera Number, Aspect Ratio"
+    IDS_STRING78            "SET CAMERA TO IMAGE%LLLLL%?SetCameraToImageEx@@YAXHHHHH@Z%Camera Number, Image Number, Width, Height, Generate Alpha Mode"
+    IDS_STRING79            "CAMERA EXIST[%LL%?GetExistEx@@YAHH@Z%Camera Number"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING80            "SET CAMERA CLIP%LLFFFFFF%?SetClip@@YAXHHMMMMMM@Z%Camera Number, ClipOnOff, X, Y, Z, NX, NY, NZ"
+    IDS_STRING81            "SET CAMERAS TO STEREOSCOPIC%LLLLL%?SetCamerasToStereoscopic@@YAXHHHHH@Z%Stereoscopic Mode, Camera Left, Camera Right, Image Back, Image Front"
+    IDS_STRING82            "SET CAMERA TO IMAGE%LLLLLD%?SetCameraToImageEx@@YAXHHHHHK@Z%Camera Number, Image Number, Width, Height, Generate Alpha Mode, D3D Format"
+    IDS_STRING83            "COLOR BACKDROP%LDD%?BackdropColor@@YAXHKK@Z%Camera Number, Color Value, Foreground Wipe Color"
+    IDS_STRING84            "SET CAMERA SWITCH BANK%LL%?SetCameraSwitchBank@@YAXHH@Z%Camera Number, Flags"
+END
+
+#endif    // English (United Kingdom) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

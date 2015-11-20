@@ -1,0 +1,147 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING101           "SET STATIC UNIVERSE%FFF%?CreateNodeTree@@YAXMMM@Z%X, Y, Z"
+    IDS_STRING102           "MAKE STATIC OBJECT%LLLLL%?AddNodeTreeObject@@YAXHHHHH@Z%Object Number, Collision, Arbitary Value, Cast Shadow, Portal Blocker"
+    IDS_STRING103           "MAKE STATIC LIMB%LLLLLL%?AddNodeTreeLimb@@YAXHHHHHH@Z%Object Number, Limb Number, Collision, Arbitary Value, Cast Shadow, Portal Blocker"
+    IDS_STRING104           "DELETE STATIC OBJECTS%0%?DeleteNodeTree@@YAXXZ"
+    IDS_STRING105           "DELETE STATIC OBJECT%L%?RemoveNodeTreeObject@@YAXH@Z%Object Number"
+    IDS_STRING106           "SET STATIC PORTALS ON%0%?SetNodeTreePortalsOn@@YAXXZ%"
+    IDS_STRING107           "SET STATIC PORTALS OFF%0%?SetNodeTreePortalsOff@@YAXXZ%"
+    IDS_STRING108           "BUILD STATIC PORTALS%0%?BuildNodeTreePortals@@YAXXZ%"
+    IDS_STRING109           "SET STATIC OBJECTS WIREFRAME ON%0%?SetNodeTreeWireframeOn@@YAXXZ"
+    IDS_STRING110           "SET STATIC OBJECTS WIREFRAME OFF%0%?SetNodeTreeWireframeOff@@YAXXZ"
+    IDS_STRING111           "STATIC LINE OF SIGHT[%LFFFFFFFF%?GetStaticLineOfSight@@YAHMMMMMMMM@Z%X1, Y1, Z1, X2, Y2, Z2, Width, Accuracy"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING112           "GET STATIC COLLISION HIT[%LFFFFFFFFFFFF%?GetStaticHit@@YAHMMMMMMMMMMMM@Z%OX1, OY1, OZ1, OX2, OY2, OZ2, NX1, NY1, NZ1, NX2, NY2, NZ2"
+    IDS_STRING113           "STATIC RAYCAST[%LFFFFFF%?GetStaticRayCast@@YAHMMMMMM@Z%X1, Y1, Z1, X2, Y2, Z2"
+    IDS_STRING114           "STATIC VOLUME[%LFFFFFFF%?GetStaticVolumeCast@@YAHMMMMMMM@Z%X1, Y1, Z1, X2, Y2, Z2, Size"
+    IDS_STRING115           "GET STATIC COLLISION X[%F%?GetStaticX@@YAKXZ"
+    IDS_STRING116           "GET STATIC COLLISION Y[%F%?GetStaticY@@YAKXZ"
+    IDS_STRING117           "GET STATIC COLLISION Z[%F%?GetStaticZ@@YAKXZ"
+    IDS_STRING118           "GET STATIC COLLISION COUNT[%L%?GetStaticColCount@@YAHXZ"
+    IDS_STRING119           "GET STATIC COLLISION VALUE[%L%?GetStaticColValue@@YAHXZ"
+    IDS_STRING120           "GET STATIC COLLISION FLOOR[%L%?GetStaticFloor@@YAHXZ"
+    IDS_STRING121           "ADD STATIC OBJECTS TO LIGHT MAP POOL%0%?AddStaticObjectsToLightMapPool@@YAXXZ%"
+    IDS_STRING122           "ADD OBJECT TO LIGHT MAP POOL%L%?AddObjectToLightMapPool@@YAXH@Z%Object Number"
+    IDS_STRING123           "ADD LIGHT MAP LIGHT%FFFFFFFFL%?AddLightMapLight@@YAXMMMMMMMMH@Z%X, Y, Z, Radius, Red, Green, Blue, Brightness, Shadow"
+    IDS_STRING124           "CREATE LIGHT MAPS%LLS%?CreateLightMaps@@YAXHHK@Z%Texture Size, Texture Quality, LightMapSavePath"
+    IDS_STRING125           "SET STATIC CULLING%L%?SetNodeTreeCulling@@YAXH@Z%Full Portal Traverse Flag"
+    IDS_STRING126           "ADD LIMB TO LIGHT MAP POOL%LL%?AddLimbToLightMapPool@@YAXHH@Z%"
+    IDS_STRING127           "DELETE LIGHT MAP LIGHTS%0%?FlushLightMapLights@@YAXXZ%"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING128           "ADD STATIC SCORCH%FL%?AddNodeTreeScorch@@YAXMH@Z%Scorch Size, Scorch Type"
+    IDS_STRING129           "LOAD STATIC OBJECTS%SL%?LoadNodeTreeObjects@@YAXKH@Z%Filename, Divide Texture Size"
+    IDS_STRING130           "SET STATIC SCORCH%LLL%?SetNodeTreeScorchTexture@@YAXHHH@Z%Image Number, Width, Height"
+    IDS_STRING131           "SET SHADOW LIGHT%LFFFF%?AddNodeTreeLight@@YAXHMMMM@Z%Light Number, X, Y, Z, Range"
+    IDS_STRING132           "SET GLOBAL SHADOWS OFF%0%?SetGlobalShadowsOff@@YAXXZ"
+    IDS_STRING133           "SET GLOBAL SHADOWS ON%0%?SetGlobalShadowsOn@@YAXXZ"
+    IDS_STRING134           "SET GLOBAL SHADOW SHADES%L%?SetShadowShades@@YAXH@Z%Number Of Shades"
+    IDS_STRING135           "SET GLOBAL SHADOW COLOR%LLLL%?SetShadowColor@@YAXHHHH@Z%Red, Green, Blue, Alpha"
+    IDS_STRING136           "SET SHADOW POSITION%LFFF%?SetShadowPosition@@YAXHMMM@Z%Mode, X, Y, Z"
+    IDS_STRING137           "PERFORM CSG UNION%LL%?PeformCSGUnion@@YAXHH@Z%Target Object, Brush Object"
+    IDS_STRING138           "PERFORM CSG DIFFERENCE%LL%?PeformCSGDifference@@YAXHH@Z%Target Object, Brush Object"
+    IDS_STRING139           "PERFORM CSG INTERSECTION%LL%?PeformCSGIntersection@@YAXHH@Z%Target Object, Brush Object"
+    IDS_STRING140           "PERFORM CSG CLIP%LL%?PeformCSGClip@@YAXHH@Z%Target Object, Brush Object"
+    IDS_STRING141           "PERFORM CSG UNION ON VERTEXDATA%L%?PeformCSGUnionOnVertexData@@YAXH@Z%Brush Mesh"
+    IDS_STRING142           "PERFORM CSG DIFFERENCE ON VERTEXDATA%L%?PeformCSGDifferenceOnVertexData@@YAXH@Z%Brush Mesh"
+    IDS_STRING143           "PERFORM CSG INTERSECTION ON VERTEXDATA%L%?PeformCSGIntersectionOnVertexData@@YAXH@Z%Brush Mesh"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING144           "REDUCE MESH%LLLLLL%?ReduceMesh@@YAXHHHHHH@Z%Mesh Number, Block Mode, Near Mode, GX, GY, GZ"
+    IDS_STRING145           "ATTACH OBJECT TO STATIC%L%?AttachObjectToNodeTree@@YAXH@Z%Object Number"
+    IDS_STRING146           "SET STATIC EFFECT TECHNIQUE%S%?SetNodeTreeEffectTechnique@@YAXK@Z%Technique Name"
+    IDS_STRING147           "DETACH OBJECT FROM STATIC%L%?DetachObjectFromNodeTree@@YAXH@Z%Object Number"
+    IDS_STRING148           "ADD LOD TO OBJECT%LLLF%?AddLODToObject@@YAXHHHM@Z%Object Number, LOD Object, LOD Level, LOD Distance"
+    IDS_STRING149           "SAVE STATIC OBJECTS%S%?SaveNodeTreeObjects@@YAXK@Z%Filename"
+    IDS_STRING150           "MAKE STATIC COLLISION BOX%FFFFFF%?MakeNodeTreeCollisionBox@@YAXMMMMMM@Z%X1, Y1, Z1, X2, Y2, Z2"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

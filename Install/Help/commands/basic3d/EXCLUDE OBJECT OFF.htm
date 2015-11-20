@@ -1,0 +1,147 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\..\main.htm"><img src="..\..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\commands.htm"><img src="..\..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\..\examples.htm"><img src="..\..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\documents.htm"><img src="..\..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\..\index.htm"><img src="..\..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<!-- Function Head -->
+<font face="Verdana" size="5">
+<b>
+EXCLUDE OBJECT OFF
+</b>
+<font face="Verdana" size="2">
+<p>
+This command will restore an object previously removed physically from any loops involving multi-object checking. 
+</p>
+</font>
+<!-- Synopsis -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Syntax
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+EXCLUDE OBJECT OFF Object ID
+</pre>
+</font>
+<!-- Parameters -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Parameters
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+Object ID
+</pre>
+<blockquote>
+Integer
+<br>
+The object number
+</blockquote>
+</font>
+<BR>
+<!-- Returns -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Returns
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+This command does not return a value.
+</p>
+</font>
+<!-- Description -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Description
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+The "exclude" feature is used to increase performance in scenes that use a large quantity of redundant objects in memory.
+</p>
+</font>
+<!-- Examples -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Example Code
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+cls : sync on : sync rate 0 : hide mouse:cls 0<BR>
+make object cone 1,10<BR>
+xrotate object 1,90<BR>
+fix object pivot 1<BR>
+position object 1,0,0,140<BR>
+AUTOMATIC OBJECT COLLISION 1,5,1<BR>
+for t=2 to 100<BR>
+make object sphere t,10<BR>
+position object t,rnd(260)-130,0,rnd(260)-130<BR>
+color object t,rgb(0,255,0)<BR>
+yrotate object t,rnd(359.0)<BR>
+if isodd(t)=0 then color object t,rgb(255,0,0)<BR>
+next t<BR>
+position camera 0,350,0<BR>
+point camera 0,0,0<BR>
+while mouseclick()=0<BR>
+set cursor 0,0<BR>
+print screen fps()<BR>
+if leftkey()=1 then turn object left 1,1<BR>
+if rightkey()=1 then turn object right 1,1<BR>
+if upkey()=1 then move object 1,1<BR>
+if downkey()=1 then move object 1,-1<BR>
+if inkey$()="e" then for t=2 to 100:if isodd(t)=0:EXCLUDE OBJECT ON t:endif:next t<BR>
+if inkey$()="i" then for t=2 to 100:if isodd(t)=0:EXCLUDE OBJECT OFF t:endif:next t<BR>
+sync<BR>
+endwhile<BR>
+while mouseclick()=1:endwhile<BR>
+delete objects 1,100<BR>
+end<BR>
+function isodd(a)<BR>
+a=a && 1<BR>
+endfunction a<BR>
+</pre>
+</font>
+<!-- See Also -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+See also
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+<a href="..\basic3d.htm">BASIC3D Commands Menu<BR>
+</a>
+<a href="..\..\index.htm">Index</a><BR>
+</p>
+</font>
+<BR>
+<!-- Function Footer -->
+</font>
+</td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

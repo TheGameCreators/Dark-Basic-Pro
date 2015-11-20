@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\..\main.htm"><img src="..\..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\commands.htm"><img src="..\..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\..\examples.htm"><img src="..\..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\documents.htm"><img src="..\..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\..\index.htm"><img src="..\..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<!-- Function Head -->
+<font face="Verdana" size="5">
+<b>
+OBJECT COLLISION
+</b>
+<font face="Verdana" size="2">
+<p>
+This command will return a one if the two specified 3D objects are overlapping. 
+</p>
+</font>
+<!-- Synopsis -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Syntax
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+Return Integer=OBJECT COLLISION(ObjectA Number, ObjectB Number)
+</pre>
+</font>
+<!-- Parameters -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Parameters
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+ObjectA Number
+</pre>
+<blockquote>
+Integer
+<br>
+The object number
+</blockquote>
+<pre>
+ObjectB Number
+</pre>
+<blockquote>
+Integer
+<br>
+The second object number or  zero to check all objects, the number of the object overlapping with the first object will be returned
+</blockquote>
+</font>
+<BR>
+<!-- Returns -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Returns
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+This command will return a one if the two specified 3D objects are overlapping
+</p>
+</font>
+<!-- Description -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Description
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+If the second object number is set to zero, the number of the object overlapping with the first object will be returned as an integer value. The parameters should be specified using integer values. Spheres and boxes are solid objects, and so collision can only occur when they collide together. When an object is entirely within another object, even though the geometry is not touching, the collision is still valid as the larger object would be a solid construct. You cannot perform polygon to polygon collision on two objects. When two polygon objects are asked to test for collision, the secondary object will be treated like a sphere for collision purposes, where the outer extents of the objects geometry shall define the sphere.
+</p>
+</font>
+<!-- Examples -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Example Code
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+<blockquote>
+No example code is provided for this command
+</blockquote>
+</pre>
+</font>
+<!-- See Also -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+See also
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+<a href="..\basic3d.htm">BASIC3D Commands Menu<BR>
+</a>
+<a href="..\..\index.htm">Index</a><BR>
+</p>
+</font>
+<BR>
+<!-- Function Footer -->
+</font>
+</td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

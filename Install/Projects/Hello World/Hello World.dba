@@ -1,0 +1,6 @@
+Rem Project: Hello World
+Rem Created: Friday, November 20, 2015
+
+_ten:
+print "hello world"
+goto _ten

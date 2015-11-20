@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_FPSC|Win32'">
+    <LocalDebuggerCommand>C:\Program Files (x86)\The Game Creators\FPS Creator\FPSCreator.exe</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>C:\Program Files (x86)\The Game Creators\FPS Creator\</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugFPSC|Win32'">
+    <LocalDebuggerCommand>F:\TGCSHARED\fpsc-reloaded\FPS Creator Files\FPSC-Proto-Game.exe</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>F:\TGCSHARED\fpsc-reloaded\FPS Creator Files\</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugAPP|Win32'">
+    <LocalDebuggerCommand>D:\SteamLibrary\steamapps\common\FPS Creator Reloaded\FPSC-MapEditor.exe</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>D:\SteamLibrary\steamapps\common\FPS Creator Reloaded\</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LocalDebuggerCommand>C:\Users\Lee\Documents\FPSC Reloaded Files\My Games\Get To The River\Get To The River.exe</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>C:\Users\Lee\Documents\FPSC Reloaded Files\My Games\Get To The River\</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLM|Win32'">
+    <LocalDebuggerCommand>F:\TGCSHARED\fpsc-reloaded\FPS Creator Files\Guru-Lightmapper.exe</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>F:\TGCSHARED\fpsc-reloaded\FPS Creator Files\</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>

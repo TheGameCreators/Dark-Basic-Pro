@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Particles">
+      <UniqueIdentifier>{fbd23e38-c31a-4044-bfa3-c4e5508c3357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Particles\Presets">
+      <UniqueIdentifier>{1a0def0d-d675-4645-aafc-a30d23d0c063}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Particles\Presets\Snow">
+      <UniqueIdentifier>{59a9feec-3b0b-43f3-9129-8e62843f1955}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{04ba3fc2-701e-45a8-981d-42be4382c547}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Position">
+      <UniqueIdentifier>{9b43a60d-5a35-4e03-b03f-528d527e7d9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Error">
+      <UniqueIdentifier>{c9d3f2f2-237d-48e4-8b69-234e1407d112}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\SpecialEffects\CParticleC.cpp">
+      <Filter>Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\SpecialEffects\CParticleManagerC.cpp">
+      <Filter>Particles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\SpecialEffects\CBaseParticleC.cpp">
+      <Filter>Particles\Presets</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\SpecialEffects\CSnowC.cpp">
+      <Filter>Particles\Presets\Snow</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Data\CDataC.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SHARED\SPECIALEFFECTS\CPositionC.cpp">
+      <Filter>Position</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\SpecialEffects\CParticleC.h">
+      <Filter>Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\SpecialEffects\CParticleDataC.h">
+      <Filter>Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\SpecialEffects\CParticleManagerC.h">
+      <Filter>Particles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\SpecialEffects\CBaseParticleC.h">
+      <Filter>Particles\Presets</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\SpecialEffects\CSnowC.h">
+      <Filter>Particles\Presets\Snow</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Data\CDataC.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SHARED\SPECIALEFFECTS\CPositionC.h">
+      <Filter>Position</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CError.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CRuntimeErrors.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Particles.rc" />
+  </ItemGroup>
+</Project>

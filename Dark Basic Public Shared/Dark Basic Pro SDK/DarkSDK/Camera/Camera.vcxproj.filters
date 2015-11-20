@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Camera">
+      <UniqueIdentifier>{299a77aa-1471-4d10-b469-89baf550db14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{440cbf6b-50a6-4ff1-9eb4-ec5e8b03fe21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Error">
+      <UniqueIdentifier>{878e8329-994e-49c5-8648-84ec0518beed}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\Camera\CCameraC.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Camera\CCameraDataC.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Camera\CCameraManagerC.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Camera\Stereoscopics.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Camera\TextureBackdrop.cpp">
+      <Filter>Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Data\CDataC.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\Camera\CCameraC.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Camera\CCameraDataC.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Camera\CCameraManagerC.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Camera\Stereoscopics.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Camera\TextureBackdrop.h">
+      <Filter>Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Data\CDataC.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CError.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CRuntimeErrors.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Camera.rc" />
+  </ItemGroup>
+</Project>

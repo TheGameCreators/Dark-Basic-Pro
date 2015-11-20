@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Music">
+      <UniqueIdentifier>{a626c7a6-bffb-4b71-b3eb-fb46f4447743}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Error">
+      <UniqueIdentifier>{ea318b92-7415-45b7-8c66-2e1b45d8af58}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\Music\BasePlayer.cpp">
+      <Filter>Music</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Music\CdPlayer.cpp">
+      <Filter>Music</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Music\CMusicC.cpp">
+      <Filter>Music</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Music\CMusicManagerC.cpp">
+      <Filter>Music</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Music\MidiPlayer.cpp">
+      <Filter>Music</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Music\MusicPlayer.cpp">
+      <Filter>Music</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLMain.cpp" />
+    <ClCompile Include="..\..\Shared\Core\SteamCheckForWorkshop.cpp">
+      <Filter>Music</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\Music\BasePlayer.h">
+      <Filter>Music</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Music\CdPlayer.h">
+      <Filter>Music</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Music\CMusicC.h">
+      <Filter>Music</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Music\CMusicManagerC.h">
+      <Filter>Music</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Music\MidiPlayer.h">
+      <Filter>Music</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Music\MusicPlayer.h">
+      <Filter>Music</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CError.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Music.rc" />
+  </ItemGroup>
+</Project>

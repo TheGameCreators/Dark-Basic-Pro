@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR>
+<BR>
+<FONT SIZE=3><B><FONT SIZE=3><CENTER>LESSON 4<BR>
+Using The Properties Panel<BR>
+</CENTER></FONT></B></FONT><BR>
+1. The properties panel is used to control the finer aspects of the executable you will ultimately produce to distribute your finished program.<BR>
+<BR>
+<IMG SRC=gfx\24Properties.jpg><BR>
+<BR>
+2. You can find this properties panel by clicking the forth tab in the bottom right corner of the editor (using the default configuration).<BR>
+<BR>
+3. The properties panel is divided into sections, as described below:<BR>
+<BR>
+TITLE : The name that will appear on your application window titlebar<BR>
+APPLICATION TYPE : Choose between exe, media, installer, alone<BR>
+ICON : Specify an ICO file here which will be used when making the final executable<BR>
+FILENAME : The filename of the final executable to be created<BR>
+SCREEN TYPE : Choose between  fullscreen, window, desktop, fulldesktop, hidden<BR>
+WINDOW RESOLUTION : Resolution if the project is a window<BR>
+FULLSCREEN RESOLUTION : Resolution if the project is in fullscreen mode<BR>
+COMPRESS : Whether the media contained in the executable should be compressed<BR>
+ENCRYPT : Whether the media contained in the executable should be encrypted<BR>
+COMMENTS : Optional comments to tag into the version information of the executable<BR>
+COMPANY: Optional name of the developing company<BR>
+COPYRIGHT: Optional copyright text can be written here<BR>
+DESCRIPTION: Optional brief description of the application<BR>
+VERSION: Optional version number to be stored in the application executable<BR>
+<BR>
+4. The APPLICATION TYPE is divided into several modes. EXE will create a standalone executable which will depend on external media files. MEDIA will create a standalone executable and then embed the projects local media into it, creating a much larger executable but hiding the media files. These executables can be shipped without including the external media files for convenience. INSTALLER is similar to MEDIA, but the executable will uninstall the media files externally from the executable before the application is launched. ALONE is similar to EXE, except that it will seperate the EXE stub and the PCK file which contains the programs instruction data, useful if you wish to use a standard executable stub.<BR>
+<BR>
+5. The SCREEN TYPE is divided into several display modes. WINDOW will cause the application to run in a window. FULLSCREEN will cause the application to run as a fullscreen exclusive display, idealy for controlling vsync and is often used when creating action games. DESKTOP will stretch the window to the size of the current windows desktop and remove the frame and titlebar visuals. This has the benefit of fullscreen but without the exclusive mode switch. This mode also retains the desktop bar. DESKTOPFULL is similar to DESKTOP, except that it will also use the space reserved for the desktop bar creating a truely full screen experience, whilst still running in a window. HIDDEN will launch the application without revealing its window, allowing useful tricks such as invisible background tasks or controlling when and if the window is displayed later in the application executable.<BR>
+<BR>
+ABSOLUTE PATHS<BR>
+<BR>
+It is worth noting there are two types of filenames you can use within the project panel tabs called relative and absolute filenames. Relative filename paths begin describing the location and name of the file from the current project folder, whereas the absolute path describes the entire path that includes the drive letter. This is especially significant for your project should you wish to transfer it to another part of or a different computer, as the drive letter and program files directory location may differ. You can determine if you are using an absolute path as the filename will begin X: where X is a drive letter. It is highly recommended that you use relative addressing when specifying files that belong to your project. You can do this by first placing your chosen cursors, icons, media and files inside your previously created project folder and then by specifying those files within the project panel tabs. This will ensure the files are understood as relative and will allow you to transport your project independent of the layout of the target computer.<BR>
+<BR>
+<BR>
+GO TO THE <A HREF="7 my first spinning cube program.htm">NEXT</A> PAGE<BR>
+<BR>
+</td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

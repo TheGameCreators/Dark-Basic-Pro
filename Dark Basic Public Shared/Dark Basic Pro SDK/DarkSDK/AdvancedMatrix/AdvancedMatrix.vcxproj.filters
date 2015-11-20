@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Terrain">
+      <UniqueIdentifier>{89592cb0-bb98-40d7-a943-956bc0a16b34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Terrain\Modes">
+      <UniqueIdentifier>{6de19864-afa2-4576-9634-941fe519fb34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Terrain\Modes\Quadtrees">
+      <UniqueIdentifier>{5387dd6a-67cd-4d0e-a556-a35649548b1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{265d18fb-3bcb-4151-ad82-68b7054b01df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Position">
+      <UniqueIdentifier>{fa72d5e6-21d2-40e0-9757-b43723954142}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Error">
+      <UniqueIdentifier>{b9a8bd64-3f4d-48ac-ae1a-d59b88ee9f45}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\EnhancedMatrix\CEnhancedMatrixC.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\EnhancedMatrix\CEnhancedMatrixManagerC.cpp">
+      <Filter>Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\EnhancedMatrix\Modes\CModeC.cpp">
+      <Filter>Terrain\Modes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\EnhancedMatrix\Modes\QuadTrees\CQuadTreesC.cpp">
+      <Filter>Terrain\Modes\Quadtrees</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Data\CDataC.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Position\CPositionC.cpp">
+      <Filter>Position</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\EnhancedMatrix\CEnhancedMatrixC.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\EnhancedMatrix\CEnhancedMatrixDataC.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\EnhancedMatrix\CEnhancedMatrixManagerC.h">
+      <Filter>Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\EnhancedMatrix\Modes\CModeC.h">
+      <Filter>Terrain\Modes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\EnhancedMatrix\Modes\QuadTrees\CQuadTreesC.h">
+      <Filter>Terrain\Modes\Quadtrees</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Data\CDataC.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Position\CPositionC.h">
+      <Filter>Position</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CError.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CRuntimeErrors.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AdvancedMatrix.rc" />
+  </ItemGroup>
+</Project>

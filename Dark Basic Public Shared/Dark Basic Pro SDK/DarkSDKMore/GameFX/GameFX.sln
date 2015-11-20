@@ -1,0 +1,19 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameFX", "GameFX.vcxproj", "{F3D528EA-F61E-4180-ADFD-5981BE51EF35}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3D528EA-F61E-4180-ADFD-5981BE51EF35}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F3D528EA-F61E-4180-ADFD-5981BE51EF35}.Debug|Win32.Build.0 = Debug|Win32
+		{F3D528EA-F61E-4180-ADFD-5981BE51EF35}.Release|Win32.ActiveCfg = Release|Win32
+		{F3D528EA-F61E-4180-ADFD-5981BE51EF35}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

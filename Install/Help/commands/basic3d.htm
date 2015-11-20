@@ -1,0 +1,427 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+</td></tr></table>
+<center><table width="340" border="0" cellpadding="0" cellspacing="0"><tr><td ALIGN="center"><FONT SIZE=4 FACE=Verdana><B>basic3d</B></FONT><BR><IMG SRC=..\gfx\divide.jpg width="340" height=5><BR>
+</td></tr></table></center><br><table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+This extensive command set is the hub for all your 3D efforts, and covers the creation, destruction and modification of your 3D objects. use the submenu below to jump to the section you are interested in:<BR>
+<BR>
+<A HREF="#OBJECT COMMANDS">OBJECT COMMANDS</A>
+<BR>
+<A HREF="#CONSTRUCTION COMMANDS">CONSTRUCTION COMMANDS</A>
+<BR>
+<A HREF="#APPEARANCE COMMANDS">APPEARANCE COMMANDS</A>
+<BR>
+<A HREF="#COLLISION COMMANDS">COLLISION COMMANDS</A>
+<BR>
+<A HREF="#LIMB COMMANDS">LIMB COMMANDS</A>
+<BR>
+<A HREF="#MESH COMMANDS">MESH COMMANDS</A>
+<BR>
+<A HREF="#SHADER COMMANDS">SHADER COMMANDS</A>
+<BR>
+<A HREF="#VERTEXDATA COMMANDS">VERTEXDATA COMMANDS</A>
+<BR>
+<A HREF="#OBJECT EXPRESSIONS">OBJECT EXPRESSIONS</A>
+<BR>
+<A HREF="#COLLISION EXPRESSIONS">COLLISION EXPRESSIONS</A>
+<BR>
+<A HREF="#LIMB EXPRESSIONS">LIMB EXPRESSIONS</A>
+<BR>
+<A HREF="#SCREEN OBJECT EXPRESSIONS">SCREEN OBJECT EXPRESSIONS</A>
+<BR>
+<A HREF="#AVAILABILITY EXPRESSIONS">AVAILABILITY EXPRESSIONS</A>
+<BR>
+<BR>
+Alternatively, scroll the page to view the entire list of commands.<BR>
+<BR>
+<PRE><FONT FACE=Verdana SIZE=1><BR><FONT SIZE=3><A NAME="OBJECT COMMANDS">OBJECT COMMANDS</A><BR>
+<FONT SIZE=1><BR>
+<a href="basic3d\LOAD OBJECT.htm">LOAD OBJECT</a> : LOAD OBJECT Filename, Object Number
+<a href="basic3d\APPEND OBJECT.htm">APPEND OBJECT</a> : APPEND OBJECT Filename, Object Number, Start Frame
+<a href="basic3d\CLONE OBJECT.htm">CLONE OBJECT</a> : CLONE OBJECT Object Number, Source Object
+<a href="basic3d\INSTANCE OBJECT.htm">INSTANCE OBJECT</a> : INSTANCE OBJECT Object Number, Source Object
+<a href="basic3d\DELETE OBJECT.htm">DELETE OBJECT</a> : DELETE OBJECT Object Number
+<a href="basic3d\DELETE OBJECTS.htm">DELETE OBJECTS</a> : DELETE OBJECTS From, To
+<a href="basic3d\SAVE OBJECT.htm">SAVE OBJECT</a> : SAVE OBJECT Filename, Object Number
+<BR>
+<a href="basic3d\POSITION OBJECT.htm">POSITION OBJECT</a> : POSITION OBJECT Object Number, X, Y, Z
+<a href="basic3d\SCALE OBJECT.htm">SCALE OBJECT</a> : SCALE OBJECT Object Number, XSize, YSize, ZSize
+<a href="basic3d\ROTATE OBJECT.htm">ROTATE OBJECT</a> : ROTATE OBJECT Object Number, XAngle, YAngle, ZAngle
+<a href="basic3d\MOVE OBJECT.htm">MOVE OBJECT</a> : MOVE OBJECT Object Number, Speed
+<a href="basic3d\POINT OBJECT.htm">POINT OBJECT</a> : POINT OBJECT Object Number, X, Y, Z
+<a href="basic3d\MOVE OBJECT DOWN.htm">MOVE OBJECT DOWN</a> : MOVE OBJECT DOWN Object Number, Value
+<a href="basic3d\MOVE OBJECT LEFT.htm">MOVE OBJECT LEFT</a> : MOVE OBJECT LEFT Object Number, Value
+<a href="basic3d\MOVE OBJECT RIGHT.htm">MOVE OBJECT RIGHT</a> : MOVE OBJECT RIGHT Object Number, Value
+<a href="basic3d\MOVE OBJECT UP.htm">MOVE OBJECT UP</a> : MOVE OBJECT UP Object Number, Value
+<a href="basic3d\XROTATE OBJECT.htm">XROTATE OBJECT</a> : XROTATE OBJECT Object Number, XAngle
+<a href="basic3d\YROTATE OBJECT.htm">YROTATE OBJECT</a> : YROTATE OBJECT Object Number, YAngle
+<a href="basic3d\ZROTATE OBJECT.htm">ZROTATE OBJECT</a> : ZROTATE OBJECT Object Number, ZAngle
+<a href="basic3d\TURN OBJECT LEFT.htm">TURN OBJECT LEFT</a> : TURN OBJECT LEFT Object Number, Value
+<a href="basic3d\TURN OBJECT RIGHT.htm">TURN OBJECT RIGHT</a> : TURN OBJECT RIGHT Object Number, Value
+<a href="basic3d\PITCH OBJECT UP.htm">PITCH OBJECT UP</a> : PITCH OBJECT UP Object Number, Value
+<a href="basic3d\PITCH OBJECT DOWN.htm">PITCH OBJECT DOWN</a> : PITCH OBJECT DOWN Object Number, Value
+<a href="basic3d\ROLL OBJECT LEFT.htm">ROLL OBJECT LEFT</a> : ROLL OBJECT LEFT Object Number, Value
+<a href="basic3d\ROLL OBJECT RIGHT.htm">ROLL OBJECT RIGHT</a> : ROLL OBJECT RIGHT Object Number, Value
+<a href="basic3d\SHOW OBJECT.htm">SHOW OBJECT</a> : SHOW OBJECT Object Number
+<a href="basic3d\HIDE OBJECT.htm">HIDE OBJECT</a> : HIDE OBJECT Object Number
+<BR>
+<a href="basic3d\PLAY OBJECT.htm">PLAY OBJECT</a> : PLAY OBJECT Object Number
+<a href="basic3d\LOOP OBJECT.htm">LOOP OBJECT</a> : LOOP OBJECT Object Number
+<a href="basic3d\STOP OBJECT.htm">STOP OBJECT</a> : STOP OBJECT Object Number
+<a href="basic3d\SET OBJECT FRAME.htm">SET OBJECT FRAME</a> : SET OBJECT FRAME Object Number, Frame
+<a href="basic3d\SET OBJECT SPEED.htm">SET OBJECT SPEED</a> : SET OBJECT SPEED Object Number, Speed
+<a href="basic3d\SET OBJECT INTERPOLATION.htm">SET OBJECT INTERPOLATION</a> : SET OBJECT INTERPOLATION Object Number, Interpolation
+<BR>
+<BR><FONT SIZE=3><A NAME="CONSTRUCTION COMMANDS">CONSTRUCTION COMMANDS</A><BR>
+<FONT SIZE=1><BR>
+<a href="basic3d\SET GLOBAL OBJECT CREATION.htm">SET GLOBAL OBJECT CREATION</a> : SET GLOBAL OBJECT CREATION Creation Mode
+<a href="basic3d\MAKE OBJECT.htm">MAKE OBJECT</a> : MAKE OBJECT Object Number, Mesh Index, Image Number
+<a href="basic3d\MAKE OBJECT BOX.htm">MAKE OBJECT BOX</a> : MAKE OBJECT BOX Object Number, Width, Height, Depth
+<a href="basic3d\MAKE OBJECT CONE.htm">MAKE OBJECT CONE</a> : MAKE OBJECT CONE Object Number, Size
+<a href="basic3d\MAKE OBJECT CUBE.htm">MAKE OBJECT CUBE</a> : MAKE OBJECT CUBE Object Number, Size
+<a href="basic3d\MAKE OBJECT CYLINDER.htm">MAKE OBJECT CYLINDER</a> : MAKE OBJECT CYLINDER Object Number, Size
+<a href="basic3d\MAKE OBJECT FROM LIMB.htm">MAKE OBJECT FROM LIMB</a> : MAKE OBJECT FROM LIMB Object Number, Second Object, Limb Number
+<a href="basic3d\MAKE OBJECT PLANE.htm">MAKE OBJECT PLANE</a> : MAKE OBJECT PLANE Object Number, Width, Height
+<a href="basic3d\MAKE OBJECT SPHERE.htm">MAKE OBJECT SPHERE</a> : MAKE OBJECT SPHERE Object Number, Size
+<a href="basic3d\MAKE OBJECT TRIANGLE.htm">MAKE OBJECT TRIANGLE</a> : MAKE OBJECT TRIANGLE Object Number, X1, Y1, Z1, X2, Y2, Z2, X3, Y3, Z3
+<BR>
+<a href="basic3d\ADD MEMBLOCK TO OBJECT.htm">ADD MEMBLOCK TO OBJECT</a> : ADD MEMBLOCK TO OBJECT memblock Number, Object Number
+<a href="basic3d\GET MEMBLOCK FROM OBJECT.htm">GET MEMBLOCK FROM OBJECT</a> : GET MEMBLOCK FROM OBJECT memblock Number, Object Number
+<a href="basic3d\DELETE MEMBLOCK FROM OBJECT.htm">DELETE MEMBLOCK FROM OBJECT</a> : DELETE MEMBLOCK FROM OBJECT Object Number
+<BR>
+<BR><FONT SIZE=3><A NAME="APPEARANCE COMMANDS">APPEARANCE COMMANDS</A><BR>
+<FONT SIZE=1><BR>
+<a href="basic3d\TEXTURE OBJECT.htm">TEXTURE OBJECT</a> : TEXTURE OBJECT Object Number, Image Number
+<a href="basic3d\COLOR OBJECT.htm">COLOR OBJECT</a> : COLOR OBJECT Object Number, Color Value
+<a href="basic3d\GHOST OBJECT ON.htm">GHOST OBJECT ON</a> : GHOST OBJECT ON Object Number
+<a href="basic3d\GHOST OBJECT OFF.htm">GHOST OBJECT OFF</a> : GHOST OBJECT OFF Object Number
+<a href="basic3d\FADE OBJECT.htm">FADE OBJECT</a> : FADE OBJECT Object Number, Fade Value
+<a href="basic3d\LOCK OBJECT ON.htm">LOCK OBJECT ON</a> : LOCK OBJECT ON Object Number
+<a href="basic3d\LOCK OBJECT OFF.htm">LOCK OBJECT OFF</a> : LOCK OBJECT OFF Object Number
+<a href="basic3d\SET OBJECT TEXTURE.htm">SET OBJECT TEXTURE</a> : SET OBJECT TEXTURE Object Number, Texturing Mode, Mipmap Flag
+<a href="basic3d\SCALE OBJECT TEXTURE.htm">SCALE OBJECT TEXTURE</a> : SCALE OBJECT TEXTURE Object Number, UScale, VScale
+<a href="basic3d\SCROLL OBJECT TEXTURE.htm">SCROLL OBJECT TEXTURE</a> : SCROLL OBJECT TEXTURE Object Number, X, Y
+<a href="basic3d\SET TEXTURE MD3.htm">SET TEXTURE MD3</a> : SET TEXTURE MD3 Object Number, H0, H1, L0, L1, L2, U0
+<a href="basic3d\SET OBJECT SMOOTHING.htm">SET OBJECT SMOOTHING</a> : SET OBJECT SMOOTHING Object Number, Percentage
+<a href="basic3d\SHOW OBJECT BOUNDS.htm">SHOW OBJECT BOUNDS</a> : SHOW OBJECT BOUNDS Object Number
+<a href="basic3d\HIDE OBJECT BOUNDS.htm">HIDE OBJECT BOUNDS</a> : HIDE OBJECT BOUNDS Object Number
+<a href="basic3d\EXCLUDE OBJECT ON.htm">EXCLUDE OBJECT ON</a> : EXCLUDE OBJECT ON Object ID
+<a href="basic3d\EXCLUDE OBJECT OFF.htm">EXCLUDE OBJECT OFF</a> : EXCLUDE OBJECT OFF Object ID
+<BR>
+<a href="basic3d\SET OBJECT.htm">SET OBJECT</a> : SET OBJECT Object Number, Wire, Transparent, Cull
+<a href="basic3d\SET OBJECT WIREFRAME.htm">SET OBJECT WIREFRAME</a> : SET OBJECT WIREFRAME Object Number, Flag
+<a href="basic3d\SET OBJECT TRANSPARENCY.htm">SET OBJECT TRANSPARENCY</a> : SET OBJECT TRANSPARENCY Object Number, Flag
+<a href="basic3d\SET OBJECT CULL.htm">SET OBJECT CULL</a> : SET OBJECT CULL Object Number, Flag
+<a href="basic3d\SET OBJECT FILTER.htm">SET OBJECT FILTER</a> : SET OBJECT FILTER Object Number, Flag
+<a href="basic3d\SET OBJECT LIGHT.htm">SET OBJECT LIGHT</a> : SET OBJECT LIGHT Object Number, Flag
+<a href="basic3d\SET OBJECT FOG.htm">SET OBJECT FOG</a> : SET OBJECT FOG Object Number, Flag
+<a href="basic3d\SET OBJECT AMBIENT.htm">SET OBJECT AMBIENT</a> : SET OBJECT AMBIENT Object Number, Flag
+<a href="basic3d\SET OBJECT ROTATION XYZ.htm">SET OBJECT ROTATION XYZ</a> : SET OBJECT ROTATION XYZ Object Number
+<a href="basic3d\SET OBJECT ROTATION ZYX.htm">SET OBJECT ROTATION ZYX</a> : SET OBJECT ROTATION ZYX Object Number
+<a href="basic3d\SET OBJECT TO CAMERA ORIENTATION.htm">SET OBJECT TO CAMERA ORIENTATION</a> : SET OBJECT TO CAMERA ORIENTATION Object Number
+<a href="basic3d\SET OBJECT TO OBJECT ORIENTATION.htm">SET OBJECT TO OBJECT ORIENTATION</a> : SET OBJECT TO OBJECT ORIENTATION Object Number, Second Object, Flag
+<a href="basic3d\DISABLE OBJECT ZDEPTH.htm">DISABLE OBJECT ZDEPTH</a> : DISABLE OBJECT ZDEPTH Object Number
+<a href="basic3d\ENABLE OBJECT ZDEPTH.htm">ENABLE OBJECT ZDEPTH</a> : ENABLE OBJECT ZDEPTH Object Number
+<a href="basic3d\DISABLE OBJECT ZREAD.htm">DISABLE OBJECT ZREAD</a> : DISABLE OBJECT ZREAD Object Number
+<a href="basic3d\ENABLE OBJECT ZREAD.htm">ENABLE OBJECT ZREAD</a> : ENABLE OBJECT ZREAD Object Number
+<a href="basic3d\DISABLE OBJECT ZWRITE.htm">DISABLE OBJECT ZWRITE</a> : DISABLE OBJECT ZWRITE Object Number
+<a href="basic3d\ENABLE OBJECT ZWRITE.htm">ENABLE OBJECT ZWRITE</a> : ENABLE OBJECT ZWRITE Object Number
+<a href="basic3d\GLUE OBJECT TO LIMB.htm">GLUE OBJECT TO LIMB</a> : GLUE OBJECT TO LIMB Object Number, Second Object, Limb Number
+<a href="basic3d\UNGLUE OBJECT.htm">UNGLUE OBJECT</a> : UNGLUE OBJECT Object Number
+<a href="basic3d\FIX OBJECT PIVOT.htm">FIX OBJECT PIVOT</a> : FIX OBJECT PIVOT Object Number
+<a href="basic3d\SET OBJECT DIFFUSE.htm">SET OBJECT DIFFUSE</a> : SET OBJECT DIFFUSE Object Number, Color Value
+<a href="basic3d\SET OBJECT AMBIENCE.htm">SET OBJECT AMBIENCE</a> : SET OBJECT AMBIENCE Object Number, Color Value
+<a href="basic3d\SET OBJECT SPECULAR.htm">SET OBJECT SPECULAR</a> : SET OBJECT SPECULAR Object Number, Color Value
+<a href="basic3d\SET OBJECT EMISSIVE.htm">SET OBJECT EMISSIVE</a> : SET OBJECT EMISSIVE Object Number, Color Value
+<a href="basic3d\SET OBJECT SPECULAR POWER.htm">SET OBJECT SPECULAR POWER</a> : SET OBJECT SPECULAR POWER Object Number, Power
+<a href="basic3d\SET OBJECT MASK.htm">SET OBJECT MASK</a> : SET OBJECT MASK Object Number, Camera Mask Bits
+<BR>
+<a href="basic3d\SET LIGHT MAPPING ON.htm">SET LIGHT MAPPING ON</a> : SET LIGHT MAPPING ON Object Number, Image Number, Reverse Stage Mode
+<a href="basic3d\SET DETAIL MAPPING ON.htm">SET DETAIL MAPPING ON</a> : SET DETAIL MAPPING ON Object Number, Image Number
+<a href="basic3d\SET BLEND MAPPING ON.htm">SET BLEND MAPPING ON</a> : SET BLEND MAPPING ON Object Number, Image Number, Blend Mode
+<a href="basic3d\SET SPHERE MAPPING ON.htm">SET SPHERE MAPPING ON</a> : SET SPHERE MAPPING ON Object Number, Image Number
+<a href="basic3d\SET CUBE MAPPING ON.htm">SET CUBE MAPPING ON</a> : SET CUBE MAPPING ON Object Number, Face1, Face2, Face3, Face4, Face5, Face6
+<a href="basic3d\SET BUMP MAPPING ON.htm">SET BUMP MAPPING ON</a> : SET BUMP MAPPING ON Object Number, Image Number
+<a href="basic3d\SET CARTOON SHADING ON.htm">SET CARTOON SHADING ON</a> : SET CARTOON SHADING ON Object Number, Shade Image, Edge Image
+<a href="basic3d\SET RAINBOW SHADING ON.htm">SET RAINBOW SHADING ON</a> : SET RAINBOW SHADING ON Object Number, Rainbow Image
+<a href="basic3d\SET SHADOW SHADING ON.htm">SET SHADOW SHADING ON</a> : SET SHADOW SHADING ON Object Number
+<a href="basic3d\SET REFLECTION SHADING ON.htm">SET REFLECTION SHADING ON</a> : SET REFLECTION SHADING ON Object Number
+<a href="basic3d\SET ALPHA MAPPING ON.htm">SET ALPHA MAPPING ON</a> : SET ALPHA MAPPING ON Object Number, Alpha Percentage
+<a href="basic3d\SET EFFECT ON.htm">SET EFFECT ON</a> : SET EFFECT ON Object Number, Effect Filename, Texture Flag
+<a href="basic3d\SET SHADING OFF.htm">SET SHADING OFF</a> : SET SHADING OFF Object Number
+<a href="basic3d\SET SHADOW SHADING OFF.htm">SET SHADOW SHADING OFF</a> : SET SHADOW SHADING OFF Object Number
+<a href="basic3d\LOAD EFFECT.htm">LOAD EFFECT</a> : LOAD EFFECT Filename, Effect Number, Texture Flag, DoNotGenerateExtraData
+<a href="basic3d\DELETE EFFECT.htm">DELETE EFFECT</a> : DELETE EFFECT Effect Number
+<a href="basic3d\SET OBJECT EFFECT.htm">SET OBJECT EFFECT</a> : SET OBJECT EFFECT Object Number, Effect Number
+<a href="basic3d\SET LIMB EFFECT.htm">SET LIMB EFFECT</a> : SET LIMB EFFECT Object Number, Limb Number, Effect Number
+<a href="basic3d\PERFORM CHECKLIST FOR EFFECT VALUES.htm">PERFORM CHECKLIST FOR EFFECT VALUES</a> : PERFORM CHECKLIST FOR EFFECT VALUES Effect Number
+<a href="basic3d\PERFORM CHECKLIST FOR EFFECT ERRORS.htm">PERFORM CHECKLIST FOR EFFECT ERRORS</a> : PERFORM CHECKLIST FOR EFFECT ERRORS
+<a href="basic3d\SET EFFECT CONSTANT BOOLEAN.htm">SET EFFECT CONSTANT BOOLEAN</a> : SET EFFECT CONSTANT BOOLEAN Effect Number, Constant String, Constant Value
+<a href="basic3d\SET EFFECT CONSTANT INTEGER.htm">SET EFFECT CONSTANT INTEGER</a> : SET EFFECT CONSTANT INTEGER Effect Number, Constant String, Constant Value
+<a href="basic3d\SET EFFECT CONSTANT FLOAT.htm">SET EFFECT CONSTANT FLOAT</a> : SET EFFECT CONSTANT FLOAT Effect Number, Constant String, Constant Value
+<a href="basic3d\SET EFFECT CONSTANT VECTOR.htm">SET EFFECT CONSTANT VECTOR</a> : SET EFFECT CONSTANT VECTOR Effect Number, Constant String, Vector Number
+<a href="basic3d\SET EFFECT CONSTANT MATRIX.htm">SET EFFECT CONSTANT MATRIX</a> : SET EFFECT CONSTANT MATRIX Effect Number, Constant String, Matrix Number
+<a href="basic3d\SET EFFECT TECHNIQUE.htm">SET EFFECT TECHNIQUE</a> : SET EFFECT TECHNIQUE Effect Number, Technique Name
+<a href="basic3d\SET EFFECT TRANSPOSE.htm">SET EFFECT TRANSPOSE</a> : SET EFFECT TRANSPOSE Effect Number, Transpose Flag
+<BR>
+<a href="basic3d\SET OBJECT FOV.htm">SET OBJECT FOV</a> : SET OBJECT FOV Object Number, FOV Angle
+<a href="basic3d\SET OBJECT NORMALS.htm">SET OBJECT NORMALS</a> : SET OBJECT NORMALS Object Number
+<a href="basic3d\ENABLE OBJECT ZBIAS.htm">ENABLE OBJECT ZBIAS</a> : ENABLE OBJECT ZBIAS Object Number, Slope Scale, Depth
+<a href="basic3d\DISABLE OBJECT ZBIAS.htm">DISABLE OBJECT ZBIAS</a> : DISABLE OBJECT ZBIAS Object Number
+<BR>
+<BR><FONT SIZE=3><A NAME="COLLISION COMMANDS">COLLISION COMMANDS</A><BR>
+<FONT SIZE=1><BR>
+<a href="basic3d\MAKE OBJECT COLLISION BOX.htm">MAKE OBJECT COLLISION BOX</a> : MAKE OBJECT COLLISION BOX Object Number, X1, Y1, Z1, X2, Y2, Z2, Collision Flag
+<a href="basic3d\DELETE OBJECT COLLISION BOX.htm">DELETE OBJECT COLLISION BOX</a> : DELETE OBJECT COLLISION BOX Object Number
+<a href="basic3d\SET OBJECT COLLISION ON.htm">SET OBJECT COLLISION ON</a> : SET OBJECT COLLISION ON Object Number
+<a href="basic3d\SET OBJECT COLLISION OFF.htm">SET OBJECT COLLISION OFF</a> : SET OBJECT COLLISION OFF Object Number
+<a href="basic3d\SET OBJECT COLLISION TO BOXES.htm">SET OBJECT COLLISION TO BOXES</a> : SET OBJECT COLLISION TO BOXES Object Number
+<a href="basic3d\SET OBJECT COLLISION TO POLYGONS.htm">SET OBJECT COLLISION TO POLYGONS</a> : SET OBJECT COLLISION TO POLYGONS Object Number
+<a href="basic3d\SET OBJECT COLLISION TO SPHERES.htm">SET OBJECT COLLISION TO SPHERES</a> : SET OBJECT COLLISION TO SPHERES Object Number
+<a href="basic3d\SET GLOBAL COLLISION ON.htm">SET GLOBAL COLLISION ON</a> : SET GLOBAL COLLISION ON
+<a href="basic3d\SET GLOBAL COLLISION OFF.htm">SET GLOBAL COLLISION OFF</a> : SET GLOBAL COLLISION OFF
+<a href="basic3d\SET OBJECT RADIUS.htm">SET OBJECT RADIUS</a> : SET OBJECT RADIUS Object Number, Radius
+<a href="basic3d\AUTOMATIC OBJECT COLLISION.htm">AUTOMATIC OBJECT COLLISION</a> : AUTOMATIC OBJECT COLLISION Object Number, Radius, Response
+<a href="basic3d\AUTOMATIC CAMERA COLLISION.htm">AUTOMATIC CAMERA COLLISION</a> : AUTOMATIC CAMERA COLLISION Camera Number, Radius, Response
+<a href="basic3d\CALCULATE AUTOMATIC COLLISION.htm">CALCULATE AUTOMATIC COLLISION</a> : CALCULATE AUTOMATIC COLLISION
+<a href="basic3d\CALCULATE OBJECT BOUNDS.htm">CALCULATE OBJECT BOUNDS</a> : CALCULATE OBJECT BOUNDS Integer Value
+<BR>
+<BR>
+<BR><FONT SIZE=3><A NAME="LIMB COMMANDS">LIMB COMMANDS</A><BR>
+<FONT SIZE=1><BR>
+<a href="basic3d\PERFORM CHECKLIST FOR OBJECT LIMBS.htm">PERFORM CHECKLIST FOR OBJECT LIMBS</a> : PERFORM CHECKLIST FOR OBJECT LIMBS Object Number
+<a href="basic3d\OFFSET LIMB.htm">OFFSET LIMB</a> : OFFSET LIMB Object Number, Limb Number, X, Y, Z
+<a href="basic3d\SCALE LIMB.htm">SCALE LIMB</a> : SCALE LIMB Object Number, Limb Number, XSize, YSize, ZSize
+<a href="basic3d\ROTATE LIMB.htm">ROTATE LIMB</a> : ROTATE LIMB Object Number, Limb Number, XAngle, YAngle, ZAngle
+<a href="basic3d\SHOW LIMB.htm">SHOW LIMB</a> : SHOW LIMB Object Number, Limb Number
+<a href="basic3d\HIDE LIMB.htm">HIDE LIMB</a> : HIDE LIMB Object Number, Limb Number
+<a href="basic3d\TEXTURE LIMB.htm">TEXTURE LIMB</a> : TEXTURE LIMB Object Number, Limb Number, Image Number
+<a href="basic3d\COLOR LIMB.htm">COLOR LIMB</a> : COLOR LIMB Object Number, Limb Number, Color Value
+<a href="basic3d\SCALE LIMB TEXTURE.htm">SCALE LIMB TEXTURE</a> : SCALE LIMB TEXTURE Object Number, Limb Number, UScale, VScale
+<a href="basic3d\SCROLL LIMB TEXTURE.htm">SCROLL LIMB TEXTURE</a> : SCROLL LIMB TEXTURE Object Number, Limb Number, X, Y
+<a href="basic3d\ADD LIMB.htm">ADD LIMB</a> : ADD LIMB Object Number, Limb Number, Mesh Number
+<a href="basic3d\LINK LIMB.htm">LINK LIMB</a> : LINK LIMB Object Number, Limb Parent, Limb Child
+<a href="basic3d\REMOVE LIMB.htm">REMOVE LIMB</a> : REMOVE LIMB Object Number, Limb Number
+<a href="basic3d\SET LIMB SMOOTHING.htm">SET LIMB SMOOTHING</a> : SET LIMB SMOOTHING Object Number, Limb Number, Percentage
+<a href="basic3d\SET LIMB NORMALS.htm">SET LIMB NORMALS</a> : SET LIMB NORMALS Object Number, Limb Number
+<a href="basic3d\EXCLUDE LIMB ON.htm">EXCLUDE LIMB ON</a> : EXCLUDE LIMB ON Object ID, Limb Number
+<a href="basic3d\EXCLUDE LIMB OFF.htm">EXCLUDE LIMB OFF</a> : EXCLUDE LIMB OFF Object ID, Limb Number
+<BR>
+<BR><FONT SIZE=3><A NAME="MESH COMMANDS">MESH COMMANDS</A><BR>
+<FONT SIZE=1><BR>
+<a href="basic3d\LOAD MESH.htm">LOAD MESH</a> : LOAD MESH Filename, Mesh Number
+<a href="basic3d\SAVE MESH.htm">SAVE MESH</a> : SAVE MESH Filename, Mesh Number
+<a href="basic3d\DELETE MESH.htm">DELETE MESH</a> : DELETE MESH Mesh Number
+<a href="basic3d\CHANGE MESH.htm">CHANGE MESH</a> : CHANGE MESH Object Number, Limb Number, Mesh Number
+<a href="basic3d\MAKE MESH FROM OBJECT.htm">MAKE MESH FROM OBJECT</a> : MAKE MESH FROM OBJECT Mesh Number, Object Number
+<BR>
+<BR><FONT SIZE=3><A NAME="SHADER COMMANDS">SHADER COMMANDS</A><BR>
+<FONT SIZE=1><BR>
+<a href="basic3d\CREATE VERTEX SHADER FROM FILE.htm">CREATE VERTEX SHADER FROM FILE</a> : CREATE VERTEX SHADER FROM FILE VertexShader Number, Shader Filename
+<a href="basic3d\DELETE VERTEX SHADER.htm">DELETE VERTEX SHADER</a> : DELETE VERTEX SHADER VertexShader Number
+<a href="basic3d\SET VERTEX SHADER ON.htm">SET VERTEX SHADER ON</a> : SET VERTEX SHADER ON Object Number, VertexShader Number
+<a href="basic3d\SET VERTEX SHADER OFF.htm">SET VERTEX SHADER OFF</a> : SET VERTEX SHADER OFF Object Number
+<a href="basic3d\SET VERTEX SHADER VECTOR.htm">SET VERTEX SHADER VECTOR</a> : SET VERTEX SHADER VECTOR VertexShader Number, Constant, Vector3, ConstantCount
+<a href="basic3d\SET VERTEX SHADER MATRIX.htm">SET VERTEX SHADER MATRIX</a> : SET VERTEX SHADER MATRIX VertexShader Number, Constant, Matrix4, ConstantCount
+<a href="basic3d\SET VERTEX SHADER STREAM.htm">SET VERTEX SHADER STREAM</a> : SET VERTEX SHADER STREAM VertexShader Number, Position, Data, Datatype
+<a href="basic3d\SET VERTEX SHADER STREAMCOUNT.htm">SET VERTEX SHADER STREAMCOUNT</a> : SET VERTEX SHADER STREAMCOUNT VertexShader Number, Count
+<a href="basic3d\CONVERT OBJECT FVF.htm">CONVERT OBJECT FVF</a> : CONVERT OBJECT FVF Object Number, FVF Format
+<BR>
+<a href="basic3d\CREATE PIXEL SHADER FROM FILE.htm">CREATE PIXEL SHADER FROM FILE</a> : CREATE PIXEL SHADER FROM FILE PixelShader Number, Shader Filename
+<a href="basic3d\DELETE PIXEL SHADER.htm">DELETE PIXEL SHADER</a> : DELETE PIXEL SHADER PixelShader Number
+<a href="basic3d\SET PIXEL SHADER ON.htm">SET PIXEL SHADER ON</a> : SET PIXEL SHADER ON Object Number, PixelShader Number
+<a href="basic3d\SET PIXEL SHADER OFF.htm">SET PIXEL SHADER OFF</a> : SET PIXEL SHADER OFF Object Number
+<a href="basic3d\SET PIXEL SHADER TEXTURE.htm">SET PIXEL SHADER TEXTURE</a> : SET PIXEL SHADER TEXTURE PixelShader Number, Slot Number, Image Number
+<BR>
+<a href="basic3d\FLUSH VIDEO MEMORY.htm">FLUSH VIDEO MEMORY</a> : FLUSH VIDEO MEMORY
+<BR>
+<BR><FONT SIZE=3><A NAME="VERTEXDATA COMMANDS">VERTEXDATA COMMANDS</A><BR>
+<FONT SIZE=1><BR>
+<a href="basic3d\LOCK VERTEXDATA FOR LIMB.htm">LOCK VERTEXDATA FOR LIMB</a> : LOCK VERTEXDATA FOR LIMB Object Number, Limb Number
+<a href="basic3d\LOCK VERTEXDATA FOR MESH.htm">LOCK VERTEXDATA FOR MESH</a> : LOCK VERTEXDATA FOR MESH Mesh Number
+<a href="basic3d\ADD MESH TO VERTEXDATA.htm">ADD MESH TO VERTEXDATA</a> : ADD MESH TO VERTEXDATA Mesh Number
+<a href="basic3d\DELETE MESH FROM VERTEXDATA.htm">DELETE MESH FROM VERTEXDATA</a> : DELETE MESH FROM VERTEXDATA Vertex Start, Vertex End, Index Start, Index End
+<a href="basic3d\CONVERT MESH TO VERTEXDATA.htm">CONVERT MESH TO VERTEXDATA</a> : CONVERT MESH TO VERTEXDATA Mesh Number
+<a href="basic3d\UNLOCK VERTEXDATA.htm">UNLOCK VERTEXDATA</a> : UNLOCK VERTEXDATA
+<a href="basic3d\SET INDEXDATA.htm">SET INDEXDATA</a> : SET INDEXDATA Indice Index, Vertex Index
+<a href="basic3d\SET VERTEXDATA UV.htm">SET VERTEXDATA UV</a> : SET VERTEXDATA UV Vertex Index, U, V
+<a href="basic3d\SET VERTEXDATA NORMALS.htm">SET VERTEXDATA NORMALS</a> : SET VERTEXDATA NORMALS Vertex Index, NX, NY, NZ
+<a href="basic3d\SET VERTEXDATA POSITION.htm">SET VERTEXDATA POSITION</a> : SET VERTEXDATA POSITION Vertex Index, X, Y, Z
+<a href="basic3d\SET VERTEXDATA DIFFUSE.htm">SET VERTEXDATA DIFFUSE</a> : SET VERTEXDATA DIFFUSE Vertex Index, RGB Value
+<BR>
+<a href="basic3d\GET VERTEXDATA INDEX COUNT.htm">GET VERTEXDATA INDEX COUNT</a> : Return Integer=GET VERTEXDATA INDEX COUNT()
+<a href="basic3d\GET INDEXDATA.htm">GET INDEXDATA</a> : Return Integer=GET INDEXDATA(Index Number)
+<a href="basic3d\GET VERTEXDATA VERTEX COUNT.htm">GET VERTEXDATA VERTEX COUNT</a> : Return Integer=GET VERTEXDATA VERTEX COUNT()
+<a href="basic3d\GET VERTEXDATA POSITION X.htm">GET VERTEXDATA POSITION X</a> : Return Float=GET VERTEXDATA POSITION X(Vertex Index)
+<a href="basic3d\GET VERTEXDATA POSITION Y.htm">GET VERTEXDATA POSITION Y</a> : Return Float=GET VERTEXDATA POSITION Y(Vertex Index)
+<a href="basic3d\GET VERTEXDATA POSITION Z.htm">GET VERTEXDATA POSITION Z</a> : Return Float=GET VERTEXDATA POSITION Z(Vertex Index)
+<a href="basic3d\GET VERTEXDATA NORMALS X.htm">GET VERTEXDATA NORMALS X</a> : Return Float=GET VERTEXDATA NORMALS X(Vertex Index)
+<a href="basic3d\GET VERTEXDATA NORMALS Y.htm">GET VERTEXDATA NORMALS Y</a> : Return Float=GET VERTEXDATA NORMALS Y(Vertex Index)
+<a href="basic3d\GET VERTEXDATA NORMALS Z.htm">GET VERTEXDATA NORMALS Z</a> : Return Float=GET VERTEXDATA NORMALS Z(Vertex Index)
+<a href="basic3d\GET VERTEXDATA U.htm">GET VERTEXDATA U</a> : Return Float=GET VERTEXDATA U(Vertex Index)
+<a href="basic3d\GET VERTEXDATA V.htm">GET VERTEXDATA V</a> : Return Float=GET VERTEXDATA V(Vertex Index)
+<a href="basic3d\GET VERTEXDATA DIFFUSE.htm">GET VERTEXDATA DIFFUSE</a> : Return DWORD=GET VERTEXDATA DIFFUSE(Vertex Index)
+<a href="basic3d\GET VERTEXDATA PTR.htm">GET VERTEXDATA PTR</a> : Return DWORD=GET VERTEXDATA PTR()
+<BR>
+<BR><FONT SIZE=3><A NAME="OBJECT EXPRESSIONS">OBJECT EXPRESSIONS</A><BR>
+<FONT SIZE=1><BR>
+<a href="basic3d\OBJECT EXIST.htm">OBJECT EXIST</a> : Return Integer=OBJECT EXIST(Object Number)
+<a href="basic3d\OBJECT VISIBLE.htm">OBJECT VISIBLE</a> : Return Integer=OBJECT VISIBLE(Object Number)
+<a href="basic3d\OBJECT PLAYING.htm">OBJECT PLAYING</a> : Return Integer=OBJECT PLAYING(Object Number)
+<a href="basic3d\OBJECT LOOPING.htm">OBJECT LOOPING</a> : Return Integer=OBJECT LOOPING(Object Number)
+<a href="basic3d\OBJECT POSITION X.htm">OBJECT POSITION X</a> : Return Float=OBJECT POSITION X(Object Number)
+<a href="basic3d\OBJECT POSITION Y.htm">OBJECT POSITION Y</a> : Return Float=OBJECT POSITION Y(Object Number)
+<a href="basic3d\OBJECT POSITION Z.htm">OBJECT POSITION Z</a> : Return Float=OBJECT POSITION Z(Object Number)
+<a href="basic3d\OBJECT SIZE.htm">OBJECT SIZE</a> : Return Float=OBJECT SIZE(Object Number)
+<a href="basic3d\OBJECT SIZE X.htm">OBJECT SIZE X</a> : Return Float=OBJECT SIZE X(Object Number)
+<a href="basic3d\OBJECT SIZE Y.htm">OBJECT SIZE Y</a> : Return Float=OBJECT SIZE Y(Object Number)
+<a href="basic3d\OBJECT SIZE Z.htm">OBJECT SIZE Z</a> : Return Float=OBJECT SIZE Z(Object Number)
+<a href="basic3d\OBJECT ANGLE X.htm">OBJECT ANGLE X</a> : Return Float=OBJECT ANGLE X(Object Number)
+<a href="basic3d\OBJECT ANGLE Y.htm">OBJECT ANGLE Y</a> : Return Float=OBJECT ANGLE Y(Object Number)
+<a href="basic3d\OBJECT ANGLE Z.htm">OBJECT ANGLE Z</a> : Return Float=OBJECT ANGLE Z(Object Number)
+<a href="basic3d\OBJECT FRAME.htm">OBJECT FRAME</a> : Return Float=OBJECT FRAME(Object Number)
+<a href="basic3d\OBJECT SPEED.htm">OBJECT SPEED</a> : Return Float=OBJECT SPEED(Object Number)
+<a href="basic3d\OBJECT INTERPOLATION.htm">OBJECT INTERPOLATION</a> : Return Float=OBJECT INTERPOLATION(Object Number)
+<a href="basic3d\TOTAL OBJECT FRAMES.htm">TOTAL OBJECT FRAMES</a> : Return Integer=TOTAL OBJECT FRAMES(Object Number)
+<BR>
+<BR><FONT SIZE=3><A NAME="COLLISION EXPRESSIONS">COLLISION EXPRESSIONS</A><BR>
+<FONT SIZE=1><BR>
+<a href="basic3d\OBJECT HIT.htm">OBJECT HIT</a> : Return Integer=OBJECT HIT(ObjectA Number, ObjectB Number)
+<a href="basic3d\OBJECT COLLISION.htm">OBJECT COLLISION</a> : Return Integer=OBJECT COLLISION(ObjectA Number, ObjectB Number)
+<a href="basic3d\GET OBJECT COLLISION X.htm">GET OBJECT COLLISION X</a> : Return Float=GET OBJECT COLLISION X()
+<a href="basic3d\GET OBJECT COLLISION Y.htm">GET OBJECT COLLISION Y</a> : Return Float=GET OBJECT COLLISION Y()
+<a href="basic3d\GET OBJECT COLLISION Z.htm">GET OBJECT COLLISION Z</a> : Return Float=GET OBJECT COLLISION Z()
+<a href="basic3d\OBJECT COLLISION RADIUS.htm">OBJECT COLLISION RADIUS</a> : Return Float=OBJECT COLLISION RADIUS(Object Number)
+<a href="basic3d\OBJECT COLLISION CENTER X.htm">OBJECT COLLISION CENTER X</a> : Return Float=OBJECT COLLISION CENTER X(Object Number)
+<a href="basic3d\OBJECT COLLISION CENTER Y.htm">OBJECT COLLISION CENTER Y</a> : Return Float=OBJECT COLLISION CENTER Y(Object Number)
+<a href="basic3d\OBJECT COLLISION CENTER Z.htm">OBJECT COLLISION CENTER Z</a> : Return Float=OBJECT COLLISION CENTER Z(Object Number)
+<a href="basic3d\INTERSECT OBJECT.htm">INTERSECT OBJECT</a> : Return Float=INTERSECT OBJECT(Object Number, X, Y, Z, ToX, ToY, ToZ)
+<BR>
+<BR><FONT SIZE=3><A NAME="LIMB EXPRESSIONS">LIMB EXPRESSIONS</A><BR>
+<FONT SIZE=1><BR>
+<a href="basic3d\LIMB EXIST.htm">LIMB EXIST</a> : Return Integer=LIMB EXIST(Object Number, Limb Number)
+<a href="basic3d\LIMB NAME$.htm">LIMB NAME$</a> : Return String=LIMB NAME$(Object Number, Limb Number)
+<a href="basic3d\LIMB VISIBLE.htm">LIMB VISIBLE</a> : Return Integer=LIMB VISIBLE(Object Number, Limb Number)
+<a href="basic3d\LIMB OFFSET X.htm">LIMB OFFSET X</a> : Return Float=LIMB OFFSET X(Object Number, Limb Number)
+<a href="basic3d\LIMB OFFSET Y.htm">LIMB OFFSET Y</a> : Return Float=LIMB OFFSET Y(Object Number, Limb Number)
+<a href="basic3d\LIMB OFFSET Z.htm">LIMB OFFSET Z</a> : Return Float=LIMB OFFSET Z(Object Number, Limb Number)
+<a href="basic3d\LIMB SCALE X.htm">LIMB SCALE X</a> : Return Float=LIMB SCALE X(Object Number, Limb Number)
+<a href="basic3d\LIMB SCALE Y.htm">LIMB SCALE Y</a> : Return Float=LIMB SCALE Y(Object Number, Limb Number)
+<a href="basic3d\LIMB SCALE Z.htm">LIMB SCALE Z</a> : Return Float=LIMB SCALE Z(Object Number, Limb Number)
+<a href="basic3d\LIMB ANGLE X.htm">LIMB ANGLE X</a> : Return Float=LIMB ANGLE X(Object Number, Limb Number)
+<a href="basic3d\LIMB ANGLE Y.htm">LIMB ANGLE Y</a> : Return Float=LIMB ANGLE Y(Object Number, Limb Number)
+<a href="basic3d\LIMB ANGLE Z.htm">LIMB ANGLE Z</a> : Return Float=LIMB ANGLE Z(Object Number, Limb Number)
+<a href="basic3d\LIMB TEXTURE.htm">LIMB TEXTURE</a> : Return Integer=LIMB TEXTURE(Object Number, Limb Number)
+<a href="basic3d\LIMB TEXTURE NAME.htm">LIMB TEXTURE NAME</a> : Return String=LIMB TEXTURE NAME(Object Number, Limb Number)
+<a href="basic3d\LIMB DIRECTION X.htm">LIMB DIRECTION X</a> : Return Float=LIMB DIRECTION X(Object Number, Limb Number)
+<a href="basic3d\LIMB DIRECTION Y.htm">LIMB DIRECTION Y</a> : Return Float=LIMB DIRECTION Y(Object Number, Limb Number)
+<a href="basic3d\LIMB DIRECTION Z.htm">LIMB DIRECTION Z</a> : Return Float=LIMB DIRECTION Z(Object Number, Limb Number)
+<a href="basic3d\LIMB POSITION X.htm">LIMB POSITION X</a> : Return Float=LIMB POSITION X(Object Number, Limb Number)
+<a href="basic3d\LIMB POSITION Y.htm">LIMB POSITION Y</a> : Return Float=LIMB POSITION Y(Object Number, Limb Number)
+<a href="basic3d\LIMB POSITION Z.htm">LIMB POSITION Z</a> : Return Float=LIMB POSITION Z(Object Number, Limb Number)
+<a href="basic3d\CHECK LIMB LINK.htm">CHECK LIMB LINK</a> : Return Integer=CHECK LIMB LINK(Object Number, Limb Number)
+<a href="basic3d\LIMB COLLISION.htm">LIMB COLLISION</a> : Return Integer=LIMB COLLISION(ObjectA Number, LimbA Number, ObjectB Number, LimbB Number)
+<a href="basic3d\LIMB HIT.htm">LIMB HIT</a> : Return Integer=LIMB HIT(ObjectA Number, LimbA Number, ObjectB Number, LimbB Number)
+<BR>
+<BR><FONT SIZE=3><A NAME="SCREEN OBJECT EXPRESSIONS">SCREEN OBJECT EXPRESSIONS</A><BR>
+<FONT SIZE=1><BR>
+<a href="basic3d\OBJECT IN SCREEN.htm">OBJECT IN SCREEN</a> : Return Integer=OBJECT IN SCREEN(Object Number)
+<a href="basic3d\OBJECT SCREEN X.htm">OBJECT SCREEN X</a> : Return Integer=OBJECT SCREEN X(Object Number)
+<a href="basic3d\OBJECT SCREEN Y.htm">OBJECT SCREEN Y</a> : Return Integer=OBJECT SCREEN Y(Object Number)
+<a href="basic3d\PICK OBJECT.htm">PICK OBJECT</a> : Return Integer=PICK OBJECT(Screen X, Screen Y, Object Start, Object End)
+<a href="basic3d\PICK SCREEN.htm">PICK SCREEN</a> : PICK SCREEN Screen X, Screen Y, Distance
+<a href="basic3d\GET PICK DISTANCE.htm">GET PICK DISTANCE</a> : Return Float=GET PICK DISTANCE()
+<a href="basic3d\GET PICK VECTOR X.htm">GET PICK VECTOR X</a> : Return Float=GET PICK VECTOR X()
+<a href="basic3d\GET PICK VECTOR Y.htm">GET PICK VECTOR Y</a> : Return Float=GET PICK VECTOR Y()
+<a href="basic3d\GET PICK VECTOR Z.htm">GET PICK VECTOR Z</a> : Return Float=GET PICK VECTOR Z()
+<BR>
+<BR><FONT SIZE=3><A NAME="AVAILABILITY EXPRESSIONS">AVAILABILITY EXPRESSIONS</A><BR>
+<FONT SIZE=1><BR>
+<a href="basic3d\ALPHABLENDING AVAILABLE.htm">ALPHABLENDING AVAILABLE</a> : Return Integer=ALPHABLENDING AVAILABLE()
+<a href="basic3d\ALPHA AVAILABLE.htm">ALPHA AVAILABLE</a> : Return Integer=ALPHA AVAILABLE()
+<a href="basic3d\ALPHACOMPARISON AVAILABLE.htm">ALPHACOMPARISON AVAILABLE</a> : Return Integer=ALPHACOMPARISON AVAILABLE()
+<a href="basic3d\ANISTROPICFILTERING AVAILABLE.htm">ANISTROPICFILTERING AVAILABLE</a> : Return Integer=ANISTROPICFILTERING AVAILABLE()
+<a href="basic3d\ANTIALIAS AVAILABLE.htm">ANTIALIAS AVAILABLE</a> : Return Integer=ANTIALIAS AVAILABLE()
+<a href="basic3d\BLITSYSTOLOCAL AVAILABLE.htm">BLITSYSTOLOCAL AVAILABLE</a> : Return Integer=BLITSYSTOLOCAL AVAILABLE()
+<a href="basic3d\CALIBRATEGAMMA AVAILABLE.htm">CALIBRATEGAMMA AVAILABLE</a> : Return Integer=CALIBRATEGAMMA AVAILABLE()
+<a href="basic3d\CLIPANDSCALEPOINTS AVAILABLE.htm">CLIPANDSCALEPOINTS AVAILABLE</a> : Return Integer=CLIPANDSCALEPOINTS AVAILABLE()
+<a href="basic3d\CLIPTLVERTS AVAILABLE.htm">CLIPTLVERTS AVAILABLE</a> : Return Integer=CLIPTLVERTS AVAILABLE()
+<a href="basic3d\COLORPERSPECTIVE AVAILABLE.htm">COLORPERSPECTIVE AVAILABLE</a> : Return Integer=COLORPERSPECTIVE AVAILABLE()
+<a href="basic3d\COLORWRITEENABLE AVAILABLE.htm">COLORWRITEENABLE AVAILABLE</a> : Return Integer=COLORWRITEENABLE AVAILABLE()
+<a href="basic3d\CUBEMAP AVAILABLE.htm">CUBEMAP AVAILABLE</a> : Return Integer=CUBEMAP AVAILABLE()
+<a href="basic3d\CULLCCW AVAILABLE.htm">CULLCCW AVAILABLE</a> : Return Integer=CULLCCW AVAILABLE()
+<a href="basic3d\CULLCW AVAILABLE.htm">CULLCW AVAILABLE</a> : Return Integer=CULLCW AVAILABLE()
+<a href="basic3d\GET DEVICE TYPE.htm">GET DEVICE TYPE</a> : Return Integer=GET DEVICE TYPE()
+<a href="basic3d\DITHER AVAILABLE.htm">DITHER AVAILABLE</a> : Return Integer=DITHER AVAILABLE()
+<a href="basic3d\FILTERING AVAILABLE.htm">FILTERING AVAILABLE</a> : Return Integer=FILTERING AVAILABLE()
+<a href="basic3d\FOGRANGE AVAILABLE.htm">FOGRANGE AVAILABLE</a> : Return Integer=FOGRANGE AVAILABLE()
+<a href="basic3d\FOGTABLE AVAILABLE.htm">FOGTABLE AVAILABLE</a> : Return Integer=FOGTABLE AVAILABLE()
+<a href="basic3d\FOGVERTEX AVAILABLE.htm">FOGVERTEX AVAILABLE</a> : Return Integer=FOGVERTEX AVAILABLE()
+<a href="basic3d\FOG AVAILABLE.htm">FOG AVAILABLE</a> : Return Integer=FOG AVAILABLE()
+<a href="basic3d\FULLSCREENGAMMA AVAILABLE.htm">FULLSCREENGAMMA AVAILABLE</a> : Return Integer=FULLSCREENGAMMA AVAILABLE()
+<a href="basic3d\GET MAXIMUM LIGHTS.htm">GET MAXIMUM LIGHTS</a> : Return Integer=GET MAXIMUM LIGHTS()
+<a href="basic3d\GET MAXIMUM PIXEL SHADER VALUE.htm">GET MAXIMUM PIXEL SHADER VALUE</a> : Return Integer=GET MAXIMUM PIXEL SHADER VALUE()
+<a href="basic3d\GET MAXIMUM TEXTURE HEIGHT.htm">GET MAXIMUM TEXTURE HEIGHT</a> : Return Integer=GET MAXIMUM TEXTURE HEIGHT()
+<a href="basic3d\GET MAXIMUM TEXTURE WIDTH.htm">GET MAXIMUM TEXTURE WIDTH</a> : Return Integer=GET MAXIMUM TEXTURE WIDTH()
+<a href="basic3d\GET MAXIMUM VERTEX SHADER CONSTANTS.htm">GET MAXIMUM VERTEX SHADER CONSTANTS</a> : Return Integer=GET MAXIMUM VERTEX SHADER CONSTANTS()
+<a href="basic3d\GET MAXIMUM VOLUME EXTENT.htm">GET MAXIMUM VOLUME EXTENT</a> : Return Integer=GET MAXIMUM VOLUME EXTENT()
+<a href="basic3d\MIPCUBEMAP AVAILABLE.htm">MIPCUBEMAP AVAILABLE</a> : Return Integer=MIPCUBEMAP AVAILABLE()
+<a href="basic3d\MIPMAP AVAILABLE.htm">MIPMAP AVAILABLE</a> : Return Integer=MIPMAP AVAILABLE()
+<a href="basic3d\MIPMAPLODBIAS AVAILABLE.htm">MIPMAPLODBIAS AVAILABLE</a> : Return Integer=MIPMAPLODBIAS AVAILABLE()
+<a href="basic3d\MIPMAPVOLUME AVAILABLE.htm">MIPMAPVOLUME AVAILABLE</a> : Return Integer=MIPMAPVOLUME AVAILABLE()
+<a href="basic3d\NONPOWTEXTURES AVAILABLE.htm">NONPOWTEXTURES AVAILABLE</a> : Return Integer=NONPOWTEXTURES AVAILABLE()
+<a href="basic3d\PERSPECTIVETEXTURES AVAILABLE.htm">PERSPECTIVETEXTURES AVAILABLE</a> : Return Integer=PERSPECTIVETEXTURES AVAILABLE()
+<a href="basic3d\GET MAXIMUM PIXEL SHADER VERSION.htm">GET MAXIMUM PIXEL SHADER VERSION</a> : Return Float=GET MAXIMUM PIXEL SHADER VERSION()
+<a href="basic3d\PROJECTEDTEXTURES AVAILABLE.htm">PROJECTEDTEXTURES AVAILABLE</a> : Return Integer=PROJECTEDTEXTURES AVAILABLE()
+<a href="basic3d\RENDERAFTERFLIP AVAILABLE.htm">RENDERAFTERFLIP AVAILABLE</a> : Return Integer=RENDERAFTERFLIP AVAILABLE()
+<a href="basic3d\RENDERWINDOWED AVAILABLE.htm">RENDERWINDOWED AVAILABLE</a> : Return Integer=RENDERWINDOWED AVAILABLE()
+<a href="basic3d\SEPARATETEXTUREMEMORIES AVAILABLE.htm">SEPARATETEXTUREMEMORIES AVAILABLE</a> : Return Integer=SEPARATETEXTUREMEMORIES AVAILABLE()
+<a href="basic3d\ONLYSQUARETEXTURES AVAILABLE.htm">ONLYSQUARETEXTURES AVAILABLE</a> : Return Integer=ONLYSQUARETEXTURES AVAILABLE()
+<a href="basic3d\TNL AVAILABLE.htm">TNL AVAILABLE</a> : Return Integer=TNL AVAILABLE()
+<a href="basic3d\TLVERTEXSYSTEMMEMORY AVAILABLE.htm">TLVERTEXSYSTEMMEMORY AVAILABLE</a> : Return Integer=TLVERTEXSYSTEMMEMORY AVAILABLE()
+<a href="basic3d\TLVERTEXVIDEOMEMORY AVAILABLE.htm">TLVERTEXVIDEOMEMORY AVAILABLE</a> : Return Integer=TLVERTEXVIDEOMEMORY AVAILABLE()
+<a href="basic3d\NONLOCALVIDEOMEMORY AVAILABLE.htm">NONLOCALVIDEOMEMORY AVAILABLE</a> : Return Integer=NONLOCALVIDEOMEMORY AVAILABLE()
+<a href="basic3d\TEXTURESYSTEMMEMORY AVAILABLE.htm">TEXTURESYSTEMMEMORY AVAILABLE</a> : Return Integer=TEXTURESYSTEMMEMORY AVAILABLE()
+<a href="basic3d\TEXTUREVIDEOMEMORY AVAILABLE.htm">TEXTUREVIDEOMEMORY AVAILABLE</a> : Return Integer=TEXTUREVIDEOMEMORY AVAILABLE()
+<a href="basic3d\GET MAXIMUM VERTEX SHADER VERSION.htm">GET MAXIMUM VERTEX SHADER VERSION</a> : Return Float=GET MAXIMUM VERTEX SHADER VERSION()
+<a href="basic3d\VOLUMEMAP AVAILABLE.htm">VOLUMEMAP AVAILABLE</a> : Return Integer=VOLUMEMAP AVAILABLE()
+<a href="basic3d\WBUFFER AVAILABLE.htm">WBUFFER AVAILABLE</a> : Return Integer=WBUFFER AVAILABLE()
+<a href="basic3d\WFOG AVAILABLE.htm">WFOG AVAILABLE</a> : Return Integer=WFOG AVAILABLE()
+<a href="basic3d\ZBUFFER AVAILABLE.htm">ZBUFFER AVAILABLE</a> : Return Integer=ZBUFFER AVAILABLE()
+<a href="basic3d\ZFOG AVAILABLE.htm">ZFOG AVAILABLE</a> : Return Integer=ZFOG AVAILABLE()
+<BR>
+<a href="basic3d\MESH EXIST.htm">MESH EXIST</a> : Return Integer=MESH EXIST(Mesh Number)
+<a href="basic3d\EFFECT EXIST.htm">EFFECT EXIST</a> : Return Integer=EFFECT EXIST(Effect Number)
+<a href="basic3d\VERTEX SHADER EXIST.htm">VERTEX SHADER EXIST</a> : Return Integer=VERTEX SHADER EXIST(VertexShader Number)
+<a href="basic3d\PIXEL SHADER EXIST.htm">PIXEL SHADER EXIST</a> : Return Integer=PIXEL SHADER EXIST(PixelShader Number)
+<a href="basic3d\STATISTIC.htm">STATISTIC</a> : Return Integer=STATISTIC(Statistic Code)
+<a href="basic3d\MAKE EMITTER.htm">MAKE EMITTER</a> : MAKE EMITTER Object Number, Size
+<a href="basic3d\PERFORM CHECKLIST FOR ONSCREEN OBJECTS.htm">PERFORM CHECKLIST FOR ONSCREEN OBJECTS</a> : PERFORM CHECKLIST FOR ONSCREEN OBJECTS Mode
+</PRE></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR>
+<BR>
+<FONT SIZE=3><B><FONT SIZE=3><CENTER>Arithmetic, Relational and Boolean Operators<BR>
+</CENTER></FONT></B></FONT><BR>
+We have already used one type of well-known operator in the preceding examples. Operators are the term given to a mathematical symbol used in all calculations. The most common operators are arithmetic operators and are quickly identified. All operators require two operands of data that are placed either side of the operator.<BR>
+<BR>
+ARITHMETIC OPERATORS<BR>
+<BR>
+An arithmetic operator can represent an Addition, Subtraction, Multiplication or Division. These operators are represented symbolically as (+) (-) (*) (/) respectively.<BR>
+<BR>
+The Plus(+) sign specifies that the data on the right of the plus sign must be added to the data on the left. Examples of which you have already seen are:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>3 + 4 equals 7
+A + B equals the value of B added to the value of A
+</FONT></PRE>The minus(-) sign specifies that the data to the right of the minus sign must be subtracted from the data to the left of the minus sign:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>3 - 4 equals -1
+A - B equals the value of B subtracted from the value of A
+</FONT></PRE>An asterix(*) specifies that the data on the right side of the asterix is multiplied by the data on the left side if the asterix:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>3 * 4 equals 12
+A * B equals the value of B multiplied by the value of A
+</FONT></PRE>The slash(/) specifies that the data on the left side of the slash is to be divided by the data on the right side of the slash. Whether the data types are integer or real numbers play a factor:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>10 / 4 equals 2
+A / B equals the integer value of A divided as an integer by the integer value of B
+10 / 4.0 equals 2.5
+A / B equals the real value of A divided as a real by the real value of B
+</FONT></PRE>The MOD specifies that the data on the left side of the MOD is to be divided by the data on the right side of the MOD, and the remainder of the division is the result:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>11 MOD 2 equals 1
+A MOD B equals the remainder of the division between A and B
+</FONT></PRE>The "Power" symbol specifies a result that is the left left side value to the power of the right side value. For example 2^3 equates to the calculation 2*2*2, thus:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>2^3 equals 8
+A ^ B equals A to the power B
+</FONT></PRE><BR>
+<BR>
+RELATIONAL OPERATORS<BR>
+<BR>
+These operators are less common, unless you have programming experience. These operators represent conditions that are applied to data. The conditions handled are Equal To, Greater Than, Less Than, Greater or Equal To, Less or Equal To and Not Equal To. The purposes of these conditions are to determine the result of a comparison between two data values. A condition result can only be of two possible values. If the condition is false, the resulting value is zero. If the condition is true, the resulting value is one. Take the following examples:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>10 = 9 results in 0 because 10 is not the same as 9
+10 = 10 results in 1 because 10 is the same as 10
+10 > 9 results in 1 because 10 is greater than 9
+100 >= 100 results in 1 because 100 is greater or equal to 100
+</FONT></PRE>You can also have less than symbols which work just like the above greater-than symbols except that they will return the result of one if the left parameter is less than the right parameter. Using a less-than symbol, then a greater-than symbol next to each other denotes a not-equal operator, and will only return a true value of one if the parameters either side are not the same value.<BR>
+<BR>
+The same relational operators can be applied to real numbers, integer and real variables and in some case strings and string variables. You can compare whether two strings are the same or not the same, and even test whether one string is greater or less than another.<BR>
+<BR>
+<BR>
+BOOLEAN OPERATORS<BR>
+<BR>
+Simple Boolean operators provide the last type of operator. Dark Basic Professional allows you to use AND, OR, XOR and NOT operators on your data. Bear in mind that these operators are bitwise and are used when assembling a condition expression, such as:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>IF a=1 AND b=2 THEN c=3
+IF a=1 OR b=2 THEN c=3
+IF a=1 XOR b=2 THEN c=3
+IF NOT b=2 THEN c=3
+</FONT></PRE>The AND operator works with any integer value, but for demonstration purposes the general rule applies when using this operator:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>0 AND 0 = 0
+0 AND 1 = 0
+1 AND 0 = 0
+1 AND 1 = 1
+</FONT></PRE>What you see is the decision tree of the AND operator. It shows that only if both data operands of the AND operator are 1 will the result be a 1 also. All other cases a zero is returned. To see how this logic works in reality, take the following example:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>A=5
+B=25
+(A > 10) AND (B > 20) so what is the resulting value?
+</FONT></PRE>We can determine the result of the parts enclosed in brackets first. We can see the relational operators provide us with the following results:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>(A > 10) results in 0 because 5 is not greater than 10
+(B > 20) results in 1 because 25 is greater than 20
+</FONT></PRE>Our updated calculation looks something like this:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>(0) AND (1) results in 0 as our table shows 0 AND 1 = 0
+</FONT></PRE>The logic of the table is that only when both sides of the AND operand are 1 will the result of the calculation be 1 also. What would happen if you change the value of A to 15?<BR>
+<BR>
+The OR operator works in a similar fashion, but using the following table. If either the left side or right has a value of 1, the result will be 1:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>0 OR 0 = 0
+0 OR 1 = 1
+1 OR 0 = 1
+1 OR 1 = 1
+</FONT></PRE>The NOT operator works using the following table. This operator is a unary operator and only requires a single right-side value: <BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>IF NOT 0 THEN PRINT "this will print"
+IF NOT 1 THEN PRINT "this will not print"
+</FONT></PRE><BR>
+BITWISE OPERATORS<BR>
+<BR>
+Bitwise operators, unlike boolean operators work on all the bits of the specified variable or value. There are six bitwise operators as follows:<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>BITWISE LSHIFT using two less-than symbols will shift all bits one space to the left. %0111 becomes %1110.
+BITWISE RSHIFT using two greater-than symbols will shift all bits one space to the right. %0111 becomes %0011.
+BITWISE AND signified by the symbol && will AND all bits of one value with another. %1111 && %0011 becomes %0011.
+BITWISE OR signified by the symbol || will OR all bits of one value with another. %1111 || %0011 becomes %1111.
+BITWISE XOR signified by the symbol ~~ will XOR all bits of one value with another. %1111 ~~ %0011 becomes %1100.
+BITWISE NOT signified by the symbol .. will NOT all bits of the right value. %1111 .. %1010 becomes %0101.
+</FONT></PRE>You will discover how useful these operators become when writing conditions for your programs. Being able to write conditions with multiple parts will become increasingly important as you begin to write more complex programs.<BR>
+</td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

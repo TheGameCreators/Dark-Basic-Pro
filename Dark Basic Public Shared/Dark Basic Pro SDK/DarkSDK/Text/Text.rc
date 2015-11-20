@@ -1,0 +1,176 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL"
+            VALUE "CompanyName", "Dark Basic Software Ltd"
+            VALUE "FileDescription", "Dark Basic Professional DLL"
+            VALUE "FileVersion", "V1.0"
+            VALUE "InternalName", "Dark Basic Professional DLL"
+            VALUE "LegalCopyright", "Copyright © 2002"
+            VALUE "LegalTrademarks", "DarkBASIC"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll"
+            VALUE "ProductName", "Dark Basic Professional DLL"
+            VALUE "ProductVersion", "V1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING1             "ASC[%LS%?Asc@@YAHK@Z%String"
+    IDS_STRING2             "BIN$[%SL%?Bin@@YAKKH@Z%Value"
+    IDS_STRING3             "CHR$[%SL%?Chr@@YAKKH@Z%Value"
+    IDS_STRING4             "HEX$[%SL%?Hex@@YAKKH@Z%Value"
+    IDS_STRING5             "LEFT$[%SSL%?Left@@YAKKKH@Z%String,Value"
+    IDS_STRING6             "LEN[%LS%?Len@@YAHK@Z%String"
+    IDS_STRING7             "LOWER$[%SS%?Lower@@YAKKK@Z%String"
+    IDS_STRING8             "MID$[%SSL%?Mid@@YAKKKH@Z%String,Value"
+    IDS_STRING9             "RIGHT$[%SSL%?Right@@YAKKKH@Z%String,Value"
+    IDS_STRING10            "STR$[%SF%?Str@@YAKKM@Z%Value"
+    IDS_STRING11            "UPPER$[%SS%?Upper@@YAKKK@Z%String"
+    IDS_STRING12            "VAL[%FS%?ValF@@YAKK@Z%String"
+    IDS_STRING14            "PERFORM CHECKLIST FOR FONTS%0%?PerformChecklistForFonts@@YAXXZ%"
+    IDS_STRING15            "TEXT%LLS%?BasicText@@YAXHHK@Z%X,Y,String"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING16            "CENTER TEXT%LLS%?CenterText@@YAXHHK@Z%X,Y,String"
+    IDS_STRING17            "SET TEXT OPAQUE%0%?SetTextToOpaque@@YAXXZ"
+    IDS_STRING18            "SET TEXT TRANSPARENT%0%?SetTextToTransparent@@YAXXZ%"
+    IDS_STRING19            "SET TEXT FONT%S%?SetBasicTextFont@@YAXK@Z%Fontname"
+    IDS_STRING20            "SET TEXT FONT%SL%?SetBasicTextFont@@YAXKH@Z%Fontname, Charset Value"
+    IDS_STRING21            "SET TEXT SIZE%L%?SetTextSize@@YAXH@Z%Point size"
+    IDS_STRING22            "SET TEXT TO NORMAL%0%?SetTextToNormal@@YAXXZ"
+    IDS_STRING23            "SET TEXT TO ITALIC%0%?SetTextToItalic@@YAXXZ"
+    IDS_STRING24            "SET TEXT TO BOLD%0%?SetTextToBold@@YAXXZ"
+    IDS_STRING25            "SET TEXT TO BOLDITALIC%0%?SetTextToBoldItalic@@YAXXZ"
+    IDS_STRING26            "TEXT BACKGROUND TYPE[%L%?TextBackgroundType@@YAHXZ"
+    IDS_STRING27            "TEXT FONT$[%S%?TextFont@@YAKK@Z"
+    IDS_STRING28            "TEXT SIZE[%L%?TextSize@@YAHXZ"
+    IDS_STRING29            "TEXT STYLE[%L%?TextStyle@@YAHXZ"
+    IDS_STRING30            "TEXT WIDTH[%LS%?TextWidth@@YAHK@Z%String"
+    IDS_STRING31            "TEXT HEIGHT[%LS%?TextHeight@@YAHK@Z%String"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING32            "SPACE$[%SL%?Spaces@@YAKKH@Z%Number of Spaces"
+    IDS_STRING33            "STR$[%SL%?Str@@YAKKH@Z%Value"
+    IDS_STRING34            "STR$[%SO%?StrDouble@@YAKKN@Z%Double Float"
+    IDS_STRING36            "REVERSE$%S%?Reverse@@YAXK@Z%string"
+    IDS_STRING37            "FIND FIRST CHAR$[%LSS%?FindFirstChar@@YAHKK@Z%source, char"
+    IDS_STRING38            "FIND LAST CHAR$[%LSS%?FindLastChar@@YAHKK@Z%source, char"
+    IDS_STRING39            "FIND SUB STRING$[%LSS%?FindSubString@@YAHKK@Z%source, string"
+    IDS_STRING40            "COMPARE CASE$[%LSS%?CompareCase@@YAHKK@Z%string A, string B"
+    IDS_STRING41            "FIRST TOKEN$[%SSS%?FirstToken@@YAKKKK@Z%source, delim"
+    IDS_STRING42            "NEXT TOKEN$[%SS%?NextToken@@YAKKK@Z%delim"
+    IDS_STRING43            "STR$[%SFL%?StrEx@@YAKKMH@Z%Value, Decimal Places"
+    IDS_STRING44            "STR$[%SR%?StrDoubleInt@@YAKK_J@Z%Double Integer"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

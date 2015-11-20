@@ -1,0 +1,175 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL"
+            VALUE "CompanyName", "Dark Basic Software Ltd"
+            VALUE "FileDescription", "Dark Basic Professional DLL"
+            VALUE "FileVersion", "V1.0"
+            VALUE "InternalName", "Dark Basic Professional DLL"
+            VALUE "LegalCopyright", "Copyright © 2002"
+            VALUE "LegalTrademarks", "DarkBASIC"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll"
+            VALUE "ProductName", "Dark Basic Professional DLL"
+            VALUE "ProductVersion", "V1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING1             "MAKE LIGHT%L%?MakeEx@@YAXH@Z%Light Number"
+    IDS_STRING2             "DELETE LIGHT%L%?DeleteEx@@YAXH@Z%Light Number"
+    IDS_STRING3             "COLOR LIGHT%LD%?SetColor@@YAXHK@Z%Light Number, Color Value"
+    IDS_STRING4             "COLOR LIGHT%LLLL%?SetColorEx@@YAXHHHH@Z%Light Number, Red, Green, Blue"
+    IDS_STRING5             "SHOW LIGHT%L%?Show@@YAXH@Z%Light Number"
+    IDS_STRING6             "HIDE LIGHT%L%?Hide@@YAXH@Z%Light Number"
+    IDS_STRING7             "POINT LIGHT%LFFF%?Point@@YAXHMMM@Z%Light Number, X, Y, Z"
+    IDS_STRING8             "POSITION LIGHT%LFFF%?Position@@YAXHMMM@Z%Light Number, X, Y, Z"
+    IDS_STRING9             "ROTATE LIGHT%LFFF%?Rotate@@YAXHMMM@Z%Light Number, XAngle, YAngle, ZAngle"
+    IDS_STRING10            "SET DIRECTIONAL LIGHT%LFFF%?SetDirectional@@YAXHMMM@Z%Light Number, NX, NY, NZ"
+    IDS_STRING11            "SET LIGHT RANGE%LF%?SetRange@@YAXHM@Z%Light Number, Distance"
+    IDS_STRING12            "SET LIGHT TO OBJECT ORIENTATION%LL%?SetToObjectOrientation@@YAXHH@Z%Light Number, Object Number"
+    IDS_STRING13            "SET LIGHT TO OBJECT POSITION%LL%?SetToObject@@YAXHH@Z%Light Number, Object Number"
+    IDS_STRING14            "SET POINT LIGHT%LFFF%?SetPoint@@YAXHMMM@Z%Light Number, X, Y, Z"
+    IDS_STRING15            "SET SPOT LIGHT%LFF%?SetSpot@@YAXHMM@Z%Light Number, Inner Angle, Outer Angle"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING16            "SET AMBIENT LIGHT%L%?SetAmbient@@YAXH@Z%Percentage"
+    IDS_STRING17            "COLOR AMBIENT LIGHT%D%?SetAmbientColor@@YAXK@Z%Color Value"
+    IDS_STRING18            "FOG ON%0%?FogOn@@YAXXZ"
+    IDS_STRING19            "FOG OFF%0%?FogOff@@YAXXZ"
+    IDS_STRING20            "FOG COLOR%D%?SetFogColor@@YAXK@Z%Color Value"
+    IDS_STRING21            "FOG COLOR%LLL%?SetFogColorEx@@YAXHHH@Z%Red, Green, Blue"
+    IDS_STRING22            "FOG DISTANCE%L%?SetFogDistance@@YAXH@Z%Distance"
+    IDS_STRING23            "LIGHT DIRECTION X[%FL%?GetXDirectionEx@@YAKH@Z%Light Number"
+    IDS_STRING24            "LIGHT DIRECTION Y[%FL%?GetYDirectionEx@@YAKH@Z%Light Number"
+    IDS_STRING25            "LIGHT DIRECTION Z[%FL%?GetZDirectionEx@@YAKH@Z%Light Number"
+    IDS_STRING26            "LIGHT POSITION X[%FL%?GetXPositionEx@@YAKH@Z%Light Number"
+    IDS_STRING27            "LIGHT POSITION Y[%FL%?GetYPositionEx@@YAKH@Z%Light Number"
+    IDS_STRING28            "LIGHT POSITION Z[%FL%?GetZPositionEx@@YAKH@Z%Light Number"
+    IDS_STRING29            "LIGHT EXIST[%LL%?GetExistEx@@YAHH@Z%Light Number"
+    IDS_STRING30            "LIGHT RANGE[%FL%?GetRangeEx@@YAKH@Z%Light Number"
+    IDS_STRING31            "LIGHT TYPE[%LL%?GetTypeEx@@YAHH@Z%Light Number"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING32            "LIGHT VISIBLE[%LL%?GetVisibleEx@@YAHH@Z%Light Number"
+    IDS_STRING33            "SET NORMALIZATION OFF%0%?SetNormalizationOff@@YAXXZ"
+    IDS_STRING34            "SET NORMALIZATION ON%0%?SetNormalizationOn@@YAXXZ"
+    IDS_STRING35            "POSITION LIGHT%LL%?SetPositionVector3@@YAXHH@Z%Light Number, Vector"
+    IDS_STRING36            "ROTATE LIGHT%LL%?SetRotationVector3@@YAXHH@Z%Light Number, Vector"
+    IDS_STRING37            "SET VECTOR3 TO LIGHT POSITION%LL%?GetPositionVector3@@YAXHH@Z%Vector, Light Number"
+    IDS_STRING38            "SET VECTOR3 TO LIGHT ROTATION%LL%?GetRotationVector3@@YAXHH@Z%Vector, Light Number"
+    IDS_STRING39            "FOG DISTANCE%LL%?SetFogDistance@@YAXHH@Z%Start Distance, End Distance"
+    IDS_STRING40            "AMBIENT LIGHT[%L%?GetAmbient@@YAHXZ"
+    IDS_STRING41            "FOG COLOR%LLLL%?SetFogColorEx@@YAXHHHH@Z%Red, Green, Blue, Alpha"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

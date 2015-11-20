@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Matrix">
+      <UniqueIdentifier>{671d387e-85ae-42e4-b09d-d8e161518822}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{b69a1d4d-b09e-406c-8d74-7b7cfd5046a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Position">
+      <UniqueIdentifier>{8065853c-4d8c-4948-847b-397a1bfd8f75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Error">
+      <UniqueIdentifier>{7a8a6471-de2c-48b8-bf3e-aceb5ecd48be}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\Matrix\CMatrixC.cpp">
+      <Filter>Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Matrix\CMatrixManagerC.cpp">
+      <Filter>Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Data\CDataC.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SHARED\Matrix\CPositionC.cpp">
+      <Filter>Position</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\Matrix\CMatrixC.h">
+      <Filter>Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Matrix\CMatrixDataC.h">
+      <Filter>Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Matrix\CMatrixManagerC.h">
+      <Filter>Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Data\CDataC.h">
+      <Filter>Data</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SHARED\Matrix\CPositionC.h">
+      <Filter>Position</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CError.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Matrix.rc" />
+  </ItemGroup>
+</Project>

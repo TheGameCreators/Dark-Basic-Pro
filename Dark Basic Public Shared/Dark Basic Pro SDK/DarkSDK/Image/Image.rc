@@ -1,0 +1,153 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL"
+            VALUE "CompanyName", "Dark Basic Software Ltd"
+            VALUE "FileDescription", "Dark Basic Professional DLL"
+            VALUE "FileVersion", "V1.0"
+            VALUE "InternalName", "Dark Basic Professional DLL"
+            VALUE "LegalCopyright", "Copyright © 2002"
+            VALUE "LegalTrademarks", "DarkBASIC"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll"
+            VALUE "ProductName", "Dark Basic Professional DLL"
+            VALUE "ProductVersion", "V1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United Kingdom) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_STRING1             "LOAD IMAGE%SL%?LoadEx@@YAXPADH@Z%Filename, Image Number"
+    IDS_STRING2             "SAVE IMAGE%SL%?SaveEx@@YAXPADH@Z%Filename, Image Number"
+    IDS_STRING3             "GET IMAGE%LLLLL%?GrabImageEx@@YAXHHHHH@Z%Image Number, Left, Top, Right, Bottom"
+    IDS_STRING4             "PASTE IMAGE%LLL%?PasteEx@@YAXHHH@Z%Image Number, X, Y"
+    IDS_STRING5             "DELETE IMAGE%L%?DeleteEx@@YAXH@Z%Image Number"
+    IDS_STRING6             "IMAGE EXIST[%LL%?GetExistEx@@YAHH@Z%Image Number"
+    IDS_STRING7             "SET IMAGE COLORKEY%LLL%?SetColorKey@@YAXHHH@Z%Red Value, Green Value, Blue Value"
+    IDS_STRING8             "PASTE IMAGE%LLLL%?PasteEx@@YAXHHHH@Z%Image Number, X, Y, Transparency"
+    IDS_STRING9             "ROTATE IMAGE%LL%?RotateImageEx@@YAXHH@Z%Image Number, Angle"
+    IDS_STRING10            "LOAD IMAGE%SLL%?LoadEx@@YAXPADHH@Z%Filename, Image Number, Texture Flag"
+    IDS_STRING11            "GET IMAGE%LLLLLL%?GrabImageEx@@YAXHHHHHH@Z%Image Number, Left, Top, Right, Bottom, Texture Flag"
+    IDS_STRING12            "SAVE ICON FROM IMAGE%SL%?SaveIconFromImage@@YAXPADH@Z%Icon Filename, Image Number"
+    IDS_STRING13            "DELETE ICON%D%?FreeIcon@@YAXK@Z%Icon Handle"
+    IDS_STRING14            "LOAD ICON[%DS%?LoadIconA@@YAKPAD@Z%Icon Filename"
+    IDS_STRING15            "SAVE IMAGE%SLL%?SaveEx@@YAXPADHH@Z%Filename, Image Number, Compression Mode"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING16            "IMAGE WIDTH[%LL%?GetWidth@@YAHH@Z%Image Number"
+    IDS_STRING17            "IMAGE HEIGHT[%LL%?GetHeight@@YAHH@Z%Image Number"
+    IDS_STRING18            "LOAD IMAGE%SLLL%?LoadEx@@YAXPADHHH@Z%Filename, Image Number, Texture Flag, Divide Texture Size"
+    IDS_STRING19            "OPEN IMAGEBLOCK%SL%?OpenImageBlock@@YAXPADH@Z%Filename, Mode"
+    IDS_STRING20            "CLOSE IMAGEBLOCK%0%?CloseImageBlock@@YAXXZ"
+    IDS_STRING21            "PERFORM CHECKLIST FOR IMAGEBLOCK FILES%0%?PerformChecklistForImageBlockFiles@@YAXXZ"
+    IDS_STRING22            "IMAGE FILE EXIST[%LS%?GetImageFileExist@@YAHPAD@Z%Filename"
+    IDS_STRING23            "EXCLUDE FROM IMAGEBLOCK%S%?ExcludeFromImageBlock@@YAXPAD@Z%Exclude Path"
+    IDS_STRING24            "LOAD IMAGE%SLLLL%?LoadEx@@YAXPADHHHH@Z%Filename, Image Number, Texture Flag, Divide Texture Size, Silent Error"
+    IDS_STRING25            "CLEAR INTERNAL LIGHTMAPS%0%?ClearAnyLightMapInternalTextures@@YAXXZ"
+    IDS_STRING26            "SET IMAGE AUTOMIPMAP%L%?SetImageAutoMipMap@@YAXH@Z%Generate Mipmaps"
+    IDS_STRING27            "TRANSFER IMAGE%LLLL%?TransferImage@@YAXHHHH@Z%Dest Img, Src Img, Transfer Mode, Memblock Assistor"
+END
+
+#endif    // English (United Kingdom) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

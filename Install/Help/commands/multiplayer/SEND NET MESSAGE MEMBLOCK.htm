@@ -1,0 +1,153 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\..\main.htm"><img src="..\..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\commands.htm"><img src="..\..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\..\examples.htm"><img src="..\..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\documents.htm"><img src="..\..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\..\index.htm"><img src="..\..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<!-- Function Head -->
+<font face="Verdana" size="5">
+<b>
+SEND NET MESSAGE MEMBLOCK
+</b>
+<font face="Verdana" size="2">
+<p>
+This command will send a message containing a memblock to the specified player. 
+</p>
+</font>
+<!-- Synopsis -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Syntax
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+SEND NET MESSAGE MEMBLOCK Player Number, Memblock Number
+</pre>
+<pre>
+SEND NET MESSAGE MEMBLOCK Player Number, Memblock Number, Guarentee Packet
+</pre>
+</font>
+<!-- Parameters -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Parameters
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+Player Number
+</pre>
+<blockquote>
+Integer
+<br>
+The Player Number must be an integer value and an existing player in the net game. The memblock must exist or the command will fail. A Player Number of zero will send the message to all players except you
+</blockquote>
+<pre>
+Memblock Number
+</pre>
+<blockquote>
+Integer
+<br>
+The number of the memblock to send
+</blockquote>
+<pre>
+Guarentee Packet
+</pre>
+<blockquote>
+Integer
+<br>
+The Guarantee Packet Flag, if set to one, will ensure the message is received and will not be dropped due to slow system performance
+</blockquote>
+</font>
+<BR>
+<!-- Returns -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Returns
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+This command does not return a value.
+</p>
+</font>
+<!-- Description -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Description
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+The Player Number must be an integer value and an existing player in the net game. The memblock must exist or the command will fail. A Player Number of zero will send the message to all players except you. The Guarantee Packet Flag, if set to one, will ensure the message is received and will not be dropped due to slow system performance.
+</p>
+</font>
+<!-- Examples -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Example Code
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+rem Network game can communicate sounds, images and 3D data<BR>
+while inkey$()<>"z"<BR>
+cls<BR>
+print "SENDING..."<BR>
+GuarenteePacket=1<BR>
+make memblock 1, 1024<BR>
+send net message memblock 0, 1, GuarenteePacket<BR>
+delete memblock 1<BR>
+rem Receive Part (from all other players)<BR>
+get net message<BR>
+if net message exists()=1 then print "RECEIVING..."<BR>
+while net message exists()=1<BR>
+if net message type()=4<BR>
+net message memblock 1<BR>
+delete memblock 1<BR>
+endif<BR>
+get net message<BR>
+endwhile<BR>
+endwhile<BR>
+</pre>
+</font>
+<!-- See Also -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+See also
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+<a href="..\multiplayer.htm">MULTIPLAYER Commands Menu<BR>
+</a>
+<a href="..\..\index.htm">Index</a><BR>
+</p>
+</font>
+<BR>
+<!-- Function Footer -->
+</font>
+</td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

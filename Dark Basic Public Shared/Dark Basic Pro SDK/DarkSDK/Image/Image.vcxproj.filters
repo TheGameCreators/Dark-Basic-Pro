@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Image">
+      <UniqueIdentifier>{5c436b0d-168d-46f6-8ad8-635b713ce356}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Error">
+      <UniqueIdentifier>{0e75fd71-edd7-417b-90ea-7fddf78384f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Icons">
+      <UniqueIdentifier>{c2e58477-f2ef-4ca5-bea6-0f1b63ab90ea}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\Image\CImageC.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Image\icons\DIB.C">
+      <Filter>Icons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Image\icons\ICONS.C">
+      <Filter>Icons</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLMain.cpp" />
+    <ClCompile Include="..\..\Shared\Core\globstruct.cpp" />
+    <ClCompile Include="..\..\Shared\Core\SteamCheckForWorkshop.cpp">
+      <Filter>Image</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\Image\CImageC.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CError.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CRuntimeErrors.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Image\icons\DIB.H">
+      <Filter>Icons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Image\icons\ICONPRO.H">
+      <Filter>Icons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Image\icons\ICONS.H">
+      <Filter>Icons</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\..\Shared\Core\SteamCheckForWorkshop.h">
+      <Filter>Image</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Image.rc" />
+  </ItemGroup>
+</Project>

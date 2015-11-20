@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+</td></tr></table>
+<center><table width="340" border="0" cellpadding="0" cellspacing="0"><tr><td ALIGN="center"><FONT SIZE=4 FACE=Verdana><B>3dmaths</B></FONT><BR><IMG SRC=..\gfx\divide.jpg width="340" height=5><BR>
+</td></tr></table></center><br><table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+This command set contains the ability to create, delete and control vectors and matrices for the more advanced 3D programmer. Many of the DirectX math functions can be found here.<BR>
+<BR>
+<PRE><FONT FACE=Verdana SIZE=1><a href="3dmaths\ADD MATRIX4.htm">ADD MATRIX4</a> : ADD MATRIX4 Matrix4Result, Matrix4A, Matrix4B
+<a href="3dmaths\ADD VECTOR2.htm">ADD VECTOR2</a> : ADD VECTOR2 VectorResult, VectorA, VectorB
+<a href="3dmaths\ADD VECTOR3.htm">ADD VECTOR3</a> : ADD VECTOR3 VectorResult, VectorA, VectorB
+<a href="3dmaths\ADD VECTOR4.htm">ADD VECTOR4</a> : ADD VECTOR4 VectorResult, VectorA, VectorB
+<a href="3dmaths\BUILD LOOKAT LHMATRIX4.htm">BUILD LOOKAT LHMATRIX4</a> : BUILD LOOKAT LHMATRIX4 Matrix4Result, Vector3Eye, Vector3At, Vector3Up
+<a href="3dmaths\BUILD LOOKAT RHMATRIX4.htm">BUILD LOOKAT RHMATRIX4</a> : BUILD LOOKAT RHMATRIX4 Matrix4Result, Vector3Eye, Vector3At, Vector3Up
+<a href="3dmaths\BUILD ORTHO LHMATRIX4.htm">BUILD ORTHO LHMATRIX4</a> : BUILD ORTHO LHMATRIX4 Matrix4Result, Width, Height, Near, Far
+<a href="3dmaths\BUILD ORTHO RHMATRIX4.htm">BUILD ORTHO RHMATRIX4</a> : BUILD ORTHO RHMATRIX4 Matrix4Result, Width, Height, Near, Far
+<a href="3dmaths\BUILD FOV LHMATRIX4.htm">BUILD FOV LHMATRIX4</a> : BUILD FOV LHMATRIX4 Matrix4Result, FOV, Aspect, Near, Far
+<a href="3dmaths\BUILD FOV RHMATRIX4.htm">BUILD FOV RHMATRIX4</a> : BUILD FOV RHMATRIX4 Matrix4Result, FOV, Aspect, Near, Far
+<a href="3dmaths\BUILD PERSPECTIVE LHMATRIX4.htm">BUILD PERSPECTIVE LHMATRIX4</a> : BUILD PERSPECTIVE LHMATRIX4 Matrix4Result, Width, Height, Near, Far
+<a href="3dmaths\BUILD PERSPECTIVE RHMATRIX4.htm">BUILD PERSPECTIVE RHMATRIX4</a> : BUILD PERSPECTIVE RHMATRIX4 Matrix4Result, Width, Height, Near, Far
+<a href="3dmaths\BUILD REFLECTION MATRIX4.htm">BUILD REFLECTION MATRIX4</a> : BUILD REFLECTION MATRIX4 Matrix4Result, PlaneA, PlaneB, PlaneC, PlaneD
+<a href="3dmaths\BUILD ROTATION AXIS MATRIX4.htm">BUILD ROTATION AXIS MATRIX4</a> : BUILD ROTATION AXIS MATRIX4 Matrix4Result, Vector3Axis, Angle
+<a href="3dmaths\CATMULLROM VECTOR2.htm">CATMULLROM VECTOR2</a> : CATMULLROM VECTOR2 VectorResult, VectorA, VectorB, VectorC, VectorD, Value
+<a href="3dmaths\CATMULLROM VECTOR3.htm">CATMULLROM VECTOR3</a> : CATMULLROM VECTOR3 VectorResult, VectorA, VectorB, VectorC, VectorD, Value
+<a href="3dmaths\CATMULLROM VECTOR4.htm">CATMULLROM VECTOR4</a> : CATMULLROM VECTOR4 VectorResult, VectorA, VectorB, VectorC, VectorD, Value
+<a href="3dmaths\COPY MATRIX4.htm">COPY MATRIX4</a> : COPY MATRIX4 Matrix4Result, Matrix4Source
+<a href="3dmaths\COPY VECTOR2.htm">COPY VECTOR2</a> : COPY VECTOR2 VectorResult, VectorSource
+<a href="3dmaths\COPY VECTOR3.htm">COPY VECTOR3</a> : COPY VECTOR3 VectorResult, VectorSource
+<a href="3dmaths\COPY VECTOR4.htm">COPY VECTOR4</a> : COPY VECTOR4 VectorResult, VectorSource
+<a href="3dmaths\CROSS PRODUCT VECTOR3.htm">CROSS PRODUCT VECTOR3</a> : CROSS PRODUCT VECTOR3 VectorResult, VectorA, VectorB
+<a href="3dmaths\DELETE MATRIX4.htm">DELETE MATRIX4</a> : Return Integer=DELETE MATRIX4(Matrix4Result)
+<a href="3dmaths\DELETE VECTOR2.htm">DELETE VECTOR2</a> : Return Integer=DELETE VECTOR2(Vector)
+<a href="3dmaths\DELETE VECTOR3.htm">DELETE VECTOR3</a> : Return Integer=DELETE VECTOR3(Vector)
+<a href="3dmaths\DELETE VECTOR4.htm">DELETE VECTOR4</a> : Return Integer=DELETE VECTOR4(Vector)
+<a href="3dmaths\DIVIDE MATRIX4.htm">DIVIDE MATRIX4</a> : DIVIDE MATRIX4 Matrix4Result, Value
+<a href="3dmaths\DIVIDE VECTOR2.htm">DIVIDE VECTOR2</a> : DIVIDE VECTOR2 VectorResult, Value
+<a href="3dmaths\DIVIDE VECTOR3.htm">DIVIDE VECTOR3</a> : DIVIDE VECTOR3 VectorResult, Value
+<a href="3dmaths\DIVIDE VECTOR4.htm">DIVIDE VECTOR4</a> : DIVIDE VECTOR4 VectorResult, Value
+<a href="3dmaths\DOT PRODUCT VECTOR2.htm">DOT PRODUCT VECTOR2</a> : Return Float=DOT PRODUCT VECTOR2(VectorA, VectorB)
+<a href="3dmaths\DOT PRODUCT VECTOR3.htm">DOT PRODUCT VECTOR3</a> : Return Float=DOT PRODUCT VECTOR3(VectorA, VectorB)
+<a href="3dmaths\BCC VECTOR2.htm">BCC VECTOR2</a> : BCC VECTOR2 VectorResult, VectorA, VectorB, VectorC, FValue, GBValue
+<a href="3dmaths\BCC VECTOR3.htm">BCC VECTOR3</a> : BCC VECTOR3 VectorResult, VectorA, VectorB, VectorC, FValue, GBValue
+<a href="3dmaths\BCC VECTOR4.htm">BCC VECTOR4</a> : BCC VECTOR4 VectorResult, VectorA, VectorB, VectorC, FValue, GBValue
+<a href="3dmaths\CCW VECTOR2.htm">CCW VECTOR2</a> : Return Float=CCW VECTOR2(VectorA, VectorB)
+<a href="3dmaths\SQUARED LENGTH VECTOR2.htm">SQUARED LENGTH VECTOR2</a> : Return Float=SQUARED LENGTH VECTOR2(Vector)
+<a href="3dmaths\SQUARED LENGTH VECTOR3.htm">SQUARED LENGTH VECTOR3</a> : Return Float=SQUARED LENGTH VECTOR3(Vector)
+<a href="3dmaths\SQUARED LENGTH VECTOR4.htm">SQUARED LENGTH VECTOR4</a> : Return Float=SQUARED LENGTH VECTOR4(Vector)
+<a href="3dmaths\LENGTH VECTOR2.htm">LENGTH VECTOR2</a> : Return Float=LENGTH VECTOR2(Vector)
+<a href="3dmaths\LENGTH VECTOR3.htm">LENGTH VECTOR3</a> : Return Float=LENGTH VECTOR3(Vector)
+<a href="3dmaths\LENGTH VECTOR4.htm">LENGTH VECTOR4</a> : Return Float=LENGTH VECTOR4(Vector)
+<a href="3dmaths\PROJECTION MATRIX4.htm">PROJECTION MATRIX4</a> : PROJECTION MATRIX4 Matrix4Result
+<a href="3dmaths\VIEW MATRIX4.htm">VIEW MATRIX4</a> : VIEW MATRIX4 Matrix4Result
+<a href="3dmaths\W VECTOR4.htm">W VECTOR4</a> : Return Float=W VECTOR4(Vector)
+<a href="3dmaths\WORLD MATRIX4.htm">WORLD MATRIX4</a> : WORLD MATRIX4 Matrix4Result
+<a href="3dmaths\X VECTOR2.htm">X VECTOR2</a> : Return Float=X VECTOR2(Vector)
+<a href="3dmaths\X VECTOR3.htm">X VECTOR3</a> : Return Float=X VECTOR3(Vector)
+<a href="3dmaths\X VECTOR4.htm">X VECTOR4</a> : Return Float=X VECTOR4(Vector)
+<a href="3dmaths\Y VECTOR2.htm">Y VECTOR2</a> : Return Float=Y VECTOR2(Vector)
+<a href="3dmaths\Y VECTOR3.htm">Y VECTOR3</a> : Return Float=Y VECTOR3(Vector)
+<a href="3dmaths\Y VECTOR4.htm">Y VECTOR4</a> : Return Float=Y VECTOR4(Vector)
+<a href="3dmaths\Z VECTOR3.htm">Z VECTOR3</a> : Return Float=Z VECTOR3(Vector)
+<a href="3dmaths\Z VECTOR4.htm">Z VECTOR4</a> : Return Float=Z VECTOR4(Vector)
+<a href="3dmaths\HERMITE VECTOR2.htm">HERMITE VECTOR2</a> : HERMITE VECTOR2 VectorResult, VectorA, VectorB, VectorC, VectorD, SValue
+<a href="3dmaths\HERMITE VECTOR3.htm">HERMITE VECTOR3</a> : HERMITE VECTOR3 VectorResult, VectorA, VectorB, VectorC, VectorD, SValue
+<a href="3dmaths\HERMITE VECTOR4.htm">HERMITE VECTOR4</a> : HERMITE VECTOR4 VectorResult, VectorA, VectorB, VectorC, VectorD, SValue
+<a href="3dmaths\INVERSE MATRIX4.htm">INVERSE MATRIX4</a> : Return Float=INVERSE MATRIX4(Matrix4Result, Matrix4Source)
+<a href="3dmaths\IS EQUAL MATRIX4.htm">IS EQUAL MATRIX4</a> : Return Integer=IS EQUAL MATRIX4(Matrix4A, Matrix4B)
+<a href="3dmaths\IS EQUAL VECTOR2.htm">IS EQUAL VECTOR2</a> : Return Integer=IS EQUAL VECTOR2(VectorA, VectorB)
+<a href="3dmaths\IS EQUAL VECTOR3.htm">IS EQUAL VECTOR3</a> : Return Integer=IS EQUAL VECTOR3(VectorA, VectorB)
+<a href="3dmaths\IS EQUAL VECTOR4.htm">IS EQUAL VECTOR4</a> : Return Integer=IS EQUAL VECTOR4(VectorA, VectorB)
+<a href="3dmaths\IS IDENTITY MATRIX4.htm">IS IDENTITY MATRIX4</a> : Return Integer=IS IDENTITY MATRIX4(Matrix4Result)
+<a href="3dmaths\LINEAR INTERPOLATE VECTOR2.htm">LINEAR INTERPOLATE VECTOR2</a> : LINEAR INTERPOLATE VECTOR2 VectorResult, VectorA, VectorB, SValue
+<a href="3dmaths\LINEAR INTERPOLATE VECTOR3.htm">LINEAR INTERPOLATE VECTOR3</a> : LINEAR INTERPOLATE VECTOR3 VectorResult, VectorA, VectorB, SValue
+<a href="3dmaths\LINEAR INTERPOLATE VECTOR4.htm">LINEAR INTERPOLATE VECTOR4</a> : LINEAR INTERPOLATE VECTOR4 VectorResult, VectorA, VectorB, SValue
+<a href="3dmaths\MAKE MATRIX4.htm">MAKE MATRIX4</a> : Return Integer=MAKE MATRIX4(Matrix4)
+<a href="3dmaths\MAKE VECTOR2.htm">MAKE VECTOR2</a> : Return Integer=MAKE VECTOR2(Vector)
+<a href="3dmaths\MAKE VECTOR3.htm">MAKE VECTOR3</a> : Return Integer=MAKE VECTOR3(Vector)
+<a href="3dmaths\MAKE VECTOR4.htm">MAKE VECTOR4</a> : Return Integer=MAKE VECTOR4(Vector)
+<a href="3dmaths\MAXIMIZE VECTOR2.htm">MAXIMIZE VECTOR2</a> : MAXIMIZE VECTOR2 VectorResult, VectorA, VectorB
+<a href="3dmaths\MAXIMIZE VECTOR3.htm">MAXIMIZE VECTOR3</a> : MAXIMIZE VECTOR3 VectorResult, VectorA, VectorB
+<a href="3dmaths\MAXIMIZE VECTOR4.htm">MAXIMIZE VECTOR4</a> : MAXIMIZE VECTOR4 VectorResult, VectorA, VectorB
+<a href="3dmaths\MINIMIZE VECTOR2.htm">MINIMIZE VECTOR2</a> : MINIMIZE VECTOR2 VectorResult, VectorA, VectorB
+<a href="3dmaths\MINIMIZE VECTOR3.htm">MINIMIZE VECTOR3</a> : MINIMIZE VECTOR3 VectorResult, VectorA, VectorB
+<a href="3dmaths\MINIMIZE VECTOR4.htm">MINIMIZE VECTOR4</a> : MINIMIZE VECTOR4 VectorResult, VectorA, VectorB
+<a href="3dmaths\MULTIPLY MATRIX4.htm">MULTIPLY MATRIX4</a> : MULTIPLY MATRIX4 Matrix4Result, Matrix4A, Matrix4B
+<a href="3dmaths\MULTIPLY VECTOR2.htm">MULTIPLY VECTOR2</a> : MULTIPLY VECTOR2 VectorResult, Value
+<a href="3dmaths\MULTIPLY VECTOR3.htm">MULTIPLY VECTOR3</a> : MULTIPLY VECTOR3 VectorResult, Value
+<a href="3dmaths\MULTIPLY VECTOR4.htm">MULTIPLY VECTOR4</a> : MULTIPLY VECTOR4 VectorResult, Value
+<a href="3dmaths\NORMALIZE VECTOR2.htm">NORMALIZE VECTOR2</a> : NORMALIZE VECTOR2 VectorResult, VectorSource
+<a href="3dmaths\NORMALIZE VECTOR3.htm">NORMALIZE VECTOR3</a> : NORMALIZE VECTOR3 VectorResult, VectorSource
+<a href="3dmaths\NORMALIZE VECTOR4.htm">NORMALIZE VECTOR4</a> : NORMALIZE VECTOR4 VectorResult, VectorSource
+<a href="3dmaths\PROJECT VECTOR3.htm">PROJECT VECTOR3</a> : PROJECT VECTOR3 VectorResult, VectorSource, Matrix4Projection, Matrix4View, Matrix4World
+<a href="3dmaths\ROTATE X MATRIX4.htm">ROTATE X MATRIX4</a> : ROTATE X MATRIX4 Matrix4Result, Angle
+<a href="3dmaths\ROTATE Y MATRIX4.htm">ROTATE Y MATRIX4</a> : ROTATE Y MATRIX4 Matrix4Result, Angle
+<a href="3dmaths\ROTATE YPR MATRIX4.htm">ROTATE YPR MATRIX4</a> : ROTATE YPR MATRIX4 Matrix4Result, Yaw, Pitch, Roll
+<a href="3dmaths\ROTATE Z MATRIX4.htm">ROTATE Z MATRIX4</a> : ROTATE Z MATRIX4 Matrix4Result, Angle
+<a href="3dmaths\SCALE MATRIX4.htm">SCALE MATRIX4</a> : SCALE MATRIX4 Matrix4Result, X, Y, Z
+<a href="3dmaths\SCALE VECTOR2.htm">SCALE VECTOR2</a> : SCALE VECTOR2 VectorResult, VectorSource, Value
+<a href="3dmaths\SCALE VECTOR3.htm">SCALE VECTOR3</a> : SCALE VECTOR3 VectorResult, VectorSource, Value
+<a href="3dmaths\SCALE VECTOR4.htm">SCALE VECTOR4</a> : SCALE VECTOR4 VectorResult, VectorSource, Value
+<a href="3dmaths\SET IDENTITY MATRIX4.htm">SET IDENTITY MATRIX4</a> : SET IDENTITY MATRIX4 Matrix4Result
+<a href="3dmaths\SET VECTOR2.htm">SET VECTOR2</a> : SET VECTOR2 VectorResult, X, Y
+<a href="3dmaths\SET VECTOR3.htm">SET VECTOR3</a> : SET VECTOR3 VectorResult, X, Y, Z
+<a href="3dmaths\SET VECTOR4.htm">SET VECTOR4</a> : SET VECTOR4 VectorResult, X, Y, Z, W
+<a href="3dmaths\SUBTRACT MATRIX4.htm">SUBTRACT MATRIX4</a> : SUBTRACT MATRIX4 Matrix4Result, Matrix4A, Matrix4B
+<a href="3dmaths\SUBTRACT VECTOR2.htm">SUBTRACT VECTOR2</a> : SUBTRACT VECTOR2 VectorResult, VectorA, VectorB
+<a href="3dmaths\SUBTRACT VECTOR3.htm">SUBTRACT VECTOR3</a> : SUBTRACT VECTOR3 VectorResult, VectorA, VectorB
+<a href="3dmaths\SUBTRACT VECTOR4.htm">SUBTRACT VECTOR4</a> : SUBTRACT VECTOR4 VectorResult, VectorA, VectorB
+<a href="3dmaths\TRANSFORM VECTOR4.htm">TRANSFORM VECTOR4</a> : TRANSFORM VECTOR4 VectorResult, VectorSource, Matrix4Source
+<a href="3dmaths\TRANSFORM COORDS VECTOR2.htm">TRANSFORM COORDS VECTOR2</a> : TRANSFORM COORDS VECTOR2 VectorResult, VectorSource, Matrix4Source
+<a href="3dmaths\TRANSFORM COORDS VECTOR3.htm">TRANSFORM COORDS VECTOR3</a> : TRANSFORM COORDS VECTOR3 VectorResult, VectorSource, Matrix4Source
+<a href="3dmaths\TRANSFORM NORMALS VECTOR3.htm">TRANSFORM NORMALS VECTOR3</a> : TRANSFORM NORMALS VECTOR3 VectorResult, VectorSource, Matrix4Source
+<a href="3dmaths\TRANSLATE MATRIX4.htm">TRANSLATE MATRIX4</a> : TRANSLATE MATRIX4 Matrix4Result, X, Y, Z
+<a href="3dmaths\TRANSPOSE MATRIX4.htm">TRANSPOSE MATRIX4</a> : TRANSPOSE MATRIX4 Matrix4Result, Matrix4Source
+<a href="3dmaths\GET MATRIX4 ELEMENT.htm">GET MATRIX4 ELEMENT</a> : Return Float=GET MATRIX4 ELEMENT(Matrix4Result, Element Index)
+</PRE></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

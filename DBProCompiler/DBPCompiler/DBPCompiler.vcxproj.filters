@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{30ce871d-6aba-4c74-a499-6cf4f41e881b}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\ParserC">
+      <UniqueIdentifier>{a2a1d21f-905a-4c53-a0f4-f8792f3f2f46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\MainC">
+      <UniqueIdentifier>{d7eb45c7-c64c-408f-af24-30999437727e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Icons">
+      <UniqueIdentifier>{c761b316-2601-44b8-80e9-c6a117ee31d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{2766dadc-665b-481b-af1a-31df0b1ce16f}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Header Files\ParserH">
+      <UniqueIdentifier>{c97ed37b-0128-460c-ade2-ac5c25b53276}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\MainH">
+      <UniqueIdentifier>{6b741348-d4ba-48d2-b382-7b7a7359d285}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{88c95270-446a-41de-a7c0-ead92aedc168}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="CertificateKey">
+      <UniqueIdentifier>{29d270b6-87e0-44c6-9a36-120e0979e669}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DataTable.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="Declaration.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="EXEBlock.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="InstructionTable.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="InstructionTableEntry.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="LabelTable.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="MathOp.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="Parameter.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="ParseFunction.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="ParseInit.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="ParseInstruction.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="ParseJump.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="ParseLoop.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="ParseType.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="ParseUserFunction.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="Statement.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="StatementChain.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="StatementList.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="StructTable.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="VarTable.cpp">
+      <Filter>Source Files\ParserC</Filter>
+    </ClCompile>
+    <ClCompile Include="ASMWriter.cpp">
+      <Filter>Source Files\MainC</Filter>
+    </ClCompile>
+    <ClCompile Include="DBMWriter.cpp">
+      <Filter>Source Files\MainC</Filter>
+    </ClCompile>
+    <ClCompile Include="DBPCompiler.cpp">
+      <Filter>Source Files\MainC</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugInfo.cpp">
+      <Filter>Source Files\MainC</Filter>
+    </ClCompile>
+    <ClCompile Include="Encryptor.cpp">
+      <Filter>Source Files\MainC</Filter>
+    </ClCompile>
+    <ClCompile Include="Error.cpp">
+      <Filter>Source Files\MainC</Filter>
+    </ClCompile>
+    <ClCompile Include="FileBuilder.cpp">
+      <Filter>Source Files\MainC</Filter>
+    </ClCompile>
+    <ClCompile Include="IncludeTable.cpp">
+      <Filter>Source Files\MainC</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files\MainC</Filter>
+    </ClCompile>
+    <ClCompile Include="Str.cpp">
+      <Filter>Source Files\MainC</Filter>
+    </ClCompile>
+    <ClCompile Include="icons\DIB.C">
+      <Filter>Source Files\Icons</Filter>
+    </ClCompile>
+    <ClCompile Include="icons\ICONS.C">
+      <Filter>Source Files\Icons</Filter>
+    </ClCompile>
+    <ClCompile Include="..\TGCOnline\CertificateKey.cpp">
+      <Filter>CertificateKey</Filter>
+    </ClCompile>
+    <ClCompile Include="Task.cpp">
+      <Filter>Source Files\MainC</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="icons\DIB.H">
+      <Filter>Source Files\Icons</Filter>
+    </ClInclude>
+    <ClInclude Include="icons\ICONPRO.H">
+      <Filter>Source Files\Icons</Filter>
+    </ClInclude>
+    <ClInclude Include="icons\ICONS.H">
+      <Filter>Source Files\Icons</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dark Basic Pro SDK\Shared\Core\globstruct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="icons.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ParserResultData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DataTable.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="Declaration.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="EXEBlock.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="InstructionTable.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="InstructionTableEntry.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="LabelTable.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="ParseFunction.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="ParseInit.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="ParseInstruction.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="ParseJump.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="ParseLoop.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="ParserHeader.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="ParseType.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="ParseUserFunction.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="Statement.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="StatementChain.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="StatementList.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="StructTable.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="VarTable.h">
+      <Filter>Header Files\ParserH</Filter>
+    </ClInclude>
+    <ClInclude Include="ASMWriter.h">
+      <Filter>Header Files\MainH</Filter>
+    </ClInclude>
+    <ClInclude Include="DBMWriter.h">
+      <Filter>Header Files\MainH</Filter>
+    </ClInclude>
+    <ClInclude Include="DBPCompiler.h">
+      <Filter>Header Files\MainH</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugInfo.h">
+      <Filter>Header Files\MainH</Filter>
+    </ClInclude>
+    <ClInclude Include="Encryptor.h">
+      <Filter>Header Files\MainH</Filter>
+    </ClInclude>
+    <ClInclude Include="Error.h">
+      <Filter>Header Files\MainH</Filter>
+    </ClInclude>
+    <ClInclude Include="FileBuilder.h">
+      <Filter>Header Files\MainH</Filter>
+    </ClInclude>
+    <ClInclude Include="IncludeTable.h">
+      <Filter>Header Files\MainH</Filter>
+    </ClInclude>
+    <ClInclude Include="macros.h">
+      <Filter>Header Files\MainH</Filter>
+    </ClInclude>
+    <ClInclude Include="Str.h">
+      <Filter>Header Files\MainH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TGCOnline\CertificateKey.h">
+      <Filter>CertificateKey</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\DB3\DB3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\DB3\DB3Math.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\DB3\DB3Task.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Task.h">
+      <Filter>Header Files\MainH</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\DB3\DB3Dict.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\DB3\DB3Array.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\DB3\DB3Factory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\DB3\DB3List.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SDK\DB3\DB3Time.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PerfMacros.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="DBPCompiler.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DarkEXE.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon1-db3.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

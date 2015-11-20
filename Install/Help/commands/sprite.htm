@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+</td></tr></table>
+<center><table width="340" border="0" cellpadding="0" cellspacing="0"><tr><td ALIGN="center"><FONT SIZE=4 FACE=Verdana><B>sprite</B></FONT><BR><IMG SRC=..\gfx\divide.jpg width="340" height=5><BR>
+</td></tr></table></center><br><table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+This command set controls the creation and positioning of sprites, a 2D image that is independently controlled and overlayed onto the screen. Sprites can be adjusted in many ways,including the ability to fade in and out, resize and change their draw order.<BR>
+<BR>
+<PRE><FONT FACE=Verdana SIZE=1><a href="sprite\SPRITE.htm">SPRITE</a> : SPRITE Sprite Number, XPos, YPos, Image Number
+<a href="sprite\SET SPRITE.htm">SET SPRITE</a> : SET SPRITE Sprite Number, Backsave, Transparency
+<a href="sprite\DELETE SPRITE.htm">DELETE SPRITE</a> : DELETE SPRITE Sprite Number
+<a href="sprite\CLONE SPRITE.htm">CLONE SPRITE</a> : CLONE SPRITE Sprite Number, Destination Sprite Number
+<a href="sprite\SHOW SPRITE.htm">SHOW SPRITE</a> : SHOW SPRITE Sprite Number
+<a href="sprite\HIDE SPRITE.htm">HIDE SPRITE</a> : HIDE SPRITE Sprite Number
+<a href="sprite\HIDE ALL SPRITES.htm">HIDE ALL SPRITES</a> : HIDE ALL SPRITES
+<a href="sprite\SHOW ALL SPRITES.htm">SHOW ALL SPRITES</a> : SHOW ALL SPRITES
+<a href="sprite\MOVE SPRITE.htm">MOVE SPRITE</a> : MOVE SPRITE Sprite Number, Velocity
+<a href="sprite\OFFSET SPRITE.htm">OFFSET SPRITE</a> : OFFSET SPRITE Sprite Number, XOffset, YOffset
+<a href="sprite\SCALE SPRITE.htm">SCALE SPRITE</a> : SCALE SPRITE Sprite Number, Scale
+<a href="sprite\SIZE SPRITE.htm">SIZE SPRITE</a> : SIZE SPRITE Sprite Number, XSize, YSize
+<a href="sprite\STRETCH SPRITE.htm">STRETCH SPRITE</a> : STRETCH SPRITE Sprite Number, XScale, YScale
+<a href="sprite\ROTATE SPRITE.htm">ROTATE SPRITE</a> : ROTATE SPRITE Sprite Number, Angle
+<a href="sprite\FLIP SPRITE.htm">FLIP SPRITE</a> : FLIP SPRITE Sprite Number
+<a href="sprite\MIRROR SPRITE.htm">MIRROR SPRITE</a> : MIRROR SPRITE Sprite Number
+<a href="sprite\PASTE SPRITE.htm">PASTE SPRITE</a> : PASTE SPRITE Sprite Number, XPos, YPos
+<a href="sprite\CREATE ANIMATED SPRITE.htm">CREATE ANIMATED SPRITE</a> : CREATE ANIMATED SPRITE Sprite Number, Filename, Across, Down, Image Number
+<a href="sprite\PLAY SPRITE.htm">PLAY SPRITE</a> : PLAY SPRITE Sprite Number, Start Frame, End Frame, Delay Value
+<a href="sprite\SET SPRITE FRAME.htm">SET SPRITE FRAME</a> : SET SPRITE FRAME Sprite Number, Frame Value
+<a href="sprite\SET SPRITE PRIORITY.htm">SET SPRITE PRIORITY</a> : SET SPRITE PRIORITY Sprite Number, Priority
+<a href="sprite\SET SPRITE IMAGE.htm">SET SPRITE IMAGE</a> : SET SPRITE IMAGE Sprite Number, Image Number
+<a href="sprite\SET SPRITE ALPHA.htm">SET SPRITE ALPHA</a> : SET SPRITE ALPHA Sprite Number, Alpha Value
+<a href="sprite\SET SPRITE DIFFUSE.htm">SET SPRITE DIFFUSE</a> : SET SPRITE DIFFUSE Sprite Number, Red Value, Green Value, Blue Value
+<a href="sprite\SET SPRITE TEXTURE COORD.htm">SET SPRITE TEXTURE COORD</a> : SET SPRITE TEXTURE COORD Sprite Number, Vertex Index, UValue, VValue
+<a href="sprite\SET SPRITE RESIZE.htm">SET SPRITE RESIZE</a> : SET SPRITE RESIZE Mode
+<BR>
+<a href="sprite\SPRITE EXIST.htm">SPRITE EXIST</a> : Return Integer=SPRITE EXIST(Sprite Number)
+<a href="sprite\SPRITE X.htm">SPRITE X</a> : Return Integer=SPRITE X(Sprite Number)
+<a href="sprite\SPRITE Y.htm">SPRITE Y</a> : Return Integer=SPRITE Y(Sprite Number)
+<a href="sprite\SPRITE OFFSET X.htm">SPRITE OFFSET X</a> : Return Integer=SPRITE OFFSET X(Sprite Number)
+<a href="sprite\SPRITE OFFSET Y.htm">SPRITE OFFSET Y</a> : Return Integer=SPRITE OFFSET Y(Sprite Number)
+<a href="sprite\SPRITE SCALE X.htm">SPRITE SCALE X</a> : Return Integer=SPRITE SCALE X(Sprite Number)
+<a href="sprite\SPRITE SCALE Y.htm">SPRITE SCALE Y</a> : Return Integer=SPRITE SCALE Y(Sprite Number)
+<a href="sprite\SPRITE WIDTH.htm">SPRITE WIDTH</a> : Return Integer=SPRITE WIDTH(Sprite Number)
+<a href="sprite\SPRITE HEIGHT.htm">SPRITE HEIGHT</a> : Return Integer=SPRITE HEIGHT(Sprite Number)
+<a href="sprite\SPRITE IMAGE.htm">SPRITE IMAGE</a> : Return Integer=SPRITE IMAGE(Sprite Number)
+<a href="sprite\SPRITE MIRRORED.htm">SPRITE MIRRORED</a> : Return Integer=SPRITE MIRRORED(Sprite Number)
+<a href="sprite\SPRITE FLIPPED.htm">SPRITE FLIPPED</a> : Return Integer=SPRITE FLIPPED(Sprite Number)
+<a href="sprite\SPRITE HIT.htm">SPRITE HIT</a> : Return Integer=SPRITE HIT(Sprite Number, Target Sprite Number)
+<a href="sprite\SPRITE COLLISION.htm">SPRITE COLLISION</a> : Return Integer=SPRITE COLLISION(Sprite Number, Target Sprite Number)
+<a href="sprite\SPRITE ANGLE.htm">SPRITE ANGLE</a> : Return Float=SPRITE ANGLE(Sprite Number)
+<a href="sprite\SPRITE FRAME.htm">SPRITE FRAME</a> : Return Integer=SPRITE FRAME(Sprite Number)
+<a href="sprite\SPRITE ALPHA.htm">SPRITE ALPHA</a> : Return Integer=SPRITE ALPHA(Sprite Number)
+<a href="sprite\SPRITE RED.htm">SPRITE RED</a> : Return Integer=SPRITE RED(Sprite Number)
+<a href="sprite\SPRITE GREEN.htm">SPRITE GREEN</a> : Return Integer=SPRITE GREEN(Sprite Number)
+<a href="sprite\SPRITE BLUE.htm">SPRITE BLUE</a> : Return Integer=SPRITE BLUE(Sprite Number)
+<a href="sprite\SPRITE VISIBLE.htm">SPRITE VISIBLE</a> : Return Integer=SPRITE VISIBLE(Sprite Number)
+<a href="sprite\SPRITE PRIORITY.htm">SPRITE PRIORITY</a> : Return Integer=SPRITE PRIORITY(Sprite Number)
+</PRE></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,116 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING1             "MULTIPLAYER START%0%?MultiplayerStart@@YAXXZ%"
+    IDS_STRING2             "MULTIPLAYER SET DEBUG STATE%L%?MultiplayerSetDebugState@@YAXH@Z%"
+    IDS_STRING3             "MULTIPLAYER DISPLAY DEBUG%S%?MultiplayerDisplayDebug@@YAXPAD@Z%"
+    IDS_STRING4             "MULTIPLAYER CREATE TCP SERVER%S%?MultiplayerCreateTCPServer@@YAXPAD@Z%"
+    IDS_STRING5             "MULTIPLAYER CREATE TCP SERVER%SL%?MultiplayerCreateTCPServer@@YAXPADK@Z%"
+    IDS_STRING6             "MULTIPLAYER CONNECT TO TCP SERVER%SS%?MultiplayerConnectToTCPServer@@YAXPAD0@Z%"
+    IDS_STRING7             "MULTIPLAYER CONNECT TO TCP SERVER%SSL%?MultiplayerConnectToTCPServer@@YAXPAD0K@Z%"
+    IDS_STRING8             "MULTIPLAYER DISCONNECT%0%?MultiplayerDisconnect@@YAXXZ%%"
+    IDS_STRING9             "MULTIPLAYER SEND FROM PLAYER%L%?MultiplayerSendFromPlayer@@YAXK@Z%"
+    IDS_STRING10            "MULTIPLAYER SEND MESSAGE INTEGER%L%?MultiplayerSendMessageInteger@@YAXH@Z%"
+    IDS_STRING11            "MULTIPLAYER SEND MESSAGE FLOAT%F%?MultiplayerSendMessageFloat@@YAXM@Z%"
+    IDS_STRING12            "MULTIPLAYER SEND MESSAGE STRING%S%?MultiplayerSendMessageString@@YAXPAD@Z%"
+    IDS_STRING13            "MULTIPLAYER SEND MESSAGE MEMBLOCK%L%?MultiplayerSendMessageMemblock@@YAXH@Z%"
+    IDS_STRING14            "MULTIPLAYER MESSAGE EXISTS[%L%?MultiplayerMessageExists@@YAHXZ%"
+    IDS_STRING15            "MULTIPLAYER GET MESSAGE%0%?MultiplayerGetMessage@@YAXXZ%"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING16            "MULTIPLAYER GET MESSAGE TYPE[%L%?MultiplayerGetMessageType@@YAHXZ%"
+    IDS_STRING17            "MULTIPLAYER GET MESSAGE INTEGER[%L%?MultiplayerGetMessageInteger@@YAHXZ%"
+    IDS_STRING18            "MULTIPLAYER GET MESSAGE FLOAT[%F%?MultiplayerGetMessageFloat@@YAMXZ%"
+    IDS_STRING19            "MULTIPLAYER GET MESSAGE STRING[%S%?MultiplayerGetMessageString@@YAKK@Z%"
+    IDS_STRING20            "MULTIPLAYER GET MESSAGE MEMBLOCK%L%?MultiplayerGetMessageMemblock@@YAXH@Z%"
+    IDS_STRING21            "MULTIPLAYER GET MESSAGE PLAYER FROM[%L%?MultiplayerGetMessagePlayerFrom@@YAKXZ%"
+    IDS_STRING22            "MULTIPLAYER GET PLAYER COUNT[%L%?MultiplayerGetPlayerCount@@YAHXZ%"
+    IDS_STRING23            "MULTIPLAYER GET PLAYER NAME[%SL%?MultiplayerGetPlayerName@@YAKKH@Z%"
+    IDS_STRING24            "MULTIPLAYER GET PLAYER ID[%LL%?MultiplayerGetPlayerID@@YAKH@Z%"
+    IDS_STRING25            "MULTIPLAYER GET ID[%L%?MultiplayerGetID@@YAKXZ%"
+    IDS_STRING26            "MULTIPLAYER SEND MESSAGE INTEGER%LL%?MultiplayerSendMessageInteger@@YAXHH@Z%"
+    IDS_STRING27            "MULTIPLAYER SEND MESSAGE FLOAT%FL%?MultiplayerSendMessageFloat@@YAXMH@Z%"
+    IDS_STRING28            "MULTIPLAYER SEND MESSAGE STRING%SL%?MultiplayerSendMessageString@@YAXPADH@Z%"
+    IDS_STRING29            "MULTIPLAYER SEND MESSAGE MEMBLOCK%LL%?MultiplayerSendMessageMemblock@@YAXHH@Z%"
+    IDS_STRING30            "MULTIPLAYER GET IP ADDRESS[%S%?MultiplayerGetIPAddress@@YAKXZ%"
+    IDS_STRING31            "MULTIPLAYER GET CONNECTION[%L%?MultiplayerGetConnection@@YAHXZ%"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING32            "MULTIPLAYER START VOICE SERVER%0%?MultiplayerStartVoiceServer@@YAXXZ%"
+    IDS_STRING33            "MULTIPLAYER GET QUEUE SIZE[%LL%?MultiplayerGetQueueSize@@YAHH@Z%"
+    IDS_STRING34            "MULTIPLAYER SEND MESSAGE MEMBLOCK%LLL%?MultiplayerSendMessageMemblock@@YAXHHH@Z%"
+    IDS_STRING35            "MULTIPLAYER SEND MESSAGE TO%L%?MultiplayerSendToPlayer@@YAXH@Z%"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

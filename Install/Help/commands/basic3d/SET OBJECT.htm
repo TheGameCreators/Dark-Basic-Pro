@@ -1,0 +1,212 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\..\main.htm"><img src="..\..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\commands.htm"><img src="..\..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\..\examples.htm"><img src="..\..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\documents.htm"><img src="..\..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\..\index.htm"><img src="..\..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<!-- Function Head -->
+<font face="Verdana" size="5">
+<b>
+SET OBJECT
+</b>
+<font face="Verdana" size="2">
+<p>
+This command sets the internal properties of a specified 3D object number. 
+</p>
+</font>
+<!-- Synopsis -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Syntax
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+SET OBJECT Object Number, Wire, Transparent, Cull
+</pre>
+<pre>
+SET OBJECT Object Number, Wire, Transparent, Cull, Filter
+</pre>
+<pre>
+SET OBJECT Object Number, Wire, Transparent, Cull, Filter, Light
+</pre>
+<pre>
+SET OBJECT Object Number, Wire, Transparent, Cull, Filter, Light, Fog
+</pre>
+<pre>
+SET OBJECT Object Number, Wire, Transparent, Cull, Filter, Light, Fog, Ambient
+</pre>
+</font>
+<!-- Parameters -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Parameters
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+Object Number
+</pre>
+<blockquote>
+Integer
+<br>
+The object number
+</blockquote>
+<pre>
+Wire
+</pre>
+<blockquote>
+Integer
+<br>
+When the wireframe flag is set to 0, the object only shows its wireframe form
+</blockquote>
+<pre>
+Transparent
+</pre>
+<blockquote>
+Integer
+<br>
+When the transparency flag is set to 1, all parts of the object colored black are not drawn to the screen
+</blockquote>
+<pre>
+Cull
+</pre>
+<blockquote>
+Integer
+<br>
+When the cull flag is set to 0, the object will draw polygons normally hidden due to the direction the polygon faces
+</blockquote>
+<pre>
+Filter
+</pre>
+<blockquote>
+Integer
+<br>
+The filter value sets the texture filtering, which controls the smoothing effect of the texture as it is mapped to the object
+</blockquote>
+<pre>
+Light
+</pre>
+<blockquote>
+Integer
+<br>
+The light flag activates and deactivates the objects sensitivity to any lights in the scene
+</blockquote>
+<pre>
+Fog
+</pre>
+<blockquote>
+Integer
+<br>
+The fog flag activates and deactivates the objects sensitivity to fog in the scene
+</blockquote>
+<pre>
+Ambient
+</pre>
+<blockquote>
+Integer
+<br>
+The ambient flag activates and deactivates the objects sensitivity to ambient light in the scene
+</blockquote>
+</font>
+<BR>
+<!-- Returns -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Returns
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+This command does not return a value.
+</p>
+</font>
+<!-- Description -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Description
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+When the wireframe flag is set to 1, the object only shows its wireframe form. When the transparency flag is set to 0, all parts of the object colored black are not drawn to the screen. When the cull flag is set to 0, the object will draw polygons normally hidden due to the direction the polygon faces. The Filter Value sets the texture filtering, which controls the smoothing effect of the texture as it is mapped to the object. A Filter value of zero does no mipmapping, a value of one uses no smoothing and a value of two uses Linear Filtering. The Light Flag activates and deactivates the objects sensitivity to any lights in the scene. The Fog Flag activates and deactivates the objects sensitivity to fog in the scene. The Ambient Flag activates and deactivates the objects sensitivity to ambient light in the scene. The object number and flag values should be specified using integer values. If the object uses diffuse based colour, deactivating the light source will also deactivate the ability of the object to show its colour as it uses the light to calculate the diffuse result.
+</p>
+</font>
+<!-- Examples -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Example Code
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+sync on : sync rate 0 : hide mouse:cls 0<BR>
+ObjectNumber=1<BR>
+SecondObject=2<BR>
+load object "model.x",ObjectNumber<BR>
+wire=1:transparent=1:cull=1:filter=1:light=1:fog=1:ambient=1<BR>
+SET AMBIENT LIGHT 50<BR>
+fog on<BR>
+fog color 255,255,255<BR>
+while mouseclick()=0<BR>
+set cursor 0,0<BR>
+print "press 1 wire=",wire<BR>
+print "press 2 transparent=",transparent<BR>
+print "press 3 cull=",cull<BR>
+print "press 4 filter=",filter<BR>
+print "press 5 light=",light<BR>
+print "press 6 fog=",fog<BR>
+print "press 7 ambient=",ambient<BR>
+if inkey$()="1" then wire=1-wire:repeat:until scancode()=0<BR>
+if inkey$()="2" then transparent=1-transparent:repeat:until scancode()=0<BR>
+if inkey$()="3" then cull=1-cull:repeat:until scancode()=0<BR>
+if inkey$()="4" then filter=1-filter:repeat:until scancode()=0<BR>
+if inkey$()="5" then light=1-light:repeat:until scancode()=0<BR>
+if inkey$()="6" then fog=1-fog:repeat:until scancode()=0<BR>
+if inkey$()="7" then ambient=1-ambient:repeat:until scancode()=0<BR>
+set object ObjectNumber, wire,transparent,cull,filter,light,fog, ambient<BR>
+sync<BR>
+endwhile<BR>
+delete object ObjectNumber<BR>
+end<BR>
+</pre>
+</font>
+<!-- See Also -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+See also
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+<a href="..\basic3d.htm">BASIC3D Commands Menu<BR>
+</a>
+<a href="..\..\index.htm">Index</a><BR>
+</p>
+</font>
+<BR>
+<!-- Function Footer -->
+</font>
+</td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

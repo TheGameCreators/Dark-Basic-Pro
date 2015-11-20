@@ -1,0 +1,69 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+</td></tr></table>
+<center><table width="340" border="0" cellpadding="0" cellspacing="0"><tr><td ALIGN="center"><FONT SIZE=4 FACE=Verdana><B>matrix</B></FONT><BR><IMG SRC=..\gfx\divide.jpg width="340" height=5><BR>
+</td></tr></table></center><br><table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+This command set can create and modify simple landscapes called matrices. A matrix has height values which can be used to raise mountains and valleys, and can also be textured, resized and scrolled easily.<BR>
+<BR>
+<PRE><FONT FACE=Verdana SIZE=1><a href="matrix\MAKE MATRIX.htm">MAKE MATRIX</a> : MAKE MATRIX Matrix Number, Width, Height, XSegments, ZSegments
+<a href="matrix\DELETE MATRIX.htm">DELETE MATRIX</a> : DELETE MATRIX Matrix Number
+<a href="matrix\PREPARE MATRIX TEXTURE.htm">PREPARE MATRIX TEXTURE</a> : PREPARE MATRIX TEXTURE Matrix Number, Image Number, Across, Down
+<a href="matrix\POSITION MATRIX.htm">POSITION MATRIX</a> : POSITION MATRIX Matrix Number, X, Y, Z
+<a href="matrix\FILL MATRIX.htm">FILL MATRIX</a> : FILL MATRIX Matrix Number, Height, Tile Number
+<a href="matrix\RANDOMIZE MATRIX.htm">RANDOMIZE MATRIX</a> : RANDOMIZE MATRIX Matrix Number, Maximum Height
+<a href="matrix\GHOST MATRIX ON.htm">GHOST MATRIX ON</a> : GHOST MATRIX ON Matrix Number
+<a href="matrix\GHOST MATRIX OFF.htm">GHOST MATRIX OFF</a> : GHOST MATRIX OFF Matrix Number
+<a href="matrix\SET MATRIX WIREFRAME ON.htm">SET MATRIX WIREFRAME ON</a> : SET MATRIX WIREFRAME ON Matrix Number
+<a href="matrix\SET MATRIX WIREFRAME OFF.htm">SET MATRIX WIREFRAME OFF</a> : SET MATRIX WIREFRAME OFF Matrix Number
+<a href="matrix\SET VECTOR3 TO MATRIX POSITION.htm">SET VECTOR3 TO MATRIX POSITION</a> : SET VECTOR3 TO MATRIX POSITION Vector, Matrix Number
+<a href="matrix\SET MATRIX TEXTURE.htm">SET MATRIX TEXTURE</a> : SET MATRIX TEXTURE Matrix Number, Texture Mode, Mip Mode
+<a href="matrix\SET MATRIX.htm">SET MATRIX</a> : SET MATRIX Matrix Number, Wire, Transparency, Cull, Filter, Light, Fog, Ambient
+<a href="matrix\SET MATRIX TRIM.htm">SET MATRIX TRIM</a> : SET MATRIX TRIM Matrix Number, TrimX, TrimY
+<a href="matrix\SET MATRIX PRIORITY.htm">SET MATRIX PRIORITY</a> : SET MATRIX PRIORITY Matrix Number, Priority Flag
+<a href="matrix\SHIFT MATRIX DOWN.htm">SHIFT MATRIX DOWN</a> : SHIFT MATRIX DOWN Matrix Number
+<a href="matrix\SHIFT MATRIX LEFT.htm">SHIFT MATRIX LEFT</a> : SHIFT MATRIX LEFT Matrix Number
+<a href="matrix\SHIFT MATRIX RIGHT.htm">SHIFT MATRIX RIGHT</a> : SHIFT MATRIX RIGHT Matrix Number
+<a href="matrix\SHIFT MATRIX UP.htm">SHIFT MATRIX UP</a> : SHIFT MATRIX UP Matrix Number
+<BR>
+<a href="matrix\SET MATRIX HEIGHT.htm">SET MATRIX HEIGHT</a> : SET MATRIX HEIGHT Matrix Number, TileX, TileZ, Height
+<a href="matrix\SET MATRIX NORMAL.htm">SET MATRIX NORMAL</a> : SET MATRIX NORMAL Matrix Number, TileX, TileZ, NX, NY, NZ
+<a href="matrix\SET MATRIX TILE.htm">SET MATRIX TILE</a> : SET MATRIX TILE Matrix Number, TileX, TileZ, Tile Number
+<a href="matrix\UPDATE MATRIX.htm">UPDATE MATRIX</a> : UPDATE MATRIX Matrix Number
+<BR>
+<a href="matrix\MATRIX EXIST.htm">MATRIX EXIST</a> : Return Integer=MATRIX EXIST(Matrix Number)
+<a href="matrix\MATRIX POSITION X.htm">MATRIX POSITION X</a> : Return Float=MATRIX POSITION X(Matrix Number)
+<a href="matrix\MATRIX POSITION Y.htm">MATRIX POSITION Y</a> : Return Float=MATRIX POSITION Y(Matrix Number)
+<a href="matrix\MATRIX POSITION Z.htm">MATRIX POSITION Z</a> : Return Float=MATRIX POSITION Z(Matrix Number)
+<a href="matrix\MATRIX TILE COUNT.htm">MATRIX TILE COUNT</a> : Return Integer=MATRIX TILE COUNT(Matrix Number)
+<a href="matrix\MATRIX TILES EXIST.htm">MATRIX TILES EXIST</a> : Return Integer=MATRIX TILES EXIST(Matrix Number)
+<a href="matrix\MATRIX WIREFRAME STATE.htm">MATRIX WIREFRAME STATE</a> : Return Integer=MATRIX WIREFRAME STATE(Matrix Number)
+<a href="matrix\GET GROUND HEIGHT.htm">GET GROUND HEIGHT</a> : Return Float=GET GROUND HEIGHT(Matrix Number, X, Z)
+<a href="matrix\GET MATRIX HEIGHT.htm">GET MATRIX HEIGHT</a> : Return Float=GET MATRIX HEIGHT(Matrix Number, TileX, TileZ)
+</PRE></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

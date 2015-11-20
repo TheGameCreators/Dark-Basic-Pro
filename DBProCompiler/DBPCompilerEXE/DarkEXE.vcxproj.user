@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerWorkingDirectory>F:\TGCSHARED\fpsc-reloaded\FPS Creator Files\</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommand>F:\TGCSHARED\fpsc-reloaded\FPS Creator Files\DarkEXE.exe</LocalDebuggerCommand>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug EXE APP|Win32'">
+    <LocalDebuggerWorkingDirectory>D:\SteamLibrary\SteamApps\common\FPS Creator Reloaded\</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommand>D:\SteamLibrary\SteamApps\common\FPS Creator Reloaded\FPSC-MapEditor.exe</LocalDebuggerCommand>
+    <RemoteDebuggerCommand>F:\TGCSHARED\fpsc-reloaded\Dark Basic Pro Reloaded\Install\Projects\Bullet Physics Demo\DarkEXE.exe</RemoteDebuggerCommand>
+  </PropertyGroup>
+</Project>

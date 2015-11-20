@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\..\main.htm"><img src="..\..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\commands.htm"><img src="..\..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\..\examples.htm"><img src="..\..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\documents.htm"><img src="..\..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\..\index.htm"><img src="..\..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<!-- Function Head -->
+<font face="Verdana" size="5">
+<b>
+NET GAME NOW HOSTING
+</b>
+<font face="Verdana" size="2">
+<p>
+This command will return a value of one if the application has just been made the host of the net game, otherwise zero is returned. 
+</p>
+</font>
+<!-- Synopsis -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Syntax
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+Return Integer=NET GAME NOW HOSTING()
+</pre>
+</font>
+<!-- Returns -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Returns
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+This command will return a value of one if the application has just been made the host of the net game, otherwise zero is returned
+</p>
+</font>
+<!-- Description -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Description
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+During a Pier to Pier net game, if the host leaves the net game then host status is migrated to another player in the net game.
+</p>
+</font>
+<!-- Examples -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Example Code
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+rem Network game can change during session<BR>
+while mouseclick()<>2<BR>
+cls<BR>
+print "HANDLE NET GAME (Right Mouse Button To Continue)"<BR>
+if net game now hosting()=1 then Hosting=1<BR>
+if Hosting=1 then PRINT "THIS PLAYER IS NOW HOSTING THE GAME"<BR>
+if net game lost()=1 then LostGame=1<BR>
+if LostGame=1 then PRINT "THE GAME SESSION WAS LOST"<BR>
+returnvalue=net player created()<BR>
+if returnvalue>0 then PlayerIn=returnvalue<BR>
+if PlayerIn>0 then PRINT "A NEW PLAYER HAS JOINED THE GAME (";PlayerIn; ")"<BR>
+returnvalue=net player destroyed()<BR>
+if returnvalue>0 then PlayerOut=returnvalue<BR>
+if PlayerOut>0 then PRINT "A PLAYER HAS LEFT THE GAME (";PlayerOut; ")"<BR>
+endwhile<BR>
+</pre>
+</font>
+<!-- See Also -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+See also
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+<a href="..\multiplayer.htm">MULTIPLAYER Commands Menu<BR>
+</a>
+<a href="..\..\index.htm">Index</a><BR>
+</p>
+</font>
+<BR>
+<!-- Function Footer -->
+</font>
+</td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

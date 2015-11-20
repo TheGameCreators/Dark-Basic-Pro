@@ -1,0 +1,260 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL"
+            VALUE "CompanyName", "Dark Basic Software Ltd"
+            VALUE "FileDescription", "Dark Basic Professional DLL"
+            VALUE "FileVersion", "V1.0"
+            VALUE "InternalName", "Dark Basic Professional DLL"
+            VALUE "LegalCopyright", "Copyright © 2002"
+            VALUE "LegalTrademarks", "DarkBASIC"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll"
+            VALUE "ProductName", "Dark Basic Professional DLL"
+            VALUE "ProductVersion", "V1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United Kingdom) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_STRING1             "ADD MATRIX4%LLL%?AddMatrix@@YAXHHH@Z%Matrix4Result, Matrix4A, Matrix4B"
+    IDS_STRING2             "ADD VECTOR2%LLL%?AddVector2@@YAXHHH@Z%VectorResult, VectorA, VectorB"
+    IDS_STRING3             "ADD VECTOR3%LLL%?AddVector3@@YAXHHH@Z%VectorResult, VectorA, VectorB"
+    IDS_STRING4             "ADD VECTOR4%LLL%?AddVector4@@YAXHHH@Z%VectorResult, VectorA, VectorB"
+    IDS_STRING5             "BUILD LOOKAT LHMATRIX4%LLLL%?BuildLookAtLHMatrix@@YAXHHHH@Z%Matrix4Result, Vector3Eye, Vector3At, Vector3Up"
+    IDS_STRING6             "BUILD LOOKAT RHMATRIX4%LLLL%?BuildLookAtRHMatrix@@YAXHHHH@Z%Matrix4Result, Vector3Eye, Vector3At, Vector3Up"
+    IDS_STRING7             "BUILD ORTHO LHMATRIX4%LFFFF%?BuildOrthoLHMatrix@@YAXHMMMM@Z%Matrix4Result, Width, Height, Near, Far"
+    IDS_STRING8             "BUILD ORTHO RHMATRIX4%LFFFF%?BuildOrthoRHMatrix@@YAXHMMMM@Z%Matrix4Result, Width, Height, Near, Far"
+    IDS_STRING9             "BUILD FOV LHMATRIX4%LFFFF%?BuildPerspectiveFovLHMatrix@@YAXHMMMM@Z%Matrix4Result, FOV, Aspect, Near, Far"
+    IDS_STRING10            "BUILD FOV RHMATRIX4%LFFFF%?BuildPerspectiveFovRHMatrix@@YAXHMMMM@Z%Matrix4Result, FOV, Aspect, Near, Far"
+    IDS_STRING11            "BUILD PERSPECTIVE LHMATRIX4%LFFFF%?BuildPerspectiveLHMatrix@@YAXHMMMM@Z%Matrix4Result, Width, Height, Near, Far"
+    IDS_STRING12            "BUILD PERSPECTIVE RHMATRIX4%LFFFF%?BuildPerspectiveRHMatrix@@YAXHMMMM@Z%Matrix4Result, Width, Height, Near, Far"
+    IDS_STRING13            "BUILD REFLECTION MATRIX4%LFFFF%?BuildReflectionMatrix@@YAXHMMMM@Z%Matrix4Result, PlaneA, PlaneB, PlaneC, PlaneD"
+    IDS_STRING14            "BUILD ROTATION AXIS MATRIX4%LLF%?BuildRotationAxisMatrix@@YAXHHM@Z%Matrix4Result, Vector3Axis, Angle"
+    IDS_STRING15            "CATMULLROM VECTOR2%LLLLLF%?CatmullRomVector2@@YAXHHHHHM@Z%VectorResult, VectorA, VectorB, VectorC, VectorD, Value"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING16            "CATMULLROM VECTOR3%LLLLLF%?CatmullRomVector3@@YAXHHHHHM@Z%VectorResult, VectorA, VectorB, VectorC, VectorD, Value"
+    IDS_STRING17            "CATMULLROM VECTOR4%LLLLLF%?CatmullRomVector4@@YAXHHHHHM@Z%VectorResult, VectorA, VectorB, VectorC, VectorD, Value"
+    IDS_STRING18            "GET MATRIX4 ELEMENT[%FLL%?GetMatrixElement@@YAKHH@Z%Matrix4Result, Element Index"
+    IDS_STRING19            "COPY MATRIX4%LL%?CopyMatrix@@YAXHH@Z%Matrix4Result, Matrix4Source"
+    IDS_STRING20            "COPY VECTOR2%LL%?CopyVector2@@YAXHH@Z%VectorResult, VectorSource"
+    IDS_STRING21            "COPY VECTOR3%LL%?CopyVector3@@YAXHH@Z%VectorResult, VectorSource"
+    IDS_STRING22            "COPY VECTOR4%LL%?CopyVector4@@YAXHH@Z%VectorResult, VectorSource"
+    IDS_STRING23            "CROSS PRODUCT VECTOR3%LLL%?CrossProductVector3@@YAXHHH@Z%VectorResult, VectorA, VectorB"
+    IDS_STRING24            "DELETE MATRIX4[%LL%?DeleteMatrix@@YAHH@Z%Matrix4Result"
+    IDS_STRING25            "DELETE VECTOR2[%LL%?DeleteVector2@@YAHH@Z%Vector"
+    IDS_STRING26            "DELETE VECTOR3[%LL%?DeleteVector3@@YAHH@Z%Vector"
+    IDS_STRING27            "DELETE VECTOR4[%LL%?DeleteVector4@@YAHH@Z%Vector"
+    IDS_STRING28            "SET PROJECTION MATRIX4%L%?SetProjectionMatrix@@YAXH@Z%Matrix4Result"
+    IDS_STRING29            "DIVIDE MATRIX4%LF%?DivideMatrix@@YAXHM@Z%Matrix4Result, Value"
+    IDS_STRING30            "DIVIDE VECTOR2%LF%?DivideVector2@@YAXHM@Z%VectorResult, Value"
+    IDS_STRING31            "DIVIDE VECTOR3%LF%?DivideVector3@@YAXHM@Z%VectorResult, Value"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING32            "DIVIDE VECTOR4%LF%?DivideVector4@@YAXHM@Z%VectorResult, Value"
+    IDS_STRING33            "DOT PRODUCT VECTOR2[%FLL%?DotProductVector2@@YAKHH@Z%VectorA, VectorB"
+    IDS_STRING34            "DOT PRODUCT VECTOR3[%FLL%?DotProductVector3@@YAKHH@Z%VectorA, VectorB"
+    IDS_STRING35            "BCC VECTOR2%LLLLFF%?GetBaryCentricCoordinatesVector2@@YAXHHHHMM@Z%VectorResult, VectorA, VectorB, VectorC, FValue, GBValue"
+    IDS_STRING36            "BCC VECTOR3%LLLLFF%?GetBaryCentricCoordinatesVector3@@YAXHHHHMM@Z%VectorResult, VectorA, VectorB, VectorC, FValue, GBValue"
+    IDS_STRING37            "BCC VECTOR4%LLLLFF%?GetBaryCentricCoordinatesVector4@@YAXHHHHMM@Z%VectorResult, VectorA, VectorB, VectorC, FValue, GBValue"
+    IDS_STRING38            "CCW VECTOR2[%FLL%?GetCCWVector2@@YAKHH@Z%VectorA, VectorB"
+    IDS_STRING39            "SQUARED LENGTH VECTOR2[%FL%?GetLengthSquaredVector2@@YAKH@Z%Vector"
+    IDS_STRING40            "SQUARED LENGTH VECTOR3[%FL%?GetLengthSquaredVector3@@YAKH@Z%Vector"
+    IDS_STRING41            "MATRIX4 EXIST[%LL%?Matrix4Exist@@YAHH@Z%Matrix4 Index"
+    IDS_STRING42            "SQUARED LENGTH VECTOR4[%FL%?GetLengthSquaredVector4@@YAKH@Z%Vector"
+    IDS_STRING43            "LENGTH VECTOR2[%FL%?GetLengthVector2@@YAKH@Z%Vector"
+    IDS_STRING44            "LENGTH VECTOR3[%FL%?GetLengthVector3@@YAKH@Z%Vector"
+    IDS_STRING45            "LENGTH VECTOR4[%FL%?GetLengthVector4@@YAKH@Z%Vector"
+    IDS_STRING46            "PROJECTION MATRIX4%L%?GetProjectionMatrix@@YAXH@Z%Matrix4Result"
+    IDS_STRING47            "VIEW MATRIX4%L%?GetViewMatrix@@YAXH@Z%Matrix4Result"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING48            "W VECTOR4[%FL%?GetWVector4@@YAKH@Z%Vector"
+    IDS_STRING49            "WORLD MATRIX4%L%?GetWorldMatrix@@YAXH@Z%Matrix4Result"
+    IDS_STRING50            "X VECTOR2[%FL%?GetXVector2@@YAKH@Z%Vector"
+    IDS_STRING51            "X VECTOR3[%FL%?GetXVector3@@YAKH@Z%Vector"
+    IDS_STRING52            "X VECTOR4[%FL%?GetXVector4@@YAKH@Z%Vector"
+    IDS_STRING53            "Y VECTOR2[%FL%?GetYVector2@@YAKH@Z%Vector"
+    IDS_STRING54            "Y VECTOR3[%FL%?GetYVector3@@YAKH@Z%Vector"
+    IDS_STRING55            "Y VECTOR4[%FL%?GetYVector4@@YAKH@Z%Vector"
+    IDS_STRING56            "Z VECTOR3[%FL%?GetZVector3@@YAKH@Z%Vector"
+    IDS_STRING57            "Z VECTOR4[%FL%?GetZVector4@@YAKH@Z%Vector"
+    IDS_STRING58            "HERMITE VECTOR2%LLLLLF%?HermiteVector2@@YAXHHHHHM@Z%VectorResult, VectorA, VectorB, VectorC, VectorD, SValue"
+    IDS_STRING59            "HERMITE VECTOR3%LLLLLF%?HermiteVector3@@YAXHHHHHM@Z%VectorResult, VectorA, VectorB, VectorC, VectorD, SValue"
+    IDS_STRING60            "HERMITE VECTOR4%LLLLLF%?HermiteVector4@@YAXHHHHHM@Z%VectorResult, VectorA, VectorB, VectorC, VectorD, SValue"
+    IDS_STRING61            "INVERSE MATRIX4[%FLL%?InverseMatrix@@YAKHH@Z%Matrix4Result, Matrix4Source"
+    IDS_STRING62            "IS EQUAL MATRIX4[%LLL%?IsEqualMatrix@@YAHHH@Z%Matrix4A, Matrix4B"
+    IDS_STRING63            "IS EQUAL VECTOR2[%LLL%?IsEqualVector2@@YAHHH@Z%VectorA, VectorB"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING64            "IS EQUAL VECTOR3[%LLL%?IsEqualVector3@@YAHHH@Z%VectorA, VectorB"
+    IDS_STRING65            "IS EQUAL VECTOR4[%LLL%?IsEqualVector4@@YAHHH@Z%VectorA, VectorB"
+    IDS_STRING66            "IS IDENTITY MATRIX4[%LL%?IsIdentityMatrix@@YAHH@Z%Matrix4Result"
+    IDS_STRING71            "LINEAR INTERPOLATE VECTOR2%LLLF%?LinearInterpolationVector2@@YAXHHHM@Z%VectorResult, VectorA, VectorB, SValue"
+    IDS_STRING72            "LINEAR INTERPOLATE VECTOR3%LLLF%?LinearInterpolationVector3@@YAXHHHM@Z%VectorResult, VectorA, VectorB, SValue"
+    IDS_STRING73            "LINEAR INTERPOLATE VECTOR4%LLLF%?LinearInterpolationVector4@@YAXHHHM@Z%VectorResult, VectorA, VectorB, SValue"
+    IDS_STRING74            "MAKE MATRIX4[%LL%?MakeMatrix@@YAHH@Z%Matrix4"
+    IDS_STRING75            "MAKE VECTOR2[%LL%?MakeVector2@@YAHH@Z%Vector"
+    IDS_STRING76            "MAKE VECTOR3[%LL%?MakeVector3@@YAHH@Z%Vector"
+    IDS_STRING77            "MAKE VECTOR4[%LL%?MakeVector4@@YAHH@Z%Vector"
+    IDS_STRING78            "MAXIMIZE VECTOR2%LLL%?MaximizeVector2@@YAXHHH@Z%VectorResult, VectorA, VectorB"
+    IDS_STRING79            "MAXIMIZE VECTOR3%LLL%?MaximizeVector3@@YAXHHH@Z%VectorResult, VectorA, VectorB"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING80            "MAXIMIZE VECTOR4%LLL%?MaximizeVector4@@YAXHHH@Z%VectorResult, VectorA, VectorB"
+    IDS_STRING81            "MINIMIZE VECTOR2%LLL%?MinimizeVector2@@YAXHHH@Z%VectorResult, VectorA, VectorB"
+    IDS_STRING82            "MINIMIZE VECTOR3%LLL%?MinimizeVector3@@YAXHHH@Z%VectorResult, VectorA, VectorB"
+    IDS_STRING83            "MINIMIZE VECTOR4%LLL%?MinimizeVector4@@YAXHHH@Z%VectorResult, VectorA, VectorB"
+    IDS_STRING84            "MULTIPLY MATRIX4%LLL%?MultiplyMatrix@@YAXHHH@Z%Matrix4Result, Matrix4A, Matrix4B"
+    IDS_STRING85            "MULTIPLY MATRIX4%LF%?MultiplyMatrix@@YAXHM@Z%Matrix4Result, Value"
+    IDS_STRING86            "MULTIPLY VECTOR2%LF%?MultiplyVector2@@YAXHM@Z%VectorResult, Value"
+    IDS_STRING87            "MULTIPLY VECTOR3%LF%?MultiplyVector3@@YAXHM@Z%VectorResult, Value"
+    IDS_STRING88            "MULTIPLY VECTOR4%LF%?MultiplyVector4@@YAXHM@Z%VectorResult, Value"
+    IDS_STRING89            "NORMALIZE VECTOR2%LL%?NormalizeVector2@@YAXHH@Z%VectorResult, VectorSource"
+    IDS_STRING90            "NORMALIZE VECTOR3%LL%?NormalizeVector3@@YAXHH@Z%VectorResult, VectorSource"
+    IDS_STRING91            "NORMALIZE VECTOR4%LL%?NormalizeVector4@@YAXHH@Z%VectorResult, VectorSource"
+    IDS_STRING92            "PROJECT VECTOR3%LLLLL%?ProjectVector3@@YAXHHHHH@Z%VectorResult, VectorSource, Matrix4Projection, Matrix4View, Matrix4World"
+    IDS_STRING93            "ROTATE X MATRIX4%LF%?RotateXMatrix@@YAXHM@Z%Matrix4Result, Angle"
+    IDS_STRING94            "ROTATE Y MATRIX4%LF%?RotateYMatrix@@YAXHM@Z%Matrix4Result, Angle"
+    IDS_STRING95            "ROTATE YPR MATRIX4%LFFF%?RotateYawPitchRollMatrix@@YAXHMMM@Z%Matrix4Result, Yaw, Pitch, Roll"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING96            "ROTATE Z MATRIX4%LF%?RotateZMatrix@@YAXHM@Z%Matrix4Result, Angle"
+    IDS_STRING97            "SCALE MATRIX4%LFFF%?ScaleMatrix@@YAXHMMM@Z%Matrix4Result, X, Y, Z"
+    IDS_STRING98            "SCALE VECTOR2%LLF%?ScaleVector2@@YAXHHM@Z%VectorResult, VectorSource, Value"
+    IDS_STRING99            "SCALE VECTOR3%LLF%?ScaleVector3@@YAXHHM@Z%VectorResult, VectorSource, Value"
+    IDS_STRING100           "SCALE VECTOR4%LLF%?ScaleVector4@@YAXHHM@Z%VectorResult, VectorSource, Value"
+    IDS_STRING101           "SET IDENTITY MATRIX4%L%?SetIdentityMatrix@@YAXH@Z%Matrix4Result"
+    IDS_STRING102           "SET VECTOR2%LFF%?SetVector2@@YAXHMM@Z%VectorResult, X, Y"
+    IDS_STRING103           "SET VECTOR3%LFFF%?SetVector3@@YAXHMMM@Z%VectorResult, X, Y, Z"
+    IDS_STRING104           "SET VECTOR4%LFFFF%?SetVector4@@YAXHMMMM@Z%VectorResult, X, Y, Z, W"
+    IDS_STRING105           "SUBTRACT MATRIX4%LLL%?SubtractMatrix@@YAXHHH@Z%Matrix4Result, Matrix4A, Matrix4B"
+    IDS_STRING106           "SUBTRACT VECTOR2%LLL%?SubtractVector2@@YAXHHH@Z%VectorResult, VectorA, VectorB"
+    IDS_STRING107           "SUBTRACT VECTOR3%LLL%?SubtractVector3@@YAXHHH@Z%VectorResult, VectorA, VectorB"
+    IDS_STRING108           "SUBTRACT VECTOR4%LLL%?SubtractVector4@@YAXHHH@Z%VectorResult, VectorA, VectorB"
+    IDS_STRING109           "TRANSFORM VECTOR4%LLL%?TransformVector4@@YAXHHH@Z%VectorResult, VectorSource, Matrix4Source"
+    IDS_STRING110           "TRANSFORM COORDS VECTOR2%LLL%?TransformVectorCoordinates2@@YAXHHH@Z%VectorResult, VectorSource, Matrix4Source"
+    IDS_STRING111           "TRANSFORM COORDS VECTOR3%LLL%?TransformVectorCoordinates3@@YAXHHH@Z%VectorResult, VectorSource, Matrix4Source"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING112           "TRANSFORM NORMALS VECTOR3%LLL%?TransformVectorNormalCoordinates3@@YAXHHH@Z%VectorResult, VectorSource, Matrix4Source"
+    IDS_STRING113           "TRANSLATE MATRIX4%LFFF%?TranslateMatrix@@YAXHMMM@Z%Matrix4Result, X, Y, Z"
+    IDS_STRING114           "TRANSPOSE MATRIX4%LL%?TransposeMatrix@@YAXHH@Z%Matrix4Result, Matrix4Source"
+END
+
+#endif    // English (United Kingdom) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR>
+<BR>
+<FONT SIZE=3><B><FONT SIZE=3><CENTER>Lists, Stacks and Queues<BR>
+</CENTER></FONT></B></FONT><BR>
+The unified array system is a remarkable method of managing your data with the minimum of fuss. Rather than maintaining different kinds of data storage, the unified array system combines the best features of all standard data structure management into a single method of access. The upshot of U.A.S is that you can initially start access of your data from an array, then decide to treat it as a stack, then decide to access it as a queue, and then back to an array. All this without loosing your data and without the need to manage its size or contents.<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>ARRAYS
+</FONT></PRE>Simple arrays form the basic foundation of the U.A.S system. Create an initial dynamic multidimensional array and access it through subscripts.<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>LISTS
+</FONT></PRE>Similar to an array, a list can expand and shrink based on the number of items contained. A list can theoretically have no items of data contained within. In contrast, it can store as much data as your memory availability allows. Accessing data through lists allows faster access than arrays in that there is no need to skip redundant items within the data. Items added and removed from a list are done so efficiently, removing the need for large clunky array sorting. You can also traverse a list without the need to know its size.<BR>
+<BR>
+The list commands are:<BR>
+EMPTY ARRAY<BR>
+ARRAY INDEX TO BOTTOM<BR>
+ARRAY INDEX TO TOP<BR>
+ARRAY INSERT AT BOTTOM<BR>
+ARRAY INSERT AT TOP<BR>
+ARRAY INSERT AT ELEMENT<BR>
+ARRAY DELETE ELEMENT<BR>
+NEXT ARRAY INDEX<BR>
+PREVIOUS ARRAY INDEX<BR>
+ARRAY COUNT()<BR>
+ARRAY INDEX VALID()<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>STACKS
+</FONT></PRE>A stack is summed up by the term "last on, first off". Stacks collect data added to it in a linear sequence of items, and the data is removed in the reverse order in which the items where added. Stacks are good for storing data prior to accessing a recursive function, or building time based data. It is a simple mechanism which removes the need for subscript or index control.<BR>
+<BR>
+The stack commands are:<BR>
+ARRAY INDEX TO STACK<BR>
+ADD TO STACK<BR>
+REMOVE FROM STACK<BR>
+<BR>
+<PRE><FONT FACE=courier COLOR=BLUE>QUEUES
+</FONT></PRE>A queue is summed up by the term "first on, first off". Queues collect data added to it in a linear sequence of items, and the data is removed in the order in which the items where added. Queues are good for buffering data for later processing, where the order sequence of data is important.<BR>
+<BR>
+The queue commands are:<BR>
+ARRAY INDEX TO QUEUE<BR>
+ADD TO QUEUE<BR>
+REMOVE FROM QUEUE<BR>
+<BR>
+It is important to note that multidimensional arrays cannot be accessed by stack and queue commands. Use single dimension arrays for these type of commands.<BR>
+</td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

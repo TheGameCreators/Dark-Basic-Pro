@@ -1,0 +1,178 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL"
+            VALUE "CompanyName", "Dark Basic Software Ltd"
+            VALUE "FileDescription", "Dark Basic Professional DLL"
+            VALUE "FileVersion", "V1.0"
+            VALUE "InternalName", "Dark Basic Professional DLL"
+            VALUE "LegalCopyright", "Copyright © 2002"
+            VALUE "LegalTrademarks", "DarkBASIC"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll"
+            VALUE "ProductName", "Dark Basic Professional DLL"
+            VALUE "ProductVersion", "V1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR1             CURSOR                  "cursor1.cur"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING1             "LOAD BITMAP%SL%?LoadBitmapA@@YAXPADH@Z%Filename,Bitmap Number"
+    IDS_STRING2             "CREATE BITMAP%LLL%?CreateBitmap@@YAXHHH@Z%Bitmap Number,Width,Height"
+    IDS_STRING3             "COPY BITMAP%LL%?CopyBitmap@@YAXHH@Z%From Bitmap,To Bitmap"
+    IDS_STRING4             "COPY BITMAP%LLLLLLLLLL%?CopyBitmapEx@@YAXHHHHHHHHHH@Z%From Bitmap,Left,Top,Right,Bottom,To Bitmap,Left,Top,Right,Bottom"
+    IDS_STRING5             "DELETE BITMAP%L%?DeleteBitmapEx@@YAXH@Z%Bitmap Number"
+    IDS_STRING6             "CREATE BITMAP%LLLL%?CreateBitmapEx@@YAXHHHH@Z%Bitmap Number,Width,Height,SystemMemoryMode"
+    IDS_STRING7             "MIRROR BITMAP%L%?MirrorBitmap@@YAXH@Z%Bitmap Number"
+    IDS_STRING8             "FADE BITMAP%LL%?FadeBitmap@@YAXHH@Z%Bitmap Number,Fade Value"
+    IDS_STRING9             "BLUR BITMAP%LL%?BlurBitmap@@YAXHH@Z%Bitmap Number,Blur Value"
+    IDS_STRING10            "SAVE BITMAP%SL%?SaveBitmap@@YAXPADH@Z%Filename,Bitmap Number"
+    IDS_STRING11            "SET CURRENT BITMAP%L%?SetCurrentBitmap@@YAXH@Z%Bitmap Number"
+    IDS_STRING12            "CURRENT BITMAP[%L%?CurrentBitmap@@YAHXZ"
+    IDS_STRING13            "BITMAP EXIST[%LL%?BitmapExist@@YAHH@Z%Bitmap Number"
+    IDS_STRING14            "BITMAP WIDTH[%LL%?BitmapWidth@@YAHH@Z%Bitmap Number"
+    IDS_STRING15            "BITMAP HEIGHT[%LL%?BitmapHeight@@YAHH@Z%Bitmap Number"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING16            "BITMAP DEPTH[%LL%?BitmapDepth@@YAHH@Z%Bitmap Number"
+    IDS_STRING17            "BITMAP MIRRORED[%LL%?BitmapMirrored@@YAHH@Z%Bitmap Number"
+    IDS_STRING18            "BITMAP FLIPPED[%LL%?BitmapFlipped@@YAHH@Z%Bitmap Number"
+    IDS_STRING19            "LOAD BITMAP%S%?LoadBitmapEx@@YAXPAD@Z%Filename"
+    IDS_STRING20            "SAVE BITMAP%S%?SaveBitmapEx@@YAXPAD@Z%Filename"
+    IDS_STRING21            "BITMAP EXIST[%L%?BitmapExist@@YAHXZ%Bitmap Number"
+    IDS_STRING22            "BITMAP WIDTH[%L%?BitmapWidth@@YAHXZ%Bitmap Number"
+    IDS_STRING23            "BITMAP HEIGHT[%L%?BitmapHeight@@YAHXZ%Bitmap Number"
+    IDS_STRING24            "BITMAP DEPTH[%L%?BitmapDepth@@YAHXZ%Bitmap Number"
+    IDS_STRING25            "BITMAP MIRRORED[%L%?BitmapMirrored@@YAHXZ%Bitmap Number"
+    IDS_STRING26            "BITMAP FLIPPED[%L%?BitmapFlipped@@YAHXZ%Bitmap Number"
+    IDS_STRING27            "CREATE BITMAP%LLLLL%?CreateBitmapEx@@YAXHHHHH@Z%Bitmap Number,Width,Height,SystemMemoryMode,Silent Error"
+    IDS_STRING30            "FLIP BITMAP%L%?FlipBitmap@@YAXH@Z%Bitmap Number"
+    IDS_STRING31            "SET BITMAP FORMAT%L%?SetBitmapFormat@@YAXH@Z%Bitmap Format Value"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+</td></tr></table>
+<center><table width="340" border="0" cellpadding="0" cellspacing="0"><tr><td ALIGN="center"><FONT SIZE=4 FACE=Verdana><B>camera</B></FONT><BR><IMG SRC=..\gfx\divide.jpg width="340" height=5><BR>
+</td></tr></table></center><br><table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+This command set allows the control of the primary default 3D camera, and additionally the creation of additional cameras for multi-camera effects including the rendering of a camera to a 3D object texture.<BR>
+<BR>
+<PRE><FONT FACE=Verdana SIZE=1><a href="camera\MAKE CAMERA.htm">MAKE CAMERA</a> : MAKE CAMERA Camera Number
+<a href="camera\DELETE CAMERA.htm">DELETE CAMERA</a> : DELETE CAMERA Camera Number
+<a href="camera\MOVE CAMERA.htm">MOVE CAMERA</a> : MOVE CAMERA Distance Value
+<a href="camera\POSITION CAMERA.htm">POSITION CAMERA</a> : POSITION CAMERA X, Y, Z
+<a href="camera\POINT CAMERA.htm">POINT CAMERA</a> : POINT CAMERA X, Y, Z
+<a href="camera\ROTATE CAMERA.htm">ROTATE CAMERA</a> : ROTATE CAMERA XAngle, YAngle, ZAngle
+<a href="camera\XROTATE CAMERA.htm">XROTATE CAMERA</a> : XROTATE CAMERA XAngle
+<a href="camera\YROTATE CAMERA.htm">YROTATE CAMERA</a> : YROTATE CAMERA YAngle
+<a href="camera\ZROTATE CAMERA.htm">ZROTATE CAMERA</a> : ZROTATE CAMERA ZAngle
+<a href="camera\TURN CAMERA LEFT.htm">TURN CAMERA LEFT</a> : TURN CAMERA LEFT Angle Value
+<a href="camera\TURN CAMERA RIGHT.htm">TURN CAMERA RIGHT</a> : TURN CAMERA RIGHT Angle Value
+<a href="camera\PITCH CAMERA UP.htm">PITCH CAMERA UP</a> : PITCH CAMERA UP Angle Value
+<a href="camera\PITCH CAMERA DOWN.htm">PITCH CAMERA DOWN</a> : PITCH CAMERA DOWN Angle Value
+<a href="camera\ROLL CAMERA LEFT.htm">ROLL CAMERA LEFT</a> : ROLL CAMERA LEFT Angle Value
+<a href="camera\ROLL CAMERA RIGHT.htm">ROLL CAMERA RIGHT</a> : ROLL CAMERA RIGHT Angle Value
+<a href="camera\SET CURRENT CAMERA.htm">SET CURRENT CAMERA</a> : SET CURRENT CAMERA Camera Number
+<a href="camera\CLEAR CAMERA VIEW.htm">CLEAR CAMERA VIEW</a> : CLEAR CAMERA VIEW Color Value
+<BR>
+<a href="camera\SET CAMERA FOV.htm">SET CAMERA FOV</a> : SET CAMERA FOV Field-Of-View Angle
+<a href="camera\SET CAMERA RANGE.htm">SET CAMERA RANGE</a> : SET CAMERA RANGE Near Value, Far Value
+<a href="camera\SET CAMERA VIEW.htm">SET CAMERA VIEW</a> : SET CAMERA VIEW Left, Top, Right, Bottom
+<a href="camera\SET CAMERA ASPECT.htm">SET CAMERA ASPECT</a> : SET CAMERA ASPECT  Aspect Ratio
+<a href="camera\SET CAMERA ROTATION XYZ.htm">SET CAMERA ROTATION XYZ</a> : SET CAMERA ROTATION XYZ
+<a href="camera\SET CAMERA ROTATION ZYX.htm">SET CAMERA ROTATION ZYX</a> : SET CAMERA ROTATION ZYX
+<a href="camera\SET CAMERA TO FOLLOW.htm">SET CAMERA TO FOLLOW</a> : SET CAMERA TO FOLLOW X, Y, Z, Angle, Distance, Height, Smooth, Collision
+<a href="camera\SET CAMERA TO IMAGE.htm">SET CAMERA TO IMAGE</a> : SET CAMERA TO IMAGE Camera Number, Image Number, Width, Height
+<a href="camera\SET CAMERA TO OBJECT ORIENTATION.htm">SET CAMERA TO OBJECT ORIENTATION</a> : SET CAMERA TO OBJECT ORIENTATION Object Number
+<a href="camera\SET VECTOR3 TO CAMERA POSITION.htm">SET VECTOR3 TO CAMERA POSITION</a> : SET VECTOR3 TO CAMERA POSITION Vector, Camera Number
+<a href="camera\SET VECTOR3 TO CAMERA ROTATION.htm">SET VECTOR3 TO CAMERA ROTATION</a> : SET VECTOR3 TO CAMERA ROTATION Vector, Camera Number
+<a href="camera\CONTROL CAMERA USING ARROWKEYS.htm">CONTROL CAMERA USING ARROWKEYS</a> : CONTROL CAMERA USING ARROWKEYS Camera Number, MoveSpeed, TurnSpeed
+<a href="camera\SET CAMERA CLIP.htm">SET CAMERA CLIP</a> : SET CAMERA CLIP Camera Number, ClipOnOff, X, Y, Z, NX, NY, NZ
+<a href="camera\SET CAMERAS TO STEREOSCOPIC.htm">SET CAMERAS TO STEREOSCOPIC</a> : SET CAMERAS TO STEREOSCOPIC Stereoscopic Mode, Camera Left, Camera Right, Image Back, Image Front
+<BR>
+<a href="camera\AUTOCAM ON.htm">AUTOCAM ON</a> : AUTOCAM ON
+<a href="camera\AUTOCAM OFF.htm">AUTOCAM OFF</a> : AUTOCAM OFF
+<a href="camera\BACKDROP ON.htm">BACKDROP ON</a> : BACKDROP ON
+<a href="camera\BACKDROP OFF.htm">BACKDROP OFF</a> : BACKDROP OFF
+<a href="camera\COLOR BACKDROP.htm">COLOR BACKDROP</a> : COLOR BACKDROP Color Value
+<a href="camera\SCROLL BACKDROP.htm">SCROLL BACKDROP</a> : SCROLL BACKDROP U, V
+<BR>
+<a href="camera\CAMERA EXIST.htm">CAMERA EXIST</a> : Return Integer=CAMERA EXIST(Camera Number)
+<a href="camera\CAMERA POSITION X.htm">CAMERA POSITION X</a> : Return Float=CAMERA POSITION X()
+<a href="camera\CAMERA POSITION Y.htm">CAMERA POSITION Y</a> : Return Float=CAMERA POSITION Y()
+<a href="camera\CAMERA POSITION Z.htm">CAMERA POSITION Z</a> : Return Float=CAMERA POSITION Z()
+<a href="camera\CAMERA ANGLE X.htm">CAMERA ANGLE X</a> : Return Float=CAMERA ANGLE X()
+<a href="camera\CAMERA ANGLE Y.htm">CAMERA ANGLE Y</a> : Return Float=CAMERA ANGLE Y()
+<a href="camera\CAMERA ANGLE Z.htm">CAMERA ANGLE Z</a> : Return Float=CAMERA ANGLE Z()
+</PRE></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,226 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL"
+            VALUE "CompanyName", "Dark Basic Software Ltd"
+            VALUE "FileDescription", "Dark Basic Professional DLL"
+            VALUE "FileVersion", "V1.0"
+            VALUE "InternalName", "Dark Basic Professional DLL"
+            VALUE "LegalCopyright", "Copyright © 2002"
+            VALUE "LegalTrademarks", "DarkBASIC"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll"
+            VALUE "ProductName", "Dark Basic Professional DLL"
+            VALUE "ProductVersion", "V1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING1             "SCANCODE[%L%?ScanCode@@YAHXZ"
+    IDS_STRING2             "KEYSTATE[%LL%?KeyState@@YAHH@Z%Scancode"
+    IDS_STRING3             "WRITE TO CLIPBOARD%S%?WriteToClipboard@@YAXPAD@Z%String"
+    IDS_STRING4             "GET CLIPBOARD$[%S%?GetClipboard@@YAKK@Z"
+    IDS_STRING5             "WRITE TO REGISTRY%SSL%?WriteToRegistry@@YAXPAD0H@Z%Folder Name, Key Name, Value"
+    IDS_STRING6             "GET REGISTRY[%LSS%?GetRegistry@@YAHPAD0@Z%Folder Name, Key Name"
+    IDS_STRING7             "CLEAR ENTRY BUFFER%0%?ClearEntryBuffer@@YAXXZ"
+    IDS_STRING8             "ENTRY$[%S%?GetEntry@@YAKK@Z"
+    IDS_STRING9             "MOUSECLICK[%L%?GetMouseClick@@YAHXZ"
+    IDS_STRING10            "MOUSEMOVEX[%L%?GetMouseMoveX@@YAHXZ"
+    IDS_STRING11            "MOUSEMOVEY[%L%?GetMouseMoveY@@YAHXZ"
+    IDS_STRING12            "MOUSEMOVEZ[%L%?GetMouseMoveZ@@YAHXZ"
+    IDS_STRING13            "MOUSEX[%L%?GetMouseX@@YAHXZ"
+    IDS_STRING14            "MOUSEY[%L%?GetMouseY@@YAHXZ"
+    IDS_STRING15            "MOUSEZ[%L%?GetMouseZ@@YAHXZ"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING16            "HIDE MOUSE%0%?HideMouse@@YAXXZ"
+    IDS_STRING17            "SHOW MOUSE%0%?ShowMouse@@YAXXZ"
+    IDS_STRING18            "POSITION MOUSE%LL%?PositionMouse@@YAXHH@Z%X,Y"
+    IDS_STRING19            "UPKEY[%L%?UpKey@@YAHXZ"
+    IDS_STRING20            "DOWNKEY[%L%?DownKey@@YAHXZ"
+    IDS_STRING21            "LEFTKEY[%L%?LeftKey@@YAHXZ"
+    IDS_STRING22            "RIGHTKEY[%L%?RightKey@@YAHXZ"
+    IDS_STRING23            "CONTROLKEY[%L%?ControlKey@@YAHXZ"
+    IDS_STRING24            "SHIFTKEY[%L%?ShiftKey@@YAHXZ"
+    IDS_STRING25            "RETURNKEY[%L%?ReturnKey@@YAHXZ"
+    IDS_STRING26            "ESCAPEKEY[%L%?EscapeKey@@YAHXZ"
+    IDS_STRING27            "SPACEKEY[%L%?SpaceKey@@YAHXZ"
+    IDS_STRING28            "JOYSTICK UP[%L%?JoystickUp@@YAHXZ"
+    IDS_STRING29            "JOYSTICK DOWN[%L%?JoystickDown@@YAHXZ"
+    IDS_STRING30            "JOYSTICK LEFT[%L%?JoystickLeft@@YAHXZ"
+    IDS_STRING31            "JOYSTICK RIGHT[%L%?JoystickRight@@YAHXZ"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING32            "JOYSTICK X[%L%?JoystickX@@YAHXZ"
+    IDS_STRING33            "JOYSTICK Y[%L%?JoystickY@@YAHXZ"
+    IDS_STRING34            "JOYSTICK Z[%L%?JoystickZ@@YAHXZ"
+    IDS_STRING35            "JOYSTICK FIRE A[%L%?JoystickFireA@@YAHXZ"
+    IDS_STRING36            "JOYSTICK FIRE B[%L%?JoystickFireB@@YAHXZ"
+    IDS_STRING37            "JOYSTICK FIRE C[%L%?JoystickFireC@@YAHXZ"
+    IDS_STRING38            "JOYSTICK FIRE D[%L%?JoystickFireD@@YAHXZ"
+    IDS_STRING39            "JOYSTICK FIRE X[%LL%?JoystickFireXL@@YAHH@Z%Button Number"
+    IDS_STRING40            "JOYSTICK SLIDER A[%L%?JoystickSliderA@@YAHXZ"
+    IDS_STRING41            "JOYSTICK SLIDER B[%L%?JoystickSliderB@@YAHXZ"
+    IDS_STRING42            "JOYSTICK SLIDER C[%L%?JoystickSliderC@@YAHXZ"
+    IDS_STRING43            "JOYSTICK SLIDER D[%L%?JoystickSliderD@@YAHXZ"
+    IDS_STRING44            "JOYSTICK TWIST X[%L%?JoystickTwistX@@YAHXZ"
+    IDS_STRING45            "JOYSTICK TWIST Y[%L%?JoystickTwistY@@YAHXZ"
+    IDS_STRING46            "JOYSTICK TWIST Z[%L%?JoystickTwistZ@@YAHXZ"
+    IDS_STRING47            "JOYSTICK HAT ANGLE[%LL%?JoystickHatAngle@@YAHH@Z%Hat Number"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING48            "FORCE UP%L%?ForceUp@@YAXH@Z%Magnitude Value"
+    IDS_STRING49            "FORCE DOWN%L%?ForceDown@@YAXH@Z%Magnitude Value"
+    IDS_STRING50            "FORCE LEFT%L%?ForceLeft@@YAXH@Z%Magnitude Value"
+    IDS_STRING51            "FORCE RIGHT%L%?ForceRight@@YAXH@Z%Magnitude Value"
+    IDS_STRING52            "FORCE ANGLE%LLL%?ForceAngle@@YAXHHH@Z%Magnitude Value, Angle Value, Delay Value"
+    IDS_STRING53            "FORCE NO EFFECT%0%?ForceNoEffect@@YAXXZ"
+    IDS_STRING54            "FORCE WATER EFFECT%LL%?ForceWaterEffect@@YAXHH@Z%Magnitude Value, Delay Value"
+    IDS_STRING55            "FORCE SHOOT%LL%?ForceShoot@@YAXHH@Z%Magnitude Value, Delay Value"
+    IDS_STRING56            "FORCE CHAINSAW%LL%?ForceChainsaw@@YAXHH@Z%Magnitude Value, Delay Value"
+    IDS_STRING57            "FORCE IMPACT%LL%?ForceImpact@@YAXHH@Z%Magnitude Value, Delay Value"
+    IDS_STRING58            "FORCE AUTO CENTER ON%0%?ForceAutoCenterOn@@YAXXZ"
+    IDS_STRING59            "FORCE AUTO CENTER OFF%0%?ForceAutoCenterOff@@YAXXZ"
+    IDS_STRING60            "PERFORM CHECKLIST FOR CONTROL DEVICES%0%?PerformChecklistControlDevices@@YAXXZ"
+    IDS_STRING61            "SET CONTROL DEVICE%S%?SetControlDevice@@YAXK@Z%Device Name$"
+    IDS_STRING62            "CONTROL DEVICE NAME$[%S%?GetControlDevice@@YAKK@Z"
+    IDS_STRING63            "CONTROL DEVICE X[%L%?ControlDeviceX@@YAHXZ"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING64            "CONTROL DEVICE Y[%L%?ControlDeviceY@@YAHXZ"
+    IDS_STRING65            "CONTROL DEVICE Z[%L%?ControlDeviceZ@@YAHXZ"
+    IDS_STRING66            "CHANGE MOUSE%L%?ChangeMouse@@YAXH@Z%Cursor Number"
+    IDS_STRING67            "WRITE STRING TO REGISTRY%SSS%?WriteToRegistryS@@YAXPAD0K@Z%Folder Name, Key Name, String"
+    IDS_STRING68            "GET REGISTRY$[%SSS%?GetRegistryS@@YAKKPAD0@Z%Folder Name, Key Name"
+    IDS_STRING69            "ENTRY$[%SL%?GetEntryEx@@YAKKH@Z%Auto Backspace Mode"
+    IDS_STRING70            "SET CONTROL DEVICE%SL%?SetControlDeviceEx@@YAXKH@Z%Device Name$, Device Index"
+    IDS_STRING71            "GET KEY STATE[%LL%?GetKeyStateEx@@YAHH@Z%Virtual key"
+    IDS_STRING72            "SET KEY STATE TOGGLE%LL%?SetKeyStateEx@@YAXHH@Z%Virtual key, Toggle flag"
+    IDS_STRING73            "SET CONTROL DEVICE INDEX%L%?SetControlDeviceIndex@@YAXH@Z%Zero-based Index Of Device"
+    IDS_STRING74            "CONTROL DEVICE INDEX[%L%?JoystickIndex@@YAHXZ"
+    IDS_STRING75            "JOYSTICK INFORMATION[%LL%?JoystickInformation@@YAHH@Z%Information mode"
+    IDS_STRING76            "SET JOYSTICK DEADZONE%L%?SetJoystickDeadzone@@YAXH@Z%Percentage deadzone"
+    IDS_STRING77            "CHANGE MOUSE%LL%?ChangeMouse@@YAXHH@Z%Cursor Number, Touch Friendly"
+    IDS_STRING78            "SET REGISTRY HKEY%L%?SetRegistryHKEY@@YAXH@Z%Current User Mode"
+    IDS_STRING79            "WRITE STRING TO REGISTRY%SSSL%?WriteToRegistrySL@@YAXPAD0KH@Z%Folder Name, Key Name, String, Current User Mode"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING80            "GET REGISTRY$[%SSSL%?GetRegistrySL@@YAKKPAD0H@Z%Folder Name, Key Name, Current User Mode"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

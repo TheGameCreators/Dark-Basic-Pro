@@ -1,0 +1,84 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+</td></tr></table>
+<center><table width="340" border="0" cellpadding="0" cellspacing="0"><tr><td ALIGN="center"><FONT SIZE=4 FACE=Verdana><B>gamefx</B></FONT><BR><IMG SRC=..\gfx\divide.jpg width="340" height=5><BR>
+</td></tr></table></center><br><table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+This group of commands is an extension of the Basic3D command set, and includes previously undocumented commands used for the creation of more advanced techniques. Some of these techniques are experimental and as such are not as well-rounded as the more traditional commands found in Basic3D.<BR>
+<BR>
+<PRE><FONT FACE=Verdana SIZE=1><a href="gamefx\MAKE STATIC OBJECT.htm">MAKE STATIC OBJECT</a> : MAKE STATIC OBJECT Object Number, Collision, Arbitrary Value, Cast Shadow, Portal Blocker
+<a href="gamefx\MAKE STATIC LIMB.htm">MAKE STATIC LIMB</a> : MAKE STATIC LIMB Object Number, Limb Number, Collision, Arbitrary Value, Cast Shadow, Portal Blocker
+<a href="gamefx\DELETE STATIC OBJECTS.htm">DELETE STATIC OBJECTS</a> : DELETE STATIC OBJECTS
+<a href="gamefx\DELETE STATIC OBJECT.htm">DELETE STATIC OBJECT</a> : DELETE STATIC OBJECT Object Number
+<a href="gamefx\SET STATIC PORTALS ON.htm">SET STATIC PORTALS ON</a> : SET STATIC PORTALS ON
+<a href="gamefx\SET STATIC PORTALS OFF.htm">SET STATIC PORTALS OFF</a> : SET STATIC PORTALS OFF
+<a href="gamefx\BUILD STATIC PORTALS.htm">BUILD STATIC PORTALS</a> : BUILD STATIC PORTALS
+<a href="gamefx\SET STATIC OBJECTS WIREFRAME ON.htm">SET STATIC OBJECTS WIREFRAME ON</a> : SET STATIC OBJECTS WIREFRAME ON
+<a href="gamefx\SET STATIC OBJECTS WIREFRAME OFF.htm">SET STATIC OBJECTS WIREFRAME OFF</a> : SET STATIC OBJECTS WIREFRAME OFF
+<a href="gamefx\STATIC LINE OF SIGHT.htm">STATIC LINE OF SIGHT</a> : Return Integer=STATIC LINE OF SIGHT(X1, Y1, Z1, X2, Y2, Z2, Width, Accuracy)
+<a href="gamefx\GET STATIC COLLISION HIT.htm">GET STATIC COLLISION HIT</a> : Return Integer=GET STATIC COLLISION HIT(OX1, OY1, OZ1, OX2, OY2, OZ2, NX1, NY1, NZ1, NX2, NY2, NZ2)
+<a href="gamefx\STATIC RAYCAST.htm">STATIC RAYCAST</a> : Return Integer=STATIC RAYCAST(X1, Y1, Z1, X2, Y2, Z2)
+<a href="gamefx\STATIC VOLUME.htm">STATIC VOLUME</a> : Return Integer=STATIC VOLUME(X1, Y1, Z1, X2, Y2, Z2, Size)
+<a href="gamefx\GET STATIC COLLISION X.htm">GET STATIC COLLISION X</a> : Return Float=GET STATIC COLLISION X()
+<a href="gamefx\GET STATIC COLLISION Y.htm">GET STATIC COLLISION Y</a> : Return Float=GET STATIC COLLISION Y()
+<a href="gamefx\GET STATIC COLLISION Z.htm">GET STATIC COLLISION Z</a> : Return Float=GET STATIC COLLISION Z()
+<a href="gamefx\GET STATIC COLLISION COUNT.htm">GET STATIC COLLISION COUNT</a> : Return Integer=GET STATIC COLLISION COUNT()
+<a href="gamefx\GET STATIC COLLISION VALUE.htm">GET STATIC COLLISION VALUE</a> : Return Integer=GET STATIC COLLISION VALUE()
+<a href="gamefx\GET STATIC COLLISION FLOOR.htm">GET STATIC COLLISION FLOOR</a> : Return Integer=GET STATIC COLLISION FLOOR()
+<a href="gamefx\ADD STATIC OBJECTS TO LIGHT MAP POOL.htm">ADD STATIC OBJECTS TO LIGHT MAP POOL</a> : ADD STATIC OBJECTS TO LIGHT MAP POOL
+<a href="gamefx\ADD OBJECT TO LIGHT MAP POOL.htm">ADD OBJECT TO LIGHT MAP POOL</a> : ADD OBJECT TO LIGHT MAP POOL Object Number
+<a href="gamefx\ADD LIGHT MAP LIGHT.htm">ADD LIGHT MAP LIGHT</a> : ADD LIGHT MAP LIGHT X, Y, Z, Radius, Red, Green, Blue, Brightness, Shadow
+<a href="gamefx\CREATE LIGHT MAPS.htm">CREATE LIGHT MAPS</a> : CREATE LIGHT MAPS Texture Size, Texture Quality, LightMapSavePath
+<a href="gamefx\ADD LIMB TO LIGHT MAP POOL.htm">ADD LIMB TO LIGHT MAP POOL</a> : ADD LIMB TO LIGHT MAP POOL Integer Value, Integer Value
+<a href="gamefx\DELETE LIGHT MAP LIGHTS.htm">DELETE LIGHT MAP LIGHTS</a> : DELETE LIGHT MAP LIGHTS
+<a href="gamefx\ADD STATIC SCORCH.htm">ADD STATIC SCORCH</a> : ADD STATIC SCORCH Scorch Size, Scorch Type
+<a href="gamefx\LOAD STATIC OBJECTS.htm">LOAD STATIC OBJECTS</a> : LOAD STATIC OBJECTS Filename, Divide Texture Size
+<a href="gamefx\SET STATIC SCORCH.htm">SET STATIC SCORCH</a> : SET STATIC SCORCH Image Number, Width, Height
+<a href="gamefx\SET SHADOW LIGHT.htm">SET SHADOW LIGHT</a> : SET SHADOW LIGHT Light Number, X, Y, Z, Range
+<a href="gamefx\SET GLOBAL SHADOWS OFF.htm">SET GLOBAL SHADOWS OFF</a> : SET GLOBAL SHADOWS OFF
+<a href="gamefx\SET GLOBAL SHADOWS ON.htm">SET GLOBAL SHADOWS ON</a> : SET GLOBAL SHADOWS ON
+<a href="gamefx\SET GLOBAL SHADOW SHADES.htm">SET GLOBAL SHADOW SHADES</a> : SET GLOBAL SHADOW SHADES Number Of Shades
+<a href="gamefx\SET GLOBAL SHADOW COLOR.htm">SET GLOBAL SHADOW COLOR</a> : SET GLOBAL SHADOW COLOR Red, Green, Blue, Alpha
+<a href="gamefx\SET SHADOW POSITION.htm">SET SHADOW POSITION</a> : SET SHADOW POSITION Mode, X, Y, Z
+<a href="gamefx\PERFORM CSG UNION.htm">PERFORM CSG UNION</a> : PERFORM CSG UNION Target Object, Brush Object
+<a href="gamefx\PERFORM CSG DIFFERENCE.htm">PERFORM CSG DIFFERENCE</a> : PERFORM CSG DIFFERENCE Target Object, Brush Object
+<a href="gamefx\PERFORM CSG INTERSECTION.htm">PERFORM CSG INTERSECTION</a> : PERFORM CSG INTERSECTION Target Object, Brush Object
+<a href="gamefx\PERFORM CSG CLIP.htm">PERFORM CSG CLIP</a> : PERFORM CSG CLIP Target Object, Brush Object
+<a href="gamefx\PERFORM CSG UNION ON VERTEXDATA.htm">PERFORM CSG UNION ON VERTEXDATA</a> : PERFORM CSG UNION ON VERTEXDATA Brush Mesh
+<a href="gamefx\PERFORM CSG DIFFERENCE ON VERTEXDATA.htm">PERFORM CSG DIFFERENCE ON VERTEXDATA</a> : PERFORM CSG DIFFERENCE ON VERTEXDATA Brush Mesh
+<a href="gamefx\PERFORM CSG INTERSECTION ON VERTEXDATA.htm">PERFORM CSG INTERSECTION ON VERTEXDATA</a> : PERFORM CSG INTERSECTION ON VERTEXDATA Brush Mesh
+<a href="gamefx\REDUCE MESH.htm">REDUCE MESH</a> : REDUCE MESH Mesh Number, Block Mode, Near Mode, GX, GY, GZ
+<a href="gamefx\ATTACH OBJECT TO STATIC.htm">ATTACH OBJECT TO STATIC</a> : ATTACH OBJECT TO STATIC Object Number
+<a href="gamefx\DETACH OBJECT FROM STATIC.htm">DETACH OBJECT FROM STATIC</a> : DETACH OBJECT FROM STATIC Object Number
+<a href="gamefx\ADD LOD TO OBJECT.htm">ADD LOD TO OBJECT</a> : ADD LOD TO OBJECT Object Number, LOD Object, LOD Level, LOD Distance
+<a href="gamefx\SAVE STATIC OBJECTS.htm">SAVE STATIC OBJECTS</a> : SAVE STATIC OBJECTS Filename
+<a href="gamefx\MAKE STATIC COLLISION BOX.htm">MAKE STATIC COLLISION BOX</a> : MAKE STATIC COLLISION BOX X1, Y1, Z1, X2, Y2, Z2
+<a href="gamefx\SET STATIC UNIVERSE.htm">SET STATIC UNIVERSE</a> : SET STATIC UNIVERSE X, Y, Z
+<a href="gamefx\FLUSH LIGHT MAPS.htm">FLUSH LIGHT MAPS</a> : FLUSH LIGHT MAPS
+</PRE></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

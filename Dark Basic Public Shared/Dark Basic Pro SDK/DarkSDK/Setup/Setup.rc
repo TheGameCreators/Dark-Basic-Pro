@@ -1,0 +1,205 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL"
+            VALUE "CompanyName", "Dark Basic Software Ltd"
+            VALUE "FileDescription", "Dark Basic Professional DLL"
+            VALUE "FileVersion", "V1.0"
+            VALUE "InternalName", "Dark Basic Professional DLL"
+            VALUE "LegalCopyright", "Copyright © 2002"
+            VALUE "LegalTrademarks", "DarkBASIC"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll"
+            VALUE "ProductName", "Dark Basic Professional DLL"
+            VALUE "ProductVersion", "V1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United Kingdom) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_STRING1             "SCREEN FPS[%L%?GetDisplayFPS@@YAHXZ"
+    IDS_STRING2             "LOCK BACKBUFFER%0%?LockBackbuffer@@YAXXZ"
+    IDS_STRING3             "UNLOCK BACKBUFFER%0%?UnlockBackbuffer@@YAXXZ"
+    IDS_STRING4             "GET BACKBUFFER PTR[%L%?GetBackbufferPtr@@YAKXZ"
+    IDS_STRING5             "GET BACKBUFFER WIDTH[%L%?GetBackbufferWidth@@YAHXZ"
+    IDS_STRING6             "GET BACKBUFFER HEIGHT[%L%?GetBackbufferHeight@@YAHXZ"
+    IDS_STRING7             "GET BACKBUFFER DEPTH[%L%?GetBackbufferDepth@@YAHXZ"
+    IDS_STRING8             "GET BACKBUFFER PITCH[%L%?GetBackbufferPitch@@YAHXZ"
+    IDS_STRING9             "CHECK DISPLAY MODE[%LLLL%?CheckDisplayMode@@YAHHHH@Z%Width, Height, Depth"
+    IDS_STRING10            "CURRENT GRAPHICS CARD$[%S%?CurrentGraphicsCard@@YAKK@Z"
+    IDS_STRING11            "EMULATION MODE[%L%?EmulationMode@@YAHXZ"
+    IDS_STRING12            "PERFORM CHECKLIST FOR DISPLAY MODES%0%?PerformChecklistForDisplayModes@@YAXXZ"
+    IDS_STRING13            "PERFORM CHECKLIST FOR GRAPHICS CARDS%0%?PerformChecklistForGraphicsCards@@YAXXZ"
+    IDS_STRING14            "SCREEN DEPTH[%L%?GetDisplayDepth@@YAHXZ"
+    IDS_STRING15            "SCREEN HEIGHT[%L%?GetDisplayHeight@@YAHXZ"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING16            "SCREEN INVALID[%L%?GetDisplayInvalid@@YAHXZ"
+    IDS_STRING17            "SCREEN TYPE[%L%?GetDisplayType@@YAHXZ"
+    IDS_STRING18            "SCREEN WIDTH[%L%?GetDisplayWidth@@YAHXZ"
+    IDS_STRING19            "SET DISPLAY MODE%LLL%?SetDisplayModeEx@@YAXHHH@Z%Width, Height, Depth"
+    IDS_STRING20            "SET EMULATION ON%0%?SetEmulationOn@@YAXXZ"
+    IDS_STRING21            "SET EMULATION OFF%0%?SetEmulationOff@@YAXXZ"
+    IDS_STRING22            "SET GAMMA%LLL%?SetGamma@@YAXHHH@Z%Red, Green, Blue"
+    IDS_STRING23            "SET GRAPHICS CARD%S%?SetGraphicsCard@@YAXK@Z%Cardname"
+    IDS_STRING24            "SHOW WINDOW%0%?ShowWindow@@YAXXZ"
+    IDS_STRING25            "HIDE WINDOW%0%?HideWindow@@YAXXZ"
+    IDS_STRING26            "MAXIMIZE WINDOW%0%?MaximiseWindow@@YAXXZ"
+    IDS_STRING27            "MINIMIZE WINDOW%0%?MinimiseWindow@@YAXXZ"
+    IDS_STRING28            "RESTORE WINDOW%0%?RestoreWindow@@YAXXZ"
+    IDS_STRING29            "SET WINDOW LAYOUT%LLL%?SetWindowSettings@@YAXHHH@Z%Style, Caption, Icon Number"
+    IDS_STRING30            "SET WINDOW ON%0%?SetWindowModeOn@@YAXXZ"
+    IDS_STRING31            "SET WINDOW OFF%0%?SetWindowModeOff@@YAXXZ"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING32            "SET WINDOW SIZE%LL%?SetWindowSize@@YAXHH@Z%Width, Height"
+    IDS_STRING33            "SET WINDOW POSITION%LL%?SetWindowPosition@@YAXHH@Z%X, Y"
+    IDS_STRING34            "SET WINDOW TITLE%S%?SetWindowTitle@@YAXK@Z%Caption String"
+    IDS_STRING35            "WINDOW EXIST[%LS%?WindowExist@@YAHK@Z%Window Name"
+    IDS_STRING36            "WINDOW TO BACK%0%?WindowToBack@@YAXXZ"
+    IDS_STRING37            "WINDOW TO FRONT%0%?WindowToFront@@YAXXZ"
+    IDS_STRING38            "WINDOW TO FRONT%S%?WindowToFront@@YAXK@Z%Window Name"
+    IDS_STRING39            "WINDOW TO BACK%S%?WindowToBack@@YAXK@Z%Window Name"
+    IDS_STRING40            "SET DISPLAY MODE%LLLL%?SetDisplayModeVSYNC@@YAXHHHH@Z%Width, Height, Depth, VSyncOn"
+    IDS_STRING41            "SET DISPLAY MODE%LLLLLL%?SetDisplayModeANTIALIAS@@YAXHHHHHH@Z%Width, Height, Depth, VSyncOn, Multisampling Factor, Multimonitor Mode"
+    IDS_STRING42            "CHECK DISPLAY MODE[%LLLLLLL%?CheckDisplayModeANTIALIAS@@YAHHHHHHH@Z%Width, Height, Depth, VSyncOn, Multisampling Factor, Multimonitor Mode"
+    IDS_STRING43            "DESKTOP WIDTH[%L%?GetDesktopWidth@@YAHXZ"
+    IDS_STRING44            "DESKTOP HEIGHT[%L%?GetDesktopHeight@@YAHXZ"
+    IDS_STRING45            "TEXTURE SCREEN%L%?TextureScreen@@YAXH@Z%Image Number"
+    IDS_STRING46            "SET SCREEN EFFECT%L%?SetScreenEffect@@YAXH@Z%Effect Number"
+    IDS_STRING47            "SET DISPLAY MODE%LLLLLLLL%?SetDisplayModeMODBACKBUFFER@@YAXHHHHHHHH@Z%Width, Height, Depth, VSyncOn, Multisampling Factor, Multimonitor Mode, Backbuffer Width, Backbuffer Height"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING48            "TEXTURE SCREEN%LL%?TextureScreen@@YAXHH@Z%Stage Index, Image Number"
+    IDS_STRING49            "SET DISPLAY MODE%LLLLLLLLL%?SetDisplayModeVR@@YAXHHHHHHHHH@Z%Width, Height, Depth, VSyncOn, Multisampling Factor, Multimonitor Mode, Backbuffer Width, Backbuffer Height, Virtual Reality Mode"
+    IDS_STRING50            "GET TRACKING YAW[%FL%?GetTrackingYaw@@YAKH@Z%Filtering Mode"
+    IDS_STRING51            "GET TRACKING PITCH[%FL%?GetTrackingPitch@@YAKH@Z%Filtering Mode"
+    IDS_STRING52            "GET TRACKING ROLL[%FL%?GetTrackingRoll@@YAKH@Z%Filtering Mode"
+    IDS_STRING53            "SET NVPERFHUD%L%?SetNvPerfHUD@@YAXH@Z%Use NVPerfHUD Flag"
+    IDS_STRING54            "RESET TRACKING%0%?ResetTracking@@YAXXZ"
+    IDS_STRING55            "RESET LEFT EYE[%L%?ResetLeftEye@@YAHXZ"
+    IDS_STRING56            "WINDOW WIDTH[%L%?GetWindowWidth@@YAHXZ"
+    IDS_STRING57            "WINDOW HEIGHT[%L%?GetWindowHeight@@YAHXZ"
+    IDS_STRING58            "DIRECTX VERSION$[%S%?GetDirectXVersion@@YAKK@Z"
+    IDS_STRING59            "DIRECTX REFRESH RATE$[%S%?GetDirectXRefreshRate@@YAKK@Z"
+    IDS_STRING60            "GET CHILD WINDOW WIDTH[%L%?GetChildWindowWidth@@YAHXZ"
+    IDS_STRING61            "GET CHILD WINDOW HEIGHT[%L%?GetChildWindowHeight@@YAHXZ"
+    IDS_STRING62            "SET CHILD WINDOW TRUE PIXEL%L%?SetChildWindowTruePixel@@YAXH@Z"
+    IDS_STRING63            "GET CHILD WINDOW X[%L%?GetChildWindowX@@YAHXZ"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING64            "GET CHILD WINDOW Y[%L%?GetChildWindowY@@YAHXZ"
+    IDS_STRING65            "GET CHILD WINDOW WIDTH[%LL%?GetChildWindowWidthEx@@YAHH@Z"
+    IDS_STRING66            "GET CHILD WINDOW HEIGHT[%LL%?GetChildWindowHeightEx@@YAHH@Z"
+    IDS_STRING67            "FORCE ADAPTER ORDINAL%L%?ForceAdapterOrdinal@@YAXH@Z%Adapter Number"
+END
+
+#endif    // English (United Kingdom) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

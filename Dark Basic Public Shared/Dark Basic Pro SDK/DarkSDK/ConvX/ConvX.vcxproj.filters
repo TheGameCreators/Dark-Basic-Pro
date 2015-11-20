@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Convert">
+      <UniqueIdentifier>{4311b027-e559-49c6-996d-b5f1fce553d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DBOFormat">
+      <UniqueIdentifier>{ce898719-8803-42f0-a8a3-673e4f8da96e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DBOFormat\Extras">
+      <UniqueIdentifier>{12b3ef35-8079-4941-b862-9415571e5ad2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Error">
+      <UniqueIdentifier>{69c09333-47c0-4afd-ad9a-398c7b07ed84}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\ConvX\ConvX.cpp">
+      <Filter>Convert</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\DBOFormat\DBOBlock.cpp">
+      <Filter>DBOFormat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SHARED\DBOFORMAT\DBOData.cpp">
+      <Filter>DBOFormat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\DBOFormat\DBOEffects.cpp">
+      <Filter>DBOFormat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\DBOFormat\DBOExternals.cpp">
+      <Filter>DBOFormat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\DBOFormat\DBOFile.cpp">
+      <Filter>DBOFormat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\DBOFormat\DBOFormat.cpp">
+      <Filter>DBOFormat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\DBOFormat\DBOFrame.cpp">
+      <Filter>DBOFormat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\DBOFormat\DBOMesh.cpp">
+      <Filter>DBOFormat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\DBOFormat\DBORawMesh.cpp">
+      <Filter>DBOFormat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\DBOFormat\Extras\NVMeshMenderD3DX.cpp">
+      <Filter>DBOFormat\Extras</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Core\globstruct.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\ConvX\ConvX.h">
+      <Filter>Convert</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\DBOFormat\DBOBlock.h">
+      <Filter>DBOFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SHARED\DBOFORMAT\DBOData.h">
+      <Filter>DBOFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\DBOFormat\DBOEffects.h">
+      <Filter>DBOFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\DBOFormat\DBOExternals.h">
+      <Filter>DBOFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\DBOFormat\DBOFile.h">
+      <Filter>DBOFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\DBOFormat\DBOFormat.h">
+      <Filter>DBOFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\DBOFormat\DBOFrame.h">
+      <Filter>DBOFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\DBOFormat\DBOMesh.h">
+      <Filter>DBOFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\DBOFormat\DBORawMesh.h">
+      <Filter>DBOFormat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\DBOFormat\Extras\NVMeshMender.h">
+      <Filter>DBOFormat\Extras</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CError.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CRuntimeErrors.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Core\globstruct.h" />
+  </ItemGroup>
+</Project>

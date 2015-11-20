@@ -1,0 +1,579 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL\0"
+            VALUE "CompanyName", "Dark Basic Software Ltd\0"
+            VALUE "FileDescription", "Dark Basic Professional DLL\0"
+            VALUE "FileVersion", "V1.0\0"
+            VALUE "InternalName", "Dark Basic Professional DLL\0"
+            VALUE "LegalCopyright", "Copyright © 2002\0"
+            VALUE "LegalTrademarks", "DarkBASIC\0"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Dark Basic Professional DLL\0"
+            VALUE "ProductVersion", "V1.0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING1             "LOAD OBJECT%SL%?Load@@YAXKH@Z%Filename, Object Number"
+    IDS_STRING2             "ROTATE OBJECT%LFFF%?Rotate@@YAXHMMM@Z%Object Number, XAngle, YAngle, ZAngle"
+    IDS_STRING3             "LOOP OBJECT%L%?Loop@@YAXH@Z%Object Number"
+    IDS_STRING4             "ADD LIMB%LLL%?AddLimb@@YAXHHH@Z%Object Number, Limb Number, Mesh Number"
+    IDS_STRING5             "APPEND OBJECT%SLL%?Append@@YAXKHH@Z%Filename, Object Number, Start Frame"
+    IDS_STRING6             "APPEND OBJECT ANIMATION%LS%?AppendAnimation@@YAXHK@Z%Object Number, Filename"
+    IDS_STRING7             "ATTACH OBJECT TO STATIC%L%?AttachObjectToNodeTree@@YAXH@Z%Object Number"
+    IDS_STRING8             "CHANGE MESH%LLL%?ChangeMesh@@YAXHHH@Z%Object Number, Limb Number, Mesh Number"
+    IDS_STRING9             "CLEAR ALL OBJECT KEYFRAMES%L%?ClearAllKeyFrames@@YAXH@Z%Object Number"
+    IDS_STRING10            "CLEAR OBJECT KEYFRAME%LL%?ClearKeyFrame@@YAXHH@Z%Object Number, Keyframe"
+    IDS_STRING12            "COLOR OBJECT%LD%?Color@@YAXHK@Z%Object Number, Color Value"
+    IDS_STRING13            "COLOR LIMB%LLD%?ColorLimb@@YAXHHK@Z%Object Number, Limb Number, Color Value"
+    IDS_STRING14            "DELETE OBJECT COLLISION BOX%L%?DeleteCollisionBox@@YAXH@Z%Object Number"
+    IDS_STRING15            "DELETE OBJECT%L%?DeleteEx@@YAXH@Z%Object Number"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING16            "DELETE MESH%L%?DeleteMesh@@YAXH@Z%Mesh Number"
+    IDS_STRING17            "DETACH OBJECT FROM STATIC%L%?DetachObjectFromNodeTree@@YAXH@Z%Object Number"
+    IDS_STRING18            "DISABLE STATIC OCCLUSION%0%?DisableNodeTreeOcclusion@@YAXXZ"
+    IDS_STRING19            "DISABLE OBJECT ZDEPTH%L%?DisableZDepth@@YAXH@Z%Object Number"
+    IDS_STRING20            "ENABLE STATIC OCCLUSION%0%?EnableNodeTreeOcclusion@@YAXXZ"
+    IDS_STRING21            "ENABLE OBJECT ZDEPTH%L%?EnableZDepth@@YAXH@Z%Object Number"
+    IDS_STRING22            "FADE OBJECT%LF%?Fade@@YAXHM@Z%Object Number, Fade Value"
+    IDS_STRING23            "FIX OBJECT PIVOT%L%?FixPivot@@YAXH@Z%Object Number"
+    IDS_STRING25            "ALPHABLENDING AVAILABLE[%L%?GetAlphaBlending@@YAHXZ"
+    IDS_STRING26            "TOTAL OBJECT FRAMES[%LL%?GetNumberOfFrames@@YAHH@Z%Object Number"
+    IDS_STRING27            "FILTERING AVAILABLE[%L%?GetBlending@@YAHXZ"
+    IDS_STRING28            "OBJECT COLLISION[%LLL%?GetCollision@@YAHHH@Z%ObjectA Number, ObjectB Number"
+    IDS_STRING29            "GET OBJECT COLLISION X[%F%?GetCollisionX@@YAKXZ"
+    IDS_STRING30            "GET OBJECT COLLISION Y[%F%?GetCollisionY@@YAKXZ"
+    IDS_STRING31            "GET OBJECT COLLISION Z[%F%?GetCollisionZ@@YAKXZ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING32            "OBJECT EXIST[%LL%?GetExist@@YAHH@Z%Object Number"
+    IDS_STRING33            "FOG AVAILABLE[%L%?GetFog@@YAHXZ"
+    IDS_STRING34            "OBJECT FRAME[%FL%?GetFrame@@YAKH@Z%Object Number"
+    IDS_STRING35            "OBJECT HIT[%LLL%?GetHit@@YAHHH@Z%ObjectA Number, ObjectB Number"
+    IDS_STRING36            "OBJECT IN SCREEN[%LL%?GetInScreen@@YAHH@Z%Object Number"
+    IDS_STRING37            "OBJECT INTERPOLATION[%FL%?GetInterpolation@@YAKH@Z%Object Number"
+    IDS_STRING38            "LIMB ANGLE X[%FLL%?GetLimbAngleX@@YAKHH@Z%Object Number, Limb Number"
+    IDS_STRING39            "LIMB ANGLE Y[%FLL%?GetLimbAngleY@@YAKHH@Z%Object Number, Limb Number"
+    IDS_STRING40            "LIMB ANGLE Z[%FLL%?GetLimbAngleZ@@YAKHH@Z%Object Number, Limb Number"
+    IDS_STRING41            "LIMB EXIST[%LLL%?GetLimbExist@@YAHHH@Z%Object Number, Limb Number"
+    IDS_STRING42            "LIMB NAME$[%SLL%?GetLimbName@@YAKKHH@Z%Object Number, Limb Number"
+    IDS_STRING43            "LIMB OFFSET X[%FLL%?GetLimbOffsetX@@YAKHH@Z%Object Number, Limb Number"
+    IDS_STRING44            "LIMB OFFSET Y[%FLL%?GetLimbOffsetY@@YAKHH@Z%Object Number, Limb Number"
+    IDS_STRING45            "LIMB OFFSET Z[%FLL%?GetLimbOffsetZ@@YAKHH@Z%Object Number, Limb Number"
+    IDS_STRING46            "LIMB SCALE X[%FLL%?GetLimbScaleX@@YAKHH@Z%Object Number, Limb Number"
+    IDS_STRING47            "LIMB SCALE Y[%FLL%?GetLimbScaleY@@YAKHH@Z%Object Number, Limb Number"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING48            "LIMB SCALE Z[%FLL%?GetLimbScaleZ@@YAKHH@Z%Object Number, Limb Number"
+    IDS_STRING49            "LIMB TEXTURE NAME[%SLL%?GetLimbTextureName@@YAKKHH@Z%Object Number, Limb Number"
+    IDS_STRING50            "LIMB TEXTURE[%LLL%?GetLimbTexture@@YAHHH@Z%Object Number, Limb Number"
+    IDS_STRING51            "LIMB VISIBLE[%LLL%?GetLimbVisible@@YAHHH@Z%Object Number, Limb Number"
+    IDS_STRING52            "LIMB DIRECTION X[%FLL%?GetLimbXDirection@@YAKHH@Z%Object Number, Limb Number"
+    IDS_STRING53            "LIMB DIRECTION Y[%FLL%?GetLimbYDirection@@YAKHH@Z%Object Number, Limb Number"
+    IDS_STRING54            "LIMB DIRECTION Z[%FLL%?GetLimbZDirection@@YAKHH@Z%Object Number, Limb Number"
+    IDS_STRING55            "LIMB POSITION X[%FLL%?GetLimbXPosition@@YAKHH@Z%Object Number, Limb Number"
+    IDS_STRING56            "LIMB POSITION Y[%FLL%?GetLimbYPosition@@YAKHH@Z%Object Number, Limb Number"
+    IDS_STRING57            "LIMB POSITION Z[%FLL%?GetLimbZPosition@@YAKHH@Z%Object Number, Limb Number"
+    IDS_STRING58            "OBJECT LOOPING[%LL%?GetLooping@@YAHH@Z%Object Number"
+    IDS_STRING59            "MESH EXIST[%LL%?GetMeshExist@@YAHH@Z%Mesh Number"
+    IDS_STRING60            "OBJECT PLAYING[%LL%?GetPlaying@@YAHH@Z%Object Number"
+    IDS_STRING61            "OBJECT SCREEN X[%LL%?GetScreenX@@YAHH@Z%Object Number"
+    IDS_STRING62            "OBJECT SCREEN Y[%LL%?GetScreenY@@YAHH@Z%Object Number"
+    IDS_STRING63            "OBJECT SIZE[%FL%?GetSize@@YAKH@Z%Object Number"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING64            "OBJECT SPEED[%FL%?GetSpeed@@YAKH@Z%Object Number"
+    IDS_STRING65            "STATIC LINE OF SIGHT X[%F%?GetStaticLineOfSightX@@YAKXZ"
+    IDS_STRING66            "STATIC LINE OF SIGHT Y[%F%?GetStaticLineOfSightY@@YAKXZ"
+    IDS_STRING67            "STATIC LINE OF SIGHT Z[%F%?GetStaticLineOfSightZ@@YAKXZ"
+    IDS_STRING68            "OBJECT VISIBLE[%LL%?GetVisible@@YAHH@Z%Object Number"
+    IDS_STRING69            "OBJECT POSITION X[%FL%?GetXPositionEx@@YAKH@Z%Object Number"
+    IDS_STRING70            "OBJECT POSITION Y[%FL%?GetYPositionEx@@YAKH@Z%Object Number"
+    IDS_STRING71            "OBJECT POSITION Z[%FL%?GetZPositionEx@@YAKH@Z%Object Number"
+    IDS_STRING72            "OBJECT SIZE X[%FL%?GetXSize@@YAKH@Z%Object Number"
+    IDS_STRING73            "OBJECT SIZE Y[%FL%?GetYSize@@YAKH@Z%Object Number"
+    IDS_STRING74            "OBJECT SIZE Z[%FL%?GetZSize@@YAKH@Z%Object Number"
+    IDS_STRING75            "OBJECT ANGLE X[%FL%?GetXRotationEx@@YAKH@Z%Object Number"
+    IDS_STRING76            "OBJECT ANGLE Y[%FL%?GetYRotationEx@@YAKH@Z%Object Number"
+    IDS_STRING77            "OBJECT ANGLE Z[%FL%?GetZRotationEx@@YAKH@Z%Object Number"
+    IDS_STRING78            "GHOST OBJECT OFF%L%?GhostOff@@YAXH@Z%Object Number"
+    IDS_STRING79            "GHOST OBJECT ON%L%?GhostOn@@YAXH@Z%Object Number"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING80            "GHOST OBJECT ON%LL%?GhostOn@@YAXHH@Z%Object Number, Ghost Effect"
+    IDS_STRING81            "GLUE OBJECT TO LIMB%LLL%?GlueToLimb@@YAXHHH@Z%Object Number, Second Object, Limb Number"
+    IDS_STRING82            "HIDE OBJECT%L%?Hide@@YAXH@Z%Object Number"
+    IDS_STRING83            "HIDE LIMB%LL%?HideLimb@@YAXHH@Z%Object Number, Limb Number"
+    IDS_STRING84            "LINK LIMB%LLL%?LinkLimb@@YAXHHH@Z%Object Number, Limb Parent, Limb Child"
+    IDS_STRING85            "LOAD MESH%SL%?LoadMesh@@YAXKH@Z%Filename, Mesh Number"
+    IDS_STRING86            "LOAD STATIC OBJECTS%S%?LoadNodeTreeObjects@@YAXK@Z%Filename"
+    IDS_STRING87            "LOCK OBJECT OFF%L%?LockOff@@YAXH@Z%Object Number"
+    IDS_STRING88            "LOCK OBJECT ON%L%?LockOn@@YAXH@Z%Object Number"
+    IDS_STRING89            "LOOP OBJECT%LL%?Loop@@YAXHH@Z%Object Number, Start Frame"
+    IDS_STRING90            "LOOP OBJECT%LLL%?Loop@@YAXHHH@Z%Object Number, Start Frame, End Frame"
+    IDS_STRING91            "MAKE OBJECT BOX%LFFF%?MakeBox@@YAXHMMM@Z%Object Number, Width, Height, Depth"
+    IDS_STRING92            "MAKE OBJECT COLLISION BOX%LFFFFFFL%?MakeCollisionBox@@YAXHMMMMMMH@Z%Object Number, X1, Y1, Z1, X2, Y2, Z2, Collision Flag"
+    IDS_STRING93            "MAKE OBJECT CONE%LF%?MakeCone@@YAXHM@Z%Object Number, Size"
+    IDS_STRING94            "MAKE OBJECT CUBE%LF%?MakeCube@@YAXHM@Z%Object Number, Size"
+    IDS_STRING95            "MAKE OBJECT CYLINDER%LF%?MakeCylinder@@YAXHM@Z%Object Number, Size"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING96            "MAKE MESH FROM OBJECT%LL%?MakeMeshFromObject@@YAXHH@Z%Mesh Number, Object Number"
+    IDS_STRING97            "MAKE STATIC COLLISION BOX%FFFFFF%?MakeNodeTreeCollisionBox@@YAXMMMMMM@Z%X1, Y1, Z1, X2, Y2, Z2"
+    IDS_STRING98            "MAKE OBJECT FROM LIMB%LLL%?MakeObjectFromLimb@@YAXHHH@Z%Object Number, Second Object, Limb Number"
+    IDS_STRING99            "MAKE OBJECT PLAIN%LFF%?MakePlane@@YAXHMM@Z%Object Number, Width, Height"
+    IDS_STRING100           "MAKE OBJECT SPHERE%LF%?MakeSphere@@YAXHM@Z%Object Number, Size"
+    IDS_STRING101           "MAKE OBJECT TRIANGLE%LFFFFFFFFF%?MakeTriangle@@YAXHMMMMMMMMM@Z%Object Number, X1, Y1, Z1, X2, Y2, Z2, X3, Y3, Z3"
+    IDS_STRING102           "MOVE OBJECT%LF%?Move@@YAXHM@Z%Object Number, Speed"
+    IDS_STRING103           "OFFSET LIMB%LLFFF%?OffsetLimb@@YAXHHMMM@Z%Object Number, Limb Number, X, Y, Z"
+    IDS_STRING104           "PERFORM CHECKLIST FOR OBJECT LIMBS%L%?PerformCheckListForLimbs@@YAXH@Z%Object Number"
+    IDS_STRING105           "PITCH OBJECT DOWN%LF%?PitchDown@@YAXHM@Z%Object Number, Value"
+    IDS_STRING106           "PITCH OBJECT UP%LF%?PitchUp@@YAXHM@Z%Object Number, Value"
+    IDS_STRING107           "PLAY OBJECT%L%?Play@@YAXH@Z%Object Number"
+    IDS_STRING108           "PLAY OBJECT%LL%?Play@@YAXHH@Z%Object Number, Start Frame"
+    IDS_STRING109           "PLAY OBJECT%LLL%?Play@@YAXHHH@Z%Object Number, Start Frame, End Frame"
+    IDS_STRING110           "POINT OBJECT%LFFF%?Point@@YAXHMMM@Z%Object Number, X, Y, Z"
+    IDS_STRING111           "POSITION OBJECT%LFFF%?Position@@YAXHMMM@Z%Object Number, X, Y, Z"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING112           "ROLL OBJECT LEFT%LF%?RollLeft@@YAXHM@Z%Object Number, Value"
+    IDS_STRING113           "ROLL OBJECT RIGHT%LF%?RollRight@@YAXHM@Z%Object Number, Value"
+    IDS_STRING115           "ROTATE LIMB%LLFFF%?RotateLimb@@YAXHHMMM@Z%Object Number, Limb Number, XAngle, YAngle, ZAngle"
+    IDS_STRING116           "SAVE OBJECT ANIMATION%LS%?SaveAnimation@@YAXHK@Z%Object Number, Filename"
+    IDS_STRING117           "SAVE STATIC OBJECTS%S%?SaveNodeTreeObjects@@YAXK@Z%Filename"
+    IDS_STRING118           "SCALE OBJECT%LFFF%?Scale@@YAXHMMM@Z%Object Number, XSize, YSize, ZSize"
+    IDS_STRING119           "SCALE LIMB%LLFFF%?ScaleLimb@@YAXHHMMM@Z%Object Number, Limb Number, XSize, YSize, ZSize"
+    IDS_STRING120           "SCALE LIMB TEXTURE%LLFF%?ScaleLimbTexture@@YAXHHMM@Z%Object Number, Limb Number, UScale, VScale"
+    IDS_STRING121           "SCALE OBJECT TEXTURE%LFF%?ScaleTexture@@YAXHMM@Z%Object Number, UScale, VScale"
+    IDS_STRING122           "SCROLL LIMB TEXTURE%LLFF%?ScrollLimbTexture@@YAXHHMM@Z%Object Number, Limb Number, X, Y"
+    IDS_STRING123           "SCROLL OBJECT TEXTURE%LFF%?ScrollTexture@@YAXHMM@Z%Object Number, X, Y"
+    IDS_STRING124           "SET OBJECT%LLLL%?Set@@YAXHHHH@Z%Object Number, Wire, Transparent, Cull"
+    IDS_STRING125           "SET OBJECT%LLLLL%?Set@@YAXHHHHH@Z%Object Number, Wire, Transparent, Cull, Filter"
+    IDS_STRING126           "SET OBJECT%LLLLLL%?Set@@YAXHHHHHH@Z%Object Number, Wire, Transparent, Cull, Filter, Light"
+    IDS_STRING127           "SET OBJECT%LLLLLLL%?Set@@YAXHHHHHHH@Z%Object Number, Wire, Transparent, Cull, Filter, Light, Fog"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING128           "SET OBJECT%LLLLLLLL%?Set@@YAXHHHHHHHH@Z%Object Number, Wire, Transparent, Cull, Filter, Light, Fog, Ambient"
+    IDS_STRING129           "SET OBJECT COLLISION OFF%L%?SetCollisionOff@@YAXH@Z%Object Number"
+    IDS_STRING130           "SET OBJECT COLLISION ON%L%?SetCollisionOn@@YAXH@Z%Object Number"
+    IDS_STRING131           "SET OBJECT COLLISION TO BOXES%L%?SetCollisionToBoxes@@YAXH@Z%Object Number"
+    IDS_STRING132           "SET OBJECT COLLISION TO POLYGONS%L%?SetCollisionToPolygons@@YAXH@Z%Object Number"
+    IDS_STRING133           "SET OBJECT COLLISION TO SPHERES%L%?SetCollisionToSpheres@@YAXH@Z%Object Number"
+    IDS_STRING134           "SET OBJECT FRAME%LF%?SetFrameEx@@YAXHM@Z%Object Number, Frame"
+    IDS_STRING135           "SET GLOBAL COLLISION OFF%0%?SetGlobalCollisionOff@@YAXXZ"
+    IDS_STRING136           "SET GLOBAL COLLISION ON%0%?SetGlobalCollisionOn@@YAXXZ"
+    IDS_STRING137           "SET OBJECT INTERPOLATION%LL%?SetInterpolation@@YAXHH@Z%Object Number, Interpolation"
+    IDS_STRING138           "SET OBJECT KEYFRAME%LL%?SetKeyFrame@@YAXHH@Z%Object Number, Keyframe"
+    IDS_STRING139           "SET MIPMAP MODE%L%?SetMipmapMode@@YAXH@Z%Mipmap Mode"
+    IDS_STRING140           "SET STATIC OBJECTS TEXTURE%L%?SetNodeTreeTextureMode@@YAXH@Z%Texturing Mode"
+    IDS_STRING141           "SET OBJECT ROTATION XYZ%L%?SetRotationXYZ@@YAXH@Z%Object Number"
+    IDS_STRING142           "SET OBJECT ROTATION ZYX%L%?SetRotationZYX@@YAXH@Z%Object Number"
+    IDS_STRING143           "SET OBJECT SPEED%LL%?SetSpeed@@YAXHH@Z%Object Number, Speed"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING144           "TEXTURE OBJECT%LL%?SetTexture@@YAXHH@Z%Object Number, Image Number"
+    IDS_STRING145           "SET OBJECT TEXTURE%LLL%?SetTextureMode@@YAXHHH@Z%Object Number, Texturing Mode, Mipmap Flag"
+    IDS_STRING146           "SET OBJECT TO CAMERA ORIENTATION%L%?SetToCameraOrientation@@YAXH@Z%Object Number"
+    IDS_STRING147           "SET OBJECT TO OBJECT ORIENTATION%LL%?SetToObjectOrientation@@YAXHH@Z%Object Number, Second Object"
+    IDS_STRING148           "SHOW OBJECT%L%?Show@@YAXH@Z%Object Number"
+    IDS_STRING149           "SHOW LIMB%LL%?ShowLimb@@YAXHH@Z%Object Number, Limb Number"
+    IDS_STRING150           "STOP OBJECT%L%?Stop@@YAXH@Z%Object Number"
+    IDS_STRING151           "TEXTURE LIMB%LLL%?TextureLimb@@YAXHHH@Z%Object Number, Limb Number, Image Number"
+    IDS_STRING152           "TURN OBJECT LEFT%LF%?TurnLeft@@YAXHM@Z%Object Number, Value"
+    IDS_STRING153           "TURN OBJECT RIGHT%LF%?TurnRight@@YAXHM@Z%Object Number, Value"
+    IDS_STRING154           "UNGLUE OBJECT%L%?UnGlue@@YAXH@Z%Object Number"
+    IDS_STRING155           "XROTATE OBJECT%LF%?XRotate@@YAXHM@Z%Object Number, XAngle"
+    IDS_STRING156           "YROTATE OBJECT%LF%?YRotate@@YAXHM@Z%Object Number, YAngle"
+    IDS_STRING157           "ZROTATE OBJECT%LF%?ZRotate@@YAXHM@Z%Object Number, ZAngle"
+    IDS_STRING158           "MAKE OBJECT%LLL%?MakeObject@@YAXHHH@Z%Object Number, Mesh Index, Image Number"
+    IDS_STRING159           "STATIC LINE OF SIGHT[%LFFFFFFFF%?GetStaticLineOfSight@@YAHMMMMMMMM@Z%X1, Y1, Z1, X2, Y2, Z2, Width, Accuracy"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING160           "GET STATIC COLLISION HIT[%LFFFFFFFFFFFF%?GetStaticHit@@YAHMMMMMMMMMMMM@Z%OX1, OY1, OZ1, OX2, OY2, OZ2, NX1, NY1, NZ1, NX2, NY2, NZ2"
+    IDS_STRING161           "GET STATIC COLLISION X[%F%?GetStaticX@@YAKXZ"
+    IDS_STRING162           "GET STATIC COLLISION Y[%F%?GetStaticY@@YAKXZ"
+    IDS_STRING163           "GET STATIC COLLISION Z[%F%?GetStaticZ@@YAKXZ"
+    IDS_STRING164           "MAKE STATIC OBJECT%L%?CreateNodeTree@@YAXH@Z%Object Number"
+    IDS_STRING165           "DELETE STATIC OBJECTS%0%?DeleteNodeTree@@YAXXZ"
+    IDS_STRING166           "SET BUMP MAPPING ON%LL%?SetBumpMap@@YAXHH@Z%Object Number, Image Number"
+    IDS_STRING167           "SET CARTOON SHADING ON%LLL%?SetCartoonShadingOn@@YAXHHH@Z%Object Number, Shade Image, Edge Image"
+    IDS_STRING168           "SET SPHERE MAPPING ON%LL%?SetSphereMap@@YAXHH@Z%Object Number, Image Number"
+    IDS_STRING169           "SET STATIC OBJECTS WIREFRAME ON%0%?SetNodeTreeWireframeOn@@YAXXZ"
+    IDS_STRING170           "SET STATIC OBJECTS WIREFRAME OFF%0%?SetNodeTreeWireframeOff@@YAXXZ"
+    IDS_STRING172           "CHECK LIMB LINK[%LLL%?GetLimbLink@@YAHHH@Z%Object Number, Limb Number"
+    IDS_STRING173           "OBJECT COLLISION RADIUS[%FL%?GetObjectCollisionRadius@@YAKH@Z%Object Number"
+    IDS_STRING174           "OBJECT COLLISION CENTER X[%FL%?GetObjectCollisionCenterX@@YAKH@Z%Object Number"
+    IDS_STRING175           "OBJECT COLLISION CENTER Y[%FL%?GetObjectCollisionCenterY@@YAKH@Z%Object Number"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING176           "OBJECT COLLISION CENTER Z[%FL%?GetObjectCollisionCenterZ@@YAKH@Z%Object Number"
+    IDS_STRING177           "3DS2X%SS%?Convert3DStoX@@YAXKK@Z%3DS Filename, X Filename"
+    IDS_STRING178           "FLUSH VIDEO MEMORY%0%?FlushVideoMemory@@YAXXZ"
+    IDS_STRING179           "DISABLE TNL%0%?DisableTNL@@YAXXZ"
+    IDS_STRING180           "ENABLE TNL%0%?EnableTNL@@YAXXZ"
+    IDS_STRING181           "STATISTIC[%LL%?GetStatistic@@YAHH@Z%Statistic Code"
+    IDS_STRING182           "TNL AVAILABLE[%L%?GetDrawPrimTLVertex@@YAHXZ"
+    IDS_STRING183           "CLONE OBJECT%LL%?Clone@@YAXHH@Z%Source Object, Object Number"
+    IDS_STRING184           "CREATE VERTEX SHADER FROM FILE%LS%?CreateVertexShaderFromFile@@YAXHK@Z%VertexShader Number, Shader Filename"
+    IDS_STRING185           "MAKE OBJECT SPHERE%LFLL%?MakeSphere@@YAXHMHH@Z%Object Number, Size, Rows, Columns"
+    IDS_STRING186           "MOVE OBJECT DOWN%LF%?MoveDown@@YAXHM@Z%Object Number, Value"
+    IDS_STRING187           "MOVE OBJECT LEFT%LF%?MoveLeft@@YAXHM@Z%Object Number, Value"
+    IDS_STRING188           "MOVE OBJECT RIGHT%LF%?MoveRight@@YAXHM@Z%Object Number, Value"
+    IDS_STRING189           "MOVE OBJECT UP%LF%?MoveUp@@YAXHM@Z%Object Number, Value"
+    IDS_STRING190           "SET OBJECT AMBIENT%LL%?SetAmbient@@YAXHH@Z%Object Number, Flag"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING192           "SET OBJECT CULL%LL%?SetCull@@YAXHH@Z%Object Number, Flag"
+    IDS_STRING193           "SET DETAIL MAPPING ON%LL%?SetDetailMap@@YAXHH@Z%Object Number, Image Number"
+    IDS_STRING194           "SET OBJECT FILTER%LL%?SetFilter@@YAXHH@Z%Object Number, Flag"
+    IDS_STRING195           "SET OBJECT FOG%LL%?SetFog@@YAXHH@Z%Object Number, Flag"
+    IDS_STRING196           "SET OBJECT LIGHT%LL%?SetLight@@YAXHH@Z%Object Number, Flag"
+    IDS_STRING197           "SET LIGHT MAPPING ON%LL%?SetLightMap@@YAXHH@Z%Object Number, Image Number"
+    IDS_STRING198           "SET OBJECT RADIUS%LF%?SetSphereRadius@@YAXHM@Z%Object Number, Radius"
+    IDS_STRING199           "SET OBJECT TRANSPARENCY%LL%?SetTransparency@@YAXHH@Z%Object Number, Flag"
+    IDS_STRING200           "SET VERTEX SHADER MATRIX%LLLL%?SetVertexShaderMatrix@@YAXHKHK@Z%VertexShader Number, Constant, Matrix4, ConstantCount"
+    IDS_STRING201           "SET VERTEX SHADER OFF%L%?SetVertexShaderOff@@YAXH@Z%Object Number"
+    IDS_STRING202           "SET VERTEX SHADER ON%LL%?SetVertexShaderOn@@YAXHH@Z%Object Number, VertexShader Number"
+    IDS_STRING203           "SET VERTEX SHADER STREAM%LLLL%?SetVertexShaderStream@@YAXHHHH@Z%VertexShader Number, Position, Data, Datatype"
+    IDS_STRING204           "SET VERTEX SHADER STREAMCOUNT%LL%?SetVertexShaderStreamCount@@YAXHH@Z%VertexShader Number, Count"
+    IDS_STRING205           "SET VERTEX SHADER VECTOR%LLLL%?SetVertexShaderVector@@YAXHKHK@Z%VertexShader Number, Constant, Vector3, ConstantCount"
+    IDS_STRING206           "SET OBJECT WIREFRAME%LL%?SetWireframe@@YAXHH@Z%Object Number, Flag"
+    IDS_STRING207           "ALPHA AVAILABLE[%L%?GetAlpha@@YAHXZ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING208           "ALPHACOMPARISON AVAILABLE[%L%?GetAlphaComparision@@YAHXZ"
+    IDS_STRING209           "ANISTROPICFILTERING AVAILABLE[%L%?GetAnisotropicFiltering@@YAHXZ"
+    IDS_STRING210           "ANTIALIAS AVAILABLE[%L%?GetAntiAliasEdges@@YAHXZ"
+    IDS_STRING211           "BLITSYSTOLOCAL AVAILABLE[%L%?GetBlitSysOntoLocal@@YAHXZ"
+    IDS_STRING212           "CALIBRATEGAMMA AVAILABLE[%L%?GetCalibrateGamma@@YAHXZ"
+    IDS_STRING213           "CLIPANDSCALEPOINTS AVAILABLE[%L%?GetClipAndScalePoints@@YAHXZ"
+    IDS_STRING214           "CLIPTLVERTS AVAILABLE[%L%?GetClipTLVerts@@YAHXZ"
+    IDS_STRING215           "COLORPERSPECTIVE AVAILABLE[%L%?GetColorPerspective@@YAHXZ"
+    IDS_STRING216           "COLORWRITEENABLE AVAILABLE[%L%?GetColorWriteEnable@@YAHXZ"
+    IDS_STRING217           "CUBEMAP AVAILABLE[%L%?GetCubeMap@@YAHXZ"
+    IDS_STRING218           "CULLCCW AVAILABLE[%L%?GetCullCCW@@YAHXZ"
+    IDS_STRING219           "CULLCW AVAILABLE[%L%?GetCullCW@@YAHXZ"
+    IDS_STRING220           "GET DEVICE TYPE[%L%?GetDeviceType@@YAHXZ"
+    IDS_STRING221           "DITHER AVAILABLE[%L%?GetDither@@YAHXZ"
+    IDS_STRING222           "FOGRANGE AVAILABLE[%L%?GetFogRange@@YAHXZ"
+    IDS_STRING223           "FOGTABLE AVAILABLE[%L%?GetFogTable@@YAHXZ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING224           "FOGVERTEX AVAILABLE[%L%?GetFogVertex@@YAHXZ"
+    IDS_STRING225           "FULLSCREENGAMMA AVAILABLE[%L%?GetFullScreenGamma@@YAHXZ"
+    IDS_STRING226           "GET MAXIMUM LIGHTS[%L%?GetMaxLights@@YAHXZ"
+    IDS_STRING227           "GET MAXIMUM PIXEL SHADER VALUE[%L%?GetMaxPixelShaderValue@@YAKXZ"
+    IDS_STRING229           "GET MAXIMUM TEXTURE HEIGHT[%L%?GetMaxTextureHeight@@YAHXZ"
+    IDS_STRING230           "GET MAXIMUM TEXTURE WIDTH[%L%?GetMaxTextureWidth@@YAHXZ"
+    IDS_STRING231           "GET MAXIMUM VERTEX SHADER CONSTANTS[%L%?GetMaxVertexShaderConstants@@YAHXZ"
+    IDS_STRING232           "GET MAXIMUM VOLUME EXTENT[%L%?GetMaxVolumeExtent@@YAHXZ"
+    IDS_STRING233           "MIPCUBEMAP AVAILABLE[%L%?GetMipCubeMap@@YAHXZ"
+    IDS_STRING234           "MIPMAP AVAILABLE[%L%?GetMipMap@@YAHXZ"
+    IDS_STRING235           "MIPMAPLODBIAS AVAILABLE[%L%?GetMipMapLODBias@@YAHXZ"
+    IDS_STRING236           "MIPMAPVOLUME AVAILABLE[%L%?GetMipMapVolume@@YAHXZ"
+    IDS_STRING237           "NONPOWTEXTURES AVAILABLE[%L%?GetNonPowerOf2Textures@@YAHXZ"
+    IDS_STRING238           "PERSPECTIVETEXTURES AVAILABLE[%L%?GetPerspective@@YAHXZ"
+    IDS_STRING239           "GET MAXIMUM PIXEL SHADER VERSION[%F%?GetPixelShaderVersion@@YAKXZ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING240           "PROJECTEDTEXTURES AVAILABLE[%L%?GetProjected@@YAHXZ"
+    IDS_STRING241           "RENDERAFTERFLIP AVAILABLE[%L%?GetRenderAfterFlip@@YAHXZ"
+    IDS_STRING242           "RENDERWINDOWED AVAILABLE[%L%?GetRenderWindowed@@YAHXZ"
+    IDS_STRING243           "SEPERATETEXTUREMEMORIES AVAILABLE[%L%?GetSeparateTextureMemories@@YAHXZ"
+    IDS_STRING244           "ONLYSQUARETEXTURES AVAILABLE[%L%?GetSquareOnly@@YAHXZ"
+    IDS_STRING245           "TLVERTEXSYSTEMMEMORY AVAILABLE[%L%?GetTLVertexSystemMemory@@YAHXZ"
+    IDS_STRING246           "TLVERTEXVIDEOMEMORY AVAILABLE[%L%?GetTLVertexVideoMemory@@YAHXZ"
+    IDS_STRING247           "NONLOCALVIDEOMEMORY AVAILABLE[%L%?GetTextureNonLocalVideoMemory@@YAHXZ"
+    IDS_STRING248           "TEXTURESYSTEMMEMORY AVAILABLE[%L%?GetTextureSystemMemory@@YAHXZ"
+    IDS_STRING249           "TEXTUREVIDEOMEMORY AVAILABLE[%L%?GetTextureVideoMemory@@YAHXZ"
+    IDS_STRING250           "GET MAXIMUM VERTEX SHADER VERSION[%F%?GetVertexShaderVersion@@YAKXZ"
+    IDS_STRING251           "VOLUMEMAP AVAILABLE[%L%?GetVolumeMap@@YAHXZ"
+    IDS_STRING252           "WBUFFER AVAILABLE[%L%?GetWBuffer@@YAHXZ"
+    IDS_STRING253           "WFOG AVAILABLE[%L%?GetWFog@@YAHXZ"
+    IDS_STRING254           "ZBUFFER AVAILABLE[%L%?GetZBuffer@@YAHXZ"
+    IDS_STRING255           "ZFOG AVAILABLE[%L%?GetZFog@@YAHXZ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING256           "DELETE VERTEX SHADER%L%?DeleteVertexShader@@YAXH@Z%VertexShader Number"
+    IDS_STRING257           "VERTEX SHADER EXIST[%LL%?VertexShaderExist@@YAHH@Z%VertexShader Number"
+    IDS_STRING258           "SET CUBE MAPPING ON%LLLLLLL%?SetCubeMap@@YAXHHHHHHH@Z%Object Number, Face1, Face2, Face3, Face4, Face5, Face6"
+    IDS_STRING259           "SET BLEND MAPPING ON%LLL%?SetBlendMap@@YAXHHH@Z%Object Number, Image Number, Blend Mode"
+    IDS_STRING260           "SAVE MESH%SL%?SaveMesh@@YAXKH@Z%Filename, Mesh Number"
+    IDS_STRING261           "REMOVE LIMB%LL%?RemoveLimb@@YAXHH@Z%Object Number, Limb Number"
+    IDS_STRING262           "INTERSECT OBJECT[%FLFFFFFF%?IntersectObject@@YAKHMMMMMM@Z%Object Number, X, Y, Z, ToX, ToY, ToZ"
+    IDS_STRING263           "AUTOMATIC OBJECT COLLISION%LFL%?AutomaticObjectCollision@@YAXHMH@Z%Object Number, Radius, Response"
+    IDS_STRING264           "AUTOMATIC CAMERA COLLISION%LFL%?AutomaticCameraCollision@@YAXHMH@Z%Camera Number, Radius, Response"
+    IDS_STRING265           "SET RAINBOW SHADING ON%LL%?SetRainbowRenderingOn@@YAXHH@Z%Object Number, Rainbow Image"
+    IDS_STRING266           "SET SHADOW SHADING ON%L%?SetShadowOn@@YAXH@Z%Object Number"
+    IDS_STRING267           "SET REFLECTION SHADING ON%L%?SetReflectionOn@@YAXH@Z%Object Number"
+    IDS_STRING268           "CREATE PIXEL SHADER FROM FILE%LS%?CreatePixelShaderFromFile@@YAXHK@Z%PixelShader Number, Shader Filename"
+    IDS_STRING269           "SET PIXEL SHADER ON%LL%?SetPixelShaderOn@@YAXHH@Z%Object Number, PixelShader Number"
+    IDS_STRING270           "SET PIXEL SHADER OFF%L%?SetPixelShaderOff@@YAXH@Z%Object Number"
+    IDS_STRING271           "DELETE PIXEL SHADER%L%?DeletePixelShader@@YAXH@Z%PixelShader Number"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING272           "SET PIXEL SHADER TEXTURE%LLL%?SetPixelShaderTexture@@YAXHHH@Z%PixelShader Number, Slot Number, Image Number"
+    IDS_STRING273           "PIXEL SHADER EXIST[%LL%?PixelShaderExist@@YAHH@Z%PixelShader Number"
+    IDS_STRING274           "SET TEXTURE MD3%LLLLLLL%?SetTextureMD3@@YAXHHHHHHH@Z%Object Number, H0, H1, L0, L1, L2, U0"
+    IDS_STRING275           "CONVERT OBJECT FVF%LD%?CloneMeshToNewFormat@@YAXHK@Z%Object Number, FVF Format"
+    IDS_STRING276           "HIDE OBJECT BOUNDS%L%?HideBounds@@YAXH@Z%Object Number"
+    IDS_STRING277           "SHOW OBJECT BOUNDS%L%?ShowBounds@@YAXH@Z%Object Number"
+    IDS_STRING278           "SET OBJECT SMOOTHING%LF%?SetSmoothing@@YAXHM@Z%Object Number, Percentage"
+    IDS_STRING279           "SET LIMB SMOOTHING%LLF%?SetLimbSmoothing@@YAXHHM@Z%Object Number, Limb Number, Percentage"
+    IDS_STRING280           "INSTANCE OBJECT%LL%?Instance@@YAXHH@Z%Object Number, Source Object"
+    IDS_STRING281           "TEXTURE OBJECT%LLL%?SetTextureStage@@YAXHHH@Z%Object Number, Stage Number, Image Number"
+    IDS_STRING282           "SET EFFECT ON%LSL%?SetEffectOn@@YAXHKH@Z%Object Number, Effect Filename, Texture Flag"
+    IDS_STRING283           "SET ALPHA MAPPING ON%LF%?SetAlphaFactor@@YAXHM@Z%Object Number, Alpha Percentage"
+    IDS_STRING284           "SET OBJECT DIFFUSE%LD%?SetDiffuseMaterial@@YAXHK@Z%Object Number, Color Value"
+    IDS_STRING285           "SET OBJECT AMBIENCE%LD%?SetAmbienceMaterial@@YAXHK@Z%Object Number, Color Value"
+    IDS_STRING286           "SET OBJECT SPECULAR%LD%?SetSpecularMaterial@@YAXHK@Z%Object Number, Color Value"
+    IDS_STRING287           "SET OBJECT EMISSIVE%LD%?SetEmissiveMaterial@@YAXHK@Z%Object Number, Color Value"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING288           "SET OBJECT SPECULAR POWER%LF%?SetSpecularPower@@YAXHM@Z%Object Number, Power"
+    IDS_STRING289           "ENABLE OBJECT ZREAD%L%?EnableZRead@@YAXH@Z%Object Number"
+    IDS_STRING290           "DISABLE OBJECT ZREAD%L%?DisableZRead@@YAXH@Z%Object Number"
+    IDS_STRING291           "ENABLE OBJECT ZWRITE%L%?EnableZWrite@@YAXH@Z%Object Number"
+    IDS_STRING292           "DISABLE OBJECT ZWRITE%L%?DisableZWrite@@YAXH@Z%Object Number"
+    IDS_STRING293           "LOAD EFFECT%SLL%?LoadEffect@@YAXKHH@Z%Filename, Effect Number, Texture Flag"
+    IDS_STRING294           "DELETE EFFECT%L%?DeleteEffect@@YAXH@Z%Effect Number"
+    IDS_STRING295           "SET OBJECT EFFECT%LL%?SetObjectEffect@@YAXHH@Z%Object Number, Effect Number"
+    IDS_STRING296           "SET LIMB EFFECT%LLL%?SetLimbEffect@@YAXHHH@Z%Object Number, Limb Number, Effect Number"
+    IDS_STRING297           "SET EFFECT CONSTANT FLOAT%LSF%?SetEffectConstantF@@YAXHKM@Z%Effect Number, Constant String, Constant Value"
+    IDS_STRING298           "PERFORM CHECKLIST FOR EFFECT VALUES%L%?PerformChecklistForEffectValues@@YAXH@Z%Effect Number"
+    IDS_STRING299           "TEXTURE LIMB%LLLL%?TextureLimbStage@@YAXHHHH@Z%Object Number, Limb Number, Stage Number, Image Number"
+    IDS_STRING300           "PERFORM CHECKLIST FOR EFFECT ERRORS%0%?PerformChecklistForEffectErrors@@YAXXZ%"
+    IDS_STRING301           "SET EFFECT TRANSPOSE%LL%?SetEffectTranspose@@YAXHH@Z%Effect Number, Transpose Flag"
+    IDS_STRING302           "SET EFFECT CONSTANT BOOLEAN%LSL%?SetEffectConstantB@@YAXHKH@Z%Effect Number, Constant String, Constant Value"
+    IDS_STRING303           "SET EFFECT CONSTANT INTEGER%LSL%?SetEffectConstantI@@YAXHKH@Z%Effect Number, Constant String, Constant Value"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING304           "SET EFFECT CONSTANT VECTOR%LSL%?SetEffectConstantV@@YAXHKH@Z%Effect Number, Constant String, Vector Number"
+    IDS_STRING305           "SET EFFECT CONSTANT MATRIX%LSL%?SetEffectConstantM@@YAXHKH@Z%Effect Number, Constant String, Matrix Number"
+    IDS_STRING306           "SET EFFECT TECHNIQUE%LS%?SetEffectTechnique@@YAXHK@Z%Effect Number, Technique Name"
+    IDS_STRING307           "PICK OBJECT[%LLLLL%?PickScreenObject@@YAHHHHH@Z%Screen X, Screen Y, Object Start, Object End"
+    IDS_STRING308           "PICK SCREEN%LLF%?PickScreen2D23D@@YAXHHM@Z%Screen X, Screen Y, Distance"
+    IDS_STRING309           "GET PICK VECTOR X[%F%?GetPickVectorX@@YAKXZ"
+    IDS_STRING310           "GET PICK VECTOR Y[%F%?GetPickVectorY@@YAKXZ"
+    IDS_STRING311           "GET PICK VECTOR Z[%F%?GetPickVectorZ@@YAKXZ"
+    IDS_STRING312           "GET PICK DISTANCE[%F%?GetPickDistance@@YAKXZ"
+    IDS_STRING313           "SET SHADING OFF%L%?SetShadingOff@@YAXH@Z%Object Number"
+    IDS_STRING314           "SHOW OBJECT BOUNDS%LL%?ShowBoundsEx@@YAXHH@Z%Object Number, Box Only Flag"
+    IDS_STRING315           "EFFECT EXIST[%LL%?GetEffectExist@@YAHH@Z%Effect Number"
+    IDS_STRING316           "PERFORM CHECKLIST FOR EFFECT ERRORS%L%?PerformChecklistForEffectErrors@@YAXH@Z%Effect Number"
+    IDS_STRING317           "DELETE OBJECTS%LL%?Deletes@@YAXHH@Z%From, To"
+    IDS_STRING318           "LOAD OBJECT%SLL%?Load@@YAXKHH@Z%Filename, Object Number, DBPro Mode"
+    IDS_STRING319           "OFFSET LIMB%LLFFFL%?OffsetLimb@@YAXHHMMMH@Z%Object Number, Limb Number, X, Y, Z, Bounds Flag"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING320           "SCALE LIMB%LLFFFL%?ScaleLimb@@YAXHHMMMH@Z%Object Number, Limb Number, XSize, YSize, ZSize, Bounds Flag"
+    IDS_STRING321           "ROTATE LIMB%LLFFFL%?RotateLimb@@YAXHHMMMH@Z%Object Number, Limb Number, XAngle, YAngle, ZAngle, Bounds Flag"
+    IDS_STRING322           "LOCK VERTEXDATA FOR LIMB%LL%?LockVertexDataForLimb@@YAXHH@Z%Object Number, Limb Number"
+    IDS_STRING323           "LOCK VERTEXDATA FOR LIMB%LLL%?LockVertexDataForLimbCore@@YAXHHH@Z%Object Number, Limb Number, Lock Mode"
+    IDS_STRING324           "LOCK VERTEXDATA FOR MESH%L%?LockVertexDataForMesh@@YAXH@Z%Mesh Number"
+    IDS_STRING325           "ADD MESH TO VERTEXDATA%L%?AddMeshToVertexData@@YAXH@Z%Mesh Number"
+    IDS_STRING326           "DELETE MESH FROM VERTEXDATA%LLLL%?DeleteMeshFromVertexData@@YAXHHHH@Z%Vertex Start, Vertex End, Index Start, Index End"
+    IDS_STRING327           "SET VERTEXDATA UV%LFF%?SetVertexDataUV@@YAXHMM@Z%Vertex Index, U, V"
+    IDS_STRING328           "SET VERTEXDATA UV%LLFF%?SetVertexDataUV@@YAXHHMM@Z%Vertex Index, Index,U, V"
+    IDS_STRING329           "SET VERTEXDATA NORMALS%LFFF%?SetVertexDataNormals@@YAXHMMM@Z%Vertex Index, NX, NY, NZ"
+    IDS_STRING330           "SET VERTEXDATA POSITION%LFFF%?SetVertexDataPosition@@YAXHMMM@Z%Vertex Index, X, Y, Z"
+    IDS_STRING331           "SET VERTEXDATA DIFFUSE%LD%?SetVertexDataDiffuse@@YAXHK@Z%Vertex Index, RGB Value"
+    IDS_STRING332           "GET VERTEXDATA VERTEX COUNT[%L%?GetVertexDataVertexCount@@YAHXZ"
+    IDS_STRING333           "GET VERTEXDATA INDEX COUNT[%L%?GetVertexDataIndexCount@@YAHXZ"
+    IDS_STRING334           "GET VERTEXDATA POSITION X[%FL%?GetVertexDataPositionX@@YAKH@Z%Vertex Index"
+    IDS_STRING335           "GET VERTEXDATA POSITION Y[%FL%?GetVertexDataPositionY@@YAKH@Z%Vertex Index"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING336           "GET VERTEXDATA POSITION Z[%FL%?GetVertexDataPositionZ@@YAKH@Z%Vertex Index"
+    IDS_STRING337           "GET VERTEXDATA NORMALS X[%FL%?GetVertexDataNormalsX@@YAKH@Z%Vertex Index"
+    IDS_STRING338           "GET VERTEXDATA NORMALS Y[%FL%?GetVertexDataNormalsY@@YAKH@Z%Vertex Index"
+    IDS_STRING339           "GET VERTEXDATA NORMALS Z[%FL%?GetVertexDataNormalsZ@@YAKH@Z%Vertex Index"
+    IDS_STRING340           "GET VERTEXDATA U[%FL%?GetVertexDataU@@YAKH@Z%Vertex Index"
+    IDS_STRING341           "GET VERTEXDATA V[%FL%?GetVertexDataV@@YAKH@Z%Vertex Index"
+    IDS_STRING342           "GET VERTEXDATA DIFFUSE[%DL%?GetVertexDataDiffuse@@YAKH@Z%Vertex Index"
+    IDS_STRING343           "UNLOCK VERTEXDATA%0%?UnlockVertexData@@YAXXZ"
+    IDS_STRING344           "PERFORM CSG UNION%LL%?PeformCSGUnion@@YAXHH@Z%Target Object, Brush Object"
+    IDS_STRING345           "PERFORM CSG INTERSECTION%LL%?PeformCSGIntersection@@YAXHH@Z%Target Object, Brush Object"
+    IDS_STRING346           "PERFORM CSG UNION ON VERTEXDATA%L%?PeformCSGUnionOnVertexData@@YAXH@Z%Brush Mesh"
+    IDS_STRING347           "PERFORM CSG INTERSECTION ON VERTEXDATA%L%?PeformCSGIntersectionOnVertexData@@YAXH@Z%Brush Mesh"
+    IDS_STRING348           "SAVE OBJECT%SL%?Save@@YAXKH@Z%Filename, Object Number"
+    IDS_STRING349           "CLONE OBJECT%LLL%?CloneShared@@YAXHHH@Z%Object Number, Source Object, Share Original Data"
+    IDS_STRING350           "EXCLUDE OBJECT ON%L%?ExcludeOn@@YAXH@Z%Object ID"
+    IDS_STRING351           "EXCLUDE OBJECT OFF%L%?ExcludeOff@@YAXH@Z%Object ID"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING352           "CALCULATE AUTOMATIC COLLISION%0%?ForceAutomaticEnd@@YAXXZ%"
+    IDS_STRING353           "SET OBJECT TEXTURE%LLLL%?SetTextureModeStage@@YAXHHHH@Z%Object Number, Stage Number, Texturing Mode, Mipmap Flag"
+    IDS_STRING354           "SET OBJECT FILTER%LLL%?SetFilterStage@@YAXHHH@Z%Object Number, Stage Number, Flag"
+    IDS_STRING355           "SET BLEND MAPPING ON%LLLLL%?SetBlendMap@@YAXHHHHH@Z%Object Number, Stage Index, Image Number, TexCoordMode, Blend Mode"
+    IDS_STRING356           "SET OBJECT FRAME%LFL%?SetFrameEx@@YAXHMH@Z%Object Number, Frame, Recalculate Bounds"
+    IDS_STRING357           "SET SHADOW SHADING OFF%L%?SetShadowOff@@YAXH@Z%Object Number"
+    IDS_STRING358           "SET SHADOW POSITION%LFFF%?SetShadowPosition@@YAXHMMM@Z%Mode, X, Y, Z"
+    IDS_STRING359           "SET SHADOW SHADING ON%LLLL%?SetShadowOnEx@@YAXHHHH@Z%Object Number, Mesh Number, Shadow Range, Use Shader"
+    IDS_STRING360           "SET INDEXDATA%LL%?SetIndexData@@YAXHH@Z%Indice Index, Vertex Index"
+    IDS_STRING361           "GET INDEXDATA[%LL%?GetIndexData@@YAHH@Z%Index Number"
+    IDS_STRING362           "GET VERTEXDATA U[%FLL%?GetVertexDataU@@YAKHH@Z%Vertex Index, Stage Number"
+    IDS_STRING363           "GET VERTEXDATA V[%FLL%?GetVertexDataV@@YAKHH@Z%Vertex Index, Stage Number"
+    IDS_STRING364           "PERFORM CSG DIFFERENCE%LL%?PeformCSGDifference@@YAXHH@Z%Target Object, Brush Object"
+    IDS_STRING365           "PERFORM CSG DIFFERENCE ON VERTEXDATA%L%?PeformCSGDifferenceOnVertexData@@YAXH@Z%Brush Mesh"
+    IDS_STRING366           "SET GLOBAL OBJECT CREATION%L%?SetGlobalObjectCreationMode@@YAXH@Z%Creation Mode"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

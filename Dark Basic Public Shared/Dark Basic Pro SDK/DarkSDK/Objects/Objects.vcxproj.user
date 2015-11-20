@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerCommand>F:\Program Files (x86)\The Game Creators\FPS Creator\FPSCreator.exe</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>F:\Program Files (x86)\The Game Creators\FPS Creator\</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugAPP|Win32'">
+    <LocalDebuggerCommand>D:\SteamLibrary\SteamApps\common\Game Guru\Game-MapEditor.exe</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>D:\SteamLibrary\SteamApps\common\Game Guru\</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugLM|Win32'">
+    <LocalDebuggerCommand>F:\TGCSHARED\fpsc-reloaded\FPS Creator Files\Guru-Lightmapper.exe</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>F:\TGCSHARED\fpsc-reloaded\FPS Creator Files\</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugFPSC|Win32'">
+    <LocalDebuggerCommand>F:\TGCSHARED\fpsc-reloaded\FPS Creator Files\Guru-Lightmapper.exe</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>F:\TGCSHARED\fpsc-reloaded\FPS Creator Files</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <RemoteDebuggerCommand>F:\The Game Creators\FPS Creator Reloaded\FPSC-MapEditor.exe</RemoteDebuggerCommand>
+    <RemoteDebuggerServerName>
+    </RemoteDebuggerServerName>
+    <RemoteDebuggerWorkingDirectory>F:\The Game Creators\FPS Creator Reloaded\</RemoteDebuggerWorkingDirectory>
+    <RemoteDebuggerAttach>false</RemoteDebuggerAttach>
+    <RemoteDebuggerCommandArguments>
+    </RemoteDebuggerCommandArguments>
+    <RemoteDebuggerConnection>RemoteWithAuthentication</RemoteDebuggerConnection>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LocalDebuggerCommand>F:\TGCSHARED\fpsc-reloaded\FPS Creator Files\FPSC-Proto-Game.exe</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>F:\TGCSHARED\fpsc-reloaded\FPS Creator Files</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDEBUG|Win32'">
+    <LocalDebuggerCommand>C:\TGCSHARED\fpsc-reloaded\Dark Basic Pro Reloaded\Install\Projects\TestBoneModels\Application.exe</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>C:\TGCSHARED\fpsc-reloaded\Dark Basic Pro Reloaded\Install\Projects\TestBoneModels\</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+</Project>

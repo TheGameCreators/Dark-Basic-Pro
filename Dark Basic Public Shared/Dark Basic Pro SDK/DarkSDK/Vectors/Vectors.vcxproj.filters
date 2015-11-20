@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Vectors &amp; Matrices">
+      <UniqueIdentifier>{1174fcc4-04b3-4b21-a7af-8f019a6c415f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Error">
+      <UniqueIdentifier>{b6e2e9e3-4fdc-4864-9aa5-d3d4c5f85079}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\Vectors\cVectorC.cpp">
+      <Filter>Vectors &amp; Matrices</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Vectors\cVectorManagerC.cpp">
+      <Filter>Vectors &amp; Matrices</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\Vectors\cVectorC.h">
+      <Filter>Vectors &amp; Matrices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Vectors\cVectorDataC.h">
+      <Filter>Vectors &amp; Matrices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Vectors\cVectorManagerC.h">
+      <Filter>Vectors &amp; Matrices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CRuntimeErrors.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Vectors.rc" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Light">
+      <UniqueIdentifier>{ad5a4f92-7d92-4de4-b000-c38eef7b4aa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Error">
+      <UniqueIdentifier>{d34bc628-e6ac-4d97-b203-79bfc3d8e61d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\Light\CLightC.cpp">
+      <Filter>Light</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Light\CLightManagerC.cpp">
+      <Filter>Light</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\Light\CLightC.h">
+      <Filter>Light</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Light\CLightDataC.h">
+      <Filter>Light</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Light\CLightManagerC.h">
+      <Filter>Light</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CError.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CRuntimeErrors.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Light.rc" />
+  </ItemGroup>
+</Project>

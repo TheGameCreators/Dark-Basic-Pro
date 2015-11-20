@@ -1,0 +1,153 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL\0"
+            VALUE "CompanyName", "Dark Basic Software Ltd\0"
+            VALUE "FileDescription", "Dark Basic Professional DLL\0"
+            VALUE "FileVersion", "V1.0\0"
+            VALUE "InternalName", "Dark Basic Professional DLL\0"
+            VALUE "LegalCopyright", "Copyright © 2002\0"
+            VALUE "LegalTrademarks", "DarkBASIC\0"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Dark Basic Professional DLL\0"
+            VALUE "ProductVersion", "V1.0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING1             "INK%LL%?Ink@@YAXKK@Z%Foreground Color,Background Color"
+    IDS_STRING2             "BOX%LLLL%?Box@@YAXHHHH@Z%Left,Top,Right,Bottom"
+    IDS_STRING3             "DOT%LL%?Dot@@YAXHH@Z%X,Y"
+    IDS_STRING4             "CIRCLE%LLL%?Circle@@YAXHHH@Z%X,Y,Radius"
+    IDS_STRING5             "ELLIPSE%LLLL%?Elipse@@YAXHHHH@Z%X,Y,X Radius,Y Radius"
+    IDS_STRING6             "LINE%LLLL%?Line@@YAXHHHH@Z%X1,Y1,X2,Y2"
+    IDS_STRING7             "RGB[%DLLL%?Rgb@@YAKHHH@Z%Red Value,Green Value,Blue Value"
+    IDS_STRING8             "RGBR[%LD%?RgbR@@YAHK@Z%Red Value"
+    IDS_STRING9             "RGBG[%LD%?RgbG@@YAHK@Z%Green Value"
+    IDS_STRING10            "RGBB[%LD%?RgbB@@YAHK@Z%Blue Value"
+    IDS_STRING11            "CLS%L%?ClearRgb@@YAXK@Z%Color Value"
+    IDS_STRING12            "POINT[%DLL%?GetPoint@@YAKHH@Z%X,Y"
+    IDS_STRING13            "LOCK PIXELS%0%?Lock@@YAXXZ"
+    IDS_STRING14            "UNLOCK PIXELS%0%?Unlock@@YAXXZ"
+    IDS_STRING15            "BOX%LLLLDDDD%?BoxGradient@@YAXHHHHKKKK@Z%Left, Top, Right, Bottom, Color1, Color2, Color3, Color4"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING16            "DOT%LLD%?Dot@@YAXHHK@Z%X,Y,Color Value"
+    IDS_STRING17            "GET PIXELS POINTER[%D%?GetPixelPtr@@YAKXZ"
+    IDS_STRING18            "GET PIXELS PITCH[%L%?GetPixelPitch@@YAKXZ"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

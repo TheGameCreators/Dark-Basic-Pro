@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Text">
+      <UniqueIdentifier>{817b4533-c83c-4a88-a116-6883c3e0b7e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Error">
+      <UniqueIdentifier>{d1d30512-3bb9-4c96-a828-6091e851157d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Position">
+      <UniqueIdentifier>{11f97b36-1fbb-4c3c-8036-282a435424ef}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\Text\CTextC.cpp">
+      <Filter>Text</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Position\CPositionC.cpp">
+      <Filter>Position</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLMain.cpp" />
+    <ClCompile Include="..\..\Shared\Core\globstruct.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\Text\CTextC.h">
+      <Filter>Text</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Position\CPositionC.h">
+      <Filter>Position</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Text.rc" />
+  </ItemGroup>
+</Project>

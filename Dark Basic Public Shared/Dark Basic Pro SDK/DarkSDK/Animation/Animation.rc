@@ -1,0 +1,163 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL\0"
+            VALUE "CompanyName", "Dark Basic Software Ltd\0"
+            VALUE "FileDescription", "Dark Basic Professional DLL\0"
+            VALUE "FileVersion", "V1.0\0"
+            VALUE "InternalName", "Dark Basic Professional DLL\0"
+            VALUE "LegalCopyright", "Copyright © 2002\0"
+            VALUE "LegalTrademarks", "DarkBASIC\0"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Dark Basic Professional DLL\0"
+            VALUE "ProductVersion", "V1.0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING1             "LOAD ANIMATION%SL%?LoadAnimation@@YAXKH@Z%Filename,Animation Number"
+    IDS_STRING2             "PLAY ANIMATION%L%?PlayAnimation@@YAXH@Z%Animation Number"
+    IDS_STRING3             "LOOP ANIMATION%L%?LoopAnimation@@YAXH@Z%Animation Number"
+    IDS_STRING4             "DELETE ANIMATION%L%?DeleteAnimation@@YAXH@Z%Animation Number"
+    IDS_STRING5             "STOP ANIMATION%L%?StopAnimation@@YAXH@Z%Animation Number"
+    IDS_STRING6             "PAUSE ANIMATION%L%?PauseAnimation@@YAXH@Z%Animation Number"
+    IDS_STRING7             "RESUME ANIMATION%L%?ResumeAnimation@@YAXH@Z%Animation Number"
+    IDS_STRING8             "PLAY ANIMATION%LLL%?PlayAnimation@@YAXHHH@Z%Animation Number,X,Y"
+    IDS_STRING9             "PLAY ANIMATION%LLLLL%?PlayAnimation@@YAXHHHHH@Z%Animation Number,X,Y,X,Y"
+    IDS_STRING10            "PLAY ANIMATION%LLLLLL%?PlayAnimationToBitmap@@YAXHHHHHH@Z%Animation Number,Bitmap Number,X,Y,X,Y"
+    IDS_STRING11            "LOOP ANIMATION%LLLLLL%?LoopAnimationToBitmap@@YAXHHHHHH@Z%Animation Number,Bitmap Number,X,Y,X,Y"
+    IDS_STRING12            "PLACE ANIMATION%LLLLL%?PlaceAnimation@@YAXHHHHH@Z%Animation Number,X,Y,X,Y"
+    IDS_STRING13            "ANIMATION EXIST[%LL%?AnimationExist@@YAHH@Z%Animation Number"
+    IDS_STRING14            "ANIMATION HEIGHT[%LL%?AnimationHeight@@YAHH@Z%Animation Number"
+    IDS_STRING15            "ANIMATION LOOPING[%LL%?AnimationLooping@@YAHH@Z%Animation Number"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING16            "ANIMATION PAUSED[%LL%?AnimationPaused@@YAHH@Z%Animation Number"
+    IDS_STRING17            "ANIMATION PLAYING[%LL%?AnimationPlaying@@YAHH@Z%Animation Number"
+    IDS_STRING18            "ANIMATION POSITION X[%LL%?AnimationPositionX@@YAHH@Z%Animation Number"
+    IDS_STRING19            "ANIMATION POSITION Y[%LL%?AnimationPositionY@@YAHH@Z%Animation Number"
+    IDS_STRING20            "ANIMATION WIDTH[%LL%?AnimationWidth@@YAHH@Z%Animation Number"
+    IDS_STRING21            "SET ANIMATION VOLUME%LL%?SetAnimationVolume@@YAXHH@Z%Animation Number, Volume"
+    IDS_STRING22            "SET ANIMATION SPEED%LL%?SetAnimationSpeed@@YAXHH@Z%Animation Number, Speed"
+    IDS_STRING23            "ANIMATION VOLUME[%LL%?AnimationVolume@@YAHH@Z%Animation Number"
+    IDS_STRING24            "ANIMATION SPEED[%LL%?AnimationSpeed@@YAHH@Z%Animation Number"
+    IDS_STRING25            "PLAY ANIMATION TO IMAGE%LLLLLL%?PlayAnimationToImage@@YAXHHHHHH@Z%Animation Number,Image,Left,Top,Right,Bottom"
+    IDS_STRING26            "LOAD DVD ANIMATION%L%?LoadDVDAnimation@@YAXH@Z%Animation Number"
+    IDS_STRING27            "SET DVD CHAPTER%LLL%?SetDVDChapter@@YAXHHH@Z%Animation Number, Title Number, Chapter Number"
+    IDS_STRING28            "TOTAL DVD CHAPTERS[%LLL%?TotalDVDChapters@@YAHHH@Z%Animation Number, Title Number"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

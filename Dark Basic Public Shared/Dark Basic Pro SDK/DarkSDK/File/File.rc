@@ -1,0 +1,198 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL\0"
+            VALUE "CompanyName", "Dark Basic Software Ltd\0"
+            VALUE "FileDescription", "Dark Basic Professional DLL\0"
+            VALUE "FileVersion", "V1.0\0"
+            VALUE "InternalName", "Dark Basic Professional DLL\0"
+            VALUE "LegalCopyright", "Copyright © 2002\0"
+            VALUE "LegalTrademarks", "DarkBASIC\0"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Dark Basic Professional DLL\0"
+            VALUE "ProductVersion", "V1.0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING1             "APPNAME$[%S%?Appname@@YAKK@Z"
+    IDS_STRING2             "WINDIR$[%S%?Windir@@YAKK@Z"
+    IDS_STRING3             "PERFORM CHECKLIST FOR DRIVES%0%?ChecklistForDrives@@YAXXZ"
+    IDS_STRING4             "PERFORM CHECKLIST FOR FILES%0%?ChecklistForFiles@@YAXXZ"
+    IDS_STRING5             "CLOSE FILE%L%?CloseFile@@YAXH@Z%File Number"
+    IDS_STRING6             "COPY FILE%SS%?CopyFileA@@YAXKK@Z%Source Filename, Destination Filename"
+    IDS_STRING7             "DELETE DIRECTORY%S%?DeleteDir@@YAXK@Z%Directory Name"
+    IDS_STRING8             "DELETE FILE%S%?DeleteFileA@@YAXK@Z%Filename"
+    IDS_STRING9             "DIR%0%?Dir@@YAXXZ"
+    IDS_STRING10            "DRIVELIST%0%?DriveList@@YAXXZ"
+    IDS_STRING11            "EXECUTE FILE%SSS%?ExecuteFile@@YAXKKK@Z%Filename, Commandline, Directory"
+    IDS_STRING12            "EXECUTE FILE%SSSL%?ExecuteFileEx@@YAXKKKH@Z%Filename, Commandline, Directory, Wait Flag"
+    IDS_STRING13            "FILE END[%LL%?FileEnd@@YAHH@Z%File Number"
+    IDS_STRING14            "FILE EXIST[%LS%?FileExist@@YAHK@Z%Filename"
+    IDS_STRING15            "FILE OPEN[%LL%?FileOpen@@YAHH@Z%File Number"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING16            "FILE SIZE[%LS%?FileSize@@YAHK@Z%Filename"
+    IDS_STRING17            "FIND FIRST%0%?FindFirst@@YAXXZ"
+    IDS_STRING18            "FIND NEXT%0%?FindNext@@YAXXZ"
+    IDS_STRING19            "GET DIR$[%S%?GetDir@@YAKK@Z"
+    IDS_STRING20            "GET FILE DATE$[%S%?GetFileDate@@YAKK@Z"
+    IDS_STRING21            "GET FILE NAME$[%S%?GetFileName@@YAKK@Z"
+    IDS_STRING22            "GET FILE TYPE[%L%?GetFileType@@YAHXZ"
+    IDS_STRING23            "MAKE DIRECTORY%S%?MakeDir@@YAXK@Z%Directory Name"
+    IDS_STRING24            "MAKE FILE%S%?MakeFile@@YAXK@Z%Filename"
+    IDS_STRING25            "MAKE MEMBLOCK FROM FILE%LL%?MakeMemblockFromFile@@YAXHH@Z%Memblock Number, File Number"
+    IDS_STRING26            "MOVE FILE%SS%?MoveFileA@@YAXKK@Z%Source Filename, Destination Filename"
+    IDS_STRING27            "OPEN TO READ%LS%?OpenToRead@@YAXHK@Z%File Number, Filename"
+    IDS_STRING28            "OPEN TO WRITE%LS%?OpenToWrite@@YAXHK@Z%File Number, Filename"
+    IDS_STRING29            "PATH EXIST[%LS%?PathExist@@YAHK@Z%Path String"
+    IDS_STRING30            "READ BYTE%LL*%?ReadByte@@YAHH@Z%File Number, Variable"
+    IDS_STRING31            "READ FILE%LL*%?ReadLong@@YAHH@Z%File Number, Variable"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING32            "READ DIRBLOCK%LS%?ReadDirBlock@@YAXHK@Z%File Number, Folder to Read"
+    IDS_STRING33            "READ FILEBLOCK%LS%?ReadFileBlock@@YAXHK@Z%File Number, Filename to Read"
+    IDS_STRING34            "READ FLOAT%LF*%?ReadFloat@@YAKH@Z%File Number, Variable"
+    IDS_STRING35            "READ LONG%LL*%?ReadLong@@YAHH@Z%File Number, Variable"
+    IDS_STRING36            "READ MEMBLOCK%LL%?ReadMemblock@@YAXHH@Z%File Number, Memblock Number"
+    IDS_STRING37            "READ STRING%LS*%?ReadString@@YAKHK@Z%File Number, Variable String"
+    IDS_STRING38            "READ WORD%LL*%?ReadWord@@YAHH@Z%File Number, Variable"
+    IDS_STRING39            "RENAME FILE%SS%?RenameFile@@YAXKK@Z%Source Filename, New Filename"
+    IDS_STRING40            "SET DIR%S%?SetDir@@YAXK@Z%Path$"
+    IDS_STRING41            "WRITE WORD%LL%?WriteWord@@YAXHH@Z%File Number, Variable"
+    IDS_STRING42            "WRITE BYTE%LL%?WriteByte@@YAXHH@Z%File Number, Variable"
+    IDS_STRING43            "WRITE LONG%LL%?WriteLong@@YAXHH@Z%File Number, Variable"
+    IDS_STRING44            "WRITE DIRBLOCK%LS%?WriteDirBlock@@YAXHK@Z%File Number, Folder to Create"
+    IDS_STRING45            "WRITE FILEBLOCK%LS%?WriteFileBlock@@YAXHK@Z%File Number, Filename to Create"
+    IDS_STRING46            "WRITE FLOAT%LF%?WriteFloat@@YAXHM@Z%File Number, Variable"
+    IDS_STRING47            "WRITE FILE%LL%?WriteLong@@YAXHH@Z%File Number, Variable"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING48            "WRITE MEMBLOCK%LL%?WriteMemblock@@YAXHH@Z%File Number, Memblock Number"
+    IDS_STRING49            "WRITE STRING%LS%?WriteString@@YAXHK@Z%File Number, String"
+    IDS_STRING50            "SKIP BYTES%LL%?SkipBytes@@YAXHH@Z%File Number, Bytes To Skip"
+    IDS_STRING51            "WRITE BYTE TO FILE%SLL%?WriteByteToFile@@YAXKHH@Z%Filename, Position, ByteValue"
+    IDS_STRING52            "READ BYTE FROM FILE[%LSL%?ReadByteFromFile@@YAHKH@Z%Filename, Position"
+    IDS_STRING53            "CD%S%?SetDir@@YAXK@Z%Path$"
+    IDS_STRING54            "GET FILE CREATION$[%S%?GetFileCreation@@YAKK@Z"
+    IDS_STRING55            "MAKE FILE FROM MEMBLOCK%LL%?MakeFileFromMemblock@@YAXHH@Z%File Number, Memblock Number"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

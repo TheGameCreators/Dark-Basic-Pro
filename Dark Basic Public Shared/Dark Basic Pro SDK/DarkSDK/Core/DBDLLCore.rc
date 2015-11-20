@@ -1,0 +1,332 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL"
+            VALUE "CompanyName", "Dark Basic Software Ltd"
+            VALUE "FileDescription", "Dark Basic Professional DLL"
+            VALUE "FileVersion", "V1.0"
+            VALUE "InternalName", "Dark Basic Professional DLL"
+            VALUE "LegalCopyright", "Copyright © 2002"
+            VALUE "LegalTrademarks", "DarkBASIC"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll"
+            VALUE "ProductName", "Dark Basic Professional DLL"
+            VALUE "ProductVersion", "V1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United Kingdom) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_STRING1             "PRINT%R%?PrintR@@YAX_J@Z%Print Statements"
+    IDS_STRING2             "PRINT%O%?PrintO@@YAXN@Z%Print Statements"
+    IDS_STRING4             "CEIL[%FF%?CeilFF@@YAKM@Z%Value"
+    IDS_STRING5             "FLOOR[%FF%?FloorFF@@YAKM@Z%Value"
+    IDS_STRING3             "PRINT%S%?PrintS@@YAXPAD@Z%Print Statements"
+    IDS_STRING6             "PRINT%0%?Print0@@YAXXZ"
+    IDS_STRING7             "PRINTC%R%?PrintCR@@YAX_J@Z%Print Statements"
+    IDS_STRING8             "PRINTC%O%?PrintCO@@YAXN@Z%Print Statements"
+    IDS_STRING9             "PRINTC%S%?PrintCS@@YAXPAD@Z%Print Statements"
+    IDS_STRING10            "CLS%0%?Cls@@YAXXZ"
+    IDS_STRING11            "SET CURSOR%LL%?SetCursor@@YAXHH@Z%X,Y"
+    IDS_STRING12            "INPUT%R*%?InputR@@YA_JXZ%Variable"
+    IDS_STRING13            "INPUT%O*%?InputO@@YANXZ%Variable"
+    IDS_STRING14            "INPUT%S*%?InputS@@YAKK@Z%Variable"
+    IDS_STRING15            "INPUT%A%?%Variable"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING16            "RND[%LL%?RndLL@@YAHH@Z%Range Value"
+    IDS_STRING17            "GET DX VERSION$[%S%?GetDXVer$@@YAKK@Z"
+    IDS_STRING18            "TIMER[%L%?TimerL@@YAHXZ"
+    IDS_STRING19            "COS[%FF%?CosFF@@YAKM@Z%Value"
+    IDS_STRING20            "PRINT%A%?%Printlist"
+    IDS_STRING21            "INKEY$[%S%?InkeyS@@YAKK@Z"
+    IDS_STRING22            "SYNC SLEEP%L%?SyncSleep@@YAXH@Z%Flag Processor Friendly"
+    IDS_STRING23            "SYNC ON%0%?SyncOn@@YAXXZ"
+    IDS_STRING24            "SYNC OFF%0%?SyncOff@@YAXXZ"
+    IDS_STRING25            "SYNC%0%?Sync@@YAXXZ"
+    IDS_STRING26            "SYNC RATE%L%?SyncRate@@YAXH@Z%Rate"
+    IDS_STRING27            "#INCLUDE%0%??%DBA Filename"
+    IDS_STRING28            "CASE DEFAULT%0%??"
+    IDS_STRING29            "CASE%0%??"
+    IDS_STRING30            "DATA%0%??"
+    IDS_STRING31            "DIM%0%??"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING32            "DO%0%??"
+    IDS_STRING33            "ELSE%0%??"
+    IDS_STRING34            "END%0%??"
+    IDS_STRING35            "ENDCASE%0%??"
+    IDS_STRING36            "ENDIF%0%??"
+    IDS_STRING37            "ENDSELECT%0%??"
+    IDS_STRING38            "ENDWHILE%0%??"
+    IDS_STRING39            "EXIT%0%??"
+    IDS_STRING40            "EXITFUNCTION%0%??"
+    IDS_STRING41            "FOR%0%??"
+    IDS_STRING42            "FUNCTION%0%??"
+    IDS_STRING43            "GOSUB%0%??"
+    IDS_STRING44            "GOTO%0%??"
+    IDS_STRING45            "IF%0%??"
+    IDS_STRING46            "LOOP%0%??"
+    IDS_STRING47            "NEXT%0%??"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING48            "SYNC MASK%D%?SyncMask@@YAXK@Z%Ignore Camera Mask"
+    IDS_STRING49            "REM%0%??"
+    IDS_STRING50            "REMEND%0%??"
+    IDS_STRING51            "REMSTART%0%??"
+    IDS_STRING52            "REPEAT%0%??"
+    IDS_STRING53            "RESTORE%Q%?RestoreD@@YAXK@Z%String"
+    IDS_STRING54            "RETURN%0%??"
+    IDS_STRING55            "SELECT%0%??"
+    IDS_STRING56            "STEP%0%??"
+    IDS_STRING57            "UNDIM%0%??"
+    IDS_STRING58            "UNTIL%0%??"
+    IDS_STRING59            "WHILE%0%??"
+    IDS_STRING60            "READ%R*%?ReadR@@YA_JXZ%Varable"
+    IDS_STRING61            "READ%O*%?ReadO@@YANXZ%Varable"
+    IDS_STRING62            "READ%S*%?ReadS@@YAKK@Z%Varable"
+    IDS_STRING63            "READ%A%?"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING64            "ACOS[%FF%?AcosFF@@YAKM@Z%Value"
+    IDS_STRING65            "ASIN[%FF%?AsinFF@@YAKM@Z%Value"
+    IDS_STRING66            "ATAN[%FF%?AtanFF@@YAKM@Z%Value"
+    IDS_STRING67            "ATANFULL[%FFF%?Atan2FFF@@YAKMM@Z%Distance X, Distance Y"
+    IDS_STRING68            "SIN[%FF%?SinFF@@YAKM@Z%Value"
+    IDS_STRING69            "TAN[%FF%?TanFF@@YAKM@Z%Value"
+    IDS_STRING70            "HCOS[%FF%?HcosFF@@YAKM@Z%Value"
+    IDS_STRING71            "HSIN[%FF%?HsinFF@@YAKM@Z%Value"
+    IDS_STRING72            "HTAN[%FF%?HtanFF@@YAKM@Z%Value"
+    IDS_STRING73            "SQRT[%FF%?SqrtFF@@YAKM@Z%Value"
+    IDS_STRING74            "RANDOMIZE%L%?Randomize@@YAXH@Z%Seed Value"
+    IDS_STRING75            "ABS[%FF%AbsFF%Value"
+    IDS_STRING76            "CL$[%S%?Cl$@@YAKK@Z"
+    IDS_STRING77            "GET DATE$[%S%?GetDate$@@YAKK@Z"
+    IDS_STRING78            "GET TIME$[%S%?GetTime$@@YAKK@Z"
+    IDS_STRING79            "INT[%LF%?IntLF@@YAKM@Z%Value"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING80            "SLEEP%L%?SleepL@@YAXH@Z%Number"
+    IDS_STRING81            "WAIT KEY%0%?WaitForKey@@YAXXZ"
+    IDS_STRING82            "SUSPEND FOR KEY%0%?WaitForKey@@YAXXZ"
+    IDS_STRING83            "WAIT MOUSE%0%?WaitForMouse@@YAXXZ"
+    IDS_STRING84            "SUSPEND FOR MOUSE%0%?WaitForMouse@@YAXXZ"
+    IDS_STRING85            "WAIT%L%?SleepL@@YAXH@Z"
+    IDS_STRING86            "FREE STRING$[%S%?FreeStringSS@@YAKK@Z"
+    IDS_STRING87            "EXP[%FF%?ExpFF@@YAKM@Z%Value"
+    IDS_STRING88            "INC%L%??"
+    IDS_STRING89            "DEC%L%??"
+    IDS_STRING90            "SAVE ARRAY%SH%?SaveArray@@YAXPADK@Z%Filename, Array Name(0)"
+    IDS_STRING91            "LOAD ARRAY%SH%?LoadArray@@YAXPADK@Z%Filename, Array Name(0)"
+    IDS_STRING92            "ENDFUNCTION%0%??"
+    IDS_STRING93            "READ%L*%?ReadL@@YAKXZ%Value"
+    IDS_STRING94            "READ%F*%?ReadF@@YAKXZ%Value"
+    IDS_STRING95            "READ%B*%?ReadB@@YAEXZ%Value"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING96            "READ%Y*%?ReadB@@YAEXZ%Variable"
+    IDS_STRING97            "READ%W*%?ReadW@@YAGXZ%Variable"
+    IDS_STRING98            "READ%D*%?ReadD@@YAKXZ%Variable"
+    IDS_STRING99            "FASTSYNC%0%?FastSync@@YAXXZ"
+    IDS_STRING100           "PRINT%X%?PrintR@@YAX_J@Z"
+    IDS_STRING101           "PRINTC%X%?PrintCR@@YAX_J@Z"
+    IDS_STRING102           "CURVEVALUE[%FFFF%?CurveValueFFFF@@YAKMMM@Z%Destination Value, Current Value, Speed Value"
+    IDS_STRING103           "WRAPVALUE[%FF%?WrapValueFF@@YAKM@Z%Angle Value"
+    IDS_STRING104           "NEWXVALUE[%FFFF%?NewXValueFFFF@@YAKMMM@Z%Current X Value, Angle Value, Step Value"
+    IDS_STRING105           "NEWYVALUE[%FFFF%?NewYValueFFFF@@YAKMMM@Z%Current Y Value, Angle Value, Step Value"
+    IDS_STRING106           "NEWZVALUE[%FFFF%?NewZValueFFFF@@YAKMMM@Z%Current Z Value, Angle Value, Step Value"
+    IDS_STRING107           "CURVEANGLE[%FFFF%?CurveAngleFFFF@@YAKMMM@Z%Destination Value, Current Value, Speed Value"
+    IDS_STRING108           "#CONSTANT%A%??"
+    IDS_STRING109           "ARRAY INDEX TO BOTTOM%H%?ArrayIndexToBottom@@YAXK@Z%Array Name(0)"
+    IDS_STRING110           "ARRAY INDEX TO TOP%H%?ArrayIndexToTop@@YAXK@Z%Array Name(0)"
+    IDS_STRING111           "ARRAY INDEX VALID[%LH%?ArrayIndexValid@@YAKK@Z%Array Name(0)"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING112           "NEXT ARRAY INDEX%H%?NextArrayIndex@@YAXK@Z%Array Name(0)"
+    IDS_STRING113           "PREVIOUS ARRAY INDEX%H%?PreviousArrayIndex@@YAXK@Z%Array Name(0)"
+    IDS_STRING114           "ARRAY COUNT[%LH%?ArrayCount@@YAKK@Z%Array Name(0)"
+    IDS_STRING115           "ARRAY INSERT AT BOTTOM%H*%?ArrayInsertAtBottom@@YAKK@Z%Array Name(0)"
+    IDS_STRING116           "ARRAY INSERT AT BOTTOM%H*L%?ArrayInsertAtBottom@@YAKKH@Z%Array Name(0), Index"
+    IDS_STRING117           "ARRAY INSERT AT TOP%H*%?ArrayInsertAtTop@@YAKK@Z%Array Name(0)"
+    IDS_STRING118           "ARRAY INSERT AT TOP%H*L%?ArrayInsertAtTop@@YAKKH@Z%Array Name(0), Index"
+    IDS_STRING119           "ARRAY INSERT AT ELEMENT%H*L%?ArrayInsertAtElement@@YAKKH@Z%Array Name(0), Index"
+    IDS_STRING120           "ARRAY DELETE ELEMENT%H%?ArrayDeleteElement@@YAXK@Z%Array Name(0)"
+    IDS_STRING121           "ARRAY DELETE ELEMENT%HL%?ArrayDeleteElement@@YAXKH@Z%Array Name(0), Index"
+    IDS_STRING122           "EMPTY ARRAY%H%?EmptyArray@@YAXK@Z%Array Name(0)"
+    IDS_STRING123           "ADD TO QUEUE%H*%?AddToQueue@@YAKK@Z%Array Name(0)"
+    IDS_STRING124           "REMOVE FROM QUEUE%H%?RemoveFromQueue@@YAXK@Z%Array Name(0)"
+    IDS_STRING125           "ADD TO STACK%H*%?PushToStack@@YAKK@Z%Array Name(0)"
+    IDS_STRING126           "REMOVE FROM STACK%H%?PopFromStack@@YAXK@Z%Array Name(0)"
+    IDS_STRING127           "ARRAY INDEX TO QUEUE%H%?ArrayIndexToQueue@@YAXK@Z%Array Name(0)"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING128           "ARRAY INDEX TO STACK%H%?ArrayIndexToStack@@YAXK@Z%Array Name(0)"
+    IDS_STRING129           "DRAW TO BACK%0%?DrawToBack@@YAXXZ"
+    IDS_STRING130           "DRAW TO FRONT%0%?DrawToFront@@YAXXZ"
+    IDS_STRING131           "DRAW SPRITES FIRST%0%?DrawSpritesFirst@@YAXXZ"
+    IDS_STRING132           "DRAW SPRITES LAST%0%?DrawSpritesLast@@YAXXZ"
+    IDS_STRING133           "FILL MEMORY%DBL%?FillByteMemory@@YAXKHH@Z%Memory Address, FillByte, Size In Bytes"
+    IDS_STRING134           "COPY MEMORY%DDL%?CopyByteMemory@@YAXKKH@Z%Memory Destination, Memory Source, Size In Bytes"
+    IDS_STRING135           "MAKE MEMORY[%DL%?MakeByteMemory@@YAKH@Z%Size In Bytes"
+    IDS_STRING136           "DELETE MEMORY%D%?DeleteByteMemory@@YAXK@Z%Memory Address"
+    IDS_STRING137           "BREAK%0%?Break@@YAXXZ"
+    IDS_STRING138           "BREAK%S%?BreakS@@YAXK@Z%Debug String"
+    IDS_STRING139           "RESTORE%0%?Restore@@YAXXZ"
+    IDS_STRING140           "FREE STRING[%S%?FreeStringSS@@YAKK@Z"
+    IDS_STRING141           "ALWAYS ACTIVE ON%0%?AlwaysActiveOn@@YAXXZ"
+    IDS_STRING142           "ALWAYS ACTIVE OFF%0%?AlwaysActiveOff@@YAXXZ"
+    IDS_STRING143           "PERFTIMER[%R%?PerformanceTimer@@YA_JXZ"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING144           "GET TYPE PATTERN$[%SSD%?GetTypePattern$@@YAKKKK@Z%Type Name, Type Index"
+    IDS_STRING145           "FASTSYNC%L%?FastSync@@YAXH@Z%Non Display Update Flag"
+    IDS_STRING146           "GET ARRAY TYPE[%LH%?GetArrayType@@YAKK@Z%Array Name(0)"
+    IDS_STRING147           "DRAW TO CAMERA%0%?DrawToCamera@@YAXXZ"
+    IDS_STRING148           "DRAW TO SCREEN%0%?DrawToScreen@@YAXXZ"
+    IDS_STRING149           "PERFFREQ[%R%?PerformanceFrequency@@YA_JXZ"
+    IDS_STRING150           "SYNC%L%?Sync@@YAXH@Z%Process Messages"
+    IDS_STRING151           "LERP[%FFFF%Lerp%Value A, Value B, Interpolation"
+    IDS_STRING152           "SIGN[%FF%SignF%Float#"
+    IDS_STRING153           "COPY SIGN[%FFF%CopySign%Data#, Sign#"
+    IDS_STRING154           "FLOAT TO INT FAST[%LF%FloatToIntFast%Float#"
+    IDS_STRING155           "FLOAT TO DWORD FAST[%DF%FloatToDwordFast%Float#"
+    IDS_STRING156           "SQRT FAST[%FF%SqrtFast%Square#"
+    IDS_STRING157           "INV SQRT FAST[%FF%InvSqrtFast%Square#"
+    IDS_STRING158           "MANAGE MEMORY[%DDD%ManageMemory%Memory Address, Size In Bytes"
+    IDS_STRING159           "NEXT POWER OF TWO[%LL%NextPowerOfTwo1%Integer"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STRING160           "NEXT POWER OF TWO[%LLL%NextPowerOfTwo2%Integer, Integer"
+    IDS_STRING161           "TEST MEMORY[%LL%?TestMemory@@YAHH@Z%Size In Bytes"
+    IDS_STRING162           "CLAMP[%FFFF%Clamp%Value, Low, High"
+    IDS_STRING163           "CLAMP SNORM[%FF%ClampSNorm%Value"
+    IDS_STRING164           "CLAMP UNORM[%FF%ClampUNorm%Value"
+    IDS_STRING165           "MIN[%FFF%Min%Value A, Value B"
+    IDS_STRING166           "MAX[%FFF%Max%Value A, Value B"
+    IDS_STRING167           "MEMORY SNAPSHOT%L%?MemorySnapshot@@YAXH@Z"
+    IDS_STRING168           "ENCRYPT FILE%S%?EncryptDBPro@@YAXK@Z%Filename"
+    IDS_STRING169           "ENCRYPT ALL FILES%S%?EncryptAllFiles@@YAXK@Z%Filename"
+    IDS_STRING170           "ENCRYPT WORKSHOP FILE%S%?EncryptWorkshopDBPro@@YAXK@Z%Filename"
+END
+
+#endif    // English (United Kingdom) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

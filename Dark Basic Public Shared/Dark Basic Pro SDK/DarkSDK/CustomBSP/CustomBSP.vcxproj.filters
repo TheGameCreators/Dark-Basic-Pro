@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Error">
+      <UniqueIdentifier>{86c19954-646b-4fd3-bdca-337ce44e3d87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BSP">
+      <UniqueIdentifier>{eb8bc4e1-2f99-4475-84a7-a9b8396a3943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collision">
+      <UniqueIdentifier>{1894a26f-56fc-4331-9c3d-edd7e5ecbb50}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\CustomBSP\CCustomBSPC.cpp">
+      <Filter>BSP</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\CustomBSP\CCollisionManager.cpp">
+      <Filter>Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\CustomBSP\Collision.cpp">
+      <Filter>Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\Error\CError.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\CustomBSP\CCustomBSPC.h">
+      <Filter>BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\CustomBSP\CCustomBSPData.h">
+      <Filter>BSP</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\CustomBSP\CCollisionManager.h">
+      <Filter>Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\CustomBSP\Collision.h">
+      <Filter>Collision</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CustomBSP.rc" />
+  </ItemGroup>
+</Project>

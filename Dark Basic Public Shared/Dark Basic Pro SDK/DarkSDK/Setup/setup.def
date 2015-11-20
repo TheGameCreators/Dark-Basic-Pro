@@ -1,0 +1,5 @@
+LIBRARY		setup.dll
+DESCRIPTION	'DarkBASIC Pro Setup DLL'
+EXPORTS
+            Test
+            Display

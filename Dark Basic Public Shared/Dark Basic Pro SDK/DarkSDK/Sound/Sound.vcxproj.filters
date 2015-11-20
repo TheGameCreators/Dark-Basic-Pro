@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Sound">
+      <UniqueIdentifier>{d585c180-8734-4a8e-bd82-6c6d37fe2b87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sound\Helpers">
+      <UniqueIdentifier>{9667b73c-073e-4678-bab9-99ebdc66e2a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Error">
+      <UniqueIdentifier>{c41daefb-ab7d-407f-b3f2-8488f11931f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Data">
+      <UniqueIdentifier>{e3dfeeb8-8adc-4833-92c9-ab9c48af5d56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ogg">
+      <UniqueIdentifier>{9d9897d1-f253-444f-b514-02800078af4c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\Sound\ADPCMtoWAV.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Sound\CSoundC.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Sound\CSoundManagerC.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Sound\dsutil.cpp">
+      <Filter>Sound\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Sound\dxutil.cpp">
+      <Filter>Sound\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Data\CDataC.cpp">
+      <Filter>Data</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SHARED\Sound\OggVorbis.cpp">
+      <Filter>Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SHARED\Sound\OggVorbisEncoderAudio.cpp">
+      <Filter>Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SHARED\Sound\OggVorbisEncoderEncode.cpp">
+      <Filter>Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SHARED\Sound\OggVorbisEncoderMain.cpp">
+      <Filter>Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SHARED\Sound\OggVorbisEncoderPlatform.cpp">
+      <Filter>Ogg</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLMain.cpp" />
+    <ClCompile Include="..\..\Shared\Core\SteamCheckForWorkshop.cpp">
+      <Filter>Sound</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\Sound\ADPCMtoWAV.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Sound\CSoundC.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Sound\CSoundDataC.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Sound\CSoundManagerC.h">
+      <Filter>Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Sound\dsutil.h">
+      <Filter>Sound\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Sound\dxutil.h">
+      <Filter>Sound\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CError.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CRuntimeErrors.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SHARED\Sound\OggVorbisEncoderAudio.h">
+      <Filter>Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SHARED\Sound\OggVorbisEncoderEncode.h">
+      <Filter>Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SHARED\Sound\OggVorbisEncoderPlatform.h">
+      <Filter>Ogg</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Sound.rc" />
+  </ItemGroup>
+</Project>

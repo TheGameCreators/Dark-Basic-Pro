@@ -1,0 +1,180 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "Comments", "Dark Basic Professional DLL\0"
+            VALUE "CompanyName", "Dark Basic Software Ltd\0"
+            VALUE "FileDescription", "Dark Basic Professional DLL\0"
+            VALUE "FileVersion", "V1.0\0"
+            VALUE "InternalName", "Dark Basic Professional DLL\0"
+            VALUE "LegalCopyright", "Copyright © 2002\0"
+            VALUE "LegalTrademarks", "DarkBASIC\0"
+            VALUE "OriginalFilename", "DBProAnimationDebug.dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "Dark Basic Professional DLL\0"
+            VALUE "ProductVersion", "V1.0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING1             "PERFORM CHECKLIST FOR NET CONNECTIONS%0%?PerformChecklistForNetConnections@@YAXXZ"
+    IDS_STRING2             "SET NET CONNECTION%L%?SetNetConnections@@YAXH@Z%Connection Number"
+    IDS_STRING3             "SET NET CONNECTION%LS%?SetNetConnectionsEx@@YAXHPAD@Z%Connection Number,Address Data"
+    IDS_STRING4             "PERFORM CHECKLIST FOR NET SESSIONS%0%?PerformChecklistForNetSessions@@YAXXZ"
+    IDS_STRING5             "CREATE NET GAME%SSL%?CreateNetGame@@YAXPAD0H@Z%Gamename, Playername, Number Of Players"
+    IDS_STRING6             "CREATE NET GAME%SSLL%?CreateNetGameEx@@YAXPAD0HH@Z%Gamename, Playername, Number Of Players, Flag"
+    IDS_STRING7             "JOIN NET GAME%LS%?JoinNetGame@@YAXHPAD@Z%Session Number, Playername"
+    IDS_STRING8             "FREE NET GAME%0%?CloseNetGame@@YAXXZ"
+    IDS_STRING9             "PERFORM CHECKLIST FOR NET PLAYERS%0%?PerformChecklistForNetPlayers@@YAXXZ"
+    IDS_STRING10            "CREATE NET PLAYER%S%?CreatePlayer@@YAXPAD@Z%Playername"
+    IDS_STRING11            "CREATE NET PLAYER[%LS%?CreatePlayerEx@@YAHPAD@Z%Playername"
+    IDS_STRING12            "FREE NET PLAYER%L%?DestroyPlayer@@YAXH@Z%Player Number"
+    IDS_STRING13            "SEND NET MESSAGE INTEGER%LL%?SendNetMsgL@@YAXHH@Z%Player Number, Integer Value"
+    IDS_STRING14            "SEND NET MESSAGE FLOAT%LF%?SendNetMsgF@@YAXHK@Z%Player Number, Float Value"
+    IDS_STRING15            "SEND NET MESSAGE STRING%LS%?SendNetMsgS@@YAXHPAD@Z%Player Number, String"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING16            "SEND NET MESSAGE MEMBLOCK%LL%?SendNetMsgMemblock@@YAXHH@Z%Player Number, Memblock Number"
+    IDS_STRING17            "SEND NET MESSAGE MEMBLOCK%LLL%?SendNetMsgMemblockEx@@YAXHHH@Z%Player Number, Memblock Number, Guarentee Packet"
+    IDS_STRING18            "SEND NET MESSAGE IMAGE%LLL%?SendNetMsgImage@@YAXHHH@Z%Player Number, Image Number, Guarentee Packet"
+    IDS_STRING19            "SEND NET MESSAGE BITMAP%LLL%?SendNetMsgBitmap@@YAXHHH@Z%Player Number, Bitmap Number, Guarentee Packet"
+    IDS_STRING20            "SEND NET MESSAGE SOUND%LLL%?SendNetMsgSound@@YAXHHH@Z%Player Number, Sound Number, Guarentee Packet"
+    IDS_STRING21            "SEND NET MESSAGE MESH%LLL%?SendNetMsgMesh@@YAXHHH@Z%Player Number, Mesh Number, Guarentee Packet"
+    IDS_STRING22            "GET NET MESSAGE%0%?GetNetMsg@@YAXXZ"
+    IDS_STRING23            "NET MESSAGE INTEGER[%L%?NetMsgInteger@@YAHXZ"
+    IDS_STRING24            "NET MESSAGE FLOAT[%F%?NetMsgFloat@@YAKXZ"
+    IDS_STRING25            "NET MESSAGE STRING$[%S%?NetMsgString@@YAKK@Z"
+    IDS_STRING26            "NET MESSAGE IMAGE%L%?NetMsgImage@@YAXH@Z%Image Number"
+    IDS_STRING27            "NET MESSAGE MESH%L%?NetMsgMesh@@YAXH@Z%Mesh Number"
+    IDS_STRING28            "NET MESSAGE SOUND%L%?NetMsgSound@@YAXH@Z%Sound Number"
+    IDS_STRING29            "NET MESSAGE MEMBLOCK%L%?NetMsgMemblock@@YAXH@Z%Memblock Number"
+    IDS_STRING30            "NET MESSAGE BITMAP%L%?NetMsgBitmap@@YAXH@Z%Bitmap Number"
+    IDS_STRING31            "NET GAME EXISTS[%L%?NetSessionExists@@YAHXZ"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_STRING32            "NET GAME NOW HOSTING[%L%?NetSessionIsNowHosting@@YAHXZ"
+    IDS_STRING33            "NET GAME LOST[%L%?NetSessionLost@@YAHXZ"
+    IDS_STRING34            "NET MESSAGE EXISTS[%L%?NetMsgExists@@YAHXZ"
+    IDS_STRING35            "NET MESSAGE PLAYER FROM[%L%?NetMsgPlayerFrom@@YAHXZ"
+    IDS_STRING36            "NET MESSAGE PLAYER TO[%L%?NetMsgPlayerTo@@YAHXZ"
+    IDS_STRING37            "NET MESSAGE TYPE[%L%?NetMsgType@@YAHXZ"
+    IDS_STRING38            "NET PLAYER DESTROYED[%L%?NetPlayerDestroyed@@YAHXZ"
+    IDS_STRING39            "NET PLAYER CREATED[%L%?NetPlayerCreated@@YAHXZ"
+    IDS_STRING40            "DEFAULT NET GAME[%LSSLL%?MagicNetGame@@YAHKKHH@Z%Gamename, Playername, Number Of Players, Game Type"
+    IDS_STRING41            "NET BUFFER SIZE[%L%?NetBufferSize@@YAHXZ"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

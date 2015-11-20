@@ -1,0 +1,27 @@
+[WORDS]
+1=Restore Date From At Least
+2=Demo Expired
+3=Days Ago
+4=DEMO VERSION EXECUTABLE
+5=DAYS LEFT
+6=FAILED TO VALIDATE COMPILER!
+7=PROTECTION ERROR
+8=NOT ALL COMPILER FILES EXIST!
+9=INTERNAL ERROR
+
+[DEBUGGER]
+1=Command Line Interface
+2=Variable Watcher
+3=Step Through Mode
+4=Variable
+5=Value
+6=Watch A
+7=Watch B
+8=Global
+9=NONSTANDARD TYPE
+10=line
+11=No Program Listed
+12=Stop Program
+13=Step Program
+14=Slow Program
+15=Play Program

@@ -1,0 +1,59 @@
+; **** Dark BASIC Professional Project File ****
+version=DBP1.00
+project name=BrowseMedia
+
+
+
+; **** source file information ****
+main=BrowseMedia.dba
+; The compiler only needs to read the final source from this entry - the editor
+; handles include files, concatenation, etc.
+final source=_Temp.dbsource
+
+; The editor will replace any references to %temp in the EXE path/filename
+executable=BrowseMedia.exe
+
+; **** Executable Information  ***
+; build types: exe, media, installer,alone
+build type=exe
+
+; ** Media file compression **
+compression=NO
+; ** Media file encryption **
+encryption=NO
+; ** Display the card options screen window? **
+card options window=NO
+
+; **** debugger information ****
+; If the editor sets this to yes, it is running in debug mode
+CLI=NO
+
+; **** display mode information ****
+app title=Browse Media
+; graphics mode options: fullscreen, window, desktop,fulldesktop, hidden
+graphics mode=window
+fullscreen resolution=640x480x16
+; arbitrary sizes are valid for windowed mode
+window resolution=800x600
+
+; **** External Files Information ****
+; **** Media ****
+media root path=
+; example entries: media1=graphics\*.jpg
+
+; **** Icons ****
+icon1=icon.ICO
+
+; **** Cursors ****
+
+; **** Version Info ****
+VerComments=
+VerCompany=
+VerFileDesc=
+VerFileNumber=v1.0
+VerInternal=
+VerCopyright=
+VerTrademark=
+VerFilename=
+VerProduct=
+VerProductNumber=v1.0

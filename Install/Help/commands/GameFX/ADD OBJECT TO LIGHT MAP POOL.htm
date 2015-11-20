@@ -1,0 +1,196 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\..\main.htm"><img src="..\..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\commands.htm"><img src="..\..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\..\examples.htm"><img src="..\..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\documents.htm"><img src="..\..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\..\index.htm"><img src="..\..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<!-- Function Head -->
+<font face="Verdana" size="5">
+<b>
+ADD OBJECT TO LIGHT MAP POOL
+</b>
+<font face="Verdana" size="2">
+<p>
+This command will add the mesh of an object to the lightmapping process, which can even be a dynamic object not in the static universe.
+</p>
+</font>
+<!-- Synopsis -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Syntax
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+ADD OBJECT TO LIGHT MAP POOL Object Number
+</pre>
+</font>
+<!-- Parameters -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Parameters
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+Object Number
+</pre>
+<blockquote>
+Integer
+<br>
+The object number of the object to lightmap
+</blockquote>
+</font>
+<BR>
+<!-- Returns -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Returns
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+This command does not return a value.
+</p>
+</font>
+<!-- Examples -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+Example Code
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<pre>
+cls 0 : ink rgb(255,255,255),0 : circle 16,16,14<br>
+scorchimage=1 : get image scorchimage,0,0,32,32<br>
+set static universe 40*100,21*100,40*100<br>
+tfile$="universe.dbo"<br>
+if file exist(tfile$)=1<br>
+ dividetexturesize=0 : load static objects tfile$,dividetexturesize : omax=1<br>
+else<br>
+ collision=2 : Arbitraryvalue=0 : shadow=1 : portal=1 : o=1<br>
+ for x=0 to 10 : for z=0 to 10<br>
+  make object box o,100,5,100 : position object o,x*100,2.5,z*100<br>
+  make static object o,collision,Arbitraryvalue,shadow,portal : inc o<br>
+  if x=6 and z=6<br>
+   make object cube o,25 : make mesh from object 1,o : position object o,x*100,-10,z*100<br>
+   for l=1 to 15 : add limb o,l,1 : offset limb o,l,0,l*28,0 : make static limb o,l,collision,Arbitraryvalue,shadow,portal : next l : inc o<br>
+  endif<br>
+ next z : next x<br>
+ for w=1 to 4<br>
+  if w=1 then sx=1000 : sz=50 : px=500 : pz=0<br>
+  if w=2 then sx=1000 : sz=50 : px=500 : pz=1000<br>
+  if w=3 then sx=50 : sz=1000 : px=0 : pz=500<br>
+  if w=4 then sx=50 : sz=1000 : px=1000 : pz=500<br>
+  make object box o,sx,200,sz : position object o,px,100,pz<br>
+  make static object o,collision,Arbitraryvalue,shadow,portal : inc o<br>
+ next w<br>
+ for er=12 to 33 : delete static object er : next er<br>
+ build static portals : delete light map lights : add static objects to light map pool<br>
+ make object cube o,100 : position object o,600,75,400 : add object to light map pool o<br>
+ make mesh from object 3,o : add limb o,1,3 : offset limb o,1,0,0,-125<br>
+ add limb to light map pool o,1 : inc o<br>
+ add light map light 400,90,800,500,255,0,0,50,1<br>
+ add light map light 200,90,400,500,0,255,0,50,1<br>
+ add light map light 800,90,200,500,0,0,255,50,1<br>
+ texturesize=16 : texturequality=1 : lightmapsavepath$="lightmaps"<br>
+ if path exist(lightmapsavepath$)=0 then make directory lightmapsavepath$<br>
+ create light maps texturesize,texturequality,lightmapsavepath$<br>
+ if file exist(tfile$)=1 then delete file tfile$<br>
+ save static objects tfile$ : omax=o<br>
+ for i=1 to omax-1 : delete object i : next i<br>
+endif<br>
+set static scorch scorchimage,1,1<br>
+d=omax : make object cone d,100 : make mesh from object 2,d : add limb d,1,2 : rotate limb d,1,90,0,0<br>
+offset limb d,1,0,0,50 : scale limb d,1,30,100,30<br>
+position object d,500,150,600 : color object d,rgb(255,255,0) : yrotate object d,0 : attach object to static d<br>
+make object cube d+1,50 : position object d+1,700,200,500 : make object box d+2,100,100,20 : make object box d+3,80,80,40<br>
+perform csg difference d+2,d+3 : position object d+3,100,150,925 : position object d+2,100,50,925<br>
+make object box d+4,100,100,20 : make object box d+5,80,80,40 : perform csg union d+4,d+5 : position object d+5,300,150,925 : position object d+4,300,50,925<br>
+make object box d+6,100,100,20 : make object box d+7,80,80,40 : perform csg intersection d+6,d+7 : position object d+7,500,150,925 : position object d+6,500,50,925<br>
+make object box d+8,100,100,20 : make object box d+9,80,80,40 : perform csg clip d+8,d+9 : position object d+9,700,150,925 : position object d+8,700,50,925<br>
+make object sphere d+11,75,30,30 : make mesh from object d+11,d+11 : reduce mesh d+11,0,0,10,5,10<br>
+delete object d+11 : make object d+11,d+11,0 : position object d+11,900,150,925<br>
+make object box d+10,100,100,20 : make mesh from object d+10,d+10<br>
+lock vertexdata for mesh d+10<br>
+perform csg difference on vertexdata d+11 : perform csg union on vertexdata d+11 : perform csg intersection on vertexdata d+11<br>
+unlock vertexdata<br>
+delete object d+10 : make object d+10,d+10,0 : position object d+10,900,50,925<br>
+set global shadows on : set global shadow shades 1 : set global shadow color 0,0,0,64<br>
+set shadow light 1,300,500,700,2000 : set shadow position -1,300,500,700<br>
+for i=0 to 11 : set shadow shading on d+i : next i<br>
+position camera 300,50,300 : point camera 500,50,500<br>
+set point light 0,500,300,500 : set ambient light 20<br>
+set normalization on : sync on : sync rate 60<br>
+while mouseclick()=0<br>
+ if inkey$()="-" then set static portals on<br>
+ if inkey$()="=" then set static portals off<br>
+ if inkey$()="[" then set static objects wireframe on<br>
+ if inkey$()="]" then set static objects wireframe off<br>
+ control camera using arrowkeys 0,2,4<br>
+ x#=object position x(d) : y#=object position y(d) : z#=object position z(d)<br>
+ nx#=newxvalue(x#,object angle y(d),75.0) : nz#=newzvalue(z#,object angle y(d),75.0)<br>
+ if static raycast(x#,y#,z#,nx#,y#,nz#)=0<br>
+  yrotate object d,object angle y(d)+rnd(10)/100.0 : move object d,1<br>
+ else<br>
+  yrotate object d,object angle y(d)+1 : add static scorch 25,0<br>
+ endif<br>
+ if static volume(x#,y#,z#,x#,y#-5,z#,10)=0 then position object d,x#,y#-5,z#<br>
+ if createdinvisiblefloor=0<br>
+  make static collision box -100,-200,-100,1100,0,1100 : createdinvisiblefloor=1<br>
+ else<br>
+  x#=object position x(d+1) : y#=object position y(d+1) : z#=object position z(d+1)<br>
+  if get static collision hit(x#-25,y#-25,z#-25,x#+25,y#+25,z#+25,x#-25,y#-30,z#-25,x#+25,y#+20,z#+25)=0<br>
+   y#=y#-grav# : inc grav#,0.5<br>
+  else<br>
+   colArbitraryvalue=get static collision value() : colcount=get static collision count() : colfloor=get static collision floor()<br>
+   x#=x#+get static collision x() : y#=y#+get static collision y() : z#=z#+get static collision z()<br>
+  endif<br>
+  position object d+1,x#,y#,z#<br>
+  if static line of sight(x#,y#,z#,x#,y#-5,z#-1,0.1,0.1)=1 then grav#=grav#*-0.95<br>
+ endif<br>
+ sync<br>
+endwhile<br>
+set global shadows off : detach object from static d : delete static objects<br>
+end
+</pre>
+</font>
+<!-- See Also -->
+<table width="590" cellpadding="3">
+<tr><td bgcolor="#0d4283"><font color="#ffffff" size="3"><b>&nbsp;
+See also
+</b></font></td></tr>
+</table>
+<font face="Verdana" size="2">
+<p>
+<a href="..\GameFX.htm">GAMEFX Commands Menu<BR>
+</a>
+<a href="..\..\index.htm">Index</a><BR>
+</p>
+</font>
+<BR>
+<!-- Function Footer -->
+</font>
+</td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

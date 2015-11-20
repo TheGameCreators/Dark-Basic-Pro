@@ -1,0 +1,164 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+</td></tr></table>
+<center><table width="340" border="0" cellpadding="0" cellspacing="0"><tr><td ALIGN="center"><FONT SIZE=4 FACE=Verdana><B>core</B></FONT><BR><IMG SRC=..\gfx\divide.jpg width="340" height=5><BR>
+</td></tr></table></center><br><table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+This command set represents the foundation functionality of the language, and is independent of any media or third party requirements such as DirectX. The commands are primitive, yet allow enough functionality to create useful programs that are very small in size.<BR>
+<BR>
+<PRE><FONT FACE=Verdana SIZE=1><a href="core\_INCLUDE.htm">#INCLUDE</a> : #INCLUDE
+<a href="core\_CONSTANT.htm">#CONSTANT</a> : #CONSTANT  Value
+<a href="core\REM.htm">REM</a> : REM
+<a href="core\REMSTART.htm">REMSTART</a> : REMSTART
+<a href="core\REMEND.htm">REMEND</a> : REMEND
+<a href="core\SYNC ON.htm">SYNC ON</a> : SYNC ON
+<a href="core\SYNC OFF.htm">SYNC OFF</a> : SYNC OFF
+<a href="core\SYNC RATE.htm">SYNC RATE</a> : SYNC RATE Rate
+<a href="core\SYNC SLEEP.htm">SYNC SLEEP</a> : SYNC SLEEP Flag Processor Friendly
+<a href="core\SYNC MASK.htm">SYNC MASK</a> : SYNC MASK Ignore Camera Mask
+<a href="core\SYNC.htm">SYNC</a> : SYNC
+<a href="core\FASTSYNC.htm">FASTSYNC</a> : FASTSYNC
+<BR>
+<a href="core\CLS.htm">CLS</a> : CLS
+<a href="core\SET CURSOR.htm">SET CURSOR</a> : SET CURSOR X,Y
+<a href="core\PRINT.htm">PRINT</a> : PRINT Print Statements
+<a href="core\PRINTC.htm">PRINTC</a> : PRINTC Print Statements
+<a href="core\INPUT.htm">INPUT</a> : INPUT Print Statements, Input Variable
+<BR>
+<a href="core\DIM.htm">DIM</a> : DIM
+<a href="core\UNDIM.htm">UNDIM</a> : UNDIM
+<a href="core\DO.htm">DO</a> : DO
+<a href="core\EXIT.htm">EXIT</a> : EXIT
+<a href="core\LOOP.htm">LOOP</a> : LOOP
+<a href="core\END.htm">END</a> : END
+<a href="core\IF.htm">IF</a> : IF
+<a href="core\ELSE.htm">ELSE</a> : ELSE
+<a href="core\ENDIF.htm">ENDIF</a> : ENDIF
+<a href="core\REPEAT.htm">REPEAT</a> : REPEAT
+<a href="core\UNTIL.htm">UNTIL</a> : UNTIL
+<a href="core\WHILE.htm">WHILE</a> : WHILE
+<a href="core\ENDWHILE.htm">ENDWHILE</a> : ENDWHILE
+<a href="core\FOR.htm">FOR</a> : FOR
+<a href="core\STEP.htm">STEP</a> : STEP
+<a href="core\NEXT.htm">NEXT</a> : NEXT
+<a href="core\GOTO.htm">GOTO</a> : GOTO
+<a href="core\GOSUB.htm">GOSUB</a> : GOSUB
+<a href="core\RETURN.htm">RETURN</a> : RETURN
+<a href="core\SELECT.htm">SELECT</a> : SELECT
+<a href="core\CASE.htm">CASE</a> : CASE
+<a href="core\CASE DEFAULT.htm">CASE DEFAULT</a> : CASE DEFAULT
+<a href="core\ENDCASE.htm">ENDCASE</a> : ENDCASE
+<a href="core\ENDSELECT.htm">ENDSELECT</a> : ENDSELECT
+<a href="core\FUNCTION.htm">FUNCTION</a> : FUNCTION
+<a href="core\EXITFUNCTION.htm">EXITFUNCTION</a> : EXITFUNCTION
+<a href="core\ENDFUNCTION.htm">ENDFUNCTION</a> : ENDFUNCTION
+<a href="core\RESTORE.htm">RESTORE</a> : RESTORE String
+<a href="core\READ.htm">READ</a> : READ Varable
+<a href="core\DATA.htm">DATA</a> : DATA
+<a href="core\SAVE ARRAY.htm">SAVE ARRAY</a> : SAVE ARRAY Filename, Array Name(0)
+<a href="core\LOAD ARRAY.htm">LOAD ARRAY</a> : LOAD ARRAY Filename, Array Name(0)
+<a href="core\WAIT.htm">WAIT</a> : WAIT Integer Value
+<a href="core\SLEEP.htm">SLEEP</a> : SLEEP Number
+<a href="core\WAIT KEY.htm">WAIT KEY</a> : WAIT KEY
+<a href="core\WAIT MOUSE.htm">WAIT MOUSE</a> : WAIT MOUSE
+<a href="core\SUSPEND FOR KEY.htm">SUSPEND FOR KEY</a> : SUSPEND FOR KEY
+<a href="core\SUSPEND FOR MOUSE.htm">SUSPEND FOR MOUSE</a> : SUSPEND FOR MOUSE
+<a href="core\BREAK.htm">BREAK</a> : BREAK
+<a href="core\DRAW TO BACK.htm">DRAW TO BACK</a> : DRAW TO BACK
+<a href="core\DRAW TO FRONT.htm">DRAW TO FRONT</a> : DRAW TO FRONT
+<a href="core\DRAW TO CAMERA.htm">DRAW TO CAMERA</a> : DRAW TO CAMERA
+<a href="core\DRAW TO SCREEN.htm">DRAW TO SCREEN</a> : DRAW TO SCREEN
+<a href="core\DRAW SPRITES FIRST.htm">DRAW SPRITES FIRST</a> : DRAW SPRITES FIRST
+<a href="core\DRAW SPRITES LAST.htm">DRAW SPRITES LAST</a> : DRAW SPRITES LAST
+<a href="core\RANDOMIZE.htm">RANDOMIZE</a> : RANDOMIZE Seed Value
+<a href="core\INC.htm">INC</a> : INC Integer Value
+<a href="core\DEC.htm">DEC</a> : DEC Integer Value
+<BR>
+<a href="core\MAKE MEMORY.htm">MAKE MEMORY</a> : Return DWORD=MAKE MEMORY(Size In Bytes)
+<a href="core\DELETE MEMORY.htm">DELETE MEMORY</a> : DELETE MEMORY Memory Address
+<a href="core\FILL MEMORY.htm">FILL MEMORY</a> : FILL MEMORY Memory Address, FillByte, Size In Bytes
+<a href="core\COPY MEMORY.htm">COPY MEMORY</a> : COPY MEMORY Memory Destination, Memory Source, Size In Bytes
+<BR>
+<a href="core\EMPTY ARRAY.htm">EMPTY ARRAY</a> : EMPTY ARRAY Array Name(0)
+<a href="core\ARRAY INSERT AT TOP.htm">ARRAY INSERT AT TOP</a> : ARRAY INSERT AT TOP Array Name(0)
+<a href="core\ARRAY INSERT AT BOTTOM.htm">ARRAY INSERT AT BOTTOM</a> : ARRAY INSERT AT BOTTOM Array Name(0)
+<a href="core\ARRAY INSERT AT ELEMENT.htm">ARRAY INSERT AT ELEMENT</a> : ARRAY INSERT AT ELEMENT Array Name(0), Index
+<a href="core\ARRAY DELETE ELEMENT.htm">ARRAY DELETE ELEMENT</a> : ARRAY DELETE ELEMENT Array Name(0)
+<a href="core\NEXT ARRAY INDEX.htm">NEXT ARRAY INDEX</a> : NEXT ARRAY INDEX Array Name(0)
+<a href="core\PREVIOUS ARRAY INDEX.htm">PREVIOUS ARRAY INDEX</a> : PREVIOUS ARRAY INDEX Array Name(0)
+<a href="core\ARRAY INDEX TO TOP.htm">ARRAY INDEX TO TOP</a> : ARRAY INDEX TO TOP Array Name(0)
+<a href="core\ARRAY INDEX TO BOTTOM.htm">ARRAY INDEX TO BOTTOM</a> : ARRAY INDEX TO BOTTOM Array Name(0)
+<a href="core\ARRAY INDEX TO QUEUE.htm">ARRAY INDEX TO QUEUE</a> : ARRAY INDEX TO QUEUE Array Name(0)
+<a href="core\ADD TO QUEUE.htm">ADD TO QUEUE</a> : ADD TO QUEUE Array Name(0)
+<a href="core\REMOVE FROM QUEUE.htm">REMOVE FROM QUEUE</a> : REMOVE FROM QUEUE Array Name(0)
+<a href="core\ARRAY INDEX TO STACK.htm">ARRAY INDEX TO STACK</a> : ARRAY INDEX TO STACK Array Name(0)
+<a href="core\ADD TO STACK.htm">ADD TO STACK</a> : ADD TO STACK Array Name(0)
+<a href="core\REMOVE FROM STACK.htm">REMOVE FROM STACK</a> : REMOVE FROM STACK Array Name(0)
+<BR>
+<a href="core\COS.htm">COS</a> : Return Float=COS(Value)
+<a href="core\SIN.htm">SIN</a> : Return Float=SIN(Value)
+<a href="core\TAN.htm">TAN</a> : Return Float=TAN(Value)
+<a href="core\ACOS.htm">ACOS</a> : Return Float=ACOS(Value)
+<a href="core\ASIN.htm">ASIN</a> : Return Float=ASIN(Value)
+<a href="core\ATAN.htm">ATAN</a> : Return Float=ATAN(Value)
+<a href="core\ATANFULL.htm">ATANFULL</a> : Return Float=ATANFULL(Distance X, Distance Y)
+<a href="core\HCOS.htm">HCOS</a> : Return Float=HCOS(Value)
+<a href="core\HSIN.htm">HSIN</a> : Return Float=HSIN(Value)
+<a href="core\HTAN.htm">HTAN</a> : Return Float=HTAN(Value)
+<a href="core\SQRT.htm">SQRT</a> : Return Float=SQRT(Value)
+<a href="core\ABS.htm">ABS</a> : Return Float=ABS(Value)
+<a href="core\INT.htm">INT</a> : Return Integer=INT(Value)
+<a href="core\EXP.htm">EXP</a> : Return Float=EXP(Value)
+<a href="core\RND.htm">RND</a> : Return Integer=RND(Range Value)
+<a href="core\TIMER.htm">TIMER</a> : Return Integer=TIMER()
+<a href="core\INKEY$.htm">INKEY$</a> : Return String=INKEY$()
+<a href="core\CL$.htm">CL$</a> : Return String=CL$()
+<a href="core\GET DATE$.htm">GET DATE$</a> : Return String=GET DATE$()
+<a href="core\GET TIME$.htm">GET TIME$</a> : Return String=GET TIME$()
+<a href="core\FLOOR.htm">FLOOR</a> : Return Float=FLOOR(Value)
+<a href="core\CEIL.htm">CEIL</a> : Return Float=CEIL(Value)
+<BR>
+<a href="core\CURVEVALUE.htm">CURVEVALUE</a> : Return Float=CURVEVALUE(Destination Value, Current Value, Speed Value)
+<a href="core\WRAPVALUE.htm">WRAPVALUE</a> : Return Float=WRAPVALUE(Angle Value)
+<a href="core\NEWXVALUE.htm">NEWXVALUE</a> : Return Float=NEWXVALUE(Current X Value, Angle Value, Step Value)
+<a href="core\NEWYVALUE.htm">NEWYVALUE</a> : Return Float=NEWYVALUE(Current Y Value, Angle Value, Step Value)
+<a href="core\NEWZVALUE.htm">NEWZVALUE</a> : Return Float=NEWZVALUE(Current Z Value, Angle Value, Step Value)
+<a href="core\CURVEANGLE.htm">CURVEANGLE</a> : Return Float=CURVEANGLE(Destination Value, Current Value, Speed Value)
+<BR>
+<a href="core\ARRAY COUNT.htm">ARRAY COUNT</a> : Return Integer=ARRAY COUNT(Array Name(0))
+<a href="core\ARRAY INDEX VALID.htm">ARRAY INDEX VALID</a> : Return Integer=ARRAY INDEX VALID(Array Name(0))
+<a href="core\FREE STRING$.htm">FREE STRING$</a> : Return String=FREE STRING$()
+<a href="core\GET DX VERSION$.htm">GET DX VERSION$</a> : Return String=GET DX VERSION$()
+<a href="core\PERFTIMER.htm">PERFTIMER</a> : Return Double Integer=PERFTIMER()
+<a href="core\GET ARRAY TYPE.htm">GET ARRAY TYPE</a> : Return Integer=GET ARRAY TYPE(Array Name(0))
+<a href="core\GET TYPE PATTERN$.htm">GET TYPE PATTERN$</a> : Return String=GET TYPE PATTERN$(Type Name$)
+<BR>
+<a href="core\TEXTURE SCREEN.htm">TEXTURE SCREEN</a> : TEXTURE SCREEN Image Number
+<a href="core\SET SCREEN EFFECT.htm">SET SCREEN EFFECT</a> : SET SCREEN EFFECT Effect Number
+</PRE></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

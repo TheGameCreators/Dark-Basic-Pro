@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+</td></tr></table>
+<center><table width="340" border="0" cellpadding="0" cellspacing="0"><tr><td ALIGN="center"><FONT SIZE=4 FACE=Verdana><B>world</B></FONT><BR><IMG SRC=..\gfx\divide.jpg width="340" height=5><BR>
+</td></tr></table></center><br><table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+This command set allows BSP levels to be loaded directly into your program, complete with automatic collision and visibility culling. You can also create simple terrain shapes with the built-in basic terrain functionality.<BR>
+<BR>
+<PRE><FONT FACE=Verdana SIZE=1><a href="world\LOAD BSP.htm">LOAD BSP</a> : LOAD BSP PK3 Filename, BSP Filename
+<a href="world\DELETE BSP.htm">DELETE BSP</a> : DELETE BSP
+<a href="world\SET BSP CAMERA.htm">SET BSP CAMERA</a> : SET BSP CAMERA Camera Number
+<a href="world\SET BSP CAMERA COLLISION.htm">SET BSP CAMERA COLLISION</a> : SET BSP CAMERA COLLISION Collision Index, Camera Number, Radius, Response
+<a href="world\SET BSP OBJECT COLLISION.htm">SET BSP OBJECT COLLISION</a> : SET BSP OBJECT COLLISION Collision Index, Object Number, Radius, Response
+<a href="world\SET BSP COLLISION THRESHHOLD.htm">SET BSP COLLISION THRESHHOLD</a> : SET BSP COLLISION THRESHHOLD Collision Index, Sensitivity
+<a href="world\SET BSP COLLISION OFF.htm">SET BSP COLLISION OFF</a> : SET BSP COLLISION OFF Collision Index
+<a href="world\SET BSP CAMERA COLLISION RADIUS.htm">SET BSP CAMERA COLLISION RADIUS</a> : SET BSP CAMERA COLLISION RADIUS Collision Index, Camera Number, X, Y, Z
+<a href="world\SET BSP OBJECT COLLISION RADIUS.htm">SET BSP OBJECT COLLISION RADIUS</a> : SET BSP OBJECT COLLISION RADIUS Collision Index, Object Number, X, Y, Z
+<a href="world\SET BSP COLLISION HEIGHT ADJUSTMENT.htm">SET BSP COLLISION HEIGHT ADJUSTMENT</a> : SET BSP COLLISION HEIGHT ADJUSTMENT Collision Index, Height
+<a href="world\SET BSP MULTITEXTURING ON.htm">SET BSP MULTITEXTURING ON</a> : SET BSP MULTITEXTURING ON
+<a href="world\SET BSP MULTITEXTURING OFF.htm">SET BSP MULTITEXTURING OFF</a> : SET BSP MULTITEXTURING OFF
+<a href="world\PROCESS BSP COLLISION.htm">PROCESS BSP COLLISION</a> : PROCESS BSP COLLISION Collision Index
+<BR>
+<a href="world\MAKE TERRAIN.htm">MAKE TERRAIN</a> : MAKE TERRAIN Terrain Number, Heightmap Filename
+<a href="world\DELETE TERRAIN.htm">DELETE TERRAIN</a> : DELETE TERRAIN Terrain Number
+<a href="world\POSITION TERRAIN.htm">POSITION TERRAIN</a> : POSITION TERRAIN Terrain Number, X, Y, Z
+<a href="world\TEXTURE TERRAIN.htm">TEXTURE TERRAIN</a> : TEXTURE TERRAIN Terrain Number, Image Number
+<BR>
+<a href="world\BSP COLLISION HIT.htm">BSP COLLISION HIT</a> : Return Integer=BSP COLLISION HIT(Collision Index)
+<a href="world\BSP COLLISION X.htm">BSP COLLISION X</a> : Return Float=BSP COLLISION X(Collision Index)
+<a href="world\BSP COLLISION Y.htm">BSP COLLISION Y</a> : Return Float=BSP COLLISION Y(Collision Index)
+<a href="world\BSP COLLISION Z.htm">BSP COLLISION Z</a> : Return Float=BSP COLLISION Z(Collision Index)
+<BR>
+<a href="world\TERRAIN EXIST.htm">TERRAIN EXIST</a> : Return Integer=TERRAIN EXIST(Terrain Number)
+<a href="world\TERRAIN POSITION X.htm">TERRAIN POSITION X</a> : Return Float=TERRAIN POSITION X(Terrain Number)
+<a href="world\TERRAIN POSITION Y.htm">TERRAIN POSITION Y</a> : Return Float=TERRAIN POSITION Y(Terrain Number)
+<a href="world\TERRAIN POSITION Z.htm">TERRAIN POSITION Z</a> : Return Float=TERRAIN POSITION Z(Terrain Number)
+<a href="world\GET TERRAIN HEIGHT.htm">GET TERRAIN HEIGHT</a> : Return Float=GET TERRAIN HEIGHT(Terrain Number, X, Z)
+<a href="world\GET TOTAL TERRAIN HEIGHT.htm">GET TOTAL TERRAIN HEIGHT</a> : Return Float=GET TOTAL TERRAIN HEIGHT(Terrain Number)
+</PRE></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

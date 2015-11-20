@@ -1,0 +1,105 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\main.htm"><img src="..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\commands.htm"><img src="..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\examples.htm"><img src="..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\documents.htm"><img src="..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\index.htm"><img src="..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+</td></tr></table>
+<center><table width="340" border="0" cellpadding="0" cellspacing="0"><tr><td ALIGN="center"><FONT SIZE=4 FACE=Verdana><B>file</B></FONT><BR><IMG SRC=..\gfx\divide.jpg width="340" height=5><BR>
+</td></tr></table></center><br><table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+This command allows files to be loaded, created, deleted and modified in a number of ways, including the creation of sequential and pure binary files.<BR>
+<BR>
+<PRE><FONT FACE=Verdana SIZE=1><a href="file\DIR.htm">DIR</a> : DIR
+<a href="file\DRIVELIST.htm">DRIVELIST</a> : DRIVELIST
+<a href="file\SET DIR.htm">SET DIR</a> : SET DIR Path$
+<a href="file\MAKE FILE.htm">MAKE FILE</a> : MAKE FILE Filename
+<a href="file\MAKE DIRECTORY.htm">MAKE DIRECTORY</a> : MAKE DIRECTORY Directory Name
+<a href="file\DELETE FILE.htm">DELETE FILE</a> : DELETE FILE Filename
+<a href="file\DELETE DIRECTORY.htm">DELETE DIRECTORY</a> : DELETE DIRECTORY Directory Name
+<a href="file\COPY FILE.htm">COPY FILE</a> : COPY FILE Source Filename, Destination Filename
+<a href="file\MOVE FILE.htm">MOVE FILE</a> : MOVE FILE Source Filename, Destination Filename
+<a href="file\RENAME FILE.htm">RENAME FILE</a> : RENAME FILE Source Filename, New Filename
+<a href="file\EXECUTE FILE.htm">EXECUTE FILE</a> : EXECUTE FILE Filename, Commandline, Directory
+<a href="file\FIND FIRST.htm">FIND FIRST</a> : FIND FIRST
+<a href="file\FIND NEXT.htm">FIND NEXT</a> : FIND NEXT
+<a href="file\CD.htm">CD</a> : CD Path$
+<BR>
+<a href="file\OPEN TO READ.htm">OPEN TO READ</a> : OPEN TO READ File Number, Filename
+<a href="file\OPEN TO WRITE.htm">OPEN TO WRITE</a> : OPEN TO WRITE File Number, Filename
+<a href="file\CLOSE FILE.htm">CLOSE FILE</a> : CLOSE FILE File Number
+<a href="file\READ BYTE.htm">READ BYTE</a> : READ BYTE File Number, Variable
+<a href="file\READ FILE.htm">READ FILE</a> : READ FILE File Number, Variable
+<a href="file\READ DIRBLOCK.htm">READ DIRBLOCK</a> : READ DIRBLOCK File Number, Folder to Read
+<a href="file\READ FILEBLOCK.htm">READ FILEBLOCK</a> : READ FILEBLOCK File Number, Filename to Read
+<a href="file\READ FLOAT.htm">READ FLOAT</a> : READ FLOAT File Number, Variable
+<a href="file\READ LONG.htm">READ LONG</a> : READ LONG File Number, Variable
+<a href="file\READ MEMBLOCK.htm">READ MEMBLOCK</a> : READ MEMBLOCK File Number, Memblock Number
+<a href="file\READ STRING.htm">READ STRING</a> : READ STRING File Number, Variable String
+<a href="file\READ WORD.htm">READ WORD</a> : READ WORD File Number, Variable
+<a href="file\WRITE WORD.htm">WRITE WORD</a> : WRITE WORD File Number, Variable
+<a href="file\WRITE BYTE.htm">WRITE BYTE</a> : WRITE BYTE File Number, Variable
+<a href="file\WRITE LONG.htm">WRITE LONG</a> : WRITE LONG File Number, Variable
+<a href="file\WRITE DIRBLOCK.htm">WRITE DIRBLOCK</a> : WRITE DIRBLOCK File Number, Folder to Create
+<a href="file\WRITE FILEBLOCK.htm">WRITE FILEBLOCK</a> : WRITE FILEBLOCK File Number, Filename to Create
+<a href="file\WRITE FLOAT.htm">WRITE FLOAT</a> : WRITE FLOAT File Number, Variable
+<a href="file\WRITE FILE.htm">WRITE FILE</a> : WRITE FILE File Number, Variable
+<a href="file\WRITE MEMBLOCK.htm">WRITE MEMBLOCK</a> : WRITE MEMBLOCK File Number, Memblock Number
+<a href="file\WRITE STRING.htm">WRITE STRING</a> : WRITE STRING File Number, String
+<a href="file\SKIP BYTES.htm">SKIP BYTES</a> : SKIP BYTES File Number, Bytes To Skip
+<a href="file\WRITE BYTE TO FILE.htm">WRITE BYTE TO FILE</a> : WRITE BYTE TO FILE Filename, Position, ByteValue
+<a href="file\READ BYTE FROM FILE.htm">READ BYTE FROM FILE</a> : Return Integer=READ BYTE FROM FILE(Filename, Position)
+<BR>
+<a href="file\PERFORM CHECKLIST FOR DRIVES.htm">PERFORM CHECKLIST FOR DRIVES</a> : PERFORM CHECKLIST FOR DRIVES
+<a href="file\PERFORM CHECKLIST FOR FILES.htm">PERFORM CHECKLIST FOR FILES</a> : PERFORM CHECKLIST FOR FILES
+<a href="file\MAKE MEMBLOCK FROM FILE.htm">MAKE MEMBLOCK FROM FILE</a> : MAKE MEMBLOCK FROM FILE Memblock Number, File Number
+<a href="file\MAKE FILE FROM MEMBLOCK.htm">MAKE FILE FROM MEMBLOCK</a> : MAKE FILE FROM MEMBLOCK File Number, Memblock Number
+<BR>
+<a href="file\FILE EXIST.htm">FILE EXIST</a> : Return Integer=FILE EXIST(Filename)
+<a href="file\PATH EXIST.htm">PATH EXIST</a> : Return Integer=PATH EXIST(Path String)
+<a href="file\GET DIR$.htm">GET DIR$</a> : Return String=GET DIR$()
+<a href="file\APPNAME$.htm">APPNAME$</a> : Return String=APPNAME$()
+<a href="file\WINDIR$.htm">WINDIR$</a> : Return String=WINDIR$()
+<a href="file\MYDOCDIR$.htm">MYDOCDIR$</a> : Return String=MYDOCDIR$()
+<BR>
+<a href="file\FILE END.htm">FILE END</a> : Return Integer=FILE END(File Number)
+<a href="file\FILE OPEN.htm">FILE OPEN</a> : Return Integer=FILE OPEN(File Number)
+<a href="file\FILE SIZE.htm">FILE SIZE</a> : Return Integer=FILE SIZE(Filename)
+<a href="file\GET FILE DATE$.htm">GET FILE DATE$</a> : Return String=GET FILE DATE$()
+<a href="file\GET FILE NAME$.htm">GET FILE NAME$</a> : Return String=GET FILE NAME$()
+<a href="file\GET FILE TYPE.htm">GET FILE TYPE</a> : Return Integer=GET FILE TYPE()
+<a href="file\GET FILE CREATION$.htm">GET FILE CREATION$</a> : Return String=GET FILE CREATION$()
+<a href="file\CAN MAKE FILE.htm">CAN MAKE FILE</a> : Return Integer=CAN MAKE FILE(Filename)
+<BR>
+<a href="file\EXECUTABLE RUNNING.htm">EXECUTABLE RUNNING</a> : Return Integer=EXECUTABLE RUNNING(Executable ID)
+<a href="file\EXECUTE EXECUTABLE.htm">EXECUTE EXECUTABLE</a> : Return DWORD=EXECUTE EXECUTABLE(Filename, Commandline, Directory)
+<a href="file\STOP EXECUTABLE.htm">STOP EXECUTABLE</a> : STOP EXECUTABLE Executable ID
+<BR>
+<a href="file\WRITE FILEMAP STRING.htm">WRITE FILEMAP STRING</a> : WRITE FILEMAP STRING Filemap Name, String
+<a href="file\WRITE FILEMAP VALUE.htm">WRITE FILEMAP VALUE</a> : WRITE FILEMAP VALUE Filemap Name, Value
+<a href="file\READ FILEMAP STRING.htm">READ FILEMAP STRING</a> : Return String=READ FILEMAP STRING(String Value)
+<a href="file\READ FILEMAP VALUE.htm">READ FILEMAP VALUE</a> : Return DWORD=READ FILEMAP VALUE(Filemap Name)
+<BR>
+</PRE></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

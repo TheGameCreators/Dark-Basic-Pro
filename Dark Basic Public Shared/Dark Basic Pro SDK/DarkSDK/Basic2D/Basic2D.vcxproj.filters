@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Basic2D">
+      <UniqueIdentifier>{57ba8a5c-28a2-452f-aef8-7c0c8550d936}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Error">
+      <UniqueIdentifier>{7e08fa72-309a-4638-8e10-fc2842b230bd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\Basic2D\CBasic2DC.cpp">
+      <Filter>Basic2D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\Basic2D\CBasic2DC.h">
+      <Filter>Basic2D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Core\globstruct.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Basic2D.rc" />
+  </ItemGroup>
+</Project>

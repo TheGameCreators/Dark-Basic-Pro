@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Loader">
+      <UniqueIdentifier>{56060b67-5d26-4fff-9810-972c0b0aac89}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Renderer">
+      <UniqueIdentifier>{22c9d434-2f74-4a90-9158-ef684ba37a8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Error">
+      <UniqueIdentifier>{dd7178d8-c0f1-40fe-a6ff-037665994bc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collision">
+      <UniqueIdentifier>{1768c0fb-2850-4c63-aacf-df65c11d466c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Collision\col">
+      <UniqueIdentifier>{83b8c512-e1e4-48c6-b026-dc1007ccdbcf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Shared\Q3BSP\CBSPFile.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Q3BSP\Loader.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Q3BSP\Unzip.cpp">
+      <Filter>Loader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Q3BSP\Patch.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Q3BSP\Shaders.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Q3BSP\Textures.cpp">
+      <Filter>Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Error\CError.cpp">
+      <Filter>Error</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Shared\Q3BSP\Collision.cpp">
+      <Filter>Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SHARED\Q3BSP\col\3DMath.cpp">
+      <Filter>Collision\col</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SHARED\Q3BSP\col\col_response.cpp">
+      <Filter>Collision\col</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SHARED\Q3BSP\col\col_step.cpp">
+      <Filter>Collision\col</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\SHARED\Q3BSP\col\col_types.cpp">
+      <Filter>Collision\col</Filter>
+    </ClCompile>
+    <ClCompile Include="DLLMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Shared\Q3BSP\CBSPFile.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Q3BSP\Loader.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Q3BSP\Unzip.h">
+      <Filter>Loader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Q3BSP\Textures.h">
+      <Filter>Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CError.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Error\CRuntimeErrors.h">
+      <Filter>Error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Q3BSP\Collision.h">
+      <Filter>Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SHARED\Q3BSP\col\3DMath.h">
+      <Filter>Collision\col</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SHARED\Q3BSP\col\col_global.h">
+      <Filter>Collision\col</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\SHARED\Q3BSP\col\col_local.h">
+      <Filter>Collision\col</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Shared\Core\globstruct.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Q3BSP.rc" />
+  </ItemGroup>
+</Project>
