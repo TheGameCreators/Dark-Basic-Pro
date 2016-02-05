@@ -1,0 +1,45 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ZipArchive - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\LEEBAM~1\LOCALS~1\Temp\RSP54.tmp" with contents
+[
+/nologo /MDd /W4 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /D "ZLIB_DLL" /Fr"Debug/" /Fp"Debug/ZipArchive.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\_CODING\Dark Basic Pro Shared\Projects\Expansion Packs\Enhancements\Code\zip\ZipCentralDir.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\LEEBAM~1\LOCALS~1\Temp\RSP54.tmp" 
+Creating temporary file "C:\DOCUME~1\LEEBAM~1\LOCALS~1\Temp\RSP55.tmp" with contents
+[
+/nologo /out:"Debug\ZipArchive.lib" 
+".\Debug\StdAfx.obj"
+".\Debug\ZipArchive.obj"
+".\Debug\ZipAutoBuffer.obj"
+".\Debug\ZipBigFile.obj"
+".\Debug\ZipCentralDir.obj"
+".\Debug\ZipException.obj"
+".\Debug\ZipFileHeader.obj"
+".\Debug\ZipInternalInfo.obj"
+".\Debug\ZipStorage.obj"
+".\zlib.lib"
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\LEEBAM~1\LOCALS~1\Temp\RSP55.tmp"
+<h3>Output Window</h3>
+Compiling...
+ZipCentralDir.cpp
+D:\_CODING\Dark Basic Pro Shared\Projects\Expansion Packs\Enhancements\Code\zip\ZipCentralDir.cpp(232) : error C2440: 'return' : cannot convert from 'void' to 'bool'
+        Expressions of type void cannot be converted to other types
+D:\_CODING\Dark Basic Pro Shared\Projects\Expansion Packs\Enhancements\Code\zip\ZipCentralDir.cpp(242) : error C2440: 'return' : cannot convert from 'void' to 'bool'
+        Expressions of type void cannot be converted to other types
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+ZipArchive.lib - 2 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

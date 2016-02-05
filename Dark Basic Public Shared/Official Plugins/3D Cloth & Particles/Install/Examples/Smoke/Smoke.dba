@@ -1,0 +1,135 @@
+`--------------------------------------------------------------------------------------------------------------------------
+` Smoke Demo
+` By Ravey (Dave Milton)
+`--------------------------------------------------------------------------------------------------------------------------
+
+`smoke
+type t_vortex
+   vort
+   vort_emit
+   x#
+   y#
+   z#
+endtype
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+`Let's create empty arrays of our types for later use
+
+dim vortex() as t_vortex
+empty array vortex()
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+`our globals
+
+`our object and img count - so we dont have to manually track object numbers
+global obj_count=3
+global img_count=0
+
+`for our image
+global smoke
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+setup()
+`disable the escape key so we can perform our cleaning up excersise
+disable escapekey
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+` Main Loop - nice and simple
+while escapekey()=0
+   set cursor 0, 0
+   print "3D Cloth & Particles - Smoke Demo"
+
+   UPDATE PHYSICS
+   sync
+
+Endwhile
+
+cleanup()
+end
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+`Setup routine
+function setup()
+
+   `hide mouse
+   sync on : sync rate 60 : autocam off
+   hide light 0
+   set ambient light 65
+
+   color backdrop rgb(20,20,40)
+
+   position camera 0,-20,-80
+
+   inc img_count
+   smoke=img_count
+   load image "smoke.jpg",smoke
+
+   `set the frame rate for nice smooth physics
+   SET PHYSICS FRAME RATE 80
+
+   `lets add our physics object
+   add_vortex(0,0,0,2500)
+
+
+
+endfunction
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+function cleanup()
+
+   `lets clean up everything nice and tidy
+   `the smoke
+   array index to top vortex()
+   while array index valid(vortex())
+      delete emitter vortex().vort_emit
+      delete effector vortex().vort
+      next array index vortex()
+   endwhile
+   empty array vortex()
+
+   delete image smoke
+
+endfunction
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+function add_vortex(x#,y#,z#,explode)
+
+   inc obj_count
+
+   array insert at bottom vortex()
+
+   vortex().vort_emit=obj_count
+   `make our smoke emitter
+   MAKE BASIC EMITTER vortex().vort_emit,40
+   texture object vortex().vort_emit, smoke
+   ghost object on vortex().vort_emit
+  set object transparency vortex().vort_emit, 1
+   position object vortex().vort_emit,x#,y#,z#
+   disable object zwrite vortex().vort_emit
+
+   `set up the emitter
+   SET EMITTER RATE vortex().vort_emit,40
+   SET EMITTER EXPLODE vortex().vort_emit, explode*0.01
+   SET EMITTER PARTICLE VELOCITY vortex().vort_emit,1.0,0
+   SET EMITTER PARTICLE LIFE vortex().vort_emit,1.5,0
+   SET EMITTER PARTICLE MASS vortex().vort_emit, 1, 30
+   SET EMITTER PARTICLE SIZE vortex().vort_emit,18, 0
+   SET EMITTER PARTICLE COLOR vortex().vort_emit,255,255,255,255
+   SET PARTICLE Z SORTING vortex().vort_emit,1
+
+   `add a very cool vortex effector to make the smoke spin in a vortex
+   inc obj_count
+   vortex().vort=obj_count
+   MAKE VORTEX EFFECTOR vortex().vort
+   BIND EFFECTOR TO OBJECT vortex().vort,vortex().vort_emit
+   SET VORTEX EFFECTOR vortex().vort,400.0
+endfunction
+
+`--------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,133 @@
+LOCAL Banner1  AS INTEGER
+LOCAL Peg1     AS INTEGER
+LOCAL Peg2     AS INTEGER
+LOCAL Effector AS INTEGER
+LOCAL time     AS INTEGER
+local time2    as integer
+LOCAL rotation AS FLOAT
+LOCAL exitDemo AS INTEGER
+
+SYNC ON
+SYNC RATE 0
+AUTOCAM OFF
+BACKDROP ON
+COLOR BACKDROP RGB (172,172,172)
+SET AMBIENT LIGHT 255
+
+Banner1 = 1
+Peg1    = 4
+Peg2    = 5
+Effector = 10
+
+MAKE OBJECT BOX Peg1, 0.4, 0.4, 0.4
+MAKE OBJECT BOX Peg2, 0.4, 0.4, 0.4
+POSITION OBJECT Peg1, -2.5, 0, 0
+POSITION OBJECT Peg2, 2.5, 0, 0
+
+make cloth 1
+generate rectangular cloth Banner1, 5, 5, 10, 10, 1
+set cloth mass Banner1, 1.0
+set cloth elasticity Banner1, 2.0
+fix cloth POINT TO object Banner1, 0, Peg1, 0, 0, 0
+fix cloth POINT TO object Banner1, 10, Peg2, 0, 0, 0
+
+make gravity effector Effector
+bind effector TO object Effector, Banner1
+set gravity effector Effector, 0, -10.0, 0
+
+MAKE CAMERA 1
+SET CAMERA TO IMAGE 1, Banner1, 256, 256
+
+TEXTURE OBJECT Banner1, 1
+
+SET OBJECT TRANSPARENCY Banner1, 1
+
+POSITION CAMERA 0, -3, -6
+
+DrawMaze()
+
+rotation=0
+time=TIMER()
+exitDemo=0
+do
+   SET CURSOR 0, 0
+   PRINT "3D Cloth & Particles - Live Cloth Banner Dem"
+   update physics
+   if TIMER()>time+4000
+      if rotation<0.05 then rotation=rotation+0.00001
+      TURN CAMERA LEFT 1, rotation
+   endif
+   `if MOUSECLICK()
+   `   exitDemo=1
+   `   time2=TIMER()
+   `   Free All Cloth Points 1
+   `endif
+   `if exitDemo
+   `   if TIMER()>time2+3000
+   `      END
+   `   endif
+   `endif
+   SYNC
+loop
+
+END
+
+function DrawMaze()
+   LOCAL lpX           AS INTEGER
+   LOCAL lpY           AS INTEGER
+   LOCAL NumObj        AS INTEGER
+   LOCAL mazeObject    AS INTEGER
+   LOCAL groundOffset  AS INTEGER
+   LOCAL mazeBlockSize AS INTEGER
+
+   LOAD IMAGE "wall.bmp", 10, 1
+   LOAD IMAGE "floor.bmp", 11, 1
+   LOAD IMAGE "roof.bmp", 12, 1
+   LOAD IMAGE "door.bmp", 13, 1
+
+   groundOffset=-50
+   currentX=0
+   currentY=0
+   NumObj=100
+   mazeBlockSize=100
+   DATA 1,1,1,1,1
+   DATA 1,0,0,0,1
+   DATA 2,0,0,0,2
+   DATA 1,0,0,1,1
+   DATA 1,1,1,1,1
+   for lpX=0 TO 4
+      for lpY=0 TO 4
+         READ mazeObject
+         if mazeObject=1
+            MAKE OBJECT CUBE NumObj,mazeBlockSize+2
+            POSITION OBJECT NumObj,Lpx*mazeBlockSize,0,-(lpY*mazeBlockSize)
+            TEXTURE OBJECT NumObj,10
+            SCALE OBJECT TEXTURE NumObj,1.01,1.01
+            NumObj=NumObj+1
+         endif
+         if mazeObject=2
+            MAKE OBJECT BOX NumObj, mazeBlockSize+2, mazeBlockSize+2, mazeBlockSize/4
+            POSITION OBJECT NumObj,Lpx*mazeBlockSize,0,-(lpY*mazeBlockSize)
+            TEXTURE OBJECT NumObj,13
+            NumObj=NumObj+1
+            mazeObject=0
+         endif
+         if lpX=2 AND lpY=2
+            POSITION CAMERA 1, lpX*mazeBlockSize, 0, -(lpY*mazeBlockSize)
+         endif
+         if mazeObject<>1
+            MAKE OBJECT PLAIN NumObj,mazeBlockSize+2,mazeBlockSize+2
+            TEXTURE OBJECT NumObj, 11
+            POSITION OBJECT NumObj,mazeBlockSize*lpX,groundOffset,-(mazeBlockSize*lpY)
+            ROTATE OBJECT NumObj,270,0,0
+            NumObj=NumObj+1
+            MAKE OBJECT PLAIN NumObj,mazeBlockSize+2,mazeBlockSize+2
+            TEXTURE OBJECT NumObj,12
+            POSITION OBJECT NumObj,mazeBlockSize*lpX,mazeBlockSize/2,-(mazeBlockSize*lpY)
+            ROTATE OBJECT NumObj,90,0,0
+            NumObj=NumObj+1
+         endif
+      next Lpz
+   next Lpx
+endfunction
+ 

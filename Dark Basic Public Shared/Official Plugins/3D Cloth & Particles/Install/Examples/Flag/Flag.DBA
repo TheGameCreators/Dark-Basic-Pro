@@ -1,0 +1,78 @@
+
+sync on
+sync rate 0
+autocam off
+backdrop on
+color backdrop rgb ( 100, 100, 100)
+set ambient light 100
+
+Flag = 1
+Pole = 2
+Peg1 = 4
+Peg2 = 5
+
+make object box Peg1, 0.4, 0.4, 0.4
+position object Peg1, 0, 10, 0
+hide object Peg1
+
+make object box Peg2, 0.4, 0.4, 0.4
+position object Peg2, 0, 6, 0
+hide object Peg2
+
+
+make object cylinder Pole,1
+scale object Pole,100,1400,100
+position object Pole,0,3,0
+
+load image "flagpole.bmp",2
+texture object Pole,2
+
+
+MAKE CLOTH Flag
+GENERATE RECTANGULAR CLOTH Flag,10,5,5,5,1
+SET CLOTH MASS Flag,2.0
+SET CLOTH ELASTICITY Flag,4.5
+
+FIX CLOTH POINT TO OBJECT Flag,0,Peg1,0,0,0
+FIX CLOTH POINT TO OBJECT Flag,30,Peg2,0,0,0
+
+load image "banner_horse.dds",1
+texture object Flag,1
+set object transparency Flag, 1
+set object ambient Flag,100
+
+MAKE GRAVITY EFFECTOR 10
+BIND EFFECTOR TO OBJECT 10, 1
+SET GRAVITY EFFECTOR 10, 30.0, -0.5, -5
+
+
+make matrix 200, 500, 500, 25, 25
+position matrix 200, -250, 0,-20
+
+load image "f_z_01_d2.dds", 3
+prepare matrix texture 200, 3, 1, 1
+
+position camera 5,6,-15
+
+do
+   set cursor 0, 0
+   print "3D Cloth & Particles - Flag Demo"
+
+
+   UPDATE PHYSICS
+   sync
+loop
+
+
+
+delete object Flag
+delete image 1
+
+delete object Pole
+delete image 2
+
+delete object Peg1
+delete object Peg2
+
+end
+

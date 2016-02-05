@@ -1,0 +1,80 @@
+
+sync on
+sync rate 60
+autocam off
+backdrop on
+color backdrop rgb (72,72,122)
+set ambient light 50
+
+RopeBridge = 1
+Peg1 = 4
+Peg2 = 5
+Peg3 = 6
+Peg4 = 7
+
+make object box Peg1, 0.1, 0.1, 0.1
+position object Peg1, -1.0, 0, 0
+scale object Peg1,100,600,100
+color object Peg1,rgb(92,92,128)
+
+make object box Peg2, 0.1, 0.1, 0.1
+position object Peg2, 1.0, 0, 0
+scale object Peg2,100,600,100
+color object Peg2,rgb(92,92,128)
+
+make object box Peg3, 0.1, 0.1, 0.1
+position object Peg3, -1.0, 0, 10.0
+scale object Peg3,100,600,100
+color object Peg3,rgb(92,92,128)
+
+make object box Peg4, 0.1, 0.1, 0.1
+position object Peg4, 1.0, 0, 10.0
+scale object Peg4,100,600,100
+color object Peg4,rgb(92,92,128)
+
+make cloth 1
+generate rectangular cloth RopeBridge,2,10,5,5,1
+set cloth mass RopeBridge,2.0
+fix cloth point to object RopeBridge,0,Peg1,0,0,0
+fix cloth point to object RopeBridge,5,Peg2,0,0,0
+fix cloth point to object RopeBridge,30,Peg3,0,0,0
+fix cloth point to object RopeBridge,35,Peg4,0,0,0
+
+load image "RopeBridge.dds",1,1
+texture object RopeBridge,1
+set object transparency 1, 1
+
+
+make gravity effector 10
+bind effector to object 10, 1
+set gravity effector 10, 0.1, -1.0, 0.1
+
+position camera 3,3,-1
+point camera 0,0,2
+
+set physics frame rate 1000
+
+for a = 1 to 5000
+   update physics
+next a
+
+set physics frame rate 60
+
+do
+   set cursor 0, 0
+   print "3D Cloth & Particles - Bridge Demo"
+
+   update physics
+   sync
+loop
+
+delete object RopeBridge
+delete image 1
+
+delete object Peg1
+delete object Peg2
+delete object Peg3
+delete object Peg4
+
+end
+

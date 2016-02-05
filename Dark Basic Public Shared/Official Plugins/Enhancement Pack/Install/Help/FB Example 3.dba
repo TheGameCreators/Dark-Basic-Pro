@@ -1,0 +1,22 @@
+
+sync on
+sync rate 60
+backdrop on
+color backdrop rgb ( 0, 0, 0 )
+
+open file block "./media/test.fb", 1, "mypassword"
+
+load object from block 1, "object.dbo", 1
+load image from block 1, "image.bmp", 1
+texture object 1, 1
+
+do
+   set cursor 0, 0
+   print ""
+   print "Displaying object and image from file block - test.fb"
+
+   rotate object 1, object angle x ( 1 ) + 0.5, object angle y ( 1 ) + 0.5, object angle z ( 1 ) + 0.5
+
+   sync
+loop
+

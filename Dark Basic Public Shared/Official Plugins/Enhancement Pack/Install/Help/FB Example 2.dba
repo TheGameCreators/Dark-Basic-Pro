@@ -1,0 +1,26 @@
+
+sync on
+sync rate 60
+backdrop on
+color backdrop rgb ( 0, 0, 0 )
+
+open file block "./media/test.fb", 1, "mypassword"
+perform checklist for file block data 1
+
+make directory "extract"
+dir$ = get dir$( ) + "\extract"
+
+for i = 1 to checklist quantity( )
+   print "file " + str$( i ) + " = " + checklist string$( i )
+
+   extract file from block 1, checklist string$( i ), dir$
+next i
+
+do
+   set cursor 0, 0
+   print ""
+   print "Opened and extracted files from file block - test.fb"
+
+   sync
+loop
+

@@ -1,0 +1,117 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING101           "LM Start%0%?LMStart@@YAXXZ%"
+    IDS_STRING102           "LM Add Collision Object%L%?LMAddCollisionObject@@YAXH@Z%Object Number"
+    IDS_STRING103           "LM Build Collision Data%0%?LMBuildCollisionData@@YAXXZ%"
+    IDS_STRING104           "LM Add Light Map Object%L%?LMAddLightMapObject@@YAXH@Z%Object Number"
+    IDS_STRING105           "LM Build Light Maps%LFL%?LMBuildLightMaps@@YAXHMH@Z%Texture Size, Quality, Blur Radius"
+    IDS_STRING106           "LM Set Blend Mode%L%?LMSetBlendMode@@YAXH@Z%Blend Mode"
+    IDS_STRING107           "LM Add Point Light%FFFFFFF%?LMAddPointLight@@YAXMMMMMMM@Z%PosX, PosY, PosZ, Radius, Red, Green, Blue"
+    IDS_STRING108           "LM Add Directional Light%FFFFFF%?LMAddDirectionalLight@@YAXMMMMMM@Z%DirX, DirY, DirZ, Red, Green, Blue"
+    IDS_STRING109           "LM Add Spot Light%FFFFFFFFFFFF%?LMAddSpotLight@@YAXMMMMMMMMMMMM@Z%PosX, PosY, PosZ, DirX, DirY, DirZ, Ang1, Ang2, Range, Red, Green, Blue"
+    IDS_STRING110           "LM Clear Lights%0%?LMClearLights@@YAXXZ%"
+    IDS_STRING111           "LM Clear Collision Objects%0%?LMClearCollisionObjects@@YAXXZ%"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING112           "LM Clear Light Map Objects%0%?LMClearLightMapObjects@@YAXXZ%"
+    IDS_STRING113           "LM Reset%0%?LMReset@@YAXXZ%"
+    IDS_STRING114           "LM Set Ambient Light%FFF%?LMSetAmbientLight@@YAXMMM@Z%Red, Green, Blue"
+    IDS_STRING115           "LM Add Custom Point Light%FFFFFFFFF%?LMAddCustomPointLight@@YAXMMMMMMMMM@Z%PosX, PosY, PosZ, Radius, Zero Range, Attenuation, Red, Green, Blue"
+    IDS_STRING116           "LM Build Light Maps Thread%LFL%?LMBuildLightMapsThread@@YAXHMH@Z%Texture Size, Quality, Blur Radius"
+    IDS_STRING117           "LM Get Percent[%F%?LMGetPercent@@YAKXZ%"
+    IDS_STRING118           "LM Get Status[%S%?LMGetStatus@@YAKK@Z%"
+    IDS_STRING119           "LM Get Complete[%L%?LMGetComplete@@YAHXZ%"
+    IDS_STRING120           "LM Add Light Map Object%LL%?LMAddLightMapObject@@YAXHH@Z%Object Number, Base Stage"
+    IDS_STRING121           "LM Add Transparent Collision Object%LL%?LMAddTransparentCollisionObject@@YAXHH@Z%Object Number, Transparency Mode"
+    IDS_STRING122           "LM Set Mode%L%?LMSetMode@@YAXH@Z%Mode"
+    IDS_STRING123           "LM Set Shadow Power%F%?LMSetShadowPower@@YAXM@Z%Power"
+    IDS_STRING124           "LM Set Ambient Occlusion On%LFL%?LMSetAmbientOcclusionOn@@YAXHMH@Z%Num Of Rays, Ray Distance, Pattern"
+    IDS_STRING125           "LM Set Ambient Occlusion Off%0%?LMSetAmbientOcclusionOff@@YAXXZ%"
+    IDS_STRING126           "LM Set Light Map Name%S%?LMSetLightMapName@@YAXK@Z%Filename"
+    IDS_STRING127           "LM Add Light Map Object%LLL%?LMAddLightMapObject@@YAXHHH@Z%Object Number, Base Stage, Dynamic Light Mode"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING128           "LM Terminate Thread%0%?LMTerminateThread@@YAXXZ%"
+    IDS_STRING129           "LM Add Shaded Light Map Object%LL%?LMAddShadedLightMapObject@@YAXHH@Z%Object Number, Light Map Stage"
+    IDS_STRING130           "LM Boost Curved Surface Quality%FF%?LMBoostCurvedSurfaceQuality@@YAXMM@Z%Max Size, Multiple"
+    IDS_STRING131           "LM Add Shaded Light Map Object%LLL%?LMAddShadedLightMapObject@@YAXHHH@Z%Object Number, Light Map Stage, Flat Shaded"
+    IDS_STRING132           "LM Add Light Map Object%LLLL%?LMAddLightMapObject@@YAXHHHH@Z%Object Number, Base Stage, Dynamic Light Mode, Flat Shaded"
+    IDS_STRING133           "LM Build Light Maps Thread%LFLL%?LMBuildLightMapsThread@@YAXHMHH@Z%Texture Size, Quality, Blur Radius, Num Threads"
+    IDS_STRING134           "LM Build Light Maps%LFLL%?LMBuildLightMaps@@YAXHMHH@Z%Texture Size, Quality, Blur Radius, Num Threads"
+    IDS_STRING135           "LM Set Light Map Folder%S%?LMSetLightMapFolder@@YAXK@Z%Filename"
+    IDS_STRING136           "LM Set Light Map File Format%L%?LMSetLightMapFileFormat@@YAXH@Z%Format index"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

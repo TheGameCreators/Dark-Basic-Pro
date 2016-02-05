@@ -1,0 +1,139 @@
+`--------------------------------------------------------------------------------------------------------------------------
+` Flame Demo
+` By Ravey (Dave Milton)
+`--------------------------------------------------------------------------------------------------------------------------
+
+`torches
+type t_fire
+   fire_emit
+   wind
+   chaos
+endtype
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+`Let's create empty arrays of our types for later use
+
+dim fire() as t_fire
+empty array fire()
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+`our globals
+
+`our object and img count - so we dont have to manually track object numbers
+global obj_count=3
+global img_count=0
+
+`for our image
+global fire
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+setup()
+`disable the escape key so we can perform our cleaning up excersise
+disable escapekey
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+` Main Loop - nice and simple
+while escapekey()=0
+
+   UPDATE PHYSICS
+   sync
+
+Endwhile
+
+cleanup()
+end
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+`Setup routine
+function setup()
+
+   `hide mouse
+   sync on : sync rate 0 : autocam off
+   hide light 0
+   set ambient light 65
+
+   color backdrop rgb(20,20,40)
+
+   position camera 0,10,-40
+
+   inc img_count
+   fire=img_count
+   load image "fire.png",fire
+
+
+  `set the frame rate for nice smooth physics
+   SET PHYSICS FRAME RATE 80
+
+   `lets add our physics object
+   add_fire(0,0,0,150)
+endfunction
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+function cleanup()
+
+   `lets clean up everything nice and tidy
+   `first the fires
+   array index to top fire()
+   while array index valid(fire())
+      delete emitter fire().fire_emit
+      delete effector fire().wind
+      delete effector fire().chaos
+      next array index fire()
+   endwhile
+   empty array fire()
+
+   delete image fire
+
+endfunction
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+function add_fire(x#,y#,z#,explode)
+
+
+
+   array insert at bottom fire()
+
+   inc obj_count
+   fire().fire_emit=obj_count
+`   make an emitter to produce our nice flame particles
+   MAKE BASIC EMITTER fire().fire_emit,30
+   texture object fire().fire_emit, fire
+   ghost object on fire().fire_emit
+   position object fire().fire_emit,x#,y#,z#
+   disable object zwrite fire().fire_emit
+
+   set object transparency fire().fire_emit, 1
+
+   `set up our emitter
+   SET EMITTER RATE fire().fire_emit,10
+   SET EMITTER EXPLODE fire().fire_emit, explode*0.01
+   SET EMITTER PARTICLE VELOCITY fire().fire_emit,1.0,0
+   SET EMITTER PARTICLE LIFE fire().fire_emit,3,0
+
+   SET EMITTER PARTICLE MASS fire().fire_emit, 1, 30
+   SET EMITTER PARTICLE SIZE fire().fire_emit,16, 0
+   SET EMITTER PARTICLE COLOR fire().fire_emit,255,255,255,50
+   SET PARTICLE Z SORTING fire().fire_emit,1
+
+   `lets add a wind effector to blow the fire upwards
+   inc obj_count
+   fire().wind=obj_count
+   MAKE WIND EFFECTOR fire().wind
+   BIND EFFECTOR TO OBJECT fire().wind,fire().fire_emit
+   SET WIND EFFECTOR fire().wind,0,5,0
+
+   `add a chaos effector to make the flame wave nicely
+   inc obj_count
+   fire().chaos=obj_count
+   Make Chaos Effector fire().chaos
+   Set Chaos Effector fire().chaos , 400
+   BIND EFFECTOR TO OBJECT fire().chaos,fire().fire_emit
+endfunction
+

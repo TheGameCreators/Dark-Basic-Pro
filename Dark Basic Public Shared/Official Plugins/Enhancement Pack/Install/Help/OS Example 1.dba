@@ -1,0 +1,75 @@
+
+sync on
+sync rate 60
+autocam off
+backdrop on
+position camera 0, 5, -140
+
+create bitmap 1, 256, 256
+box 0, 0, 256, 256, rgb ( 0, 0, 0 ), rgb ( 0, 0, 255 ), rgb ( 0, 0, 100 ), rgb ( 0, 0, 200 )
+get image 2, 0, 0, 256, 256
+set current bitmap 0
+delete bitmap 1
+make object plain 2, 400, 400
+texture object 2, 2
+position object 2, 0, 0, 100
+
+create bitmap 1, 512, 460
+
+text 0, 0,   "hard drive count   = " + str$( get drive count( ) )
+text 0, 10,  "cylinder count     = " + str$( get drive cylinder count( 0 ) )
+text 0, 20,  "track count        = " + str$( get drive track count( 0 ) )
+text 0, 30,  "sectors per track  = " + str$( get drive sectors per track( 0 ) )
+text 0, 40,  "bytes per sector   = " + str$( get drive bytes per sector( 0 ) )
+text 0, 50,  "total size         = " + str$( get drive total size( 0, 0 ) ) + " bytes"
+text 0, 60,  "total size         = " + str$( get drive total size( 0, 1 ) ) + " mb"
+text 0, 70,  "total size         = " + str$( get drive total size( 0, 2 ) ) + " gb"
+text 0, 80,  "used space         = " + str$( get drive used space( 0, 0 ) ) + " bytes"
+text 0, 90,  "used space         = " + str$( get drive used space( 0, 1 ) ) + " mb"
+text 0, 100, "used space         = " + str$( get drive used space( 0, 2 ) ) + " gb"
+text 0, 110, "free space         = " + str$( get drive free space( 0, 0 ) ) + " bytes"
+text 0, 120, "free space         = " + str$( get drive free space( 0, 1 ) ) + " mb"
+text 0, 130, "free space         = " + str$( get drive free space( 0, 2 ) ) + " gb"
+text 0, 140, "file length        = " + str$( get drive file length support( 0 ) )
+text 0, 150, "serial             = " + get drive serial$( 0 )
+text 0, 160, "file system        = " + get drive file system$( 0 )
+
+text 0, 180, "cd count  = " + str$( get cd count( ) )
+text 0, 190, "cd letter = " + get cd letter$( 0 )
+
+text 0, 210, "user name     = " + get user name$( )
+text 0, 220, "computer name = " + get computer name$( )
+
+text 0, 240, "display width        = " + str$ ( get display width( ) )
+text 0, 250, "display height       = " + str$ ( get display height( ) )
+text 0, 260, "display depth        = " + str$ ( get display depth( ) )
+text 0, 270, "display refresh rate = " + str$ ( get display refresh rate( ) )
+
+text 0, 290, "web client     = " + get web client$( )
+text 0, 300, "get ip address = " + get ip address$( )
+
+text 0, 320, "installed memory = " + str$ ( get installed memory( 0 ) ) + " kb"
+text 0, 330, "installed memory = " + str$ ( get installed memory( 1 ) ) + " mb"
+text 0, 340, "installed memory = " + str$ ( get installed memory( 2 ) ) + " gb"
+text 0, 350, "available memory = " + str$ ( get memory available( 0 ) ) + " kb"
+text 0, 360, "available memory = " + str$ ( get memory available( 1 ) ) + " mb"
+text 0, 370, "available memory = " + str$ ( get memory available( 2 ) ) + " gb"
+text 0, 380, "memory free      = " + str$ ( get memory percent free ( ) ) + " %"
+text 0, 390, "memory used      = " + str$ ( get memory percent used ( ) ) + " %"
+
+get image 1, 0, 0, 512, 460
+set current bitmap 0
+delete bitmap 1
+save image "test.bmp", 1
+delete image 1
+load image "test.bmp", 1
+
+make object cube 1, 100
+texture object 1, 1
+
+do
+   scroll object texture 1, 0, 0.001
+   rotate object 1, object angle x ( 1 ) + 0.1, object angle y ( 1 ) + 0.1, object angle z ( 1 ) + 0.1
+
+   sync
+loop

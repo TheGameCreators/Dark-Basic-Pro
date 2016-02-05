@@ -1,0 +1,168 @@
+`--------------------------------------------------------------------------------------------------------------------------
+` Drapes
+` By Ravey (Dave Milton)
+`--------------------------------------------------------------------------------------------------------------------------
+
+`drapes
+type t_drapes
+   cloth
+   x#
+   y#
+   z#
+   one
+   two
+   three
+   flip
+   count#
+endtype
+
+`Let's create empty arrays of our types for later use
+dim drapes() as t_drapes
+empty array drapes()
+
+`our globals
+global obj_count=3
+global img_count=0
+global drape
+
+setup()
+`disable the escape key so we can perform our cleaning up excersise
+disable escapekey
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+` Main Loop - nice and simple
+while escapekey()=0
+   set cursor 0, 0
+   print "3D Cloth & Particles - Drapes Demo"
+
+   UPDATE PHYSICS
+   sync
+
+Endwhile
+
+cleanup()
+end
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+`Setup routine
+function setup()
+
+   `hide mouse
+   sync on : sync rate 60 : autocam off
+   `hide light 0
+   set ambient light 90
+
+   color backdrop rgb(20,20,40)
+
+   position camera 0,-15,-40
+
+   `load in our images
+   inc img_count
+   drape=img_count
+   load image "drape.png",drape
+
+   `set the frame rate for nice smooth physics
+   SET PHYSICS FRAME RATE 80
+
+   `lets add our physics objects
+   add_drapes(0,0,0,50)
+
+endfunction
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+function cleanup()
+
+   `the drapes
+   array index to top drapes()
+   while array index valid(drapes())
+      delete cloth drapes().cloth
+      delete object drapes().one
+      delete object drapes().two
+      delete object drapes().three
+      next array index drapes()
+   endwhile
+   empty array drapes()
+
+   delete image drape
+
+endfunction
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+function add_drapes(x#,y#,z#,fade)
+
+   array insert at bottom drapes()
+
+   `lets make 3 object to attach the cloth too (the objects will be hidden from view)
+   inc obj_count
+   make object cube obj_count, 0.4
+   position object obj_count, x#-15, y, z#
+   drapes().one=obj_count
+
+   inc obj_count
+   make object cube obj_count, 0.4
+   position object obj_count, x#+15, y, z#
+   drapes().two=obj_count
+
+   inc obj_count
+   make object cube obj_count, 0.4
+   position object obj_count, x#, y#, z#
+   drapes().three=obj_count
+
+   `hide the objects
+   hide object obj_count-2
+   hide object obj_count-1
+   hide object obj_count
+
+   inc obj_count
+   cloth=obj_count
+   `make a cloth object
+   MAKE CLOTH obj_count
+
+   `make the actual cloth
+   GENERATE RECTANGULAR CLOTH obj_count,30,30,20,20,1
+   SET CLOTH MASS obj_count,2
+   SET CLOTH ELASTICITY obj_count,2
+
+   `lets fix the 3 objects we made earlier onto the top left, top middle and top right poinsts of the cloth
+   FIX CLOTH POINT TO OBJECT obj_count,10,obj_count-1,0,0,0
+   FIX CLOTH POINT TO OBJECT obj_count,0,obj_count-2,0,0,0
+   FIX CLOTH POINT TO OBJECT obj_count,20,obj_count-3,0,0,0
+
+   `by positioning the objects we are also positioning the cloth since it is now attached
+   position object drapes().one,object position x(drapes().one),drapes().y#,object position z(drapes().one)
+   position object drapes().two,object position x(drapes().two),drapes().y#,object position z(drapes().two)
+   position object drapes().three,object position x(drapes().three),drapes().y#,object position z(drapes().three)
+
+   drapes().cloth=obj_count
+
+   texture object obj_count,drape
+   fade object obj_count,fade
+
+   `lets add some gravity to our cloth by adding an effector
+   inc obj_count
+   MAKE GRAVITY EFFECTOR obj_count
+   BIND EFFECTOR TO object obj_count,cloth
+   SET GRAVITY EFFECTOR obj_count, 0, -15, 0
+   grav=obj_count
+
+   `now a damping effector
+   inc obj_count
+   MAKE DAMPING EFFECTOR obj_count
+   BIND EFFECTOR TO object obj_count,cloth
+   SET DAMPING EFFECTOR obj_count,.0001
+   damp=obj_count
+
+   `lets add a wind effect to blow in throw the window by way of a force effector
+   inc obj_count
+   Make Force Effector obj_count
+   Set Force Effector obj_count , 0 , 0 , -20
+   BIND EFFECTOR TO object obj_count,cloth
+
+endfunction
+
+`--------------------------------------------------------------------------------------------------------------------------
+

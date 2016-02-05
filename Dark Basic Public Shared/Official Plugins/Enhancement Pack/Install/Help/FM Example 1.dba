@@ -1,0 +1,23 @@
+
+sync on
+sync rate 60
+backdrop on
+color backdrop rgb ( 0, 0, 0 )
+
+create file map 1, "FILEMAPPING", 1024
+open file map 1, "FILEMAPPING"
+set file map string$ 1, 0, "hello from host application"
+
+do
+   set cursor 0, 0
+   print ""
+   print "Host Application"
+   print ""
+   print "Leave this application running and compile and run example 2"
+   print "Example 2 will now display the contents of the shared memory"
+
+   sync
+loop
+
+close file map 1
+destroy file map 1

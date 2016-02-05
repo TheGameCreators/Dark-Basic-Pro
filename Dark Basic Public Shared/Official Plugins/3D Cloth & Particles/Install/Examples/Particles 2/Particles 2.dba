@@ -1,0 +1,39 @@
+sync on
+sync rate 0
+autocam off
+
+backdrop on
+color backdrop 0
+
+set ambient light 50
+position camera 0, 3, -8
+
+SET PHYSICS FRAME RATE 60
+
+MAKE BOX EMITTER 1, 600
+SET EMITTER RATE 1,60
+SET EMITTER EXPLODE 1, 0.1
+SET EMITTER PARTICLE VELOCITY 1,3,0
+SET EMITTER PARTICLE LIFE 1,9,0
+SET EMITTER PARTICLE MASS 1, 50, 50
+SET EMITTER PARTICLE SIZE 1, 0.25, 50
+
+MAKE GRAVITY EFFECTOR 10
+BIND EFFECTOR TO object 10, 1
+SET GRAVITY EFFECTOR 10, 0, -0.7, 0
+
+load image "particle.bmp", 1
+texture object 1, 1
+set object transparency 1, 1
+
+make color effector 200
+a=color effector add key( 200, 1, 255, 255, 255, 255)
+a=color effector add key( 200, 12, 255, 0, 0, 0)
+bind effector to object 200,1
+
+repeat
+   set cursor 0, 0
+   print "3D Cloth & Particles - Emitter Demo"
+   UPDATE PHYSICS
+   sync
+until spacekey()

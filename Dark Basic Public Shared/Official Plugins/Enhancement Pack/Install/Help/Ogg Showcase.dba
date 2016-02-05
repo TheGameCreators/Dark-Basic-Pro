@@ -1,0 +1,207 @@
+
+sync rate 60
+sync On
+hide mouse
+color backdrop rgb ( 0, 0, 0 )
+backdrop on
+
+Plasma_SetupPlasmas()
+Plasma_SetupObjects()
+
+load ogg vorbis "media/music.ogg", 1
+loop ogg vorbis 1
+
+_circle1# = 180.0
+_circle2  = 45.0
+XRay2     = 320
+_GamAdd   = 1
+
+set image colorkey 0, 255, 255
+load image "media/ogga.bmp", 100, 1
+load image "media/oggb.bmp", 101, 1
+load image "media/oggc.bmp", 102, 1
+load image "media/oggd.bmp", 103, 1
+
+sprite 4, 0, 385, 100
+sprite 5, 80, 385, 101
+sprite 6, 505, 385, 102
+sprite 7, 90, 423, 103
+
+set sprite priority 4,1
+set sprite priority 6,1
+
+rotate camera 0,0,0
+position camera 0,0,-49
+
+iMode = 1
+iFOV = 40
+iGo  = 0
+xpos = 510
+
+set camera fov iFov
+set camera view 0,0,640,383
+
+
+repeat
+   xpos = xpos - 1
+
+   if xpos < -300
+      xpos = 510
+   endif
+
+   sprite 7, xpos, 423, 103
+
+   iGo = iGo + 1
+
+   if iGo > 4
+      if iMode = 1
+         iFOV = iFOV + 1
+
+         if iFOV > 120
+            iMode = 0
+         endif
+      endif
+
+      if iMode = 0
+         iFOV = iFOV - 1
+
+         if iFOV < 40
+            iMode = 1
+         endif
+      endif
+
+      iGo = 0
+   endif
+
+   set camera fov iFov
+
+   if _GamAdd=1 Then inc _GamVal,1
+   If _GamAdd=-1 Then Dec _GamVal,1
+   If _GamVal=0 Or _GamVal=255 Then _GamAdd=0
+
+   Rem 1st plasma channel modification ( red one )
+   _Circle1#=WrapValue(_Circle1#-0.95)
+   XSize1#=Cos(_Circle1#)/200.0 : YSize1#=Sin(_Circle1#)/200.0
+   XSizeB#=XSize1#-XSizeB# : YSizeB#=YSize1#-YSizeB#
+   if XSizeB#<-1.0 Then XSizeB#=-1.0
+   if XSizeB#>1.0 Then XSizeB#=1.0
+   SCROLL OBJECT TEXTURE 5,XSizeB#,YSizeB#
+   SCALE OBJECT TEXTURE 5,1.0+XSizeB#,1.0+YSizeB#
+
+   Rem 2nd plasma channel modification ( green one )
+   _Circle2#=WrapValue(_Circle2#+0.8)
+   XScroll#=Cos(_Circle2#)/100.0 : YScroll#=Sin(_Circle2#)/100.0
+   XSize2#=XScroll#-XSize2# : YSize2#=YScroll#-YSize2#
+   if XSize2#<-1.0 Then XSize2#=-1.0
+   if XSize2#>1.0 Then XSize2#=1.0
+   SCROLL OBJECT TEXTURE 6,-XSize2#*0.75,-YSize2#*0.75
+   SCALE OBJECT TEXTURE 6,1.0+XSize2#,1.0+YSize2#
+
+   _Circle3#=WrapValue(_Circle3#+0.7)
+   XScroll#=Cos(_Circle3#)/150.0 : YScroll#=Sin(_Circle3#)/150.0
+   XSize3#=XScroll#-XSize3# : YSize3#=YScroll#-YSize3#
+   if XSize3#<-1.0 Then XSize3#=-1.0
+   if XSize3#>1.0 Then XSize3#=1.0
+   SCROLL OBJECT TEXTURE 7,XSize3#*0.5,YSize3#*0.5
+   SCALE OBJECT TEXTURE 7,1.0+XSize3#,1.0+YSize3#
+
+   ` scroll stars
+   Scroll Object Texture 1,0.003,0.0
+   Scroll Object Texture 2,0.002,0
+   Scroll Object Texture 3,0.001,0
+   Scroll Object Texture 4,0.0009,0
+
+   Rem Display 2 horizontal lines taht move colors . . .
+   Inc Xray1,4 : if XRay1>640 Then XRay1=Xray1-640
+   Dec Xray2,4 : if XRay2<0 Then XRay2=XRay2+640
+   Paste Image 9,Xray1-640,384 : Paste Image 9,Xray1,384
+   Paste Image 9,Xray2-640,0 : Paste Image 9,XRay2,0
+
+   Ink 0,0 : Box 0,386,640,480
+
+   Sync
+
+until _GamVal = 0
+
+For ILoop=1 to 144
+   If Object Exist(ILoop)=1 Then Delete Object ILoop
+   If sprite exist(ILoop)=1 Then Delete Sprite ILoop
+   If Image Exist(ILoop)=1 Then Delete Image ILoop
+Next ILoop
+
+End
+
+Function Plasma_SetupPlasmas()
+   Load image "media/red_plasma.jpg",1,0
+   Load image "media/green_plasma.jpg",2,0
+   Load image "media/blue_plasma.jpg",3,0
+   Load image "media/header.bmp",8,1
+   Load Image "media/ray.jpg",9,0
+   Create Bitmap 1,1024,1024
+   Set Current Bitmap 1
+
+   For ILoop=1 to 3
+      Paste Image ILoop,0,0
+      Paste Image ILoop,360,0
+      Paste Image ILoop,0,512
+      Paste Image ILoop,360,512
+      Get Image ILoop,0,0,720,1024
+   Next ILoop
+
+   cls
+   Ink rgb(255,255,255),0
+   randomize timer()
+
+   Ink rgb(255,255,255),0
+
+   For XLoop=1 to 256
+      Dot Rnd(512),rnd(512)
+   Next XLoop
+
+   Get Image 4,0,0,512,512
+   Cls
+   Ink rgb(205,205,205),0
+
+   For XLoop=1 to 128
+      Dot Rnd(512),rnd(512)
+   Next XLoop
+
+   Get Image 5,0,0,512,512
+   Cls
+   Ink rgb(155,155,155),0
+
+   For XLoop=1 to 128
+      Dot Rnd(512),rnd(512)
+   Next XLoop
+
+   Get Image 6,0,0,512,512
+   Cls
+   Ink rgb(105,105,105),0
+
+   For XLoop=1 to 256
+      Dot Rnd(512),rnd(512)
+   Next XLoop
+
+   Get Image 7,0,0,512,512
+   cls
+   Delete Bitmap 1
+EndFunction
+
+Function Plasma_SetupObjects()
+   For OLoop=1 to 4
+      Make Object Plain OLoop,256,256
+      Set Object OLoop,1,1,0,1,0,0,0
+      Texture Object OLoop,OLoop+3
+      Scale Object Texture OLoop,2.0,2.0
+      Set Object Collision off OLoop
+   Next OLoop
+
+   For OLoop=1 to 3
+      Make Object Plain OLoop+4,256,256
+      Set Object OLoop+4,1,1,0,1,0,0,0
+      Texture Object OLoop+4,OLoop
+      Ghost Object On OLoop+4
+      Set Object Collision off OLoop+4
+   Next OLoop
+EndFunction
+

@@ -1,0 +1,73 @@
+
+sync on : sync rate 60 : autocam off
+backdrop on : color backdrop rgb (72,72,122)
+set ambient light 50
+
+SpiderWeb = 1
+Peg1 = 4
+Peg2 = 5
+
+Peg3 = 6
+Peg4 = 7
+
+make object box Peg1, 0.4, 0.4, 0.4
+position object Peg1, -3.0, 5, 0
+
+make object box Peg2, 0.4, 0.4, 0.4
+position object Peg2, 3.0, 5, 0
+
+make object box Peg3, 0.4, 0.4, 0.4
+position object Peg3, -3.0, 0, 0
+
+make object box Peg4, 0.4, 0.4, 0.4
+position object Peg4, 3.0, 0, 0
+
+SET PHYSICS FRAME RATE 80
+
+MAKE CLOTH 1
+GENERATE RECTANGULAR CLOTH SpiderWeb,5,5,5,5,1
+SET CLOTH MASS SpiderWeb,1.0
+SET CLOTH ELASTICITY SpiderWeb, 5.0
+
+FIX CLOTH POINT TO OBJECT SpiderWeb,0,Peg1,0,0,0
+FIX CLOTH POINT TO OBJECT SpiderWeb,5,Peg2,0,0,0
+
+FIX CLOTH POINT TO OBJECT SpiderWeb,30,Peg3,0,0,0
+FIX CLOTH POINT TO OBJECT SpiderWeb,35,Peg4,0,0,0
+set image colorkey 0,255, 255
+
+load image "spider.bmp",1
+texture object SpiderWeb,1
+
+set object transparency 1, 1
+
+MAKE GRAVITY EFFECTOR 10
+BIND EFFECTOR TO OBJECT 10, 1
+SET GRAVITY EFFECTOR 10, 0, 1, 0
+
+MAKE DAMPING EFFECTOR 11
+BIND EFFECTOR TO OBJECT 11,1
+SET DAMPING EFFECTOR 11,0.000001
+
+
+position camera 0,2,-10
+
+disable escapekey
+while escapekey()=0
+   set cursor 0, 0
+   print "3D Cloth & Particles - Spider Web Demo"
+   UPDATE PHYSICS
+   sync
+endwhile
+
+delete object SpiderWeb
+delete image 1
+
+delete object Peg1
+delete object Peg2
+delete object Peg3
+delete object Peg4
+
+end
+
+

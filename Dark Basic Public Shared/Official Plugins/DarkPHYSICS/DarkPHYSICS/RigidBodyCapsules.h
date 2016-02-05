@@ -1,0 +1,16 @@
+
+/////////////////////////////////////////////////////////////////////////////////////
+// RIGID BODY COMMANDS //////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////
+
+DARKSDK void dbPhyMakeRigidBodyStaticCapsule	( int iObject );
+DARKSDK void dbPhyMakeRigidBodyStaticCapsule	( int iObject, int iMaterial );
+DARKSDK void dbPhyMakeRigidBodyStaticCapsules	( int iObject );
+DARKSDK void dbPhyMakeRigidBodyStaticCapsules	( int iObject, int iMaterial );
+DARKSDK void dbPhyMakeRigidBodyDynamicCapsule	( int iObject );
+DARKSDK void dbPhyMakeRigidBodyDynamicCapsule	( int iObject, int iMaterial );
+DARKSDK void dbPhyMakeRigidBodyDynamicCapsules	( int iObject );
+DARKSDK void dbPhyMakeRigidBodyDynamicCapsules	( int iObject, int iMaterial );
+
+/////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////

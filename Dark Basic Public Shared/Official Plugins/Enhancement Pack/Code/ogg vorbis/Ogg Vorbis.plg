@@ -1,0 +1,48 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Ogg Vorbis - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/commands.res" /d "NDEBUG" "D:\Dark Basic Pro Shared\Projects\Expansion Packs\Enhancements\Code\Ogg Vorbis\commands.rc"" 
+Creating temporary file "C:\DOCUME~1\MIKEJO~1\LOCALS~1\Temp\RSP44.tmp" with contents
+[
+/nologo /MT /W3 /O1 /Oy /Ob2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "OGGVORBIS_EXPORTS" /Fp"Release/Ogg Vorbis.pch" /YX /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\Dark Basic Pro Shared\Projects\Expansion Packs\Enhancements\Code\Ogg Vorbis\Core.cpp"
+"D:\Dark Basic Pro Shared\Projects\Expansion Packs\Enhancements\Code\Ogg Vorbis\OggVorbis.cpp"
+"D:\Dark Basic Pro Shared\Projects\Expansion Packs\Enhancements\Code\Ogg Vorbis\OggVorbisEncoderAudio.cpp"
+"D:\Dark Basic Pro Shared\Projects\Expansion Packs\Enhancements\Code\Ogg Vorbis\OggVorbisEncoderEncode.cpp"
+"D:\Dark Basic Pro Shared\Projects\Expansion Packs\Enhancements\Code\Ogg Vorbis\OggVorbisEncoderMain.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\MIKEJO~1\LOCALS~1\Temp\RSP44.tmp" 
+Creating temporary file "C:\DOCUME~1\MIKEJO~1\LOCALS~1\Temp\RSP45.tmp" with contents
+[
+advapi32.lib user32.lib /nologo /dll /incremental:no /pdb:"Release/EnhancementsOV.pdb" /machine:I386 /out:"..\..\Install\plugins-licensed\EnhancementsOV.dll" /implib:"Release/EnhancementsOV.lib" 
+".\Release\Core.obj"
+".\Release\OggVorbis.obj"
+".\Release\OggVorbisEncoderAudio.obj"
+".\Release\OggVorbisEncoderEncode.obj"
+".\Release\OggVorbisEncoderMain.obj"
+".\Release\commands.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\MIKEJO~1\LOCALS~1\Temp\RSP45.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+Core.cpp
+OggVorbis.cpp
+OggVorbisEncoderAudio.cpp
+OggVorbisEncoderEncode.cpp
+OggVorbisEncoderMain.cpp
+Linking...
+   Creating library Release/EnhancementsOV.lib and object Release/EnhancementsOV.exp
+
+
+
+<h3>Results</h3>
+EnhancementsOV.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

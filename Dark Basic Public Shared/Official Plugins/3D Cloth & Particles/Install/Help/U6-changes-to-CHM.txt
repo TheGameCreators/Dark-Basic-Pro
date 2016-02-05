@@ -1,0 +1,9 @@
+1. Change:
+
+ Make Wrap Round Effector==ID
+ Set Wrap Round Effector==ID, X#, Y#, Z#
+
+To:
+
+ Make Wrapround Effector==ID
+ Set Wrapround Effector==ID, X#, Y#, Z#

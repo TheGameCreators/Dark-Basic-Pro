@@ -1,0 +1,40 @@
+
+sync on
+sync rate 60
+backdrop on
+
+perform checklist for eax effects
+
+iDirect = -4000
+go = 1
+
+load 3dsound "./media/music.wav", 1
+loop sound 1
+
+do
+   set cursor 0, 0
+
+   if spacekey( )
+      go = go + 1
+      apply preset eax effect 1, go
+      sleep 250
+   endif
+
+   if go > 26
+      go = 1
+      apply preset eax effect 1, 1
+   endif
+
+   print "Preset EAX effects"
+   print ""
+
+   for i = 1 to checklist quantity( )
+      print "    " + str$( i ) + ". " + checklist string$( i )
+   next i
+
+   text 300, 200, "Current Effect - " + checklist string$( go )
+   text 300, 220, "Press Space to select next effect"
+
+   sync
+loop
+

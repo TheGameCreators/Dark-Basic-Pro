@@ -1,0 +1,21 @@
+
+sync on
+sync rate 60
+backdrop on
+color backdrop rgb ( 0, 0, 0 )
+
+open file map 1, "FILEMAPPING"
+message$ = get file map string$( 1, 0 )
+
+do
+   set cursor 0, 0
+   print ""
+   print "Application"
+   print ""
+   print "Message from host = " + message$
+
+   sync
+loop
+
+close file map 1
+destroy file map 1

@@ -1,0 +1,86 @@
+
+sync on
+sync rate 0
+backdrop on
+color backdrop rgb ( 0, 0, 0 )
+
+voice = 1
+buffer$ = ""
+
+get voice list
+
+do
+   set cursor 0, 0
+
+   print "voices available = " + str$( checklist quantity ( ) )
+
+   for i = 1 to checklist quantity ( )
+      print str$( i ) + " = " + checklist string$ ( i )
+   next i
+
+   print ""
+   print "selected voice = " + str$( voice )
+
+   print ""
+   print "commands -"
+   print "   type 'voice' and 'index' to select a new voice"
+   print ""
+   print "xml examples -"
+   print "   a = This sounds normal <pitch middle = '-10'/> but the pitch drops half way through"
+   print "   b = This sounds normal <pitch middle = '10'/> but the pitch raises half way through"
+   print "   c = <rate absspeed='5'>This text should be spoken at rate five.<rate absspeed='-5'>"
+   print "       This text should be spoken at rate negative five.</rate></rate><rate absspeed='10'/>"
+   print "   d = The words <emph>'dark basic'</emph> are emphasized"
+   print ""
+
+   if entry$( )
+      buffer$ = buffer$ + entry$( )
+   endif
+
+   if returnkey( )
+      switch = 0
+
+      if buffer$ = "a"
+         send voice message xml "This sounds normal <pitch middle = '-10'/> but the pitch drops half way through"
+         switch = 1
+      endif
+
+      if buffer$ = "b"
+         send voice message xml "This sounds normal <pitch middle = '10'/> but the pitch raises half way through"
+         switch = 1
+      endif
+
+      if buffer$ = "c"
+         send voice message xml "<rate absspeed='5'>This text should be spoken at rate five.<rate absspeed='-5'> This text should be spoken at rate negative five.</rate></rate><rate absspeed='10'/>"
+         switch = 1
+      endif
+
+      if buffer$ = "d"
+         send voice message xml "The words <emph>'dark basic'</emph> are emphasized"
+        switch = 1
+      endif
+
+      for i = 1 to checklist quantity ( )
+         check$ = buffer$
+
+         if check$ = "voice " + str$ ( i )
+            set voice i
+            send voice message "now using voice " + str$ ( i )
+            switch = 1
+         endif
+      next i
+
+      if switch = 0
+         send voice message xml buffer$
+      endif
+
+      buffer$ = ""
+   endif
+
+   print "message = " + buffer$
+   clear entry buffer
+
+   sync
+loop
+
+

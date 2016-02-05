@@ -1,0 +1,773 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource2.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource2.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING105           "PHY ATTACH CLOTH TO SHAPE%LLL%?dbPhyAttachClothToShape@@YAXHHH@Z%ID, object, mode"
+    IDS_STRING2             "PHY ATTACH CLOTH TO ALL SHAPES%LL%?dbPhyAttachClothToAllShapes@@YAXHH@Z%ID, mode"
+    IDS_STRING3             "PHY DETACH CLOTH FROM SHAPE%LL%?dbPhyDetachClothFromShape@@YAXHH@Z%ID, object"
+    IDS_STRING4             "PHY ATTACH CLOTH VERTEX%LLFFF%?dbPhyAttachClothVertex@@YAXHHMMM@Z%ID, vertex, x#, y#, z#"
+    IDS_STRING5             "PHY ATTACH CLOTH VERTEX TO SHAPE%LLLFFFL%?dbPhyAttachClothVertexToShape@@YAXHHHMMMH@Z%ID, vertex, object, x#, y#, z#, mode"
+    IDS_STRING6             "PHY FREE CLOTH VERTEX%LL%?dbPhyFreeClothVertex@@YAXHH@Z%ID, vertex"
+    IDS_STRING7             "PHY MAKE CLOTH%L%?dbPhyMakeCloth@@YAXH@Z%ID"
+    IDS_STRING8             "PHY MAKE CLOTH FROM OBJECT%LL%?dbPhyMakeClothFromObject@@YAXHH@Z%"
+    IDS_STRING9             "PHY MAKE CLOTH FROM LIMB%LLL%?dbPhyMakeClothFromLimb@@YAXHHH@Z%"
+    IDS_STRING10            "PHY BUILD CLOTH%L%?dbPhyBuildCloth@@YAXH@Z%ID"
+    IDS_STRING11            "PHY SET CLOTH DIMENSIONS%LFFF%?dbPhySetClothDimensions@@YAXHMMM@Z%ID, width#, height#, depth#"
+    IDS_STRING12            "PHY SET CLOTH POSITION%LFFF%?dbPhySetClothPosition@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING13            "PHY SET CLOTH ROTATION%LFFF%?dbPhySetClothRotation@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING14            "PHY SET CLOTH STATIC%LL%?dbPhySetClothStatic@@YAXHH@Z%ID, state"
+    IDS_STRING15            "PHY SET CLOTH COLLISION%LL%?dbPhySetClothCollision@@YAXHH@Z%ID, state"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING16            "PHY SET CLOTH GRAVITY%LL%?dbPhySetClothGravity@@YAXHH@Z%ID, state"
+    IDS_STRING17            "PHY SET CLOTH BENDING%LL%?dbPhySetClothBending@@YAXHH@Z%ID, state"
+    IDS_STRING18            "PHY SET CLOTH DAMPING%LL%?dbPhySetClothDamping@@YAXHH@Z%ID, state"
+    IDS_STRING20            "PHY SET CLOTH TWO WAY COLLISION%LL%?dbPhySetClothTwoWayCollision@@YAXHH@Z%ID, state"
+    IDS_STRING21            "PHY SET CLOTH TEARING%LL%?dbPhySetClothTearing@@YAXHH@Z%ID, state"
+    IDS_STRING22            "PHY SET CLOTH THICKNESS%LF%?dbPhySetClothThickness@@YAXHM@Z%ID, value#"
+    IDS_STRING23            "PHY SET CLOTH DENSITY%LF%?dbPhySetClothDensity@@YAXHM@Z%ID, value#"
+    IDS_STRING24            "PHY SET CLOTH BENDING STIFFNESS%LF%?dbPhySetClothBendingStiffness@@YAXHM@Z%ID, value#"
+    IDS_STRING25            "PHY SET CLOTH STRETCHING STIFFNESS%LF%?dbPhySetClothStretchingStiffness@@YAXHM@Z%ID, value#"
+    IDS_STRING26            "PHY SET CLOTH FRICTION%LF%?dbPhySetClothFriction@@YAXHM@Z%ID, value#"
+    IDS_STRING27            "PHY SET CLOTH PRESSURE%LF%?dbPhySetClothPressure@@YAXHM@Z%ID, value#"
+    IDS_STRING28            "PHY SET CLOTH TEAR FACTOR%LF%?dbPhySetClothTearFactor@@YAXHM@Z%ID, value#"
+    IDS_STRING29            "PHY SET CLOTH COLLISION RESPONSE COEFFICIENT%LF%?dbPhySetClothCollisionResponseCoefficient@@YAXHM@Z%ID, value#"
+    IDS_STRING30            "PHY SET CLOTH ATTACHMENT RESPONSE COEFFICIENT%LF%?dbPhySetClothAttachmentResponseCoefficient@@YAXHM@Z%ID, value#"
+    IDS_STRING31            "PHY SET CLOTH SOLVER ITERATIONS%LF%?dbPhySetClothSolverIterations@@YAXHH@Z%"
+    IDS_STRING32            "PHY SET CLOTH EXTERNAL ACCELERATION%LFFF%?dbPhySetClothExternalAcceleration@@YAXHMMM@Z%ID, x#, y#, z#"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING33            "PHY SET CLOTH COLLISION GROUP%LL%?dbPhySetClothCollisionGroup@@YAXHH@Z%ID, group"
+    IDS_STRING34            "PHY ADD FORCE AT CLOTH VERTEX%LLFFFL%?dbPhyAddForceAtClothVertex@@YAXHHMMMH@Z%ID, vertex, x#, y#, z#, mode"
+    IDS_STRING35            "PHY GET CLOTH EXIST[%LL%?dbPhyGetClothExist@@YAHH@Z%ID"
+    IDS_STRING36            "PHY GET CLOTH BUILT[%LL%?dbPhyGetClothBuilt@@YAHH@Z%ID"
+    IDS_STRING37            "PHY GET CLOTH WIDTH[%FL%?dbPhyGetClothWidthEx@@YAKH@Z%ID"
+    IDS_STRING38            "PHY GET CLOTH HEIGHT[%FL%?dbPhyGetClothHeightEx@@YAKH@Z%ID"
+    IDS_STRING39            "PHY GET CLOTH DEPTH[%FL%?dbPhyGetClothDepthEx@@YAKH@Z%ID"
+    IDS_STRING40            "PHY GET CLOTH POSITION X[%FL%?dbPhyGetClothPositionXEx@@YAKH@Z%ID"
+    IDS_STRING41            "PHY GET CLOTH POSITION Y[%FL%?dbPhyGetClothPositionYEx@@YAKH@Z%ID"
+    IDS_STRING42            "PHY GET CLOTH POSITION Z[%FL%?dbPhyGetClothPositionZEx@@YAKH@Z%ID"
+    IDS_STRING43            "PHY GET CLOTH ROTATION X[%FL%?dbPhyGetClothRotationXEx@@YAKH@Z%ID"
+    IDS_STRING44            "PHY GET CLOTH ROTATION Y[%FL%?dbPhyGetClothRotationYEx@@YAKH@Z%ID"
+    IDS_STRING45            "PHY GET CLOTH ROTATION Z[%FL%?dbPhyGetClothRotationZEx@@YAKH@Z%ID"
+    IDS_STRING46            "PHY GET CLOTH STATIC[%LL%?dbPhyGetClothStatic@@YAHH@Z%ID"
+    IDS_STRING47            "PHY GET CLOTH COLLISION[%LL%?dbPhyGetClothCollision@@YAHH@Z%ID"
+    IDS_STRING48            "PHY GET CLOTH GRAVITY[%LL%?dbPhyGetClothGravity@@YAHH@Z%ID"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING49            "PHY GET CLOTH BENDING[%LL%?dbPhyGetClothBending@@YAHH@Z%ID"
+    IDS_STRING50            "PHY GET CLOTH DAMPING[%LL%?dbPhyGetClothDamping@@YAHH@Z%ID"
+    IDS_STRING51            "PHY GET CLOTH TWO WAY COLLISION[%LL%?dbPhyGetClothTwoWayCollision@@YAHH@Z%ID"
+    IDS_STRING52            "PHY GET CLOTH TEARING[%LL%?dbPhyGetClothTearing@@YAHH@Z%ID"
+    IDS_STRING53            "PHY GET CLOTH THICKNESS[%FL%?dbPhyGetClothThicknessEx@@YAKH@Z%ID"
+    IDS_STRING54            "PHY GET CLOTH DENSITY[%FL%?dbPhyGetClothDensityEx@@YAKH@Z%ID"
+    IDS_STRING55            "PHY GET CLOTH BENDING STIFFNESS[%FL%?dbPhyGetClothBendingStiffnessEx@@YAKH@Z%ID"
+    IDS_STRING56            "PHY GET CLOTH STRETCHING STIFFNESS[%FL%?dbPhyGetClothStretchingStiffnessEx@@YAKH@Z%ID"
+    IDS_STRING57            "PHY GET CLOTH FRICTION[%FL%?dbPhyGetClothFrictionEx@@YAKH@Z%ID"
+    IDS_STRING58            "PHY GET CLOTH PRESSURE[%FL%?dbPhyGetClothPressureEx@@YAKH@Z%ID"
+    IDS_STRING59            "PHY GET CLOTH TEAR FACTOR[%FL%?dbPhyGetClothTearFactorEx@@YAKH@Z%ID"
+    IDS_STRING60            "PHY GET CLOTH COLLISION RESPONSE COEFFICIENT[%FL%?dbPhyGetClothCollisionResponseCoefficientEx@@YAKH@Z%ID"
+    IDS_STRING61            "PHY GET CLOTH ATTACHMENT RESPONSE COEFFICIENT[%FL%?dbPhyGetClothAttachmentResponseCoefficientEx@@YAKH@Z%ID"
+    IDS_STRING62            "PHY GET CLOTH SOLVER ITERATIONS[%LL%?dbPhyGetClothSolverIterations@@YAHH@Z%ID"
+    IDS_STRING63            "PHY GET CLOTH EXTERNAL ACCELERATION X[%FL%?dbPhyGetClothExternalAccelerationXEx@@YAKH@Z%ID"
+    IDS_STRING64            "PHY GET CLOTH EXTERNAL ACCELERATION Y[%FL%?dbPhyGetClothExternalAccelerationYEx@@YAKH@Z%ID"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING65            "PHY GET CLOTH EXTERNAL ACCELERATION Z[%FL%?dbPhyGetClothExternalAccelerationZEx@@YAKH@Z%ID"
+    IDS_STRING66            "PHY GET CLOTH COLLISION GROUP[%LL%?dbPhyGetClothCollisionGroup@@YAHH@Z%ID"
+    IDS_STRING67            "PHY GET CLOTH MIN SIZE X[%FL%?dbPhyGetClothMinSizeXEx@@YAKH@Z%ID"
+    IDS_STRING68            "PHY GET CLOTH MIN SIZE Y[%FL%?dbPhyGetClothMinSizeYEx@@YAKH@Z%ID"
+    IDS_STRING69            "PHY GET CLOTH MIN SIZE Z[%FL%?dbPhyGetClothMinSizeZEx@@YAKH@Z%ID"
+    IDS_STRING70            "PHY GET CLOTH MAX SIZE X[%FL%?dbPhyGetClothMaxSizeXEx@@YAKH@Z%ID"
+    IDS_STRING71            "PHY GET CLOTH MAX SIZE Y[%FL%?dbPhyGetClothMaxSizeYEx@@YAKH@Z%ID"
+    IDS_STRING72            "PHY GET CLOTH MAX SIZE Z[%FL%?dbPhyGetClothMaxSizeZEx@@YAKH@Z%ID"
+    IDS_STRING73            "PHY CLOTH RAY CAST[%LLFFFFFF%?dbPhyClothRayCast@@YAHHMMMMMM@Z%ID, x#, y#, z#, DirectionX#, DirectionY#, DirectionZ#"
+    IDS_STRING74            "PHY CLOTH RAY CAST HIT X[%FL%?dbPhyClothRayCastHitX@@YAMH@Z%ID"
+    IDS_STRING75            "PHY CLOTH RAY CAST HIT Y[%FL%?dbPhyClothRayCastHitY@@YAMH@Z%ID"
+    IDS_STRING76            "PHY CLOTH RAY CAST HIT Z[%FL%?dbPhyClothRayCastHitZ@@YAMH@Z%ID"
+    IDS_STRING77            "PHY CLOTH RAY CAST HIT VERTEX[%LL%?dbPhyClothRayCastHitVertex@@YAHH@Z%ID"
+    IDS_STRING78            "PHY SET GRAVITY%FFF%?dbPhySetGravity@@YAXMMM@Z%x#, y#, z#"
+    IDS_STRING79            "PHY SET TIMING%FLL%?dbPhySetTiming@@YAXMHH@Z%maxTimeStep#, maxIterations, method"
+    IDS_STRING80            "PHY SET FIXED TIMING%F%?dbPhySetFixedTiming@@YAXM@Z%elapsedTime#"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING81            "PHY SET AUTO FIXED TIMING%0%?dbPhySetAutoFixedTiming@@YAXXZ%"
+    IDS_STRING82            "PHY SET SKIN WIDTH%F%?dbPhySetSkinWidth@@YAXM@Z%value#"
+    IDS_STRING83            "PHY SET DEFAULT SLEEP LINEAR VELOCITY SQUARED%F%?dbPhySetDefaultSleepLinearVelocitySquared@@YAXM@Z%value#"
+    IDS_STRING84            "PHY SET DEFAULT SLEEP ANGULAR VELOCITY SQUARED%F%?dbPhySetDefaultSleepAngularVelocitySquared@@YAXM@Z%value#"
+    IDS_STRING85            "PHY SET BOUNCE THRESHOLD%F%?dbPhySetBounceThreshold@@YAXM@Z%value#"
+    IDS_STRING86            "PHY SET DYNAMIC FRICTION%F%?dbPhySetDynamicFriction@@YAXM@Z%value#"
+    IDS_STRING87            "PHY SET STATIC FRICTION%F%?dbPhySetStaticFriction@@YAXM@Z%value#"
+    IDS_STRING88            "PHY SET MAX ANGULAR VELOCITY%F%?dbPhySetMaxAngularVelocity@@YAXM@Z%value#"
+    IDS_STRING89            "PHY SET CONTINUOUS CD%F%?dbPhySetContinuousCD@@YAXM@Z%value#"
+    IDS_STRING90            "PHY SET ADAPTIVE FORCE%F%?dbPhySetAdaptiveForce@@YAXM@Z%state#"
+    IDS_STRING91            "PHY SET CONTROLLED FILTERING%F%?dbPhySetControlledFiltering@@YAXM@Z%state#"
+    IDS_STRING92            "PHY SET TRIGGER CALLBACK%F%?dbPhySetTriggerCallback@@YAXM@Z%state#"
+    IDS_STRING93            "PHY ENABLE DEBUG%0%?dbPhyEnableDebug@@YAXXZ%"
+    IDS_STRING94            "PHY START%0%?dbPhyStart@@YAXXZ%"
+    IDS_STRING95            "PHY START%LLL%?dbPhyStart@@YAXHHH@Z%simulationType, simulationSceneType, simulationFlags"
+    IDS_STRING96            "PHY END%0%?dbPhyEnd@@YAXXZ%"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING97            "PHY CLEAR%0%?dbPhyClear@@YAXXZ%"
+    IDS_STRING98            "PHYSX[%L%?dbPhysX@@YAHXZ%"
+    IDS_STRING99            "PHY UPDATE%0%?dbPhyUpdate@@YAXXZ%"
+    IDS_STRING100           "PHY MAKE FLUID%L%?dbPhyMakeFluid@@YAXH@Z%ID"
+    IDS_STRING101           "PHY MAKE FLUID EMITTER%L%?dbPhyMakeFluidEmitter@@YAXH@Z%ID"
+    IDS_STRING102           "PHY BUILD FLUID%L%?dbPhyBuildFluid@@YAXH@Z%ID"
+    IDS_STRING103           "PHY DELETE FLUID%L%?dbPhyDeleteFluid@@YAXH@Z%ID"
+    IDS_STRING104           "PHY GET FLUID EXIST[%LL%?dbPhyGetFluidExist@@YAHH@Z%ID"
+    IDS_STRING106           "PHY MAKE BOX DRAIN%LFFFFFFFFF%?dbPhyMakeBoxDrain@@YAXHMMMMMMMMM@Z%ID, x#, y#, z#, width#, height#, depth#, anglex#, angley#, anglez#"
+    IDS_STRING107           "PHY MAKE SPHERE DRAIN%LFFFF%?dbPhyMakeSphereDrain@@YAXHMMMM@Z%ID, x#, y#, z#,  radius#"
+    IDS_STRING108           "PHY DELETE DRAIN%L%?dbPhyDeleteDrain@@YAXH@Z%ID"
+    IDS_STRING109           "PHY GET DRAIN EXIST[%LL%?dbPhyGetDrainExist@@YAHH@Z%ID"
+    IDS_STRING110           "PHY SET FLUID PARTICLE BUFFER CAP%LL%?dbPhySetFluidParticleBufferCap@@YAXHH@Z%ID, value#"
+    IDS_STRING111           "PHY SET FLUID REST PER METRE%LF%?dbPhySetFluidRestPerMetre@@YAXHM@Z%ID, value#"
+    IDS_STRING112           "PHY SET FLUID RADIUS%LF%?dbPhySetFluidRadius@@YAXHM@Z%ID, radius#"
+    IDS_STRING113           "PHY SET FLUID MOTION LIMIT%LF%?dbPhySetFluidMotionLimit@@YAXHM@Z%ID, value#"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING114           "PHY SET FLUID PACKET SIZE%LL%?dbPhySetFluidPacketSize@@YAXHH@Z%ID, value"
+    IDS_STRING115           "PHY SET FLUID POSITION%LFFF%?dbPhySetFluidPosition@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING116           "PHY SET FLUID ROTATION%LFFF%?dbPhySetFluidRotation@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING117           "PHY SET FLUID STIFFNESS%LF%?dbPhySetFluidStiffness@@YAXHM@Z%ID, value#"
+    IDS_STRING118           "PHY SET FLUID VISCOSITY%LF%?dbPhySetFluidViscosity@@YAXHM@Z%ID, value#"
+    IDS_STRING119           "PHY SET FLUID REST DENSITY%LF%?dbPhySetFluidRestDensity@@YAXHM@Z%ID, value#"
+    IDS_STRING120           "PHY SET FLUID DAMPING%LF%?dbPhySetFluidDamping@@YAXHM@Z%ID, value#"
+    IDS_STRING121           "PHY SET FLUID METHOD%LL%?dbPhySetFluidMethod@@YAXHH@Z%ID, state"
+    IDS_STRING122           "PHY SET FLUID ACCELERATION%LFFF%?dbPhySetFluidAcceleration@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING123           "PHY SET FLUID EMITTER TYPE%LL%?dbPhySetFluidEmitterType@@YAXHH@Z%ID, type"
+    IDS_STRING124           "PHY SET FLUID EMITTER MAX PARTICLES%LL%?dbPhySetFluidEmitterMaxParticles@@YAXHH@Z%ID, max particles"
+    IDS_STRING125           "PHY SET FLUID EMITTER SHAPE%LL%?dbPhySetFluidEmitterShape@@YAXHH@Z%ID, shape mode"
+    IDS_STRING126           "PHY SET FLUID EMITTER DIMENSIONS%LFF%?dbPhySetFluidEmitterDimensions@@YAXHMM@Z%ID, x#, y#"
+    IDS_STRING127           "PHY SET FLUID EMITTER RANDOM POSITION%LFFF%?dbPhySetFluidEmitterRandomPosition@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING128           "PHY SET FLUID EMITTER RANDOM ANGLE%LF%?dbPhySetFluidEmitterRandomAngle@@YAXHM@Z%ID, anglex#, angley#, anglez#"
+    IDS_STRING129           "PHY SET FLUID EMITTER VELOCITY%LF%?dbPhySetFluidEmitterVelocity@@YAXHM@Z%ID, velocity#"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING130           "PHY SET FLUID EMITTER RATE%LF%?dbPhySetFluidEmitterRate@@YAXHM@Z%ID, rate#"
+    IDS_STRING131           "PHY SET FLUID EMITTER LIFETIME%LF%?dbPhySetFluidEmitterLifetime@@YAXHM@Z%ID, lifetime#"
+    IDS_STRING132           "PHY SET FLUID EMITTER FLAGS%LL%?dbPhySetFluidEmitterFlags@@YAXHH@Z%ID, flags"
+    IDS_STRING133           "PHY MAKE PARTICLE EMITTER%LLFFFFFFFF%?dbPhyMakeParticleEmitter@@YAXHHMMMMMMMM@Z%ID, maximum, emit rate#, x#, y#, z#, speed#, x#, y#, z#"
+    IDS_STRING134           "PHY MAKE FIRE EMITTER%LLFFF%?dbPhyMakeFireEmitter@@YAXHHMMM@Z%ID, maximum, x#, y#, z#"
+    IDS_STRING135           "PHY MAKE SMOKE EMITTER%LLFFF%?dbPhyMakeSmokeEmitter@@YAXHHMMM@Z%ID, maximum, x#, y#, z#"
+    IDS_STRING136           "PHY MAKE SNOW EMITTER%LLFFF%?dbPhyMakeSnowEmitter@@YAXHHMMM@Z%ID, maximum, x#, y#, z#"
+    IDS_STRING137           "PHY DELETE EMITTER%L%?dbPhyDeleteEmitter@@YAXH@Z%ID"
+    IDS_STRING138           "PHY SET EMITTER LINEAR VELOCITY%LFFF%?dbPhySetEmitterLinearVelocity@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING139           "PHY SET EMITTER LINEAR VELOCITY RANGE%LFFFFFF%?dbPhySetEmitterLinearVelocityRange@@YAXHMMMMMM@Z%ID, min x#, min y#, min z#, max x#, max y#, max z#"
+    IDS_STRING140           "PHY SET EMITTER GRAVITY%LL%?dbPhySetEmitterGravity@@YAXHH@Z%ID, state"
+    IDS_STRING141           "PHY SET EMITTER LIFE SPAN%LF%?dbPhySetEmitterLifeSpan@@YAXHM@Z%ID, life#"
+    IDS_STRING142           "PHY SET EMITTER FADE%LL%?dbPhySetEmitterFade@@YAXHH@Z%ID, state"
+    IDS_STRING143           "PHY SET EMITTER SIZE%LF%?dbPhySetEmitterSize@@YAXHM@Z%ID, size#"
+    IDS_STRING144           "PHY SET EMITTER MAX SIZE%LF%?dbPhySetEmitterMaxSize@@YAXHM@Z%ID, size#"
+    IDS_STRING145           "PHY SET EMITTER GROWTH RATE%LF%?dbPhySetEmitterGrowthRate@@YAXHM@Z%ID, rate#"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING146           "PHY SET EMITTER RANGE%LFFFFFF%?dbPhySetEmitterRange@@YAXHMMMMMM@Z%ID, min x#, min y#, min z#, x#, y#, z#"
+    IDS_STRING147           "PHY SET EMITTER START COLOR%LLLL%?dbPhySetEmitterStartColor@@YAXHKKK@Z%ID, red, green, blue"
+    IDS_STRING148           "PHY SET EMITTER END COLOR%LLLL%?dbPhySetEmitterEndColor@@YAXHKKK@Z%ID, red, green, blue"
+    IDS_STRING149           "PHY SET EMITTER POSITION%LFFF%?dbPhySetEmitterPosition@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING150           "PHY GET EMITTER EXIST[%LL%?dbPhyGetEmitterExist@@YAHH@Z%ID"
+    IDS_STRING151           "PHY MAKE BOX CHARACTER CONTROLLER%LFFFFFFLFF%?dbPhyMakeBoxCharacterController@@YAXHMMMMMMHMM@Z%ID, x#, y#, z#, size x#, size y#, size z#, up, step#, slope limit#"
+    IDS_STRING152           "PHY MAKE CAPSULE CHARACTER CONTROLLER%LFFFFFLFF%?dbPhyMakeCapsuleCharacterController@@YAXHMMMMMHMM@Z%ID, x#, y#, z#, radius#, height#, up, step#, slope limit#"
+    IDS_STRING153           "PHY MOVE CHARACTER CONTROLLER%LF%?dbPhyMoveCharacterController@@YAXHM@Z%ID, speed#"
+    IDS_STRING154           "PHY GET CHARACTER CONTROLLER EXIST[%LL%?dbPhyGetCharacterControllerExist@@YAHH@Z%ID"
+    IDS_STRING155           "PHY DELETE CHARACTER CONTROLLER%L%?dbPhyDeleteCharacterController@@YAXH@Z%ID"
+    IDS_STRING156           "PHY GET COLLISION DATA[%L%?dbPhyGetCollisionData@@YAHXZ%"
+    IDS_STRING157           "PHY GET COLLISION OBJECT A[%L%?dbPhyGetCollisionObjectA@@YAHXZ%"
+    IDS_STRING158           "PHY GET COLLISION OBJECT B[%L%?dbPhyGetCollisionObjectB@@YAHXZ%"
+    IDS_STRING159           "PHY MAKE RIGID BODY STATIC BOX%L%?dbPhyMakeRigidBodyStaticBox@@YAXH@Z%ID"
+    IDS_STRING160           "PHY MAKE RIGID BODY STATIC BOXES%L%?dbPhyMakeRigidBodyStaticBoxes@@YAXH@Z%"
+    IDS_STRING161           "PHY MAKE RIGID BODY STATIC BOX%LL%?dbPhyMakeRigidBodyStaticBox@@YAXHH@Z%ID, material"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING162           "PHY MAKE RIGID BODY STATIC BOXES%LL%?dbPhyMakeRigidBodyStaticBoxes@@YAXHH@Z%"
+    IDS_STRING163           "PHY MAKE RIGID BODY DYNAMIC BOX%L%?dbPhyMakeRigidBodyDynamicBox@@YAXH@Z%ID"
+    IDS_STRING164           "PHY MAKE RIGID BODY DYNAMIC BOXES%L%?dbPhyMakeRigidBodyDynamicBoxes@@YAXH@Z%"
+    IDS_STRING165           "PHY MAKE RIGID BODY DYNAMIC BOX%LL%?dbPhyMakeRigidBodyDynamicBox@@YAXHH@Z%ID, material"
+    IDS_STRING166           "PHY MAKE RIGID BODY DYNAMIC BOXES%LL%?dbPhyMakeRigidBodyDynamicBoxes@@YAXHH@Z%"
+    IDS_STRING167           "PHY MAKE RIGID BODY STATIC CAPSULE%L%?dbPhyMakeRigidBodyStaticCapsule@@YAXH@Z%ID"
+    IDS_STRING168           "PHY MAKE RIGID BODY STATIC CAPSULES%L%?dbPhyMakeRigidBodyStaticCapsules@@YAXH@Z%"
+    IDS_STRING169           "PHY MAKE RIGID BODY STATIC CAPSULE%LL%?dbPhyMakeRigidBodyStaticCapsule@@YAXHH@Z%ID, material"
+    IDS_STRING170           "PHY MAKE RIGID BODY STATIC CAPSULES%LL%?dbPhyMakeRigidBodyStaticCapsules@@YAXHH@Z%"
+    IDS_STRING171           "PHY MAKE RIGID BODY DYNAMIC CAPSULE%L%?dbPhyMakeRigidBodyDynamicCapsule@@YAXH@Z%ID"
+    IDS_STRING172           "PHY MAKE RIGID BODY DYNAMIC CAPSULES%L%?dbPhyMakeRigidBodyDynamicCapsules@@YAXH@Z%"
+    IDS_STRING173           "PHY MAKE RIGID BODY DYNAMIC CAPSULE%LL%?dbPhyMakeRigidBodyDynamicCapsule@@YAXHH@Z%ID, material"
+    IDS_STRING174           "PHY MAKE RIGID BODY DYNAMIC CAPSULES%LL%?dbPhyMakeRigidBodyDynamicCapsules@@YAXHH@Z%"
+    IDS_STRING175           "PHY MAKE RIGID BODY STATIC CONVEX%LS%?dbPhyMakeRigidBodyStaticConvex@@YAXHPAD@Z%ID, file$"
+    IDS_STRING176           "PHY MAKE RIGID BODY STATIC CONVEXES%LS%?dbPhyMakeRigidBodyStaticConvexes@@YAXHPAD@Z%"
+    IDS_STRING177           "PHY MAKE RIGID BODY STATIC CONVEX%LSL%?dbPhyMakeRigidBodyStaticConvex@@YAXHPADH@Z%ID, file$, material"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING178           "PHY MAKE RIGID BODY STATIC CONVEXES%LSL%?dbPhyMakeRigidBodyStaticConvexes@@YAXHPADH@Z%"
+    IDS_STRING179           "PHY MAKE RIGID BODY DYNAMIC CONVEX%LS%?dbPhyMakeRigidBodyDynamicConvex@@YAXHPAD@Z%ID, file$"
+    IDS_STRING180           "PHY MAKE RIGID BODY DYNAMIC CONVEXES%LS%?dbPhyMakeRigidBodyDynamicConvexes@@YAXHPAD@Z%"
+    IDS_STRING181           "PHY MAKE RIGID BODY DYNAMIC CONVEX%LSL%?dbPhyMakeRigidBodyDynamicConvex@@YAXHPADH@Z%ID, file$, material"
+    IDS_STRING182           "PHY MAKE RIGID BODY DYNAMIC CONVEXES%LSL%?dbPhyMakeRigidBodyDynamicConvexes@@YAXHPADH@Z%"
+    IDS_STRING183           "PHY LOAD RIGID BODY STATIC CONVEX%LS%?dbPhyLoadRigidBodyStaticConvex@@YAXHPAD@Z%ID, file$"
+    IDS_STRING184           "PHY LOAD RIGID BODY STATIC CONVEXES%LS%?dbPhyLoadRigidBodyStaticConvexes@@YAXHPAD@Z%"
+    IDS_STRING185           "PHY LOAD RIGID BODY STATIC CONVEX%LSL%?dbPhyLoadRigidBodyStaticConvex@@YAXHPADH@Z%ID, file$, material"
+    IDS_STRING186           "PHY LOAD RIGID BODY STATIC CONVEXES%LSL%?dbPhyLoadRigidBodyStaticConvexes@@YAXHPADH@Z%"
+    IDS_STRING187           "PHY LOAD RIGID BODY DYNAMIC CONVEX%LS%?dbPhyLoadRigidBodyDynamicConvex@@YAXHPAD@Z%ID, file$"
+    IDS_STRING188           "PHY LOAD RIGID BODY DYNAMIC CONVEXES%LS%?dbPhyLoadRigidBodyDynamicConvexes@@YAXHPAD@Z%"
+    IDS_STRING189           "PHY LOAD RIGID BODY DYNAMIC CONVEX%LSL%?dbPhyLoadRigidBodyDynamicConvex@@YAXHPADH@Z%ID, file$, material"
+    IDS_STRING190           "PHY LOAD RIGID BODY DYNAMIC CONVEXES%LSL%?dbPhyLoadRigidBodyDynamicConvexes@@YAXHPADH@Z%"
+    IDS_STRING191           "PHY MAKE RIGID BODY STATIC MESH%L%?dbPhyMakeRigidBodyStaticMesh@@YAXH@Z%ID"
+    IDS_STRING192           "PHY MAKE RIGID BODY STATIC MESHES%L%?dbPhyMakeRigidBodyStaticMeshes@@YAXH@Z%"
+    IDS_STRING193           "PHY MAKE RIGID BODY STATIC MESH%LL%?dbPhyMakeRigidBodyStaticMesh@@YAXHH@Z%ID,material"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING194           "PHY MAKE RIGID BODY STATIC MESHES%LL%?dbPhyMakeRigidBodyStaticMeshes@@YAXHH@Z%"
+    IDS_STRING195           "PHY MAKE RIGID BODY DYNAMIC MESH%L%?dbPhyMakeRigidBodyDynamicMesh@@YAXH@Z%ID"
+    IDS_STRING196           "PHY MAKE RIGID BODY DYNAMIC MESHES%L%?dbPhyMakeRigidBodyDynamicMeshes@@YAXH@Z%"
+    IDS_STRING197           "PHY MAKE RIGID BODY DYNAMIC MESH%LL%?dbPhyMakeRigidBodyDynamicMesh@@YAXHH@Z%ID,material"
+    IDS_STRING198           "PHY MAKE RIGID BODY DYNAMIC MESHES%LL%?dbPhyMakeRigidBodyDynamicMeshes@@YAXHH@Z%"
+    IDS_STRING199           "PHY MAKE RIGID BODY STATIC MESH%LS%?dbPhyMakeRigidBodyStaticMesh@@YAXHPAD@Z%ID, file$"
+    IDS_STRING200           "PHY MAKE RIGID BODY STATIC MESHES%LS%?dbPhyMakeRigidBodyStaticMeshes@@YAXHPAD@Z%"
+    IDS_STRING201           "PHY MAKE RIGID BODY STATIC MESH%LSL%?dbPhyMakeRigidBodyStaticMesh@@YAXHPADH@Z%ID, file$, material"
+    IDS_STRING202           "PHY MAKE RIGID BODY STATIC MESHES%LSL%?dbPhyMakeRigidBodyStaticMeshes@@YAXHPADH@Z%"
+    IDS_STRING203           "PHY MAKE RIGID BODY DYNAMIC MESH%LS%?dbPhyMakeRigidBodyDynamicMesh@@YAXHPAD@Z%ID, file$"
+    IDS_STRING204           "PHY MAKE RIGID BODY DYNAMIC MESHES%LS%?dbPhyMakeRigidBodyDynamicMeshes@@YAXHPAD@Z%"
+    IDS_STRING205           "PHY MAKE RIGID BODY DYNAMIC MESH%LSL%?dbPhyMakeRigidBodyDynamicMesh@@YAXHPADH@Z%ID, file$, material"
+    IDS_STRING206           "PHY MAKE RIGID BODY DYNAMIC MESHES%LSL%?dbPhyMakeRigidBodyDynamicMeshes@@YAXHPADH@Z%"
+    IDS_STRING207           "PHY LOAD RIGID BODY STATIC MESH%LS%?dbPhyLoadRigidBodyStaticMesh@@YAXHPAD@Z%ID, file$"
+    IDS_STRING208           "PHY LOAD RIGID BODY STATIC MESHES%LS%?dbPhyLoadRigidBodyStaticMeshes@@YAXHPAD@Z%"
+    IDS_STRING209           "PHY LOAD RIGID BODY STATIC MESH%LSL%?dbPhyLoadRigidBodyStaticMesh@@YAXHPADH@Z%ID, file$, material"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING210           "PHY LOAD RIGID BODY STATIC MESHES%LSL%?dbPhyLoadRigidBodyStaticMeshes@@YAXHPADH@Z%"
+    IDS_STRING211           "PHY LOAD RIGID BODY DYNAMIC MESH%LS%?dbPhyLoadRigidBodyDynamicMesh@@YAXHPAD@Z%ID, file$"
+    IDS_STRING212           "PHY LOAD RIGID BODY DYNAMIC MESHES%LS%?dbPhyLoadRigidBodyDynamicMeshes@@YAXHPAD@Z%"
+    IDS_STRING213           "PHY LOAD RIGID BODY DYNAMIC MESH%LSL%?dbPhyLoadRigidBodyDynamicMesh@@YAXHPADH@Z%ID, file$, material"
+    IDS_STRING214           "PHY LOAD RIGID BODY DYNAMIC MESHES%LSL%?dbPhyLoadRigidBodyDynamicMeshes@@YAXHPADH@Z%"
+    IDS_STRING215           "PHY MAKE RAGDOLL%LLL%?dbPhyMakeRagdoll@@YAXHHH@Z%ID, object, physics"
+    IDS_STRING216           "PHY ASSIGN RAGDOLL PART%LLLL%?dbPhyAssignRagdollPart@@YAXHHHH@Z%ID, mesh, bone, object"
+    IDS_STRING217           "PHY MAKE RIGID BODY STATIC SPHERE%L%?dbPhyMakeRigidBodyStaticSphere@@YAXH@Z%ID"
+    IDS_STRING218           "PHY MAKE RIGID BODY STATIC SPHERES%L%?dbPhyMakeRigidBodyStaticSpheres@@YAXH@Z%"
+    IDS_STRING219           "PHY MAKE RIGID BODY STATIC SPHERE%LL%?dbPhyMakeRigidBodyStaticSphere@@YAXHH@Z%ID, material"
+    IDS_STRING220           "PHY MAKE RIGID BODY STATIC SPHERES%LL%?dbPhyMakeRigidBodyStaticSpheres@@YAXHH@Z%"
+    IDS_STRING221           "PHY MAKE RIGID BODY DYNAMIC SPHERE%L%?dbPhyMakeRigidBodyDynamicSphere@@YAXH@Z%ID"
+    IDS_STRING222           "PHY MAKE RIGID BODY DYNAMIC SPHERES%L%?dbPhyMakeRigidBodyDynamicSpheres@@YAXH@Z%"
+    IDS_STRING223           "PHY MAKE RIGID BODY DYNAMIC SPHERE%LL%?dbPhyMakeRigidBodyDynamicSphere@@YAXHH@Z%ID, material"
+    IDS_STRING224           "PHY MAKE RIGID BODY DYNAMIC SPHERES%LL%?dbPhyMakeRigidBodyDynamicSpheres@@YAXHH@Z%"
+    IDS_STRING225           "PHY SET VEHICLE BRAKE TORQUE%LF%?dbPhySetVehicleBrakeTorque@@YAXHM@Z%ID,torque#"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING226           "PHY SET RIGID BODY TERRAIN EXTENT%F%?dbPhySetRigidBodyTerrainExtent@@YAXM@Z%"
+    IDS_STRING227           "PHY SET RIGID BODY CCD%LL%?dbPhySetRigidBodyCCD@@YAXHH@Z%"
+    IDS_STRING228           "PHY GET RIGID BODY DYNAMIC[%LL%?dbPhyGetRigidBodyDynamic@@YAHH@Z%"
+    IDS_STRING229           "PHY DELETE RIGID BODY%L%?dbPhyDeleteRigidBody@@YAXH@Z%ID"
+    IDS_STRING230           "PHY GET RIGID BODY EXIST[%LL%?dbPhyGetRigidBodyExist@@YAHH@Z%ID"
+    IDS_STRING231           "PHY GET RIGID BODY TYPE[%LL%?dbPhyGetRigidBodyType@@YAHH@Z%ID"
+    IDS_STRING232           "PHY MAKE 6DOF JOINT%LLL%?dbPhyMake6DOFJoint@@YAXHHH@Z%ID, a, b"
+    IDS_STRING233           "PHY SET 6DOF JOINT LOCAL ANCHOR%LLFFF%?dbPhySet6DOFJointLocalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING234           "PHY SET 6DOF JOINT LOCAL AXIS%LLFFF%?dbPhySet6DOFJointLocalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING235           "PHY SET 6DOF JOINT LOCAL NORMAL%LLFFF%?dbPhySet6DOFJointLocalNormal@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING236           "PHY SET 6DOF JOINT GLOBAL ANCHOR%LLFFF%?dbPhySet6DOFJointGlobalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING237           "PHY SET 6DOF JOINT GLOBAL AXIS%LLFFF%?dbPhySet6DOFJointGlobalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING238           "PHY SET 6DOF JOINT TWIST MOTION%LL%?dbPhySet6DOFJointTwistMotion@@YAXHH@Z%ID, motion"
+    IDS_STRING239           "PHY SET 6DOF JOINT SWING1 MOTION%LL%?dbPhySet6DOFJointSwing1Motion@@YAXHH@Z%ID, motion"
+    IDS_STRING240           "PHY SET 6DOF JOINT SWING2 MOTION%LL%?dbPhySet6DOFJointSwing2Motion@@YAXHH@Z%ID, motion"
+    IDS_STRING241           "PHY SET 6DOF JOINT MOTION X%LL%?dbPhySet6DOFJointMotionX@@YAXHH@Z%ID, motion"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING242           "PHY SET 6DOF JOINT MOTION Y%LL%?dbPhySet6DOFJointMotionY@@YAXHH@Z%ID, motion"
+    IDS_STRING243           "PHY SET 6DOF JOINT MOTION Z%LL%?dbPhySet6DOFJointMotionZ@@YAXHH@Z%ID, motion"
+    IDS_STRING244           "PHY SET 6DOF JOINT LINEAR LIMIT%LFFFF%?dbPhySet6DOFJointLinearLimit@@YAXHMMMM@Z%ID, value#, restitution#, spring#, damping#"
+    IDS_STRING245           "PHY SET 6DOF JOINT SWING1 LIMIT%LFFFF%?dbPhySet6DOFJointSwing1Limit@@YAXHMMMM@Z%ID, value#, restitution#, spring#, damping#"
+    IDS_STRING246           "PHY SET 6DOF JOINT SWING2 LIMIT%LFFFF%?dbPhySet6DOFJointSwing2Limit@@YAXHMMMM@Z%ID, value#, restitution#, spring#, damping#"
+    IDS_STRING247           "PHY SET 6DOF JOINT TWIST LIMIT%LFFFFFFFF%?dbPhySet6DOFJointTwistLimit@@YAXHMMMMMMMM@Z%ID, dampingLow#, restitutionLow#, springLow#, valueLow#, dampingHigh#, restitutionHigh#, springHigh#, valueHigh#"
+    IDS_STRING248           "PHY SET 6DOF JOINT DRIVE X%LLFFF%?dbPhySet6DOFJointDriveX@@YAXHHMMM@Z%ID, type, spring#, damping#, forceLimit#"
+    IDS_STRING249           "PHY SET 6DOF JOINT DRIVE Y%LLFFF%?dbPhySet6DOFJointDriveY@@YAXHHMMM@Z%ID, type, spring#, damping#, forceLimit#"
+    IDS_STRING250           "PHY SET 6DOF JOINT DRIVE Z%LLFFF%?dbPhySet6DOFJointDriveZ@@YAXHHMMM@Z%ID, type, spring#, damping#, forceLimit#"
+    IDS_STRING251           "PHY SET 6DOF JOINT TWIST DRIVE%LLFFF%?dbPhySet6DOFJointTwistDrive@@YAXHHMMM@Z%ID, type, spring#, damping#, forceLimit#"
+    IDS_STRING252           "PHY SET 6DOF JOINT SWING DRIVE%LLFFF%?dbPhySet6DOFJointSwingDrive@@YAXHHMMM@Z%ID, type, spring#, damping#, forceLimit#"
+    IDS_STRING253           "PHY SET 6DOF JOINT SLERP DRIVE%LLFFF%?dbPhySet6DOFJointSlerpDrive@@YAXHH@Z%ID, type, spring#, damping#, forceLimit#"
+    IDS_STRING254           "PHY SET 6DOF JOINT DRIVE POSITION%LFFF%?dbPhySet6DOFJointDrivePosition@@YAXHMMM@Z%ID, x#, x#, z#"
+    IDS_STRING255           "PHY SET 6DOF JOINT DRIVE ROTATION%LFFF%?dbPhySet6DOFJointDriveRotation@@YAXHMMM@Z%ID, x#, x#, z#"
+    IDS_STRING256           "PHY SET 6DOF JOINT DRIVE LINEAR VELOCITY%LFFF%?dbPhySet6DOFJointDriveLinearVelocity@@YAXHMMM@Z%ID, x#, x#, z#"
+    IDS_STRING257           "PHY SET 6DOF JOINT DRIVE ANGULAR VELOCITY%LFFF%?dbPhySet6DOFJointDriveAngularVelocity@@YAXHMMM@Z%ID, x#, x#, z#"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING258           "PHY SET 6DOF JOINT PROJECTION%LLF%?dbPhySet6DOFJointProjection@@YAXHHM@Z%ID, mode, distance#"
+    IDS_STRING259           "PHY SET 6DOF JOINT SLERP DRIVE%LL%?dbPhySet6DOFJointSlerpDrive@@YAXHH@Z%ID, type"
+    IDS_STRING260           "PHY SET 6DOF JOINT GEAR%LL%?dbPhySet6DOFJointGear@@YAXHH@Z%ID, state"
+    IDS_STRING261           "PHY BUILD 6DOF JOINT%L%?dbPhyBuild6DOFJoint@@YAXH@Z%ID"
+    IDS_STRING262           "PHY MAKE CYLINDRICAL JOINT%LLLFFFFFF%?dbPhyMakeCylindricalJoint@@YAXHHHMMMMMM@Z%ID, A, B, anchorX#, anchorY#, anchorZ#, axisX#, axisY#, axisz#"
+    IDS_STRING263           "PHY MAKE CYLINDRICAL JOINT%LLL%?dbPhyMakeCylindricalJoint@@YAXHHH@Z%ID, A, B"
+    IDS_STRING264           "PHY SET CYLINDRICAL JOINT LOCAL ANCHOR%LLFFF%?dbPhySetCylindricalJointLocalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING265           "PHY SET CYLINDRICAL JOINT LOCAL AXIS%LLFFF%?dbPhySetCylindricalJointLocalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING266           "PHY SET CYLINDRICAL JOINT GLOBAL ANCHOR%LLFFF%?dbPhySetCylindricalJointGlobalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING267           "PHY SET CYLINDRICAL JOINT GLOBAL AXIS%LLFFF%?dbPhySetCylindricalJointGlobalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING268           "PHY BUILD CYLINDRICAL JOINT%L%?dbPhyBuildCylindricalJoint@@YAXH@Z%ID"
+    IDS_STRING269           "PHY MAKE DISTANCE JOINT%LLLFFFFF%?dbPhyMakeDistanceJoint@@YAXHHHMMMMM@Z%ID, A, B, anchorX#, anchorY#, anchorZ#, minDistance#, maxDistance#"
+    IDS_STRING270           "PHY MAKE DISTANCE JOINT%LLL%?dbPhyMakeDistanceJoint@@YAXHHH@Z%ID, A, B"
+    IDS_STRING271           "PHY SET DISTANCE JOINT LOCAL ANCHOR%LLFFF%?dbPhySetDistanceJointLocalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING272           "PHY SET DISTANCE JOINT GLOBAL ANCHOR%LLFFF%?dbPhySetDistanceJointGlobalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING273           "PHY SET DISTANCE JOINT LOCAL AXIS%LLFFF%?dbPhySetDistanceJointLocalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING274           "PHY SET DISTANCE JOINT GLOBAL AXIS%LLFFF%?dbPhySetDistanceJointGlobalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING275           "PHY SET DISTANCE JOINT MAX%LF%?dbPhySetDistanceJointMax@@YAXHM@Z%ID, max#"
+    IDS_STRING276           "PHY SET DISTANCE JOINT MIN%LF%?dbPhySetDistanceJointMin@@YAXHM@Z%ID, min#"
+    IDS_STRING277           "PHY SET DISTANCE JOINT SPRING%LFFF%?dbPhySetDistanceJointSpring@@YAXHMMM@Z%ID, target#, spring#, damper#"
+    IDS_STRING278           "PHY BUILD DISTANCE JOINT%L%?dbPhyBuildDistanceJoint@@YAXH@Z%ID"
+    IDS_STRING279           "PHY MAKE FIXED JOINT%LLL%?dbPhyMakeFixedJoint@@YAXHHH@Z%ID, A, B"
+    IDS_STRING280           "PHY MAKE FIXED JOINT%LLLL%?dbPhyMakeFixedJoint@@YAXHHHH@Z%ID, A, B,C"
+    IDS_STRING281           "PHY BUILD FIXED JOINT%L%?dbPhyBuildFixedJoint@@YAXH@Z%ID"
+    IDS_STRING282           "PHY MAKE POINT IN PLANE JOINT%LLLFFFFFF%?dbPhyMakePointInPlaneJoint@@YAXHHHMMMMMM@Z%ID, A, B, anchorX#, anchorY#, anchorZ#, axisX#, axisY#, axisZ#"
+    IDS_STRING283           "PHY MAKE POINT IN PLANE JOINT%LLL%?dbPhyMakePointInPlaneJoint@@YAXHHH@Z%ID, A, B"
+    IDS_STRING284           "PHY SET POINT IN PLANE JOINT LOCAL ANCHOR%LLFFF%?dbPhySetPointInPlaneJointLocalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING285           "PHY SET POINT IN PLANE JOINT LOCAL AXIS%LLFFF%?dbPhySetPointInPlaneJointLocalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING286           "PHY SET POINT IN PLANE JOINT GLOBAL ANCHOR%LLFFF%?dbPhySetPointInPlaneJointGlobalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING287           "PHY SET POINT IN PLANE JOINT GLOBAL AXIS%LLFFF%?dbPhySetPointInPlaneJointGlobalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING288           "PHY BUILD POINT IN PLANE JOINT%L%?dbPhyBuildPointInPlaneJoint@@YAXH@Z%ID"
+    IDS_STRING289           "PHY MAKE POINT ON LINE JOINT%LLLFFFFFF%?dbPhyMakePointOnLineJoint@@YAXHHHMMMMMM@Z%ID, A, B, anchorX#, anchorY#, anchorZ#, axisX#, axisY#, axisZ#"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING290           "PHY MAKE POINT ON LINE JOINT%LLL%?dbPhyMakePointOnLineJoint@@YAXHHH@Z%ID, A, B"
+    IDS_STRING291           "PHY SET POINT ON LINE JOINT LOCAL ANCHOR%LLFFF%?dbPhySetPointOnLineJointLocalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING292           "PHY SET POINT ON LINE JOINT LOCAL AXIS%LLFFF%?dbPhySetPointOnLineJointLocalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING293           "PHY SET POINT ON LINE JOINT GLOBAL ANCHOR%LLFFF%?dbPhySetPointOnLineJointGlobalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING294           "PHY SET POINT ON LINE JOINT GLOBAL AXIS%LLFFF%?dbPhySetPointOnLineJointGlobalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING295           "PHY BUILD POINT ON LINE JOINT%L%?dbPhyBuildPointOnLineJoint@@YAXH@Z%ID"
+    IDS_STRING296           "PHY MAKE PRISMATIC JOINT%LLLFFFFFF%?dbPhyMakePrismaticJoint@@YAXHHH@Z%ID, A, B, anchorX#, anchorY#, anchorZ#, axisX#, axisY#, axisZ#"
+    IDS_STRING297           "PHY MAKE PRISMATIC JOINT%LLL%?dbPhyMakePrismaticJoint@@YAXHHH@Z%ID, A, B"
+    IDS_STRING298           "PHY SET PRISMATIC JOINT LOCAL ANCHOR%LLFFF%?dbPhySetPrismaticJointLocalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING299           "PHY SET PRISMATIC JOINT LOCAL AXIS%LLFFF%?dbPhySetPrismaticJointLocalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING300           "PHY SET PRISMATIC JOINT GLOBAL ANCHOR%LLFFF%?dbPhySetPrismaticJointGlobalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING301           "PHY SET PRISMATIC JOINT GLOBAL AXIS%LLFFF%?dbPhySetPrismaticJointGlobalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING302           "PHY BUILD PRISMATIC JOINT%L%?dbPhyBuildPrismaticJoint@@YAXH@Z%ID"
+    IDS_STRING303           "PHY MAKE PULLEY JOINT%LLLFFFFFFFFFFFFFFF%?dbPhyMakePulleyJoint@@YAXHHHMMMMMMMMMMMMMMM@Z%ID, A, B, x1#, y1#, z1#, x2#, y2#, z2#, x3#, y3#, z3#, x4#, y4#, z4#, distance#, stiffness#, value#"
+    IDS_STRING304           "PHY MAKE PULLEY JOINT%LLL%?dbPhyMakePulleyJoint@@YAXHHH@Z%ID, A, B"
+    IDS_STRING305           "PHY SET PULLEY JOINT LOCAL ANCHOR%LLFFF%?dbPhySetPulleyJointLocalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING306           "PHY SET PULLEY JOINT GLOBAL ANCHOR%LLFFF%?dbPhySetPulleyJointGlobalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING307           "PHY SET PULLEY JOINT LOCAL AXIS%LLFFF%?dbPhySetPulleyJointLocalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING308           "PHY SET PULLEY JOINT GLOBAL AXIS%LLFFF%?dbPhySetPulleyJointGlobalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING309           "PHY SET PULLEY JOINT SUSPENSION%LLFFF%?dbPhySetPulleyJointSuspension@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING310           "PHY SET PULLEY JOINT DISTANCE%LF%?dbPhySetPulleyJointDistance@@YAXHM@Z%ID, distance#"
+    IDS_STRING311           "PHY SET PULLEY JOINT STIFFNESS%LF%?dbPhySetPulleyJointStiffness@@YAXHM@Z%ID, stiffness#"
+    IDS_STRING312           "PHY SET PULLEY JOINT RATIO%LF%?dbPhySetPulleyJointRatio@@YAXHM@Z%ID, ratio#"
+    IDS_STRING313           "PHY SET PULLEY JOINT RIGID%LL%?dbPhySetPulleyJointRigid@@YAXHH@Z%ID, state"
+    IDS_STRING314           "PHY SET PULLEY JOINT MOTOR%LL%?dbPhySetPulleyJointMotor@@YAXHH@Z%ID, state"
+    IDS_STRING315           "PHY BUILD PULLEY JOINT%L%?dbPhyBuildPulleyJoint@@YAXH@Z%ID"
+    IDS_STRING316           "PHY MAKE SCENE%LLLL%?dbPhyMakeScene@@YAXHHHH@Z%%index, simulationType, simulationSceneType , simulationFlags"
+    IDS_STRING317           "PHY SET CURRENT SCENE%L%?dbPhySetCurrentScene@@YAXH@Z%index"
+    IDS_STRING318           "PHY SET REVOLUTE JOINT LOCAL ANCHOR%LLFFF%?dbPhySetRevoluteJointLocalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING319           "PHY SET REVOLUTE JOINT LOCAL AXIS%LLFFF%?dbPhySetRevoluteJointLocalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING320           "PHY SET REVOLUTE JOINT GLOBAL ANCHOR%LLFFF%?dbPhySetRevoluteJointGlobalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING321           "PHY SET REVOLUTE JOINT GLOBAL AXIS%LLFFF%?dbPhySetRevoluteJointGlobalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING322           "PHY SET REVOLUTE JOINT SPRING%LFF%?dbPhySetRevoluteJointSpring@@YAXHMM@Z%ID, target#, spring#"
+    IDS_STRING323           "PHY SET REVOLUTE JOINT LIMIT%LFF%?dbPhySetRevoluteJointLimit@@YAXHMM@Z%ID,value1#,value2#"
+    IDS_STRING324           "PHY SET REVOLUTE JOINT MOTOR%LFFL%?dbPhySetRevoluteJointMotor@@YAXHMMH@Z%ID, velocityTarget#, maxForce#, freeSpin"
+    IDS_STRING325           "PHY SET REVOLUTE JOINT PROJECTION%LLFF%?dbPhySetRevoluteJointProjection@@YAXHHMM@Z%ID, mode, distance#, angle#"
+    IDS_STRING326           "PHY BUILD REVOLUTE JOINT%L%?dbPhyBuildRevoluteJoint@@YAXH@Z%ID"
+    IDS_STRING327           "PHY MAKE SPHERE JOINT%LLLFFF%?dbPhyMakeSphereJoint@@YAXHHHMMM@Z%ID, A, B, x#, y#, z#"
+    IDS_STRING328           "PHY MAKE SPHERE JOINT%LLL%?dbPhyMakeSphereJoint@@YAXHHH@Z%ID, A, B"
+    IDS_STRING329           "PHY SET SPHERE JOINT LOCAL ANCHOR%LLFFF%?dbPhySetSphereJointLocalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING330           "PHY SET SPHERE JOINT LOCAL AXIS%LLFFF%?dbPhySetSphereJointLocalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING331           "PHY SET SPHERE JOINT GLOBAL ANCHOR%LLFFF%?dbPhySetSphereJointGlobalAnchor@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING332           "PHY SET SPHERE JOINT GLOBAL AXIS%LLFFF%?dbPhySetSphereJointGlobalAxis@@YAXHHMMM@Z%ID, index, x#, y#, z#"
+    IDS_STRING333           "PHY SET SPHERE JOINT SWING AXIS%LFFF%?dbPhySetSphereJointSwingAxis@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING334           "PHY SET SPHERE JOINT SWING LIMIT%LFFF%?dbPhySetSphereJointSwingLimit@@YAXHMMM@Z%ID, value#, restitution#, hardness#"
+    IDS_STRING335           "PHY SET SPHERE JOINT TWIST LIMIT%LFF%?dbPhySetSphereJointTwistLimit@@YAXHMM@Z%ID, low#, high#"
+    IDS_STRING336           "PHY SET SPHERE JOINT TWIST SPRING%LFF%?dbPhySetSphereJointTwistSpring@@YAXHMM@Z%"
+    IDS_STRING337           "PHY SET SPHERE JOINT SWING SPRING%LFF%?dbPhySetSphereJointSwingSpring@@YAXHMM@Z%ID, target#, spring#"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING338           "PHY SET SPHERE JOINT SPRING%LFF%?dbPhySetSphereJointSpring@@YAXHMM@Z%ID, target#, spring#"
+    IDS_STRING339           "PHY SET SPHERE JOINT PROJECTION%LLF%?dbPhySetSphereJointProjection@@YAXHHM@Z%ID, mode, distance#"
+    IDS_STRING340           "PHY BUILD SPHERE JOINT%L%?dbPhyBuildSphereJoint@@YAXH@Z%ID"
+    IDS_STRING341           "PHY DELETE JOINT%L%?dbPhyDeleteJoint@@YAXH@Z%ID"
+    IDS_STRING342           "PHY GET JOINT EXIST[%LL%?dbPhyGetJointExist@@YAHH@Z%ID"
+    IDS_STRING343           "PHY GET JOINT TYPE[%LL%?dbPhyGetJointType@@YAHH@Z%ID"
+    IDS_STRING344           "PHY MAKE MATERIAL%LS%?dbPhyMakeMaterial@@YAXHPAD@Z%ID, name$"
+    IDS_STRING345           "PHY DELETE MATERIAL%L%?dbPhyDeleteMaterial@@YAXH@Z%ID"
+    IDS_STRING346           "PHY SET MATERIAL DYNAMIC FRICTION%LF%?dbPhySetMaterialDynamicFriction@@YAXHM@Z%ID, value#"
+    IDS_STRING347           "PHY SET MATERIAL STATIC FRICTION%LF%?dbPhySetMaterialStaticFriction@@YAXHM@Z%ID, value#"
+    IDS_STRING348           "PHY SET MATERIAL RESTITUTION%LF%?dbPhySetMaterialRestitution@@YAXHM@Z%ID, value#"
+    IDS_STRING349           "PHY SET MATERIAL DYNAMIC FRICTION V%LF%?dbPhySetMaterialDynamicFrictionV@@YAXHM@Z%ID, value#"
+    IDS_STRING350           "PHY SET MATERIAL STATIC FRICTION V%LF%?dbPhySetMaterialStaticFrictionV@@YAXHM@Z%ID, value#"
+    IDS_STRING351           "PHY SET MATERIAL DIR OF ANISOTROPY%LFFF%?dbPhySetMaterialDirOfAnisotropy@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING352           "PHY SET MATERIAL FRICTION COMBINE%LL%?dbPhySetMaterialFrictionCombine@@YAXHH@Z%ID, mode"
+    IDS_STRING353           "PHY SET MATERIAL RESTITUTION COMBINE%LL%?dbPhySetMaterialRestitutionCombine@@YAXHH@Z%ID, mode"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING354           "PHY BUILD MATERIAL%L%?dbPhyBuildMaterial@@YAXH@Z%ID"
+    IDS_STRING355           "PHY GET MATERIAL EXIST[%LL%?dbPhyGetMaterialExist@@YAHH@Z%ID"
+    IDS_STRING356           "PHY GET MATERIAL DYNAMIC FRICTION[%FL%?dbPhyGetMaterialDynamicFrictionEx@@YAKH@Z%ID"
+    IDS_STRING357           "PHY GET MATERIAL STATIC FRICTION[%FL%?dbPhyGetMaterialStaticFrictionEx@@YAKH@Z%ID"
+    IDS_STRING358           "PHY GET MATERIAL RESTITUTION[%FL%?dbPhyGetMaterialRestitutionEx@@YAKH@Z%ID"
+    IDS_STRING359           "PHY GET MATERIAL DYNAMIC FRICTION V[%FL%?dbPhyGetMaterialDynamicFrictionVEx@@YAKH@Z%ID"
+    IDS_STRING360           "PHY GET MATERIAL STATIC FRICTION V[%FL%?dbPhyGetMaterialStaticFrictionVEx@@YAKH@Z%ID"
+    IDS_STRING361           "PHY GET MATERIAL DIR OF ANISOTROPY X[%FL%?dbPhyGetMaterialDirOfAnisotropyXEx@@YAKH@Z%ID"
+    IDS_STRING362           "PHY GET MATERIAL DIR OF ANISOTROPY Y[%FL%?dbPhyGetMaterialDirOfAnisotropyYEx@@YAKH@Z%ID"
+    IDS_STRING363           "PHY GET MATERIAL DIR OF ANISOTROPY Z[%FL%?dbPhyGetMaterialDirOfAnisotropyZEx@@YAKH@Z%ID"
+    IDS_STRING364           "PHY GET MATERIAL FRICTION COMBINE[%LL%?dbPhyGetMaterialFrictionCombine@@YAHH@Z%ID"
+    IDS_STRING365           "PHY GET MATERIAL RESTITUTION COMBINE[%LL%?dbPhyGetMaterialRestitutionCombine@@YAHH@Z%ID"
+    IDS_STRING366           "PHY SET RIGID BODY POSITION%LFFF%?dbPhySetRigidBodyPosition@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING367           "PHY SET RIGID BODY ROTATION%LFFF%?dbPhySetRigidBodyRotation@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING368           "PHY SET RIGID BODY MASS%LF%?dbPhySetRigidBodyMass@@YAXHM@Z%ID, mass#"
+    IDS_STRING369           "PHY GET RIGID BODY MASS[%FL%?dbPhyGetRigidBodyMassEx@@YAKH@Z%ID"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING370           "PHY SET RIGID BODY MASS OFFSET LOCAL%LFFF%?dbPhySetRigidBodyMassOffsetLocal@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING371           "PHY SET RIGID BODY MASS OFFSET GLOBAL%LFFF%?dbPhySetRigidBodyMassOffsetGlobal@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING372           "PHY UPDATE RIGID BODY MASS%LFF%?dbPhyUpdateRigidBodyMass@@YAXHMM@Z%ID, density#, total mass#"
+    IDS_STRING373           "PHY SET RIGID BODY LINEAR DAMPING%LF%?dbPhySetRigidBodyLinearDamping@@YAXHM@Z%ID, value#"
+    IDS_STRING374           "PHY SET RIGID BODY ANGULAR DAMPING%LF%?dbPhySetRigidBodyAngularDamping@@YAXHM@Z%ID, value#"
+    IDS_STRING375           "PHY GET RIGID BODY LINEAR DAMPING[%FL%?dbPhyGetRigidBodyLinearDampingEx@@YAKH@Z%ID"
+    IDS_STRING376           "PHY GET RIGID BODY ANGULAR DAMPING[%FL%?dbPhyGetRigidBodyAngularDampingEx@@YAKH@Z%ID"
+    IDS_STRING377           "PHY SET RIGID BODY LINEAR VELOCITY%LFFF%?dbPhySetRigidBodyLinearVelocity@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING378           "PHY SET RIGID BODY ANGULAR VELOCITY%LFFF%?dbPhySetRigidBodyAngularVelocity@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING379           "PHY SET RIGID BODY MAX ANGULAR VELOCITY%LF%?dbPhySetRigidBodyMaxAngularVelocity@@YAXHM@Z%ID, value#"
+    IDS_STRING380           "PHY GET RIGID BODY LINEAR VELOCITY X[%FL%?dbPhyGetRigidBodyLinearVelocityXEx@@YAKH@Z%ID"
+    IDS_STRING381           "PHY GET RIGID BODY LINEAR VELOCITY Y[%FL%?dbPhyGetRigidBodyLinearVelocityYEx@@YAKH@Z%ID"
+    IDS_STRING382           "PHY GET RIGID BODY LINEAR VELOCITY Z[%FL%?dbPhyGetRigidBodyLinearVelocityZEx@@YAKH@Z%ID"
+    IDS_STRING383           "PHY GET RIGID BODY ANGULAR VELOCITY X[%FL%?dbPhyGetRigidBodyAngularVelocityXEx@@YAKH@Z%ID"
+    IDS_STRING384           "PHY GET RIGID BODY ANGULAR VELOCITY Y[%FL%?dbPhyGetRigidBodyAngularVelocityYEx@@YAKH@Z%ID"
+    IDS_STRING385           "PHY GET RIGID BODY ANGULAR VELOCITY Z[%FL%?dbPhyGetRigidBodyAngularVelocityZEx@@YAKH@Z%ID"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING386           "PHY GET RIGID BODY MAX ANGULAR VELOCITY[%FL%?dbPhyGetRigidBodyMaxAngularVelocityEx@@YAKH@Z%ID"
+    IDS_STRING387           "PHY SET RIGID BODY CCD MOTION THRESHOLD%LF%?dbPhySetRigidBodyCCDMotionThreshold@@YAXHM@Z%ID, threshold#"
+    IDS_STRING388           "PHY GET RIGID BODY CCD MOTION THRESHOLD[%FL%?dbPhyGetRigidBodyCCDMotionThresholdEx@@YAKH@Z%ID"
+    IDS_STRING389           "PHY SET RIGID BODY LINEAR MOMENTUM%LFFF%?dbPhySetRigidBodyLinearMomentum@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING390           "PHY SET RIGID BODY ANGULAR MOMENTUM%LFFF%?dbPhySetRigidBodyAngularMomentum@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING391           "PHY GET RIGID BODY LINEAR MOMENTUM X[%FL%?dbPhyGetRigidBodyLinearMomentumXEx@@YAKH@Z%ID"
+    IDS_STRING392           "PHY GET RIGID BODY LINEAR MOMENTUM Y[%FL%?dbPhyGetRigidBodyLinearMomentumYEx@@YAKH@Z%ID"
+    IDS_STRING393           "PHY GET RIGID BODY LINEAR MOMENTUM Z[%FL%?dbPhyGetRigidBodyLinearMomentumZEx@@YAKH@Z%ID"
+    IDS_STRING394           "PHY GET RIGID BODY ANGULAR MOMENTUM X[%FL%?dbPhyGetRigidBodyAngularMomentumXEx@@YAKH@Z%ID"
+    IDS_STRING395           "PHY GET RIGID BODY ANGULAR MOMENTUM Y[%FL%?dbPhyGetRigidBodyAngularMomentumYEx@@YAKH@Z%ID"
+    IDS_STRING396           "PHY GET RIGID BODY ANGULAR MOMENTUM Z[%FL%?dbPhyGetRigidBodyAngularMomentumZEx@@YAKH@Z%ID"
+    IDS_STRING397           "PHY ADD RIGID BODY FORCE%LFFFFFFL%?dbPhyAddRigidBodyForce@@YAXHMMMMMMH@Z%ID, forceX#, forceY#, forceZ#, x#, y#, z#, mode"
+    IDS_STRING398           "PHY ADD RIGID BODY FORCE AT LOCAL%LFFFFFFL%?dbPhyAddRigidBodyForceAtLocal@@YAXHMMMMMMH@Z%ID, forceX#, forceY#, forceZ#, x#, y#, z#, mode"
+    IDS_STRING399           "PHY ADD RIGID BODY LOCAL FORCE%LFFFFFFL%?dbPhyAddRigidBodyLocalForce@@YAXHMMMMMMH@Z%ID, forceX#, forceY#, forceZ#, x#, y#, z#, mode"
+    IDS_STRING400           "PHY ADD RIGID BODY LOCAL FORCE AT LOCAL%LFFFFFFL%?dbPhyAddRigidBodyLocalForceAtLocal@@YAXHMMMMMMH@Z%ID, forceX#, forceY#, forceZ#, x#, y#, z#, mode"
+    IDS_STRING401           "PHY ADD RIGID BODY FORCE%LFFFL%?dbPhyAddRigidBodyForce@@YAXHMMMH@Z%ID, forceX#, forceY#, forceZ#, mode"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING402           "PHY ADD RIGID BODY LOCAL FORCE%LFFFL%?dbPhyAddRigidBodyLocalForce@@YAXHMMMH@Z%ID, forceX#, forceY#, forceZ#, mode"
+    IDS_STRING403           "PHY ADD RIGID BODY TORQUE%LFFFL%?dbPhyAddRigidBodyTorque@@YAXHMMMH@Z%ID, forceX#, forceY#, forceZ#, mode"
+    IDS_STRING404           "PHY ADD RIGID BODY LOCAL TORQUE%LFFFL%?dbPhyAddRigidBodyLocalTorque@@YAXHMMMH@Z%ID, forceX#, forceY#, forceZ#, mode"
+    IDS_STRING405           "PHY GET RIGID BODY POINT VELOCITY X[%FLFFF%?dbPhyGetRigidBodyPointVelocityXEx@@YAKHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING406           "PHY GET RIGID BODY POINT VELOCITY Y[%FLFFF%?dbPhyGetRigidBodyPointVelocityYEx@@YAKHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING407           "PHY GET RIGID BODY POINT VELOCITY Z[%FLFFF%?dbPhyGetRigidBodyPointVelocityZEx@@YAKHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING408           "PHY GET RIGID BODY LOCAL POINT VELOCITY X[%FLFFF%?dbPhyGetRigidBodyLocalPointVelocityXEx@@YAKHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING409           "PHY GET RIGID BODY LOCAL POINT VELOCITY Y[%FLFFF%?dbPhyGetRigidBodyLocalPointVelocityYEx@@YAKHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING410           "PHY GET RIGID BODY LOCAL POINT VELOCITY Z[%FLFFF%?dbPhyGetRigidBodyLocalPointVelocityZEx@@YAKHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING411           "PHY SET RIGID BODY SLEEP LINEAR VELOCITY%LF%?dbPhySetRigidBodySleepLinearVelocity@@YAXHM@Z%ID, value#"
+    IDS_STRING412           "PHY SET RIGID BODY SLEEP ANGULAR VELOCITY%LF%?dbPhySetRigidBodySleepAngularVelocity@@YAXHM@Z%ID, value#"
+    IDS_STRING413           "PHY WAKE UP RIGID BODY%L%?dbPhyWakeUpRigidBody@@YAXHM@Z%ID"
+    IDS_STRING414           "PHY GET RIGID BODY SLEEPING[%LL%?dbPhyGetRigidBodySleeping@@YAHH@Z%ID"
+    IDS_STRING415           "PHY GET RIGID BODY SLEEP LINEAR VELOCITY[%FL%?dbPhyGetRigidBodySleepLinearVelocityEx@@YAKH@Z%ID"
+    IDS_STRING416           "PHY GET RIGID BODY SLEEP ANGULAR VELOCITY[%FL%?dbPhyGetRigidBodySleepAngularVelocityEx@@YAKH@Z%ID"
+    IDS_STRING417           "PHY SET RIGID BODY KINEMATIC%LL%?dbPhySetRigidBodyKinematic@@YAXHH@Z%ID, state"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING418           "PHY SET RIGID BODY KINEMATIC POSITION%LFFF%?dbPhySetRigidBodyKinematicPosition@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING419           "PHY SET RIGID BODY KINEMATIC ROTATION%LFFF%?dbPhySetRigidBodyKinematicRotation@@YAXHMMM@Z%ID, x#, y#, z#"
+    IDS_STRING420           "PHY RAY CAST ALL SHAPES[%LFFFFFF%?dbPhyRayCastAllShapes@@YAHMMMMMM@Z%"
+    IDS_STRING421           "PHY GET RAY CAST HIT[%L%?dbPhyGetRayCastHit@@YAHXZ%"
+    IDS_STRING422           "PHY GET RAY CAST HIT POINT X[%F%?dbPhyGetRayCastHitPointXEx@@YAKXZ%"
+    IDS_STRING423           "PHY GET RAY CAST HIT POINT Y[%F%?dbPhyGetRayCastHitPointYEx@@YAKXZ%"
+    IDS_STRING424           "PHY GET RAY CAST HIT POINT Z[%F%?dbPhyGetRayCastHitPointZEx@@YAKXZ%"
+    IDS_STRING425           "PHY GET RAY CAST HIT NORMAL X[%F%?dbPhyGetRayCastHitNormalXEx@@YAKXZ%"
+    IDS_STRING426           "PHY GET RAY CAST HIT NORMAL Y[%F%?dbPhyGetRayCastHitNormalYEx@@YAKXZ%"
+    IDS_STRING427           "PHY GET RAY CAST HIT NORMAL Z[%F%?dbPhyGetRayCastHitNormalZEx@@YAKXZ%"
+    IDS_STRING428           "PHY GET RAY CAST DISTANCE[%F%?dbPhyGetRayCastDistanceEx@@YAKXZ%"
+    IDS_STRING429           "PHY GET RAY CAST TU[%F%?dbPhyGetRayCastTU@@YAKXZ%"
+    IDS_STRING430           "PHY GET RAY CAST TV[%F%?dbPhyGetRayCastTV@@YAKXZ%"
+    IDS_STRING431           "PHY GET RAY CAST OBJECT[%L%?dbPhyGetRayCastObject@@YAHXZ%"
+    IDS_STRING432           "PHY MAKE TRIGGER BOX%LFFFFFFFFF%?dbPhyMakeTriggerBox@@YAXHMMMMMMMMM@Z%ID, x#, y#, y#, size x#, size y#, size z#, angle x#, angle y#, angle z#"
+    IDS_STRING433           "PHY MAKE TRIGGER SPHERE%LFFFF%?dbPhyMakeTriggerSphere@@YAXHMMMM@Z%ID, x#, y#, y#, radius#"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING434           "PHY DELETE TRIGGER%L%?dbPhyDeleteTrigger@@YAXH@Z%ID"
+    IDS_STRING435           "PHY TRIGGER EXIST[%LL%?dbPhyTriggerExist@@YAHH@Z%"
+    IDS_STRING436           "PHY TRIGGER TYPE[%LL%?dbPhyTriggerType@@YAHH@Z%"
+    IDS_STRING437           "PHY GET TRIGGER DATA[%L%?dbPhyGetTriggerData@@YAHXZ%"
+    IDS_STRING438           "PHY GET TRIGGER OBJECT A[%L%?dbPhyGetTriggerObjectA@@YAHXZ%"
+    IDS_STRING439           "PHY GET TRIGGER OBJECT B[%L%?dbPhyGetTriggerObjectB@@YAHXZ%"
+    IDS_STRING440           "PHY GET TRIGGER ACTION[%L%?dbPhyGetTriggerAction@@YAHXZ%"
+    IDS_STRING441           "PHY CREATE VEHICLE%L%?dbPhyCreateVehicle@@YAXH@Z%ID"
+    IDS_STRING442           "PHY ADD VEHICLE BODY%LFFFFFF%?dbPhyAddVehicleBody@@YAXHMMMMMM@Z%ID, sizeX#, sizeY#, sizez#, origin x#, origin y#, origin z#"
+    IDS_STRING443           "PHY ADD VEHICLE WHEEL%LLFFFFFLL%?dbPhyAddVehicleWheel@@YAXHHMMMMMHH@Z%ID, limb, x#, y#, z#, radius#, height#, location, direction"
+    IDS_STRING444           "PHY BUILD VEHICLE%L%?dbPhyBuildVehicle@@YAXH@Z%ID"
+    IDS_STRING445           "PHY SET VEHICLE MASS%LF%?dbPhySetVehicleMass@@YAXHM@Z%ID,value#"
+    IDS_STRING446           "PHY SET VEHICLE AUTO%LL%?dbPhySetVehicleAuto@@YAXHH@Z%ID,flag"
+    IDS_STRING447           "PHY SET VEHICLE MAX MOTOR%LF%?dbPhySetVehicleMaxMotor@@YAXHM@Z%ID,value#"
+    IDS_STRING448           "PHY SET VEHICLE MOTOR FORCE%LF%?dbPhySetVehicleMotorForce@@YAXHM@Z%ID,value#"
+    IDS_STRING449           "PHY SET VEHICLE WHEEL POWER%LLL%?dbPhySetVehicleWheelPower@@YAXHHH@Z%ID, front, rear"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING450           "PHY SET VEHICLE STEERING DELTA%LF%?dbPhySetVehicleSteeringDelta@@YAXHM@Z%ID,value#"
+    IDS_STRING451           "PHY SET VEHICLE MAX STEERING ANGLE%LF%?dbPhySetVehicleMaxSteeringAngle@@YAXHM@Z%ID,value#"
+    IDS_STRING452           "PHY SET VEHICLE WHEEL ROTATION%LLL%?dbPhySetVehicleWheelRotation@@YAXHHH@Z%ID, wheel, direction"
+    IDS_STRING453           "PHY SET VEHICLE SUSPENSION SPRING%LF%?dbPhySetVehicleSuspensionSpring@@YAXHM@Z%ID,value#"
+    IDS_STRING454           "PHY SET VEHICLE SUSPENSION DAMPING%LF%?dbPhySetVehicleSuspensionDamping@@YAXHM@Z%ID,value#"
+    IDS_STRING455           "PHY SET VEHICLE SUSPENSION BIAS%LF%?dbPhySetVehicleSuspensionBias@@YAXHM@Z%ID,value#"
+    IDS_STRING456           "PHY SET VEHICLE RESTITUTION%LF%?dbPhySetVehicleRestitution@@YAXHM@Z%ID,value#"
+    IDS_STRING457           "PHY SET VEHICLE STATIC FRICTION%LF%?dbPhySetVehicleStaticFriction@@YAXHM@Z%ID,value#"
+    IDS_STRING458           "PHY SET VEHICLE STATIC FRICTION V%LF%?dbPhySetVehicleStaticFrictionV@@YAXHM@Z%ID,value#"
+    IDS_STRING459           "PHY SET VEHICLE DYNAMIC FRICTION%LF%?dbPhySetVehicleDynamicFriction@@YAXHM@Z%ID,value#"
+    IDS_STRING460           "PHY SET VEHICLE DYNAMIC FRICTION V%LF%?dbPhySetVehicleDynamicFrictionV@@YAXHM@Z%ID,value#"
+    IDS_STRING461           "PHY SET VEHICLE WHEEL MULTIPLIER%LF%?dbPhySetVehicleWheelMultiplier@@YAXHM@Z%ID,value#"
+    IDS_STRING462           "PHY SET VEHICLE STEERING ANGLE%LF%?dbPhySetVehicleSteeringAngle@@YAXHM@Z%ID,value#"
+    IDS_STRING463           "PHY SET VEHICLE STEERING VALUE%LF%?dbPhySetVehicleSteeringValue@@YAXHM@Z%ID,value#"
+    IDS_STRING464           "PHY GET VEHICLE STEERING ANGLE[%FL%?dbPhyGetVehicleSteeringAngleEx@@YAKH@Z%ID"
+    IDS_STRING465           "PHY GET VEHICLE STEERING DELTA[%FL%?dbPhyGetVehicleSteeringDeltaEx@@YAKH@Z%ID"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING466           "PHY GET VEHICLE MOTOR FORCE[%FL%?dbPhyGetVehicleMotorForceEx@@YAKH@Z%ID"
+    IDS_STRING467           "PHY MAKE REVOLUTE JOINT%LLLFFFFFF%?dbPhyMakeRevoluteJoint@@YAXHHHMMMMMM@Z%ID, A, B, axisX#, axisY#, axisZ#, x#, y#, z#"
+    IDS_STRING468           "PHY MAKE REVOLUTE JOINT%LLL%?dbPhyMakeRevoluteJoint@@YAXHHH@Z%ID, A, B"
+    IDS_STRING469           "PHY MAKE RIGID BODY STATIC CONVEX%L%?dbPhyMakeRigidBodyStaticConvex@@YAXH@Z%ID"
+    IDS_STRING470           "PHY MAKE RIGID BODY STATIC CONVEXES%L%?dbPhyMakeRigidBodyStaticConvexes@@YAXH@Z%"
+    IDS_STRING471           "PHY MAKE RIGID BODY STATIC CONVEX%LL%?dbPhyMakeRigidBodyStaticConvex@@YAXHH@Z%ID,material"
+    IDS_STRING472           "PHY MAKE RIGID BODY STATIC CONVEXES%LL%?dbPhyMakeRigidBodyStaticConvexes@@YAXHH@Z%"
+    IDS_STRING473           "PHY MAKE RIGID BODY DYNAMIC CONVEX%L%?dbPhyMakeRigidBodyDynamicConvex@@YAXH@Z%ID"
+    IDS_STRING474           "PHY MAKE RIGID BODY DYNAMIC CONVEXES%L%?dbPhyMakeRigidBodyDynamicConvexes@@YAXH@Z%"
+    IDS_STRING475           "PHY MAKE RIGID BODY DYNAMIC CONVEX%LL%?dbPhyMakeRigidBodyDynamicConvex@@YAXHH@Z%ID,material"
+    IDS_STRING476           "PHY MAKE RIGID BODY DYNAMIC CONVEXES%LL%?dbPhyMakeRigidBodyDynamicConvexes@@YAXHH@Z%"
+    IDS_STRING477           "PHY SET JOINT BREAK LIMITS%LFF%?dbPhySetJointBreakLimits@@YAXHMM@Z%ID, maximum force#, maximum torque#"
+    IDS_STRING478           "PHY SET EMITTER COLLISION%LL%?dbPhySetEmitterCollision@@YAXHH@Z%ID, mode"
+    IDS_STRING479           "PHY SET EMITTER COLLISION SCALE%LF%?dbPhySetEmitterCollisionScale@@YAXHM@Z%ID, scale#"
+    IDS_STRING480           "PHY UPDATE%L%?dbPhyUpdate@@YAXH@Z%mode"
+    IDS_STRING481           "PHY SET GROUND PLANE%L%?dbPhySetGroundPlane@@YAXH@Z%"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING482           "PHY SET RIGID BODY GRAVITY%LL%?dbPhySetRigidBodyGravity@@YAXHH@Z%"
+    IDS_STRING483           "PHY SET RIGID BODY GROUP%LL%?dbPhySetRigidBodyGroup@@YAXHH@Z%"
+    IDS_STRING484           "PHY SLEEP RIGID BODY%L%?dbPhySleepRigidBody@@YAXH@Z%ID"
+    IDS_STRING485           "PHY SET GROUP COLLISION%LLL%?dbPhySetGroupCollision@@YAXHHH@Z%"
+    IDS_STRING486           "PHY SET EMITTER RATE%LF%?dbPhySetEmitterRate@@YAXHM@Z%ID, rate#"
+    IDS_STRING487           "PHY SET EMITTER UPDATE%LF%?dbPhySetEmitterUpdate@@YAXHM@Z%ID, update#"
+    IDS_STRING488           "PHY BUILD FLUID%LL%?dbPhyBuildFluidEx@@YAXHH@Z%ID, Volume"
+    IDS_STRING489           "PHY SET FLUID RENDERER COLOR FALLOFF SCALE%F%?dbPhySetFluidRendererColorFalloffScale@@YAXM@Z%Scale"
+    IDS_STRING490           "PHY SET FLUID RENDERER DENSITY THRESHOLD%F%?dbPhySetFluidRendererDensityThreshold@@YAXM@Z%Density"
+    IDS_STRING491           "PHY SET FLUID RENDERER FLUID COLOR%FFFF%?dbPhySetFluidRendererFluidColor@@YAXMMMM@Z%R, G, B, A"
+    IDS_STRING492           "PHY SET FLUID RENDERER FLUID COLOR FALLOFF%FFFF%?dbPhySetFluidRendererFluidColorFalloff@@YAXMMMM@Z%R, G, B, A"
+    IDS_STRING493           "PHY SET FLUID RENDERER FRESNEL COLOR%FFFF%?dbPhySetFluidRendererFresnelColor@@YAXMMMM@Z%R, G, B, A"
+    IDS_STRING494           "PHY MAKE RIGID BODY STATIC TERRAIN%L%?dbPhyMakeRigidBodyStaticTerrain@@YAXH@Z%ID"
+    IDS_STRING495           "PHY MAKE RIGID BODY STATIC TERRAIN%LL%?dbPhyMakeRigidBodyStaticTerrain@@YAXHH@Z%ID,material"
+    IDS_STRING496           "PHY MAKE RIGID BODY STATIC TERRAIN%LS%?dbPhyMakeRigidBodyStaticTerrain@@YAXHPAD@Z%ID, file$"
+    IDS_STRING497           "PHY MAKE RIGID BODY STATIC TERRAIN%LSL%?dbPhyMakeRigidBodyStaticTerrain@@YAXHPADH@Z%ID, file$, material"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING498           "PHY LOAD RIGID BODY STATIC TERRAIN%LS%?dbPhyLoadRigidBodyStaticTerrain@@YAXHPAD@Z%ID, file$"
+    IDS_STRING499           "PHY LOAD RIGID BODY STATIC TERRAIN%LSL%?dbPhyLoadRigidBodyStaticTerrain@@YAXHPADH@Z%ID, file$, material"
+    IDS_STRING500           "PHY SET CHARACTER CONTROLLER DISPLACEMENT%LFF%?dbPhySetCharacterControllerDisplacement@@YAXHMM@Z%"
+    IDS_STRING501           "PHY SET CHARACTER CONTROLLER DISPLACEMENT%LFFF%?dbPhySetCharacterControllerDisplacement@@YAXHMMM@Z%"
+    IDS_STRING502           "PHY SET CHARACTER CONTROLLER DISPLACEMENT%LL%?dbPhySetCharacterControllerDisplacement@@YAXHH@Z%"
+    IDS_STRING503           "PHY SET CHARACTER CONTROLLER SHARPNESS%LF%?dbPhySetCharacterControllerSharpness@@YAXHM@Z%"
+    IDS_STRING504           "PHY SET CHARACTER CONTROLLER EXTENTS%LFFF%?dbPhySetCharacterControllerExtents@@YAXHMMM@Z%"
+    IDS_STRING505           "PHY SET CHARACTER CONTROLLER EXTENTS%LFF%?dbPhySetCharacterControllerExtents@@YAXHMM@Z%"
+    IDS_STRING506           "PHY SET CHARACTER CONTROLLER MIN DISTANCE%LF%?dbPhySetCharacterControllerMinDistance@@YAXHM@Z%"
+    IDS_STRING507           "PHY SET VEHICLE BRAKE TORQUE%LLF%?dbPhySetVehicleBrakeTorque@@YAXHHM@Z%ID,value,value#"
+    IDS_STRING508           "PHY SET VEHICLE MOTOR TORQUE%LLF%?dbPhySetVehicleMotorTorque@@YAXHHM@Z%"
+    IDS_STRING509           "PHY SET VEHICLE STEERING ANGLE%LLF%?dbPhySetVehicleSteeringAngle@@YAXHHM@Z%ID,value,value#"
+    IDS_STRING510           "PHY SET VEHICLE WHEEL RADIUS%LLF%?dbPhySetVehicleWheelRadius@@YAXHHM@Z%"
+    IDS_STRING511           "PHY SET VEHICLE SUSPENSION TRAVEL%LLF%?dbPhySetVehicleSuspensionTravel@@YAXHHM@Z%"
+    IDS_STRING512           "PHY SET VEHICLE LONGITUDAL TIRE FORCE FUNCTION%LLFFFFF%?dbPhySetVehicleLongitudalTireForceFunction@@YAXHHMMMMM@Z%"
+    IDS_STRING513           "PHY SET VEHICLE LATERAL TIRE FORCE FUNCTION%LLFFFFF%?dbPhySetVehicleLateralTireForceFunction@@YAXHHMMMMM@Z%"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING514           "PHY SET VEHICLE WHEEL FLAGS%LLF%?dbPhySetVehicleWheelFlags@@YAXHHH@Z%"
+    IDS_STRING515           "PHY GET COLLISION[%LLL%?dbPhyGetCollision@@YAHHH@Z%"
+    IDS_STRING516           "PHY SET COLLISION STATE%LL%?dbPhySetCollisionState@@YAXHH@Z%"
+    IDS_STRING517           "PHY RAY CAST[%LFFFFFF%?dbPhyRayCast@@YAHMMMMMM@Z%"
+    IDS_STRING518           "PHY RAY CAST[%LFFFFFFL%?dbPhyRayCast@@YAHMMMMMM@Z%"
+    IDS_STRING519           "PHY CREATE FORCE FIELD%L%?dbPhyCreateForceField@@YAXH@Z%ID"
+    IDS_STRING520           "PHY SET FORCE FIELD RIGID BODY%LL%?dbPhySetForceFieldRigidBody@@YAXHH@Z%ID, Object"
+    IDS_STRING521           "PHY SET FORCE FIELD CLOTH SCALE%LF%?dbPhySetForceFieldClothScale@@YAXHM@Z%ID, Scale#"
+    IDS_STRING522           "PHY SET FORCE FIELD CONSTANT%LFFF%?dbPhySetForceFieldConstant@@YAXHMMM@Z%ID, X#, Y#, Z#"
+    IDS_STRING523           "PHY SET FORCE FIELD COORDINATES%LL%?dbPhySetForceFieldCoordinates@@YAXHH@Z%ID, Type"
+    IDS_STRING524           "PHY SET FORCE FIELD LINEAR FALLOFF%LFFF%?dbPhySetForceFieldLinearFalloff@@YAXHMMM@Z%ID, X#, Y#, Z#"
+    IDS_STRING525           "PHY SET FORCE FIELD QUADRATIC FALLOFF%LFFF%?dbPhySetForceFieldQuadraticFalloff@@YAXHMMM@Z%ID, X#, Y#, Z#"
+    IDS_STRING526           "PHY SET FORCE FIELD NOISE%LFFF%?dbPhySetForceFieldNoise@@YAXHMMM@Z%ID, X#, Y#, Z#"
+    IDS_STRING527           "PHY SET FORCE FIELD POSITION%LFFF%?dbPhySetForceFieldPosition@@YAXHMMM@Z%ID, X#, Y#, Z#"
+    IDS_STRING528           "PHY SET FORCE FIELD RIGID BODY SCALE%LF%?dbPhySetForceFieldRigidBodyScale@@YAXHM@Z%ID, Scale#"
+    IDS_STRING529           "PHY SET FORCE FIELD SOFT BODY SCALE%LF%?dbPhySetForceFieldSoftBodyScale@@YAXHM@Z%ID, Scale#"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING530           "PHY SET FORCE FIELD TORUS RADIUS%LF%?dbPhySetForceFieldTorusRadius@@YAXHM@Z%ID, Radius#"
+    IDS_STRING531           "PHY BUILD FORCE FIELD%L%?dbPhyBuildForceField@@YAXH@Z%ID"
+    IDS_STRING532           "PHY ADD FORCE FIELD BOX%LLFFFFFF%?dbPhyAddForceFieldBox@@YAXHHMMMMMM@Z%ID, mode, X#, Y#, Z#, SizeX#, SizeY#, SizeZ#"
+    IDS_STRING533           "PHY ADD FORCE FIELD SPHERE%LLFFFF%?dbPhyAddForceFieldSphere@@YAXHHMMMM@Z%ID, mode, X#, Y#, Z#, radius#"
+    IDS_STRING534           "PHY ADD FORCE FIELD CAPSULE%LLFFFFF%?dbPhyAddForceFieldCapsule@@YAXHHMMMMM@Z%ID, mode, X#, Y#, Z#, height#, radius#"
+    IDS_STRING535           "PHY GET COLLISION CONTACT POINT X[%FLL%?dbPhyGetCollisionContactPointXEx@@YAKHH@Z%"
+    IDS_STRING536           "PHY DELETE CLOTH%L%?dbPhyDeleteCloth@@YAXH@Z%ID"
+    IDS_STRING537           "PHY DELETE FORCE FIELD%L%?dbPhyDeleteForceField@@YAXH@Z%ID"
+    IDS_STRING538           "PHY GET FORCE FIELD EXIST[%LL%?dbPhyGetForceFieldExist@@YAHH@Z%ID"
+    IDS_STRING539           "PHY GET COLLISION CONTACT POINT Y[%FLL%?dbPhyGetCollisionContactPointYEx@@YAKHH@Z%"
+    IDS_STRING540           "PHY GET COLLISION CONTACT POINT Z[%FLL%?dbPhyGetCollisionContactPointZEx@@YAKHH@Z%"
+    IDS_STRING541           "PHY GET COLLISION COUNT[%LL%?dbPhyGetCollisionCount@@YAHH@Z%"
+    IDS_STRING542           "PHY GET COLLISION CONTACT NORMAL X[%FLL%?dbPhyGetCollisionContactNormalXEx@@YAKHH@Z%"
+    IDS_STRING543           "PHY GET COLLISION CONTACT NORMAL Y[%FLL%?dbPhyGetCollisionContactNormalYEx@@YAKHH@Z%"
+    IDS_STRING544           "PHY GET COLLISION CONTACT NORMAL Z[%FLL%?dbPhyGetCollisionContactNormalZEx@@YAKHH@Z%"
+    IDS_STRING545           "PHY GET JOINT STATE[%LL%?dbPhyGetJointState@@YAHH@Z%"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING546           "PHY RAY CAST CLOSEST SHAPE[%LFFFFFF%?dbPhyRayCastClosestShape@@YAHMMMMMM@Z%"
+    IDS_STRING547           "PHY LOAD SOFT BODY%LSSFFF%?dbPhyLoadSoftBody@@YAXHPAD0MMM@Z%ID, Tetrahedral Mesh$, Mesh$, X#, Y#, Z#"
+    IDS_STRING554           "PHY ATTACH SOFT BODY CAPSULE%LFFFFFFFFF%?dbPhyAttachSoftBodyCapsule@@YAXHMMMMMMMMM@Z%ID, X#, Y#, Z#, Height#, Radius#, Density#, AngleX#, AngleY#, AngleZ#"
+    IDS_STRING549           "PHY GET COLLISION FRICTION FORCE X[%FLL%?dbPhyGetCollisionFrictionForceXEx@@YAKHH@Z%value, value"
+    IDS_STRING548           "PHY GET COLLISION FRICTION FORCE Y[%FLL%?dbPhyGetCollisionFrictionForceYEx@@YAKHH@Z%value, value"
+    IDS_STRING550           "PHY GET COLLISION FRICTION FORCE Z[%FLL%?dbPhyGetCollisionFrictionForceZEx@@YAKHH@Z%value, value"
+    IDS_STRING551           "PHY GET COLLISION NORMAL FORCE X[%FLL%?dbPhyGetCollisionNormalForceXEx@@YAKHH@Z%value, value"
+    IDS_STRING552           "PHY GET COLLISION NORMAL FORCE Y[%FLL%?dbPhyGetCollisionNormalForceYEx@@YAKHH@Z%value, value"
+    IDS_STRING553           "PHY GET COLLISION NORMAL FORCE Z[%FLL%?dbPhyGetCollisionNormalForceZEx@@YAKHH@Z%value, value"
+    IDS_STRING555           "PHY ATTACH SOFT BODY SPHERE%LFFFFF%?dbPhyAttachSoftBodySphere@@YAXHMMMMM@Z%ID, X#, Y#, Z#, Radius#, Density#"
+    IDS_STRING556           "PHY DELETE SOFT BODY%L%?dbPhyDeleteSoftBody@@YAXH@Z%ID"
+    IDS_STRING557           "PHY CLOTH ATTACH RIGID BODY%LLFFF%?dbPhyClothAttachRigidBody@@YAXHHMMM@Z%"
+    IDS_STRING558           "PHY ATTACH SOFT BODY BOX%LFFFFFFF%?dbPhyAttachSoftBodyBox@@YAXHMMMMMMM@Z%ID, X#, Y#, Z#, width#, height#, depth#, Density#"
+    IDS_STRING559           "PHY SET FLUID RENDERER PARTICLE RADIUS%F%?dbPhySetFluidRendererParticleRadius@@YAXM@Z%Radius"
+    IDS_STRING560           "PHY SET FLUID RENDERER PARTICLE SURFACE SCALE%F%?dbPhySetFluidRendererParticleSurfaceScale@@YAXM@Z%Scale"
+    IDS_STRING561           "PHY SET FLUID RENDERER SHININESS%F%?dbPhySetFluidRendererShininess@@YAXM@Z%Shininess"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING562           "PHY SET FLUID RENDERER SPECULAR COLOR%FFFF%?dbPhySetFluidRendererSpecularColor@@YAXMMMM@Z%R, G, B, A"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

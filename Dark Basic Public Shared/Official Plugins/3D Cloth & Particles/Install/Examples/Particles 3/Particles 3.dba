@@ -1,0 +1,171 @@
+sync on
+sync rate 60
+autocam off
+
+`position camera 0, 0, -25
+position camera 0, 0, -15
+backdrop on
+color backdrop rgb ( 0, 0, 0 )
+
+set ambient light 50
+
+set image colorkey 0, 0, 0
+load image "ball.bmp", 1
+
+MAKE OBJECT BOX 50, 100, 0.5, 100
+MAKE OBJECT BOX 51, 10, 0.5, 10
+POSITION OBJECT 50, 0, -11.5, 0
+POSITION OBJECT 51, 0, 10.5, 0
+
+hide object 51
+load image "f_d_01_d2.dds", 2
+texture object 50, 2
+
+true=1
+false=0
+
+MAKE BASIC EMITTER 1, 300
+texture object 1, 1
+set object transparency 1, 1
+ghost object on 1
+SET EMITTER RATE 1,30
+SET EMITTER EXPLODE 1, 0.3
+SET EMITTER PARTICLE VELOCITY 1,4.0,0
+SET EMITTER PARTICLE LIFE 1,9,0
+SET EMITTER PARTICLE MASS 1, 1, 30
+Set Particle Z Sorting 1, 1
+
+
+
+
+MAKE GRAVITY EFFECTOR 10
+SET GRAVITY EFFECTOR 10,0,-1,0
+
+Make wind Effector 11
+Set Wind Effector 11 , 1 , 0, 1
+
+BIND EFFECTOR TO object 10,1
+BIND EFFECTOR TO object 11,1
+
+MAKE COLLISION BOX 20
+BIND COLLIDER TO OBJECT 20,1
+SET COLLISION BOX 20,50,5,50
+
+
+SET COLLIDER BOUNCE 20,1,1.0
+SET COLLIDER FRICTION 20,1,0.01
+POSITION OBJECT 20,0,-10.5,0
+
+
+
+`set object cull 1, 0
+set object light 1, 0
+
+r#=25
+h#=0
+angle#=180
+
+count=0
+
+g_fEmitterRate# = 30
+g_fEmitterExplode# = 0.3
+g_fEmitterVelocity# = 4.0
+g_fEmitterLife# = 9.0
+g_fEmitterMass# = 1.0
+
+
+iState = 1
+
+do
+   set cursor 0, 0
+   print "3D Cloth & Particles - Emitters"
+   print ""
+
+   set emitter particle color 1, rnd(255),rnd(255),rnd(255),255
+
+   gosub emitter
+
+   count=count+1
+   xpos# = 10.0*sin(count)
+   angle#=angle#-0.7
+   if r#<1 then r#=1
+
+   xpos# = r# * sin(angle#)
+   zpos# = r# * cos(angle#)
+   position camera 0,xpos#,h#,zpos#
+
+   point camera 0,0,h#,0
+
+   UPDATE PHYSICS
+   sync
+loop
+
+emitter:
+   print "Emitter"
+   print "Rate     = " + str$( g_fEmitterRate# )
+   print "Explode  = " + str$( g_fEmitterExplode# )
+   print "Velocity = " + str$( g_fEmitterVelocity# )
+   print "Life     = " + str$( g_fEmitterLife# )
+   print "Mass     = " + str$( g_fEmitterMass# )
+   print ""
+   print "Keys"
+   print "q = increase rate"
+   print "a = decrease rate"
+   print "w = increase explosion"
+   print "s = decrease explosion"
+   print "e = increase velocity"
+   print "d = decrease velocity"
+   print "r = increase life"
+   print "f = decrease life"
+   print "t = increase mass"
+   print "g = decrease mass"
+
+
+   if inkey$( ) = "q"
+      inc g_fEmitterRate#, 0.1
+   endif
+
+   if inkey$( ) = "a"
+      dec g_fEmitterRate#, 0.1
+   endif
+
+   if inkey$( ) = "w"
+      inc g_fEmitterExplode#, 0.1
+   endif
+
+   if inkey$( ) = "s"
+      dec g_fEmitterExplode#, 0.1
+   endif
+
+   if inkey$( ) = "e"
+      inc g_fEmitterVelocity#, 0.1
+   endif
+
+   if inkey$( ) = "d"
+      dec g_fEmitterVelocity#, 0.1
+   endif
+
+   if inkey$( ) = "r"
+      inc g_fEmitterLife#, 0.1
+   endif
+
+   if inkey$( ) = "f"
+      dec g_fEmitterLife#, 0.1
+   endif
+
+   if inkey$( ) = "t"
+      inc g_fEmitterMass#, 0.1
+   endif
+
+   if inkey$( ) = "g"
+      dec g_fEmitterMass#, 0.1
+   endif
+
+
+   SET EMITTER RATE 1,g_fEmitterRate#
+   SET EMITTER EXPLODE 1, g_fEmitterExplode#
+   SET EMITTER PARTICLE VELOCITY 1,g_fEmitterVelocity#,0
+   SET EMITTER PARTICLE LIFE 1,g_fEmitterLife#,0
+   SET EMITTER PARTICLE MASS 1, g_fEmitterMass#, 30
+return
+

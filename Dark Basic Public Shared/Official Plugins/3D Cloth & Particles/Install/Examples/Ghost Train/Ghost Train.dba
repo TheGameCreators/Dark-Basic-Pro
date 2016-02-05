@@ -1,0 +1,1839 @@
+```````````````````````````````````````````
+` Dark Ghost Train by Dave "Ravey" Milton `
+```````````````````````````````````````````
+
+global x_res
+global y_res
+
+`remstart
+res_picker()
+
+check=check display mode (x_res,y_res,32)
+if check=1 then bit_depth=32 else bit_depth=16
+
+
+set display mode x_res,y_res,bit_depth
+set window layout 0,0,0
+maximize window
+
+`remend
+
+`set camera view 0,0,720,576
+`SET CAMERA ASPECT 1.7777777777777777777777777777778
+
+color backdrop rgb(0,0,0)
+
+sync rate 60 : sync on : autocam off
+
+
+set ambient light 0
+hide light 0
+
+`remstart
+set camera range 1,800
+
+`hide mouse
+
+fog on
+fog distance 1000
+fog color rgb(0,0,0)
+`remend
+`########################################################################################################################
+
+type t_dynamic_light
+   obj as dword
+   x as dword
+   y as dword
+   z as dword
+   range as dword
+   fade as word rem this is to fade in or out (will max out at the range)
+   color as dword
+   `style: 0=normal, 1=pulse, 2=flicker
+   style as dword
+   speed as dword
+   rem speed for the pulse - the higher the number quicker it fades in - (suggest 1-200)
+   rem speed for the flicker - the higher the number the less it will flicker (suggest 10-30)
+   direction as byte
+endtype
+
+dim original_obj(11) as dword
+
+dim cloths() as dword
+empty array cloths()
+
+type t_light_list
+   light as dword
+   distance# as float
+endtype
+
+for light=1 to 6
+   make light light
+next light
+
+global how_many_close=0
+global dynamic_light_range=1500 ` alter this to change the range (set to 1000 in game for a starter
+global hide_dynamic_lights=0
+
+global current_doorway=1
+
+global cloth_count=0
+
+global title_delay=60
+
+dim dynamic_lights(0) as t_dynamic_light
+dim lights(50) as t_light_list `stores a list of the closest lights - list size varies
+global dynamic_light_count=0
+global dynamic_light_obj_count=0
+global current_dynamic_light=0
+global dynamic_light_mode=1 `0=standard mode, 1=random mode
+
+global car_speed#=2.0
+
+global door_tex=0
+global door_flip=0
+global door_delay=0
+
+global roar=0
+global baddie_cam=0
+
+global drape_count
+global repeat_demo=0
+
+global turbo1=0
+global turbo2=0
+
+type t_drapes
+   cloth
+   x
+   z
+   one
+   two
+   three
+   flip
+   count
+endtype
+
+dim drapes() as t_drapes
+empty array drapes()
+
+type t_bat
+   obj
+   direction
+   turn
+   bob
+endtype
+
+dim bats() as t_bat
+empty array bats()
+
+global which_baddie=0
+global bat_sound=0
+
+global obj_bones
+global obj_rip
+global obj_coffin
+global obj_coffin2
+
+load image "media\head2.jpg",1
+load image "media\head3.jpg",2
+load image "media\lm.jpg",3
+load image "media\lm1.jpg",4
+load image "media\lm2.jpg",5
+load image "media\lm5.jpg",6
+load image "media\lm6.jpg",7
+load image "media\lm3.jpg",8
+load image "media\lm4.jpg",9
+load image "media\ghost.jpg",10
+load image "media\drapes.png",11
+load image "media\drapes2.png",12
+load image "media\chains.png",13
+load image "media\web.png",14
+load image "media\skull.jpg",15
+
+load sound "media\Ghost Train.wav",1
+load sound "media\Hitting door.wav",2
+load sound "media\Roar.wav",3
+load sound "media\Bat Cry.wav",4
+load sound "media\Laugh 1.wav",5
+load sound "media\Screem c.wav",6
+load sound "media\Laugh 3.wav",7
+load sound "media\Screem d.wav",8
+load sound "media\Electronic Arc.wav",9
+
+global randfx=0
+
+global is_scared=0
+global scared_delay=0
+
+global turbo_count=0
+global turbo=0
+
+global skull=0
+global skull_cos=0
+global cam_sin=0
+global cam_sin_small=0
+
+`########################################################################################################################
+
+type t_ghost
+   cloth as dword
+   frozen as dword
+   head as dword
+   style as dword
+   direction as dword
+   bounce as dword
+endtype
+
+global ghost_count=0
+dim ghost(0) as t_ghost
+
+type t_baddie
+   obj as dword
+   fade as dword
+   style as dword
+   x as dword
+   z as dword
+endtype
+
+dim baddie(0) as t_baddie
+global baddie_count=0
+
+global zombie_obj=0
+global mummy_obj=0
+
+type t_cam
+   x as dword
+   z as dword
+endtype
+
+global cam_count=0
+dim cam(0) as t_cam
+
+`rotate camera 90,0,0
+
+type t_block
+   obj as dword
+   obj2 as dword
+   style as dword
+endtype
+
+dim blocks(100,100) as t_block
+
+type t_corner
+   style as dword
+   x# as float
+   z# as float
+endtype
+
+dim corners(0) as t_corner
+
+global corner_count=0
+
+global obj_count=3
+
+global car=1
+global kid=2
+load object "media\car.x",car
+load object "media\kid.x",kid
+SET OBJECT INTERPOLATION kid, 60
+load object "media\outside.x",3
+position object 3,0,100000,0
+hide object 3
+move object kid,-43
+move object down kid,42
+scale object kid,280,280,280
+fade object kid,600
+set object smoothing kid,100
+glue object to limb kid,car,0
+set object speed kid,5000/210
+loop object kid,1,60
+position object car,100,0,150
+set object smoothing 1,50
+
+global car_mode=0 `1=right turn, 2=left turn
+global car_switch=0 `1=performing a turn
+
+global door_activated_x=0
+global door_activated_z=0
+global north_door=0
+
+global door_active=0
+
+load()
+
+low_fps=4000
+
+SET PHYSICS FRAME RATE 80
+
+loop sound 1
+
+_main:
+do
+   inc turbo_count
+   if turbo_count=3479
+      turbo=1
+      play sound 9
+   endif
+   if turbo_count=4750
+      turbo=0
+      play sound 9
+      loop sound 8
+   endif
+   a=rnd(200)
+   if a=200
+      play sound randfx+5
+      inc randfx
+      if randfx>3 then randfx=0
+   endif
+   move_car()
+   if turbo=1 and repeat_demo=0 then move_car()
+   scroll object texture turbo1,0,.015
+   scroll object texture turbo2,0,.015
+   `position camera object position x(car),2000,object position z(car)
+   `rotate camera 90,0,0
+   rock_cam_small()
+   update_cams()
+   if turbo=0 and turbo_count>4750 then rock_cam()
+   if turbo>6000 then turbo_count=0
+   update_baddies()
+   update_ghosts()
+   update_drapes()
+   update_bats()
+   doors()
+   update_dynamic_lights()
+   update_skull()
+   scared()
+   inc vis_count
+   if vis_count=4`10
+    `  vis()
+      vis_count=0
+   endif
+   `text 0,0,str$(object angle y(car))
+   `text 0,10,str$(ang#)
+   `text 0,0,str$(ghost_count)
+   `inc physics_sync
+   `if physics_sync=3
+      UPDATE PHYSICS
+   `   physics_sync=0
+   `endif
+   sync
+   `text 0,0,str$(turbo_count)
+   `text 0,0,str$(screen fps())
+remstart
+   fps=screen fps()
+   if fps>top_fps then top_fps=fps
+   if fps<low_fps and fps>0 then low_fps=fps
+   text 0,20,"Current FPS="+str$(fps)
+   text 0,30,"Top FPS="+str$(top_fps)
+   text 0,40,"Lowest FPS="+str$(low_fps)
+remend
+   if returnkey()
+      repeat_demo=1
+     ` end_demo=1
+   endif
+   distance#=get_distance(object position x(car),0,object position z(car),600,0,200)
+   if distance#<90.0 and repeat_demo=0 then end_demo=1
+
+   if end_demo=1
+      stop sound 8
+      for l=4 to obj_count
+         if object exist (l) then delete object l
+      next l
+      show light 0
+      for l=1 to 7
+         `hide light l
+      next l
+      `SET DIRECTIONAL LIGHT 1, 400,100,-200
+      `color light 1,rgb(255,255,100)
+      position object 3,0,0,0
+      show object 3
+      instance object 4,1
+      position object 4,-200,0,0
+      rotate object 4,0,-90,0
+      instance object 5,1
+      position object 5,-450,0,0
+      rotate object 5,0,-90,0
+      instance object 6,1
+      position object 6,-700,0,0
+      rotate object 6,0,-90,0
+      set ambient light 100
+      color backdrop rgb(150,150,255)
+      set camera range 1,3000
+      position camera 300,0,-400
+      rotate camera -5,-30,0
+      `car_speed#=car_speed#-.005
+      `if car_speed#<0 then car_speed#=0
+      position object 1,300,0,0
+      rotate object 1,0,-90,0
+      color light 0,rgb(255,255,255)
+      car=1
+      do
+         select car
+            case 1
+               set sound speed 1,4000
+               set sound speed 2,12000
+               set sound volume 2,90
+               move object 1,2
+               if object position x(1)<0
+                  car=2
+                  stop sound 1
+                  delete sound 1
+                  play sound 2
+               endif
+            endcase
+            case 2
+               move object 4,2
+               move object 1,.5
+               if object position x(4)<-250
+                  car=3
+                  play sound 2
+               endif
+            endcase
+            case 3
+               move object 5,2
+               move object 4,.5
+               if object position x(5)<-500
+                  car=4
+                  play sound 2
+               endif
+            endcase
+            case 4
+               move object 6,2
+               move object 5,.5
+               if object position x(6)<-750
+                  car=5
+               endif
+            endcase
+            case 5
+               move object 6,.5
+               if object position x(6)<-800
+                  car=6
+                  fade=200
+               endif
+            endcase
+            case 6
+             `position object 7,camera position x(),camera position y(), camera position z()+6
+               `fade object 7,fade
+               dec fade
+               if fade=0
+                  car=7
+                  for l=1 to 6
+                     if object exist (l) then delete object l
+                  next l
+                  load image "media\blur.jpg",50
+                  make object box 1,4,3,0
+                  texture object 1,50
+                  rotate camera 0,0,0
+                  position camera 0,0,-2.5
+                  delay=60
+                  rot=0
+                  color backdrop rgb(0,0,0)
+                  time=0
+                  mov#=0
+               endif
+            endcase
+            case 7
+               dec delay
+               if delay<0
+                  delay=0
+                  move object 1,mov#
+                  inc mov#,.01
+                  rotate object 1,0,0,rot
+                  inc rot,2
+                  inc time
+                  if time=120
+                     car=8
+                     fad=100
+                  endif
+               endif
+            endcase
+            case 8
+                  move object 1,mov#
+                  inc mov#,.01
+                  rotate object 1,0,0,rot
+                  inc rot,2
+                  fade object 1,fad
+                  dec fad
+                  if fad=0
+                     car=9
+                     delete object 1
+                  endif
+            endcase
+            case 9
+               car=10
+               position camera 4,0,0
+               rotate camera 0,180,0
+               update physics
+               load sound "media\Creeking door.wav",103
+               load sound "media\Roar.wav",104
+               title_delay=120
+               add_title("media\end.jpg",103)
+               end
+            endcase
+         endselect
+
+         if car<7 then position camera camera position x()-1,0,camera position z()
+
+         `point camera object position x(1),0, object position z(1)
+
+         sync
+      loop
+   endif
+
+   if upkey()
+      cloth_count=0
+      array index to top cloths()
+      while array index valid (cloths())
+            inc cloth_count
+            save cloth state cloths(),"media\cloth"+str$(cloth_count)+".clt"
+         next array index cloths()
+      endwhile
+      end
+   endif
+loop
+
+function vis()
+   for l=2 to obj_count
+      d#=get_distance(object position x(car), 0, object position z(car), object position x(l), 0, object position z(l))
+`      if d#>800 then exclude object on l else exclude object off l
+      if d#>800 then position object l,object position x(l), 100000, object position z(l) else position object l,object position x(l), 0, object position z(l)
+   next l
+endfunction
+
+function update_baddies()
+   light=0
+   baddie_cam=0
+   for l=1 to baddie_count
+      distance#=get_distance(object position x(car),0,object position z(car), object position x(baddie(l).obj),0,object position z(baddie(l).obj))
+      if distance#<400
+         baddie_cam=1
+         if distance#<200
+            light=1
+            set sound speed 3,12000
+            if roar=0
+               play sound 3
+               roar=1
+            endif
+         endif
+         select baddie(l).style
+            case 1
+               point object baddie(l).obj,object position x(car),0,object position z(car)
+               fade object baddie(l).obj,200
+              `inc baddie(l).fade
+              `if baddie(l).fade>200 then baddie(l).fade=200
+              `fade object baddie(l).obj,baddie(l).fade
+            endcase
+         endselect
+      endif
+   next l
+   if light=1
+      set ambient light 40
+      show light 0
+   else
+      roar=0
+      set ambient light 0
+      hide light 0
+   endif
+endfunction
+
+function doors()
+   x=int(object position x(car)/100)
+   z=int(object position z(car)/100)
+   door_active=0
+   ` is this a north/south facing set of doors?
+   if blocks(x,z+1).style=1 `and door_active=0
+      rotate object blocks(x,z+1).obj,0,object angle y(blocks(x,z+1).obj)-4,0
+      rotate object blocks(x,z+1).obj2,0,object angle y(blocks(x,z+1).obj2)+4,0
+      door_activated_x=x
+      door_activated_z=z+1
+      if door_flip=0
+         play sound 2
+         door_flip=1
+      endif
+      door_active=1
+      north_door=1
+   endif
+
+   if blocks(x,z).style=1 and north_door=0 `door_active=0
+      rotate object blocks(x,z).obj,0,object angle y(blocks(x,z).obj)+4,0
+      rotate object blocks(x,z).obj2,0,object angle y(blocks(x,z).obj2)-4,0
+      door_activated_x=x
+      door_activated_z=z
+      if door_flip=0
+         play sound 2
+         door_flip=1
+      endif
+      door_active=1
+   endif
+
+   if door_activated_x<>0 and door_active=0
+       if blocks(door_activated_x,door_activated_z).style=1
+         rotate object blocks(door_activated_x,door_activated_z).obj,0,0,0
+         rotate object blocks(door_activated_x,door_activated_z).obj2,0,0,0
+         north_door=0
+         inc door_delay
+         if door_delay=60
+            door_flip=0
+            door_delay=0
+         endif
+       endif
+   endif
+
+endfunction
+
+function move_car()
+   move object car,car_speed#
+   distance#=get_distance(object position x(car),0,object position z(car), camera position x(),0,camera position z())
+   volume=100-int(distance#/50)
+   if volume<0 then volume=0
+   set sound volume 1,volume
+   get_mode()
+   if car_mode=1
+      rotate object car,0,wrapvalue(object angle y(car)+2.2879),0
+   endif
+   if car_mode=2
+      rotate object car,0,wrapvalue(object angle y(car)-2.2879),0
+   endif
+endfunction
+
+function get_mode()
+   for count=1 to corner_count
+      distance#=get_distance(object position x(car),0,object position z(car),corners(count).x#,0,corners(count).z#)
+      if distance#<1.0
+         if car_switch=0
+            car_switch=1
+            car_mode=corners(count).style
+            old_turn=car_mode
+         else
+            car_switch=0
+            car_mode=0
+            ang#=object angle y(car)
+            if ang#>80.0 and ang#<100.0
+               rotate object car,0,90,0
+               z#=(((int(object position z(car)+50)/100))*100)
+               position object car,object position x(car),0,z#
+            endif
+
+            if ang#>170 and ang#<190
+               rotate object car,0,180,0
+               x#=(((int(object position x(car)+50)/100))*100)
+               position object car,x#,0,object position z(car)
+            endif
+
+            if ang#>260.0 and ang#<280.0
+               rotate object car,0,270,0
+               z#=(((int(object position z(car)+50)/100))*100)
+               position object car,object position x(car),0,z#
+            endif
+
+            if (ang#>350.0 and ang#<360) or (ang#>-10.0 and ang#<10)
+               rotate object car,0,0,0
+               x#=(((int(object position x(car)+50)/100))*100)
+               position object car,x#,0,object position z(car)
+            endif
+
+         endif
+      endif
+   next count
+endfunction
+
+function update_cams()
+   use_cam=0
+   for l=1 to cam_count
+      distance=get_distance(object position x(car),0,object position z(car), cam(l).x*100, 0, cam(l).z*100)
+      if distance <400 then use_cam=l
+   next l
+
+   if use_cam=0 or door_active=1 or baddie_cam=1
+      position camera object position x(car), 70, object position z(car)
+      rotate camera 10,object angle y(car),0
+   else
+      position camera cam(use_cam).x*100,150,cam(use_cam).z*100
+      face_cam()
+   endif
+endfunction
+
+function add_cam(x,z)
+   inc cam_count
+   array insert at bottom cam(0)
+   cam(cam_count).x=x
+   cam(cam_count).z=z
+endfunction
+
+function add_baddie(style,direction,x,z)
+
+   select style
+      `zombie
+      case 1
+         inc obj_count
+
+         select which_baddie
+            case 0
+               ` check if we can instance the object
+               if zombie_obj=0
+                  load object "media\zombie.x",obj_count
+                  rotate object obj_count,0,180,0
+                  fix object pivot obj_count
+                  zombie_obj=obj_count
+               else
+                  clone object obj_count,zombie_obj
+                  rotate object obj_count,0,180,0
+                  fix object pivot obj_count
+               endif
+                  position object obj_count,x*100,-47,z*100
+                  scale object obj_count,1000,1000,1000
+                  set object speed obj_count,5000
+                  loop object obj_count
+                  fade object obj_count,-200
+             endcase
+            case 1
+               ` check if we can instance the object
+                  load object "media\mummy.x",obj_count
+                  rotate object obj_count,-90,0,0
+                  fix object pivot obj_count
+                  mummy_obj=obj_count
+                  position object obj_count,x*100,-50,z*100
+                  scale object obj_count,250,250,250
+                  set object speed obj_count,6000
+                  loop object obj_count,13000,35200
+                  fade object obj_count,-200
+             endcase
+            case 2
+               ` check if we can instance the object
+                  load object "media\Skeletal Warrior.X",obj_count
+                  rotate object obj_count,-90,0,0
+                  fix object pivot obj_count
+                  mummy_obj=obj_count
+                  position object obj_count,x*100,-50,z*100
+                  scale object obj_count,250,250,250
+                  set object speed obj_count,6000
+                  loop object obj_count,13000,32000
+                  fade object obj_count,-200
+             endcase
+         endselect
+            array insert at bottom baddie(0)
+            inc baddie_count
+            baddie(baddie_count).style=style
+            baddie(baddie_count).fade=-200
+            baddie(baddie_count).obj=obj_count
+      endcase
+      `ghost
+      case 2
+           add_ghost(x,z,style,direction)
+      endcase
+      case 3
+           add_drapes(x,z)
+      endcase
+      case 4
+           add_bat(x,z)
+      endcase
+      case 5
+            inc obj_count
+            make object box obj_count,100,100,.1
+            texture object obj_count,15
+            position object obj_count,x*100,50,(z*100)-10
+            set object emissive obj_count,rgb(255,255,255)
+            ghost object on obj_count
+            skull=obj_count
+      endcase
+   endselect
+
+   inc which_baddie
+   if which_baddie=3 then which_baddie=0
+
+endfunction
+
+function load()
+
+   title()
+   position camera 0,1000,0
+   rotate camera 0,0,0
+   load image "media\loading.jpg",600
+   make object box obj_count+1,3,1,.1
+   texture object obj_count+1,600
+   position object obj_count+1,0,1000,10
+   fade object obj_count+1,800
+   set ambient light 100
+   sync
+   sync
+   delete object obj_count+1
+   delete image 600
+   set ambient light 0
+
+   open to read 1,"ghost.dat"
+
+` DYNAMIC LIGHTS
+         read long 1,dl_count
+         for l=1 to dl_count
+            read long 1,x
+            read long 1,y
+            read long 1,z
+            read long 1,range
+            read long 1,color
+            read long 1,style
+            read long 1,speed
+            r=rgbr(color)
+            g=rgbg(color)
+            b=rgbb(color)
+            style=rnd(1)
+            if style=0 then style=1 else style=0
+            `style=1
+            `if style=1 then
+            speed=rnd(10)+10
+            add_dynamic_light(x,y,z,r,g,b,range,style,speed)
+         next l
+
+   ` now the cams
+      read long 1,c_count
+      for l=1 to c_count
+         read long 1,x
+         read long 1,z
+         add_cam(x,z)
+      next l
+
+   ` now the baddies
+      read long 1,b_count
+      for l=1 to b_count
+         read long 1,style
+         read long 1,direction
+         read long 1,x
+         read long 1,z
+         add_baddie(style,direction,x,z)
+      next l
+
+   `now the map
+   for z=0 to 100
+      for x=0 to 100
+
+         read long 1,style
+
+         if style<>0
+            inc obj_count
+            if original_obj(style)=0
+               load object "media\block"+str$(style)+".x",obj_count
+               original_obj(style)=obj_count
+            else
+               `load object "media\block"+str$(style)+".x",obj_count
+               `clone object obj_count,original_obj(style)
+               instance object obj_count,original_obj(style)
+            endif
+
+            position object obj_count,x*100,0,z*100
+
+            if style<7 then set light mapping on obj_count,style+3
+            if style>6 and style<11 then set light mapping on obj_count,3
+
+            if style=11
+               fade object obj_count,8000
+               set object diffuse obj_count,rgb(255,255,255)
+               set object ambience obj_count,rgb(255,255,255)
+               set object emissive obj_count,rgb(255,255,255)
+               if turbo1=0
+                  turbo1=obj_count
+               else
+                  turbo2=obj_count
+               endif
+            endif
+
+            if style=8 `place random piece
+               a=rnd(7)
+               if a=0
+                  inc obj_count
+                  b=rnd(3)
+                  select b
+                     case 0
+                        if obj_bones=0
+                           load object "media\bones.x",obj_count
+                           obj_bones=obj_count
+                        else
+                           instance object obj_count,obj_bones
+                        endif
+                        rotate object obj_count,-90,rnd(360),0
+                        position object obj_count,x*100,-45,z*100
+                        scale object obj_count,200,200,200
+                        set object smoothing obj_count,100
+                     endcase
+                     case 1
+                        if obj_rip=0
+                           load object "media\rip.x",obj_count
+                           obj_rip=obj_count
+                        else
+                           instance object obj_count,obj_rip
+                        endif
+                        rotate object obj_count,0,rnd(360),0
+                        position object obj_count,x*100,-10,z*100
+                        `set object smoothing obj_count,100
+                     endcase
+                     case 2
+                        if obj_coffin=0
+                           load object "media\coffin.X",obj_count
+                           obj_coffin=obj_count
+                        else
+                           instance object obj_count,obj_coffin
+                        endif
+                        rotate object obj_count,0,rnd(360),0
+                        position object obj_count,x*100,20,z*100
+                        `set object smoothing obj_count,100
+                     endcase
+                     case 3
+                        if obj_coffin2=0
+                           load object "media\coffin2.X",obj_count
+                           obj_coffin2=obj_count
+                        else
+                           instance object obj_count,obj_coffin2
+                        endif
+                        rotate object obj_count,0,rnd(360),0
+                        position object obj_count,x*100,-40,z*100
+                        `set object smoothing obj_count,100
+                     endcase
+                  endselect
+               endif
+            endif
+
+
+            ` now we position track markers based on the style
+            select style
+               case 3 `north facing right turn
+                  `point 1
+                  inc corner_count
+                  array insert at bottom corners(0)
+                  corners(corner_count).x#=x*100
+                  corners(corner_count).z#=(z*100)-50
+                  corners(corner_count).style=1
+                  `just for test
+                 ` inc obj_count
+                  `make object cube obj_count,10
+                  `position object obj_count, corners(corner_count).x#, 0, corners(corner_count).z#
+                  `point 2
+                  inc corner_count
+                  array insert at bottom corners(0)
+                  corners(corner_count).x#=(x*100)+50
+                  corners(corner_count).z#=(z*100)
+                  corners(corner_count).style=2
+                  `just for test
+                  `inc obj_count
+                  `make object cube obj_count,10
+                  `position object obj_count, corners(corner_count).x#, 0, corners(corner_count).z#
+               endcase
+
+               case 4 `north facing left turn
+                  `point 1
+                  inc corner_count
+                  array insert at bottom corners(0)
+                  corners(corner_count).x#=x*100
+                  corners(corner_count).z#=(z*100)-50
+                  corners(corner_count).style=2
+                  `just for test
+                  `inc obj_count
+                  `make object cube obj_count,10
+                  `position object obj_count, corners(corner_count).x#, 0, corners(corner_count).z#
+                  `point 2
+                  inc corner_count
+                  array insert at bottom corners(0)
+                  corners(corner_count).x#=(x*100)-50
+                  corners(corner_count).z#=(z*100)
+                  corners(corner_count).style=1
+                  `just for test
+                  `inc obj_count
+                  `make object cube obj_count,10
+                  `position object obj_count, corners(corner_count).x#, 0, corners(corner_count).z#
+               endcase
+
+               case 5 `south facing right turn
+                  `point 1
+                  inc corner_count
+                  array insert at bottom corners(0)
+                  corners(corner_count).x#=x*100
+                  corners(corner_count).z#=(z*100)+50
+                  corners(corner_count).style=1
+                  `just for test
+                  `inc obj_count
+                  `make object cube obj_count,10
+                  `position object obj_count, corners(corner_count).x#, 0, corners(corner_count).z#
+                  `point 2
+                  inc corner_count
+                  array insert at bottom corners(0)
+                  corners(corner_count).x#=(x*100)-50
+                  corners(corner_count).z#=(z*100)
+                  corners(corner_count).style=2
+                  `just for test
+                  `inc obj_count
+                  `make object cube obj_count,10
+                  `position object obj_count, corners(corner_count).x#, 0, corners(corner_count).z#
+               endcase
+
+               case 6 `south facing left turn
+                  `point 1
+                  inc corner_count
+                  array insert at bottom corners(0)
+                  corners(corner_count).x#=x*100
+                  corners(corner_count).z#=(z*100)+50
+                  corners(corner_count).style=2
+                  `just for test
+                  `inc obj_count
+                  `make object cube obj_count,10
+                  `position object obj_count, corners(corner_count).x#, 0, corners(corner_count).z#
+                  `point 2
+                  inc corner_count
+                  array insert at bottom corners(0)
+                  corners(corner_count).x#=(x*100)+50
+                  corners(corner_count).z#=(z*100)
+                  corners(corner_count).style=1
+                  `just for test
+                  `inc obj_count
+                  `make object cube obj_count,10
+                  `position object obj_count, corners(corner_count).x#, 0, corners(corner_count).z#
+               endcase
+
+               case 9 `north or south facing swinging doors
+                  blocks(x,z).style=1 `north doors
+                  inc obj_count
+                  load object "media\left_door.x",obj_count
+                  position object obj_count,(x*100)-50,0,z*100
+                  blocks(x,z).obj=obj_count
+
+                  inc obj_count
+                  load object "media\right_door.x",obj_count
+                  position object obj_count,(x*100)+50,0,z*100
+                  blocks(x,z).obj2=obj_count
+
+                  if door_tex_flip<>0
+                     texture object obj_count-1,door_tex_flip
+                     texture object obj_count,door_tex_flip
+                     `set light mapping on obj_count-1,3
+                     `set light mapping on obj_count,3
+                  endif
+                 inc door_tex_flip
+                 if door_tex_flip=3 then door_tex_flip=0
+
+                inc obj_count
+                load object "media\block1.x",obj_count
+                position object obj_count,(x*100),0,z*100
+                set light mapping on obj_count,4
+
+               endcase
+
+
+            endselect
+
+         endif
+
+      next x
+   next z
+
+   close file 1
+
+   getready()
+
+endfunction
+
+function getready()
+   load sound "media\Blam.wav",50
+   position camera 100,50,400
+   rotate camera 0,180,0
+   lights=1
+   clock=0
+
+   for l=1 to 120
+      update_dynamic_lights()
+      sync
+   next l
+
+   while lights<>4
+      update_dynamic_lights()
+      `update physics
+      inc clock
+      if clock=90 `140
+         lights=2
+         delete object 10000
+         delete image 50
+      endif
+      if clock=90*2 `140*2
+         lights=3
+         delete object 10000
+         delete image 50
+      endif
+      if clock=90*3 `140*2.5
+         lights=4
+      endif
+
+      select lights
+         case 1
+            if not object exist(10000)
+               make object box 10000,20,40,.1
+               load image "media\red.png",50
+               texture object 10000,50
+               fade object 10000,800
+               set object ambience 10000,rgb(255,255,255)
+               set object emissive 10000,rgb(255,255,255)
+               set object diffuse 10000,rgb(255,255,255)
+               set object transparency 10000,1
+               position object 10000,100,50,350
+               play sound 50
+            endif
+         endcase
+         case 2
+            if not object exist(10000)
+               make object box 10000,20,40,.1
+               load image "media\amber.png",50
+               texture object 10000,50
+               fade object 10000,800
+               set object ambience 10000,rgb(255,255,255)
+               set object emissive 10000,rgb(255,255,255)
+               set object diffuse 10000,rgb(255,255,255)
+               set object transparency 10000,1
+               position object 10000,100,50,350
+               play sound 50
+            endif
+         endcase
+         case 3
+            if not object exist(10000)
+               make object box 10000,20,40,.1
+               load image "media\green.png",50
+               texture object 10000,50
+               fade object 10000,800
+               set object ambience 10000,rgb(255,255,255)
+               set object emissive 10000,rgb(255,255,255)
+               set object diffuse 10000,rgb(255,255,255)
+               set object transparency 10000,1
+               position object 10000,100,50,350
+               play sound 50
+            endif
+         endcase
+      endselect
+      sync
+   endwhile
+   delete object 10000
+   delete image 50
+   delete sound 50
+endfunction
+
+function title()
+   load sound "media\Wind noise.wav",100
+   load sound "media\Church bell.wav",101
+   load sound "media\Woman Screeming.wav",102
+   load sound "media\Creeking door.wav",103
+   load sound "media\Roar.wav",104
+   set sound speed 104,14000
+   load sound "media\Haunting Cry.wav",105
+   loop sound 100
+   position camera 4,0,0
+   rotate camera 0,180,0
+
+   add_title("media\tgc.jpg",101)
+   load music "media\Ghost.mp3",1
+   set music volume 1,100
+   loop music 1
+   stop sound 100
+   delete sound 100
+
+   add_title("media\miltronec.jpg",103)
+   add_title("media\creds.jpg",105)
+   add_title("media\title.jpg",102)
+
+   delete sound 101
+   delete sound 102
+   delete sound 103
+   delete sound 104
+   delete sound 105
+endfunction
+
+Function get_distance(x1#,y1#,z1#,x2#,y2#,z2#)
+   dx#=x2#-x1#
+   dy#=y2#-y1#
+   dz#=z2#-z1#
+   distance#=sqrt(dx#*dx#+dy#*dy#+dz#*dz#)
+endfunction distance#
+
+`########################################################################################################################
+
+type t_dynamic_light
+   obj as dword
+   x as dword
+   y as dword
+   z as dword
+   range as dword
+   fade as word rem this is to fade in or out (will max out at the range)
+   color as dword
+   `style: 0=normal, 1=pulse, 2=flicker
+   style as dword
+   speed as dword
+   rem speed for the pulse - the higher the number quicker it fades in - (suggest 1-200)
+   rem speed for the flicker - the higher the number the less it will flicker (suggest 10-30)
+   direction as byte
+endtype
+
+type t_light_list
+   light as dword
+   distance# as float
+endtype
+
+for light=1 to 6
+   make light light
+next light
+
+global how_many_close=0
+global dynamic_light_range=1500 ` alter this to change the range (set to 1000 in game for a starter
+global hide_dynamic_lights=0
+
+global current_doorway=1
+
+dim dynamic_lights(0) as t_dynamic_light
+dim lights(50) as t_light_list `stores a list of the closest lights - list size varies
+global dynamic_light_count=0
+global dynamic_light_obj_count=0
+global current_dynamic_light=0
+global dynamic_light_mode=1 `0=standard mode, 1=random mode
+
+`########################################################################################################################
+
+`######################################################################################################################
+
+function add_dynamic_light(x,y,z,r,g,b,range,style,speed=0)
+      array insert at bottom dynamic_lights(0)
+      inc dynamic_light_count
+      dynamic_lights(dynamic_light_count).x=x
+      dynamic_lights(dynamic_light_count).y=y
+      dynamic_lights(dynamic_light_count).z=z
+      dynamic_lights(dynamic_light_count).color=rgb(r,g,b)
+      dynamic_lights(dynamic_light_count).range=range
+      dynamic_lights(dynamic_light_count).style=style
+      dynamic_lights(dynamic_light_count).speed=speed
+      dynamic_lights(dynamic_light_count).direction=0
+endfunction
+
+function update_dynamic_lights()
+   how_many_close=0
+   `if dynamic_light_count>5 ` just for safetys sake :)
+      for dlight=1 to dynamic_light_count
+         distance#=get_distance(dynamic_lights(dlight).x*100,dynamic_lights(dlight).y*100,dynamic_lights(dlight).z*100, camera position x(), camera position y(), camera position z())
+         if distance#<dynamic_light_range
+            inc how_many_close
+            if how_many_close>50 then how_many_close=50
+            lights(how_many_close).light=dlight
+            lights(how_many_close).distance#=distance#
+         endif
+      next dlight
+
+      `now lets sort into a list
+      For y = how_many_close To 1 Step -1
+         For x = how_many_close To 1 Step -1
+            If lights(x).distance# < lights(x-1).distance#
+               a=lights(x-1).light
+               aa#=lights(x-1).distance#
+               lights(x-1).distance#=lights(x).distance#
+               lights(x-1).light=lights(x).light
+               lights(x).light=a
+               lights(x).distance#=aa#
+            EndIf
+         Next x
+      Next y
+
+      ` lets fade out totally all those that didnt quote make it
+      for l=7 to how_many_close
+         dynamic_lights(lights(l).light).fade=0
+      next l
+
+      `now display the first 6
+      for light=1 to 6
+        ` text 0,(light*20)+40,"light "+str$(light)+" = dynamic light "+str$(lights(light).light)+", X="+str$(dynamic_lights(lights(light).light).x*100)+", Z="+str$(dynamic_lights(lights(light).light).z*100)+", Distance="+str$(lights(light).distance#)
+         set point light light,dynamic_lights(lights(light).light).x*100-50,dynamic_lights(lights(light).light).y*100+50,dynamic_lights(lights(light).light).z*100-50
+         if light <6
+            select dynamic_lights(lights(light).light).style
+               case 0 ` standard light
+                  if dynamic_lights(lights(light).light).fade<dynamic_lights(lights(light).light).range then inc dynamic_lights(lights(light).light).fade,40
+               endcase
+               case 1 ` pulsing
+                  select dynamic_lights(lights(light).light).direction
+                     case 0 `increase
+                        if dynamic_lights(lights(light).light).fade<dynamic_lights(lights(light).light).range
+                           inc dynamic_lights(lights(light).light).fade,dynamic_lights(lights(light).light).speed
+                        else
+                           dynamic_lights(lights(light).light).direction=1 ` switch direction
+                        endif
+                     endcase
+                     case 1 `decrease
+                        if dynamic_lights(lights(light).light).fade>dynamic_lights(lights(light).light).speed
+                           dec dynamic_lights(lights(light).light).fade,dynamic_lights(lights(light).light).speed
+                        else
+                           dynamic_lights(lights(light).light).direction=0 ` switch direction
+                        endif
+                     endcase
+                  endselect
+               endcase
+               case 2 `flicker
+                  if dynamic_lights(lights(light).light).direction=0
+                     rand=rnd(dynamic_lights(lights(light).light).speed)
+                     if rand=dynamic_lights(lights(light).light).speed
+                        dynamic_lights(lights(light).light).fade=dynamic_lights(lights(light).light).range
+                        dynamic_lights(lights(light).light).direction=1
+                     endif
+                  else
+                    rand=rnd((dynamic_lights(lights(light).light).speed)/2)
+                     if rand=dynamic_lights(lights(light).light).speed/2
+                        dynamic_lights(lights(light).light).fade=0
+                        dynamic_lights(lights(light).light).direction=0
+                     endif
+                  endif
+               endcase
+            endselect
+         else
+            if dynamic_lights(lights(light).light).fade>dynamic_lights(lights(light).light).range/10 then dec dynamic_lights(lights(light).light).fade,40
+         endif
+         set light range light,dynamic_lights(lights(light).light).fade
+         color light light,dynamic_lights(lights(light).light).color
+      next light
+
+   `endif
+endfunction
+
+function face_cam()
+   dx# as float
+   dy# as float
+   dz# as float
+   angle# as float
+   Aangle# as float
+   dx# = object position x(car)-camera position x()
+   dy# = object position y(car)-camera position y()
+   dz# = object position z(car)-camera position z()
+   angle# = atanfull(dx#,dz#)
+   Aangle# = camera angle y()
+   Aangle# = curvevalue (angle#,Aangle#,.5)
+   yrotate camera Aangle#
+
+   `angle# = atanfull(dy#,dz#)
+   `Aangle# = camera angle x()
+   `Aangle# = wrapvalue(curvevalue (angle#,Aangle#,.5))
+   xrotate camera 20`Aangle#
+
+endfunction
+
+function FaceObject(objectA as integer,ObjectB as integer)
+   dx as float
+   dy as float
+   dz as float
+   angle as float
+   Aangle as float
+   dx = object position x(ObjectB)-object position x(ObjectA)
+   dy = object position y(ObjectB)-object position y(ObjectA)
+   dz = object position z(ObjectB)-object position z(ObjectA)
+   angle = atanfull(dx,dz)
+   Aangle = Object angle y(ObjectA)
+   Aangle = curvevalue (angle,Aangle,.5)
+   yrotate object ObjectA,Aangle
+
+   angle = atanfull(dy,dz)
+   Aangle = Object angle x(ObjectA)
+   Aangle = curvevalue (angle,Aangle,.5)
+   xrotate object ObjectA,Aangle
+
+endfunction
+
+function update_ghosts()
+
+   for l=1 to ghost_count
+      distance#=get_distance(object position x(car),0,object position z(car), object position x(ghost(l).head),0,object position z(ghost(l).head))
+      if distance#<800
+         if distance#<150
+            if is_scared=0 then is_scared=1
+         endif
+         `exclude object off ghost(l).head
+         `exclude object off ghost(l).cloth
+          `show object ghost(l).head
+          `show object ghost(l).cloth
+          freeze cloth ghost(l).cloth,0
+         if ghost(l).style=2
+            if ghost(l).direction=0
+               turn object left ghost(l).head,1.5
+            else
+               turn object right ghost(l).head,1.5
+            endif
+            move object ghost(l).head,1.5
+            inc ghost(l).bounce
+            y#=cos(wrapvalue(ghost(l).bounce)*4)*10
+            position object ghost(l).head,object position x(ghost(l).head),y#+40,object position z(ghost(l).head)
+         endif
+      else
+          freeze cloth ghost(l).cloth,1
+          `hide object ghost(l).head
+          `hide object ghost(l).cloth
+          `exclude object on ghost(l).cloth
+          `exclude object on ghost(l).head
+      endif
+   next l
+endfunction
+
+function add_ghost(x,z,style,direction)
+
+   xx=x*100 : zz=z*100
+   x=0
+   z=0
+   array insert at bottom ghost(0)
+   inc ghost_count
+
+   ghost(ghost_count).direction=direction
+   ghost(ghost_count).style=style
+
+   inc obj_count
+   load object "media\head.x",obj_count
+   scale object obj_count,60,30,30
+   position object obj_count,x,0,z+5
+   fix object pivot obj_count
+   ghost(ghost_count).head=obj_count
+
+   inc obj_count
+   make object cube obj_count, 0.4
+   position object obj_count, x-40, -10, z-15
+
+   inc obj_count
+   make object cube obj_count, 0.4
+   position object obj_count, x+40, -10, z-15
+
+   inc obj_count
+   make object cube obj_count, 0.4
+   position object obj_count, x-40, -10, z+30
+
+   inc obj_count
+   make object cube obj_count, 0.4
+   position object obj_count, x+40, -10, z+30
+
+   glue object to limb obj_count-1,ghost(ghost_count).head,0
+   glue object to limb obj_count-2,ghost(ghost_count).head,0
+   glue object to limb obj_count-3,ghost(ghost_count).head,0
+   glue object to limb obj_count,ghost(ghost_count).head,0
+
+   hide object obj_count-1
+   hide object obj_count-2
+   hide object obj_count-3
+   hide object obj_count
+
+   inc obj_count
+   ghost(ghost_count).cloth=obj_count
+   MAKE CLOTH obj_count
+
+`############
+   inc cloth_count
+   load cloth state obj_count,"media\cloth"+str$(cloth_count)+".clt",1
+remstart
+   GENERATE RECTANGULAR CLOTH obj_count,50,100,10,10,0
+   SET CLOTH MASS obj_count,8.0
+   SET CLOTH ELASTICITY obj_count,.7`2.0
+
+   FIX CLOTH POINT TO OBJECT obj_count,60,obj_count-1,0,0,0
+   FIX CLOTH POINT TO OBJECT obj_count,61,obj_count-2,0,0,0
+   FIX CLOTH POINT TO OBJECT obj_count,70,obj_count-3,0,0,0
+   FIX CLOTH POINT TO OBJECT obj_count,71,obj_count-4,0,0,0
+remend
+`############
+
+   array insert at bottom cloths()
+   cloths()=obj_count
+
+   texture object obj_count,10
+   ghost(ghost_count).cloth=obj_count
+
+   inc obj_count
+   MAKE GRAVITY EFFECTOR obj_count
+   BIND EFFECTOR TO object obj_count,ghost(ghost_count).cloth
+   SET GRAVITY EFFECTOR obj_count, 0, -900, 0
+
+   inc obj_count
+   MAKE DAMPING EFFECTOR obj_count
+   BIND EFFECTOR TO object obj_count,ghost(ghost_count).cloth
+   SET DAMPING EFFECTOR obj_count,10
+
+   ghost object on ghost(ghost_count).head
+   `ghost object on ghost(ghost_count).cloth
+
+   position object ghost(ghost_count).head,xx,0,zz
+
+endfunction
+
+`###########################################################################################
+
+function merge_object(source, dest)
+
+   texture=limb texture(dest,0)
+   fix object pivot source
+   fix object pivot dest
+   convert object fvf source,274
+   convert object fvf dest,274
+
+   `convert the source and dest objects into meshes and then memblocks
+   make mesh from object 1,source
+   make memblock from mesh 100,1
+   make mesh from object 2,dest
+   make memblock from mesh 101,2
+
+   `memblock 103 will be our new object
+   make memblock 103,(get memblock size(100))+(get memblock size(101)-12)
+
+      `copy the dest object info across first
+   COPY MEMBLOCK 101,103,0,0,get memblock size(101)-1
+
+   for l=12 to get memblock size(101)-1 step 32
+      write memblock float 103,l,memblock float (101,l)+object position x(dest)
+      write memblock float 103,l+4,memblock float (101,l+4)+object position y(dest)
+      write memblock float 103,l+8,memblock float (101,l+8)+object position z(dest)
+   next l
+
+   `adjust the size (offset 8) to the new size (source+dest)
+   write memblock dword 103,8,(memblock dword(100,8))+(memblock dword(101,8))
+
+   `write the source object info across
+   COPY MEMBLOCK 100,103,12,get memblock size(101),get memblock size(100)-13
+
+   for l=0 to get memblock size(100)-13 step 32
+      write memblock float 103,l+get memblock size(101),memblock float (100,l+12)+object position x(source)
+      write memblock float 103,l+get memblock size(101)+4,memblock float (100,l+12+4)+object position y(source)
+      write memblock float 103,l+get memblock size(101)+8,memblock float (100,l+12+8)+object position z(source)
+   next l
+
+   `make the new dest object
+   make mesh from memblock 3,103
+   delete object source
+   delete object dest
+   make object dest,3,texture
+   delete mesh 3
+
+   `clean up
+   delete mesh 1
+   delete mesh 2
+   delete memblock 100
+   delete memblock 101
+   delete memblock 103
+
+endfunction
+
+function add_title(title$,sound)
+
+   SET PHYSICS FRAME RATE 80
+
+   old_obj_count=obj_count+1
+
+   load image title$,20
+   load image "media\skull.jpg",21
+
+   inc obj_count
+   make object cube obj_count, 0.4
+   position object obj_count, x-40, 35, -60
+
+   inc obj_count
+   make object cube obj_count, 0.4
+   position object obj_count, x+40, 35, -60
+
+   hide object obj_count-1
+   hide object obj_count
+
+   inc obj_count
+   cloth=obj_count
+   MAKE CLOTH obj_count
+   GENERATE RECTANGULAR CLOTH obj_count,80,60,10,10,0
+   SET CLOTH MASS obj_count,8.0
+   SET CLOTH ELASTICITY obj_count,.7`2.0
+
+   FIX CLOTH POINT TO OBJECT obj_count,0,obj_count-2,0,0,0
+   FIX CLOTH POINT TO OBJECT obj_count,9,obj_count-1,0,0,0
+
+   texture object obj_count,20
+
+   inc obj_count
+   MAKE GRAVITY EFFECTOR obj_count
+   BIND EFFECTOR TO object obj_count,cloth
+   SET GRAVITY EFFECTOR obj_count, 0, -100, 0
+   grav=obj_count
+
+   inc obj_count
+   MAKE DAMPING EFFECTOR obj_count
+   BIND EFFECTOR TO object obj_count,cloth
+   SET DAMPING EFFECTOR obj_count,10
+   damp=obj_count
+
+   inc obj_count
+   make object box obj_count,5,5,.1
+   texture object obj_count,21
+   fade object obj_count,400
+   position object obj_count,4,0,-150
+   rotate object obj_count,0,180,0
+   hide object obj_count
+
+   play sound sound
+
+   frame_count=0
+   while frame_count<11*title_delay
+      update physics
+      sync
+      inc frame_count
+      if frame_count=9*title_delay
+         free all cloth points cloth
+         SET GRAVITY EFFECTOR grav, 0, -500, 0
+         show object obj_count
+         play sound 104
+      endif
+      if frame_count>9*title_delay
+         move object obj_count,-2
+      endif
+   endwhile
+
+
+   delete object obj_count
+   delete image 21
+   delete image 20
+   delete effector grav
+   delete effector damp
+   delete cloth cloth
+   for l=old_obj_count to old_obj_count+1
+      delete object l
+   next l
+
+   obj_count=old_obj_count-1
+
+endfunction
+
+function update_drapes()
+   array index to top drapes()
+   while array index valid (drapes())
+      distance#=get_distance(object position x(car),0,object position z(car),drapes().x*100,0,drapes().z*100)
+      if distance#<400
+         freeze cloth drapes().cloth,0
+         show object drapes().cloth
+         inc drapes().count
+         if drapes().count=20
+            drapes().flip=1-drapes().flip
+            if drapes().flip=0
+               position object drapes().one,object position x(drapes().one),300,object position z(drapes().one)-40
+               position object drapes().two,object position x(drapes().two),300,object position z(drapes().two)-40
+            else
+               position object drapes().one,object position x(drapes().one),300,object position z(drapes().one)+40
+               position object drapes().two,object position x(drapes().two),300,object position z(drapes().two)+40
+            endif
+            drapes().count=0
+         endif
+         else
+            freeze cloth drapes().cloth,1
+            hide object drapes().cloth
+      endif
+      next array index drapes()
+   endwhile
+endfunction
+
+
+function add_drapes(x,z)
+
+   array insert at bottom drapes()
+
+   drapes().x=x
+   drapes().z=z
+
+   x=x*100 : z=z*100
+
+   inc obj_count
+   make object cube obj_count, 0.4
+   position object obj_count, x-60, 300, z
+   drapes().one=obj_count
+
+   inc obj_count
+   make object cube obj_count, 0.4
+   position object obj_count, x+60, 300, z
+   drapes().two=obj_count
+
+   inc obj_count
+   make object cube obj_count, 0.4
+   position object obj_count, x+0, 300, z
+   drapes().three=obj_count
+
+   hide object obj_count-2
+   hide object obj_count-1
+   hide object obj_count
+
+   inc obj_count
+   cloth=obj_count
+   MAKE CLOTH obj_count
+
+`###########
+   inc cloth_count
+   load cloth state obj_count,"media\cloth"+str$(cloth_count)+".clt",1
+remstart
+   GENERATE RECTANGULAR CLOTH obj_count,100,250,10,10,1
+   SET CLOTH MASS obj_count,8.0
+   SET CLOTH ELASTICITY obj_count,.7`2.0
+
+
+   FIX CLOTH POINT TO OBJECT obj_count,5,obj_count-1,0,0,0
+   FIX CLOTH POINT TO OBJECT obj_count,0,obj_count-2,0,0,0
+   FIX CLOTH POINT TO OBJECT obj_count,9,obj_count-3,0,0,0
+remend
+`############
+
+   drapes().cloth=obj_count
+   array insert at bottom cloths()
+   cloths()=obj_count
+
+   texture object obj_count,11+drape_count
+   inc drape_count
+   if drape_count>3 then drape_count=0
+   set object transparency obj_count,1
+   `ghost object on obj_count
+   fade object obj_count,800
+
+   inc obj_count
+   MAKE GRAVITY EFFECTOR obj_count
+   BIND EFFECTOR TO object obj_count,cloth
+   SET GRAVITY EFFECTOR obj_count, 0, -1000, 0
+   grav=obj_count
+
+   inc obj_count
+   MAKE DAMPING EFFECTOR obj_count
+   BIND EFFECTOR TO object obj_count,cloth
+   SET DAMPING EFFECTOR obj_count,10
+   damp=obj_count
+
+endfunction
+
+function add_bat(x,z)
+   x=x*100 : z=z*100
+   inc obj_count
+   load object "media\BAT.X",obj_count
+`   set object diffuse obj_count,rgb(255,255,255)
+`   set object emissive obj_count,rgb(0,0,0)
+   set object specular obj_count,rgb(0,0,0)
+
+   rotate object obj_count,90,0,0
+   fix object pivot obj_count
+   main_bat=obj_count
+   position object obj_count,x,120,z
+   array insert at bottom bats()
+   bats().direction=rnd(1)
+   bats().obj=obj_count
+   bats().turn=rnd(3)+2
+   bats().bob=0
+   set object speed obj_count,20000
+   `loop object obj_count,1,6000
+endfunction
+
+function update_bats()
+   in_range=0
+   array index to top bats()
+   while array index valid (bats())
+      distance#=get_distance(object position x(car),0,object position z(car), object position x(bats().obj),0,object position z(bats().obj))
+      if distance#<800
+         if distance#<300
+            in_range=1
+            if bat_sound=0
+               bat_sound=1
+               loop sound 4
+               if is_scared=0 then is_scared=1
+            endif
+         endif
+         `show object bats().obj
+         if bats().direction=0
+            turn object left bats().obj,bats().turn
+         else
+            turn object right bats().obj,bats().turn
+         endif
+         move object bats().obj,5
+         inc bats().bob,10
+         position object bats().obj, object position x(bats().obj),120+(cos(bats().bob)*10),object position z(bats().obj)
+         if not object playing (bats().obj) then loop object bats().obj,1,6000
+      else
+         `hide object bats().obj
+         stop object bats().obj
+      endif
+
+      next array index bats()
+   endwhile
+   if in_range=0
+      stop sound 4
+      bat_sound=0
+   endif
+endfunction
+
+`###################################
+
+function scared()
+
+if is_scared=1
+   is_scared=2
+   set object speed 2,5000/210*2
+  play object 2,60,69
+  scared_delay=120
+endif
+
+if is_scared=2 and object playing (2)=0
+   dec scared_delay
+   if scared_delay=10
+      play object 2,69,80
+   endif
+   if scared_delay=0
+      set object speed 2,5000/210
+      loop object 2,1,60
+      is_scared=0
+   endif
+endif
+
+endfunction
+
+`###########################################
+
+function update_skull()
+   inc skull_cos,4
+   position object skull,object position x(skull), 50+(cos(skull_cos)*10),object position z(skull)
+endfunction
+
+`#############################################
+
+function rock_cam()
+   if camera angle y()=180
+      inc cam_sin,64
+      zrotate camera cos(cam_sin)*.5
+   `else
+    `  zrotate camera 0
+   endif
+endfunction
+
+function rock_cam_small()
+   inc cam_sin_small,2
+   zrotate camera cos(cam_sin_small)*5
+endfunction
+
+function res_picker()
+
+   load image "media\res.jpg",1
+   load image "media\res2.jpg",2
+   load image "media\res3.jpg",3
+   load image "media\res4.jpg",4
+   paste image 1,0,0
+
+   while x_res=0
+      paste image 1,0,0
+      y=mousey()
+      if mouseclick()=1 then mouse=1 else mouse=0
+         if y>187 and y<280
+            paste image 2,0,201
+            if mouse=1
+               x_res=640
+               y_res=480
+            endif
+         endif
+         if y>279 and y<370
+            paste image 3,0,290
+            if mouse=1
+               x_res=800
+               y_res=600
+            endif
+         endif
+         if y>369 and y<479
+            paste image 4,0,378
+            if mouse=1
+               x_res=1024
+               y_res=768
+            endif
+         endif
+   endwhile
+
+   delete image 4
+   delete image 3
+   delete image 2
+   delete image 1
+
+endfunction

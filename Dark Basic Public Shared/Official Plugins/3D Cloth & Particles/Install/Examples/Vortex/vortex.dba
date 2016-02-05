@@ -1,0 +1,63 @@
+
+sync on
+sync rate 0
+autocam off
+backdrop on
+color backdrop rgb (22,22,72)
+set ambient light 50
+
+Ptcl_1 = 1
+Ptcl_2 = 2
+Ptcl_1_Amount = 100
+Ptcl_2_Amount = 100
+
+make basic emitter Ptcl_1, Ptcl_1_Amount
+set emitter rate Ptcl_1,15
+set emitter explode Ptcl_1, 3
+set emitter particle velocity Ptcl_1,2,0
+set emitter particle life Ptcl_1,9,0
+set emitter particle mass Ptcl_1, 1, 64
+set emitter particle size Ptcl_1,2, 0
+
+load image "ptcl_bubbles.dds",Ptcl_1
+texture object Ptcl_1, 1
+set object transparency Ptcl_1, 1
+
+make basic emitter Ptcl_2, Ptcl_2_Amount
+set emitter rate Ptcl_2,15
+set emitter explode Ptcl_2, 3
+set emitter particle velocity Ptcl_2,2,0
+set emitter particle life Ptcl_2,9,0
+set emitter particle mass Ptcl_2, 1, 64
+set emitter particle size Ptcl_2,1, 0
+load image "ptcl_bubbles2.dds",Ptcl_2
+texture object Ptcl_2,2
+set object transparency Ptcl_2, 1
+
+make vortex effector 13
+set vortex effector 13, 100.0
+bind effector to object 13, Ptcl_1
+bind effector to object 13, Ptcl_2
+
+make color effector 200
+a=color effector add key( 200, 1, 255, 255, 255, 255)
+a=color effector add key( 200, 2, rnd(255), rnd(255), rnd(255), 200)
+a=color effector add key( 200, 6, 255, 255, 255, 0)
+bind effector to object 200,1
+bind effector to object 200,2
+
+position camera 0, -5, -20
+
+do
+   set cursor 0, 0
+   print "3D Cloth & Particles - Vortex Demo"
+
+   update physics
+   sync
+loop
+
+delete image 1
+delete emitter Ptcl_1
+delete emitter Ptcl_2
+end
+

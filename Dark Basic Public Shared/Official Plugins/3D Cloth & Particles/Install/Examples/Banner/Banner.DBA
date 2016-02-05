@@ -1,0 +1,46 @@
+
+sync on
+sync rate 0
+autocam off
+backdrop on
+color backdrop rgb (0,0,0)
+set ambient light 50
+
+Banner1 = 1
+Peg1    = 4
+Peg2    = 5
+Effector = 10
+
+make object box Peg1, 0.4, 0.4, 0.4
+make object box Peg2, 0.4, 0.4, 0.4
+position object Peg1, -2.5, 0, 0
+position object Peg2, 2.5, 0, 0
+
+make cloth 1
+generate rectangular cloth Banner1, 5, 5, 10, 10, 1
+set cloth mass Banner1, 1.0
+set cloth elasticity Banner1, 2.0
+fix cloth point to object Banner1, 0, Peg1, 0, 0, 0
+fix cloth point to object Banner1, 10, Peg2, 0, 0, 0
+
+make gravity effector Effector
+bind effector to object Effector, Banner1
+set gravity effector Effector, 0, -10.0, 0
+
+load image "banner_royal_lion.bmp", 1, 1
+texture object Banner1, 1
+set object transparency Banner1, 1
+
+position camera 0, -2, -8
+
+do
+   set cursor 0, 0
+   print "3D Cloth & Particles - Cloth Banner Demo"
+
+   update physics
+
+   sync
+loop
+
+end
+

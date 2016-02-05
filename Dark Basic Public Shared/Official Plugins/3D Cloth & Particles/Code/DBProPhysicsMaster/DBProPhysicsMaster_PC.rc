@@ -1,0 +1,290 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING101           "UPDATE PHYSICS%0%?updatePhysics@@YAXXZ"
+    IDS_STRING102           "MAKE BASIC EMITTER%LL%?makeEmitter@@YAXHH@Z%Emitter Id, Num Particles"
+    IDS_STRING103           "DELETE EMITTER%L%?deleteEmitter@@YAXH@Z%Emitter Id"
+    IDS_STRING104           "SET EMITTER EXPLODE%LF%?setExplode@@YAXHM@Z%Emitter Id, Param"
+    IDS_STRING105           "SET EMITTER PARTICLE LIFE%LFF%?setParticleLife@@YAXHMM@Z%Emitter Id, Time, Variation Percentage"
+    IDS_STRING106           "SET EMITTER PARTICLE MASS%LFF%?setParticleMass@@YAXHMM@Z%Emitter Id, Mass, Variation Percentage"
+    IDS_STRING107           "SET EMITTER PARTICLE SIZE%LFF%?setParticleSize@@YAXHMM@Z%Emitter Id, Size, Variation Percentage"
+    IDS_STRING108           "SET EMITTER PARTICLE VELOCITY%LFF%?setParticleVelocity@@YAXHMM@Z%Emitter Id, Velocity, Variation Percentage"
+    IDS_STRING109           "SET EMITTER RATE%LF%?setRate@@YAXHM@Z%Emitter Id, Particles Per Second"
+    IDS_STRING111           "MAKE GRAVITY EFFECTOR%L%?makeGravityEffector@@YAXH@Z%Effector Id"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING112           "SET GRAVITY EFFECTOR%LFFF%?setGravityEffector@@YAXHMMM@Z%Effector Id, Ax, Ay,Az"
+    IDS_STRING113           "MAKE WRAPROUND EFFECTOR%L%?makeWrapRoundEffector@@YAXH@Z%Effector Id"
+    IDS_STRING114           "SET WRAPROUND EFFECTOR%LFFF%?setWrapRoundEffector@@YAXHMMM@Z%Effector Id, Sx, Sy, Sz"
+    IDS_STRING115           "MAKE DAMPING EFFECTOR%L%?makeDampingEffector@@YAXH@Z%Effector Id"
+    IDS_STRING116           "SET DAMPING EFFECTOR%LF%?setDampingEffector@@YAXHM@Z%Effector Id, Damping"
+    IDS_STRING117           "FREEZE EMITTER%LD%?freezeEmitter@@YAXHK@Z%Emitter Id, State"
+    IDS_STRING118           "ENABLE EFFECTOR%LD%?enableEffector@@YAXHK@Z%Effector Id, State"
+    IDS_STRING119           "IS EFFECTOR ENABLED[%DL%?isEffectorEnabled@@YAKH@Z%Effector Id"
+    IDS_STRING120           "MAKE DRAG EFFECTOR%L%?makeDragEffector@@YAXH@Z%Effector Id"
+    IDS_STRING121           "SET DRAG EFFECTOR%LF%?setDragEffector@@YAXHM@Z%Effector Id, Drag"
+    IDS_STRING122           "MAKE SPHERICAL EMITTER%LL%?makeSphericalEmitter@@YAXHH@Z%Emitter Id, Num Particles"
+    IDS_STRING123           "SET SPAWN RADIUS%LFF%?setSpawnRadius@@YAXHMM@Z%Emitter Id, Min Radius, Max Radius"
+    IDS_STRING124           "SET SPAWN HEMISPHERE%LD%?setSpawnHemisphere@@YAXHK@Z%Emitter Id, State"
+    IDS_STRING125           "MAKE BOX EMITTER%LL%?makeBoxEmitter@@YAXHH@Z%Emitter Id, Num Particles"
+    IDS_STRING126           "SET SPAWN BOX%LFFF%?setSpawnBox@@YAXHMMM@Z%Emitter Id, SizeX, SizeY, SizeZ"
+    IDS_STRING127           "SET RADIAL EMISSION%LD%?setRadialEmission@@YAXHK@Z%Emitter Id, State"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING128           "MAKE CHAOS EFFECTOR%L%?makeChaosEffector@@YAXH@Z%Effector Id"
+    IDS_STRING129           "SET CHAOS EFFECTOR%LF%?setChaosEffector@@YAXHM@Z%Effector Id, Chaos"
+    IDS_STRING130           "MAKE VORTEX EFFECTOR%L%?makeVortexEffector@@YAXH@Z%Effector Id"
+    IDS_STRING131           "SET VORTEX EFFECTOR%LF%?setVortexEffector@@YAXHM@Z%Effector Id, Vortex"
+    IDS_STRING132           "SET EFFECTOR FALLOFF%LLD%?setEffectorFallOff@@YAXHHK@Z%Effector Id, Object Id, State"
+    IDS_STRING133           "SET EFFECTOR FALLOFF HEIGHT%LLFF%?setEffectorFalloffHeight@@YAXHHMM@Z%Effector Id, Object Id, Min Height, Max Height"
+    IDS_STRING134           "SET EFFECTOR FALLOFF PER PARTICLE%LLD%?setEffectorFallOffPerParticle@@YAXHHK@Z%Effector Id, Object Id, State"
+    IDS_STRING135           "SET EFFECTOR FALLOFF RADIUS%LLFF%?setEffectorFalloffRadius@@YAXHHMM@Z%Effector Id, Object Id, Min Radius, Max Radius"
+    IDS_STRING136           "USE EFFECTOR CYLINDER FALLOFF%LL%?useEffectorCylinderFalloff@@YAXHH@Z%Effector Id, Object Id"
+    IDS_STRING137           "USE EFFECTOR SPHERE FALLOFF%LL%?useEffectorSphereFalloff@@YAXHH@Z%Effector Id, Object Id"
+    IDS_STRING138           "MAKE FLOCK EFFECTOR%L%?makeFlockEffector@@YAXH@Z%Effector Id"
+    IDS_STRING139           "SET FLOCK EFFECTOR%LF%?setFlockEffector@@YAXHM@Z%Effector Id, Flock"
+    IDS_STRING141           "SET EFFECTOR INTERACTION%LLF%?setEffectorInteraction@@YAXHHM@Z%Effector Id, Object Id, Percentage"
+    IDS_STRING142           "SET FLOCK EFFECTOR USE CENTER%LD%?setFlockEffectorUseCenter@@YAXHK@Z%Effector Id, State"
+    IDS_STRING143           "DELETE EFFECTOR%L%?deleteEffector@@YAXH@Z%Effector Id"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING146           "DELETE COLLIDER%L%?deleteCollider@@YAXH@Z%Collider Id"
+    IDS_STRING147           "ENABLE COLLIDER%LD%?enableCollider@@YAXHK@Z%Collider Id, State"
+    IDS_STRING148           "IS COLLIDER ENABLED[%DL%?isColliderEnabled@@YAKH@Z%Collider Id"
+    IDS_STRING149           "SET COLLIDER INTERACTION%LLD%?setColliderInteraction@@YAXHHK@Z%Collider Id, Object Id, State"
+    IDS_STRING150           "SET COLLIDER BOUNCE%LLF%?setColliderBounce@@YAXHHM@Z%Collider Id, Object Id, Bounce"
+    IDS_STRING151           "MAKE COLLISION PLANE%L%?makeCollisionPlane@@YAXH@Z%Collider Id"
+    IDS_STRING153           "SET COLLIDER FRICTION%LLF%?setColliderFriction@@YAXHHM@Z%Collider Id, Object Id, Friction"
+    IDS_STRING154           "MAKE COLLISION SPHERE%L%?makeCollisionSphere@@YAXH@Z%Collider Id"
+    IDS_STRING155           "SET COLLISION SPHERE%LF%?setCollisionSphere@@YAXHM@Z%Collider Id, Radius"
+    IDS_STRING156           "MAKE COLLISION BOX%L%?makeCollisionBox@@YAXH@Z%Collider Id"
+    IDS_STRING157           "SET COLLISION BOX%LFFF%?setCollisionBox@@YAXHMMM@Z%Collider Id, Size X, Size Y, Size Z"
+    IDS_STRING158           "MAKE COLLISION SQUARE%L%?makeCollisionSquare@@YAXH@Z%Collider Id"
+    IDS_STRING159           "SET COLLISION SQUARE%LFF%?setCollisionSquare@@YAXHMM@Z%Collider Id, Size X, Size Z"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING160           "MAKE COLLISION DISC%L%?makeCollisionDisc@@YAXH@Z%Collider Id"
+    IDS_STRING161           "SET COLLISION DISC%LF%?setCollisionDisc@@YAXHM@Z%Collider Id, Radius"
+    IDS_STRING162           "SET COLLIDER INVERT%LLD%?setColliderInvert@@YAXHHK@Z%Collider Id, Object Id, State"
+    IDS_STRING163           "SET COLLIDER KILLER%LLD%?setColliderKiller@@YAXHHK@Z%Collider Id, Object Id, State"
+    IDS_STRING164           "SET COLLIDER USE COLOR%LLD%?setColliderUseColor@@YAXHHK@Z%Collider Id, Object Id, State"
+    IDS_STRING165           "SET COLLIDER COLOR%LLLLLL%?setColliderColor@@YAXHHHHHH@Z%Collider Id, Object Id, R, G, B, A"
+    IDS_STRING166           "SET COLLIDER RESOLVE%LLD%?setColliderResolve@@YAXHHK@Z%Collider Id, Object Id, State"
+    IDS_STRING167           "MAKE WIND EFFECTOR%L%?makeWindEffector@@YAXH@Z%Effector Id"
+    IDS_STRING168           "SET WIND EFFECTOR%LFFF%?setWindEffector@@YAXHMMM@Z%Effector Id, Strength X, Strength Y, Strength Z"
+    IDS_STRING169           "MAKE FORCE EFFECTOR%L%?makeForceEffector@@YAXH@Z%Effector Id"
+    IDS_STRING170           "SET FORCE EFFECTOR%LFFF%?setForceEffector@@YAXHMMM@Z%Effector Id, Force X, Force Y, Force Z"
+    IDS_STRING171           "MAKE POINT EFFECTOR%L%?makePointEffector@@YAXH@Z%Effector Id"
+    IDS_STRING172           "SET POINT EFFECTOR%LF%?setPointEffector@@YAXHM@Z%Effector Id, Force"
+    IDS_STRING173           "SET POINT EFFECTOR FALLOFF NONE%L%?setPointEffectorFalloffNone@@YAXH@Z%Effector Id"
+    IDS_STRING174           "SET POINT EFFECTOR FALLOFF INVERSE%L%?setPointEffectorFalloffInverse@@YAXH@Z%Effector Id"
+    IDS_STRING175           "SET POINT EFFECTOR FALLOFF INVERSE SQUARE%L%?setPointEffectorFalloffInverseSquare@@YAXH@Z%Effector Id"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING176           "SET POINT EFFECTOR USE KILL RADIUS%LD%?setPointEffectorUseKillRadius@@YAXHK@Z%Effector Id, State"
+    IDS_STRING177           "SET POINT EFFECTOR KILL RADIUS%LF%?setPointEffectorKillRadius@@YAXHM@Z%Effector Id, Radius"
+    IDS_STRING178           "DELETE CLOTH%L%?deleteCloth@@YAXH@Z%Cloth Id"
+    IDS_STRING179           "MAKE CLOTH%L%?makeCloth@@YAXH@Z%Cloth Id"
+    IDS_STRING180           "GENERATE RECTANGULAR CLOTH%LFFLLD%?generateRectangularCloth@@YAXHMMHHK@Z%Cloth Id, Size X, Size Z, Resolution X, Resolution Z, Use Double Sided"
+    IDS_STRING183           "FIX CLOTH POINT%LL%?fixClothPoint@@YAXHH@Z%Cloth Id, Point Number"
+    IDS_STRING184           "FIX CLOTH POINTS%LFFFF%?fixClothPoints@@YAXHMMMM@Z%Cloth Id, Pos X, Pos Y, Pos Z, Radius"
+    IDS_STRING185           "FIX CLOTH POINTS%LFFFFFF%?fixClothPoints@@YAXHMMMMMM@Z%Cloth Id, Pos X, Pos Y, Pos Z, Size X, Size Y, Size Z"
+    IDS_STRING186           "FIX CLOTH NEAREST POINT%LFFF%?fixClothNearestPoint@@YAXHMMM@Z%Cloth Id, Pos X, Pos Y, Pos Z"
+    IDS_STRING187           "SET CLOTH ELASTICITY%LF%?setClothElasticity@@YAXHM@Z%Cloth Id, Elasticity"
+    IDS_STRING188           "SET CLOTH MASS%LF%?setClothMass@@YAXHM@Z%Cloth Id, Mass"
+    IDS_STRING189           "FREE CLOTH POINT%LL%?freeClothPoint@@YAXHH@Z%Cloth Id, Point Number"
+    IDS_STRING190           "FREE CLOTH POINTS%LFFFF%?freeClothPoints@@YAXHMMMM@Z%Cloth Id, Pos X, Pos Y, Pos Z, Radius"
+    IDS_STRING191           "FREE CLOTH POINTS%LFFFFFF%?freeClothPoints@@YAXHMMMMMM@Z%Cloth Id, Pos X, Pos Y, Pos Z, Size X, Size Y, Size Z"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING192           "FREE CLOTH NEAREST POINT%LFFF%?freeClothNearestPoint@@YAXHMMM@Z%Cloth Id, Pos X, Pos Y, Pos Z"
+    IDS_STRING195           "MAKE VEHICLE%L%?makeVehicle@@YAXH@Z%Vehicle Id"
+    IDS_STRING196           "DELETE VEHICLE%L%?deleteVehicle@@YAXH@Z%Vehicle Id"
+    IDS_STRING197           "ADD VEHICLE COLLISION POINT%LFFF%?addVehicleCollisionPoint@@YAXHMMM@Z%Vehicle Id, Pos X, Pos Y, Pos Z"
+    IDS_STRING200           "ADD VEHICLE SUSPENSION[%LLFFFFFFFFF%?addVehicleSuspension@@YAHHMMMMMMMMM@Z%Vehicle Id, Pos X, Pos Y, Pos Z, Up X, Up Y, Up Z, Fwd X, Fwd Y, Fwd Z"
+    IDS_STRING201           "SET VEHICLE SUSPENSION LIMITS%LLFF%?setVehicleSuspensionLimits@@YAXHHMM@Z%Vehicle Id, Suspension Id, Minimum Dist, Maximum Dist"
+    IDS_STRING202           "SET VEHICLE SUSPENSION PHYSICS%LLFF%?setVehicleSuspensionPhysics@@YAXHHMM@Z%Vehicle Id, Suspension Id, Spring, Damping"
+    IDS_STRING203           "SET VEHICLE WHEEL SIZE%LLFF%?setVehicleWheelSize@@YAXHHMM@Z%Vehicle Id, Suspension Id, Radius, Width"
+    IDS_STRING204           "ADD VEHICLE WHEEL IMPULSE%LLFFF%?addVehicleWheelImpulse@@YAXHHMMM@Z%Vehicle Id, Suspension Id, Impulse X, Impulse Y, Impulse Z"
+    IDS_STRING205           "ADD VEHICLE WHEEL FORCE%LLFFF%?addVehicleWheelForce@@YAXHHMMM@Z%Vehicle Id, Suspension Id, Force X, Force Y, Force Z"
+    IDS_STRING206           "GENERATE CLOTH FROM BITMAP%LLFFDD%?generateClothFromBitmap@@YAXHHMMKK@Z%Cloth Id, Image Id, Size X, Size Z, Use Auto Triangles, Use Double Sided"
+    IDS_STRING207           "SAVE CLOTH STATE%LS%?saveClothState@@YAXHPAD@Z%Cloth Id, Filename"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING208           "LOAD CLOTH STATE%LSD%?loadClothState@@YAXHPADK@Z%Cloth Id, Filename, Load Velocities"
+    IDS_STRING209           "FIX CLOTH POINT TO OBJECT%LLL%?fixClothPointToObject@@YAXHHH@Z%Cloth Id, Point Number, Object Id"
+    IDS_STRING210           "FREE ALL CLOTH POINTS%L%?freeAllClothPoints@@YAXH@Z%Cloth Id"
+    IDS_STRING211           "FREE ALL CLOTH POINTS ON OBJECT%LL%?freeAllClothPointsOnObject@@YAXHH@Z%Cloth Id, Object Id"
+    IDS_STRING212           "FREE ALL CLOTH POINTS ON ALL OBJECTS%L%?freeAllClothPointsOnAllObjects@@YAXH@Z%Cloth Id"
+    IDS_STRING213           "GET NUMBER OF CLOTH POINTS[%LL%?getNumberOfClothPoints@@YAHH@Z%Cloth Id"
+    IDS_STRING214           "FREEZE CLOTH%LD%?freezeCloth@@YAXHK@Z%Cloth Id, State"
+    IDS_STRING215           "RELAX CLOTH%L%?relaxCloth@@YAXH@Z%Cloth Id"
+    IDS_STRING216           "FIX CLOTH POINT TO OBJECT%LLLFFF%?fixClothPointToObject@@YAXHHHMMM@Z%Cloth Id, Point Number, Object Id, Local Pos X, Local Pos Y, Local Pos Z"
+    IDS_STRING217           "SET OBJECT AS VEHICLE BODY%LL%?setObjectAsVehicleBody@@YAXHH@Z%Vehicle Id, Object Id"
+    IDS_STRING218           "SET OBJECT AS VEHICLE WHEEL%LLLD%?setObjectAsVehicleWheel@@YAXHHHK@Z%Vehicle Id, Suspension Id, Object Id, Flip"
+    IDS_STRING219           "REMOVE VEHICLE BODY OBJECT%LL%?removeVehicleBodyObject@@YAXHH@Z%Vehicle Id, Object Id"
+    IDS_STRING220           "REMOVE VEHICLE WHEEL OBJECT%LL%?removeVehicleWheelObject@@YAXHH@Z%Vehicle Id, Object Id"
+    IDS_STRING221           "ADD VEHICLE COLLISION POINTS%LL%?addVehicleCollisionPoints@@YAXHH@Z%Vehicle Id, Object Id"
+    IDS_STRING222           "MAKE RAGDOLL%L%?makeRagdoll@@YAXH@Z%Ragdoll Id"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING225           "FIX RAGDOLL POINT TO OBJECT%LLL%?fixRagdollPointToObject@@YAXHHH@Z%Ragdoll Id, Point Number, Object Id"
+    IDS_STRING226           "FIX RAGDOLL POINT TO OBJECT%LLLFFF%?fixRagdollPointToObject@@YAXHHHMMM@Z%Ragdoll Id, Point Number, Object Id, Local Pos X, Local Pos Y, Local Pos Z"
+    IDS_STRING231           "FREE ALL RAGDOLL POINTS%L%?freeAllRagdollPoints@@YAXH@Z%Ragdoll Id"
+    IDS_STRING232           "SET PHYSICS FRAME RATE%F%?setPhysicsFrameRate@@YAXM@Z%Frames per second"
+    IDS_STRING233           "SET PHYSICS MAX ITERATIONS%L%?setPhysicsMaxIterations@@YAXH@Z%Num"
+    IDS_STRING234           "SET PHYSICS TIMER BAILOUT%D%?setPhysicsTimerBailout@@YAXK@Z%State"
+    IDS_STRING235           "SET PHYSICS AUTO GARBAGE COLLECT%D%?setPhysicsAutoGarbageCollect@@YAXK@Z%State"
+    IDS_STRING236           "SET PHYSICS GARBAGE COLLECT INTERVAL%F%?setPhysicsGarbageCollectInterval@@YAXM@Z%Secs"
+    IDS_STRING237           "PHYSICS GARBAGE COLLECT%0%?physicsGarbageCollect@@YAXXZ"
+    IDS_STRING238           "CLAMP PHYSICS FRAME RATE%D%?clampPhysicsFrameRate@@YAXK@Z%State"
+    IDS_STRING239           "DRAW VEHICLE DEBUG LINES%LD%?drawVehicleDebugLines@@YAXHK@Z%Vehicle Id, State"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING240           "DRAW RAGDOLL DEBUG LINES%LD%?drawRagdollDebugLines@@YAXHK@Z%Ragdoll Id, State"
+    IDS_STRING241           "SET VEHICLE WHEEL STEER%LLF%?setVehicleWheelSteer@@YAXHHM@Z%Vehicle Id, Suspension Id, Angle"
+    IDS_STRING242           "SET VEHICLE WHEEL CONTROLS%LLFF%?setVehicleWheelControls@@YAXHHMM@Z%Vehicle Id, Suspension Id, Acceleration, Brake"
+    IDS_STRING243           "SET VEHICLE CENTER OF GRAVITY%LFFF%?setVehicleCenterOfGravity@@YAXHMMM@Z%Vehicle Id, Cx, Cy, Cz"
+    IDS_STRING244           "SET VEHICLE MASS%LF%?setVehicleMass@@YAXHM@Z%Vehicle Id, Mass"
+    IDS_STRING245           "SET VEHICLE MOMENT OF INERTIA%LFFF%?setVehicleMomentOfInertia@@YAXHMMM@Z%Vehicle Id, Mx, My, Mz"
+    IDS_STRING246           "SET EMITTER PARTICLE COLOR%LLLLL%?setParticleColor@@YAXHHHHH@Z%Emitter Id, R, G, B, A"
+    IDS_STRING247           "MAKE SIZE EFFECTOR%L%?makeSizeEffector@@YAXH@Z%Effector Id"
+    IDS_STRING248           "SIZE EFFECTOR ADD KEY[%LLFF%?sizeEffectorAddKey@@YAHHMM@Z%Effector ID, Time, Size"
+    IDS_STRING249           "SIZE EFFECTOR DELETE KEY%LL%?sizeEffectorDeleteKey@@YAXHH@Z%Effector Id, Key Num"
+    IDS_STRING250           "SIZE EFFECTOR DELETE KEY AT TIME%LF%?sizeEffectorDeleteKeyAtTime@@YAXHM@Z%Effector Id, Time"
+    IDS_STRING251           "SIZE EFFECTOR GET KEY TIME[%FLL%?sizeEffectorGetKeyTime@@YAKHH@Z%Effector Id, Key Num"
+    IDS_STRING252           "SIZE EFFECTOR GET KEY VALUE[%FLL%?sizeEffectorGetKeyValue@@YAKHH@Z%Effector Id, Key Num"
+    IDS_STRING253           "SIZE EFFECTOR GET NUM KEYS[%LL%?sizeEffectorGetNumKeys@@YAHH@Z%Effector Id"
+    IDS_STRING254           "SIZE EFFECTOR USE ON COLLIDE%LD%?sizeEffectorUseOnCollide@@YAXHK@Z%Effector Id, State"
+    IDS_STRING255           "SET PARTICLE Z SORTING%LD%?setParticleZSorting@@YAXHK@Z%Emitter Id, State"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING256           "MAKE COLOR EFFECTOR%L%?makeColorEffector@@YAXH@Z%Effector Id"
+    IDS_STRING257           "COLOR EFFECTOR ADD KEY[%LLFLLLL%?colorEffectorAddKey@@YAHHMHHHH@Z%Effector ID, Time, R, G, B, A"
+    IDS_STRING258           "COLOR EFFECTOR DELETE KEY%LL%?colorEffectorDeleteKey@@YAXHH@Z%Effector Id, Key Num"
+    IDS_STRING259           "COLOR EFFECTOR DELETE KEY AT TIME%LF%?colorEffectorDeleteKeyAtTime@@YAXHM@Z%Effector Id, Time"
+    IDS_STRING260           "COLOR EFFECTOR GET KEY TIME[%FLL%?colorEffectorGetKeyTime@@YAKHH@Z%Effector Id, Key Num"
+    IDS_STRING261           "COLOR EFFECTOR GET KEY RED VALUE[%LLL%?colorEffectorGetKeyRedValue@@YAHHH@Z%Effector Id, Key Num"
+    IDS_STRING262           "COLOR EFFECTOR GET KEY GREEN VALUE[%LLL%?colorEffectorGetKeyGreenValue@@YAHHH@Z%Effector Id, Key Num"
+    IDS_STRING263           "COLOR EFFECTOR GET KEY BLUE VALUE[%LLL%?colorEffectorGetKeyBlueValue@@YAHHH@Z%Effector Id, Key Num"
+    IDS_STRING264           "COLOR EFFECTOR GET KEY ALPHA VALUE[%LLL%?colorEffectorGetKeyAlphaValue@@YAHHH@Z%Effector Id, Key Num"
+    IDS_STRING265           "COLOR EFFECTOR GET NUM KEYS[%LL%?colorEffectorGetNumKeys@@YAHH@Z%Effector Id"
+    IDS_STRING266           "COLOR EFFECTOR USE ON COLLIDE%LD%?colorEffectorUseOnCollide@@YAXHK@Z%Effector Id, State"
+    IDS_STRING267           "ADD RAGDOLL FORCE%LLFFF%?addRagdollForce@@YAXHHMMM@Z%Ragdoll Id, Point Id, Force X, Force Y, Force Z"
+    IDS_STRING268           "ADD RAGDOLL IMPULSE%LLFFF%?addRagdollImpulse@@YAXHHMMM@Z%Ragdoll Id, Point Id, Impulse X, Impulse Y, Impulse Z"
+    IDS_STRING269           "FIX OBJECT TO RAGDOLL%LLL%?fixObjectToRagdoll@@YAXHHH@Z%Ragdoll Id, Object Id, Part Num"
+    IDS_STRING270           "SET RAGDOLL OBJECT OFFSET%LLFFF%?setRagdollObjectOffset@@YAXHHMMM@Z%Ragdoll Id, Object Id, Offset X, Offset Y, Offset Z"
+    IDS_STRING271           "SET RAGDOLL SCALES%LFFFFFFF%?setRagdollScales@@YAXHMMMMMMM@Z%Ragdoll Id, Global Scale, Upper Arm Scale, Lower Arm Scale, Upper Leg Scale, Lower Leg Scale,  Upper Torso Height Scale,  Lower Torso Height Scale"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING272           "FREEZE RAGDOLL%LD%?freezeRagdoll@@YAXHK@Z%Ragdoll Id, State"
+    IDS_STRING273           "BIND COLLIDER TO OBJECT%LL%?bindColliderToObject@@YAXHH@Z%Collider Id, Object Id"
+    IDS_STRING274           "UNBIND COLLIDER FROM OBJECT%LL%?unbindColliderFromObject@@YAXHH@Z%Collider Id, Object Id"
+    IDS_STRING275           "BIND EFFECTOR TO OBJECT%LL%?bindEffectorToObject@@YAXHH@Z%Effector Id, Object Id"
+    IDS_STRING276           "UNBIND EFFECTOR FROM OBJECT%LL%?unbindEffectorFromObject@@YAXHH@Z%Effector Id, Object Id"
+    IDS_STRING277           "TRANSFORM CLOTH UVS%LFFFFL%?TransformClothUVs@@YAXHMMMMH@Z%Cloth Id, Scale U, Scale V, Move U, Move V, Mode"
+    IDS_STRING278           "RESET CLOTH UVS%LL%?ResetClothUVs@@YAXHH@Z%Cloth Id, Mode"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

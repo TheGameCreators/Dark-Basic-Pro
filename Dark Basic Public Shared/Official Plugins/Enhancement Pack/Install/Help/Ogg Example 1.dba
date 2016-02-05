@@ -1,0 +1,37 @@
+
+sync on
+backdrop on
+
+load ogg vorbis "media\music.ogg", 1
+loop ogg vorbis 1
+
+state = 0
+
+do
+   set cursor 0, 0
+
+   num = get ogg vorbis state( 1 )
+   state$ = "unknown"
+
+   if num = 0 then state$ = "stopped"
+   if num = 1 then state$ = "playing"
+   if num = 2 then state$ = "paused"
+
+   if inkey$ ( ) = "1" then pause ogg vorbis 1
+   if inkey$ ( ) = "2" then resume ogg vorbis 1
+   if inkey$ ( ) = "3" then stop ogg vorbis 1
+   if inkey$ ( ) = "4" then play ogg vorbis 1
+   if inkey$ ( ) = "5" then loop ogg vorbis 1
+
+   print ""
+   print "OGG VORBIS STATE = " + state$
+
+   print ""
+   print "1 = pause"
+   print "2 = resume"
+   print "3 = stop"
+   print "4 = play"
+   print "5 = loop"
+
+   sync
+loop

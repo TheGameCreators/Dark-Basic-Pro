@@ -1,0 +1,294 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    14                      "PERFORM CHECKLIST FOR EAX EFFECTS%0%?PerformCheckListForEAXEffects@@YAXXZ%"
+    15                      "APPLY PRESET EAX EFFECT%LL%?ApplyPresetEAXEffect@@YAXHH@Z%Sound, Effect"
+END
+
+STRINGTABLE 
+BEGIN
+    16                      "SET EAX ROOM%LL%?SetEAXRoom@@YAXHH@Z%Sound, Value"
+    17                      "SET EAX ROOM HF%LL%?SetEAXRoomHF@@YAXHH@Z%Sound, Value"
+    18                      "SET EAX ROOM ROLLOFF%LF%?SetEAXRoomRolloff@@YAXHM@Z%Sound, Value"
+    19                      "SET EAX DECAY TIME%LF%?SetEAXDecayTime@@YAXHM@Z%Sound, Value"
+    20                      "SET EAX DECAY HF RATIO%LF%?SetEAXDecayHFRatio@@YAXHM@Z%Sound, Value"
+    21                      "SET EAX REFLECTIONS%LL%?SetEAXReflections@@YAXHH@Z%Sound, Value"
+    IDS_STRING22            "SET EAX REFLECTIONS DELAY%LF%?SetEAXReflectionsDelay@@YAXHM@Z%Sound, Value"
+    23                      "SET EAX REVERB%LL%?SetEAXReverb@@YAXHH@Z%Sound, Value"
+    24                      "SET EAX REVERB DELAY%LF%?SetEAXReverbDelay@@YAXHM@Z%Sound, Value"
+    25                      "SET EAX ENVIRONMENT%LL%?SetEAXEnvironment@@YAXHH@Z%Sound, Value"
+    26                      "SET EAX ENVIRONMENT SIZE%LF%?SetEAXEnvironmentSize@@YAXHM@Z%Sound, Value"
+    27                      "SET EAX ENVIRONMENT DIFFUSION%LF%?SetEAXEnvironmentDiffusion@@YAXHM@Z%Sound, Value"
+    28                      "SET EAX AIR ABSORPTION%LF%?SetEAXAirAbsorption@@YAXHM@Z%Sound, Value"
+    29                      "SET EAX FLAGS%LL%?SetEAXFlags@@YAXHH@Z%Sound, Value"
+    30                      "SET EAX SCALE DECAY TIME%LL%?SetEAXScaleDecayTime@@YAXHH@Z%Sound, Mode"
+    31                      "SET EAX SCALE REFLECTIONS%LL%?SetEAXScaleReflections@@YAXHH@Z%Sound, Mode"
+END
+
+STRINGTABLE 
+BEGIN
+    32                      "SET EAX SCALE REFLECTIONS DELAY%LL%?SetEAXScaleReflectionsDelay@@YAXHH@Z%Sound, Mode"
+    33                      "SET EAX SCALE REVERB%LL%?SetEAXScaleReverb@@YAXHH@Z%Sound, Mode"
+    34                      "SET EAX SCALE REVERB DELAY%LL%?SetEAXScaleReverbDelay@@YAXHH@Z%Sound, Mode"
+    35                      "SET EAX CLIP DECAY HF%LL%?SetEAXClipDecayHF@@YAXHH@Z%Sound, Mode"
+    36                      "SET EAX SOURCE DIRECT%LL%?SetEAXSourceDirect@@YAXHH@Z%Sound, Value"
+    37                      "SET EAX SOURCE DIRECT HF%LL%?SetEAXSourceDirectHF@@YAXHH@Z%Sound, Value"
+    38                      "SET EAX SOURCE ROOM%LL%?SetEAXSourceRoom@@YAXHH@Z%Sound, Value"
+    39                      "SET EAX SOURCE ROLLOFF%LF%?SetEAXSourceRolloff@@YAXHM@Z%Sound, Value"
+    40                      "SET EAX SOURCE OUTSIDE%LL%?SetEAXSourceOutside@@YAXHH@Z%Sound, Value"
+    41                      "SET EAX SOURCE ABSORPTION%LF%?SetEAXSourceAbsorption@@YAXHM@Z%Sound, Value"
+    42                      "SET EAX SOURCE FLAGS%LL%?SetEAXSourceFlags@@YAXHH@Z%Sound, Value"
+    43                      "SET EAX SOURCE OBSTRUCTION%LL%?SetEAXSourceObstruction@@YAXHH@Z%Sound, Value"
+    44                      "SET EAX SOURCE OBSTRUCTION LF%LF%?SetEAXSourceObstructionLF@@YAXHM@Z%Sound, Value"
+    45                      "SET EAX SOURCE OCCLUSION%LL%?SetEAXSourceOcclusion@@YAXHH@Z%Sound, Value"
+    46                      "SET EAX SOURCE OCCLUSION LF%LF%?SetEAXSourceOcclusionLF@@YAXHM@Z%Sound, Value"
+    47                      "SET EAX SOURCE OCCLUSION ROOM%LF%?SetEAXSourceOcclusionRoom@@YAXHM@Z%Sound, Value"
+END
+
+STRINGTABLE 
+BEGIN
+    48                      "SET EAX SOURCE AFFECT DIRECT HF%LL%?SetEAXSourceAffectDirectHF@@YAXHH@Z%Sound, Mode"
+    49                      "SET EAX SOURCE AFFECT ROOM%LL%?SetEAXSourceAffectRoom@@YAXHH@Z%Sound, Mode"
+    50                      "SET EAX SOURCE AFFECT ROOM HF%LL%?SetEAXSourceAffectRoomHF@@YAXHH@Z%Sound, Mode"
+    51                      "SET EAX CONE ORIENTATION X%LF%?SetEAXConeOrientationX@@YAXHM@Z%Sound, Value"
+    52                      "SET EAX CONE ORIENTATION Y%LF%?SetEAXConeOrientationY@@YAXHM@Z%Sound, Value"
+    53                      "SET EAX CONE ORIENTATION Z%LF%?SetEAXConeOrientationZ@@YAXHM@Z%Sound, Value"
+    54                      "SET EAX CONE INSIDE ANGLE%LL%?SetEAXConeInsideAngle@@YAXHH@Z%Sound, Value"
+    55                      "SET EAX CONE OUTSIDE ANGLE%LL%?SetEAXConeOutsideAngle@@YAXHH@Z%Sound, Value"
+    56                      "SET EAX CONE OUTSIDE VOLUME%LL%?SetEAXConeOutsideVolume@@YAXHH@Z%Sound, Value"
+    57                      "SET EAX MIN DISTANCE%LF%?SetEAXMinDistance@@YAXHM@Z%Sound, Value"
+    58                      "SET EAX MAX DISTANCE%LF%?SetEAXMaxDistance@@YAXHM@Z%Sound, Value"
+    59                      "GET EAX[%L%?GetEAX@@YAHXZ%"
+    60                      "GET EAX ROOM[%LL%?GetEAXRoom@@YAHH@Z%"
+    61                      "GET EAX ROOM HF[%LL%?GetEAXRoomHF@@YAHH@Z%"
+    62                      "GET EAX ROOM ROLLOFF[%FL%?GetEAXRoomRolloff@@YAKH@Z%"
+    63                      "GET EAX ROOM DECAY TIME[%FL%?GetEAXDecayTime@@YAKH@Z%"
+END
+
+STRINGTABLE 
+BEGIN
+    64                      "GET EAX DECAY HF RATIO[%FL%?GetEAXDecayHFRatio@@YAKH@Z%"
+    65                      "GET EAX REFLECTIONS[%LL%?GetEAXReflections@@YAHH@Z%"
+    66                      "GET EAX REFLECTIONS DELAY[%FL%?GetEAXReflectionsDelay@@YAKH@Z%"
+    67                      "GET EAX REVERB[%LL%?GetEAXReverb@@YAHH@Z%"
+    68                      "GET EAX REVERB DELAY[%FL%?GetEAXReverbDelay@@YAKH@Z%"
+    69                      "GET EAX ENVIRONMENT[%LL%?GetEAXEnvironment@@YAHH@Z%"
+    70                      "GET EAX ENVIRONMENT SIZE[%FL%?GetEAXEnvironmentSize@@YAKH@Z%"
+    71                      "GET EAX ENVIRONMENT DIFFUSION[%FL%?GetEAXEnvironmentDiffusion@@YAKH@Z%"
+    72                      "GET EAX AIR ABSORPTION[%FL%?GetEAXAirAbsorption@@YAKH@Z%"
+    73                      "GET EAX FLAGS[%LL%?GetEAXFlags@@YAHH@Z%"
+    74                      "GET EAX SOURCE DIRECT[%LL%?GetEAXSourceDirect@@YAHH@Z%"
+    75                      "GET EAX SOURCE DIRECT HF[%LL%?GetEAXSourceDirectHF@@YAHH@Z%"
+    76                      "GET EAX SOURCE ROOM[%LL%?GetEAXSourceRoom@@YAHH@Z%"
+    77                      "GET EAX SOURCE ROOM HF[%FL%?GetEAXSourceRoomHF@@YAKH@Z%"
+    78                      "GET EAX SOURCE ROLLOFF[%FL%?GetEAXSourceRolloff@@YAKH@Z%"
+    79                      "GET EAX SOURCE OUTSIDE[%LL%?GetEAXSourceOutside@@YAHH@Z%"
+END
+
+STRINGTABLE 
+BEGIN
+    80                      "GET EAX SOURCE ABSORPTION[%FL%?GetEAXSourceAbsorption@@YAKH@Z%"
+    81                      "GET EAX SOURCE FLAGS[%LL%?GetEAXSourceFlags@@YAHH@Z%"
+    82                      "GET EAX SOURCE OBSTRUCTION[%LL%?GetEAXSourceObstruction@@YAHH@Z%"
+    83                      "GET EAX SOURCE OBSTRUCTION LF[%FL%?GetEAXSourceObstructionLF@@YAKH@Z%"
+    84                      "GET EAX SOURCE OCCLUSION[%LL%?GetEAXSourceOcclusion@@YAHH@Z%"
+    85                      "GET EAX SOURCE OCCLUSION LF[%FL%?GetEAXSourceOcclusionLF@@YAKH@Z%"
+    86                      "GET EAX SOURCE OCCLUSION ROOM[%FL%?GetEAXSourceOcclusionRoom@@YAKH@Z%"
+    87                      "GET EAX CONE ORIENTATION X[%FL%?GetEAXConeOrientationX@@YAKH@Z%"
+    88                      "GET EAX CONE ORIENTATION Y[%FL%?GetEAXConeOrientationY@@YAKH@Z%"
+    89                      "GET EAX CONE ORIENTATION Z[%FL%?GetEAXConeOrientationZ@@YAKH@Z%"
+    90                      "GET EAX CONE INSIDE ANGLE[%LL%?GetEAXConeInsideAngle@@YAHH@Z%"
+    91                      "GET EAX CONE OUTSIDE ANGLE[%LL%?GetEAXConeOutsideAngle@@YAHH@Z%"
+    92                      "GET EAX CONE OUTSIDE VOLUME[%LL%?GetEAXConeOutsideVolume@@YAHH@Z%"
+    93                      "GET EAX MIN DISTANCE[%FL%?GetEAXMinDistance@@YAKH@Z%"
+    94                      "GET EAX MAX DISTANCE[%FL%?GetEAXMaxDistance@@YAKH@Z%"
+    95                      "GET PROCESSOR COUNT[%L%?GetProcessorCount@@YAHXZ%"
+END
+
+STRINGTABLE 
+BEGIN
+    96                      "GET PROCESSOR VENDOR$[%SL%?GetProcessorVendor@@YAKKH@Z%ID"
+    97                      "GET PROCESSOR TYPE ID[%LL%?GetProcessorTypeID@@YAHH@Z%ID"
+    98                      "GET PROCESSOR FAMILY ID[%LL%?GetProcessorFamilyID@@YAHH@Z%ID"
+    99                      "GET PROCESSOR MODEL ID[%LL%?GetProcessorModelID@@YAHH@Z%ID"
+    100                     "GET PROCESSOR STEPPING ID[%LL%?GetProcessorSteppingID@@YAHH@Z%ID"
+    101                     "GET PROCESSOR BRAND$[%SL%?GetProcessorBrand@@YAKKH@Z%ID"
+    102                     "GET PROCESSOR PLATFORM$[%SL%?GetProcessorPlatform@@YAKKH@Z%ID"
+    103                     "GET PROCESSOR NAME$[%SL%?GetProcessorName@@YAKKH@Z%ID"
+    104                     "GET PROCESSOR FREQUENCY[%LL%?GetProcessorFrequency@@YAHH@Z%ID"
+    105                     "GET PROCESSOR ON CHIP FEATURES%L%?GetProcessorOnChipFeatures@@YAXH@Z%ID"
+    106                     "GET PROCESSOR POWER MANAGEMENT%L%?GetProcessorPowerManagement@@YAXH@Z%ID"
+    107                     "GET PROCESSOR SUPPORTED FEATURES%L%?GetProcessorSupportedFeatures@@YAXH@Z%ID"
+    108                     "GET DRIVE COUNT[%L%?GetDriveCount@@YAHXZ%"
+    109                     "GET DRIVE CYLINDER COUNT[%LL%?GetDriveCylinderCount@@YAHH@Z%ID"
+    110                     "GET DRIVE TRACK COUNT[%LL%?GetDriveTrackCount@@YAHH@Z%ID"
+    111                     "GET DRIVE SECTORS PER TRACK[%LL%?GetDriveSectorsPerTrack@@YAHH@Z%ID"
+END
+
+STRINGTABLE 
+BEGIN
+    112                     "GET DRIVE BYTES PER SECTOR[%LL%?GetDriveBytesPerSector@@YAHH@Z%ID"
+    113                     "GET DRIVE TOTAL SIZE[%LLL%?GetDriveTotalSize@@YAHHH@Z%ID"
+    114                     "GET DRIVE USED SPACE[%LLL%?GetDriveUsedSpace@@YAHHH@Z%ID"
+    115                     "GET DRIVE FREE SPACE[%LLL%?GetDriveFreeSpace@@YAHHH@Z%ID"
+    116                     "GET DRIVE FILE LENGTH SUPPORT[%LL%?GetDriveFileLengthSupport@@YAHH@Z%ID"
+    117                     "GET DRIVE SERIAL$[%SL%?GetDriveSerial@@YAKKH@Z%ID"
+    118                     "GET DRIVE FILE SYSTEM$[%SL%?GetDriveFileSystem@@YAKKH@Z%ID"
+    119                     "GET CD COUNT[%L%?GetCDCount@@YAHXZ%"
+    120                     "GET CD LETTER$[%SL%?GetCDLetter@@YAKKH@Z%ID"
+    121                     "GET COMPUTER NAME$[%S%?GetComputerNameExA@@YAKK@Z"
+    122                     "GET USER NAME$[%S%?GetUserNameEx@@YAKK@Z%"
+    123                     "GET DISPLAY WIDTH[%L%?GetDisplayWidth@@YAHXZ%"
+    124                     "GET DISPLAY HEIGHT[%L%?GetDisplayHeight@@YAHXZ%"
+    125                     "GET DISPLAY DEPTH[%L%?GetDisplayDepth@@YAHXZ%"
+    126                     "GET DISPLAY REFRESH RATE[%L%?GetDisplayRefreshRate@@YAHXZ%"
+    127                     "OPEN FILE DIALOG[%SSSS%?OpenFileDialog@@YAKKKKK@Z%Directory, Filter, Title"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING128           "SAVE FILE DIALOG[%SSSS%?SaveFileDialog@@YAKKKKK@Z%Directory, Filter, Title"
+    IDS_STRING129           "GET WEB CLIENT$[%S%?GetWebClient@@YAKXZ%"
+    IDS_STRING130           "GET IP ADDRESS$[%S%?GetIPAddress@@YAKXZ%"
+    IDS_STRING131           "GET VOICE API[%L%?GetVoiceAPI@@YAHXZ%"
+    IDS_STRING132           "GET VOICE LIST%0%?GetVoiceList@@YAXXZ%"
+    IDS_STRING133           "SET VOICE%L%?SetVoice@@YAXH@Z%Voice Index"
+    IDS_STRING134           "SET VOICE SPEED%L%?SetVoiceSpeed@@YAXH@Z%Speed"
+    IDS_STRING135           "SET VOICE VOLUME%L%?SetVoiceVolume@@YAXH@Z%Volume"
+    IDS_STRING136           "SEND VOICE MESSAGE%S%?SendVoiceMessage@@YAXK@Z%Message"
+    IDS_STRING137           "SEND VOICE MESSAGE XML%S%?SendVoiceMessageXML@@YAXK@Z%Message"
+    IDS_STRING138           "GET VOICE SPEED[%L%?GetVoiceSpeed@@YAHXZ%"
+    IDS_STRING139           "GET VOICE VOLUME[%L%?GetVoiceVolume@@YAHXZ%"
+    IDS_STRING140           "GET INSTALLED MEMORY[%LL%?GetInstalledMemory@@YAHH@Z%"
+    IDS_STRING141           "GET MEMORY AVAILABLE[%LL%?GetMemoryAvailable@@YAHH@Z%"
+    IDS_STRING142           "GET MEMORY PERCENT USED[%L%?GetMemoryPercentUsed@@YAHXZ%"
+    IDS_STRING143           "GET MEMORY PERCENT FREE[%L%?GetMemoryPercentFree@@YAHXZ%"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING144           "CREATE FILE BLOCK%LS%?CreateFileBlock@@YAXHK@Z%id, filename"
+    IDS_STRING145           "DELETE FILE BLOCK%L%?DeleteFileBlock@@YAXH@Z%ID"
+    IDS_STRING146           "SET FILE BLOCK KEY%LS%?SetFileBlockKey@@YAXHK@Z%ID, Key"
+    IDS_STRING147           "SET FILE BLOCK COMPRESSION%LL%?SetFileBlockCompression@@YAXHH@Z%ID, Flag"
+    IDS_STRING148           "ADD FILE TO BLOCK%LS%?AddFileToBlock@@YAXHK@Z%ID, File"
+    IDS_STRING149           "ADD OBJECT TO BLOCK%LLS%?AddObjectToBlock@@YAXHHK@Z%id, object, filename"
+    IDS_STRING150           "ADD IMAGE TO BLOCK%LLS%?AddImageToBlock@@YAXHHK@Z%id, object, filename"
+    IDS_STRING151           "ADD BITMAP TO BLOCK%LLS%?AddBitmapToBlock@@YAXHHK@Z%id, bitmap, filename"
+    IDS_STRING152           "SAVE FILE BLOCK%L%?SaveFileBlock@@YAXH@Z%id"
+    IDS_STRING153           "OPEN FILE BLOCK%SL%?OpenFileBlock@@YAXKH@Z%File, ID"
+    IDS_STRING154           "OPEN FILE BLOCK%SLS%?OpenFileBlock@@YAXKHK@Z%File, ID, Key"
+    IDS_STRING155           "PERFORM CHECKLIST FOR FILE BLOCK DATA%L%?PerformCheckListForFileBlockData@@YAXH@Z%ID"
+    IDS_STRING156           "EXTRACT FILE FROM BLOCK%LSS%?ExtractFileFromBlock@@YAXHKK@Z%id, filename, path"
+    IDS_STRING157           "LOAD OBJECT FROM BLOCK%LSL%?LoadObjectFromBlock@@YAXHKH@Z%ID, File, Object"
+    IDS_STRING158           "LOAD BITMAP FROM BLOCK%LSL%?LoadBitmapFromBlock@@YAXHKH@Z%ID, File, Bitmap"
+    IDS_STRING159           "LOAD IMAGE FROM BLOCK%LSL%?LoadImageFromBlock@@YAXHKH@Z%ID, File, Image"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING160           "LOAD SOUND FROM BLOCK%LSL%?LoadSoundFromBlock@@YAXHKH@Z%ID, File, Sound"
+    IDS_STRING161           "LOAD FILE FROM BLOCK%LSL%?LoadFileFromBlock@@YAXHKH@Z%ID, File, File ID"
+    IDS_STRING162           "LOAD MEMBLOCK FROM BLOCK%LSL%?LoadMemblockFromBlock@@YAXHKH@Z%ID, File, Memblock"
+    IDS_STRING163           "LOAD ANIMATION FROM BLOCK%LSL%?LoadAnimationFromBlock@@YAXHKH@Z%ID, File, Animation"
+    IDS_STRING164           "GET FILE BLOCK EXISTS[%LL%?GetFileBlockExists@@YAHH@Z%ID"
+    IDS_STRING165           "GET FILE BLOCK SIZE[%LL%?GetFileBlockSize@@YAHH@Z%ID"
+    IDS_STRING166           "GET FILE BLOCK COUNT[%LL%?GetFileBlockCount@@YAHH@Z%ID"
+    IDS_STRING167           "GET FILE BLOCK DATA EXISTS[%LLS%?GetFileBlockDataExists@@YAHHK@Z%ID, File"
+    IDS_STRING168           "GET FILE BLOCK KEY[%LL%?GetFileBlockKey@@YAHH@Z%ID"
+    IDS_STRING169           "GET FILE BLOCK COMPRESSION[%LL%?GetFileBlockCompression@@YAHH@Z%ID"
+    IDS_STRING170           "CREATE FILE MAP%LSL%?CreateFileMap@@YAXHKK@Z%"
+    IDS_STRING171           "OPEN FILE MAP%LS%?OpenFileMap@@YAXHK@Z%"
+    IDS_STRING172           "CLOSE FILE MAP%L%?CloseFileMap@@YAXH@Z%"
+    IDS_STRING173           "DESTROY FILE MAP%L%?DestroyFileMap@@YAXH@Z%"
+    IDS_STRING174           "SET FILE MAP DWORD%LLL%?SetFileMapDWORD@@YAXHKK@Z%"
+    IDS_STRING175           "SET FILE MAP STRING$%LLS%?SetFileMapString@@YAXHKK@Z%"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING176           "SET FILE MAP FLOAT%LLF%?SetFileMapFloat@@YAXHKM@Z%"
+    IDS_STRING177           "GET FILE MAP DWORD[%LLL%?GetFileMapDWORD@@YAKHK@Z%"
+    IDS_STRING178           "GET FILE MAP STRING$[%SLL%?GetFileMapString@@YAKKHK@Z%"
+    IDS_STRING179           "GET FILE MAP FLOAT[%FLL%?GetFileMapFloat@@YAKHK@Z%"
+    IDS_STRING180           "GET PROCESSOR USAGE[%LL%?GetProcessorUsage@@YAHH@Z%ID"
+    IDS_STRING181           "OPEN DATA FILE%SSL%?OpenDataFile@@YAXKKH@Z"
+    IDS_STRING182           "CLOSE DATA FILE%L%?CloseDataFile@@YAXH@Z"
+    IDS_STRING183           "UPDATE DATA FILE%L%?UpdateDataFile@@YAXH@Z"
+    IDS_STRING184           "GET DATA FILE CELL[%SLLL%?GetDataFileCell@@YAKKHHH@Z"
+    IDS_STRING185           "GET DATA FILE ROW COUNT[%LL%?GetDataFileRowCount@@YAHH@Z"
+    IDS_STRING186           "GET DATA FILE COLUMN COUNT[%LL%?GetDataFileColumnCount@@YAHH@Z"
+    IDS_STRING187           "REMOVE FILE FROM BLOCK%LS%?RemoveFileFromBlock@@YAXHK@Z%ID, File"
+    IDS_STRING188           "WAIT FOR FILE MAP EVENT%L%?SetEventAndWait@@YAXH@Z%"
+    IDS_STRING189           "CLOSE FILE BLOCK%L%?CloseFileBlock@@YAXH@Z%id"
+    IDS_STRING190           "GET DATA FILE EXISTS[%LL%?GetDataFileExists@@YAHH@Z%ID"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

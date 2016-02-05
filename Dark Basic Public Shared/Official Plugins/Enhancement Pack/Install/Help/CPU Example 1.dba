@@ -1,0 +1,60 @@
+
+sync on
+sync rate 60
+autocam off
+backdrop on
+color backdrop rgb ( 0, 0, 0 )
+
+vendor$    = get processor vendor$( 1 )
+brand$     = get processor brand$( 1 )
+name$      = get processor name$( 1 )
+platform$  = get processor platform$( 1 )
+
+typeID     = get processor type id( 1 )
+familyID   = get processor family id( 1 )
+modelID    = get processor model id( 1 )
+steppingID = get processor stepping id( 1 )
+mhz        = get processor frequency( 1 )
+
+do
+   set cursor 0, 0
+
+   print "CPU Information"
+   print ""
+   print "vendor      = " + vendor$
+   print "brand       = " + brand$
+   print "name        = " + name$
+   print "platform    = " + platform$
+   print "type ID     = " + str$ ( typeID )
+   print "family ID   = " + str$ ( familyID )
+   print "model ID    = " + str$ ( modelID )
+   print "stepping ID = " + str$ ( steppingID )
+   print "frequency   = " + str$ ( mhz ) + " mhz"
+   print ""
+
+   print "on chip feature list"
+
+   get processor on chip features 1
+
+   for i = 1 to checklist quantity( )
+      print "    " + checklist string$( i )
+   next i
+
+   print ""
+   print "supported feature list"
+   get processor supported features 1
+
+   for i = 1 to checklist quantity( )
+      print "    " + checklist string$( i )
+   next i
+
+   print ""
+   print "power management feature list"
+   get processor power management 1
+
+   for i = 1 to checklist quantity( )
+      print "    " + checklist string$( i )
+   next i
+
+   sync
+loop

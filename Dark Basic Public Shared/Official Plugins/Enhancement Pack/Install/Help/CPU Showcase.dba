@@ -1,0 +1,88 @@
+
+sync on
+sync rate 60
+autocam off
+set camera range 0.1, 25000
+backdrop on
+color backdrop rgb ( 0, 0, 0 )
+
+set dir "media"
+
+load object "lcd_m1.x", 1
+scale object 1, 300, 300, 300
+
+load object "keyboard.x", 2
+scale object 2, 70, 70, 60
+position object 2, 0, 0, -100
+
+vendor$    = get processor vendor$( 1 )
+brand$     = get processor brand$( 1 )
+name$      = get processor name$( 1 )
+platform$  = get processor platform$( 1 )
+
+typeID     = get processor type id( 1 )
+familyID   = get processor family id( 1 )
+modelID    = get processor model id( 1 )
+steppingID = get processor stepping id( 1 )
+mhz        = get processor frequency( 1 )
+
+set text size 18
+set text to bold
+set text font "arial"
+
+create bitmap 1, 256, 256
+text 0, 0, vendor$
+text 0, 20, brand$
+text 0, 40, name$
+text 0, 60, "Frequency " + str$ ( mhz ) + " mhz"
+text 0, 80, platform$
+
+get image 1, 0, 0, 256, 256
+set current bitmap 0
+delete bitmap 1
+make object plain 10, 120, 75
+texture object 10, 1
+position object 10, -3, 102, -35
+xrotate object 10, -15
+ghost object on 10
+
+position camera -70, 135, -150
+xrotate camera 21.59
+yrotate camera 22
+
+load image "cpue.bmp", 20
+load image "cpua.bmp", 21
+load image "cpub.bmp", 22
+load image "cpuc.bmp", 23
+load image "cpud.bmp", 24
+make object plain 20, 120, 75
+texture object 20, 20
+position object 20, -3, 102, -35
+xrotate object 20, -15
+ghost object on 20
+
+sync
+sync
+sleep 100
+
+cycle = 20
+delay = 0
+
+do
+   scroll object texture 10, 0, 0.001
+
+   texture object 20, cycle
+
+   delay = delay + 1
+
+   if delay = 2
+      cycle = cycle + 1
+      delay = 0
+   endif
+
+   if cycle > 24
+      cycle = 20
+   endif
+
+   sync
+loop

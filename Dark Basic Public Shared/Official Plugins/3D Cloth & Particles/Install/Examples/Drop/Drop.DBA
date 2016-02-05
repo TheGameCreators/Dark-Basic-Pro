@@ -1,0 +1,119 @@
+sync on
+sync rate 60
+autocam off
+
+position camera 0, 0, -25
+set camera range 0.1, 25000
+backdrop on
+color backdrop rgb ( 100, 80, 70 )
+
+set ambient light 25
+
+make object box 4, 0.4, 0.4, 0.4
+position object 4, -2.5, 0, -2.5
+
+make object box 5, -12,-12,-12
+position object 5, 0,-4,0
+rotate object 5,30,30,30
+
+true=1
+false=0
+
+SET PHYSICS FRAME RATE 80
+
+MAKE CLOTH 1
+GENERATE RECTANGULAR CLOTH 1,5,5,10,10,1
+
+SET CLOTH MASS 1,1.0
+SET CLOTH ELASTICITY 1,2.0
+FIX CLOTH POINT TO OBJECT 1,0,4,0,0,0
+FIX CLOTH POINT 1,120
+
+set object 1,1,1,0
+color object 1, RGB(40,40,200)
+
+MAKE GRAVITY EFFECTOR 10
+BIND EFFECTOR TO OBJECT 10, 1
+SET GRAVITY EFFECTOR 10, 0, -10.0, 0
+
+MAKE DAMPING EFFECTOR 11
+BIND EFFECTOR TO OBJECT 11,1
+SET DAMPING EFFECTOR 11,0.0001
+
+MAKE COLLISION BOX 6
+BIND COLLIDER TO OBJECT 6,1
+SET COLLISION BOX 6,11.9,11.9,11.9
+SET COLLIDER INVERT 6, 1, true
+SET COLLIDER BOUNCE 6,1,0.1
+SET COLLIDER FRICTION 6,1,0.0
+
+position object 6, 0,-4,0
+rotate object 6,30,30,30
+
+
+debounce = false
+
+r#=25
+h#=2
+angle#=180
+
+count=0
+posx#=-2.5
+
+do
+   set cursor 0, 0
+   print "3D Cloth & Particles - Drop Demo"
+
+   print ""
+   print "Keys"
+   print "Left  = turn left"
+   print "Right = turn right"
+   print "Up    = move forward"
+   print "Down  = move backwards"
+   print "1     = move cloth point left"
+   print "2     = move cloth point right"
+   print "5     = release from cloth point"
+   print "6     = drop cloth"   
+
+   if rightkey() then angle#=angle#-1
+   if leftkey() then angle#=angle#+1
+   if upkey() then r#=r#-0.1
+   if downkey() then r#=r#+0.1
+   if keystate(30) then h#=h#+0.1
+   if keystate(44) then h#=h#-0.1
+
+   if debounce=false
+      if keystate(6)
+         FREE ALL CLOTH POINTS ON OBJECT 1, 4
+         debounce = true
+      endif
+      if keystate(7)
+         FREE ALL CLOTH POINTS 1
+         debounce = true
+      endif
+   else
+      debounce=false
+      if keystate(6) or keystate(7) then debounce=true
+   endif
+
+   if keystate(2)
+      posx#=posx#-0.05
+      POSITION OBJECT 4,posx#,0,-2.5
+   else
+      if keystate(3)
+         posx#=posx#+0.05
+         POSITION OBJECT 4,posx#,0,-2.5
+      endif
+   endif
+
+   if r#<1 then r#=1
+
+   xpos# = r# * sin(angle#)
+   zpos# = r# * cos(angle#)
+   position camera 0,xpos#,h#,zpos#
+
+   point camera 0,0,0,0
+
+   UPDATE PHYSICS
+   sync
+loop

@@ -1,0 +1,558 @@
+`--------------------------------------------------------------------------------------------------------------------------
+` Dark Physics Hall Demo
+` By Ravey (Dave Milton)
+`--------------------------------------------------------------------------------------------------------------------------
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+` Our types
+
+`tortches
+type t_fire
+   fire_emit
+   wind
+   chaos
+endtype
+
+`smoke
+type t_vortex
+   vort
+   vort_emit
+   x#
+   y#
+   z#
+endtype
+
+`drapes
+type t_drapes
+   cloth
+   x#
+   y#
+   z#
+   one
+   two
+   three
+   flip
+   count#
+endtype
+
+`lightmap fading
+type t_fade
+   direction
+   value
+   top
+   bottom
+   speed
+endtype
+
+`recording and playbacl of the camera
+type t_move
+   forward
+   forward_speed#
+   back
+   back_speed#
+   left
+   left_speed#
+   right
+   right_speed#
+endtype
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+`Let's create empty arrays of our types for later use
+
+dim fire() as t_fire
+empty array fire()
+
+dim vortex() as t_vortex
+empty array vortex()
+
+dim drapes() as t_drapes
+empty array drapes()
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+`our globals
+
+global move as t_move
+
+global fade as t_fade
+   fade.top=50
+   fade.bottom=30
+   fade.speed=2
+
+`if record is set to 1 then the app will record cursor key movement to the move.dat file which can be played bacl
+global record=0
+`the acceleration speed of the camera
+global speed#=.005
+
+`our object and img count - so we dont have to manually track object numbers
+global obj_count=3
+global img_count=0
+
+`our objects
+global hall=1
+global lightmap=2
+
+`for our images
+global fire
+global smoke
+global drape
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+setup()
+`disable the escape key so we can perform our cleaning up excersise
+disable escapekey
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+` Main Loop - nice and simple
+while escapekey()=0
+
+   fade_lightmap()
+
+   if record=1
+      record()
+   else
+      playback()
+   endif
+
+   UPDATE PHYSICS
+
+   sync
+
+Endwhile
+
+cleanup()
+end
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+`Setup routine
+function setup()
+
+   hide mouse
+   sync on : sync rate 60 : autocam off
+   hide light 0
+   set ambient light 65
+
+   color backdrop rgb(20,20,40)
+
+   position camera -373,0,134
+   turn camera right 180
+
+   load object "Media\hall.x",hall
+   load object "Media\hall_LM.x",lightmap
+   ghost object on lightmap,1
+
+   `load in our images
+   inc img_count
+   drape=img_count
+   load image "Media\drape.png",drape
+
+   inc img_count
+   fire=img_count
+   load image "Media\fire.png",fire
+
+   inc img_count
+   smoke=img_count
+   load image "Media\smoke.jpg",smoke
+
+   `deal with the move.dat file which stores our camera movement
+   if record=1
+      if file exist("Media\move.dat")
+         delete file "Media\move.dat"
+      endif
+      open to write 1,"Media\move.dat"
+   else
+      open to read 1,"Media\move.dat"
+   endif
+
+   load music "Media\misty.mp3",1
+   loop music 1
+
+   `set the frame rate for nice smooth physics
+   SET PHYSICS FRAME RATE 80
+
+   `lets add our physics objects
+   add_drapes(-18,25,55,50)
+   add_drapes(56,25,55,100)
+   add_fire(48.25,3,-56,150)
+   add_fire(-387.6,3,-104,150)
+   add_vortex(20,30,-14,2500)
+   add_vortex(-63,30,-14,2500)
+   add_vortex(99,30,-14,2500)
+
+endfunction
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+function cleanup()
+
+   `lets clean up everything nice and tidy
+   `first the fires
+   array index to top fire()
+   while array index valid(fire())
+      delete emitter fire().fire_emit
+      delete effector fire().wind
+      delete effector fire().chaos
+      next array index fire()
+   endwhile
+   empty array fire()
+
+   `now the smoke
+   array index to top vortex()
+   while array index valid(vortex())
+      delete emitter vortex().vort_emit
+      delete effector vortex().vort
+      next array index vortex()
+   endwhile
+   empty array vortex()
+
+   `the drapes
+   array index to top drapes()
+   while array index valid(drapes())
+      delete cloth drapes().cloth
+      delete object drapes().one
+      delete object drapes().two
+      delete object drapes().three
+      next array index drapes()
+   endwhile
+   empty array drapes()
+
+   `free the objects
+   delete object hall
+   delete object lightmap
+   `free the images
+   delete image drape
+   delete image fire
+   delete image smoke
+
+endfunction
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+function fade_lightmap()
+
+   `fade in and out the lightmap - varied to give a flickery flame look
+   if fade.direction=0
+      inc fade.value,fade.speed
+      if fade.value>=fade.top then fade.direction=1
+   else
+      dec fade.value,fade.speed
+      if fade.value<=fade.bottom
+         fade.direction=0
+         fade.top=rnd(30)+30
+         fade.bottom=rnd(30)+5
+         fade.speed=rnd(4)+1
+      endif
+   endif
+
+   fade object lightmap,fade.value+50
+
+endfunction
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+function record()
+
+   `records the movement of the camera
+   if upkey()
+      if move.forward_speed#<.5 then inc move.forward_speed#,speed#
+      if move.forward=0
+         move.forward=1
+         write byte 1,1
+      endif
+   else
+      if move.forward_speed#>0.0 then dec move.forward_speed#,speed#
+      if move.forward_speed#<0.0 then move.forward_speed#=0
+      if move.forward=1
+         move.forward=0
+         write byte 1,1
+      endif
+   endif
+`--------------------
+   if downkey()
+      if move.back_speed#<.5 then inc move.back_speed#,speed#
+      if move.back=0
+         move.back=1
+         write byte 1,2
+      endif
+   else
+      if move.back_speed#>0.0 then dec move.back_speed#,speed#
+      if move.back_speed#<0.0 then move.back_speed#=0
+      if move.back=1
+         move.back=0
+         write byte 1,2
+      endif
+   endif
+`--------------------
+   if leftkey()
+      if move.left_speed#<.5 then inc move.left_speed#,speed#
+      if move.left=0
+         move.left=1
+         write byte 1,3
+      endif
+   else
+      if move.left_speed#>0.0 then dec move.left_speed#,speed#
+      if move.left_speed#<0.0 then move.left_speed#=0
+      if move.left=1
+         move.left=0
+         write byte 1,3
+      endif
+   endif
+`--------------------
+   if rightkey()
+      if move.right_speed#<.5 then inc move.right_speed#,speed#
+      if move.right=0
+         move.right=1
+         write byte 1,4
+      endif
+   else
+      if move.right_speed#>0.0 then dec move.right_speed#,speed#
+      if move.right_speed#<0.0 then move.right_speed#=0
+      if move.right=1
+         move.right=0
+         write byte 1,4
+      endif
+   endif
+`--------------------
+   write byte 1,0
+
+   if lower$(inkey$())="f"
+      close file 1
+      end
+   endif
+
+   move camera move.forward_speed#
+   move camera -move.back_speed#
+   turn camera left move.left_speed#
+   turn camera right move.right_speed#
+
+endfunction
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+function playback()
+
+   while done=0
+
+      read byte 1,dat
+
+      if dat=0 then done=1
+
+      `--------------------
+
+      if dat=1
+         move.forward=1-move.forward
+      endif
+      if move.forward=1
+         if move.forward_speed#<.5 then inc move.forward_speed#,speed#
+      else
+         if move.forward_speed#>0.0 then dec move.forward_speed#,speed#
+         if move.forward_speed#<0.0 then move.forward_speed#=0
+      endif
+
+      `--------------------
+
+      if dat=2
+         move.back=1-move.back
+      endif
+      if move.back=1
+         if move.back_speed#<.5 then inc move.back_speed#,speed#
+      else
+         if move.back_speed#>0.0 then dec move.back_speed#,speed#
+         if move.back_speed#<0.0 then move.back_speed#=0
+      endif
+
+      `--------------------
+
+      if dat=3
+         move.left=1-move.left
+      endif
+      if move.left=1
+         if move.left_speed#<.5 then inc move.left_speed#,speed#
+      else
+         if move.left_speed#>0.0 then dec move.left_speed#,speed#
+         if move.left_speed#<0.0 then move.left_speed#=0
+      endif
+
+      `--------------------
+
+      if dat=4
+         move.right=1-move.right
+      endif
+      if move.right=1
+         if move.right_speed#<.5 then inc move.right_speed#,speed#
+      else
+         if move.right_speed#>0.0 then dec move.right_speed#,speed#
+         if move.right_speed#<0.0 then move.right_speed#=0
+      endif
+
+
+   endwhile
+
+   move camera move.forward_speed#
+   move camera -move.back_speed#
+   turn camera left move.left_speed#
+   turn camera right move.right_speed#
+
+
+endfunction
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+function add_drapes(x#,y#,z#,fade)
+
+   array insert at bottom drapes()
+
+   drapes().x#=x#
+   drapes().y#=y#
+   drapes().z#=z#
+
+   `lets make 3 object to attach the cloth too (the objects will be hidden from view)
+   inc obj_count
+   make object cube obj_count, 0.4
+   position object obj_count, x#-15, y, z#
+   drapes().one=obj_count
+
+   inc obj_count
+   make object cube obj_count, 0.4
+   position object obj_count, x#+15, y, z#
+   drapes().two=obj_count
+
+   inc obj_count
+   make object cube obj_count, 0.4
+   position object obj_count, x#, y#, z#
+   drapes().three=obj_count
+
+   `hide the objects
+   hide object obj_count-2
+   hide object obj_count-1
+   hide object obj_count
+
+   inc obj_count
+   cloth=obj_count
+   `make a cloth object
+   MAKE CLOTH obj_count
+
+   `make the actual cloth
+   GENERATE RECTANGULAR CLOTH obj_count,30,30,20,20,1
+   SET CLOTH MASS obj_count,2
+   SET CLOTH ELASTICITY obj_count,2
+
+   `lets fix the 3 objects we made earlier onto the top left, top middle and top right poinsts of the cloth
+   FIX CLOTH POINT TO OBJECT obj_count,10,obj_count-1,0,0,0
+   FIX CLOTH POINT TO OBJECT obj_count,0,obj_count-2,0,0,0
+   FIX CLOTH POINT TO OBJECT obj_count,20,obj_count-3,0,0,0
+
+   `by positioning the objects we are also positioning the cloth since it is now attached
+   position object drapes().one,object position x(drapes().one),drapes().y#,object position z(drapes().one)
+   position object drapes().two,object position x(drapes().two),drapes().y#,object position z(drapes().two)
+   position object drapes().three,object position x(drapes().three),drapes().y#,object position z(drapes().three)
+
+   drapes().cloth=obj_count
+
+   texture object obj_count,drape
+   fade object obj_count,fade
+
+   `lets add some gravity to our cloth by adding an effector
+   inc obj_count
+   MAKE GRAVITY EFFECTOR obj_count
+   BIND EFFECTOR TO object obj_count,cloth
+   SET GRAVITY EFFECTOR obj_count, 0, -15, 0
+   grav=obj_count
+
+   `now a damping effector
+   inc obj_count
+   MAKE DAMPING EFFECTOR obj_count
+   BIND EFFECTOR TO object obj_count,cloth
+   SET DAMPING EFFECTOR obj_count,.0001
+   damp=obj_count
+
+   `lets add a wind effect to blow in throw the window by way of a force effector
+   inc obj_count
+   Make Force Effector obj_count
+   Set Force Effector obj_count , 0 , 0 , -20
+   BIND EFFECTOR TO object obj_count,cloth
+
+endfunction
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+function add_fire(x#,y#,z#,explode)
+
+   array insert at bottom fire()
+
+   inc obj_count
+   fire().fire_emit=obj_count
+   `make an emitter to produce our nice flame particles
+   MAKE BASIC EMITTER fire().fire_emit,30
+   texture object fire().fire_emit, fire
+   ghost object on fire().fire_emit
+   position object fire().fire_emit,x#,y#,z#
+   disable object zwrite fire().fire_emit
+
+   `set up our emitter
+   SET EMITTER RATE fire().fire_emit,10
+   SET EMITTER EXPLODE fire().fire_emit, explode*0.01
+   SET EMITTER PARTICLE VELOCITY fire().fire_emit,1.0,0
+   SET EMITTER PARTICLE LIFE fire().fire_emit,3,0
+   SET EMITTER PARTICLE MASS fire().fire_emit, 1, 30
+   SET EMITTER PARTICLE SIZE fire().fire_emit,16, 0
+   SET EMITTER PARTICLE COLOR fire().fire_emit,255,255,255,50
+   SET PARTICLE Z SORTING fire().fire_emit,1
+
+   `lets add a wind effector to blow the fire upwards
+   inc obj_count
+   fire().wind=obj_count
+   MAKE WIND EFFECTOR fire().wind
+   BIND EFFECTOR TO OBJECT fire().wind,fire().fire_emit
+   SET WIND EFFECTOR fire().wind,0,5,0
+
+   `add a chaos effector to make the flame wave nicely
+   inc obj_count
+   fire().chaos=obj_count
+   Make Chaos Effector fire().chaos
+   Set Chaos Effector fire().chaos , 400
+   BIND EFFECTOR TO OBJECT fire().chaos,fire().fire_emit
+
+endfunction
+
+`--------------------------------------------------------------------------------------------------------------------------
+
+function add_vortex(x#,y#,z#,explode)
+
+   inc obj_count
+
+   array insert at bottom vortex()
+
+   vortex().vort_emit=obj_count
+   `make our smoke emitter
+   MAKE BASIC EMITTER vortex().vort_emit,40
+   texture object vortex().vort_emit, smoke
+   ghost object on vortex().vort_emit
+   position object vortex().vort_emit,x#,y#,z#
+   disable object zwrite vortex().vort_emit
+
+   `set up the emitter
+   SET EMITTER RATE vortex().vort_emit,40
+   SET EMITTER EXPLODE vortex().vort_emit, explode*0.01
+   SET EMITTER PARTICLE VELOCITY vortex().vort_emit,1.0,0
+   SET EMITTER PARTICLE LIFE vortex().vort_emit,1.5,0
+   SET EMITTER PARTICLE MASS vortex().vort_emit, 1, 30
+   SET EMITTER PARTICLE SIZE vortex().vort_emit,18, 0
+   SET EMITTER PARTICLE COLOR vortex().vort_emit,255,255,255,255
+   SET PARTICLE Z SORTING vortex().vort_emit,1
+
+   `add a very cool vortex effector to make the smoke spin in a vortex
+   inc obj_count
+   vortex().vort=obj_count
+   MAKE VORTEX EFFECTOR vortex().vort
+   BIND EFFECTOR TO OBJECT vortex().vort,vortex().vort_emit
+   SET VORTEX EFFECTOR vortex().vort,400.0
+
+endfunction
+
+`--------------------------------------------------------------------------------------------------------------------------

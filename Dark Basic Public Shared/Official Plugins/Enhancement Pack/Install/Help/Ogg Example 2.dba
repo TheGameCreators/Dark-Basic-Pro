@@ -1,0 +1,14 @@
+
+sync on
+backdrop on
+
+encode to ogg vorbis "media\test.wav", "media\test.ogg"
+load ogg vorbis "media\test.ogg", 1
+loop ogg vorbis 1
+
+do
+   set cursor 0, 0
+   print "playing converted Ogg Vorbis file"
+
+   sync
+loop

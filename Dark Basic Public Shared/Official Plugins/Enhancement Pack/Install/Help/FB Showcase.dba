@@ -1,0 +1,180 @@
+
+dim g_FileList$( 100 )
+
+sync on
+sync rate 60
+backdrop on
+color backdrop rgb ( 0, 0, 0 )
+autocam off
+position camera 1.5, 4.0, -4.0
+rotate camera 30, 351.6, 0.0
+
+g_fSpeed# = 0.05
+g_fTurn#  = 0.3
+g_Mode = 1
+g_Time = 1
+
+load object "./media/fileblock2_a15.x", 1
+set object cull 1, 0
+
+make object cube 10, 1
+
+position object 10, 3, 0, -0.1
+
+make object cube 11, 1
+position object 11, 3, 0, 1
+
+make object cube 12, 1
+position object 12, 4.1, 0, 0
+
+load bitmap "./media/cubeface2.bmp", 1
+set text size 30
+text 22, 30, "a.bmp"
+text 25, 70, "13 kb"
+get image 100, 0, 0, 128, 128
+set current bitmap 0
+texture object 10, 100
+delete bitmap 1
+
+load bitmap "./media/cubeface2.bmp", 1
+set text size 30
+text 22, 30, "b.bmp"
+text 25, 70, "49 kb"
+get image 101, 0, 0, 128, 128
+set current bitmap 0
+texture object 11, 101
+delete bitmap 1
+
+load bitmap "./media/cubeface2.bmp", 1
+set text size 30
+text 22, 30, "c.bmp"
+text 19, 70, "193 kb"
+get image 102, 0, 0, 128, 128
+set current bitmap 0
+texture object 12, 102
+delete bitmap 1
+
+set text size 12
+
+load image "./media/bgd.bmp", 50
+make object plain 50, 100, 100
+texture object 50, 50
+position object 50, 0, 0, 20
+
+set ambient light 50
+
+go = 1
+g_Size# = 100.0
+g_Speed# = 0.05
+
+disable escapekey
+
+type test
+   object as integer
+   a1#     as float
+   a2#     as float
+   a3#     as float
+endtype
+
+dim g_Move( 10 ) as test
+
+g_Move( 1 ).object = 10
+g_Move( 1 ).a1#    = 3.0
+g_Move( 1 ).a2#    = 0.3
+g_Move( 1 ).a3#    = 0.64
+
+g_Move( 2 ).object = 11
+g_Move( 2 ).a1#    = 3.0
+g_Move( 2 ).a2#    = 0.3
+g_Move( 2 ).a3#    = 0.64
+
+g_Move( 3 ).object = 12
+g_Move( 3 ).a1#    = 3.0
+g_Move( 3 ).a2#    = 0.3
+g_Move( 3 ).a3#    = 0.64
+
+g_iSelectedObject = 1
+
+go = 1
+
+do
+   if escapekey( )
+      return
+   endif
+
+   if go = 1
+      move object up g_Move( g_iSelectedObject ).object, g_Speed#
+
+      if object position y( g_Move( g_iSelectedObject ).object ) >= g_Move( g_iSelectedObject ).a1#
+         go = 2
+      endif
+   endif
+
+   if go = 2
+      move object left g_Move( g_iSelectedObject ).object, g_Speed#
+
+      if object position x( g_Move( g_iSelectedObject ).object ) <= g_Move( g_iSelectedObject ).a2#
+         go = 3
+      endif
+   endif
+
+   if go = 3
+      move object down g_Move( g_iSelectedObject ).object, g_Speed#
+      scale object g_Move( g_iSelectedObject ).object, g_Size#, g_Size#, g_Size#
+
+      if g_Size# > 2.0
+         g_Size# = g_Size# - 2.0
+      endif
+
+      if object position y( g_Move( g_iSelectedObject ).object ) < g_Move( g_iSelectedObject ).a3#
+         hide object g_Move( g_iSelectedObject ).object
+         go = 4
+      endif
+   endif
+
+   if go = 4
+      g_Size# = 100
+      g_iSelectedObject = g_iSelectedObject + 1
+      go = 1
+
+      if g_iSelectedObject > 3
+         go = 5
+      endif
+   endif
+
+   if go < 5
+      text 100, 440, "Adding files into file block..."
+   endif
+
+   if go = 5
+      `create file block 1, "fileblock.dbb"
+      `add file to block 1, ".\media\a.bmp"
+      `add file to block 1, ".\media\b.bmp"
+      `add file to block 1, ".\media\c.bmp"
+      `save file block 1
+      go = 6
+   endif
+
+   if go = 6
+      play object 1
+      yrotate object 1, object angle y( 1 ) + 1.0
+      text 100, 440, "Compressing files..."
+      g_iSelectedObject = g_iSelectedObject + 1
+
+      if g_iSelectedObject > 370
+         go = 7
+      endif
+   endif
+
+   if go = 7
+      text 100, 440, "Files compressed and file block created..."
+      text 300,  20, "File block information -"
+      text 350,  50, "Name              = fileblock.dbb "
+      text 350,  70, "File count        = 3"
+      text 350,  90, "Size of files     = 255 kb "
+      text 350, 110, "Compression level = 9 "
+      text 350, 130, "Final size        = 3 kb "
+   endif
+
+   sync
+loop

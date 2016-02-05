@@ -1,0 +1,48 @@
+
+sync on
+sync rate 60
+autocam off
+set camera range 0.1, 25000
+backdrop on
+color backdrop rgb ( 192, 192, 192 )
+position camera 0, 0, -100
+
+create bitmap 1, 256, 256
+
+print "hard drive count  = " + str$( get drive count( ) )
+print "cylinder count    = " + str$( get drive cylinder count( 0 ) )
+print "track count       = " + str$( get drive track count( 0 ) )
+print "sectors per track = " + str$( get drive sectors per track( 0 ) )
+print "bytes per sector  = " + str$( get drive bytes per sector( 0 ) )
+print "total size        = " + str$( get drive total size( 0, 0 ) ) + " bytes"
+print "total size        = " + str$( get drive total size( 0, 1 ) ) + " mb"
+print "total size        = " + str$( get drive total size( 0, 2 ) ) + " gb"
+print "used space        = " + str$( get drive used space( 0, 0 ) ) + " bytes"
+print "used space        = " + str$( get drive used space( 0, 1 ) ) + " mb"
+print "used space        = " + str$( get drive used space( 0, 2 ) ) + " gb"
+print "free space        = " + str$( get drive free space( 0, 0 ) ) + " bytes"
+print "free space        = " + str$( get drive free space( 0, 1 ) ) + " mb"
+print "free space        = " + str$( get drive free space( 0, 2 ) ) + " gb"
+print "file length       = " + str$( get drive file length support( 0 ) )
+print "serial            = " + get drive serial$( 0 )
+print "file system       = " + get drive file system$( 0 )
+
+get image 1, 0, 0, 256, 256
+set current bitmap 0
+delete bitmap 1
+make object plain 10, 120, 75
+texture object 10, 1
+position object 10, -38, 64, -20
+ghost object on 10
+
+load object "./media/hard_drive.x", 1
+position object 1, -40, 60, 10
+
+position camera -38, 64, -100
+rotate object 1, -50, 32, 0
+
+do
+   scroll object texture 10, 0, 0.001
+
+   sync
+loop

@@ -1,0 +1,38 @@
+
+sync on
+sync rate 60
+backdrop on
+color backdrop rgb ( 0, 0, 0 )
+
+g_Time = 0
+
+make object cube 1, 10
+create bitmap 1, 256, 256
+box 0, 0, 256, 256, rgb ( 0, 0, 255 ), rgb ( 0, 0, 0 ), rgb ( 0, 0, 255 ), rgb ( 0, 0, 0 )
+get image 1, 0, 0, 256, 256
+set current bitmap 0
+delete bitmap 1
+
+create file block 1, "media.fb"
+set file block key 1, "mypassword"
+
+add file to block 1, ".\media\a.bmp"
+add file to block 1, ".\media\b.bmp"
+add file to block 1, ".\media\c.bmp"
+
+add object to block 1, 1, "object.dbo"
+add image to block  1, 1, "image.bmp"
+
+save file block 1
+
+delete image 1
+delete object 1
+
+do
+   set cursor 0, 0
+   print ""
+   print "Created file block - media.fb"
+
+   sync
+loop
+

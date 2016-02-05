@@ -1,0 +1,46 @@
+ttb5iegg9g6s
+gIYq981GjHqbrV2
+binary
+cd client
+
+lcd "D:\Visual Studio Projects\C++\DarkBasic\Physics\DBProPhysicsMaster\Release\DaveMilton"
+cd davemilton
+put DBProPhysics.zip
+
+lcd "D:\Visual Studio Projects\C++\DarkBasic\Physics\DBProPhysicsMaster\Release\DavidSmith"
+cd ../davidsmith
+put DBProPhysics.zip
+
+lcd "D:\Visual Studio Projects\C++\DarkBasic\Physics\DBProPhysicsMaster\Release\IanMatrix"
+cd ../ianmatrix
+put DBProPhysics.zip
+
+lcd "D:\Visual Studio Projects\C++\DarkBasic\Physics\DBProPhysicsMaster\Release\LeeBamber"
+cd ../leebamber
+put DBProPhysics.zip
+
+lcd "D:\Visual Studio Projects\C++\DarkBasic\Physics\DBProPhysicsMaster\Release\MikeJohnson"
+cd ../mikejohnson
+put DBProPhysics.zip
+
+lcd "D:\Visual Studio Projects\C++\DarkBasic\Physics\DBProPhysicsMaster\Release\NickKingsley"
+cd ../nickkingsley
+put DBProPhysics.zip
+
+lcd "D:\Visual Studio Projects\C++\DarkBasic\Physics\DBProPhysicsMaster\Release\RichDavey"
+cd ../richdavey
+put DBProPhysics.zip
+
+lcd "D:\Visual Studio Projects\C++\DarkBasic\Physics\DBProPhysicsMaster\Release\RickVanner"
+cd ../rickvanner
+put DBProPhysics.zip
+
+lcd "D:\Visual Studio Projects\C++\DarkBasic\Physics\DBProPhysicsMaster\Release\RobKnight"
+cd ../robknight
+put DBProPhysics.zip
+
+lcd "D:\Visual Studio Projects\C++\DarkBasic\Physics\DBProPhysicsMaster\Release\TimStone"
+cd ../timstone
+put DBProPhysics.zip
+
+quit

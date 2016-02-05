@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DBProPhysicsMaster", "DBProPhysicsMaster\DBProPhysicsMaster.vcproj", "{E6AD61FC-93E8-48BA-8A6F-A75E3B202B28}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Debug_C
+		ConfigName.2 = Debug_P
+		ConfigName.3 = Debug_PC
+		ConfigName.4 = Release
+		ConfigName.5 = Release_C
+		ConfigName.6 = Release_P
+		ConfigName.7 = Release_PC
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{E6AD61FC-93E8-48BA-8A6F-A75E3B202B28}.Debug.ActiveCfg = Debug|Win32
+		{E6AD61FC-93E8-48BA-8A6F-A75E3B202B28}.Debug.Build.0 = Debug|Win32
+		{E6AD61FC-93E8-48BA-8A6F-A75E3B202B28}.Debug_C.ActiveCfg = Debug_C|Win32
+		{E6AD61FC-93E8-48BA-8A6F-A75E3B202B28}.Debug_C.Build.0 = Debug_C|Win32
+		{E6AD61FC-93E8-48BA-8A6F-A75E3B202B28}.Debug_P.ActiveCfg = Debug_P|Win32
+		{E6AD61FC-93E8-48BA-8A6F-A75E3B202B28}.Debug_P.Build.0 = Debug_P|Win32
+		{E6AD61FC-93E8-48BA-8A6F-A75E3B202B28}.Debug_PC.ActiveCfg = Debug_PC|Win32
+		{E6AD61FC-93E8-48BA-8A6F-A75E3B202B28}.Debug_PC.Build.0 = Debug_PC|Win32
+		{E6AD61FC-93E8-48BA-8A6F-A75E3B202B28}.Release.ActiveCfg = Release|Win32
+		{E6AD61FC-93E8-48BA-8A6F-A75E3B202B28}.Release.Build.0 = Release|Win32
+		{E6AD61FC-93E8-48BA-8A6F-A75E3B202B28}.Release_C.ActiveCfg = Release_C|Win32
+		{E6AD61FC-93E8-48BA-8A6F-A75E3B202B28}.Release_C.Build.0 = Release_C|Win32
+		{E6AD61FC-93E8-48BA-8A6F-A75E3B202B28}.Release_P.ActiveCfg = Release_P|Win32
+		{E6AD61FC-93E8-48BA-8A6F-A75E3B202B28}.Release_P.Build.0 = Release_P|Win32
+		{E6AD61FC-93E8-48BA-8A6F-A75E3B202B28}.Release_PC.ActiveCfg = Release_PC|Win32
+		{E6AD61FC-93E8-48BA-8A6F-A75E3B202B28}.Release_PC.Build.0 = Release_PC|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
