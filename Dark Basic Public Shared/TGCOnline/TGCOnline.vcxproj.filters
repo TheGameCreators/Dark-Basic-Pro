@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{400704e1-3bc6-4836-a074-045c69e2a307}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{8cfc53d2-21db-45a7-99a2-36504e4b5274}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8331fedd-2824-4715-bb4d-3fd4cbdb5f88}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="CertificateKey">
+      <UniqueIdentifier>{e48b5a65-fdff-403f-af67-eb43ae9b6183}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SerialCodeCheck">
+      <UniqueIdentifier>{016f9a26-34d3-40b3-a641-0f62fead543c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ExternalText.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HTTPComm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TGCOnline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TGCOnlineDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CertificateKey.cpp">
+      <Filter>CertificateKey</Filter>
+    </ClCompile>
+    <ClCompile Include="SerialCodeCheck\md5.cpp">
+      <Filter>SerialCodeCheck</Filter>
+    </ClCompile>
+    <ClCompile Include="SerialCodeCheck\SerialCodeCheck.cpp">
+      <Filter>SerialCodeCheck</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="HTTPComm.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ExternalText.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TGCOnline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TGCOnlineDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CertificateKey.h">
+      <Filter>CertificateKey</Filter>
+    </ClInclude>
+    <ClInclude Include="SerialCodeCheck\md5.h">
+      <Filter>SerialCodeCheck</Filter>
+    </ClInclude>
+    <ClInclude Include="SerialCodeCheck\SerialCodeCheck.h">
+      <Filter>SerialCodeCheck</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="picture.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\TGCOnline.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TGCOnline.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\TGCOnline.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>
