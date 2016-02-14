@@ -1,0 +1,1823 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include <afxres.h>
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include <afxres.h>\r\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#include ""BCGCBPro.rc""\r\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include <afxres.h>\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include <afxres.h>\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include <afxres.h>\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\r\n"
+    "\r\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)\r\n"
+    "LANGUAGE 9, 2\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\SynergyEditor.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\r\n"
+    "#include ""BCGCBPro.rc"" // Needed for static link\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Synergy Editor.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDB_WORKSPACE           BITMAP                  "res\\workspace.bmp"
+IDB_TOOLBAR256          BITMAP                  "res\\Toolbar256.bmp"
+IDB_TREE24              BITMAP                  "res\\filevie24.bmp"
+IDB_TREE                BITMAP                  "res\\fileview.bmp"
+IDB_USER                BITMAP                  "res\\UserImages.bmp"
+IDB_CLASS_VIEW          BITMAP                  "res\\classview.bmp"
+IDB_CLASS_VIEW_24       BITMAP                  "res\\classview_hc.bmp"
+IDR_TODO                BITMAP                  "res\\toolbar1.bmp"
+IDB_TODO_24             BITMAP                  "res\\bitmap3.bmp"
+IDB_TODO                BITMAP                  "res\\bmp00001.bmp"
+IDB_PYRAMID             BITMAP                  "res\\Pyramid.bmp"
+IDB_BREAK               BITMAP                  "res\\break.bmp"
+IDB_PROPERTIES_HC       BITMAP                  "res\\properties_bar_hc.bmp"
+IDR_PROPERTIES          BITMAP                  "res\\bmp00002.bmp"
+IDR_MEDIA               BITMAP                  "res\\bmp00003.bmp"
+IDB_MEDIA               BITMAP                  "res\\Media.bmp"
+IDR_HelpA               BITMAP                  "res\\bmp00004.bmp"
+IDB_BROWSER             BITMAP                  "res\\Browser.bmp"
+IDB_EDIT                BITMAP                  "res\\Edit.bmp"
+IDR_EDIT                BITMAP                  "res\\bmp00005.bmp"
+IDR_CURSOR              BITMAP                  "res\\bmp00006.bmp"
+IDB_CURSOR              BITMAP                  "res\\Cursor.bmp"
+IDR_SOLUTION            BITMAP                  "res\\bmp00007.bmp"
+IDB_SOLUTION            BITMAP                  "res\\Solution.bmp"
+IDR_SOURCEFILE          BITMAP                  "res\\bmp00008.bmp"
+IDB_SOURCEFILE          BITMAP                  "res\\SourceFile.bmp"
+IDR_MAINFRAME_NETBOOK   BITMAP                  "res\\mainfram.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEWDBA
+    BUTTON      ID_FILE_OPEN_ANY
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_SAVEALL
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_COMPILE_COMPILE
+    BUTTON      ID_COMPILE_COMPILERUN
+    BUTTON      ID_OPENSTORE
+    BUTTON      ID_CHECKMODULES
+END
+
+IDR_TODO TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_TODO_ADD
+    BUTTON      ID_TODO_REMOVE
+    SEPARATOR
+    BUTTON      ID_TODO_EDIT
+    SEPARATOR
+    BUTTON      ID_TODO_UP
+    BUTTON      ID_TODO_DOWN
+END
+
+IDR_PROPERTIES TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_EXPAND
+    BUTTON      ID_SORTINGPROP
+    BUTTON      ID_BUTTON33008
+    BUTTON      ID_BUTTON33009
+    BUTTON      ID_BUTTON33010
+END
+
+IDR_MEDIA TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_MEDIAOPEN
+    BUTTON      ID_MEDIADELETE
+    SEPARATOR
+    BUTTON      ID_MEDIAPREVIEW
+END
+
+IDR_HelpA TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_BROWSER_GOBACK
+    BUTTON      ID_BROWSER_GOFORWARD
+    BUTTON      ID_BROWSER_STOP
+    BUTTON      ID_BROWSER_REFRESH
+    BUTTON      ID_EDIT_FIND
+END
+
+IDR_EDIT TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_ADVANCED_DECREASELINEINDENT
+    BUTTON      ID_ADVANCED_INCREASELINEINDENT
+    SEPARATOR
+    BUTTON      ID_ADVANCED_COMMENTSELECTION
+    BUTTON      ID_ADVANCED_UNCOMMENTSELECTION
+    SEPARATOR
+    BUTTON      ID_EDIT_TOGGLEBOOKMARK
+    BUTTON      ID_EDIT_NEXTBOOKMARK
+    BUTTON      ID_EDIT_PREVIOUSBOOKMARK
+    BUTTON      ID_EDIT_REMOVEALLBOOKMARKS
+END
+
+IDR_CURSOR TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_OPEN_CURSOR
+    BUTTON      ID_DELETE_CURSOR
+    SEPARATOR
+    BUTTON      ID_DEFAULT_CURSOR
+END
+
+IDR_SOLUTION TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_POPUP_ADDNEWFILE
+    BUTTON      ID_POPUP_IMPORTEXISTINGFILE
+    SEPARATOR
+    BUTTON      ID_OPEN_ALL_FILES
+    BUTTON      ID_IDR_OPENPROJECTFOLDER
+END
+
+IDR_SOURCEFILE TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_IDR_MAINMAIN
+    SEPARATOR
+    BUTTON      ID_REMOVE_FROM_PROJECT
+    SEPARATOR
+    BUTTON      ID_IDR_OPENCONTAININGFOLDER
+    SEPARATOR
+    BUTTON      ID_IDR_PROPERTIES
+END
+
+IDR_MAINFRAME_NETBOOK TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEWDBA
+    BUTTON      ID_FILE_OPEN_ANY
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_FILE_SAVEALL
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    SEPARATOR
+    BUTTON      ID_COMPILE_COMPILE
+    BUTTON      ID_COMPILE_COMPILERUN
+    BUTTON      ID_OPENSTORE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        POPUP "&New"
+        BEGIN
+            MENUITEM "Project...",                  ID_FILE_NEWPROJECT
+            MENUITEM "File\tCtrl+N",                ID_FILE_NEWDBA
+        END
+        POPUP "&Open"
+        BEGIN
+            MENUITEM "Project...",                  ID_FILE_OPENPROJECT
+            MENUITEM "File...\tCtrl+O",             ID_FILE_OPEN
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Toolbars"
+        BEGIN
+            MENUITEM "",                            ID_VIEW_TOOLBARS
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "<User defined tools>",        ID_TOOLS_ENTRY
+        MENUITEM "Rebuild Keywords",            ID_TOOLS_REBUILDKEYWORDS
+        MENUITEM "Associate Project and Source Files", ID_TOOLS_ASSOCIATEPROJECTANDSOURCEFILES
+        MENUITEM SEPARATOR
+        MENUITEM "Customize...",                ID_VIEW_CUSTOMIZE
+        MENUITEM "Options...",                  ID_VIEW_OPTIONS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "DarkBasic Professional Help", ID_HELP_DARKBASICPROFESSIONALHELP
+        MENUITEM "DarkBasic Professional Videos...", ID_HELP_DARKBASICHELPVIDEOS
+        MENUITEM SEPARATOR
+        MENUITEM "&Keyboard Map...",            ID_HELP_KEYBOARDMAP
+        MENUITEM SEPARATOR
+        MENUITEM "Check For Updates...",        ID_HELP_CHECKFORUPDATES
+        MENUITEM SEPARATOR
+        MENUITEM "&About DarkBASIC Professional Editor...", ID_APP_ABOUT
+        MENUITEM "About DarkBASIC Professional Compiler...", ID_HELP_ABOUTDARKBASICPROFESSIONAL
+    END
+END
+
+IDR_UntitledTYPE MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        POPUP "&New"
+        BEGIN
+            MENUITEM "Project...",                  ID_FILE_NEWPROJECT
+            MENUITEM "File\tCtrl+N",                ID_FILE_NEWDBA
+        END
+        POPUP "&Open"
+        BEGIN
+            MENUITEM "Project...",                  ID_FILE_OPENPROJECT
+            MENUITEM "File...\tCtrl+O",             ID_FILE_OPEN
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Save Project",                ID_FILE_SAVEPROJECT
+        MENUITEM "Save Project As",             ID_FILE_SAVEPROJECTAS
+        MENUITEM SEPARATOR
+        MENUITEM "Save All",                    ID_FILE_SAVEALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "Redo\tCtrl+Y",                ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Select All\tCtrl+A",          ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "Find In Files...",            ID_EDIT_FINDINFILES
+        MENUITEM "Replace...",                  ID_EDIT_REPLACE
+        MENUITEM SEPARATOR
+        POPUP "Bookmarks"
+        BEGIN
+            MENUITEM "Toggle &Bookmark",            ID_EDIT_TOGGLEBOOKMARK
+            MENUITEM "Next Bookmark",               32906
+            MENUITEM "Previous Bookmark",           32907
+            MENUITEM "Remove All Bookmarks",        ID_EDIT_REMOVEALLBOOKMARKS
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Insert/Remove Breakpoint",    32908
+        MENUITEM "Remove All Breakpoints",      ID_EDIT_REMOVEALLBREAKPOINTS
+        MENUITEM SEPARATOR
+        POPUP "Advanced"
+        BEGIN
+            MENUITEM "Go To Line...",               ID_EDIT_GOTOLINE
+            MENUITEM "Go To Project Line...",       ID_ADVANCED_GOTOPROJECTLINE
+            MENUITEM SEPARATOR
+            MENUITEM "Comment Selection",           ID_ADVANCED_COMMENTSELECTION
+            MENUITEM "Uncomment Selection",         ID_ADVANCED_UNCOMMENTSELECTION
+            MENUITEM "Increase Line Indent",        ID_ADVANCED_INCREASELINEINDENT
+            MENUITEM "Decrease Line Indent",        ID_ADVANCED_DECREASELINEINDENT
+            MENUITEM SEPARATOR
+            MENUITEM "Go To Definition",            ID_ADVANCED_GOTODEFINITION
+            MENUITEM "Go To Last Line",             ID_ADVANCED_GOTOLASTLINE
+        END
+        MENUITEM SEPARATOR
+        POPUP "Outlining"
+        BEGIN
+            MENUITEM "Hide Selection",              ID_EDIT_HIDESELECTION
+            MENUITEM "Stop Hiding Current",         ID_EDIT_STOPHIDINGCURRENT
+            MENUITEM "Toggle Outlining",            ID_EDIT_TOGGLEOUTLINING
+            MENUITEM "Toggle All Outlining",        ID_EDIT_TOGGLEALLOUTLINING
+            MENUITEM "Collapse to Definitions",     ID_EDIT_COLLAPSETODEFINITIONS
+            MENUITEM "Stop Outlining",              ID_EDIT_STOPOUTLINING
+        END
+        MENUITEM "Enable Outlining",            32956
+        MENUITEM "Automatic Outlining",         32957
+        MENUITEM "Line Numbers",                32958
+    END
+    POPUP "Compile"
+    BEGIN
+        MENUITEM "Compile",                     ID_COMPILE_COMPILE
+        MENUITEM "Compile && Run",              ID_COMPILE_COMPILERUN
+        MENUITEM SEPARATOR
+        MENUITEM "Compile && Run in Debug Mode", ID_COMPILE_COMPILERUNINDEBUGMODE
+        MENUITEM "Compile && Run in Step-Through Mode", ID_COMPILE_COMPILERUNINSTEP
+        MENUITEM SEPARATOR
+        MENUITEM "Execute Previous Application", ID_COMPILE_EXECUTEPREVIOUSAPPLICATION
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Full Screen",                 ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        POPUP "&Toolbars"
+        BEGIN
+            MENUITEM "None",                        ID_VIEW_TOOLBARS
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "<User defined tools>",        ID_TOOLS_ENTRY
+        MENUITEM "Keystate Helper",             ID_TOOLS_KEYSTATEHELPER
+        MENUITEM "Command Arguments",           ID_TOOLS_COMMANDARGUMENTS
+        MENUITEM SEPARATOR
+        MENUITEM "Rebuild Keywords",            ID_TOOLS_REBUILDKEYWORDS
+        MENUITEM "Associate Project and Source Files", ID_TOOLS_ASSOCIATEPROJECTANDSOURCEFILES
+        MENUITEM SEPARATOR
+        MENUITEM "Customize...",                ID_VIEW_CUSTOMIZE
+        MENUITEM "Options...",                  ID_VIEW_OPTIONS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "DarkBasic Professional Help", ID_HELP_DARKBASICPROFESSIONALHELP
+        MENUITEM "DarkBasic Professional Tutorial", ID_HELP_DARKBASICPROFESSIONALVIDEOS32997
+        MENUITEM "Dark Game Studio Website",    ID_HELP_DARKGAMESTUDIOWEBSITE
+        MENUITEM SEPARATOR
+        MENUITEM "&Keyboard Map...",            ID_HELP_KEYBOARDMAP
+        MENUITEM SEPARATOR
+        MENUITEM "Check For Updates...",        ID_HELP_CHECKFORUPDATES
+        MENUITEM "Check DarkBASIC Professional Modules...", ID_HELP_CHECKFORMODULES
+        MENUITEM SEPARATOR
+        MENUITEM "Open Game Creator Store...",  ID_HELP_OPENGAMECREATORSTORE
+        MENUITEM "&About DarkBASIC Professional Editor...", ID_APP_ABOUT
+        MENUITEM "About DarkBASIC Professional Compiler...", ID_HELP_ABOUTDARKBASICPROFESSIONAL
+    END
+END
+
+IDR_CONTEXT_MENU MENU 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "Cu&t",                        ID_EDIT_CUT
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM "&Paste",                      ID_EDIT_PASTE
+    END
+END
+
+IDR_POPUP_TOOLBAR MENU 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "Standard Toolbar",            ID_VIEW_TOOLBAR
+        MENUITEM "Browser Toolbar",             ID__BROWSERTOOLBAR
+        MENUITEM "Edit Toolbar",                ID_EDITTOOLBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Workspace",                  ID_VIEW_WORKSPACE
+        MENUITEM "&Workspace 2",                ID_VIEW_WORKSPACE2
+        MENUITEM "&Output",                     ID_VIEW_OUTPUT
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR1
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR2
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR3
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR4
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR5
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR6
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR7
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR8
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR9
+        MENUITEM "<User Toolbar>",              ID_VIEW_USER_TOOLBAR10
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize...",               ID_VIEW_CUSTOMIZE
+    END
+END
+
+IDR_POPUP_MDITABS MENU 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "&Save",                       ID_FILE_SAVE
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "New &Horizontal Tab Group",   ID_MDI_NEW_HORZ_TAB_GROUP
+        MENUITEM "New &Vertical Tab Group",     ID_MDI_NEW_VERT_GROUP
+        MENUITEM "Move to Ne&xt Tab Group",     ID_MDI_MOVE_TO_NEXT_GROUP
+        MENUITEM "Move to P&revious Tab Group", ID_MDI_MOVE_TO_PREV_GROUP
+    END
+END
+
+IDR_POPUP_DROP_MDITABS MENU 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "New &Horizontal Tab Group",   ID_MDI_NEW_HORZ_TAB_GROUP
+        MENUITEM "New &Vertical Tab Group",     ID_MDI_NEW_VERT_GROUP
+        MENUITEM "Move to Ne&xt Tab Group",     ID_MDI_MOVE_TO_NEXT_GROUP
+        MENUITEM "Move to P&revious Tab Group", ID_MDI_MOVE_TO_PREV_GROUP
+        MENUITEM SEPARATOR
+        MENUITEM "&Cancel",                     ID_MDI_CANCEL
+    END
+END
+
+IDR_SOLUTION_MENU MENU 
+BEGIN
+    POPUP "IDR_SOLUTION_MENU"
+    BEGIN
+        MENUITEM "Add New File",                ID_POPUP_ADDNEWFILE
+        MENUITEM "Import Existing File",        ID_POPUP_IMPORTEXISTINGFILE
+        MENUITEM SEPARATOR
+        MENUITEM "Open All Files",              ID_OPEN_ALL_FILES
+        MENUITEM SEPARATOR
+        MENUITEM "Open Project Folder",         ID_IDR_OPENPROJECTFOLDER
+    END
+END
+
+IDR_POPUP_SOLUTION MENU 
+BEGIN
+    POPUP "IDR_POPUP_SOLUTION"
+    BEGIN
+        MENUITEM "Set As Main File",            ID_IDR_MAINMAIN
+        MENUITEM SEPARATOR
+        MENUITEM "Remove From Project",         ID_REMOVE_FROM_PROJECT
+        MENUITEM SEPARATOR
+        MENUITEM "Open Containing Folder",      ID_IDR_OPENCONTAININGFOLDER
+        MENUITEM "Properties",                  ID_IDR_PROPERTIES
+    END
+END
+
+IDR_Help MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        POPUP "&New"
+        BEGIN
+            MENUITEM "Project...",                  ID_FILE_NEWPROJECT
+            MENUITEM "File\tCtrl+N",                ID_FILE_NEWDBA
+        END
+        POPUP "&Open"
+        BEGIN
+            MENUITEM "Project...",                  ID_FILE_OPENPROJECT
+            MENUITEM "File...\tCtrl+O",             ID_FILE_OPEN
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "Find",                        ID_EDIT_FIND
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "&Toolbars"
+        BEGIN
+            MENUITEM "",                            ID_VIEW_TOOLBARS
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Browser"
+    BEGIN
+        MENUITEM "Go Back",                     ID_BROWSER_GOBACK
+        MENUITEM "Go Forward",                  ID_BROWSER_GOFORWARD
+        MENUITEM "Stop",                        ID_BROWSER_STOP
+        MENUITEM "Refresh",                     ID_BROWSER_REFRESH
+        MENUITEM SEPARATOR
+        POPUP "Font"
+        BEGIN
+            MENUITEM "Largest",                     ID_FONT_LARGEST
+            MENUITEM "Large",                       ID_FONT_LARGE
+            MENUITEM "Medium",                      ID_FONT_MEDIUM
+            MENUITEM "Small",                       ID_FONT_SMALL
+            MENUITEM "Smallest",                    ID_FONT_SMALLEST
+        END
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "<User defined tools>",        ID_TOOLS_ENTRY
+        MENUITEM "Keystate Helper",             ID_TOOLS_KEYSTATEHELPER
+        MENUITEM "Command Arguments",           ID_TOOLS_COMMANDARGUMENTS
+        MENUITEM SEPARATOR
+        MENUITEM "Rebuild Keywords",            ID_TOOLS_REBUILDKEYWORDS
+        MENUITEM "Associate Project and Source Files", ID_TOOLS_ASSOCIATEPROJECTANDSOURCEFILES
+        MENUITEM SEPARATOR
+        MENUITEM "Customize...",                ID_VIEW_CUSTOMIZE
+        MENUITEM "Options...",                  ID_VIEW_OPTIONS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "DarkBasic Professional Videos...", ID_HELP_DARKBASICPROFESSIONALVIDEOS
+        MENUITEM SEPARATOR
+        MENUITEM "&Keyboard Map...",            ID_HELP_KEYBOARDMAP
+        MENUITEM SEPARATOR
+        MENUITEM "Check For Updates...",        ID_HELP_CHECKFORUPDATES
+        MENUITEM SEPARATOR
+        MENUITEM "&About DarkBASIC Professional Editor...", ID_APP_ABOUT
+        MENUITEM "About DarkBASIC Professional Compiler...", ID_HELP_ABOUTDARKBASICPROFESSIONAL
+    END
+END
+
+IDR_CODE_CONTEXT MENU 
+BEGIN
+    POPUP "CONTEXT"
+    BEGIN
+        MENUITEM "Undo",                        ID_EDIT_UNDO
+        MENUITEM "Redo",                        ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cut",                         ID_EDIT_CUT
+        MENUITEM "Copy",                        ID_EDIT_COPY
+        MENUITEM "Paste",                       ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Select All",                  ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Go To Definition",            ID_CONTEXT_GOTODEFINITION
+        MENUITEM "Return To Last Line",         ID_CONTEXT_RETURNTOLASTLINE
+        MENUITEM SEPARATOR
+        MENUITEM "Insert RGB Colour...",        ID__INSERTRGBCOLOUR
+        POPUP "Insert Media"
+        BEGIN
+            MENUITEM "Media Items",                 ID_INSERTMEDIA_MENUITEMS, INACTIVE
+        END
+        MENUITEM "Insert Snippet...",           ID_CONTEXT_INSERTSNIPPET
+        MENUITEM "Surround with Snippet...",    ID_CONTEXT_SURROUNDWITHSNIPPET
+    END
+END
+
+IDR_OUTPUT_POPUP MENU 
+BEGIN
+    POPUP "POPUP"
+    BEGIN
+        MENUITEM "Copy",                        ID_OUTPUT_COPY
+        MENUITEM "Write to File",               ID_OUTPUT_WRITE
+        MENUITEM SEPARATOR
+        MENUITEM "Clear",                       ID_OUTPUT_CLEAR
+    END
+END
+
+IDR_OUTPUT_POPUP_2 MENU 
+BEGIN
+    POPUP "OUTPUT_POPUP_NO"
+    BEGIN
+        MENUITEM "Write to File",               ID_OUTPUT_WRITE
+        MENUITEM SEPARATOR
+        MENUITEM "Clear",                       ID_OUTPUT_CLEAR
+    END
+END
+
+IDR_POPUP_SOLUTION_MISSING MENU 
+BEGIN
+    POPUP "POPUP_SOLUTION"
+    BEGIN
+        MENUITEM "Locate File",                 ID_POPUP_LOCATEFILE
+        MENUITEM SEPARATOR
+        MENUITEM "Remove From Project",         ID_REMOVE_FROM_PROJECT
+    END
+END
+
+IDR_POPUP_MARGIN MENU 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "Insert/Remove Breakpoint",    32908
+        MENUITEM "Remove All Breakpoints",      ID_EDIT_REMOVEALLBREAKPOINTS
+    END
+END
+
+IDR_UntitledTYPE_NETBOOK MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        POPUP "&New"
+        BEGIN
+            MENUITEM "Project...",                  ID_FILE_NEWPROJECT
+            MENUITEM "File\tCtrl+N",                ID_FILE_NEWDBA
+        END
+        POPUP "&Open"
+        BEGIN
+            MENUITEM "Project...",                  ID_FILE_OPENPROJECT
+            MENUITEM "File...\tCtrl+O",             ID_FILE_OPEN
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Save Project",                ID_FILE_SAVEPROJECT
+        MENUITEM "Save Project As",             ID_FILE_SAVEPROJECTAS
+        MENUITEM SEPARATOR
+        MENUITEM "Save All",                    ID_FILE_SAVEALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "Redo\tCtrl+Y",                ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Select All\tCtrl+A",          ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "Find In Files...",            ID_EDIT_FINDINFILES
+        MENUITEM "Replace...",                  ID_EDIT_REPLACE
+        MENUITEM SEPARATOR
+        POPUP "Bookmarks"
+        BEGIN
+            MENUITEM "Toggle &Bookmark",            ID_EDIT_TOGGLEBOOKMARK
+            MENUITEM "Next Bookmark",               32906
+            MENUITEM "Previous Bookmark",           32907
+            MENUITEM "Remove All Bookmarks",        ID_EDIT_REMOVEALLBOOKMARKS
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Insert/Remove Breakpoint",    32908
+        MENUITEM "Remove All Breakpoints",      ID_EDIT_REMOVEALLBREAKPOINTS
+        MENUITEM SEPARATOR
+        POPUP "Advanced"
+        BEGIN
+            MENUITEM "Go To Line...",               ID_EDIT_GOTOLINE
+            MENUITEM "Go To Project Line...",       ID_ADVANCED_GOTOPROJECTLINE
+            MENUITEM SEPARATOR
+            MENUITEM "Comment Selection",           ID_ADVANCED_COMMENTSELECTION
+            MENUITEM "Uncomment Selection",         ID_ADVANCED_UNCOMMENTSELECTION
+            MENUITEM "Increase Line Indent",        ID_ADVANCED_INCREASELINEINDENT
+            MENUITEM "Decrease Line Indent",        ID_ADVANCED_DECREASELINEINDENT
+            MENUITEM SEPARATOR
+            MENUITEM "Go To Definition",            ID_ADVANCED_GOTODEFINITION
+            MENUITEM "Go To Last Line",             ID_ADVANCED_GOTOLASTLINE
+        END
+        MENUITEM SEPARATOR
+        POPUP "Outlining"
+        BEGIN
+            MENUITEM "Hide Selection",              ID_EDIT_HIDESELECTION
+            MENUITEM "Stop Hiding Current",         ID_EDIT_STOPHIDINGCURRENT
+            MENUITEM "Toggle Outlining",            ID_EDIT_TOGGLEOUTLINING
+            MENUITEM "Toggle All Outlining",        ID_EDIT_TOGGLEALLOUTLINING
+            MENUITEM "Collapse to Definitions",     ID_EDIT_COLLAPSETODEFINITIONS
+            MENUITEM "Stop Outlining",              ID_EDIT_STOPOUTLINING
+        END
+        MENUITEM "Enable Outlining",            32956
+        MENUITEM "Automatic Outlining",         32957
+        MENUITEM "Line Numbers",                32958
+    END
+    POPUP "Compile"
+    BEGIN
+        MENUITEM "Compile",                     ID_COMPILE_COMPILE
+        MENUITEM "Compile && Run",              ID_COMPILE_COMPILERUN
+        MENUITEM SEPARATOR
+        MENUITEM "Compile && Run in Debug Mode", ID_COMPILE_COMPILERUNINDEBUGMODE
+        MENUITEM "Compile && Run in Step-Through Mode", ID_COMPILE_COMPILERUNINSTEP
+        MENUITEM SEPARATOR
+        MENUITEM "Execute Previous Application", ID_COMPILE_EXECUTEPREVIOUSAPPLICATION
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Full Screen",                 ID_VIEW_FULLSCREEN
+        MENUITEM SEPARATOR
+        POPUP "&Toolbars"
+        BEGIN
+            MENUITEM "None",                        ID_VIEW_TOOLBARS
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "<User defined tools>",        ID_TOOLS_ENTRY
+        MENUITEM "Keystate Helper",             ID_TOOLS_KEYSTATEHELPER
+        MENUITEM "Command Arguments",           ID_TOOLS_COMMANDARGUMENTS
+        MENUITEM SEPARATOR
+        MENUITEM "Rebuild Keywords",            ID_TOOLS_REBUILDKEYWORDS
+        MENUITEM "Associate Project and Source Files", ID_TOOLS_ASSOCIATEPROJECTANDSOURCEFILES
+        MENUITEM SEPARATOR
+        MENUITEM "Customize...",                ID_VIEW_CUSTOMIZE
+        MENUITEM "Options...",                  ID_VIEW_OPTIONS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "DarkBasic Professional Help", ID_HELP_DARKBASICPROFESSIONALHELP
+        MENUITEM "DarkBasic Professional Tutorial", ID_HELP_DARKBASICPROFESSIONALVIDEOS32997
+        MENUITEM "Dark Game Studio Website",    ID_HELP_DARKGAMESTUDIOWEBSITE
+        MENUITEM SEPARATOR
+        MENUITEM "&Keyboard Map...",            ID_HELP_KEYBOARDMAP
+        MENUITEM SEPARATOR
+        MENUITEM "Check For Updates...",        ID_HELP_CHECKFORUPDATES
+        MENUITEM SEPARATOR
+        MENUITEM "Open Game Creator Store...",  ID_HELP_OPENGAMECREATORSTORE
+        MENUITEM "&About DarkBASIC Professional Editor...", ID_APP_ABOUT
+        MENUITEM "About DarkBASIC Professional Compiler...", ID_HELP_ABOUTDARKBASICPROFESSIONAL
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    VK_RETURN,      ID_ACCELERATOR32981,    VIRTKEY, SHIFT, ALT, NOINVERT
+    VK_F2,          ID_ADVANCED_GOTODEFINITION, VIRTKEY, SHIFT, NOINVERT
+    VK_F2,          ID_ADVANCED_GOTOLASTLINE, VIRTKEY, SHIFT, CONTROL, NOINVERT
+    VK_F4,          ID_COMPILE_COMPILE,     VIRTKEY, NOINVERT
+    VK_F5,          ID_COMPILE_COMPILERUN,  VIRTKEY, NOINVERT
+    VK_F6,          ID_COMPILE_COMPILERUNINDEBUGMODE, VIRTKEY, NOINVERT
+    VK_F7,          ID_COMPILE_COMPILERUNINSTEP, VIRTKEY, NOINVERT
+    VK_F8,          ID_COMPILE_EXECUTEPREVIOUSAPPLICATION, VIRTKEY, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "G",            ID_EDIT_GOTOLINE,       VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEWPROJECT,     VIRTKEY, SHIFT, CONTROL, NOINVERT
+    "O",            ID_FILE_OPENPROJECT,    VIRTKEY, SHIFT, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVEALL,        VIRTKEY, SHIFT, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    "K",            ID_TOOLS_KEYSTATEHELPER, VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 63
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About DarkBASIC Professional Editor"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,7,7,20,20
+    LTEXT           "Build:",IDC_VERSION,36,18,119,8,SS_NOPREFIX
+    LTEXT           "Under license from John Youren. All rights reserved.",IDC_STATIC,36,30,192,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+    PUSHBUTTON      "http://www.thegamecreators.com",IDC_COMPANY_URL,36,42,119,14
+    LTEXT           "DarkBASIC Professional Editor Version 2.0",IDC_STATIC,36,6,119,8
+END
+
+IDD_GOTO_LINE DIALOGEX 0, 0, 186, 46
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Go To"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "&Enter line number:",-1,7,7,58,8
+    EDITTEXT        IDC_LINE,7,19,107,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&Go To",IDOK,129,7,50,14
+    PUSHBUTTON      "Close",IDCANCEL,129,24,50,14
+END
+
+IDD_OPTIONSPAGE_ENVIRONMENT DIALOGEX 0, 0, 316, 199
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Environment"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT1,6,18,246,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE,259,17,50,14
+    EDITTEXT        IDC_TEMP_PATH,6,48,246,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE_TEMP,259,47,50,14
+    CONTROL         "Read and display the compiler status during compilation",IDC_CHECK2,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,78,193,10
+    CONTROL         "Accelerate the compiler processes during compilation",IDC_CHECK3,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,90,184,10
+    CONTROL         "Show the output panel when compiling (if hidden)",IDC_SHOW_OUTPUT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,102,173,10
+    CONTROL         "Clear output panel before every compile",IDC_CLEAR_OUTPUT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,114,145,10
+    CONTROL         "Open all include files when opening a project",IDC_OPEN_INCLUDES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,144,158,10
+    COMBOBOX        IDC_APPEARANCE,12,175,175,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Style Hue",IDC_STYLE_HUE,232,174,71,13
+    LTEXT           "Compiler filename (Set to blank to use registry entry)",IDC_STATIC,6,6,170,8
+    LTEXT           "Prefered temporary file location (needs write permissions)",IDC_STATIC,6,36,186,8
+    GROUPBOX        "Compilation settings",IDC_STATIC,7,65,302,63
+    GROUPBOX        "Project settings",IDC_STATIC,7,132,302,26
+    LTEXT           "Style hue:",IDC_STATIC,196,176,34,8
+    GROUPBOX        "Application Appearance",IDC_STATIC,7,163,302,30
+END
+
+IDD_OPTIONSPAGE_TEXT DIALOGEX 0, 0, 314, 253
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Text Editor"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Show command name and arguments in status bar",IDC_CHECK3,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,177,10
+    CONTROL         "Show the intellisense list automatically",IDC_INTELLISENSE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,19,137,10
+    COMBOBOX        IDC_COMMAND_STYLE,109,31,198,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Highlight current line",IDC_HIGHLIGHT_LINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,49,81,10
+    CONTROL         "Return to line last edited when opening a source file",IDC_RETURN_LINE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,61,182,10
+    CONTROL         "Automatically indent line after new block",IDC_INDENT_BLOCK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,73,145,10
+    CONTROL         "Automatically insert closing block statement",IDC_CLOSE_BLOCK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,85,155,10
+    CONTROL         "Allow line concatenation using the '_' symbol",IDC_LINE_CONCAT,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,97,157,10
+    COMBOBOX        IDC_MOUSE_SCROLL,109,113,48,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_TAB_WIDTH,43,128,48,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Replace tab characters with spaces *",IDC_REPLACE_TABS,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,144,135,10
+    CONTROL         "Functions",IDC_FOLD_FUNCTION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,168,47,10
+    CONTROL         "For Loops",IDC_FOLD_FOR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,180,47,10
+    CONTROL         "While Loops",IDC_FOLD_WHILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,93,168,54,10
+    CONTROL         "Repeat Loops",IDC_FOLD_REPEAT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,93,180,60,10
+    CONTROL         "Comment Blocks",IDC_FOLD_COMMENTS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,171,168,67,10
+    CONTROL         "Type Declarations",IDC_FOLD_TYPES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,171,180,73,10
+    CONTROL         "Redraw on caret move (required for help text)",IDC_CHECK2,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,209,165,10
+    CONTROL         "Check bracket balance",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,221,88,10
+    CONTROL         "Allow tooltips",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,233,58,10
+    GROUPBOX        "Advanced options (clear to improve rendering speed)",IDC_STATIC,7,198,300,48
+    LTEXT           "Lines scrolled by mouse wheel",IDC_STATIC,7,115,96,8
+    GROUPBOX        "Folding",IDC_STATIC,7,157,300,38
+    LTEXT           "Preferred keyword casing",IDC_STATIC,7,33,83,8
+    LTEXT           "Tab width",IDC_STATIC,7,130,32,8
+END
+
+IDD_INPUT DIALOGEX 0, 0, 253, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Input"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,196,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,196,24,50,14
+    EDITTEXT        IDC_EDIT1,6,18,179,12,ES_AUTOHSCROLL
+    LTEXT           "Please enter the to do text",IDC_PROMPT,7,7,179,8
+END
+
+IDD_OPTIONSPAGE_PRECOMPILERS DIALOGEX 0, 0, 315, 248
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Precompilers"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Precompiler List (Project file is sent as an argument)",IDC_STATIC,7,7,166,8
+    LTEXT           "",IDC_PRECOMPILER_LIST,7,19,300,221
+END
+
+IDD_OPTIONSPAGE_DEFAULT DIALOGEX 0, 0, 282, 249
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Default Values"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Enter default values for new projects",IDC_STATIC,7,7,120,8
+    CONTROL         "",IDC_PROPERTIES,"Static",SS_BLACKFRAME,6,21,156,221
+END
+
+IDD_NEW_PROJECT DIALOGEX 0, 0, 360, 210
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "New Project"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,246,189,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,303,189,50,14
+    EDITTEXT        IDC_PROJECT_LOCATION,60,144,237,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PROJECT_NAME,60,126,293,12,ES_AUTOHSCROLL
+    LTEXT           "Name:",IDC_STATIC,7,126,22,8
+    LTEXT           "Location:",IDC_STATIC,7,145,30,8
+    PUSHBUTTON      "Skip && Create a new blank project",IDC_BTN_SKIP,7,189,120,14
+    LISTBOX         IDC_LIST_TEMPLATES,7,18,346,102,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Templates",IDC_STATIC,7,7,34,8
+    CONTROL         "Create directory for this project",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,60,162,118,10
+    CONTROL         "Add all Sticky Includes",IDC_ADD_STICKY_INCLUDES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,60,174,87,10
+    PUSHBUTTON      "Browse...",IDC_BROWSE_PROJECT,303,143,50,14
+END
+
+IDD_OPTIONSPAGE_BACKUP DIALOGEX 0, 0, 316, 246
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Backup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Allow DarkBASIC Professional Editor to backup my source code",IDC_ALLOW_BACKUP,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,167,10
+    CONTROL         "Store backups in a subdirectory of my project directory",IDC_STORE_SUBDIR,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,30,36,192,10
+    CONTROL         "Store backups in a custom directory",IDC_STORE_CUSTOM,
+                    "Button",BS_AUTORADIOBUTTON,30,48,130,10
+    EDITTEXT        IDC_CUSTOM_LOCATION,42,62,204,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BACKUP_BROWSE,250,61,50,14
+    CONTROL         "Backup on compile",IDC_BACKUP_COMPILE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,93,74,10
+    CONTROL         "Backup on save",IDC_BACKUP_SAVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,105,66,10
+    CONTROL         "Backup every",IDC_BACKUP_EVERY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,117,59,10
+    PUSHBUTTON      "Button3",IDC_BACKUP_MINUTES,84,115,36,14
+    CONTROL         "Backup on project open",IDC_BACKUP_OPEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,129,91,10
+    CONTROL         "Backup on project close",IDC_BACKUP_CLOSE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,141,91,10
+    CONTROL         "Simple - Take the latest version and overwrite existing backups",IDC_TYPE_SIMPLE,
+                    "Button",BS_AUTORADIOBUTTON | WS_GROUP,30,168,217,10
+    CONTROL         "Family - Store 3 copies of a file, the oldest file is overwritten",IDC_TYPE_FAMILY,
+                    "Button",BS_AUTORADIOBUTTON,30,180,208,10
+    CONTROL         "Time Stamp - Create a new backup file everytime (with a unique timestamp)",IDC_TYPE_STAMP,
+                    "Button",BS_AUTORADIOBUTTON,30,192,257,10
+    CONTROL         "Keep files for",IDC_FILES_FOR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,221,58,10
+    PUSHBUTTON      "Button3",IDC_BACKUP_DAYS,84,219,48,14
+    PUSHBUTTON      "Open Backup Directory",IDC_OPEN_DIR,210,220,90,14
+    GROUPBOX        "Actions",IDC_STATIC,18,81,291,72
+    GROUPBOX        "Location",IDC_STATIC,18,24,291,54
+    GROUPBOX        "Type",IDC_STATIC,18,156,291,48
+    GROUPBOX        "Maintenance",IDC_STATIC,18,208,291,30
+END
+
+IDD_KEYWORDS DIALOGEX 0, 0, 262, 84
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Building Keywords"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "The keyword files are now being built. This process may take a few moments, but will only be performed once.",IDC_STATIC,20,7,221,20
+    GROUPBOX        "Statistics",IDC_STATIC,7,31,248,46
+    LTEXT           "Current Process: Initializing",IDC_CURRENT_PROCESS,15,44,231,8
+    LTEXT           "Current File: NA",IDC_CURRENT_FILE,15,59,117,8
+    LTEXT           "Current Line: NA",IDC_CURRENT_LINE,139,59,107,8
+END
+
+IDD_OPTIONSPAGE_SEMANTIC DIALOGEX 0, 0, 315, 121
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Semantic Analysis"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Enable Code View",IDC_ENABLE_CODE_VIEW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,23,73,10
+    LTEXT           "List items in",IDC_STATIC,12,42,38,8
+    COMBOBOX        IDC_LIST_ORDER,54,40,120,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Prompt me when lines contain errors",IDC_PROMPT_ERROR,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,84,132,10
+    CONTROL         "Change cases of used variables to their defined case",IDC_CHANGE_CASE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,96,185,10
+    GROUPBOX        "Code View",IDC_STATIC,7,7,301,52
+    GROUPBOX        "Code Validation",IDC_STATIC,7,66,301,48
+END
+
+IDD_welcome DIALOGEX 0, 0, 424, 202
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "DarkBASIC Professional"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Button1",IDC_AVI_1,6,36,134,35,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "Button1",IDC_AVI_2,144,36,134,35,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "Button1",IDC_AVI_3,282,36,134,35,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "Button1",IDC_AVI_4,6,78,134,35,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "Button1",IDC_AVI_5,144,78,134,35,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "Button1",IDC_AVI_6,282,78,134,35,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "Button1",IDC_AVI_7,6,121,134,35,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "Button1",IDC_AVI_8,144,121,134,35,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "Button1",IDC_AVI_9,282,121,134,35,BS_CENTER | BS_VCENTER
+    PUSHBUTTON      "Button1",IDC_AVI_10,6,161,134,35,BS_CENTER | BS_VCENTER
+    LTEXT           "Hello! Welcome to DarkBASIC Professional. We have noticed that this is the first time you have used DarkBASIC Professional. To help you out with have compiled a number of help videos to introduce you to the world of game development.",IDC_WELCOME_TEXT,7,7,409,27
+END
+
+IDD_UPDATE DIALOGEX 0, 0, 286, 244
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Software Update"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_UPDATE_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,36,272,93
+    DEFPUSHBUTTON   "Install",ID_INSTALL,229,223,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,174,223,50,14
+    LTEXT           "Checking for updates...",IDC_TITLE,7,7,272,17
+    LTEXT           "Select the items you want to update, then click Install.",IDC_STATIC,7,25,175,8
+    EDITTEXT        IDC_UPDATE_INFO,7,133,272,60,ES_MULTILINE | ES_READONLY | WS_VSCROLL
+    LTEXT           "Note: Use of this software is subject to the original Software Licence Agreement(s) that accompanied the software being updated.",IDC_STATIC,7,198,272,19
+    LTEXT           "Downloaded 0 bytes",IDC_PROGRESS,7,226,161,8
+END
+
+IDD_OPTIONSPAGE_STARTUP DIALOGEX 0, 0, 317, 59
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Startup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_STARTUP,7,20,303,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_PROJECT_LOAD,7,40,244,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BROWSE_PROJECT,260,38,50,14
+    LTEXT           "At startup:",IDC_STATIC,7,7,35,8
+END
+
+IDD_OPTIONSPAGE_FONTS DIALOGEX 0, 0, 316, 99
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Fonts and Colours"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_FONT_COMBO,7,18,220,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_FONT_SIZE,234,18,75,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_FONT_COMBO2,7,48,220,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Button1",IDC_COLOR,234,47,75,14
+    PUSHBUTTON      "Button1",IDC_BACK_COLOR,6,78,72,14
+    LTEXT           "Font",IDC_STATIC,7,7,212,8
+    LTEXT           "Size",IDC_STATIC,234,6,14,8
+    LTEXT           "Display Item",IDC_STATIC,7,36,218,8
+    LTEXT           "Item Colour",IDC_STATIC,234,36,38,8
+    LTEXT           "Editor Background",IDC_STATIC,7,66,58,8
+END
+
+IDD_OPTIONSPAGES_HELP DIALOGEX 0, 0, 308, 54
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Help"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_HELP_PAGE,7,18,294,12,ES_AUTOHSCROLL
+    CONTROL         "Open a new tab for each help document",IDC_OPEN_NEW_TAB,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,36,293,10
+    LTEXT           "Default help landing page",IDC_STATIC,7,7,82,8
+END
+
+IDD_OPTIONSPAGES_STICKY DIALOGEX 0, 0, 316, 242
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Sticky Includes"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Include files automatically added to new projects",IDC_STATIC,9,9,157,8
+    LTEXT           "",IDC_PRECOMPILER_LIST,9,20,300,216
+END
+
+IDD_FIND_IN_FILES DIALOGEX 0, 0, 218, 208
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Find In Files"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_FIND_WHAT,7,15,204,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_LOOK_IN,7,42,204,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Match case",IDC_MATCH_CASE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,72,52,10
+    CONTROL         "Open file and highlight found text",IDC_HIGHLIGHT_TEXT,
+                    "Button",BS_AUTORADIOBUTTON,12,84,123,10
+    CONTROL         "List files containing text",IDC_LIST_FILES,"Button",BS_AUTORADIOBUTTON,12,96,91,10
+    LISTBOX         IDC_RESULTS_LIST,7,115,204,67,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "Find Next",IDC_FIND_BUTTON,161,187,50,14
+    LTEXT           "Find what:",IDC_STATIC,7,7,35,8
+    LTEXT           "Look in:",IDC_STATIC,7,32,26,8
+    GROUPBOX        "Find options",IDC_STATIC,7,60,204,52
+END
+
+IDD_FIND DIALOGEX 30, 73, 236, 77
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Fi&nd what:",-1,4,8,42,8
+    EDITTEXT        1152,47,7,128,12,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "Match &whole word only",1040,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,4,26,100,12
+    CONTROL         "Match &case",1041,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,42,64,12
+    GROUPBOX        "Direction",1072,107,26,68,28,WS_GROUP
+    CONTROL         "&Up",1056,"Button",BS_AUTORADIOBUTTON | WS_GROUP,111,38,25,12
+    CONTROL         "&Down",1057,"Button",BS_AUTORADIOBUTTON,138,38,35,12
+    DEFPUSHBUTTON   "&Find Next",IDOK,182,5,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,182,23,50,14
+    PUSHBUTTON      "&Help",1038,182,45,50,14
+    CONTROL         "&Search selected text only",ID_FIND_SELECTED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,58,98,12
+END
+
+IDD_REPLACE DIALOGEX 36, 44, 230, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_FIXEDSYS | DS_CONTEXTHELP | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Replace"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    LTEXT           "Fi&nd what:",-1,4,9,48,8
+    EDITTEXT        1152,54,7,114,12,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "Re&place with:",-1,4,26,48,8
+    EDITTEXT        1153,54,24,114,12,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "Match &whole word only",1040,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,5,46,104,12
+    CONTROL         "Match &case",1041,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,62,59,12
+    DEFPUSHBUTTON   "&Find Next",IDOK,174,4,50,14,WS_GROUP
+    PUSHBUTTON      "&Replace",1024,174,21,50,14
+    PUSHBUTTON      "Replace &All",1025,174,38,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,174,55,50,14
+    PUSHBUTTON      "&Help",1038,174,75,50,14
+    CONTROL         "&Search selected text only",ID_FIND_SELECTED,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,78,98,12
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x21L
+#else
+ FILEFLAGS 0x20L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "409004e4"
+        BEGIN
+            VALUE "CompanyName", "The Game Creators"
+            VALUE "FileDescription", "DarkBASIC Professional Editor"
+            VALUE "FileVersion", "2.0.0.1"
+            VALUE "InternalName", "Editor.exe"
+            VALUE "LegalCopyright", "Under license from John Youren.  All rights reserved."
+            VALUE "OriginalFilename", "Editor.exe"
+            VALUE "ProductName", "DarkBASIC Professional Editor"
+            VALUE "ProductVersion", "2.0.0.1"
+            VALUE "SpecialBuild", "NA"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x4090, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_GOTO_LINE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+    END
+
+    IDD_OPTIONSPAGE_ENVIRONMENT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_OPTIONSPAGE_TEXT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 307
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 246
+    END
+
+    IDD_INPUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 246
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+
+    IDD_OPTIONSPAGE_PRECOMPILERS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 307
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 240
+    END
+
+    IDD_OPTIONSPAGE_DEFAULT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 275
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_NEW_PROJECT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 353
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_OPTIONSPAGE_BACKUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+
+    IDD_KEYWORDS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 77
+    END
+
+    IDD_OPTIONSPAGE_SEMANTIC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 308
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 114
+    END
+
+    IDD_welcome, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 416
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_UPDATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 279
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 237
+    END
+
+    IDD_OPTIONSPAGE_STARTUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 310
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 52
+    END
+
+    IDD_OPTIONSPAGE_FONTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 92
+    END
+
+    IDD_OPTIONSPAGES_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 301
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 47
+    END
+
+    IDD_OPTIONSPAGES_STICKY, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 235
+    END
+
+    IDD_FIND_IN_FILES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 211
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 201
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// XML
+//
+
+IDR_XML1                XML                     "res\\xml1.bin"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// INI
+//
+
+IDR_INI1                INI                     "res\\ini1.bin"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+IDR_HTML_TESTWEB        HTML                    "testweb.htm"
+IDR_HTML_TESTLEE        HTML                    "TestLee.htm"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "DarkBASIC Professional Editor"
+    IDR_UntitledTYPE        "\nUntitled\nDBA\nDarkBASIC Professional Editor Files (*.dba)\n.dba\nSynergyEditor.Document\nDarkBASIC Professional Editor.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "DarkBASIC Professional Editor"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new source document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_DIRECT    "Send the document directly to the default printer without making changes\nQuick Print"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_CUSTOMIZE       "Customize toolbars and menus.\nCustomize"
+    ID_VIEW_TOOLBARS        "NONE"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MAIN_TOOLBAR        "Standard"
+    IDS_STRING102           "ID_HELP_DARKBASICPROFESSIONALVIDEOS32997"
+    IDS_BROWSER_TOOLBAR     "Browser"
+    104                     "Edit"
+    IDS_WINDOWS_MANAGER     "&Windows..."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_USER_TOOLBAR1   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR2   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR3   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR4   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR5   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR6   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR7   "Show or hide the user toolbar\nToggle User ToolBar"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_USER_TOOLBAR8   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR9   "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_VIEW_USER_TOOLBAR10  "Show or hide the user toolbar\nToggle User ToolBar"
+    ID_TOOLS_ENTRY          "<User defined tools>\n<User defined tools>"
+    ID_USER_TOOL1           "Activates user-defined tool\nUser Tool"
+    ID_USER_TOOL2           "Activates user-defined tool\nUser Tool"
+    ID_USER_TOOL3           "Activates user-defined tool\nUser Tool"
+    ID_USER_TOOL4           "Activates user-defined tool\nUser Tool"
+    ID_USER_TOOL5           "Activates user-defined tool\nUser Tool"
+    ID_USER_TOOL6           "Activates user-defined tool\nUser Tool"
+    ID_USER_TOOL7           "Activates user-defined tool\nUser Tool"
+    ID_USER_TOOL8           "Stops loading the current webpage\nStop"
+    ID_USER_TOOL9           "Activates user-defined tool\nUser Tool"
+    ID_USER_TOOL10          "Activates user-defined tool\nUser Tool"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_COMPILE_COMPILE      "Save and Compile the project\nCompile"
+    ID_COMPILE_COMPILERUN   "Save, Compile and then run the project\nCompile && Run"
+    ID_COMPILE_COMPILERUNINDEBUGMODE 
+                            "Save, Compile and then run the project in debug mode"
+    ID_COMPILE_COMPILERUNINSTEP 
+                            "Save, Compile and then run the project in debug mode stopping at breakpoints"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_HELP_DARKBASICPROFESSIONALHELP 
+                            "Opens a new tab displaying the DarkBasic Professional help system"
+    ID_EDIT_TOGGLEBOOKMARK  "Toggles a bookmark on the selected line\nToggle Bookmark"
+    ID_EDIT_NEXTBOOKMARK    "Navigates to the next bookmark in the current active document\nNext Bookmark"
+    ID_EDIT_PREVIOUSBOOKMARK 
+                            "Navigates to the previous bookmark in the current active document\nPrevious Bookmark"
+    ID_EDIT_TOGGLEBREAKPOINT 
+                            "Toggles a breakpoint on the selected line\nToggle Breakpoint"
+    ID_EDIT_REMOVEALLBREAKPOINTS 
+                            "Removes all of the breakpoints from the current active document\nRemove All Breakpoints"
+    ID_EDIT_REMOVEALLBOOKMARKS 
+                            "Removes all of the bookmarks from the current active document\nRemove All Bookmarks"
+    ID_FILE_OPENPROJECT     "Open an existing project"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_Help                "\nHelp\n\n\n\n\n"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TOOLS_REBUILDKEYWORDS 
+                            "Rebuild the keywords to enable highlighting of plugin commands that you have installed"
+    ID_VIEW_FULLSCREEN      "View the code of the current document in full screen"
+    ID_HELP_KEYBOARDMAP     "View the keyboard shortcuts associated with menu commands"
+    ID_EDIT_GOTOLINE        "Navigate to the specified line number"
+    ID_BROWSER_GOBACK       "Navigates back one webpage in history\nBack"
+    ID_BROWSER_GOFORWARD    "Navigates forward one webpage in history\nForward"
+    ID_BROWSER_STOP         "Stops loading the current webpage\nStop"
+    ID_BROWSER_REFRESH      "Refreshes the current loaded webpage\nRefresh"
+    ID_FONT_LARGEST         "Sets the font size to the largest size"
+    ID_FONT_LARGE           "Sets the font size to a larger size"
+    ID_FONT_MEDIUM          "Sets the font size to the standard size"
+    ID_FONT_SMALL           "Sets the font size to a small size"
+    ID_FONT_SMALLEST        "Sets the font size to the smallest size"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_SAVEPROJECT     "Saves the open project"
+    ID_REMOVE_FROM_PROJECT  "Removes the file from the current project\nRemove From Project"
+    ID_POPUP_IMPORTMEDIA    "Imports a new media item into the current project\nImport Media File"
+    ID_POPUP_ADDNEWFILE     "Adds a new blank file into the current project\nAdd New File"
+    ID_POPUP_IMPORTEXISTINGFILE 
+                            "Imports an existing file into the current project\nImport Existing File"
+    ID_FILE_SAVEPROJECTAS   "Saves the open project to a specified file"
+    ID_FILE_NEWPROJECT      "Create a new project"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_OPTIONS         "View and Modify settings used by DarkBASIC Professional Editor"
+    ID_POPUP_INSERTITEM     "Inserts a new todo item into the list\nInsert Item"
+    ID_POPUP_REMOVEITEM     "Removes the currently seleted item\nRemove Item"
+    ID__INSERTRGBCOLOUR     "Insert the RGB colour specified into the source code\nInsert RGB Colour"
+    ID_TOOLS_KEYSTATEHELPER "Tool to allow the programmer to find key values of keyboard keys\nKeystate Helper"
+    ID_HELP_ABOUTDARKBASICPROFESSIONAL 
+                            "View DarkBasic Professional version information\nAbout DarkBasic Professional"
+    ID_FILE_SAVEALL         "Save the project and all open files\nSave All"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_COMPILE_EXECUTEPREVIOUSAPPLICATION 
+                            "Execute the application from the last successfull compile"
+    ID_ADVANCED_INCREASELINEINDENT 
+                            "Increases the tab indention of the line/selected text by one tab\nIncrease Line Indent"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_ADVANCED_DECREASELINEINDENT 
+                            "Decreases the tab indention of the line/selected text by one tab\nDecrease Line Indent"
+    ID_OPEN_ALL_FILES       "Opens all of the files in the project in seperate tabs\nOpen All Files"
+    ID_EDIT_HIDESELECTION   "Hides the current selection\nHide Selection"
+    ID_EDIT_STOPHIDINGCURRENT 
+                            "Stops the current selected text from collapsing\nStop Hiding Current"
+    ID_EDIT_TOGGLEOUTLINING "Toggles whether outlining is enabled\nToggle Outlining"
+    ID_EDIT_TOGGLEALLOUTLINING 
+                            "Toggles whether the whole document has outlining enabled\nToggle All Outlining"
+    ID_EDIT_COLLAPSETODEFINITIONS 
+                            "Collapses all outlined nodes in the document\nCollapse to Definitions"
+    ID_EDIT_STOPOUTLINING   "Disables outlining\nStop Outlining"
+    32956                   "Toggles whether outlining is enabled\nEnable Outlining"
+    32957                   "Toggles whether new code blocks are automatically turned into collapsable regions\nAutomatic Outlining"
+    32958                   "Toggles whether line numbers are shown\nLine Numbers"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_POPUP_CLEARALLMEDIAFILES 
+                            "Removes all media files from the current project\nClear All Media Files"
+    ID_IDR_MAINMAIN         "Sets the selected file to be the entry point for the program\nSet As Main File"
+    ID_IDR_OPENPROJECTFOLDER 
+                            "Opens the project folder in windows explorer\nOpen Project Folder"
+    ID_IDR_OPENCONTAININGFOLDER 
+                            "Opens the folder containing this source file in windows explorer\nOpen Containing Folder"
+    ID_OUTPUT_COPY          "Copies the selected text to the clipboard\nCopy"
+    ID_OUTPUT_WRITE         "Writes the output messages to a file of the users choice\nWrite to File"
+    ID_OUTPUT_CLEAR         "Clears all of the output messages"
+    ID_TODO_ADD             "Creates a new to do entry\nCreate"
+    ID_TODO_REMOVE          "Removes the selected to do entry\nRemove"
+    ID_TODO_UP              "Moves the selected item up in the list\nMove Up"
+    ID_TODO_DOWN            "Moves the selected item down in the list\nMove Down"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_ADVANCED_GOTODEFINITION 
+                            "Go to the line containing the definition\nGo To Definition"
+    ID_ADVANCED_GOTOLASTLINE 
+                            "Go to the line that was last used to view a definition\nGo To Last Line"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_TODO_EDIT            "Edit the selected entry\nEdit"
+    ID_HELP_DARKBASICPROFESSIONALVIDEOS32997 "View the tutorial"
+    ID_HELP_CHECKFORUPDATES "Check the update server for any updates and additional software"
+    ID_IDR_PROPERTIES       "Opens the Windows file properties dialog\nProperties"
+    ID_TOOLS_COMMANDARGUMENTS "Set the command line arguments for the project"
+    ID_ADVANCED_GOTOPROJECTLINE 
+                            "Navigate to the specified line number where include files are appended\nGo To Project Line"
+    ID_ADVANCED_COMMENTSELECTION 
+                            "Comment the currently selected code\nComment Selection"
+    ID_ADVANCED_UNCOMMENTSELECTION 
+                            "Uncomment the currently selected code\nUncomment Selection"
+    ID_EXPAND               "Categorize properties\nCategorized"
+    ID_SORTINGPROP          "List properties alphabetically\nAlphabetical"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_MEDIAOPEN            "Import an existing media file into the project\nImport"
+    ID_MEDIADELETE          "Delete the selected media file from the project\nDelete"
+    ID_MEDIAPREVIEW         "Preview the selected media file\nPreview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_OPEN_CURSOR          "Import an existing cursor file into the project\nImport"
+    ID_BUTTON33036          "Delete the selected cursor file from the project\nDelete"
+    ID_BUTTON33037          "Insert the default window cursors\nDefault Cursors"
+    ID_DELETE_CURSOR        "Delete the selected cursor file from the project\nDelete"
+    ID_DEFAULT_CURSOR       "Insert the default windows cursors into the project\nDefault Cursors"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_FINDINFILES     "Find the specified text in Files\nFind In Files..."
+    ID_FILE_OPEN_ANY        "Open an existing project or source document\nOpen"
+    ID_FILE_NEW_TOOLBAR     "Create a new project or source document\nNew"
+    ID_TOOLS_ASSOCIATEPROJECTANDSOURCEFILES 
+                            "Associates DarkBASIC Professional Editor with DarkBASIC Professional source and project files"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEWDBA          "Create a new source document\nNew"
+    ID_GAMESTORE            "Open the Game Creator Store"
+    ID_CHECKMODULES         "Check the installed DBPro modules"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "BCGCBPro.rc"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

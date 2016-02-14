@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Intel C++ Project"
+	Version="11.1"
+	Name="Synergy Editor"
+	ProjectGUID="{61078835-B0D9-4B85-96B8-8BCC766ECD6C}"
+	VCNestedProjectGUID="{D2157F4F-E3E2-455D-9D10-71E9A8FB78D0}"
+	VCNestedProjectFileName="Synergy Editor.vcproj">
+	<Configurations/>
+	<Files/>
+</VisualStudioProject>

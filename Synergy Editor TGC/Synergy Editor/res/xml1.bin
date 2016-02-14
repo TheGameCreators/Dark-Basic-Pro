@@ -1,0 +1,16 @@
+<SETTINGS>
+
+<OPTIONS>
+<WordDelimeters>" \t\n,./?LTGT;:\"'{[}]~`%^AMP*()-+=!"</WordDelimeters>
+<SpecialDelimiters>";.{}\n"</SpecialDelimiters>
+</OPTIONS>
+
+<HYPERLINKS>
+    <EnableHyperlinkSupport>True</EnableHyperlinkSupport>
+    <HighlightWithColor>True</HighlightWithColor>
+    <URLPrefixes>
+        <URLPrefix>http://</URLPrefix>
+    </URLPrefixes>
+</HYPERLINKS>
+</SETTINGS>
+

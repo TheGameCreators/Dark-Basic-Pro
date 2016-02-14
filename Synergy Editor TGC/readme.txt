@@ -1,0 +1,1 @@
+This IDE is distributed as incomplete as we are unable to open source the BCG source code that is required to complete this compilation. Source code has been released should this code be helpful in creating a new IDE that is not dependent on BCG, or can be amended to use the latest version of the API.

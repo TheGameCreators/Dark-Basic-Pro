@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseNETBOOK|Win32">
+      <Configuration>ReleaseNETBOOK</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Remote|Win32">
+      <Configuration>Remote</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D2157F4F-E3E2-455D-9D10-71E9A8FB78D0}</ProjectGuid>
+    <RootNamespace>SynergyEditor</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseNETBOOK|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <UseOfAtl>false</UseOfAtl>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Remote|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseNETBOOK|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Remote|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.24720.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>C:\Program Files %28x86%29\Microsoft Visual Studio 14.0\VC\atlmfc\include;F:\TGCSHARED\Dark-Basic-Pro\Synergy Editor TGC\BCGControlBarPro(Editor)\BCGCBPro\;$(IncludePath)</IncludePath>
+    <LibraryPath>F:\TGCSHARED\Dark-Basic-Pro\Synergy Editor TGC\BCGControlBarPro(Editor)\Bin;C:\Program Files %28x86%29\Microsoft SDKs\Windows\v7.1A\Lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Remote|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseNETBOOK|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Microsoft SDKs\Windows\v6.0\Include;C:\Program Files (x86)\Intel\Intel Atom Developer Program SDK\0.91\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_AFXDLL;WIN32;_WINDOWS;NDEBUG;NONVERBOSEOUTPUTMODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ErrorReporting>None</ErrorReporting>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);C:\Program Files\BCGSoft\BCGControlBarPro\BCGCBPro\Styles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>adpcored.lib;psapi.lib;shlwapi.lib;Wininet.lib;winmm.lib;Version.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>C:\Program Files (x86)\The Game Creators\Dark Basic Professional\Editor\EditorNew.exe</OutputFile>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Microsoft SDKs\Windows\v6.0\Lib;C:\Program Files (x86)\Intel\Intel Atom Developer Program SDK\0.91\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NONVERBOSEOUTPUTMODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat />
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);C:\Program Files\BCGSoft\BCGControlBarPro\BCGCBPro\Styles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>BCGCBPRO956StaticU90.lib;Version.lib;Wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>EditorNew.exe</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Remote|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;NONVERBOSEOUTPUTMODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ErrorReporting>None</ErrorReporting>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);C:\Program Files\BCGSoft\BCGControlBarPro\BCGCBPro\Styles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>Version.lib;Wininet.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>\\TESTPC\SharedDocs\Dark Basic Professional\Editor\EditorNew.exe</OutputFile>
+      <UACExecutionLevel>AsInvoker</UACExecutionLevel>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseNETBOOK|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>false</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Microsoft SDKs\Windows\v6.0\Include;C:\Program Files (x86)\Intel\Intel Atom Developer Program SDK\0.91\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_AFXDLL;WIN32;_WINDOWS;NDEBUG;NONVERBOSEOUTPUTMODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <PrecompiledHeader>Create</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat />
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);C:\Program Files\BCGSoft\BCGControlBarPro\BCGCBPro\Styles;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>adpcore.lib;psapi.lib;shlwapi.lib;Wininet.lib;winmm.lib;Version.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>C:\Program Files (x86)\The Game Creators\Dark Basic Professional\Editor\EditorNew.exe</OutputFile>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Microsoft SDKs\Windows\v6.0\Lib;C:\Program Files (x86)\Intel\Intel Atom Developer Program SDK\0.91\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration />
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AdvertThread.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="ClassView.cpp" />
+    <ClCompile Include="CompileSupport.cpp" />
+    <ClCompile Include="CursorBar.cpp" />
+    <ClCompile Include="Doc.cpp" />
+    <ClCompile Include="EditorControl.cpp" />
+    <ClCompile Include="ExtendedFind.cpp" />
+    <ClCompile Include="FindInProjectDialog.cpp" />
+    <ClCompile Include="getdxver.cpp" />
+    <ClCompile Include="GotoLineDlg.cpp" />
+    <ClCompile Include="Help.cpp" />
+    <ClCompile Include="HTMLDocument.cpp" />
+    <ClCompile Include="HTMLViewCustom.cpp" />
+    <ClCompile Include="HTTPComm.cpp" />
+    <ClCompile Include="ImageChild.cpp" />
+    <ClCompile Include="ImagePreviewStatic.cpp" />
+    <ClCompile Include="ImageWindow.cpp" />
+    <ClCompile Include="InputDialog.cpp" />
+    <ClCompile Include="KeystateChild.cpp" />
+    <ClCompile Include="KeystateWindow.cpp" />
+    <ClCompile Include="Keyword.cpp" />
+    <ClCompile Include="KeywordDialog.cpp" />
+    <ClCompile Include="Keywords.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MediaBar.cpp" />
+    <ClCompile Include="NewProjectDialog.cpp" />
+    <ClCompile Include="OptionsDlg.cpp" />
+    <ClCompile Include="OptionsPageDefaults.cpp" />
+    <ClCompile Include="OptionsPageEnvironment.cpp" />
+    <ClCompile Include="OptionsPageFonts.cpp" />
+    <ClCompile Include="OptionsPageHelp.cpp" />
+    <ClCompile Include="OptionsPageSemantic.cpp" />
+    <ClCompile Include="OptionsPageStartup.cpp" />
+    <ClCompile Include="OptionsPageText.cpp" />
+    <ClCompile Include="OutlineParser.cpp" />
+    <ClCompile Include="OutputBar.cpp" />
+    <ClCompile Include="ReadError.cpp" />
+    <ClCompile Include="ReadProject.cpp" />
+    <ClCompile Include="SemanticParser.cpp" />
+    <ClCompile Include="SemanticParserManager.cpp" />
+    <ClCompile Include="Settings.cpp" />
+    <ClCompile Include="SnippetWnd.cpp" />
+    <ClCompile Include="SourceFile.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseNETBOOK|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Remote|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Synergy Editor.cpp" />
+    <ClCompile Include="ToDoWindow.cpp" />
+    <ClCompile Include="UpdateFtpCore.cpp" />
+    <ClCompile Include="UpdateGlobal.cpp" />
+    <ClCompile Include="UpdateWindow.cpp" />
+    <ClCompile Include="Utilities.cpp" />
+    <ClCompile Include="Variables.cpp" />
+    <ClCompile Include="View.cpp" />
+    <ClCompile Include="WelcomeDialog.cpp" />
+    <ClCompile Include="WelcomePages.cpp" />
+    <ClCompile Include="WorkSpaceBar.cpp" />
+    <ClCompile Include="WorkSpaceBar2.cpp" />
+    <ClCompile Include="WriteFiles.cpp" />
+    <ClCompile Include="WriteProject.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AdvertThread.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="ClassView.h" />
+    <ClInclude Include="CompileSupport.h" />
+    <ClInclude Include="CursorBar.h" />
+    <ClInclude Include="Doc.h" />
+    <ClInclude Include="EditorControl.h" />
+    <ClInclude Include="ExtendedFind.h" />
+    <ClInclude Include="ExternalText.h" />
+    <ClInclude Include="FindInProjectDialog.h" />
+    <ClInclude Include="GotoLineDlg.h" />
+    <ClInclude Include="Help.h" />
+    <ClInclude Include="HTMLDocument.h" />
+    <ClInclude Include="HTMLViewCustom.h" />
+    <ClInclude Include="HTTPComm.h" />
+    <ClInclude Include="ImageChild.h" />
+    <ClInclude Include="ImagePreviewStatic.h" />
+    <ClInclude Include="ImageWindow.h" />
+    <ClInclude Include="InputDialog.h" />
+    <ClInclude Include="KeystateChild.h" />
+    <ClInclude Include="KeystateWindow.h" />
+    <ClInclude Include="Keyword.h" />
+    <ClInclude Include="KeywordDialog.h" />
+    <ClInclude Include="Keywords.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MediaBar.h" />
+    <ClInclude Include="NewProjectDialog.h" />
+    <ClInclude Include="OptionsDlg.h" />
+    <ClInclude Include="OptionsPageDefaults.h" />
+    <ClInclude Include="OptionsPageEnvironment.h" />
+    <ClInclude Include="OptionsPageFonts.h" />
+    <ClInclude Include="OptionsPageHelp.h" />
+    <ClInclude Include="OptionsPageSemantic.h" />
+    <ClInclude Include="OptionsPageStartup.h" />
+    <ClInclude Include="OptionsPageText.h" />
+    <ClInclude Include="OutlineParser.h" />
+    <ClInclude Include="OutputBar.h" />
+    <ClInclude Include="ReadError.h" />
+    <ClInclude Include="ReadProject.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SemanticParser.h" />
+    <ClInclude Include="SemanticParserManager.h" />
+    <ClInclude Include="Settings.h" />
+    <ClInclude Include="SnippetWnd.h" />
+    <ClInclude Include="SourceFile.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Synergy Editor.h" />
+    <ClInclude Include="ToDoWindow.h" />
+    <ClInclude Include="UpdateFtpCore.h" />
+    <ClInclude Include="UpdateGlobal.h" />
+    <ClInclude Include="UpdateWindow.h" />
+    <ClInclude Include="Utilities.h" />
+    <ClInclude Include="Variables.h" />
+    <ClInclude Include="View.h" />
+    <ClInclude Include="WelcomeDialog.h" />
+    <ClInclude Include="WelcomePages.h" />
+    <ClInclude Include="WorkSpaceBar.h" />
+    <ClInclude Include="WorkSpaceBar2.h" />
+    <ClInclude Include="WriteFiles.h" />
+    <ClInclude Include="WriteProject.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bitmap3.bmp" />
+    <Image Include="res\bitmap4.bmp" />
+    <Image Include="res\bmp00001.bmp" />
+    <Image Include="res\bmp00002.bmp" />
+    <Image Include="res\bmp00003.bmp" />
+    <Image Include="res\bmp00004.bmp" />
+    <Image Include="res\bmp00005.bmp" />
+    <Image Include="res\bmp00006.bmp" />
+    <Image Include="res\bmp00007.bmp" />
+    <Image Include="res\bmp00008.bmp" />
+    <Image Include="res\break.bmp" />
+    <Image Include="res\Browser.bmp" />
+    <Image Include="res\classview.bmp" />
+    <Image Include="res\classview_hc.bmp" />
+    <Image Include="res\Cursor.bmp" />
+    <Image Include="res\Edit.bmp" />
+    <Image Include="res\filevie24.bmp" />
+    <Image Include="res\fileview.bmp" />
+    <Image Include="res\icon1.ico" />
+    <Image Include="res\idr_unti.ico" />
+    <Image Include="res\mainfram.bmp" />
+    <Image Include="res\Media.bmp" />
+    <Image Include="res\optionsimages.bmp" />
+    <Image Include="res\properties_bar_hc.bmp" />
+    <Image Include="res\Pyramid.bmp" />
+    <Image Include="res\Solution.bmp" />
+    <Image Include="res\SourceFile.bmp" />
+    <Image Include="res\Synergy Editor.ico" />
+    <Image Include="res\Synergy EditorDoc.ico" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\toolbar1.bmp" />
+    <Image Include="res\Toolbar256.bmp" />
+    <Image Include="res\UserImages.bmp" />
+    <Image Include="res\Workspace.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Inspector Results\r000mi1\r000mi1.insp" />
+    <None Include="My Inspector Results\r001mi1\r001mi1.insp" />
+    <None Include="My Inspector Results\r002ti1\r002ti1.insp" />
+    <None Include="My Inspector Results\r003ti1\r003ti1.insp" />
+    <None Include="My Inspector Results\r004mi2\r004mi2.insp" />
+    <None Include="My Inspector Results\r005mi2\r005mi2.insp" />
+    <None Include="My Inspector Results\r006mi2\r006mi2.insp" />
+    <None Include="res\defcurso.bin" />
+    <None Include="res\ini1.bin" />
+    <None Include="res\serial1.bin" />
+    <None Include="res\SynergyEditor.rc2" />
+    <None Include="res\xml1.bin" />
+    <None Include="Synergy Editor.reg" />
+    <None Include="TestLee.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="testweb.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Synergy Editor.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Synergy Editor.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
