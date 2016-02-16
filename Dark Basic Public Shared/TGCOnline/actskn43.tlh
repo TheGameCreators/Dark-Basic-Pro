@@ -1,0 +1,1538 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (7c2da406).
+//
+// actskn43.tlh
+//
+// C++ source equivalent of Win32 type library actskn43.ocx
+// compiler-generated file created 04/19/04 at 12:38:26 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace ACTIVESKINLib {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("92aea298-248e-45db-97b6-a8c7cd5892e7"))
+/* dual interface */ ISkin;
+struct __declspec(uuid("5483984c-bfec-4b7b-8f0a-849b8e743ee3"))
+/* interface */ ISkinObject;
+struct __declspec(uuid("e28edc26-37e2-4d65-918b-b4fdc7f3efb8"))
+/* interface */ ISkinImages;
+struct __declspec(uuid("0cd7b375-e9ba-4fa3-a24c-b63ec15b2e87"))
+/* interface */ ISkinImage;
+struct SkinImageInfo;
+struct SkinRect;
+struct SkinRGB;
+struct SkinTextStyle;
+struct SkinARGB;
+struct SkinPoint;
+struct SkinImageSection;
+struct __declspec(uuid("841a1e74-8a91-489f-b687-92bfa7b06e07"))
+/* interface */ ISkinSounds;
+struct __declspec(uuid("4f92c52c-57b6-4f46-a911-cf43a87610b7"))
+/* interface */ ISkinWindow;
+struct __declspec(uuid("7df90993-429d-41c3-ba1d-db8b619d332e"))
+/* interface */ ISkinVisual;
+struct SkinSize;
+struct __declspec(uuid("0ad09e9e-052e-499c-8b0d-6bbee2645992"))
+/* interface */ ISkinButton;
+struct SkinButtonState;
+struct SkinTransitionKey;
+struct SkinLogFont;
+struct SkinEvent;
+struct __declspec(uuid("04538de3-7086-48e8-bd8a-dcaf33ba088e"))
+/* interface */ ISkinForm;
+struct SkinFormFrame;
+struct SkinMenuBar;
+struct SkinPopupMenu;
+struct SkinImageRect;
+struct __declspec(uuid("8d6d95e3-1b8b-4a19-af1f-b1e2db8cfea5"))
+/* interface */ ISkinRadio;
+struct SkinRadioState;
+struct __declspec(uuid("d95d2592-6185-4620-b1d5-fa9cb5dcd4df"))
+/* interface */ ISkinStatic;
+struct __declspec(uuid("0b502553-0e1f-42c4-8077-644877e8039f"))
+/* interface */ ISkinScrollBar;
+struct SkinScrollBarState;
+struct __declspec(uuid("7fd6ff70-8019-4e4d-b18a-1a5634bcc578"))
+/* interface */ ISkinTab;
+struct __declspec(uuid("01348137-9319-499e-891e-1876e5a5814f"))
+/* interface */ ISkinFrame;
+struct SkinPlasmaChannel;
+struct __declspec(uuid("cc759566-8a8a-4f8d-9dd8-3f3c00d5dff3"))
+/* interface */ ISkinAnimation;
+struct __declspec(uuid("ff19f6b2-10d9-46b1-9050-2e8e2c4b2ddd"))
+/* dispinterface */ _ISkinEvents;
+struct __declspec(uuid("6b50a72f-6eb3-47f2-b1b5-c43dfe51a9b5"))
+/* interface */ ISkinFireEvents;
+struct __declspec(uuid("4e4acebe-dbdd-46f4-b1d9-cb49ba8e80e7"))
+/* interface */ ISkinFreeForm;
+struct __declspec(uuid("ab3e2ae9-ef89-47df-a639-56c5b2645999"))
+/* interface */ ISkinPlasma;
+struct __declspec(uuid("b3f3c14c-fed2-45b8-9ee2-036460e8b171"))
+/* dual interface */ ISkinLabel;
+struct __declspec(uuid("b6825411-b152-45fa-9ae3-5f33e7b8bb68"))
+/* interface */ ISkinMiscControls;
+struct /* coclass */ Skin;
+struct /* coclass */ SkinImage;
+struct /* coclass */ SkinButton;
+struct /* coclass */ SkinStatic;
+struct /* coclass */ SkinFrame;
+struct /* coclass */ SkinForm;
+struct /* coclass */ SkinTab;
+struct /* coclass */ SkinScrollBar;
+struct /* coclass */ SkinRadio;
+struct /* coclass */ SkinFreeForm;
+struct /* coclass */ SkinPlasma;
+struct /* coclass */ SkinLabel;
+struct /* coclass */ SkinMiscControls;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(ISkin, __uuidof(ISkin));
+_COM_SMARTPTR_TYPEDEF(ISkinObject, __uuidof(ISkinObject));
+_COM_SMARTPTR_TYPEDEF(ISkinImages, __uuidof(ISkinImages));
+_COM_SMARTPTR_TYPEDEF(ISkinImage, __uuidof(ISkinImage));
+_COM_SMARTPTR_TYPEDEF(ISkinSounds, __uuidof(ISkinSounds));
+_COM_SMARTPTR_TYPEDEF(ISkinWindow, __uuidof(ISkinWindow));
+_COM_SMARTPTR_TYPEDEF(ISkinVisual, __uuidof(ISkinVisual));
+_COM_SMARTPTR_TYPEDEF(ISkinButton, __uuidof(ISkinButton));
+_COM_SMARTPTR_TYPEDEF(ISkinForm, __uuidof(ISkinForm));
+_COM_SMARTPTR_TYPEDEF(ISkinRadio, __uuidof(ISkinRadio));
+_COM_SMARTPTR_TYPEDEF(ISkinStatic, __uuidof(ISkinStatic));
+_COM_SMARTPTR_TYPEDEF(ISkinScrollBar, __uuidof(ISkinScrollBar));
+_COM_SMARTPTR_TYPEDEF(ISkinTab, __uuidof(ISkinTab));
+_COM_SMARTPTR_TYPEDEF(ISkinFrame, __uuidof(ISkinFrame));
+_COM_SMARTPTR_TYPEDEF(ISkinAnimation, __uuidof(ISkinAnimation));
+_COM_SMARTPTR_TYPEDEF(_ISkinEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(ISkinFireEvents, __uuidof(ISkinFireEvents));
+_COM_SMARTPTR_TYPEDEF(ISkinFreeForm, __uuidof(ISkinFreeForm));
+_COM_SMARTPTR_TYPEDEF(ISkinPlasma, __uuidof(ISkinPlasma));
+_COM_SMARTPTR_TYPEDEF(ISkinLabel, __uuidof(ISkinLabel));
+_COM_SMARTPTR_TYPEDEF(ISkinMiscControls, __uuidof(ISkinMiscControls));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("92aea298-248e-45db-97b6-a8c7cd5892e7"))
+ISkin : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall Empty ( ) = 0;
+    virtual HRESULT __stdcall LoadSkin (
+        BSTR SkinFile ) = 0;
+    virtual HRESULT __stdcall SaveSkin (
+        BSTR SkinFile ) = 0;
+    virtual HRESULT __stdcall GetTemplates (
+        struct ISkinObject * * pVal ) = 0;
+    virtual HRESULT __stdcall GetImages (
+        struct ISkinImages * * pVal ) = 0;
+    virtual HRESULT __stdcall GetSounds (
+        struct ISkinSounds * * pVal ) = 0;
+    virtual HRESULT __stdcall ApplySkin (
+        long hWndParent ) = 0;
+    virtual HRESULT __stdcall ApplySkinByName (
+        long hWnd,
+        BSTR Name ) = 0;
+    virtual HRESULT __stdcall ApplySkinByObject (
+        long hWnd,
+        IUnknown * pObjTemplate ) = 0;
+    virtual HRESULT __stdcall RemoveSkin (
+        long hWnd ) = 0;
+    virtual HRESULT __stdcall GetSkinnedWindow (
+        long hWnd,
+        struct ISkinObject * * pVal ) = 0;
+    virtual HRESULT __stdcall GetAuthor (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall SetAuthor (
+        BSTR newVal ) = 0;
+    virtual HRESULT __stdcall GetDescription (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall SetDescription (
+        BSTR newVal ) = 0;
+    virtual HRESULT __stdcall GetApplication (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall SetApplication (
+        BSTR newVal ) = 0;
+    virtual HRESULT __stdcall StartAnimation (
+        long hWnd,
+        BSTR AnimationName ) = 0;
+    virtual HRESULT __stdcall get_ApplyColors (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_ApplyColors (
+        VARIANT_BOOL pVal ) = 0;
+    virtual HRESULT __stdcall get_WindowColor (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_WindowColor (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_WindowTextColor (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_WindowTextColor (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_PanelColor (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_PanelColor (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_PanelTextColor (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall put_PanelTextColor (
+        long pVal ) = 0;
+    virtual HRESULT __stdcall get_SkinClientArea (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall put_SkinClientArea (
+        VARIANT_BOOL pVal ) = 0;
+};
+
+struct __declspec(uuid("5483984c-bfec-4b7b-8f0a-849b8e743ee3"))
+ISkinObject : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetName (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall SetName (
+        BSTR newVal ) = 0;
+    virtual HRESULT __stdcall GetTag (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall SetTag (
+        BSTR newVal ) = 0;
+    virtual HRESULT __stdcall GetSkin (
+        struct ISkin * * pVal ) = 0;
+    virtual HRESULT __stdcall SetSkin (
+        struct ISkin * newVal ) = 0;
+    virtual HRESULT __stdcall AssignTo (
+        enum SkinClone flags,
+        struct ISkinObject * pObject ) = 0;
+    virtual HRESULT __stdcall Clone (
+        enum SkinClone flags,
+        struct ISkinObject * * pObject ) = 0;
+    virtual HRESULT __stdcall OnTimer (
+        long TimePassed ) = 0;
+    virtual HRESULT __stdcall GetParent (
+        struct ISkinObject * * pVal ) = 0;
+    virtual HRESULT __stdcall SetParent (
+        struct ISkinObject * newVal ) = 0;
+    virtual HRESULT __stdcall GetChildCount (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall AddChild (
+        struct ISkinObject * Child ) = 0;
+    virtual HRESULT __stdcall InsertChild (
+        struct ISkinObject * Child,
+        long Before ) = 0;
+    virtual HRESULT __stdcall DeleteChild (
+        long Index ) = 0;
+    virtual HRESULT __stdcall GetChild (
+        long Index,
+        struct ISkinObject * * pVal ) = 0;
+    virtual HRESULT __stdcall SetChild (
+        long Index,
+        struct ISkinObject * newVal ) = 0;
+    virtual HRESULT __stdcall FindObject (
+        BSTR ChildName,
+        struct ISkinObject * * pVal ) = 0;
+    virtual HRESULT __stdcall GetTypeInfo (
+        IUnknown * * pptinfo ) = 0;
+};
+
+enum SkinClone
+{
+    skCloneAll = -1,
+    skProperties = 1,
+    skChildren = 2,
+    skAnimation = 4,
+    skEvents = 8
+};
+
+struct __declspec(uuid("e28edc26-37e2-4d65-918b-b4fdc7f3efb8"))
+ISkinImages : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetImageCount (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall GetImage (
+        long Index,
+        struct ISkinImage * * pVal ) = 0;
+    virtual HRESULT __stdcall SetImage (
+        long Index,
+        struct ISkinImage * newVal ) = 0;
+    virtual HRESULT __stdcall GetImageName (
+        long Index,
+        BSTR * Name ) = 0;
+    virtual HRESULT __stdcall SetImageName (
+        long Index,
+        BSTR Name ) = 0;
+    virtual HRESULT __stdcall AddImage (
+        BSTR Name,
+        struct ISkinImage * Image ) = 0;
+    virtual HRESULT __stdcall LoadImage (
+        BSTR FileName,
+        struct ISkinImage * * Image ) = 0;
+    virtual HRESULT __stdcall FindImage (
+        BSTR Name,
+        struct ISkinImage * * Image ) = 0;
+    virtual HRESULT __stdcall DeleteImage (
+        long Index ) = 0;
+    virtual HRESULT __stdcall GetTempImage (
+        long sx,
+        long sy,
+        struct ISkinImage * * pImage ) = 0;
+    virtual HRESULT __stdcall SetHue (
+        long newVal,
+        VARIANT_BOOL Lossless ) = 0;
+    virtual HRESULT __stdcall GetHue (
+        long * pVal ) = 0;
+};
+
+struct __declspec(uuid("0cd7b375-e9ba-4fa3-a24c-b63ec15b2e87"))
+ISkinImage : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall Create (
+        int sx,
+        int sy ) = 0;
+    virtual HRESULT __stdcall Empty ( ) = 0;
+    virtual HRESULT __stdcall LoadFile (
+        BSTR FileName ) = 0;
+    virtual HRESULT __stdcall SaveFile (
+        BSTR FileName ) = 0;
+    virtual HRESULT __stdcall GetInfo (
+        struct SkinImageInfo * ImageInfo ) = 0;
+    virtual HRESULT __stdcall ApplyColorKey (
+        struct SkinRect * Area,
+        struct SkinRGB * Key ) = 0;
+    virtual HRESULT __stdcall GetRgn (
+        struct SkinRect * Area,
+        unsigned char AlphaThreshold,
+        long * hRegion ) = 0;
+    virtual HRESULT __stdcall DrawText (
+        struct SkinRect * Area,
+        BSTR Text,
+        long hFont,
+        struct SkinTextStyle * TextStyle ) = 0;
+    virtual HRESULT __stdcall GetClipRegion (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall SetClipRegion (
+        long newVal ) = 0;
+    virtual HRESULT __stdcall BitBlt (
+        enum SkinBlend blend,
+        struct SkinRect * Area,
+        struct ISkinImage * Overlay,
+        struct SkinPoint * OverlayCoord ) = 0;
+    virtual HRESULT __stdcall Tile (
+        enum SkinBlend blend,
+        struct SkinRect * Area,
+        struct ISkinImage * Overlay,
+        struct SkinRect * OverlayRect ) = 0;
+    virtual HRESULT __stdcall Stretch (
+        enum SkinBlend blend,
+        struct SkinRect * Area,
+        struct ISkinImage * Overlay,
+        struct SkinRect * OverlayRect ) = 0;
+    virtual HRESULT __stdcall ComposeSection (
+        enum SkinBlend blend,
+        struct SkinRect * Area,
+        struct ISkinImage * Image,
+        struct SkinImageSection * Section ) = 0;
+    virtual HRESULT __stdcall UnPremultiply (
+        struct SkinRect * Area,
+        unsigned char nThreshold ) = 0;
+    virtual HRESULT __stdcall Premultiply (
+        struct SkinRect * Area ) = 0;
+    virtual HRESULT __stdcall DrawToDC (
+        long hdcDest,
+        long XDest,
+        long YDest,
+        long Width,
+        long Height,
+        int XSrc,
+        int YSrc ) = 0;
+    virtual HRESULT __stdcall LockDCForRead (
+        long * hdc ) = 0;
+    virtual HRESULT __stdcall LockDCForReadWrite (
+        struct SkinRect * Area,
+        unsigned char GDIAlpha,
+        long * hdc ) = 0;
+    virtual HRESULT __stdcall UnlockDC ( ) = 0;
+    virtual HRESULT __stdcall Fill (
+        enum SkinBlend blend,
+        struct SkinRect * Area,
+        struct SkinARGB * Color ) = 0;
+    virtual HRESULT __stdcall Transition (
+        struct ISkinImage * InA,
+        struct ISkinImage * InB,
+        float Progress,
+        enum SkinTransition eTransition,
+        enum SkinDirection eDirection ) = 0;
+    virtual HRESULT __stdcall DrawError (
+        struct SkinRect * Area ) = 0;
+    virtual HRESULT __stdcall SetHue (
+        long newVal,
+        VARIANT_BOOL AdjustPixels ) = 0;
+    virtual HRESULT __stdcall GetHue (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall GetPicture (
+        struct IPicture * * pVal ) = 0;
+    virtual HRESULT __stdcall SetPicture (
+        struct IPicture * SourcePicture ) = 0;
+    virtual HRESULT __stdcall DrawToPicture (
+        IPictureDisp * DestPicture,
+        long XDest,
+        long YDest,
+        long Width,
+        long Height,
+        int XSrc,
+        int YSrc ) = 0;
+};
+
+struct SkinImageInfo
+{
+    long Width;
+    long Height;
+    long Pitch;
+    long lpImage;
+    long lpRegionData;
+};
+
+struct SkinRect
+{
+    long left;
+    long top;
+    long right;
+    long bottom;
+};
+
+struct SkinRGB
+{
+    unsigned char Blue;
+    unsigned char Green;
+    unsigned char Red;
+};
+
+enum SkinTextEffect
+{
+    skNoEffect = 0,
+    skShadow = 1,
+    skSoftShadow = 2,
+    skGlow = 3
+};
+
+struct SkinARGB
+{
+    unsigned char Blue;
+    unsigned char Green;
+    unsigned char Red;
+    unsigned char Alpha;
+};
+
+enum SkinTextFlags
+{
+    skJustifyTopLeft = 0,
+    skJustifyTopCenter = 1,
+    skJustifyTopRight = 2,
+    skJustifyCenterLeft = 4,
+    skJustifyCenter = 5,
+    skJustifyCenterRight = 6,
+    skJustifyBottomLeft = 8,
+    skJustifyBottomCenter = 9,
+    skJustifyBottomRight = 10,
+    skRightToLeft = 131072,
+    skEllipsis = 32768
+};
+
+struct SkinTextStyle
+{
+    enum SkinTextEffect Effect;
+    struct SkinRGB TextColor;
+    struct SkinARGB EffectColor;
+    enum SkinTextFlags flags;
+};
+
+enum SkinBlend
+{
+    skOverwrite = 0,
+    skAlphaBlend = 1
+};
+
+struct SkinPoint
+{
+    long x;
+    long y;
+};
+
+enum SkinSectionStretch
+{
+    skNoStretch = 0,
+    skStretchLeft = 1,
+    skStretchRight = 2,
+    skStretchTop = 4,
+    skStretchBottom = 8,
+    skStretchMargins = 15,
+    skStretchClient = 256,
+    skStretchAll = 271
+};
+
+struct SkinImageSection
+{
+    BSTR ImageName;
+    struct SkinRect Rect;
+    struct SkinRect Margins;
+    enum SkinSectionStretch Stretch;
+};
+
+enum SkinTransition
+{
+    skNoTransition = 0,
+    skFade = 1,
+    skDissolve = 2,
+    skMatrix = 3,
+    skField = 4,
+    skSoftSquares = 5,
+    skRotator = 6,
+    skTriangles = 7,
+    skPlasma = 8,
+    skRings = 9,
+    skBarcodes = 10
+};
+
+enum SkinDirection
+{
+    skNoDirection = 0,
+    skLeft = 1,
+    skTop = 2,
+    skRight = 3,
+    skBottom = 4,
+    skTopLeft = 5,
+    skTopRight = 6,
+    skBottomLeft = 7,
+    skBottomRight = 8,
+    skInside = 9,
+    skOutside = 10,
+    skHorizontalIn = 11,
+    skHorizontalOut = 12,
+    skVerticalIn = 13,
+    skVerticalOut = 14
+};
+
+struct __declspec(uuid("841a1e74-8a91-489f-b687-92bfa7b06e07"))
+ISkinSounds : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetSoundCount (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall GetSoundName (
+        long Index,
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall SetSoundName (
+        long Index,
+        BSTR newVal ) = 0;
+    virtual HRESULT __stdcall LoadSound (
+        BSTR FullFileName ) = 0;
+    virtual HRESULT __stdcall DeleteSound (
+        long Index ) = 0;
+    virtual HRESULT __stdcall PlaySound (
+        BSTR Name ) = 0;
+    virtual HRESULT __stdcall EnableSounds (
+        VARIANT_BOOL newVal ) = 0;
+};
+
+struct __declspec(uuid("4f92c52c-57b6-4f46-a911-cf43a87610b7"))
+ISkinWindow : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GethWnd (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall SethWnd (
+        long newVal ) = 0;
+    virtual HRESULT __stdcall RemoveSkin (
+        VARIANT_BOOL bQuick ) = 0;
+    virtual HRESULT __stdcall GetCaptured (
+        struct ISkinVisual * * pVal ) = 0;
+    virtual HRESULT __stdcall SetCaptured (
+        struct ISkinVisual * newVal ) = 0;
+    virtual HRESULT __stdcall GetFocused (
+        struct ISkinVisual * * pVal ) = 0;
+    virtual HRESULT __stdcall SetFocused (
+        struct ISkinVisual * newVal ) = 0;
+    virtual HRESULT __stdcall CheckWindow (
+        long hWnd,
+        VARIANT_BOOL * CanSkinIt ) = 0;
+};
+
+struct __declspec(uuid("7df90993-429d-41c3-ba1d-db8b619d332e"))
+ISkinVisual : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetRect (
+        struct SkinRect * pVal ) = 0;
+    virtual HRESULT __stdcall SetRect (
+        struct SkinRect * newVal ) = 0;
+    virtual HRESULT __stdcall GetAnchors (
+        struct SkinRect * pVal ) = 0;
+    virtual HRESULT __stdcall SetAnchors (
+        struct SkinRect * newVal ) = 0;
+    virtual HRESULT __stdcall GetOffset (
+        struct SkinRect * pVal ) = 0;
+    virtual HRESULT __stdcall SetOffset (
+        struct SkinRect * newVal ) = 0;
+    virtual HRESULT __stdcall GetMinSize (
+        struct SkinSize * pVal ) = 0;
+    virtual HRESULT __stdcall SetMinSize (
+        struct SkinSize * newVal ) = 0;
+    virtual HRESULT __stdcall GetMaxSize (
+        struct SkinSize * pVal ) = 0;
+    virtual HRESULT __stdcall SetMaxSize (
+        struct SkinSize * newVal ) = 0;
+    virtual HRESULT __stdcall DoAlign ( ) = 0;
+    virtual HRESULT __stdcall GetVisible (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall SetVisible (
+        VARIANT_BOOL newVal ) = 0;
+    virtual HRESULT __stdcall GetDynamicRegion (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall SetDynamicRegion (
+        VARIANT_BOOL newVal ) = 0;
+    virtual HRESULT __stdcall GetIsDirty (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall SetIsDirty (
+        VARIANT_BOOL newVal ) = 0;
+    virtual HRESULT __stdcall GetTransparency (
+        enum SkinTransparency * pVal ) = 0;
+    virtual HRESULT __stdcall MouseLeave ( ) = 0;
+    virtual HRESULT __stdcall HitTest (
+        long x,
+        long y,
+        VARIANT_BOOL ProcessChildren,
+        long * Val ) = 0;
+    virtual HRESULT __stdcall Render (
+        struct ISkinImage * Image,
+        struct SkinPoint * Origin ) = 0;
+    virtual HRESULT __stdcall FocusChanged (
+        struct ISkinVisual * NewFocus ) = 0;
+    virtual HRESULT __stdcall CaptureChanged (
+        struct ISkinVisual * NewFocus ) = 0;
+    virtual HRESULT __stdcall KeyDown (
+        short KeyKode,
+        short Shift ) = 0;
+    virtual HRESULT __stdcall KeyUp (
+        short KeyCode,
+        short Shift ) = 0;
+    virtual HRESULT __stdcall KeyPress (
+        short KeyAscii ) = 0;
+    virtual HRESULT __stdcall MouseDblClick (
+        enum SkinMouse Button,
+        long x,
+        long y ) = 0;
+    virtual HRESULT __stdcall MouseDown (
+        enum SkinMouse Button,
+        long x,
+        long y ) = 0;
+    virtual HRESULT __stdcall MouseUp (
+        enum SkinMouse Button,
+        long x,
+        long y ) = 0;
+    virtual HRESULT __stdcall MouseMove (
+        long x,
+        long y ) = 0;
+    virtual HRESULT __stdcall RefreshArea (
+        struct SkinRect * Rect,
+        VARIANT_BOOL Now,
+        VARIANT_BOOL AffectRegion ) = 0;
+    virtual HRESULT __stdcall Refresh ( ) = 0;
+    virtual HRESULT __stdcall CalcRelativeRect (
+        struct ISkinObject * Parent,
+        struct SkinRect * pVal ) = 0;
+    virtual HRESULT __stdcall GetTooltip (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall SetTooltip (
+        BSTR newVal ) = 0;
+};
+
+struct SkinSize
+{
+    long cx;
+    long cy;
+};
+
+enum SkinTransparency
+{
+    skTransparent = 0,
+    skTranslucent = 1,
+    skOpaque = 2
+};
+
+enum SkinMouse
+{
+    skLeftButton = 1,
+    skRightButton = 2
+};
+
+struct __declspec(uuid("0ad09e9e-052e-499c-8b0d-6bbee2645992"))
+ISkinButton : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetNormal (
+        struct SkinButtonState * pVal ) = 0;
+    virtual HRESULT __stdcall SetNormal (
+        struct SkinButtonState * newVal ) = 0;
+    virtual HRESULT __stdcall GetPressed (
+        struct SkinButtonState * pVal ) = 0;
+    virtual HRESULT __stdcall SetPressed (
+        struct SkinButtonState * newVal ) = 0;
+    virtual HRESULT __stdcall GetDefault (
+        struct SkinButtonState * pVal ) = 0;
+    virtual HRESULT __stdcall SetDefault (
+        struct SkinButtonState * newVal ) = 0;
+    virtual HRESULT __stdcall GetFocused (
+        struct SkinButtonState * pVal ) = 0;
+    virtual HRESULT __stdcall SetFocused (
+        struct SkinButtonState * newVal ) = 0;
+    virtual HRESULT __stdcall GetHighlighted (
+        struct SkinButtonState * pVal ) = 0;
+    virtual HRESULT __stdcall SetHighlighted (
+        struct SkinButtonState * newVal ) = 0;
+    virtual HRESULT __stdcall GetDisabled (
+        struct SkinButtonState * pVal ) = 0;
+    virtual HRESULT __stdcall SetDisabled (
+        struct SkinButtonState * newVal ) = 0;
+    virtual HRESULT __stdcall GetCaption (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall SetCaption (
+        BSTR newVal ) = 0;
+    virtual HRESULT __stdcall GetType (
+        enum SkinButtonType * pVal ) = 0;
+    virtual HRESULT __stdcall SetType (
+        enum SkinButtonType newVal ) = 0;
+    virtual HRESULT __stdcall GetFont (
+        struct SkinLogFont * pVal ) = 0;
+    virtual HRESULT __stdcall SetFont (
+        struct SkinLogFont * newVal ) = 0;
+    virtual HRESULT __stdcall GetAlphaBlend (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall SetAlphaBlend (
+        VARIANT_BOOL newVal ) = 0;
+    virtual HRESULT __stdcall GetOnClick (
+        struct SkinEvent * pVal ) = 0;
+    virtual HRESULT __stdcall SetOnClick (
+        struct SkinEvent * newVal ) = 0;
+    virtual HRESULT __stdcall GetOnMouseIn (
+        struct SkinEvent * pVal ) = 0;
+    virtual HRESULT __stdcall SetOnMouseIn (
+        struct SkinEvent * newVal ) = 0;
+    virtual HRESULT __stdcall GetOnMouseOut (
+        struct SkinEvent * pVal ) = 0;
+    virtual HRESULT __stdcall SetOnMouseOut (
+        struct SkinEvent * newVal ) = 0;
+    virtual HRESULT __stdcall SetIcon (
+        long hIcon,
+        long cx,
+        long cy ) = 0;
+    virtual HRESULT __stdcall GetIsDisabled (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall SetIsDisabled (
+        VARIANT_BOOL newVal ) = 0;
+};
+
+enum SkinSpeed
+{
+    skLinear = 0,
+    skAccelerated = 1,
+    skDecelerated = 3
+};
+
+struct SkinTransitionKey
+{
+    enum SkinTransition Transition;
+    enum SkinDirection Direction;
+    enum SkinSpeed Speed;
+    long Time;
+};
+
+struct SkinButtonState
+{
+    struct SkinImageSection Image;
+    struct SkinTransitionKey Transition;
+    struct SkinTextStyle TextStyle;
+};
+
+enum SkinButtonType
+{
+    skNoAction = 0,
+    skClose = 1,
+    skMaximize = 2,
+    skRestore = 3,
+    skMaximizeRestore = 4,
+    skMinimize = 5,
+    skHelp = 6,
+    skSysMenu = 7
+};
+
+struct SkinLogFont
+{
+    long lfHeight;
+    long lfWidth;
+    long lfEscapement;
+    long lfOrientation;
+    long lfWeight;
+    unsigned char lfItalic;
+    unsigned char lfUnderline;
+    unsigned char lfStrikeOut;
+    unsigned char lfCharSet;
+    unsigned char lfOutPrecision;
+    unsigned char lfClipPrecision;
+    unsigned char lfQuality;
+    unsigned char lfPitchAndFamily;
+    unsigned char lfFaceName[32];
+};
+
+struct SkinEvent
+{
+    BSTR Animation;
+    BSTR Sound;
+};
+
+struct __declspec(uuid("04538de3-7086-48e8-bd8a-dcaf33ba088e"))
+ISkinForm : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetActiveFrame (
+        struct SkinFormFrame * pVal ) = 0;
+    virtual HRESULT __stdcall SetActiveFrame (
+        struct SkinFormFrame * newVal ) = 0;
+    virtual HRESULT __stdcall GetInactiveFrame (
+        struct SkinFormFrame * pVal ) = 0;
+    virtual HRESULT __stdcall SetInactiveFrame (
+        struct SkinFormFrame * newVal ) = 0;
+    virtual HRESULT __stdcall GetMenuBar (
+        struct SkinMenuBar * pVal ) = 0;
+    virtual HRESULT __stdcall SetMenuBar (
+        struct SkinMenuBar * newVal ) = 0;
+    virtual HRESULT __stdcall GetPopupMenu (
+        struct SkinPopupMenu * pVal ) = 0;
+    virtual HRESULT __stdcall SetPopupMenu (
+        struct SkinPopupMenu * newVal ) = 0;
+    virtual HRESULT __stdcall GetBackground (
+        struct SkinImageRect * pVal ) = 0;
+    virtual HRESULT __stdcall SetBackground (
+        struct SkinImageRect * newVal ) = 0;
+    virtual HRESULT __stdcall GetBackColor (
+        struct SkinRGB * pVal ) = 0;
+    virtual HRESULT __stdcall SetBackColor (
+        struct SkinRGB * newVal ) = 0;
+    virtual HRESULT __stdcall GetMargins (
+        struct SkinRect * pVal ) = 0;
+    virtual HRESULT __stdcall SetMargins (
+        struct SkinRect * newVal ) = 0;
+    virtual HRESULT __stdcall GetOnActivate (
+        struct SkinEvent * pVal ) = 0;
+    virtual HRESULT __stdcall SetOnActivate (
+        struct SkinEvent * newVal ) = 0;
+    virtual HRESULT __stdcall GetOnDeactivate (
+        struct SkinEvent * pVal ) = 0;
+    virtual HRESULT __stdcall SetOnDeactivate (
+        struct SkinEvent * newVal ) = 0;
+    virtual HRESULT __stdcall GetOnMaximize (
+        struct SkinEvent * pVal ) = 0;
+    virtual HRESULT __stdcall SetOnMaximize (
+        struct SkinEvent * newVal ) = 0;
+    virtual HRESULT __stdcall GetOnRestore (
+        struct SkinEvent * pVal ) = 0;
+    virtual HRESULT __stdcall SetOnRestore (
+        struct SkinEvent * newVal ) = 0;
+    virtual HRESULT __stdcall TrackPopupMenu (
+        long hMenu,
+        long x,
+        long y ) = 0;
+};
+
+struct SkinFormFrame
+{
+    struct SkinImageSection left;
+    struct SkinImageSection right;
+    struct SkinImageSection top;
+    struct SkinImageSection bottom;
+};
+
+struct SkinMenuBar
+{
+    struct SkinImageSection Image;
+    struct SkinLogFont Font;
+    struct SkinTextStyle NormalText;
+    struct SkinTextStyle GrayedText;
+    struct SkinTextStyle ActiveText;
+    struct SkinTextStyle PressedText;
+    struct SkinARGB ActiveColor;
+    struct SkinARGB PressedColor;
+    struct SkinImageSection ActiveImage;
+    struct SkinImageSection PressedImage;
+};
+
+struct SkinPopupMenu
+{
+    struct SkinImageSection Frame;
+    struct SkinLogFont Font;
+    struct SkinTextStyle NormalText;
+    struct SkinTextStyle GrayedText;
+    struct SkinTextStyle ActiveText;
+    struct SkinARGB ActiveColor;
+    struct SkinImageSection ActiveImage;
+    struct SkinARGB SeparatorColor;
+    struct SkinImageSection SeparatorImage;
+};
+
+struct SkinImageRect
+{
+    BSTR ImageName;
+    struct SkinRect Rect;
+};
+
+struct __declspec(uuid("8d6d95e3-1b8b-4a19-af1f-b1e2db8cfea5"))
+ISkinRadio : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetNormal (
+        struct SkinRadioState * pVal ) = 0;
+    virtual HRESULT __stdcall SetNormal (
+        struct SkinRadioState * pVal ) = 0;
+    virtual HRESULT __stdcall GetSelected (
+        struct SkinRadioState * pVal ) = 0;
+    virtual HRESULT __stdcall SetSelected (
+        struct SkinRadioState * pVal ) = 0;
+    virtual HRESULT __stdcall GetGreyedNormal (
+        struct SkinRadioState * pVal ) = 0;
+    virtual HRESULT __stdcall SetGreyedNormal (
+        struct SkinRadioState * pVal ) = 0;
+    virtual HRESULT __stdcall GetGreyedSelected (
+        struct SkinRadioState * pVal ) = 0;
+    virtual HRESULT __stdcall SetGreyedSelected (
+        struct SkinRadioState * pVal ) = 0;
+    virtual HRESULT __stdcall GetHighlightedNormal (
+        struct SkinRadioState * pVal ) = 0;
+    virtual HRESULT __stdcall SetHighlightedNormal (
+        struct SkinRadioState * pVal ) = 0;
+    virtual HRESULT __stdcall GetHighlightedSelected (
+        struct SkinRadioState * pVal ) = 0;
+    virtual HRESULT __stdcall SetHighlightedSelected (
+        struct SkinRadioState * pVal ) = 0;
+    virtual HRESULT __stdcall GetDisabled (
+        struct SkinRadioState * pVal ) = 0;
+    virtual HRESULT __stdcall SetDisabled (
+        struct SkinRadioState * pVal ) = 0;
+    virtual HRESULT __stdcall GetType (
+        enum SkinRadioType * pVal ) = 0;
+    virtual HRESULT __stdcall SetType (
+        enum SkinRadioType newVal ) = 0;
+    virtual HRESULT __stdcall GetCaption (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall SetCaption (
+        BSTR newVal ) = 0;
+    virtual HRESULT __stdcall GetIsDisabled (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall SetIsDisabled (
+        VARIANT_BOOL newVal ) = 0;
+    virtual HRESULT __stdcall GetIsChecked (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall SetIsChecked (
+        VARIANT_BOOL newVal ) = 0;
+};
+
+struct SkinRadioState
+{
+    struct SkinImageRect Image;
+    struct SkinTransitionKey Transition;
+    struct SkinTextStyle TextStyle;
+};
+
+enum SkinRadioType
+{
+    skCheckBox = 0,
+    skRadioButton = 1
+};
+
+struct __declspec(uuid("d95d2592-6185-4620-b1d5-fa9cb5dcd4df"))
+ISkinStatic : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetCaption (
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall SetCaption (
+        BSTR newVal ) = 0;
+    virtual HRESULT __stdcall GetFont (
+        struct SkinLogFont * pVal ) = 0;
+    virtual HRESULT __stdcall SetFont (
+        struct SkinLogFont * newVal ) = 0;
+    virtual HRESULT __stdcall GetTextStyle (
+        struct SkinTextStyle * pVal ) = 0;
+    virtual HRESULT __stdcall SetTextStyle (
+        struct SkinTextStyle * newVal ) = 0;
+    virtual HRESULT __stdcall GetBackground (
+        struct SkinImageSection * pVal ) = 0;
+    virtual HRESULT __stdcall SetBackground (
+        struct SkinImageSection * newVal ) = 0;
+    virtual HRESULT __stdcall GetBackColor (
+        struct SkinARGB * pVal ) = 0;
+    virtual HRESULT __stdcall SetBackColor (
+        struct SkinARGB * newVal ) = 0;
+    virtual HRESULT __stdcall GetType (
+        enum SkinStaticType * pVal ) = 0;
+    virtual HRESULT __stdcall SetType (
+        enum SkinStaticType newVal ) = 0;
+    virtual HRESULT __stdcall GetAlphaBlend (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall SetAlphaBlend (
+        VARIANT_BOOL newVal ) = 0;
+    virtual HRESULT __stdcall GetOnMouseDown (
+        struct SkinEvent * pVal ) = 0;
+    virtual HRESULT __stdcall SetOnMouseDown (
+        struct SkinEvent * newVal ) = 0;
+    virtual HRESULT __stdcall GetOnMouseUp (
+        struct SkinEvent * pVal ) = 0;
+    virtual HRESULT __stdcall SetOnMouseUp (
+        struct SkinEvent * newVal ) = 0;
+    virtual HRESULT __stdcall GetOnMouseIn (
+        struct SkinEvent * pVal ) = 0;
+    virtual HRESULT __stdcall SetOnMouseIn (
+        struct SkinEvent * newVal ) = 0;
+    virtual HRESULT __stdcall GetOnMouseOut (
+        struct SkinEvent * pVal ) = 0;
+    virtual HRESULT __stdcall SetOnMouseOut (
+        struct SkinEvent * newVal ) = 0;
+};
+
+enum SkinStaticType
+{
+    skStatic = 0,
+    skDragArea = 2,
+    skWindowTitle = -1000,
+    skResizeTop = 12,
+    skResizeTopLeft = 13,
+    skResizeTopRight = 14,
+    skResizeBottom = 15,
+    skResizeBottomLeft = 16,
+    skResizeBottomRight = 17,
+    skResizeLeft = 10,
+    skResizeRight = 11
+};
+
+struct __declspec(uuid("0b502553-0e1f-42c4-8077-644877e8039f"))
+ISkinScrollBar : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetNormal (
+        struct SkinScrollBarState * pVal ) = 0;
+    virtual HRESULT __stdcall SetNormal (
+        struct SkinScrollBarState * newVal ) = 0;
+    virtual HRESULT __stdcall GetPressed (
+        struct SkinScrollBarState * pVal ) = 0;
+    virtual HRESULT __stdcall SetPressed (
+        struct SkinScrollBarState * newVal ) = 0;
+    virtual HRESULT __stdcall GetHighlighted (
+        struct SkinScrollBarState * pVal ) = 0;
+    virtual HRESULT __stdcall SetHighlighted (
+        struct SkinScrollBarState * newVal ) = 0;
+    virtual HRESULT __stdcall GetDisabled (
+        struct SkinScrollBarState * pVal ) = 0;
+    virtual HRESULT __stdcall SetDisabled (
+        struct SkinScrollBarState * newVal ) = 0;
+    virtual HRESULT __stdcall GetType (
+        enum SkinScrollType * pVal ) = 0;
+    virtual HRESULT __stdcall SetType (
+        enum SkinScrollType newVal ) = 0;
+    virtual HRESULT __stdcall GetMin (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall SetMin (
+        long newVal ) = 0;
+    virtual HRESULT __stdcall GetMax (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall SetMax (
+        long newVal ) = 0;
+    virtual HRESULT __stdcall GetPage (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall SetPage (
+        long newVal ) = 0;
+    virtual HRESULT __stdcall GetLine (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall SetLine (
+        long newVal ) = 0;
+    virtual HRESULT __stdcall GetPosition (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall SetPosition (
+        long newVal ) = 0;
+};
+
+struct SkinScrollBarState
+{
+    struct SkinImageRect Arrow1;
+    struct SkinImageRect Arrow2;
+    struct SkinImageSection ScrollBar;
+    struct SkinImageSection Thumb;
+};
+
+enum SkinScrollType
+{
+    skHorizontal = 0,
+    skVertical = 1
+};
+
+struct __declspec(uuid("7fd6ff70-8019-4e4d-b18a-1a5634bcc578"))
+ISkinTab : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetNormal (
+        struct SkinButtonState * pVal ) = 0;
+    virtual HRESULT __stdcall SetNormal (
+        struct SkinButtonState * newVal ) = 0;
+    virtual HRESULT __stdcall GetPressed (
+        struct SkinButtonState * pVal ) = 0;
+    virtual HRESULT __stdcall SetPressed (
+        struct SkinButtonState * newVal ) = 0;
+    virtual HRESULT __stdcall GetFocused (
+        struct SkinButtonState * pVal ) = 0;
+    virtual HRESULT __stdcall SetFocused (
+        struct SkinButtonState * newVal ) = 0;
+    virtual HRESULT __stdcall GetHighlighted (
+        struct SkinButtonState * pVal ) = 0;
+    virtual HRESULT __stdcall SetHighlighted (
+        struct SkinButtonState * newVal ) = 0;
+    virtual HRESULT __stdcall GetDisabled (
+        struct SkinButtonState * pVal ) = 0;
+    virtual HRESULT __stdcall SetDisabled (
+        struct SkinButtonState * newVal ) = 0;
+    virtual HRESULT __stdcall GetFrame (
+        struct SkinImageSection * pVal ) = 0;
+    virtual HRESULT __stdcall SetFrame (
+        struct SkinImageSection * newVal ) = 0;
+    virtual HRESULT __stdcall GetAlphaBlend (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall SetAlphaBlend (
+        VARIANT_BOOL newVal ) = 0;
+};
+
+struct __declspec(uuid("01348137-9319-499e-891e-1876e5a5814f"))
+ISkinFrame : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetFrame (
+        struct SkinImageSection * pVal ) = 0;
+    virtual HRESULT __stdcall SetFrame (
+        struct SkinImageSection * newVal ) = 0;
+    virtual HRESULT __stdcall GetCaptionColor (
+        struct SkinARGB * pVal ) = 0;
+    virtual HRESULT __stdcall SetCaptionColor (
+        struct SkinARGB * newVal ) = 0;
+    virtual HRESULT __stdcall GetCaptionImage (
+        struct SkinImageSection * pVal ) = 0;
+    virtual HRESULT __stdcall SetCaptionImage (
+        struct SkinImageSection * newVal ) = 0;
+    virtual HRESULT __stdcall GetTextStyle (
+        struct SkinTextStyle * pVal ) = 0;
+    virtual HRESULT __stdcall SetTextStyle (
+        struct SkinTextStyle * newVal ) = 0;
+    virtual HRESULT __stdcall GetAlphaBlend (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall SetAlphaBlend (
+        VARIANT_BOOL newVal ) = 0;
+};
+
+enum SkinPlasmaType
+{
+    skNoPlasma = 0,
+    skSinePlasma = 1,
+    skGridPlasma = 2,
+    skSawPlasma = 3,
+    skSquarePlasma = 4,
+    skRandomPlasma = 5
+};
+
+enum SkinLayeredWindow
+{
+    skRegionBased = 0,
+    skLayeredEnable = 1,
+    skLayeredDisable = 2
+};
+
+struct SkinPlasmaChannel
+{
+    enum SkinPlasmaType PlasmaType;
+    struct SkinImageRect Image;
+    long Scale;
+    long Speed;
+};
+
+enum SkinLabelAlignment
+{
+    skLabelLeft = 0,
+    skLabelCenter = 1,
+    skLabelRight = 2
+};
+
+struct __declspec(uuid("cc759566-8a8a-4f8d-9dd8-3f3c00d5dff3"))
+ISkinAnimation : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetAnimationCount (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall GetAnimationName (
+        long AnimIndex,
+        BSTR * pVal ) = 0;
+    virtual HRESULT __stdcall SetAnimationName (
+        long AnimIndex,
+        BSTR newVal ) = 0;
+    virtual HRESULT __stdcall AddAnimation (
+        BSTR AnimationName ) = 0;
+    virtual HRESULT __stdcall DeleteAnimation (
+        long Index ) = 0;
+    virtual HRESULT __stdcall GetKeyCount (
+        long AnimIndex,
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall GetKeyObject (
+        long AnimIndex,
+        long KeyIndex,
+        struct ISkinObject * * pKey ) = 0;
+    virtual HRESULT __stdcall SetKeyObject (
+        long AnimIndex,
+        long KeyIndex,
+        struct ISkinObject * Key ) = 0;
+    virtual HRESULT __stdcall GetKey (
+        long AnimIndex,
+        long KeyIndex,
+        struct SkinTransitionKey * Key ) = 0;
+    virtual HRESULT __stdcall SetKey (
+        long AnimIndex,
+        long KeyIndex,
+        struct SkinTransitionKey * Key ) = 0;
+    virtual HRESULT __stdcall AddKey (
+        long AnimIndex,
+        struct ISkinObject * Key,
+        struct SkinTransitionKey * Transition ) = 0;
+    virtual HRESULT __stdcall DeleteKey (
+        long AnimIndex,
+        long KeyIndex ) = 0;
+    virtual HRESULT __stdcall StartAnimation (
+        long AnimIndex ) = 0;
+    virtual HRESULT __stdcall StopAnimation ( ) = 0;
+};
+
+struct __declspec(uuid("ff19f6b2-10d9-46b1-9050-2e8e2c4b2ddd"))
+_ISkinEvents : IDispatch
+{};
+
+struct __declspec(uuid("6b50a72f-6eb3-47f2-b1b5-c43dfe51a9b5"))
+ISkinFireEvents : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall FireEvent (
+        struct ISkinObject * Source,
+        BSTR EventName,
+        struct SkinEvent * pEvent ) = 0;
+    virtual HRESULT __stdcall FireRender (
+        struct ISkinObject * Source,
+        struct ISkinImage * Image,
+        long ImageX,
+        long ImageY ) = 0;
+    virtual HRESULT __stdcall FireClick (
+        struct ISkinObject * Source ) = 0;
+    virtual HRESULT __stdcall FireDblClick (
+        struct ISkinObject * Source ) = 0;
+    virtual HRESULT __stdcall FireMouseDown (
+        struct ISkinObject * Source,
+        enum SkinMouse Button,
+        long x,
+        long y ) = 0;
+    virtual HRESULT __stdcall FireMouseUp (
+        struct ISkinObject * Source,
+        enum SkinMouse Button,
+        long x,
+        long y ) = 0;
+    virtual HRESULT __stdcall FireMouseIn (
+        struct ISkinObject * Source ) = 0;
+    virtual HRESULT __stdcall FireMouseOut (
+        struct ISkinObject * Source ) = 0;
+    virtual HRESULT __stdcall FireMouseMove (
+        struct ISkinObject * Source,
+        long x,
+        long y ) = 0;
+    virtual HRESULT __stdcall FireScroll (
+        struct ISkinObject * Source,
+        long NewPos ) = 0;
+    virtual HRESULT __stdcall FireScrollTrack (
+        struct ISkinObject * Source,
+        long NewPos ) = 0;
+    virtual HRESULT __stdcall FireTimer (
+        struct ISkinObject * Source,
+        long PassedTime ) = 0;
+};
+
+struct __declspec(uuid("4e4acebe-dbdd-46f4-b1d9-cb49ba8e80e7"))
+ISkinFreeForm : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetBackground (
+        struct SkinImageRect * pVal ) = 0;
+    virtual HRESULT __stdcall SetBackground (
+        struct SkinImageRect * newVal ) = 0;
+    virtual HRESULT __stdcall GetLayeredWindow (
+        enum SkinLayeredWindow * pVal ) = 0;
+    virtual HRESULT __stdcall SetLayeredWindow (
+        enum SkinLayeredWindow newVal ) = 0;
+    virtual HRESULT __stdcall GetThreshold (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall SetThreshold (
+        long newVal ) = 0;
+    virtual HRESULT __stdcall GetShowTransition (
+        struct SkinTransitionKey * pVal ) = 0;
+    virtual HRESULT __stdcall SetShowTransition (
+        struct SkinTransitionKey * newVal ) = 0;
+    virtual HRESULT __stdcall GetPopupMenu (
+        struct SkinPopupMenu * pVal ) = 0;
+    virtual HRESULT __stdcall SetPopupMenu (
+        struct SkinPopupMenu * newVal ) = 0;
+    virtual HRESULT __stdcall GetOnShow (
+        struct SkinEvent * pVal ) = 0;
+    virtual HRESULT __stdcall SetOnShow (
+        struct SkinEvent * newVal ) = 0;
+    virtual HRESULT __stdcall GetOnActivate (
+        struct SkinEvent * pVal ) = 0;
+    virtual HRESULT __stdcall SetOnActivate (
+        struct SkinEvent * newVal ) = 0;
+    virtual HRESULT __stdcall GetOnDeactivate (
+        struct SkinEvent * pVal ) = 0;
+    virtual HRESULT __stdcall SetOnDeactivate (
+        struct SkinEvent * newVal ) = 0;
+    virtual HRESULT __stdcall GetOnMouseIn (
+        struct SkinEvent * pVal ) = 0;
+    virtual HRESULT __stdcall SetOnMouseIn (
+        struct SkinEvent * newVal ) = 0;
+    virtual HRESULT __stdcall GetOnMouseOut (
+        struct SkinEvent * pVal ) = 0;
+    virtual HRESULT __stdcall SetOnMouseOut (
+        struct SkinEvent * newVal ) = 0;
+    virtual HRESULT __stdcall TrackPopupMenu (
+        long hMenu,
+        long x,
+        long y ) = 0;
+};
+
+struct __declspec(uuid("ab3e2ae9-ef89-47df-a639-56c5b2645999"))
+ISkinPlasma : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetColorA (
+        struct SkinARGB * pVal ) = 0;
+    virtual HRESULT __stdcall SetColorA (
+        struct SkinARGB * newVal ) = 0;
+    virtual HRESULT __stdcall GetColorB (
+        struct SkinARGB * pVal ) = 0;
+    virtual HRESULT __stdcall SetColorB (
+        struct SkinARGB * newVal ) = 0;
+    virtual HRESULT __stdcall GetHorizontal (
+        struct SkinPlasmaChannel * pVal ) = 0;
+    virtual HRESULT __stdcall SetHorizontal (
+        struct SkinPlasmaChannel * newVal ) = 0;
+    virtual HRESULT __stdcall GetVertical (
+        struct SkinPlasmaChannel * pVal ) = 0;
+    virtual HRESULT __stdcall SetVertical (
+        struct SkinPlasmaChannel * newVal ) = 0;
+    virtual HRESULT __stdcall GetDiagonalA (
+        struct SkinPlasmaChannel * pVal ) = 0;
+    virtual HRESULT __stdcall SetDiagonalA (
+        struct SkinPlasmaChannel * newVal ) = 0;
+    virtual HRESULT __stdcall GetDiagonalB (
+        struct SkinPlasmaChannel * pVal ) = 0;
+    virtual HRESULT __stdcall SetDiagonalB (
+        struct SkinPlasmaChannel * newVal ) = 0;
+    virtual HRESULT __stdcall GetAlphaBlend (
+        VARIANT_BOOL * pVal ) = 0;
+    virtual HRESULT __stdcall SetAlphaBlend (
+        VARIANT_BOOL newVal ) = 0;
+};
+
+struct __declspec(uuid("b3f3c14c-fed2-45b8-9ee2-036460e8b171"))
+ISkinLabel : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall get_hWnd (
+        long * phwnd ) = 0;
+    virtual HRESULT __stdcall put_Caption (
+        BSTR pstrCaption ) = 0;
+    virtual HRESULT __stdcall get_Caption (
+        BSTR * pstrCaption ) = 0;
+    virtual HRESULT __stdcall put_Font (
+        IFontDisp * pFont ) = 0;
+    virtual HRESULT __stdcall putref_Font (
+        IFontDisp * pFont ) = 0;
+    virtual HRESULT __stdcall get_Font (
+        IFontDisp * * pFont ) = 0;
+    virtual HRESULT __stdcall put_Alignment (
+        enum SkinLabelAlignment pVal ) = 0;
+    virtual HRESULT __stdcall get_Alignment (
+        enum SkinLabelAlignment * pVal ) = 0;
+    virtual HRESULT __stdcall put_Enabled (
+        VARIANT_BOOL Enabled ) = 0;
+    virtual HRESULT __stdcall get_Enabled (
+        VARIANT_BOOL * Enabled ) = 0;
+};
+
+struct __declspec(uuid("b6825411-b152-45fa-9ae3-5f33e7b8bb68"))
+ISkinMiscControls : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall GetFrame (
+        struct SkinImageSection * pVal ) = 0;
+    virtual HRESULT __stdcall SetFrame (
+        struct SkinImageSection * newVal ) = 0;
+    virtual HRESULT __stdcall GetMDIClient (
+        struct SkinImageSection * pVal ) = 0;
+    virtual HRESULT __stdcall SetMDIClient (
+        struct SkinImageSection * newVal ) = 0;
+    virtual HRESULT __stdcall GetToolbar (
+        struct SkinImageSection * pVal ) = 0;
+    virtual HRESULT __stdcall SetToolbar (
+        struct SkinImageSection * newVal ) = 0;
+    virtual HRESULT __stdcall GetToolbarNormal (
+        struct SkinImageSection * pVal ) = 0;
+    virtual HRESULT __stdcall SetToolbarNormal (
+        struct SkinImageSection * newVal ) = 0;
+    virtual HRESULT __stdcall GetToolbarPressed (
+        struct SkinImageSection * pVal ) = 0;
+    virtual HRESULT __stdcall SetToolbarPressed (
+        struct SkinImageSection * newVal ) = 0;
+    virtual HRESULT __stdcall GetToolbarHighlighted (
+        struct SkinImageSection * pVal ) = 0;
+    virtual HRESULT __stdcall SetToolbarHighlighted (
+        struct SkinImageSection * newVal ) = 0;
+    virtual HRESULT __stdcall GetToolbarDisabled (
+        struct SkinImageSection * pVal ) = 0;
+    virtual HRESULT __stdcall SetToolbarDisabled (
+        struct SkinImageSection * newVal ) = 0;
+    virtual HRESULT __stdcall GetStatusBar (
+        struct SkinImageSection * pVal ) = 0;
+    virtual HRESULT __stdcall SetStatusBar (
+        struct SkinImageSection * newVal ) = 0;
+    virtual HRESULT __stdcall GetStatusBarItem (
+        struct SkinImageSection * pVal ) = 0;
+    virtual HRESULT __stdcall SetStatusBarItem (
+        struct SkinImageSection * newVal ) = 0;
+};
+
+struct __declspec(uuid("ba8c584b-209c-4d54-8bb1-8ab5f1dca18e"))
+Skin;
+    // [ default ] interface ISkin
+    // [ default, source ] dispinterface _ISkinEvents
+
+struct __declspec(uuid("795514cb-a81c-48f6-87ab-5b22d433d5d8"))
+SkinImage;
+    // [ default ] interface ISkinImage
+
+struct __declspec(uuid("62289cbe-3be2-4ba9-ac20-a911c900039a"))
+SkinButton;
+    // [ default ] interface ISkinButton
+
+struct __declspec(uuid("13afa3a3-5687-487c-93f2-63d5da468f4e"))
+SkinStatic;
+    // [ default ] interface ISkinStatic
+
+struct __declspec(uuid("edba2aac-8a00-4eed-a2e4-74bfb760be10"))
+SkinFrame;
+    // [ default ] interface ISkinFrame
+
+struct __declspec(uuid("66a21aea-5a05-46b5-b7cd-c1aaaf4770cd"))
+SkinForm;
+    // [ default ] interface ISkinForm
+
+struct __declspec(uuid("e28dd8a6-e9bc-4d3e-a7f7-bc9644138ce2"))
+SkinTab;
+    // [ default ] interface ISkinTab
+
+struct __declspec(uuid("b195fe25-16d9-4d1b-ad10-0701f9a5e277"))
+SkinScrollBar;
+    // [ default ] interface ISkinScrollBar
+
+struct __declspec(uuid("5aaecb3b-3d56-47c7-8706-77899e73802a"))
+SkinRadio;
+    // [ default ] interface ISkinRadio
+
+struct __declspec(uuid("ec2ec911-e047-4810-9535-6cafe1adc3ad"))
+SkinFreeForm;
+    // [ default ] interface ISkinFreeForm
+
+struct __declspec(uuid("00f442c2-5c9e-4ae5-af7d-fb4e0350c2e3"))
+SkinPlasma;
+    // [ default ] interface ISkinPlasma
+
+struct __declspec(uuid("d1698320-77bd-4776-96fd-c3c8d71e57e2"))
+SkinLabel;
+    // [ default ] interface ISkinLabel
+
+struct __declspec(uuid("32239586-29de-4268-8af3-ce7658d3d672"))
+SkinMiscControls;
+    // [ default ] interface ISkinMiscControls
+
+} // namespace ACTIVESKINLib
+
+#pragma pack(pop)
