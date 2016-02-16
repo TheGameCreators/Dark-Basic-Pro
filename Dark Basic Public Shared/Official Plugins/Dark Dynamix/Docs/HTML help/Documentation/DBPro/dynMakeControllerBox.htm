@@ -1,0 +1,56 @@
+<!--
+CONSTRUCTION
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN MAKE CONTROLLER BOX</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">bool</span>
+		DYN MAKE CONTROLLER BOX
+		<span class="parameters">(int objectID, float yOffset)
+		</span>
+		<br><br>Creates a character controller for the given object, character controllers are not controlled by the simulation but by the user. 
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the object you wish the controller to represent.
+		<br>yOffset - Most character models have their local origin at their feet, use this command to raise the controller to the same position as your character. This value will usually be half the characters height.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>- TRUE if successful, FALSE otherwise. 
+		<br>
+
+<br><br>
+<center>
+-------------------------------------------------------------------------------
+</center>
+
+		<span class="returns">bool</span>
+		DYN MAKE CONTROLLER BOX
+		<span class="parameters">(int objectID, float yOffset, float slopeLimit, float stepOffset)
+		</span>
+		<br><br>Creates a character controller for the given object, character controllers are not controlled by the simulation but by the user. 
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the object you wish the controller to represent.
+		<br>yOffset - Most character models have their local origin at their feet, use this command to raise the controller to the same position as your character. This value will usually be half the characters height.
+		<br>slopeLimit - Maximum slope, in degrees, that the controller will be able to climb.
+		<br>stepOffset - Maximum step height that the controller will be able to climb.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>- TRUE if successful, FALSE otherwise. 
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

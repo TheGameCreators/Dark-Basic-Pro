@@ -1,0 +1,31 @@
+<!--
+FLUID/PARTICLES
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN FLUID SET SIMULATION METHOD</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns"></span>
+		DYN FLUID SET SIMULATION METHOD
+		<span class="parameters">(int fluidID, int method)
+		</span>
+		<br><br>Sets the simulation method for the fluid, a fluid simulation would need the particles to interact with each other while a particle simulation may not. Can either be set to NX_F_SPH, NX_F_NO_PARTICLE_INTERACTION or NX_F_MIXED_MODE. Note that depending on the spatial arrangement of the particles, switching from NX_F_NO_PARTICLE_INTERACTION or NX_F_MIXED_MODE to NX_F_SPH might lead to an unstable simulation state.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>fluidID - ID number of the fluid.
+		<br>method - NX_F_SPH = 1, NX_F_NO_PARTICLE_INTERACTION = 2, NX_F_MIXED_MODE = 4
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

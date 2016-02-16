@@ -1,0 +1,55 @@
+<!--
+RIGID BODY
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN SET MASS</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns"></span>
+		DYN SET MASS
+		<span class="parameters">(int objectID, float mass)
+		</span>
+		<br><br>Sets the mass of the given actor, mass must be positive and actor must be dynamic. This command does not update the inertial properties of the actor, to change the inertia tensor use the command that updates mass from shapes.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the object the actor represents in the simulation.
+		<br>mass - New mass of the given actor.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+
+<br><br>
+<center>
+-------------------------------------------------------------------------------
+</center>
+
+		<span class="returns"></span>
+		DYN SET MASS
+		<span class="parameters">(int objectID, int limbID, float mass)
+		</span>
+		<br><br>Sets the mass of the given actor, mass must be positive and actor must be dynamic. This command does not update the inertial properties of the actor, to change the inertia tensor use the command that updates mass from shapes. Use this overload if your actor was created from a limb/bone.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the owning object.
+		<br>limbID - ID number of the limb the actor represents in the simulation.
+		<br>mass - New mass of the given actor.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

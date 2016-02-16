@@ -1,0 +1,396 @@
+<HTML>
+   <HEAD>
+        <title> Joints </title>
+	<link rel="stylesheet" type="text/css" href="ExampleDocs.css"/>
+   </HEAD>
+   
+   <BODY id = "wrap">
+         <center>
+             <img src = "Dark Dynamix logo.png" width = 675px height = 210px/>
+            <br>  <br>    
+            <H1>Joints</H1> 
+        </center>
+
+         <br>
+         <H2> What's a joint? </H2>
+         Joints provide a consistent way to connect two actors. They require that the two actors
+         always move relative to each other. The specific way in which they limit movement is 
+         determined by the type of joint. We first create a joint descriptor which will hold
+         all the information about what type of joint we are making, we can then make as many 
+         joints as we like using this descriptor.
+         <br><br>
+         The joint we use is known as a 6DOF joint, this can be configured to model nearly any joint
+         imaginable. 
+         Each degree of freedom - both linear and angular - can be selectively locked or freed,
+         and separate limits can be applied to each. The 6 DOF joint provides motor drive on all
+         axes independently, and also allows soft limits. 
+         When constraining the angular motion of the joint, rotation around the x-axis is referred 
+         to as twist, rotation around the y-axis as swing1, and rotation around the z-axis as swing2.
+         <br>
+         <center>
+         <img src = "Joint 6DOF.png"/>
+         </center>
+         
+         <br><br>
+         <H2> Common joint types: </H2>
+         <br>
+         <center>
+         <H2> Spherical Joint</H2> 
+           <img src = "Joint Spherical.png"/>
+            <br><br>      
+         </center>
+         A spherical joint is the simplest kind of joint. It constrains two points on two different
+         bodies from coinciding. This point, located in world space, is the only parameter that has
+         to be specified (the other parameters are optional).
+         Specifying the anchor point (point that is forced to coincide) in world space guarantees that
+         the point in the local space of each body will coincide when the point is transformed back from
+         local into world space. 
+         By attaching a series of spherical joints and bodies, chains/ropes can be created.
+         Another example for a common spherical joint is a person's shoulder, which is quite 
+         limited in its range of motion.
+         <br><br>
+         DOFs removed: 3
+         <br>
+         DOFs remaining: 3
+
+         <br>
+         <H2> Example: </H2>
+         We create a joint descriptor, then lock and free the required degrees of freedom, in this
+         case we lock all motion but allow all rotation. We then assign the two actors, set the joint
+         position in world space and then create the joint, note that we need to set the actors before
+         the position(anchor), this is because behind the scenes the global coordinate is converted to
+         the local coordinate of each actor.
+         
+         <H5>DBPro</H5>
+            <pre class = "dbpro">
+function makeJointSpherical(jointID, objectA, objectB, gAnchorX#, gAnchorY#, gAnchorZ#)
+	//-- Create descriptor data structure.
+	DYN MAKE JOINT DESC 1
+	//-- Locked motion relative to jo position.
+	DYN JOINT DESC SET MOTION X 1, NX_D6JOINT_MOTION_LOCKED
+	DYN JOINT DESC SET MOTION Y 1, NX_D6JOINT_MOTION_LOCKED
+	DYN JOINT DESC SET MOTION Z 1, NX_D6JOINT_MOTION_LOCKED
+	//-- Complete rotational freedom.
+	DYN JOINT DESC SET SWING1 MOTION 1, NX_D6JOINT_MOTION_FREE
+	DYN JOINT DESC SET SWING2 MOTION 1, NX_D6JOINT_MOTION_FREE
+	DYN JOINT DESC SET TWIST MOTION 1, NX_D6JOINT_MOTION_FREE
+        //-- What actors are involved?
+	DYN JOINT DESC SET ACTOR A 1, objectA
+	DYN JOINT DESC SET ACTOR B 1, objectB
+	//-- Must set this after actors have been set.
+	DYN JOINT DESC SET GLOBAL ANCHOR 1, gAnchorX#, gAnchorY#, gAnchorZ#
+	//-- Actors should have collision enabled plus debug visualisation
+	DYN JOINT DESC SET FLAGS 1, NX_JF_VISUALIZATION || NX_JF_COLLISION_ENABLED
+	//-- Create joint.
+	DYN MAKE JOINT jointID, 1
+	//-- No longer need descriptor.
+	DYN DELETE JOINT DESC 1
+endfunction
+            </pre>
+ 
+         <H5>DarkGDK</H5>
+            <pre class = "gdk">
+void makeJointSpherical(int jointID, int objectA, int objectB, float gAnchorX, float gAnchorY, float gAnchorZ){
+	//-- Create descriptor data structure.
+	dynMakeJointDesc(1);
+	//-- Locked motion relative to joint position.
+	dynJointDescSetMotionX(1, NX_D6JOINT_MOTION_LOCKED);
+	dynJointDescSetMotionY(1, NX_D6JOINT_MOTION_LOCKED);
+	dynJointDescSetMotionZ(1, NX_D6JOINT_MOTION_LOCKED);
+	//-- Complete rotational freedom.
+	dynJointDescSetSwing1Motion(1, NX_D6JOINT_MOTION_FREE);
+	dynJointDescSetSwing2Motion(1, NX_D6JOINT_MOTION_FREE);
+	dynJointDescSetTwistMotion(1, NX_D6JOINT_MOTION_FREE);
+        //-- What actors are involved?
+	dynJointDescSetActorA(1, objectA);
+	dynJointDescSetActorB(1, objectB);
+	//-- Must set this after actors have been set.
+	dynJointDescSetGlobalAnchor(1, gAnchorX, gAnchorY, gAnchorZ);
+	//-- Actors should have collision enabled plus debug visualisation
+	dynJointDescSetFlags(1, NX_JF_VISUALIZATION | NX_JF_COLLISION_ENABLED);
+	//-- Create joint.
+	dynMakeJoint(jointID, 1);
+	//-- No longer need descriptor.
+	dynDeleteJointDesc(1);
+}
+            </pre>            
+         <br>
+         <br>
+         <br>
+
+
+
+
+
+         <center>
+         <H2> Prismatic Joint</H2> 
+           <img src = "Joint Prismatic.png"/>
+            <br><br>      
+         </center>
+         A prismatic joint permits relative translational movement between two bodies along an axis,
+         but no relative rotational movement at all. It is usually necessary to add joint limits to 
+         prevent the bodies from getting too far from each other along the joint axis. 
+         If the distance becomes too great, then the SDK can have difficulty maintaining the joint
+         constraints.
+         <br> NOTE: A prismatic joint is similar to a cylindrical joint except that it prevents 
+         rotation around the joint axis. 
+         <br>An example for a prismatic joint is a pair of motorcycle shock absorbers.
+
+         <br><br>
+         DOFs removed: 5
+         <br>
+         DOFs remaining: 1
+
+         <br>
+         <H2> Example: </H2>
+         We create a joint descriptor, then lock and free the required degrees of freedom, We then 
+         assign the two actors, set the joint position in world space and then create the joint, note
+         that we need to set the actors before the position(anchor), this is because behind the scenes
+         the global coordinate is converted to the local coordinate of each actor.
+         
+         <H5>DBPro</H5>
+            <pre class = "dbpro">
+function makeJointPrismatic(jointID, objectA, objectB, gAnchorX#, gAnchorY#, gAnchorZ#)
+	//-- Create descriptor data structure.
+	DYN MAKE JOINT DESC 1
+	//-- Everything locked apart from motion along z axis.
+	DYN JOINT DESC SET MOTION X 1, NX_D6JOINT_MOTION_LOCKED
+	DYN JOINT DESC SET MOTION Y 1, NX_D6JOINT_MOTION_LOCKED
+	DYN JOINT DESC SET MOTION Z 1, NX_D6JOINT_MOTION_FREE
+	DYN JOINT DESC SET SWING1 MOTION 1, NX_D6JOINT_MOTION_LOCKED
+	DYN JOINT DESC SET SWING2 MOTION 1, NX_D6JOINT_MOTION_LOCKED
+	DYN JOINT DESC SET TWIST MOTION 1, NX_D6JOINT_MOTION_LOCKED
+        //-- What actors are involved?
+	DYN JOINT DESC SET ACTOR A 1, objectA
+	DYN JOINT DESC SET ACTOR B 1, objectB
+	//-- Must set this after actors have been set.
+	DYN JOINT DESC SET GLOBAL ANCHOR 1, gAnchorX#, gAnchorY#, gAnchorZ#
+	//-- Actors should have collision enabled plus debug visualisation
+	DYN JOINT DESC SET FLAGS 1, NX_JF_VISUALIZATION || NX_JF_COLLISION_ENABLED
+	//-- Create joint.
+	DYN MAKE JOINT jointID, 1
+	//-- No longer need descriptor.
+	DYN DELETE JOINT DESC 1
+endfunction
+
+            </pre>
+ 
+         <H5>DarkGDK</H5>
+            <pre class = "gdk">
+void makeJointPrismatic(int jointID, int objectA, int objectB, float gAnchorX, float gAnchorY, float gAnchorZ){
+	//-- Create descriptor data structure.
+	dynMakeJointDesc(1);
+	//-- Everything locked apart from motion along z axis.
+	dynJointDescSetMotionX(1, NX_D6JOINT_MOTION_LOCKED);
+	dynJointDescSetMotionY(1, NX_D6JOINT_MOTION_LOCKED);
+	dynJointDescSetMotionZ(1, NX_D6JOINT_MOTION_FREE);
+	dynJointDescSetSwing1Motion(1, NX_D6JOINT_MOTION_LOCKED);
+	dynJointDescSetSwing2Motion(1, NX_D6JOINT_MOTION_LOCKED);
+	dynJointDescSetTwistMotion(1, NX_D6JOINT_MOTION_LOCKED);
+        //-- What actors are involved?
+	dynJointDescSetActorA(1, objectA);
+	dynJointDescSetActorB(1, objectB);
+	//-- Must set this after actors have been set.
+	dynJointDescSetGlobalAnchor(1, gAnchorX, gAnchorY, gAnchorZ);
+	//-- Actors should have collision enabled plus debug visualisation
+	dynJointDescSetFlags(1, NX_JF_VISUALIZATION | NX_JF_COLLISION_ENABLED);
+	//-- Create joint.
+	dynMakeJoint(jointID, 1);
+	//-- No longer need descriptor.
+	dynDeleteJointDesc(1);
+}
+            </pre>            
+         <br>
+
+
+
+
+
+
+
+        <center>
+         <H2> Revolute Joint</H2> 
+           <img src = "Joint Revolute.png"/>
+            <br><br>      
+         </center>
+         A revolute joint removes all but a single rotational degree of freedom from two objects.
+         The axis along which the two bodies may rotate is specified with a point and a direction vector.
+         In theory, the point along the direction vector does not matter, but in practice,
+         it should be near the area where the bodies are closest to improve simulation stability.
+         <br><br>
+         An example for a revolute joint is a door hinge. Another example would be using a revolute joint to attach rotating fan blades to a ceiling. The revolute joint could be motorized, causing the fan to rotate.
+
+
+         <br><br>
+         DOFs removed: 5
+         <br>
+         DOFs remaining: 1
+
+         <br>
+         <H2> Example: </H2>
+         We create a joint descriptor, then lock and free the required degrees of freedom, We then 
+         assign the two actors, set the joint position in world space and then create the joint, note
+         that we need to set the actors before the position(anchor), this is because behind the scenes
+         the global coordinate is converted to the local coordinate of each actor.
+         
+         <H5>DBPro</H5>
+            <pre class = "dbpro">
+function makeJointRevolute(jointID, objectA, objectB, gAnchorX#, gAnchorY#, gAnchorZ#)
+	//-- Create descriptor data structure.
+	DYN MAKE JOINT DESC 1
+	//-- Locked motion and swing.
+	DYN JOINT DESC SET MOTION X 1, NX_D6JOINT_MOTION_LOCKED
+	DYN JOINT DESC SET MOTION Y 1, NX_D6JOINT_MOTION_LOCKED
+	DYN JOINT DESC SET MOTION Z 1, NX_D6JOINT_MOTION_LOCKED
+	DYN JOINT DESC SET SWING1 MOTION 1, NX_D6JOINT_MOTION_LOCKED
+	DYN JOINT DESC SET SWING2 MOTION 1, NX_D6JOINT_MOTION_LOCKED
+	//-- Free twist
+	DYN JOINT DESC SET TWIST MOTION 1, NX_D6JOINT_MOTION_FREE
+        //-- What actors are involved?
+	DYN JOINT DESC SET ACTOR A 1, objectA
+	DYN JOINT DESC SET ACTOR B 1, objectB
+	//-- Must set this after actors have been set.
+	DYN JOINT DESC SET GLOBAL ANCHOR 1, gAnchorX#, gAnchorY#, gAnchorZ#
+	//-- Actors should have collision enabled plus debug visualisation
+	DYN JOINT DESC SET FLAGS 1, NX_JF_VISUALIZATION || NX_JF_COLLISION_ENABLED
+	//-- Create joint.
+	DYN MAKE JOINT jointID, 1
+	//-- No longer need descriptor.
+	DYN DELETE JOINT DESC 1
+endfunction
+            </pre>
+ 
+         <H5>DarkGDK</H5>
+            <pre class = "gdk">
+void makeJointRevolute(int jointID, int objectA, int objectB, float gAnchorX, float gAnchorY, float gAnchorZ){
+	//-- Create descriptor data structure.
+	dynMakeJointDesc(1);
+	//-- Locked motion and swing.
+	dynJointDescSetMotionX(1, NX_D6JOINT_MOTION_LOCKED);
+	dynJointDescSetMotionY(1, NX_D6JOINT_MOTION_LOCKED);
+	dynJointDescSetMotionZ(1, NX_D6JOINT_MOTION_LOCKED);
+	dynJointDescSetSwing1Motion(1, NX_D6JOINT_MOTION_LOCKED);
+	dynJointDescSetSwing2Motion(1, NX_D6JOINT_MOTION_LOCKED);
+	//-- Free twist
+	dynJointDescSetTwistMotion(1, NX_D6JOINT_MOTION_FREE);
+        //-- What actors are involved?
+	dynJointDescSetActorA(1, objectA);
+	dynJointDescSetActorB(1, objectB);
+	//-- Must set this after actors have been set.
+	dynJointDescSetGlobalAnchor(1, gAnchorX, gAnchorY, gAnchorZ);
+	//-- Actors should have collision enabled plus debug visualisation
+	dynJointDescSetFlags(1, NX_JF_VISUALIZATION | NX_JF_COLLISION_ENABLED);
+	//-- Create joint.
+	dynMakeJoint(jointID, 1);
+	//-- No longer need descriptor.
+	dynDeleteJointDesc(1);
+}
+            </pre>            
+         <br>
+
+
+
+
+
+
+
+
+
+
+        <center>
+         <H2> Point in Plane Joint</H2> 
+           <img src = "Joint Point in Plane.png"/>
+            <br><br>      
+         </center>
+         A point in plane joint constrains a point on one actor to only move inside a plane
+         attached to another actor. The point attached to the plane is defined by the anchor point.
+         The joint's axis specifies the plane normal.
+         <br><br>
+         An example for a point in plane joint is a magnet on a refrigerator.
+
+
+
+         <br><br>
+         DOFs removed: 1
+         <br>
+         DOFs remaining: 5
+
+         <br>
+         <H2> Example: </H2>
+         We create a joint descriptor, then lock and free the required degrees of freedom, We then 
+         assign the two actors, set the joint position in world space and then create the joint, note
+         that we need to set the actors before the position(anchor), this is because behind the scenes
+         the global coordinate is converted to the local coordinate of each actor.
+         
+         <H5>DBPro</H5>
+            <pre class = "dbpro">
+function makeJointPointInPlane(jointID, objectA, objectB, gAnchorX#, gAnchorY#, gAnchorZ#)
+	//-- Create descriptor data structure.
+	DYN MAKE JOINT DESC 1
+	//-- Everything locked apart from motion along z axis.
+	DYN JOINT DESC SET MOTION X 1, NX_D6JOINT_MOTION_FREE
+	DYN JOINT DESC SET MOTION Y 1, NX_D6JOINT_MOTION_FREE
+	DYN JOINT DESC SET MOTION Z 1, NX_D6JOINT_MOTION_LOCKED
+	DYN JOINT DESC SET SWING1 MOTION 1, NX_D6JOINT_MOTION_LOCKED
+	DYN JOINT DESC SET SWING2 MOTION 1, NX_D6JOINT_MOTION_LOCKED
+	DYN JOINT DESC SET TWIST MOTION 1, NX_D6JOINT_MOTION_LOCKED
+        //-- What actors are involved?
+	DYN JOINT DESC SET ACTOR A 1, objectA
+	DYN JOINT DESC SET ACTOR B 1, objectB
+	//-- Must set this after actors have been set.
+	DYN JOINT DESC SET GLOBAL ANCHOR 1, gAnchorX#, gAnchorY#, gAnchorZ#
+	//-- Create joint.
+	DYN MAKE JOINT jointID, 1
+	//-- No longer need descriptor.
+	DYN DELETE JOINT DESC 1
+endfunction
+            </pre>
+ 
+         <H5>DarkGDK</H5>
+            <pre class = "gdk">
+void makeJointPointInPlane(int jointID, int objectA, int objectB, float gAnchorX, float gAnchorY, float gAnchorZ){
+	//-- Create descriptor data structure.
+	dynMakeJointDesc(1);
+	//-- Everything locked apart from motion along z axis.
+	dynJointDescSetMotionX(1, NX_D6JOINT_MOTION_FREE);
+	dynJointDescSetMotionY(1, NX_D6JOINT_MOTION_FREE);
+	dynJointDescSetMotionZ(1, NX_D6JOINT_MOTION_LOCKED);
+	dynJointDescSetSwing1Motion(1, NX_D6JOINT_MOTION_LOCKED);
+	dynJointDescSetSwing2Motion(1, NX_D6JOINT_MOTION_LOCKED);
+	dynJointDescSetTwistMotion(1, NX_D6JOINT_MOTION_LOCKED);
+        //-- What actors are involved?
+	dynJointDescSetActorA(1, objectA);
+	dynJointDescSetActorB(1, objectB);
+	//-- Must set this after actors have been set.
+	dynJointDescSetGlobalAnchor(1, gAnchorX, gAnchorY, gAnchorZ);
+	//-- Create joint.
+	dynMakeJoint(jointID, 1);
+	//-- No longer need descriptor.
+	dynDeleteJointDesc(1);
+}
+
+            </pre>            
+         <br>
+
+
+
+
+
+
+
+
+      </BODY>
+</HTML>
+
+
+
+
+
+
+
+
+
+
+
+
+

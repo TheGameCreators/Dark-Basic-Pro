@@ -1,0 +1,67 @@
+<!--
+SOFT BODY
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN SOFT BODY ATTACH VERTEX TO SHAPE</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns"></span>
+		DYN SOFT BODY ATTACH VERTEX TO SHAPE
+		<span class="parameters">(int softBodyID, int vertexIndex, int objectID, int shapeIndex, float localX, float localY, float localZ, int attachmentFlag)
+		</span>
+		<br><br> This command will attatch the soft body to a rigid body shape at the given vertex, the rigid body shape must not be a triangle mesh.  
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>softBodyID - ID number of the soft body.
+		<br>vertexIndex - Index number of the soft body vertex you wish to attach to the shape.
+		<br>objectID - ID number of the object whose associated actor is to be attached to the soft body.
+		<br>shapeIndex - Index number of the shape you wish to attach, the default shape of an actor usually has an index number of 0.
+		<br>localX - The position along the x axis local to the given shape.
+		<br>localY - The position along the y axis local to the given shape.
+		<br>localZ - The position along the z axis local to the given shape.
+		<br>attachmentFlag - Allows you to determine whether the relationship between soft body and the shape is one way or two way. Set as 0 for one way interaction, the object can pull the soft body, but the soft body cannot move the object. If the object moves then the soft body will follow it. However, if the soft body is pulled, the object will behave as if it is fixed and not move. Set to 1 for two way interaction.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+
+<br><br>
+<center>
+-------------------------------------------------------------------------------
+</center>
+
+		<span class="returns"></span>
+		DYN SOFT BODY ATTACH VERTEX TO SHAPE
+		<span class="parameters">(int softBodyID, int vertexIndex, int objectID, int limbID, int shapeIndex, float localX, float localY, float localZ, int attachmentFlag)
+		</span>
+		<br><br> This command will attatch the soft body to a rigid body shape at the given vertex, the rigid body shape must not be a triangle mesh.  
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>softBodyID - ID number of the soft body.
+		<br>vertexIndex - Index number of the soft body vertex you wish to attach to the shape.
+		<br>objectID - ID number of the limbs owning object. 
+		<br>limbID - ID number of the limb whose associated actor is to be attached to the soft body.
+		<br>shapeIndex - Index number of the shape you wish to attach, the default shape of an actor usually has an index number of 0.
+		<br>localX - The position along the x axis local to the given shape.
+		<br>localY - The position along the y axis local to the given shape.
+		<br>localZ - The position along the z axis local to the given shape.
+		<br>attachmentFlag - Allows you to determine whether the relationship between soft body and the shape is one way or two way. Set as 0 for one way interaction, the object can pull the soft body, but the soft body cannot move the object. If the object moves then the soft body will follow it. However, if the soft body is pulled, the object will behave as if it is fixed and not move. Set to 1 for two way interaction.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

@@ -1,0 +1,110 @@
+<HTML>
+   <HEAD>
+        <title> Soft Bodies </title>
+	<link rel="stylesheet" type="text/css" href="ExampleDocs.css"/>
+   </HEAD>
+   
+   <BODY id = "wrap">
+         <center>
+            <img src = "Dark Dynamix logo.png" width = 675px height = 210px/>
+            <br> <br>     
+            <H1>Soft Bodies</H1> 
+        </center>
+
+         <br>
+         <H2> What's a Soft Body? </H2>
+         The soft body feature of the NVIDIA PhysX SDK allows the simulation of volumetric deformable
+         objects. It can also be used for items that are not usually thought of as classical soft bodies,
+         such as plants or multiple layers of cloth. Here are some examples:
+         <br><br>
+         Tires of a monster truck <br> 
+         Big fat guys, monsters <br>
+         Curvy girls            <br>
+         Objects with complex geometry such as trees, grass <br>
+         <br> 
+         To simulate complex geometry like a tree with many branches and leaves,
+         a coarser volumetric mesh is first build around the object.
+         The volumetric mesh is then simulated and moves the complex geometry with it.
+         The advantage of the technique is that it makes the simulation of triangle soups possible,
+         i.e. every possible mesh can be simulated.
+         <br>
+         <br>
+         The soft body feature is very similar to the cloth feature.
+         Therefore, the two features have similar parameters and methods.
+
+
+         <br>
+         <br>
+
+         <H2>Content Pipeline</H2>
+         The content pipeline for soft bodies has some additional stages to the cloth pipeline.
+         <br>
+         <br>
+         1. The artist creates a detailed triangle mesh, possibly with textures, bump maps etc. <br>
+         2. A tool is used to create a coarser tetrahedral mesh around the triangle mesh. (PhysX Viewer - You will need to download the PhysX SDK(2.8.4) which will include this tool) <br>
+         3. The tetrahedral mesh is simulated using the soft body(and soft body mesh) commands.<br>
+         4. The original triangle mesh is deformed along with the tetrahedral mesh by the user.<br> 
+         5. The triangle mesh is displayed on the screen. 
+
+<br>
+<br> 
+
+
+
+The following images show a tetrahedral mesh (middle, right) that was generated for a triangle mesh (left). The right most cut through the tetrahedral mesh shows that it covers the volume.
+<center>
+<img src = "Soft body rabbits.png">
+</center>
+
+
+The process works for arbitrary triangle soups like the palm tree. The image on the right shows how the original triangle soup is embedded in the tetrahedral mesh which is shown in wireframe mode.
+<br><br>
+<center>
+<img src = "Soft body trees.png">
+</center>
+
+<br><br>
+The resolution of the tetrahedral mesh can be chosen independently of the resolution of the triangle mesh.
+This allows for choosing a level of detail for the simulation without losing visual resolution.
+The following images show different resolutions of a palm tree mesh. With the coarser meshes, 
+independent movement of individual leaves is not possible. To get this dynamic feature, 
+more tetrahedra are needed as shown on the right:
+<br><br>
+<center>
+<img src = "Soft body trees 2.png">
+</center>
+
+
+<br>
+<br>
+<H2> <center>PhysX Viewer </center></H2>
+<center>
+<img src = "Physx viewer.png">
+</center>
+<br>
+
+The PhysX viewer is a very useful tool for creating the tet files needed to create a soft body mesh, the viewer
+gives you control over how detailed you want the soft body mesh to be, this does not affect how it looks but 
+how detailed the simulation is for that particular model. It is important to get the detail level correct as 
+soft bodies are very CPU intensive and it will not always be possible to use a very detailed soft body mesh.
+<br>
+<br>
+The PhysX viewer can import obj files, if you look around the TGC forum you will find obj-x and x-obj converters
+which will be needed to get your x/dbo models set up as a soft body mesh.
+<br>
+<br>
+You will need to sign up as a NVIDIA PhysX developer and  <a href="http://developer.nvidia.com/physx-downloads">download the Physx SDK(2.8.4)</a>, you will find the viewer
+in the 'bin' folder, there is also lots of models included which you can play around with.
+
+
+<br>
+<br>
+<br>
+
+
+
+
+
+    </BODY>
+
+</HTML>

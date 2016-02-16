@@ -1,0 +1,56 @@
+<HTML> 
+	 <HEAD> 
+		 <TITLE>PHY SOFT BODY ATTACH TO SHAPE</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">//void</span>
+		PHY SOFT BODY ATTACH TO SHAPE
+		<span class="parameters">(int softBodyID, int objectID, int shapeIndex, int attachmentFlag)
+		</span>
+		<br><br> This command will attatch the soft body to a rigid body shape, the rigid body shape must not be a triangle mesh. Each soft body vertex which is currently inside the shape will be attached.  
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>softBodyID - ID number of the soft body.
+		<br>objectID - ID number of the object whose associated actor is to be attached to the soft body.
+		<br>shapeIndex - Index number of the shape you wish to attach, the default shape of an actor usually has an index number of 0.
+		<br>attachmentFlag - Allows you to determine whether the relationship between soft body and the shape is one way or two way. Set as 0 for one way interaction, the object can pull the soft body, but the soft body cannot move the object. If the object moves then the soft body will follow it. However, if the soft body is pulled, the object will behave as if it is fixed and not move. Set to 1 for two way interaction.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>
+		<br>
+
+<br><br>
+<center>
+-------------------------------------------------------------------------------
+</center>
+
+		<span class="returns">//void</span>
+		PHY SOFT BODY ATTACH TO SHAPE
+		<span class="parameters">(int softBodyID, int objectID, int limbID, int shapeIndex, int attachmentFlag)
+		</span>
+		<br><br> This command will attatch the soft body to a rigid body shape, the rigid body shape must not be a triangle mesh. Each soft body vertex which is currently inside the shape will be attached.  
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>softBodyID - ID number of the soft body.
+		<br>objectID - ID number of the limbs owning object.
+		<br>limbID - ID number of the limb whose associated actor is to be attached to the soft body.
+		<br>shapeIndex - Index number of the shape you wish to attach, the default shape of an actor usually has an index number of 0.
+		<br>attachmentFlag - Allows you to determine whether the relationship between soft body and the shape is one way or two way. Set as 0 for one way interaction, the object can pull the soft body, but the soft body cannot move the object. If the object moves then the soft body will follow it. However, if the soft body is pulled, the object will behave as if it is fixed and not move. Set to 1 for two way interaction.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

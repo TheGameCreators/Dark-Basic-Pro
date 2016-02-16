@@ -1,0 +1,35 @@
+<!--
+CONSTRUCTION
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN MAKE HEIGHT FIELD DESC</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">bool</span>
+		DYN MAKE HEIGHT FIELD DESC
+		<span class="parameters">(int ID, int columns, int rows, float verticalExtent, float thickness, float convexEdgeThreshold)
+		</span>
+		<br><br>This command creates a descriptor for a height field. You can then place the height data in this descriptor before creating a height field. You should delete this descriptor after creating your height field as the height data is copied and no longer needed. 
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>ID - ID number you wish to assign to the height field descriptor.
+		<br>columns - Number of columns.
+		<br>rows - Number of rows.
+		<br>verticalExtent - This is the extent to which the collision shape will be effective along the y axis, unlike triangle meshes, height fields have a volume which can detect collisions even if the simulation timestep takes an actor completely past the height field surface. A good value for this parameter might be -1000. You should set thi sto zero if you are using a thickness value instead. 
+		<br>thickness - This value sets the thickness of the height field, unlike the verticla extent, the depth volume matches the shape of the height field. You should set this to 0 if you are using a vertical extent value instead.   
+		<br>convexEdgeThreshold - Larger values for this parameter will result in fewer edge contacts, a value of 0 is acceptable.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if succeeded, FALSE otherwise.
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

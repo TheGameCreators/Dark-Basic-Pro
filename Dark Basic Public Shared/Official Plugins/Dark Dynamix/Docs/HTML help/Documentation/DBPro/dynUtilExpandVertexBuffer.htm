@@ -1,0 +1,32 @@
+<!--
+UTIL
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN UTIL EXPAND VERTEX BUFFER</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">unsigned int</span>
+		DYN UTIL EXPAND VERTEX BUFFER
+		<span class="parameters">(int id, int extraVertexCount, int extraIndexCount)
+		</span>
+		<br><br>Utility function which attempts to increase the vertex buffer for the given object. This can be used for cloth tearing. When the cloth tears, more vertices are added by the simulation so it is important that your object can accomodate these extra vertices. You could achieve the same result in a modelling program. Note that cloth tearing does not create extra indices or primitives, the amount of triangles remains the same but some of the existing indices are altered to use the new vertices as the simulation adds them.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>clothID - ID number of the object.
+		<br>extraVertexCount - Amount of new vertices to be added to the object.
+		<br>extraIndexCount - Amount of new indices to be added to the object, should be 0 if intention is to enable cloth tearing.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>The amount of new vertices successfully added, should be the same as 'extraVertexCount'.
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

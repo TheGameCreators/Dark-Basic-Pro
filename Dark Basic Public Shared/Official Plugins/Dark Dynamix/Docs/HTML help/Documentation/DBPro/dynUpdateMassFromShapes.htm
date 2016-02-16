@@ -1,0 +1,32 @@
+<!--
+RIGID BODY
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN UPDATE MASS FROM SHAPES</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">bool</span>
+		DYN UPDATE MASS FROM SHAPES
+		<span class="parameters">(int objectID, float density, float totalMass)
+		</span>
+		<br><br> Recomputes a dynamic actor's mass properties from its shapes. Given a constant density or total mass, the actors mass properties can be recomputed using the shapes attached to the actor. If the actor has no shapes, then only the totalMass parameter can be used. If all shapes in the actor are trigger shapes (non-physical), the call will fail. The mass of each shape is either the shape's local density multiplied by the shape's volume or a directly specified shape mass. The inertia tensor, mass frame and center of mass will always be recomputed. If there are no shapes in the actor, the mass will be totalMass, and the mass frame will be set to the center of the actor. If you supply a non-zero total mass, the actor's mass and inertia will first be computed as above and then scaled to fit this total mass. If you supply a non-zero density, the actor's mass and inertia will first be computed as above and then scaled by this factor. Either totalMass or density must be non-zero and the actor must be dynamic.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the object the actor represents in the simulation.
+		<br>density - Density scale factor of the shapes belonging to the actor.
+		<br>totalMass - Total mass of the actor(or zero).
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if successful, FALSE otherwise.
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

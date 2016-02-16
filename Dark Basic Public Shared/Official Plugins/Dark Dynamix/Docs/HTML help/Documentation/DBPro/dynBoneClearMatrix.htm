@@ -1,0 +1,32 @@
+<!--
+RIGID BODY
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN BONE CLEAR MATRIX</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns"></span>
+		DYN BONE CLEAR MATRIX
+		<span class="parameters">(int objectID, int meshID, int boneID)
+		</span>
+		<br><br>This command will clear the matrix for the given bone, this means that after calling this command the bone will be positioned and orientated at 0,0,0. This command is used just before creating an actor to represent the given bone, since the simulation will update the bone with global coordinates it is important that the bone matrix is cleared before the actor is created.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the object.
+		<br>meshID - ID number of the mesh which the bones belong.
+		<br>boneID - ID number of the bone.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

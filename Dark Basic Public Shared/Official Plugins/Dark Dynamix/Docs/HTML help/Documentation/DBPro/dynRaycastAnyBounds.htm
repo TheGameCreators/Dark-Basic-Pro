@@ -1,0 +1,33 @@
+<!--
+RAYCAST
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN RAYCAST ANY BOUNDS</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">bool</span>
+		DYN RAYCAST ANY BOUNDS
+		<span class="parameters">(int origVec3ID, int dirVec3ID, int flag, int groups)
+		</span>
+		<br><br>Casts a ray from a given position in the scene in a given direction, the cast is tested against shape bounding boxes. This is the fastest raycast method, it does not record any hit data.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>origVec3ID - ID number of the vector containing the global position data.
+		<br>dirVec3ID - ID number of the vector containing the global direction data, this vector must be normalized.
+		<br>flag - NX_STATIC_SHAPES = 1, NX_DYNAMIC_SHAPES = 2, NX_ALL_SHAPES = 3
+		<br>groups - Groups mask to filter shapes.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if hit, FALSE otherwise.
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

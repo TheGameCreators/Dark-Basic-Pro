@@ -1,0 +1,34 @@
+<!--
+RIGID BODY
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN SHAPE PAIR SET FLAGS</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns"></span>
+		DYN SHAPE PAIR SET FLAGS
+		<span class="parameters">(int actorA, int shapeIndexA, int actorB, int shapeIndexB, int flag)
+		</span>
+		<br><br>Sets the pair flag for the given pair of actor shapes, you can't use this flag to enable contact reports between the two given shapes, this is only possible at actor level. You can use this command to disable collisions 'NX_IGNORE_PAIR' between two specific shapes. 
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>actorA - First actor of actor pair.
+		<br>shapeIndexA - Shape index for the first actor, default shape is 0.
+		<br>actorB - Second actor of actor pair.
+		<br>shapeIndexB - Shape index for the second actor, default shape is 0.
+		<br>flag - NX_IGNORE_PAIR is the only non-zero value allowed as a shape pair flag. Passing zero stops ignoring the shape pair flag again.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

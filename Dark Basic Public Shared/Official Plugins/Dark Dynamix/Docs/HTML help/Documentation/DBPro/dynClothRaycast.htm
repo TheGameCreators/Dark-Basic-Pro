@@ -1,0 +1,32 @@
+<!--
+CLOTH
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN CLOTH RAYCAST</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">bool</span>
+		DYN CLOTH RAYCAST
+		<span class="parameters">(int clothID, int origVector3ID, int dirVector3ID)
+		</span>
+		<br><br>Casts a ray against the given cloth. You can retrieve the hit position and the closest vertexID using the other cloth raycast commands, be sure to only do so if this command returns true otherwise the data will be from the last ray that hit. 
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>clothID - ID number of the object the cloth represents in the simulation.
+		<br>origVector3ID - Origin of the ray in world space. 
+		<br>dirVector3ID - Direction the ray should travel.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if ray hits cloth, FALSE otherwise.
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

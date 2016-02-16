@@ -1,0 +1,104 @@
+<!--
+CONSTRUCTION
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN COOK TRIANGLE MESH</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">bool</span>
+		DYN COOK TRIANGLE MESH
+		<span class="parameters">(int objectID, int triangleMeshID)
+		</span>
+		<br><br>Cooks and then creates a triangle mesh, 'cooking' is just a term which means it is converting the mesh to a format PhysX can use for fast collision detection. You should try to avoid this function if possible and cook all your meshes to file and then when your game/app needs them there is no need for the slow cooking process, if you do need to cook meshes on the fly then be sure to check the return value and deal with both possible outcomes accordingly. All triangle meshes are static, their main use is for terrain and complex static objects.  
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the object to create the mesh from.
+		<br>triangleMeshID - ID number you wish to assign to the triangle mesh, you use this ID number when creating an actor from this triangle mesh.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if succeeded, FALSE otherwise.
+		<br>
+
+<br><br>
+<center>
+-------------------------------------------------------------------------------
+</center>
+
+		<span class="returns">bool</span>
+		DYN COOK TRIANGLE MESH
+		<span class="parameters">(int objectID, int limbID, int triangleMeshID)
+		</span>
+		<br><br>Cooks and then creates a triangle mesh, 'cooking' is just a term which means it is converting the mesh to a format PhysX can use for fast collision detection. You should try to avoid this function if possible and cook all your meshes to file and then when your game/app needs them there is no need for the slow cooking process, if you do need to cook meshes on the fly then be sure to check the return value and deal with both possible outcomes accordingly. All triangle meshes are static, their main use is for terrain and complex static objects.  
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the owning object.
+		<br>limbID - ID number of the limb you wish to create the mesh from.
+		<br>triangleMeshID - ID number you wish to assign to the triangle mesh, you use this ID number when creating an actor from this triangle mesh.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if succeeded, FALSE otherwise.
+		<br>
+
+<br><br>
+<center>
+-------------------------------------------------------------------------------
+</center>
+
+		<span class="returns">bool</span>
+		DYN COOK TRIANGLE MESH
+		<span class="parameters">(int objectID, char* file)
+		</span>
+		<br><br>Cooks a triangle mesh and saves it to file. You should cook all your meshes to file and then when your game/app needs them there is no need for the slow cooking process, if you do need to cook meshes on the fly then be sure to check the return value and deal with both possible outcomes accordingly.  All triangle meshes are static, their main use is for terrain and complex static objects.  
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the object to create the mesh from.
+		<br>file - Name of the file you wish to create.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if succeeded, FALSE otherwise.
+		<br>
+
+<br><br>
+<center>
+-------------------------------------------------------------------------------
+</center>
+
+		<span class="returns">bool</span>
+		DYN COOK TRIANGLE MESH
+		<span class="parameters">(int objectID, int limbID, char* file)
+		</span>
+		<br><br>Cooks a triangle mesh and saves it to file. You should cook all your meshes to file and then when your game/app needs them there is no need for the slow cooking process, if you do need to cook meshes on the fly then be sure to check the return value and deal with both possible outcomes accordingly.  All triangle meshes are static, their main use is for terrain and complex static objects.  
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the owning object.
+		<br>limbID - ID number of the limb to create the mesh from.
+		<br>file - Name of the file you wish to create.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if succeeded, FALSE otherwise.
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>
+
+

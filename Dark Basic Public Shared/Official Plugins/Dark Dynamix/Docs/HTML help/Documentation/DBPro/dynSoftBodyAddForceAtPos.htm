@@ -1,0 +1,33 @@
+<!--
+SOFT BODY
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN SOFT BODY ADD FORCE AT POS</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns"></span>
+		DYN SOFT BODY ADD FORCE AT POS
+		<span class="parameters">(int softBodyID, int posVec3ID, float magnitude, float radius)
+		</span>
+		<br><br>Applies a radial force (or impulse) at a particular position. All vertices within radius will be affected with a quadratic drop-off. Because forces are reset at the end of every timestep, you can maintain a total external force on an object by calling this once every frame.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>softBodyID - ID number of the object the soft body represents in the simulation.
+		<br>posVec3ID - ID number of the vector containing the position.
+		<br>magnitude - Magnitude of the force/impulse to apply.
+		<br>radius - The sphere radius in which particles will be affected.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

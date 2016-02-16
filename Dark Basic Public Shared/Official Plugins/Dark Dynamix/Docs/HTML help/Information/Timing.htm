@@ -1,0 +1,84 @@
+<HTML>
+
+
+    <HEAD>
+        <title> Timing </title>
+        <link rel="stylesheet" type="text/css" href="ExampleDocs.css"/>
+    </HEAD>
+
+
+    <BODY id = wrap>
+         <H1> 
+            <p align = "center">
+                
+            <img src = "Dark Dynamix logo.png" width = 675px height = 210px/>
+                <br><br> Timing
+           </p>
+        </H1>
+        
+The main feature of a scene is its capability to actually perform the physics simulation.
+This results in various object properties evolving over time, e.g., bodies' positions and velocities.
+Simulation is done one time step at a time, typically using a fixed step size ranging between 1/100th
+of a second and 1/50th of a second. For a real-time simulation, the application must perform several
+of these time steps to synchronize the physics behavior with the rendered frame rate.
+Note that longer timesteps lead to poor stability in the simulation, and that values much above the
+aforementioned range are not recommended.
+<br><br>
+
+The main method used for advancing the simulation is 'DYN SIMULATE'(dbpro) or 'dynSimulate()'(gdk).
+This command also has an overload which takes a float which will determine how much time to advance
+the simulation by. However, the exact behavior of this method is dependent on the 'DYN SET TIMING'(dbpro)
+or 'dynSetTiming()'(gdk) command.
+
+The default values for the 'set timing' command are as follows:<br>
+
+<H5>DBPro</H5>
+<pre class = "dbpro">
+DYN SET TIMING (1.0/60.0)/4, 4, 0
+</pre>
+
+<H5>Dark GDK</H5>
+<pre class = "gdk">
+dynSetTiming( (1.0f/60.0f)/4, 4, 0);
+</pre>
+<br>
+
+The first parameter says to advance the simulation 1/4 of 1/60th of a second for each sub-step, this ties
+in with the next parameter which says to do 4 sub-steps for each call to 'simluate'. So in reality, the 
+simulation runs 4 times each time you call 'simulate', this makes the simulation more stable and becomes
+more important when you have complex actors in your scene(multiple joints/ragdolls or vehicles etc). The
+final parameter just indicates that you are using fixed timing, this also leads to a more stable simulation,
+set this to 1 if you want to use variable timing.<br>
+
+<H5>DBPro</H5>
+<pre class = "dbpro">
+DYN SET TIMING 0, 0, 1
+</pre>
+<H5>Dark GDK</H5>
+<pre class = "gdk">
+dynSetTiming( 0, 0, 1);
+</pre>
+<br>
+
+The first two parameters are ignored in this case as you control the substepping yourself with as many calls
+to 'simulate' and 'fetch results' as you see fit. 
+
+<br><br>
+It is recommended that you stick with fixed timing unless you have a good reason not to. Note that it is still 
+possible to pass variable timesteps via the 'simulate' command even when using fixed timing, in this case PhysX
+will do as many substeps as it can and any time remainding will be added on to the next call to 'simulate'. 
+<br>
+<br>
+<br>
+<br>
+
+
+         
+  
+
+
+    </BODY>
+
+
+</HTML>
+   

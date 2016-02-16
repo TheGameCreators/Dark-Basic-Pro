@@ -1,0 +1,61 @@
+<!--
+HEIGHTFIELD
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN HEIGHT FIELD DESC SET DATA</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns"></span>
+		DYN HEIGHT FIELD DESC SET DATA
+		<span class="parameters">(int heightFieldDescID, int row, int column, int height)
+		</span>
+		<br><br>This command allows you to set the height data for the given height field descriptor.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>ID - ID number of the height field descriptor.
+		<br>column - Column index value.
+		<br>row - Row index value.
+		<br>height - Height value for the given location. 
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+
+<br><br>
+<center>
+-------------------------------------------------------------------------------
+</center>
+
+		<span class="returns"></span>
+		DYN HEIGHT FIELD DESC SET DATA
+		<span class="parameters">(int heightFieldDescID, int row, int column, int height, int materialIndex0, int materialIndex1, int tessFlag)
+		</span>
+		<br><br>This command allows you to set the height data for the given height field descriptor. This overload allows you to set material indices and a tesselation flag.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>ID - ID number of the height field descriptor.
+		<br>column - Column index value.
+		<br>row - Row index value.
+		<br>height - Height value for the given location. 
+		<br>materialIndex0 - The low 7 bits of the triangle material index, these are concatenated with the high bits you can set when creating the actor to produce an index into the scenes material array. This value determines the value for the lower of the quads two triangles.
+		<br>materialIndex1 - The low 7 bits of the triangle material index, these are concatenated with the high bits you can set when creating the actor to produce an index into the scenes material array. This value determines the value for the higher of the quads two triangles..
+		<br>tessFlag - This flag specifies which way the quad is split. 
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

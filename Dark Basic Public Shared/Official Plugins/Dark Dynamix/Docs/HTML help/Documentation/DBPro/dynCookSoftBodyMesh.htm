@@ -1,0 +1,54 @@
+<!--
+CONSTRUCTION
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN COOK SOFT BODY MESH</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">bool</span>
+		DYN COOK SOFT BODY MESH
+		<span class="parameters">(int softBodyMeshID, char* tetFile)
+		</span>
+		<br><br>Cooks and then creates a soft body mesh, 'cooking' is just a term which means it is converting the mesh to a format PhysX can use for fast collision detection. You should try to avoid this function if possible and cook all your meshes to file and then when your game/app needs them there is no need for the slow cooking process, if you do need to cook meshes on the fly then be sure to check the return value and deal with both possible outcomes accordingly. 
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>softBodyMeshID - ID number you wish to assign to the mesh.
+		<br>tetFile - Name of the .tet file you wish to cook the mesh from.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if succeeded, FALSE otherwise.
+		<br>
+
+<br><br>
+<center>
+-------------------------------------------------------------------------------
+</center>
+
+		<span class="returns">bool</span>
+		DYN COOK SOFT BODY MESH
+		<span class="parameters">(char* destinationFile, char* sourceTetFile)
+		</span>
+		<br><br>Cooks a soft body mesh to a file, 'cooking' is just a term which means it is converting the mesh to a format PhysX can use for fast collision detection. You should cook all your meshes to file and then when your game/app needs them there is no need for the slow cooking process. 
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>sourceTetFile - Name you wish to assign to the created file.
+		<br>tetFile - Name of the .tet file you wish to cook the mesh from.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if succeeded, FALSE otherwise.
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

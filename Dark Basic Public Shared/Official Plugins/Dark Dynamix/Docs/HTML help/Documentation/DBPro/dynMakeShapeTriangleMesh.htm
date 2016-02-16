@@ -1,0 +1,55 @@
+<!--
+CONSTRUCTION
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN MAKE SHAPE TRIANGLE MESH</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">int</span>
+		DYN MAKE SHAPE TRIANGLE MESH
+		<span class="parameters">(int objectID, int triangleMeshID)
+		</span>
+		<br><br>Creates a shape from a convex mesh. The shape is added to a list, you can add as many shapes as you like to the list and then either create an actor from the shapes or add them to an existing actor. Do not add a triangle mesh shape to an actor that is dynamic as triangle meshes are static only.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID ID number of the object the shape will position/orientate to.
+		<br>triangleMeshID ID number of the convex mesh you wish to instance.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>The amount of shapes currently held in the list, if an actor is created from the current list of shapes then they will keep the shape number returned from this function.
+		<br>
+
+<br><br>
+<center>
+-------------------------------------------------------------------------------
+</center>
+
+		<span class="returns">int</span>
+		DYN MAKE SHAPE TRIANGLE MESH
+		<span class="parameters">(int objectID, int limbID, int triangleMeshID)
+		</span>
+		<br><br>Creates a shape from a triangle mesh. The shape is added to a list, you can add as many shapes as you like to the list and then either create an actor from the shapes or add them to an existing actor. Do not add a triangle mesh shape to an actor that is dynamic as triangle meshes are static only.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID ID number of the owning object.
+		<br>limbID ID number of the limb the shape will position/orientate to.
+		<br>triangleMeshID ID number of the triangle mesh you wish to instance.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>The amount of shapes currently held in the list, if an actor is created from the current list of shapes then they will keep the shape number returned from this function.
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

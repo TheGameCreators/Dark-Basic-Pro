@@ -1,0 +1,35 @@
+<!--
+FLUID/PARTICLES
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN FLUID MAKE EMITTER</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">int</span>
+		DYN FLUID MAKE EMITTER
+		<span class="parameters">(int fluidID, float sizeX, float sizeY, float particleLife, int type, int posVec3ID, int rotVec3ID)
+		</span>
+		<br><br>Creates an emitter for the given fluid, emitters can share a single fluid although a fluid only has a maximum amount of particles available. An emitter becomes responsible for creating the particles, they are only destroyed if their life runs out or they come into contact with a drain. The emitter can only create particles as long as the fluid has particles available.  
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>sizeX - Size of the emitter along its local x axis.
+		<br>sizeY - Size of the emitter along its local y axis.
+		<br>particleLife - Life of the particles.
+		<br>type - The emitter can either create particles at a given rate or maintain a given pressure. Constant flow rate = 2, Pressure = 1
+		<br>posVec3ID - ID number of the vector3 containing positional data.
+		<br>rotVec3ID - ID number of the vector3 containing rotational data.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>Number of emitters belonging to the given fluid.
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

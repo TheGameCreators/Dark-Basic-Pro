@@ -1,0 +1,438 @@
+#include <windows.h>
+#include "resource.h"
+
+#define _N K
+
+STRINGTABLE
+{
+// D - Bool
+// L - Int
+// F - Float
+// S - char*
+
+//CORE
+	IDS_STRING1	 "PHY START[%L%phyStart%phyStart(void)"
+    IDS_STRING2	 "PHY START%0%phyStart%phyStart(void)"
+	IDS_STRING3	 "PHY STOP%0%phyStop%phyStop()"
+	IDS_STRING4  "PHY DELETE SCENE%L%phyDeleteScene%phyDeleteScene(int sceneID)"
+	IDS_STRING5  "PHY GET CURRENT SCENE[%L%phyGetCurrentScene%phyGetCurrentScene(void)"
+	IDS_STRING6  "PHY GET SCENE COUNT[%L%phyGetSceneCount%phyGetSceneCount(void)"
+	IDS_STRING7  "PHY MAKE SCENE%L%phyMakeScene%phyMakeScene(int sceneID)"
+	IDS_STRING8  "PHY MAKE SCENE[%DL%phyMakeScene%phyMakeScene(int sceneID)"
+	IDS_STRING9  "PHY SET CURRENT SCENE%L%phySetCurrentScene%phySetCurrentScene(int sceneID)"
+	IDS_STRING10 "PHY UPDATE%0%phyUpdate%phyUpdate(void)"
+	IDS_STRING11 "PHY FETCH RESULTS%0%phyFetchResults%phyFetchResults(void)"
+	//IDS_STRING12 "PHY SIMULATE%0%phySimulate%phySimulate(void)"
+    IDS_STRING12 "PHY SIMULATE%0%?phySimulate@@YAXXZ"
+//NEW
+	IDS_STRING13 "PHY DEBUG RENDER%0%phyDebugRender%phyDebugRender(void)"
+    IDS_STRING14 "PHY SET GRAVITY%FFF%phySetGravity%phySetGravity(float x, float y, float z)"
+	IDS_STRING15 "PHY SET PARAMETER%LF%phySetParameter%phySetParameter(int parameter, float value)"
+	IDS_STRING16 "PHY VISUAL DEBUGGER CONNECTED[%D%phyVisualDebuggerConnected%phyVisualDebuggerConnected(void)"
+    IDS_STRING17 "PHY VISUAL DEBUGGER OFF%0%phyVisualDebuggerOff%phyVisualDebuggerOff(void)"
+	IDS_STRING18 "PHY VISUAL DEBUGGER ON%0%phyVisualDebuggerOn%phyVisualDebuggerOn(void)"
+  
+//CONSTRUCTION
+ //Box
+    //-- RETURN BOOL
+	//IDS_STRING19 "PHY MAKE BOX[%DLF%?phyMakeBox@@YA_NHM@Z"
+	//IDS_STRING20 "PHY MAKE BOX%LF%?phyMakeBox@@YA_NHM@Z"
+	//IDS_STRING21 "PHY MAKE BOX[%DLLFFF%?phyMakeBox@@YA_NHHMMM@Z"
+	//IDS_STRING22 "PHY MAKE BOX%LLFFF%?phyMakeBox@@YA_NHHMMM@Z"
+	//-- RETURN DWORD
+	IDS_STRING19 "PHY MAKE BOX[%DLF%?phyMakeBox@@YAKHM@Z"
+	IDS_STRING20 "PHY MAKE BOX%LF%?phyMakeBox@@YAKHM@Z"
+	IDS_STRING21 "PHY MAKE BOX[%DLLFFF%?phyMakeBox@@YAKHHMMM@Z"
+	IDS_STRING22 "PHY MAKE BOX%LLFFF%?phyMakeBox@@YAKHHMMM@Z"
+ //Ground plane
+    IDS_STRING23 "PHY MAKE GROUND PLANE[%D%phyMakeGroundPlane%phyMakeGroundPlane()"
+    IDS_STRING24 "PHY MAKE GROUND PLANE%0%phyMakeGroundPlane%phyMakeGroundPlane()"
+ //Convex mesh
+  //cook
+   //return 
+    //-- BOOL
+	//IDS_STRING25 "PHY COOK CONVEX MESH[%DLS%?phyCookConvexMesh@@YA_NHPAD@Z"
+    //IDS_STRING26 "PHY COOK CONVEX MESH[%DLLS%?phyCookConvexMesh@@YA_NHHPAD@Z"
+	//IDS_STRING27 "PHY COOK CONVEX MESH[%DLL%?phyCookConvexMesh@@YA_NHH@Z"
+    //IDS_STRING28 "PHY COOK CONVEX MESH[%DLLL%?phyCookConvexMesh@@YA_NHHH@Z"
+	//-- DWORD
+	IDS_STRING25 "PHY COOK CONVEX MESH[%DLS%?phyCookConvexMesh@@YAKHPAD@Z"
+    IDS_STRING26 "PHY COOK CONVEX MESH[%DLLS%?phyCookConvexMesh@@YAKHHPAD@Z"
+	IDS_STRING27 "PHY COOK CONVEX MESH[%DLL%?phyCookConvexMesh@@YAKHH@Z"
+    IDS_STRING28 "PHY COOK CONVEX MESH[%DLLL%?phyCookConvexMesh@@YAKHHH@Z"
+
+   //non return
+    //-- BOOL
+    //IDS_STRING29 "PHY COOK CONVEX MESH%LS%?phyCookConvexMesh@@YA_NHPAD@Z"
+    //IDS_STRING30 "PHY COOK CONVEX MESH%LLS%?phyCookConvexMesh@@YA_NHHPAD@Z"
+	//IDS_STRING31 "PHY COOK CONVEX MESH%LL%?phyCookConvexMesh@@YA_NHH@Z"
+    //IDS_STRING32 "PHY COOK CONVEX MESH%LLL%?phyCookConvexMesh@@YA_NHHH@Z"
+    //-- DWORD
+	IDS_STRING29 "PHY COOK CONVEX MESH%LS%?phyCookConvexMesh@@YAKHPAD@Z"
+    IDS_STRING30 "PHY COOK CONVEX MESH%LLS%?phyCookConvexMesh@@YAKHHPAD@Z"
+	IDS_STRING31 "PHY COOK CONVEX MESH%LL%?phyCookConvexMesh@@YAKHH@Z"
+    IDS_STRING32 "PHY COOK CONVEX MESH%LLL%?phyCookConvexMesh@@YAKHHH@Z"
+  //load
+   //return
+    IDS_STRING33 "PHY LOAD CONVEX MESH[%DSL%phyLoadConvexMesh%phyLoadConvexMesh(char* file, int convexMeshID)"
+   //non return
+	IDS_STRING34 "PHY LOAD CONVEX MESH%SL%phyLoadConvexMesh%phyLoadConvexMesh(char* file, int convexMeshID)"
+  //make
+   //return
+    IDS_STRING35 "PHY MAKE CONVEX MESH[%DLLF%?phyMakeConvexMesh@@YA_NHHM@Z"
+    IDS_STRING36 "PHY MAKE CONVEX MESH[%DLLLF%?phyMakeConvexMesh@@YA_NHHHM@Z"
+   //non return
+    IDS_STRING37 "PHY MAKE CONVEX MESH%LLF%?phyMakeConvexMesh@@YA_NHHM@Z"
+    IDS_STRING38 "PHY MAKE CONVEX MESH%LLLF%?phyMakeConvexMesh@@YA_NHHHM@Z"
+  //delete
+   //return
+    IDS_STRING39 "PHY DELETE CONVEX MESH[%DL%phyDeleteConvexMesh%phyDeleteConvexMesh(int convexMeshID)"
+   //non return
+	IDS_STRING40 "PHY DELETE CONVEX MESH%L%phyDeleteConvexMesh%phyDeleteConvexMesh(int convexMeshID)"
+  //shapes
+   //return
+   IDS_STRING41 "PHY MAKE SHAPE CONVEX[%LLL%?phyMakeShapeConvex@@YAHHH@Z"
+   IDS_STRING42 "PHY MAKE SHAPE CONVEX[%LLLL%?phyMakeShapeConvex@@YAHHHH@Z"
+   //non return
+   IDS_STRING43 "PHY MAKE SHAPE CONVEX%LL%?phyMakeShapeConvex@@YAHHH@Z"
+   IDS_STRING44 "PHY MAKE SHAPE CONVEX%LLL%?phyMakeShapeConvex@@YAHHHH@Z"
+
+ //Triangle mesh
+  //cook
+   //return 
+	IDS_STRING45 "PHY COOK TRIANGLE MESH[%DLS%?phyCookTriangleMesh@@YA_NHPAD@Z"
+    IDS_STRING46 "PHY COOK TRIANGLE MESH[%DLLS%?phyCookTriangleMesh@@YA_NHHPAD@Z"
+	IDS_STRING47 "PHY COOK TRIANGLE MESH[%DLL%?phyCookTriangleMesh@@YA_NHH@Z"
+    IDS_STRING48 "PHY COOK TRIANGLE MESH[%DLLL%?phyCookTriangleMesh@@YA_NHHH@Z"
+   //non return
+    IDS_STRING49 "PHY COOK TRIANGLE MESH%LS%?phyCookTriangleMesh@@YA_NHPAD@Z"
+    IDS_STRING50 "PHY COOK TRIANGLE MESH%LLS%?phyCookTriangleMesh@@YA_NHHPAD@Z"
+	IDS_STRING51 "PHY COOK TRIANGLE MESH%LL%?phyCookTriangleMesh@@YA_NHH@Z"
+    IDS_STRING52 "PHY COOK TRIANGLE MESH%LLL%?phyCookTriangleMesh@@YA_NHHH@Z"
+  //load
+   //return
+    IDS_STRING53 "PHY LOAD TRIANGLE MESH[%DSL%phyLoadTriangleMesh%phyLoadTriangleMesh(char* file, int triangleMeshID)"
+   //non return
+	IDS_STRING54 "PHY LOAD TRIANGLE MESH%SL%phyLoadTriangleMesh%phyLoadTriangleMesh(char* file, int triangleMeshID)"
+  //make
+   //return
+    IDS_STRING55 "PHY MAKE TRIANGLE MESH[%DLL%?phyMakeTriangleMesh@@YA_NHH@Z"
+    IDS_STRING56 "PHY MAKE TRIANGLE MESH[%DLLL%?phyMakeTriangleMesh@@YA_NHHH@Z"
+   //non return
+    IDS_STRING57 "PHY MAKE TRIANGLE MESH%LL%?phyMakeTriangleMesh@@YA_NHH@Z"
+    IDS_STRING58 "PHY MAKE TRIANGLE MESH%LLL%?phyMakeTriangleMesh@@YA_NHHH@Z"
+  //delete
+   //return
+    IDS_STRING59 "PHY DELETE TRIANGLE MESH[%DL%phyDeleteTriangleMesh%phyDeleteTriangleMesh(int triangleMeshID)"
+   //non return  
+	IDS_STRING60 "PHY DELETE TRIANGLE MESH%L%phyDeleteTriangleMesh%phyDeleteTriangleMesh(int triangleMeshID)"
+  //shapes
+   //return
+   IDS_STRING61 "PHY MAKE SHAPE TRIANGLE MESH[%LLL%?phyMakeShapeTriangleMesh@@YAHHH@Z"
+   IDS_STRING62 "PHY MAKE SHAPE TRIANGLE MESH[%LLLL%?phyMakeTriangleMesh@@YAHHHH@Z"
+   //non return
+   IDS_STRING63 "PHY MAKE SHAPE TRIANGLE MESH%LL%?phyMakeShapeTriangleMesh@@YAHHH@Z"
+   IDS_STRING64 "PHY MAKE SHAPE TRIANGLE MESH%LLL%?phyMakeShapeTriangleMesh@@YAHHHH@Z"
+
+//JOINTS
+   //return
+   IDS_STRING65 "PHY MAKE JOINT DESC[%DL%phyMakeJointDesc%phyMakeJointDesc(int jointDescID)"
+   IDS_STRING66 "PHY MAKE JOINT[%DLL%phyMakeJoint%phyMakeJoint(int jointID, int jointDescID)"
+   //non return  
+   IDS_STRING67 "PHY MAKE JOINT DESC%L%phyMakeJointDesc%phyMakeJointDesc(int jointDescID)"
+   IDS_STRING68 "PHY MAKE JOINT%LL%phyMakeJoint%phyMakeJoint(int jointID, int jointDescID)"
+
+   IDS_STRING69 "PHY JOINT DESC SET ACTOR A%LL%?phyJointDescSetActorA@@YAXHH@Z"
+   IDS_STRING70 "PHY JOINT DESC SET ACTOR B%LL%?phyJointDescSetActorB@@YAXHH@Z"
+   IDS_STRING71 "PHY JOINT DESC SET ACTOR A%LLL%?phyJointDescSetActorA@@YAXHHH@Z"
+   IDS_STRING72 "PHY JOINT DESC SET ACTOR B%LLL%?phyJointDescSetActorB@@YAXHHH@Z"
+
+   IDS_STRING73 "PHY JOINT DESC SET GLOBAL ANCHOR%LFFF%phyJointDescSetGlobalAnchor%phyJointDescSetGlobalAnchor(int jointDescID, float posX, float posY, float posZ)"
+   IDS_STRING74 "PHY JOINT DESC SET GLOBAL AXIS%LFFF%phyJointDescSetGlobalAxis%phyJointDescSetGlobalAxis(int jointDescID, float axisX, float axisY, float axisZ)"
+   IDS_STRING75 "PHY JOINT DESC SET SWING1 MOTION%LL%phyJointDescSetSwing1Motion%phyJointDescSetSwing1Motion(int jointDescID, int motion)"
+   IDS_STRING76 "PHY JOINT DESC SET SWING2 MOTION%LL%phyJointDescSetSwing2Motion%phyJointDescSetSwing2Motion(int jointDescID, int motion)"
+   IDS_STRING77 "PHY JOINT DESC SET TWIST MOTION%LL%phyJointDescSetTwistMotion%phyJointDescSetTwistMotion(int jointDescID, int motion)"
+   IDS_STRING78 "PHY JOINT DESC SET MOTION X%LL%phyJointDescSetMotionX%phyJointDescSetMotionX(int jointDescID, int motion)"
+   IDS_STRING79 "PHY JOINT DESC SET MOTION Y%LL%phyJointDescSetMotionY%phyJointDescSetMotionY(int jointDescID, int motion)"
+   IDS_STRING80 "PHY JOINT DESC SET MOTION Z%LL%phyJointDescSetMotionZ%phyJointDescSetMotionZ(int jointDescID, int motion)"
+   //Joint Limits
+   IDS_STRING90 "PHY JOINT DESC SET SWING1 LIMIT%LFFFF%phyJointDescSetSwing1Limit%phyJointDescSetSwing1Limit(int jointDescID, float value, float spring, float damping, float restitution)"
+   IDS_STRING91 "PHY JOINT DESC SET SWING2 LIMIT%LFFFF%phyJointDescSetSwing2Limit%phyJointDescSetSwing2Limit(int jointDescID, float value, float spring, float damping, float restitution)"
+   IDS_STRING92 "PHY JOINT DESC SET TWIST LIMIT HIGH%LFFFF%phyJointDescSetTwistLimitHigh%phyJointDescSetTwistLimitHigh(int jointDescID, float value, float spring, float damping, float restitution)"
+   IDS_STRING93 "PHY JOINT DESC SET TWIST LIMIT LOW%LFFFF%phyJointDescSetTwistLimitLow%phyJointDescSetTwistLimitLow(int jointDescID, float value, float spring, float damping, float restitution)"
+   
+   
+   //RAGDOLL
+   IDS_STRING94 "PHY SET LIMBS%LD%phySetLimbs%phySetLimbs(int objectID, bool physics)"
+   IDS_STRING95 "PHY SET ACTOR TO LIMB%LL%phySetActorToLimb%phySetActorToLimb(int objectID, int limbID)"
+   IDS_STRING96 "PHY SET ACTORS TO LIMBS%L%phySetActorsToLimbs%phySetActorsToLimbs(int objectID)"
+
+   IDS_STRING97 "PHY SET SCALE MULTIPLIER%F%phySetScaleMultiplier%phySetScaleMultiplier(float scaleMultiplier)"
+   IDS_STRING98 "PHY GET SCALE MULTIPLIER[%F%phyGetScaleMultiplier%phyGetScaleMultiplier()"
+
+   //CLOTH
+   IDS_STRING99 "PHY COOK CLOTH MESH[%DLL%?phyCookClothMesh@@YA_NHH@Z"
+   IDS_STRING100 "PHY COOK CLOTH MESH%LL%?phyCookClothMesh@@YA_NHH@Z"
+   IDS_STRING101 "PHY MAKE CLOTH[%DLL%?phyMakeCloth@@YA_NHH@Z"
+   IDS_STRING102 "PHY MAKE CLOTH%LL%?phyMakeCloth@@YA_NHH@Z"
+
+   //FORCES
+   IDS_STRING103 "PHY ADD FORCE%LFFF%?phyAddForce@@YAXHMMM@Z"
+   IDS_STRING104 "PHY ADD LOCAL FORCE%LFFF%?phyAddLocalForce@@YAXHMMM@Z"
+   IDS_STRING105 "PHY ADD TORQUE%LFFF%?phyAddTorque@@YAXHMMM@Z"
+   IDS_STRING106 "PHY ADD LOCAL TORQUE%LFFF%?phyAddLocalTorque@@YAXHMMM@Z"
+     //Limbs
+   IDS_STRING107 "PHY ADD FORCE%LLFFF%?phyAddForce@@YAXHHMMM@Z"
+   IDS_STRING108 "PHY ADD LOCAL FORCE%LLFFF%?phyAddLocalForce@@YAXHHMMM@Z"
+   IDS_STRING109 "PHY ADD TORQUE%LLFFF%?phyAddTorque@@YAXHHMMM@Z"
+   IDS_STRING110 "PHY ADD LOCAL TORQUE%LLFFF%?phyAddLocalTorque@@YAXHHMMM@Z"
+
+   //-- BOOL
+   //IDS_STRING111 "PHY MAKE SPHERE[%DLF%?phyMakeSphere@@YA_NHM@Z"
+   //IDS_STRING112 "PHY MAKE SPHERE%LF%?phyMakeSphere@@YA_NHM@Z"
+   //-- DWORD
+   IDS_STRING111 "PHY MAKE SPHERE[%DLF%?phyMakeSphere@@YAKHM@Z"
+   IDS_STRING112 "PHY MAKE SPHERE%LF%?phyMakeSphere@@YAKHM@Z"
+
+   //MATERIALS
+   IDS_STRING113 "PHY MAKE MATERIAL[%DLFFF%phyMakeMaterial%phyMakeMaterial(int materialID, float restitution, float staticFriction, float dynamicFriction)"
+   IDS_STRING114 "PHY MAKE MATERIAL%LFFF%phyMakeMaterial%phyMakeMaterial(int materialID, float restitution, float staticFriction, float dynamicFriction)"
+   IDS_STRING115 "PHY SET MATERIAL%LLL%?phySetMaterial@@YAXHHH@Z"
+   IDS_STRING116 "PHY GET MATERIAL[%LLL%?phyGetMaterial@@YAHHH@Z"
+
+   //DELETE
+   IDS_STRING117 "PHY DELETE ACTOR%L%?phyDeleteActor@@YAXH@Z"
+   IDS_STRING118 "PHY DELETE ACTOR%LL%?phyDeleteActor@@YAXHH@Z"
+
+   //CAPSULE
+   IDS_STRING119 "PHY MAKE CAPSULE[%DLFFF%?phyMakeCapsule@@YA_NHMMM@Z"
+   IDS_STRING120 "PHY MAKE CAPSULE%LFFF%?phyMakeCapsule@@YA_NHMMM@Z"
+
+
+   //IDS_STRING121 "PHY COOK SOFT BODY MESH%LS%?phyCookSoftBodyMesh@@YA_NHPAD@Z"
+   //IDS_STRING122 "PHY COOK SOFT BODY MESH[%DLS%?phyCookSoftBodyMesh@@YA_NHPAD@Z"
+
+   //RIGID BODY
+   IDS_STRING123 "PHY GET ANGULAR VELOCITY%LL%?phyGetAngularVelocity@@YAXHH@Z"
+   IDS_STRING124 "PHY GET LINEAR VELOCITY%LL%?phyGetLinearVelocity@@YAXHH@Z"
+   IDS_STRING125 "PHY SET ANGULAR VELOCITY%LFFF%?phySetAngularVelocity@@YAXHMMM@Z"
+   IDS_STRING126 "PHY SET LINEAR VELOCITY%LFFF%?phySetLinearVelocity@@YAXHMMM@Z"
+
+   //DRAG
+   IDS_STRING127 "PHY PICK%LLLL%phyPick%phyPick(int cameraID, int screenX, int screenY, int flag)"
+   IDS_STRING128 "PHY PICK DESELECT%0%phyPickDeselect%phyPickDeselect()"
+   IDS_STRING129 "PHY PICK DEPTH%L%phyPickDepth%phyPickDepth(int delta)"
+   IDS_STRING130 "PHY PICK SET SCREEN DIM%LL%phyPickSetScreenDim%phyPickSetScreenDim(int screenWidth, int screenHeight)"
+
+
+   //SHAPES
+   IDS_STRING131 "PHY SHAPE SET LOC POS%LLFFF%phyShapeSetLocPos%phyShapeSetLocPos(int objectID, int shapeID, float posX, float posY, float posZ)"
+   IDS_STRING132 "PHY SHAPE SET LOC ROT%LLFFF%phyShapeSetLocRot%phyShapeSetLocRot(int objectID, int shapeID, float angleX, float angleY, float angleZ)" 
+   IDS_STRING133 "PHY SHAPE SET GLOB POS%LLFFF%phyShapeSetGlobPos%phyShapeSetGlobPos(int objectID, int shapeID, float posX, float posY, float posZ)"
+   IDS_STRING134 "PHY SHAPE SET GLOB ROT%LLFFF%phyShapeSetGlobRot%phyShapeSetGlobRot(int objectID, int shapeID, float angleX, float angleY, float angleZ)" 
+
+   //JOINTS  
+   IDS_STRING135 "PHY DELETE JOINT DESC%L%phyDeleteJointDesc%phyDeleteJointDesc(int jointDescID)"
+   IDS_STRING136 "PHY DELETE JOINT%L%phyDeleteJoint%phyDeleteJoint(int jointID)"
+
+   IDS_STRING137 "PHY SET POSITION%LFFF%?phySetPosition@@YAXHMMM@Z"
+   IDS_STRING138 "PHY SET ROTATION%LFFF%?phySetRotation@@YAXHMMM@Z"
+   IDS_STRING139 "PHY SET MAX ANGULAR VELOCITY%LF%?phySetMaxAngularVelocity@@YAXHM@Z"
+   IDS_STRING140 "PHY GET MAX ANGULAR VELOCITY[%FL%?phyGetMaxAngularVelocity@@YAKH@Z"
+   IDS_STRING141 "PHY SET LINEAR MOMENTUM%LFFF%?phySetLinearMomentum@@YAXHMMM@Z"
+   IDS_STRING142 "PHY GET LINEAR MOMENTUM%LL%?phyGetLinearMomentum@@YAXHH@Z"
+   IDS_STRING143 "PHY SET ANGULAR MOMENTUM%LFFF%?phySetAngularMomentum@@YAXHMMM@Z"
+   IDS_STRING144 "PHY GET ANGULAR MOMENTUM%LL%?phyGetAngularMomentum@@YAXHH@Z"
+   IDS_STRING145 "PHY SET LINEAR DAMPING%LF%?phySetLinearDamping@@YAXHM@Z"
+   IDS_STRING146 "PHY GET LINEAR DAMPING[%FL%?phyGetLinearDamping@@YAKH@Z"
+   IDS_STRING147 "PHY SET ANGULAR DAMPING%LF%?phySetAngularDamping@@YAXHM@Z"
+   IDS_STRING148 "PHY GET ANGULAR DAMPING[%FL%?phyGetAngularDamping@@YAKH@Z"
+
+   //SOFT BODY
+   IDS_STRING149 "PHY COOK SOFT BODY MESH%LS%?phyCookSoftBodyMesh@@YA_NHPAD@Z"
+   IDS_STRING150 "PHY COOK SOFT BODY MESH[%DLS%?phyCookSoftBodyMesh@@YA_NHPAD@Z"
+   IDS_STRING151 "PHY MAKE SOFT BODY%LL%?phyMakeSoftBody@@YA_NHH@Z"
+   IDS_STRING152 "PHY MAKE SOFT BODY[%DLL%?phyMakeSoftBody@@YA_NHH@Z"
+   IDS_STRING153 "PHY MAKE SOFT BODY DEBUG%LL%?phyMakeSoftBodyDebug@@YA_NHH@Z"
+   IDS_STRING154 "PHY MAKE SOFT BODY DEBUG[%DLL%?phyMakeSoftBodyDebug@@YA_NHH@Z"
+   IDS_STRING155 "PHY UPDATE SOFT BODY DEBUG%LL%?phyUpdateSoftBodyDebug@@YAXHH@Z"
+
+   IDS_STRING156 "PHY SIMULATE%F%?phySimulate@@YAXM@Z"
+   IDS_STRING157 "PHY SET TIMING%FLL%phySetTiming%phySetTiming(float maxTimeStep, int maxIter, int timeStepMethod)"
+   IDS_STRING158 "PHY TRIANGLE MESH GET REFERENCE COUNT[%LL%phyTriangleMeshGetReferenceCount%phyTriangleMeshGetReferenceCount(int meshID)"
+   IDS_STRING159 "PHY CONVEX MESH GET REFERENCE COUNT[%LL%phyConvexMeshGetReferenceCount%phyConvexMeshGetReferenceCount(int meshID)"
+   
+   IDS_STRING160 "PHY GET MASS[%FL%?phyGetMass@@YAKH@Z"
+   IDS_STRING161 "PHY SET MASS%LF%?phySetMass@@YAXHM@Z"
+   IDS_STRING162 "PHY UPDATE MASS FROM SHAPES[%DLFF%?phyUpdateMassFromShapes@@YA_NHMM@Z"
+   IDS_STRING163 "PHY UPDATE MASS FROM SHAPES%LFF%?phyUpdateMassFromShapes@@YA_NHMM@Z"
+
+   //NEW
+   IDS_STRING164 "PHY PICK GET RAY DIRECTION%L%phyPickGetRayDirection%phyPickGetRayDirection(int vector3ID)"
+   IDS_STRING165 "PHY SET TO NEW OBJECT%LLLL%phySetToNewObject%phySetToNewObject(int newObjectID, int newLimbID, int oldObjectID, int oldLimbID)"
+   IDS_STRING166 "PHY IS DYNAMIC[%DL%?phyIsDynamic@@YA_NH@Z"
+   IDS_STRING167 "PHY SET CMASS LOC POS%LFFF%?phySetCMassLocPos@@YAXHMMM@Z"
+   IDS_STRING168 "PHY IS WHEEL[%DLL%?phyIsWheel@@YA_NHH@Z"
+
+   IDS_STRING169 "PHY MAKE WHEEL[%DLF%?phyMakeWheel@@YA_NHM@Z"
+   IDS_STRING170 "PHY MAKE WHEEL%LF%?phyMakeWheel@@YA_NHM@Z"
+   IDS_STRING171 "PHY WHEEL GET CONTACT[%DLL%?phyWheelGetContact@@YA_NHH@Z"
+   IDS_STRING172 "PHY WHEEL GET CONTACT%LL%?phyWheelGetContact@@YA_NHH@Z"
+   IDS_STRING173 "PHY WHEEL GET CONTACT POSITION[%F%phyWheelGetContactPosition%phyWheelGetContactPosition()"
+   IDS_STRING174 "PHY WHEEL UPDATE%LL%?phyWheelUpdate@@YAXHH@Z"
+   IDS_STRING175 "PHY WHEEL GET SUSPENSION TRAVEL[%FLL%?phyWheelGetSuspensionTravel@@YAKHH@Z"
+   IDS_STRING176 "PHY WHEEL GET AXLE SPEED[%FLL%?phyWheelGetAxleSpeed@@YAKHH@Z"
+   IDS_STRING177 "PHY WHEEL GET RADIUS[%FLL%?phyWheelGetRadius@@YAKHH@Z"
+   IDS_STRING178 "PHY WHEEL SET STEER ANGLE%LLF%?phyWheelSetSteerAngle@@YAXHHM@Z"
+   IDS_STRING179 "PHY WHEEL SET MOTOR TORQUE%LLF%?phyWheelSetMotorTorque@@YAXHHM@Z"
+   IDS_STRING180 "PHY WHEEL SET BRAKE TORQUE%LLF%?phyWheelSetBrakeTorque@@YAXHHM@Z"
+   
+   IDS_STRING181 "PHY WHEEL SET SUSPENSION TRAVEL%LLF%?phyWheelSetSuspensionTravel@@YAXHHM@Z"
+   IDS_STRING182 "PHY WHEEL SET SUSPENSION SPRING%LLFFF%?phyWheelSetSuspensionSpring@@YAXHHMMM@Z"
+
+   IDS_STRING183 "PHY ADD LOCAL FORCE AT LOCAL POS%LFFFFFF%?phyAddLocalForceAtLocalPos@@YAXHMMMMMM@Z"
+   IDS_STRING184 "PHY MAKE WHEEL%LLFF%?phyMakeWheel@@YA_NHHMM@Z"
+   IDS_STRING185 "PHY MAKE WHEEL[%DLLFF%?phyMakeWheel@@YA_NHHMM@Z"
+   IDS_STRING186 "PHY WHEEL UPDATE%LLL%?phyWheelUpdate@@YAXHHH@Z"
+   IDS_STRING187 "PHY WHEEL SET MOTOR TORQUE%LLLF%?phyWheelSetMotorTorque@@YAXHHHM@Z"
+   
+   IDS_STRING188 "PHY MAKE TIRE FUNC DESC%L%phyMakeTireFuncDesc%phyMakeTireFuncDesc(int ID)"
+   IDS_STRING189 "PHY MAKE TIRE FUNC DESC[%DL%phyMakeTireFuncDesc%phyMakeTireFuncDesc(int ID)"
+   IDS_STRING190 "PHY TIRE FUNC DESC SET ASYMPTOTE%LFF%phyTireFuncDescSetAsymptote%phyTireFuncDescSetAsymptote(int ID, float asymptoteSlip, float asymptoteValue)"
+   IDS_STRING191 "PHY TIRE FUNC DESC SET EXTREMUM%LFF%phyTireFuncDescSetExtremum%phyTireFuncDescSetExtremum(int ID, float extremumSlip, float extremumValue)"
+   IDS_STRING192 "PHY TIRE FUNC DESC SET STIFFNESS FACTOR%LF%phyTireFuncDescSetStiffnessFactor%phyTireFuncDescSetStiffnessFactor(int ID, float stiffnessFactor)"
+   IDS_STRING193 "PHY DELETE TIRE FUNC DESC%L%phyDeleteTireFuncDesc%phyDeleteTireFuncDesc(int ID)"
+   IDS_STRING194 "PHY TIRE FUNC DESC SET TO DEFAULT%L%phyTireFuncDescSetToDefault%phyTireFuncDescSetToDefault(int ID)"
+   IDS_STRING195 "PHY TIRE FUNC DESC IS VALID[%DL%phyTireFuncDescIsValid%phyTireFuncDescIsValid(int ID)"
+   IDS_STRING196 "PHY TIRE FUNC DESC GET HERMITE EVAL[%FLF%phyTireFuncDescGetHermiteEval%phyTireFuncDescGetHermiteEval(int ID, float t)"
+
+   IDS_STRING197 "PHY WHEEL SET LAT TIRE FORCE FUNC%LLL%?phyWheelSetLatTireForceFunc@@YAXHHH@Z"
+   IDS_STRING198 "PHY WHEEL SET LAT TIRE FORCE FUNC%LLLL%?phyWheelSetLatTireForceFunc@@YAXHHHH@Z"
+   IDS_STRING199 "PHY WHEEL SET LONG TIRE FORCE FUNC%LLL%?phyWheelSetLongTireForceFunc@@YAXHHH@Z"
+   IDS_STRING200 "PHY WHEEL SET LONG TIRE FORCE FUNC%LLLL%?phyWheelSetLongTireForceFunc@@YAXHHHH@Z"
+
+   //HEIGHTFIELDS
+   IDS_STRING201 "PHY MAKE HEIGHT FIELD DESC[%DLLLFFF%phyMakeHeightFieldDesc%phyMakeHeightFieldDesc(int ID, int columns, int rows, float verticalExtent, float thickness, float convexEdgeThreshold)"
+   IDS_STRING202 "PHY MAKE HEIGHT FIELD DESC%LLLFFF%phyMakeHeightFieldDesc%phyMakeHeightFieldDesc(int ID, int columns, int rows, float verticalExtent, float thickness, float convexEdgeThreshold)"
+   IDS_STRING203 "PHY HEIGHT FIELD DESC SET DATA%LLLL%?phyHeightFieldDescSetData@@YAXHHHH@Z"
+   IDS_STRING204 "PHY HEIGHT FIELD DESC SET DATA%LLLLLLL%?phyHeightFieldDescSetData@@YAXHHHHHHH@Z"
+   IDS_STRING205 "PHY MAKE HEIGHT FIELD[%DLL%phyMakeHeightField%phyMakeHeightField(int ID, int heightFieldDescID)"
+   IDS_STRING206 "PHY MAKE HEIGHT FIELD%LL%phyMakeHeightField%phyMakeHeightField(int ID, int heightFieldDescID)"
+   IDS_STRING207 "PHY INSTANCE HEIGHT FIELD[%DLLFFF%?phyInstanceHeightField@@YA_NHHMMM@Z"
+   IDS_STRING208 "PHY INSTANCE HEIGHT FIELD%LLFFF%?phyInstanceHeightField@@YA_NHHMMM@Z"
+   IDS_STRING209 "PHY INSTANCE HEIGHT FIELD[%DLLFFFLL%?phyInstanceHeightField@@YA_NHHMMMHH@Z"
+   IDS_STRING210 "PHY INSTANCE HEIGHT FIELD%LLFFFLL%?phyInstanceHeightField@@YA_NHHMMMHH@Z"
+   IDS_STRING211 "PHY DELETE HEIGHT FIELD DESC%L%phyDeleteHeightFieldDesc%phyDeleteHeightFieldDesc(int ID)"
+   IDS_STRING212 "PHY DELETE HEIGHT FIELD%L%phyDeleteHeightField%phyDeleteHeightField(int ID)"
+
+   //-- Controllers
+   IDS_STRING213 "PHY MAKE CONTROLLER CAPSULE%LF%?phyMakeControllerCapsule@@YA_NHM@Z"
+   IDS_STRING214 "PHY MAKE CONTROLLER CAPSULE[%DLF%?phyMakeControllerCapsule@@YA_NHM@Z"
+   IDS_STRING215 "PHY MAKE CONTROLLER CAPSULE%LFFF%?phyMakeControllerCapsule@@YA_NHMMM@Z"
+   IDS_STRING216 "PHY MAKE CONTROLLER CAPSULE[%DLFFF%?phyMakeControllerCapsule@@YA_NHMMM@Z"
+   IDS_STRING217 "PHY MAKE CONTROLLER BOX%LF%?phyMakeControllerBox@@YA_NHM@Z"
+   IDS_STRING218 "PHY MAKE CONTROLLER BOX[%DLF%?phyMakeControllerBox@@YA_NHM@Z"
+   IDS_STRING219 "PHY MAKE CONTROLLER BOX%LFFF%?phyMakeControllerBox@@YA_NHMMM@Z"
+   IDS_STRING220 "PHY MAKE CONTROLLER BOX[%DLFFF%?phyMakeControllerBox@@YA_NHMMM@Z"
+   IDS_STRING221 "PHY CONTROLLER SET STEP OFFSET%LF%phyControllerSetStepOffset%phyControllerSetStepOffset(int ID, float stepOffset)"
+   IDS_STRING222 "PHY CONTROLLER BOX SET EXTENTS%LFFF%phyControllerBoxSetExtents%phyControllerBoxSetExtents(int ID, float x, float y, float z)"
+   IDS_STRING223 "PHY CONTROLLER CAPSULE SET RADIUS%LF%phyControllerCapsuleSetRadius%phyControllerCapsuleSetRadius(int ID, float radius)"
+   IDS_STRING224 "PHY CONTROLLER CAPSULE SET HEIGHT%LF%phyControllerCapsuleSetHeight%phyControllerCapsuleSetHeight(int ID, float height)"
+   IDS_STRING225 "PHY CONTROLLER SET Y OFFSET%LF%phyControllerSetYOffset%phyControllerSetYOffset(int ID, float yOffset)"
+   IDS_STRING226 "PHY CONTROLLER MOVE[%LLFFF%?phyControllerMove@@YAHHMMM@Z"
+   //IDS_STRING226 "PHY CONTROLLER MOVE[%LLFFF%phyControllerMove%phyControllerMove(int ID, float x, float y, float z)"
+   IDS_STRING227 "PHY DELETE CONTROLLER%L%phyDeleteController%phyDeleteController(int ID)"
+   
+   //-- Collision Groups
+   IDS_STRING228 "PHY GROUP SET COLLISION%LLD%phyGroupSetCollision%phyGroupSetCollision(int groupA, int groupB, bool enable)"
+   IDS_STRING229 "PHY SET GROUP%LL%?phySetGroup@@YAXHH@Z"
+   IDS_STRING230 "PHY GROUP PAIR SET FLAGS%LLL%phyGroupPairSetFlags%phyGroupPairSetFlags(int groupA, int groupB, int flag)"
+   //-- Collision Groups
+   IDS_STRING231 "PHY ACTOR PAIR SET FLAGS%LLL%?phyActorPairSetFlags@@YAXHHH@Z"
+   IDS_STRING232 "PHY CONTACT GET DATA[%L%?phyContactGetData@@YAHXZ"
+   IDS_STRING233 "PHY CONTACT GET ACTOR A[%L%?phyContactGetActorA@@YAHXZ"
+   IDS_STRING234 "PHY CONTACT GET ACTOR B[%L%?phyContactGetActorB@@YAHXZ"
+   IDS_STRING235 "PHY CONTACT GET FLAG[%L%?phyContactGetFlag@@YAHXZ"
+   //-- Contact reports
+   IDS_STRING236 "PHY RAYCAST ALL SHAPES[%LLL%?phyRaycastAllShapes@@YAHHH@Z"
+   IDS_STRING237 "PHY RAYCAST ALL SHAPES%LL%?phyRaycastAllShapes@@YAHHH@Z"
+   IDS_STRING238 "PHY RAYCAST HIT GET DATA[%L%?phyRaycastHitGetData@@YAHXZ"
+   IDS_STRING239 "PHY RAYCAST HIT GET OBJECT[%L%?phyRaycastHitGetObject@@YAHXZ"
+   //-- Raycast
+   IDS_STRING240 "PHY RAYCAST HIT GET DISTANCE[%F%?phyRaycastHitGetDistance@@YAMXZ"
+   IDS_STRING241 "PHY RAYCAST HIT GET WORLD IMPACT%L%?phyRaycastHitGetWorldImpact@@YAXH@Z"
+   IDS_STRING242 "PHY RAYCAST HIT GET WORLD NORMAL%L%?phyRaycastHitGetWorldNormal@@YAXH@Z"
+   IDS_STRING243 "PHY RAYCAST HIT GET U[%F%?phyRaycastHitGetU@@YAMXZ"
+   IDS_STRING244 "PHY RAYCAST HIT GET V[%F%?phyRaycastHitGetV@@YAMXZ"
+
+   IDS_STRING245 "PHY RAYCAST ALL SHAPES[%LLLLL%?phyRaycastAllShapes@@YAHHHHH@Z"
+   IDS_STRING246 "PHY RAYCAST ALL SHAPES%LLLL%?phyRaycastAllShapes@@YAHHHHH@Z"
+   IDS_STRING247 "PHY RAYCAST HIT GET LIMB[%L%?phyRaycastHitGetLimb@@YAHXZ"
+   IDS_STRING248 "PHY RAYCAST SET MAX DISTANCE%F%?phyRaycastSetMaxDistance@@YAXM@Z"
+   IDS_STRING249 "PHY RAYCAST GET MAX DISTANCE[%F%?phyRaycastGetMaxDistance@@YAKXZ"
+   IDS_STRING250 "PHY RAYCAST ALL BOUNDS[%LLLLL%?phyRaycastAllBounds@@YAHHHHH@Z"
+   IDS_STRING251 "PHY RAYCAST ALL BOUNDS%LLLL%?phyRaycastAllBounds@@YAHHHHH@Z"
+   
+
+   //-- BOOL
+   //IDS_STRING253 "PHY RAYCAST ANY BOUNDS[%DLLLL%?phyRaycastAnyBounds@@YA_NHHHH@Z"
+   //IDS_STRING252 "PHY RAYCAST ANY SHAPE[%DLLLL%?phyRaycastAnyShape@@YA_NHHHH@Z"
+   //IDS_STRING254 "PHY RAYCAST CLOSEST SHAPE[%DLLLL%?phyRaycastClosestShape@@YA_NHHHH@Z"
+   //IDS_STRING255 "PHY RAYCAST CLOSEST SHAPE%LLLL%?phyRaycastClosestShape@@YA_NHHHH@Z"
+   //IDS_STRING256 "PHY RAYCAST CLOSEST BOUNDS[%DLLLL%?phyRaycastClosestBounds@@YA_NHHHH@Z"
+   //IDS_STRING257 "PHY RAYCAST CLOSEST BOUNDS%LLLL%?phyRaycastClosestBounds@@YA_NHHHH@Z"
+
+   //-- DWORD
+   IDS_STRING253 "PHY RAYCAST ANY BOUNDS[%DLLLL%?phyRaycastAnyBounds@@YAKHHHH@Z"
+   IDS_STRING252 "PHY RAYCAST ANY SHAPE[%DLLLL%?phyRaycastAnyShape@@YAKHHHH@Z"
+   IDS_STRING254 "PHY RAYCAST CLOSEST SHAPE[%DLLLL%?phyRaycastClosestShape@@YAKHHHH@Z"
+   IDS_STRING255 "PHY RAYCAST CLOSEST SHAPE%LLLL%?phyRaycastClosestShape@@YAKHHHH@Z"
+   IDS_STRING256 "PHY RAYCAST CLOSEST BOUNDS[%DLLLL%?phyRaycastClosestBounds@@YAKHHHH@Z"
+   IDS_STRING257 "PHY RAYCAST CLOSEST BOUNDS%LLLL%?phyRaycastClosestBounds@@YAKHHHH@Z"
+
+
+
+//------------------- Not done for dbpro
+//EXPORT int phyRaycastAllShapes(int origVec3ID, int dirVec3ID, int flag, int groups);
+//EXPORT int phyRaycastHitGetLimb();
+//EXPORT void phyRaycastSetMaxDistance(float distance);
+//EXPORT DWORDFLOAT phyRaycastGetMaxDistance();
+//
+//EXPORT int phyRaycastAllBounds(int origVec3ID, int dirVec3ID, int flag, int groups);
+//EXPORT bool phyRaycastAnyShape(int origVec3ID, int dirVec3ID, int flag, int groups);
+//EXPORT bool phyRaycastAnyBounds(int origVec3ID, int dirVec3ID, int flag, int groups);
+//EXPORT bool phyRaycastClosestShape(int origVec3ID, int dirVec3ID, int flag, int groups);
+//EXPORT bool phyRaycastClosestBounds(int origVec3ID, int dirVec3ID, int flag, int groups);
+
+
+   //IDS_STRING245 "PHY CONTROLLER MOVE%LFFF%?phyControllerMove@@YAXHMMM@Z"
+   IDS_STRING258 "PHY CONTROLLER MOVE%LFFF%?phyControllerMove@@YAHHMMM@Z"
+
+
+   
+   
+   //(not done)
+////EXPORTC void phyControllerReportSceneChanged();
+
+
+
+//EXPORT   bool phyMakeSoftBody(int objectID, int softBodyMeshID, float density); 
+//EXPORT   bool phyCookSoftBodyMesh(int softBodyMeshID, char* tetFile);
+//EXPORT   bool phyCookSoftBodyMesh(char* destinationFile, char* sourceTetFile);
+//EXPORT   bool phyMakeSoftBodyDebug(int objectID, int softBodyID);
+//EXPORT   void phyUpdateSoftBodyDebug(int objectID, int softBodyID);
+//EXPORT   bool phyLoadSoftBodyMesh(int softBodyMeshID, char* file);
+//EXPORT   bool phyDeleteSoftBodyMesh(int softBodyMeshID);
+//EXPORT   void phyDeleteSoftBody(int softBodyID);
+//EXPORTC  void phySetSoftBodyStretchingStiffness(int softBodyID, float value);
+//EXPORTC  float phyGetSoftBodyStretchingStiffness(int softBodyID);
+//////Do
+//EXPORT  void phySoftBodyAttachToShape(int softBodyID, int objectID, int shapeIndex, int attachmentFlag);
+//EXPORT  void phySoftBodyAttachToShape(int softBodyID, int objectID, int limbID, int shapeIndex, int attachmentFlag);
+//EXPORT  void phySoftBodyDetachFromShape(int softBodyID, int objectID, int shapeIndex);
+//EXPORT  void phySoftBodyAttachVertexToShape(int softBodyID, int vertexIndex, int objectID, int shapeIndex, float localX, float localY, float localZ, int attachmentFlag);
+//EXPORT  void phySoftBodyAttachVertexToShape(int softBodyID, int vertexIndex, int objectID, int limbID, int shapeIndex, float localX, float localY, float localZ, int attachmentFlag);
+
+}
+
+

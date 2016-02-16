@@ -1,0 +1,835 @@
+#include <windows.h>
+#include "resource.h"
+
+
+STRINGTABLE
+{
+// D - Bool
+// L - Int
+// F - Float
+// S - char*
+
+//CORE
+	IDS_STRING1	 "DYN START[%D%?dynStart@@YAKXZ"
+    IDS_STRING2	 "DYN START%0%?dynStart@@YAKXZ"
+	IDS_STRING3	 "DYN STOP%0%dynStop%dynStop()"
+	IDS_STRING4  "DYN DELETE SCENE%L%dynDeleteScene%dynDeleteScene(int sceneID)"
+	IDS_STRING5  "DYN GET CURRENT SCENE[%L%dynGetCurrentScene%dynGetCurrentScene(void)"
+	IDS_STRING6  "DYN GET SCENE COUNT[%L%dynGetSceneCount%dynGetSceneCount(void)"
+	IDS_STRING7  "DYN MAKE SCENE%L%?dynMakeScene@@YAKH@Z"
+	IDS_STRING8  "DYN MAKE SCENE[%DL%?dynMakeScene@@YAKH@Z"
+	IDS_STRING9  "DYN SET CURRENT SCENE%L%dynSetCurrentScene%dynSetCurrentScene(int sceneID)"
+	IDS_STRING10 "DYN UPDATE%0%dynUpdate%dynUpdate(void)"
+	IDS_STRING11 "DYN FETCH RESULTS%0%dynFetchResults%dynFetchResults(void)"
+	//IDS_STRING12 "DYN SIMULATE%0%dynSimulate%dynSimulate(void)"
+    IDS_STRING12 "DYN SIMULATE%0%?dynSimulate@@YAXXZ"
+//NEW
+	IDS_STRING13 "DYN DEBUG RENDER%0%dynDebugRender%dynDebugRender(void)"
+    IDS_STRING14 "DYN SET GRAVITY%FFF%dynSetGravity%dynSetGravity(float x, float y, float z)"
+	IDS_STRING15 "DYN SET PARAMETER%LF%dynSetParameter%dynSetParameter(int parameter, float value)"
+	IDS_STRING16 "DYN VISUAL DEBUGGER CONNECTED[%D%dynVisualDebuggerConnected%dynVisualDebuggerConnected(void)"
+    IDS_STRING17 "DYN VISUAL DEBUGGER OFF%0%dynVisualDebuggerOff%dynVisualDebuggerOff(void)"
+	IDS_STRING18 "DYN VISUAL DEBUGGER ON%0%dynVisualDebuggerOn%dynVisualDebuggerOn(void)"
+  
+//CONSTRUCTION
+ //Box
+    //-- RETURN BOOL
+	//IDS_STRING19 "DYN MAKE BOX[%DLF%?dynMakeBox@@YAKHM@Z"
+	//IDS_STRING20 "DYN MAKE BOX%LF%?dynMakeBox@@YAKHM@Z"
+	//IDS_STRING21 "DYN MAKE BOX[%DLLFFF%?dynMakeBox@@YAKHHMMM@Z"
+	//IDS_STRING22 "DYN MAKE BOX%LLFFF%?dynMakeBox@@YAKHHMMM@Z"
+	//-- RETURN DWORD
+	IDS_STRING19 "DYN MAKE BOX[%DLF%?dynMakeBox@@YAKHM@Z"
+	IDS_STRING20 "DYN MAKE BOX%LF%?dynMakeBox@@YAKHM@Z"
+	IDS_STRING21 "DYN MAKE BOX[%DLLFFF%?dynMakeBox@@YAKHHMMM@Z"
+	IDS_STRING22 "DYN MAKE BOX%LLFFF%?dynMakeBox@@YAKHHMMM@Z"
+ //Ground plane
+    IDS_STRING23 "DYN MAKE GROUND PLANE[%D%dynMakeGroundPlane%dynMakeGroundPlane()"
+    IDS_STRING24 "DYN MAKE GROUND PLANE%0%dynMakeGroundPlane%dynMakeGroundPlane()"
+ //Convex mesh
+  //cook
+   //return 
+    //-- BOOL
+	//IDS_STRING25 "DYN COOK CONVEX MESH[%DLS%?dynCookConvexMesh@@YAKHPAD@Z"
+    //IDS_STRING26 "DYN COOK CONVEX MESH[%DLLS%?dynCookConvexMesh@@YAKHHPAD@Z"
+	//IDS_STRING27 "DYN COOK CONVEX MESH[%DLL%?dynCookConvexMesh@@YAKHH@Z"
+    //IDS_STRING28 "DYN COOK CONVEX MESH[%DLLL%?dynCookConvexMesh@@YAKHHH@Z"
+	//-- DWORD
+	IDS_STRING25 "DYN COOK CONVEX MESH[%DLS%?dynCookConvexMesh@@YAKHPAD@Z"
+    IDS_STRING26 "DYN COOK CONVEX MESH[%DLLS%?dynCookConvexMesh@@YAKHHPAD@Z"
+	IDS_STRING27 "DYN COOK CONVEX MESH[%DLL%?dynCookConvexMesh@@YAKHH@Z"
+    IDS_STRING28 "DYN COOK CONVEX MESH[%DLLL%?dynCookConvexMesh@@YAKHHH@Z"
+
+   //non return
+    //-- BOOL
+    //IDS_STRING29 "DYN COOK CONVEX MESH%LS%?dynCookConvexMesh@@YAKHPAD@Z"
+    //IDS_STRING30 "DYN COOK CONVEX MESH%LLS%?dynCookConvexMesh@@YAKHHPAD@Z"
+	//IDS_STRING31 "DYN COOK CONVEX MESH%LL%?dynCookConvexMesh@@YAKHH@Z"
+    //IDS_STRING32 "DYN COOK CONVEX MESH%LLL%?dynCookConvexMesh@@YAKHHH@Z"
+    //-- DWORD
+	IDS_STRING29 "DYN COOK CONVEX MESH%LS%?dynCookConvexMesh@@YAKHPAD@Z"
+    IDS_STRING30 "DYN COOK CONVEX MESH%LLS%?dynCookConvexMesh@@YAKHHPAD@Z"
+	IDS_STRING31 "DYN COOK CONVEX MESH%LL%?dynCookConvexMesh@@YAKHH@Z"
+    IDS_STRING32 "DYN COOK CONVEX MESH%LLL%?dynCookConvexMesh@@YAKHHH@Z"
+  //load
+   //return
+    IDS_STRING33 "DYN LOAD CONVEX MESH[%DSL%dynLoadConvexMesh%dynLoadConvexMesh(char* file, int convexMeshID)"
+   //non return
+	IDS_STRING34 "DYN LOAD CONVEX MESH%SL%dynLoadConvexMesh%dynLoadConvexMesh(char* file, int convexMeshID)"
+  //make
+   //return
+    IDS_STRING35 "DYN MAKE CONVEX MESH[%DLLF%?dynMakeConvexMesh@@YAKHHM@Z"
+    IDS_STRING36 "DYN MAKE CONVEX MESH[%DLLLF%?dynMakeConvexMesh@@YAKHHHM@Z"
+   //non return
+    IDS_STRING37 "DYN MAKE CONVEX MESH%LLF%?dynMakeConvexMesh@@YAKHHM@Z"
+    IDS_STRING38 "DYN MAKE CONVEX MESH%LLLF%?dynMakeConvexMesh@@YAKHHHM@Z"
+  //delete
+   //return
+    IDS_STRING39 "DYN DELETE CONVEX MESH[%DL%dynDeleteConvexMesh%dynDeleteConvexMesh(int convexMeshID)"
+   //non return
+	IDS_STRING40 "DYN DELETE CONVEX MESH%L%dynDeleteConvexMesh%dynDeleteConvexMesh(int convexMeshID)"
+  //shapes
+   //return
+   IDS_STRING41 "DYN MAKE SHAPE CONVEX[%LLL%?dynMakeShapeConvex@@YAHHH@Z"
+   IDS_STRING42 "DYN MAKE SHAPE CONVEX[%LLLL%?dynMakeShapeConvex@@YAHHHH@Z"
+   //non return
+   IDS_STRING43 "DYN MAKE SHAPE CONVEX%LL%?dynMakeShapeConvex@@YAHHH@Z"
+   IDS_STRING44 "DYN MAKE SHAPE CONVEX%LLL%?dynMakeShapeConvex@@YAHHHH@Z"
+
+ //Triangle mesh
+  //cook
+   //return 
+	IDS_STRING45 "DYN COOK TRIANGLE MESH[%DLS%?dynCookTriangleMesh@@YAKHPAD@Z"
+    IDS_STRING46 "DYN COOK TRIANGLE MESH[%DLLS%?dynCookTriangleMesh@@YAKHHPAD@Z"
+	IDS_STRING47 "DYN COOK TRIANGLE MESH[%DLL%?dynCookTriangleMesh@@YAKHH@Z"
+    IDS_STRING48 "DYN COOK TRIANGLE MESH[%DLLL%?dynCookTriangleMesh@@YAKHHH@Z"
+   //non return
+    IDS_STRING49 "DYN COOK TRIANGLE MESH%LS%?dynCookTriangleMesh@@YAKHPAD@Z"
+    IDS_STRING50 "DYN COOK TRIANGLE MESH%LLS%?dynCookTriangleMesh@@YAKHHPAD@Z"
+	IDS_STRING51 "DYN COOK TRIANGLE MESH%LL%?dynCookTriangleMesh@@YAKHH@Z"
+    IDS_STRING52 "DYN COOK TRIANGLE MESH%LLL%?dynCookTriangleMesh@@YAKHHH@Z"
+  //load
+   //return
+    IDS_STRING53 "DYN LOAD TRIANGLE MESH[%DSL%dynLoadTriangleMesh%dynLoadTriangleMesh(char* file, int triangleMeshID)"
+   //non return
+	IDS_STRING54 "DYN LOAD TRIANGLE MESH%SL%dynLoadTriangleMesh%dynLoadTriangleMesh(char* file, int triangleMeshID)"
+  //make
+   //return
+    IDS_STRING55 "DYN MAKE TRIANGLE MESH[%DLL%?dynMakeTriangleMesh@@YAKHH@Z"
+    IDS_STRING56 "DYN MAKE TRIANGLE MESH[%DLLL%?dynMakeTriangleMesh@@YAKHHH@Z"
+   //non return
+    IDS_STRING57 "DYN MAKE TRIANGLE MESH%LL%?dynMakeTriangleMesh@@YAKHH@Z"
+    IDS_STRING58 "DYN MAKE TRIANGLE MESH%LLL%?dynMakeTriangleMesh@@YAKHHH@Z"
+  //delete
+   //return
+    IDS_STRING59 "DYN DELETE TRIANGLE MESH[%DL%dynDeleteTriangleMesh%dynDeleteTriangleMesh(int triangleMeshID)"
+   //non return  
+	IDS_STRING60 "DYN DELETE TRIANGLE MESH%L%dynDeleteTriangleMesh%dynDeleteTriangleMesh(int triangleMeshID)"
+  //shapes
+   //return
+   IDS_STRING61 "DYN MAKE SHAPE TRIANGLE MESH[%LLL%?dynMakeShapeTriangleMesh@@YAHHH@Z"
+   IDS_STRING62 "DYN MAKE SHAPE TRIANGLE MESH[%LLLL%?dynMakeTriangleMesh@@YAHHHH@Z"
+   //non return
+   IDS_STRING63 "DYN MAKE SHAPE TRIANGLE MESH%LL%?dynMakeShapeTriangleMesh@@YAHHH@Z"
+   IDS_STRING64 "DYN MAKE SHAPE TRIANGLE MESH%LLL%?dynMakeShapeTriangleMesh@@YAHHHH@Z"
+
+//JOINTS
+   //return
+   IDS_STRING65 "DYN MAKE JOINT DESC[%DL%dynMakeJointDesc%dynMakeJointDesc(int jointDescID)"
+   IDS_STRING66 "DYN MAKE JOINT[%DLL%dynMakeJoint%dynMakeJoint(int jointID, int jointDescID)"
+   //non return  
+   IDS_STRING67 "DYN MAKE JOINT DESC%L%dynMakeJointDesc%dynMakeJointDesc(int jointDescID)"
+   IDS_STRING68 "DYN MAKE JOINT%LL%dynMakeJoint%dynMakeJoint(int jointID, int jointDescID)"
+
+   IDS_STRING69 "DYN JOINT DESC SET ACTOR A%LL%?dynJointDescSetActorA@@YAXHH@Z"
+   IDS_STRING70 "DYN JOINT DESC SET ACTOR B%LL%?dynJointDescSetActorB@@YAXHH@Z"
+   IDS_STRING71 "DYN JOINT DESC SET ACTOR A%LLL%?dynJointDescSetActorA@@YAXHHH@Z"
+   IDS_STRING72 "DYN JOINT DESC SET ACTOR B%LLL%?dynJointDescSetActorB@@YAXHHH@Z"
+
+   IDS_STRING73 "DYN JOINT DESC SET GLOBAL ANCHOR%LFFF%dynJointDescSetGlobalAnchor%dynJointDescSetGlobalAnchor(int jointDescID, float posX, float posY, float posZ)"
+   IDS_STRING74 "DYN JOINT DESC SET GLOBAL AXIS%LFFF%dynJointDescSetGlobalAxis%dynJointDescSetGlobalAxis(int jointDescID, float axisX, float axisY, float axisZ)"
+   IDS_STRING75 "DYN JOINT DESC SET SWING1 MOTION%LL%dynJointDescSetSwing1Motion%dynJointDescSetSwing1Motion(int jointDescID, int motion)"
+   IDS_STRING76 "DYN JOINT DESC SET SWING2 MOTION%LL%dynJointDescSetSwing2Motion%dynJointDescSetSwing2Motion(int jointDescID, int motion)"
+   IDS_STRING77 "DYN JOINT DESC SET TWIST MOTION%LL%dynJointDescSetTwistMotion%dynJointDescSetTwistMotion(int jointDescID, int motion)"
+   IDS_STRING78 "DYN JOINT DESC SET MOTION X%LL%dynJointDescSetMotionX%dynJointDescSetMotionX(int jointDescID, int motion)"
+   IDS_STRING79 "DYN JOINT DESC SET MOTION Y%LL%dynJointDescSetMotionY%dynJointDescSetMotionY(int jointDescID, int motion)"
+   IDS_STRING80 "DYN JOINT DESC SET MOTION Z%LL%dynJointDescSetMotionZ%dynJointDescSetMotionZ(int jointDescID, int motion)"
+   //Joint Limits
+   IDS_STRING90 "DYN JOINT DESC SET SWING1 LIMIT%LFFFF%dynJointDescSetSwing1Limit%dynJointDescSetSwing1Limit(int jointDescID, float value, float spring, float damping, float restitution)"
+   IDS_STRING91 "DYN JOINT DESC SET SWING2 LIMIT%LFFFF%dynJointDescSetSwing2Limit%dynJointDescSetSwing2Limit(int jointDescID, float value, float spring, float damping, float restitution)"
+   IDS_STRING92 "DYN JOINT DESC SET TWIST LIMIT HIGH%LFFFF%dynJointDescSetTwistLimitHigh%dynJointDescSetTwistLimitHigh(int jointDescID, float value, float spring, float damping, float restitution)"
+   IDS_STRING93 "DYN JOINT DESC SET TWIST LIMIT LOW%LFFFF%dynJointDescSetTwistLimitLow%dynJointDescSetTwistLimitLow(int jointDescID, float value, float spring, float damping, float restitution)"
+   
+   
+   //RAGDOLL
+   IDS_STRING94 "DYN SET LIMBS%LD%dynSetLimbs%dynSetLimbs(int objectID, bool dynsics)"
+   IDS_STRING95 "DYN SET ACTOR TO LIMB%LL%dynSetActorToLimb%dynSetActorToLimb(int objectID, int limbID)"
+   IDS_STRING96 "DYN SET ACTORS TO LIMBS%L%dynSetActorsToLimbs%dynSetActorsToLimbs(int objectID)"
+
+   IDS_STRING97 "DYN SET SCALE MULTIPLIER%F%dynSetScaleMultiplier%dynSetScaleMultiplier(float scaleMultiplier)"
+   IDS_STRING98 "DYN GET SCALE MULTIPLIER[%F%dynGetScaleMultiplier%dynGetScaleMultiplier()"
+
+
+
+   //FORCES
+   IDS_STRING103 "DYN ADD FORCE%LFFF%?dynAddForce@@YAXHMMM@Z"
+   IDS_STRING104 "DYN ADD LOCAL FORCE%LFFF%?dynAddLocalForce@@YAXHMMM@Z"
+   IDS_STRING105 "DYN ADD TORQUE%LFFF%?dynAddTorque@@YAXHMMM@Z"
+   IDS_STRING106 "DYN ADD LOCAL TORQUE%LFFF%?dynAddLocalTorque@@YAXHMMM@Z"
+     //Limbs
+   IDS_STRING107 "DYN ADD FORCE%LLFFF%?dynAddForce@@YAXHHMMM@Z"
+   IDS_STRING108 "DYN ADD LOCAL FORCE%LLFFF%?dynAddLocalForce@@YAXHHMMM@Z"
+   IDS_STRING109 "DYN ADD TORQUE%LLFFF%?dynAddTorque@@YAXHHMMM@Z"
+   IDS_STRING110 "DYN ADD LOCAL TORQUE%LLFFF%?dynAddLocalTorque@@YAXHHMMM@Z"
+
+   //-- BOOL
+   //IDS_STRING111 "DYN MAKE SPHERE[%DLF%?dynMakeSphere@@YAKHM@Z"
+   //IDS_STRING112 "DYN MAKE SPHERE%LF%?dynMakeSphere@@YAKHM@Z"
+   //-- DWORD
+   IDS_STRING111 "DYN MAKE SPHERE[%DLF%?dynMakeSphere@@YAKHM@Z"
+   IDS_STRING112 "DYN MAKE SPHERE%LF%?dynMakeSphere@@YAKHM@Z"
+
+   //MATERIALS
+   IDS_STRING113 "DYN MAKE MATERIAL[%DLFFF%dynMakeMaterial%dynMakeMaterial(int materialID, float restitution, float staticFriction, float dynamicFriction)"
+   IDS_STRING114 "DYN MAKE MATERIAL%LFFF%dynMakeMaterial%dynMakeMaterial(int materialID, float restitution, float staticFriction, float dynamicFriction)"
+   IDS_STRING115 "DYN SET MATERIAL%LLL%?dynSetMaterial@@YAXHHH@Z"
+   IDS_STRING116 "DYN GET MATERIAL[%LLL%?dynGetMaterial@@YAHHH@Z"
+
+   //DELETE
+   IDS_STRING117 "DYN DELETE ACTOR%L%?dynDeleteActor@@YAXH@Z"
+   IDS_STRING118 "DYN DELETE ACTOR%LL%?dynDeleteActor@@YAXHH@Z"
+
+   //CAPSULE
+   IDS_STRING119 "DYN MAKE CAPSULE[%DLFFF%?dynMakeCapsule@@YAKHMMM@Z"
+   IDS_STRING120 "DYN MAKE CAPSULE%LFFF%?dynMakeCapsule@@YAKHMMM@Z"
+
+
+   //IDS_STRING121 "DYN COOK SOFT BODY MESH%LS%?dynCookSoftBodyMesh@@YAKHPAD@Z"
+   //IDS_STRING122 "DYN COOK SOFT BODY MESH[%DLS%?dynCookSoftBodyMesh@@YAKHPAD@Z"
+
+   //RIGID BODY
+   IDS_STRING123 "DYN GET ANGULAR VELOCITY%LL%?dynGetAngularVelocity@@YAXHH@Z"
+   IDS_STRING124 "DYN GET LINEAR VELOCITY%LL%?dynGetLinearVelocity@@YAXHH@Z"
+   IDS_STRING125 "DYN SET ANGULAR VELOCITY%LFFF%?dynSetAngularVelocity@@YAXHMMM@Z"
+   IDS_STRING126 "DYN SET LINEAR VELOCITY%LFFF%?dynSetLinearVelocity@@YAXHMMM@Z"
+
+   //DRAG
+   IDS_STRING127 "DYN PICK%LLLL%dynPick%dynPick(int cameraID, int screenX, int screenY, int flag)"
+   IDS_STRING128 "DYN PICK DESELECT%0%dynPickDeselect%dynPickDeselect()"
+   IDS_STRING129 "DYN PICK DEPTH%L%dynPickDepth%dynPickDepth(int delta)"
+   IDS_STRING130 "DYN PICK SET SCREEN DIM%LL%dynPickSetScreenDim%dynPickSetScreenDim(int screenWidth, int screenHeight)"
+
+
+   //SHAPES
+   IDS_STRING131 "DYN SHAPE SET LOC POS%LLFFF%?dynShapeSetLocPos@@YAXHHMMM@Z"
+   IDS_STRING132 "DYN SHAPE SET LOC ROT%LLFFF%?dynShapeSetLocRot@@YAXHHMMM@Z" 
+   IDS_STRING133 "DYN SHAPE SET GLOB POS%LLFFF%?dynShapeSetGlobPos@@YAXHHMMM@Z"
+   IDS_STRING134 "DYN SHAPE SET GLOB ROT%LLFFF%?dynShapeSetGlobRot@@YAXHHMMM@Z" 
+
+   //JOINTS  
+   IDS_STRING135 "DYN DELETE JOINT DESC%L%dynDeleteJointDesc%dynDeleteJointDesc(int jointDescID)"
+   IDS_STRING136 "DYN DELETE JOINT%L%dynDeleteJoint%dynDeleteJoint(int jointID)"
+
+   IDS_STRING137 "DYN SET POSITION%LFFF%?dynSetPosition@@YAXHMMM@Z"
+   IDS_STRING138 "DYN SET ROTATION%LFFF%?dynSetRotation@@YAXHMMM@Z"
+   IDS_STRING139 "DYN SET MAX ANGULAR VELOCITY%LF%?dynSetMaxAngularVelocity@@YAXHM@Z"
+   IDS_STRING140 "DYN GET MAX ANGULAR VELOCITY[%FL%?dynGetMaxAngularVelocity@@YAKH@Z"
+   IDS_STRING141 "DYN SET LINEAR MOMENTUM%LFFF%?dynSetLinearMomentum@@YAXHMMM@Z"
+   IDS_STRING142 "DYN GET LINEAR MOMENTUM%LL%?dynGetLinearMomentum@@YAXHH@Z"
+   IDS_STRING143 "DYN SET ANGULAR MOMENTUM%LFFF%?dynSetAngularMomentum@@YAXHMMM@Z"
+   IDS_STRING144 "DYN GET ANGULAR MOMENTUM%LL%?dynGetAngularMomentum@@YAXHH@Z"
+   IDS_STRING145 "DYN SET LINEAR DAMPING%LF%?dynSetLinearDamping@@YAXHM@Z"
+   IDS_STRING146 "DYN GET LINEAR DAMPING[%FL%?dynGetLinearDamping@@YAKH@Z"
+   IDS_STRING147 "DYN SET ANGULAR DAMPING%LF%?dynSetAngularDamping@@YAXHM@Z"
+   IDS_STRING148 "DYN GET ANGULAR DAMPING[%FL%?dynGetAngularDamping@@YAKH@Z"
+
+   ////SOFT BODY
+   //IDS_STRING149 "DYN COOK SOFT BODY MESH%LS%?dynCookSoftBodyMesh@@YAKHPAD@Z"
+   //IDS_STRING150 "DYN COOK SOFT BODY MESH[%DLS%?dynCookSoftBodyMesh@@YAKHPAD@Z"
+   //IDS_STRING151 "DYN MAKE SOFT BODY%LL%?dynMakeSoftBody@@YAKHH@Z"
+   //IDS_STRING152 "DYN MAKE SOFT BODY[%DLL%?dynMakeSoftBody@@YAKHH@Z"
+   //IDS_STRING153 "DYN MAKE SOFT BODY DEBUG%LL%?dynMakeSoftBodyDebug@@YAKHH@Z"
+   //IDS_STRING154 "DYN MAKE SOFT BODY DEBUG[%DLL%?dynMakeSoftBodyDebug@@YAKHH@Z"
+   //IDS_STRING155 "DYN UPDATE SOFT BODY DEBUG%LL%?dynUpdateSoftBodyDebug@@YAXHH@Z"
+
+   IDS_STRING156 "DYN SIMULATE%F%?dynSimulate@@YAXM@Z"
+   IDS_STRING157 "DYN SET TIMING%FLL%dynSetTiming%dynSetTiming(float maxTimeStep, int maxIter, int timeStepMethod)"
+   IDS_STRING158 "DYN TRIANGLE MESH GET REFERENCE COUNT[%LL%dynTriangleMeshGetReferenceCount%dynTriangleMeshGetReferenceCount(int meshID)"
+   IDS_STRING159 "DYN CONVEX MESH GET REFERENCE COUNT[%LL%dynConvexMeshGetReferenceCount%dynConvexMeshGetReferenceCount(int meshID)"
+   
+   IDS_STRING160 "DYN GET MASS[%FL%?dynGetMass@@YAKH@Z"
+   IDS_STRING161 "DYN SET MASS%LF%?dynSetMass@@YAXHM@Z"
+   IDS_STRING162 "DYN UPDATE MASS FROM SHAPES[%DLFF%?dynUpdateMassFromShapes@@YAKHMM@Z"
+   IDS_STRING163 "DYN UPDATE MASS FROM SHAPES%LFF%?dynUpdateMassFromShapes@@YAKHMM@Z"
+
+   //NEW
+   IDS_STRING164 "DYN PICK GET RAY DIRECTION%L%dynPickGetRayDirection%dynPickGetRayDirection(int vector3ID)"
+   IDS_STRING165 "DYN SET TO NEW OBJECT%LLLL%dynSetToNewObject%dynSetToNewObject(int newObjectID, int newLimbID, int oldObjectID, int oldLimbID)"
+   IDS_STRING166 "DYN IS DYNAMIC[%DL%?dynIsDynamic@@YAKH@Z"
+   IDS_STRING167 "DYN SET CMASS LOC POS%LFFF%?dynSetCMassLocPos@@YAXHMMM@Z"
+   IDS_STRING168 "DYN IS WHEEL[%DLL%?dynIsWheel@@YAKHH@Z"
+
+   IDS_STRING169 "DYN MAKE WHEEL[%DLF%?dynMakeWheel@@YAKHM@Z"
+   IDS_STRING170 "DYN MAKE WHEEL%LF%?dynMakeWheel@@YAKHM@Z"
+   IDS_STRING171 "DYN WHEEL GET CONTACT[%DLL%?dynWheelGetContact@@YAKHH@Z"
+   IDS_STRING172 "DYN WHEEL GET CONTACT%LL%?dynWheelGetContact@@YAKHH@Z"
+   IDS_STRING173 "DYN WHEEL GET CONTACT POSITION[%F%dynWheelGetContactPosition%dynWheelGetContactPosition()"
+   IDS_STRING174 "DYN WHEEL UPDATE%LL%?dynWheelUpdate@@YAXHH@Z"
+   IDS_STRING175 "DYN WHEEL GET SUSPENSION TRAVEL[%FLL%?dynWheelGetSuspensionTravel@@YAKHH@Z"
+   IDS_STRING176 "DYN WHEEL GET AXLE SPEED[%FLL%?dynWheelGetAxleSpeed@@YAKHH@Z"
+   IDS_STRING177 "DYN WHEEL GET RADIUS[%FLL%?dynWheelGetRadius@@YAKHH@Z"
+   IDS_STRING178 "DYN WHEEL SET STEER ANGLE%LLF%?dynWheelSetSteerAngle@@YAXHHM@Z"
+   IDS_STRING179 "DYN WHEEL SET MOTOR TORQUE%LLF%?dynWheelSetMotorTorque@@YAXHHM@Z"
+   IDS_STRING180 "DYN WHEEL SET BRAKE TORQUE%LLF%?dynWheelSetBrakeTorque@@YAXHHM@Z"
+   
+   IDS_STRING181 "DYN WHEEL SET SUSPENSION TRAVEL%LLF%?dynWheelSetSuspensionTravel@@YAXHHM@Z"
+   IDS_STRING182 "DYN WHEEL SET SUSPENSION SPRING%LLFFF%?dynWheelSetSuspensionSpring@@YAXHHMMM@Z"
+
+   IDS_STRING183 "DYN ADD LOCAL FORCE AT LOCAL POS%LFFFFFF%?dynAddLocalForceAtLocalPos@@YAXHMMMMMM@Z"
+   IDS_STRING184 "DYN MAKE WHEEL%LLFF%?dynMakeWheel@@YAKHHMM@Z"
+   IDS_STRING185 "DYN MAKE WHEEL[%DLLFF%?dynMakeWheel@@YAKHHMM@Z"
+   IDS_STRING186 "DYN WHEEL UPDATE%LLL%?dynWheelUpdate@@YAXHHH@Z"
+   IDS_STRING187 "DYN WHEEL SET MOTOR TORQUE%LLLF%?dynWheelSetMotorTorque@@YAXHHHM@Z"
+   
+   IDS_STRING188 "DYN MAKE TIRE FUNC DESC%L%dynMakeTireFuncDesc%dynMakeTireFuncDesc(int ID)"
+   IDS_STRING189 "DYN MAKE TIRE FUNC DESC[%DL%dynMakeTireFuncDesc%dynMakeTireFuncDesc(int ID)"
+   IDS_STRING190 "DYN TIRE FUNC DESC SET ASYMPTOTE%LFF%dynTireFuncDescSetAsymptote%dynTireFuncDescSetAsymptote(int ID, float asymptoteSlip, float asymptoteValue)"
+   IDS_STRING191 "DYN TIRE FUNC DESC SET EXTREMUM%LFF%dynTireFuncDescSetExtremum%dynTireFuncDescSetExtremum(int ID, float extremumSlip, float extremumValue)"
+   IDS_STRING192 "DYN TIRE FUNC DESC SET STIFFNESS FACTOR%LF%dynTireFuncDescSetStiffnessFactor%dynTireFuncDescSetStiffnessFactor(int ID, float stiffnessFactor)"
+   IDS_STRING193 "DYN DELETE TIRE FUNC DESC%L%dynDeleteTireFuncDesc%dynDeleteTireFuncDesc(int ID)"
+   IDS_STRING194 "DYN TIRE FUNC DESC SET TO DEFAULT%L%dynTireFuncDescSetToDefault%dynTireFuncDescSetToDefault(int ID)"
+   IDS_STRING195 "DYN TIRE FUNC DESC IS VALID[%DL%dynTireFuncDescIsValid%dynTireFuncDescIsValid(int ID)"
+   IDS_STRING196 "DYN TIRE FUNC DESC GET HERMITE EVAL[%FLF%dynTireFuncDescGetHermiteEval%dynTireFuncDescGetHermiteEval(int ID, float t)"
+
+   IDS_STRING197 "DYN WHEEL SET LAT TIRE FORCE FUNC%LLL%?dynWheelSetLatTireForceFunc@@YAXHHH@Z"
+   IDS_STRING198 "DYN WHEEL SET LAT TIRE FORCE FUNC%LLLL%?dynWheelSetLatTireForceFunc@@YAXHHHH@Z"
+   IDS_STRING199 "DYN WHEEL SET LONG TIRE FORCE FUNC%LLL%?dynWheelSetLongTireForceFunc@@YAXHHH@Z"
+   IDS_STRING200 "DYN WHEEL SET LONG TIRE FORCE FUNC%LLLL%?dynWheelSetLongTireForceFunc@@YAXHHHH@Z"
+
+   //HEIGHTFIELDS
+   IDS_STRING201 "DYN MAKE HEIGHT FIELD DESC[%DLLLFFF%dynMakeHeightFieldDesc%dynMakeHeightFieldDesc(int ID, int columns, int rows, float verticalExtent, float thickness, float convexEdgeThreshold)"
+   IDS_STRING202 "DYN MAKE HEIGHT FIELD DESC%LLLFFF%dynMakeHeightFieldDesc%dynMakeHeightFieldDesc(int ID, int columns, int rows, float verticalExtent, float thickness, float convexEdgeThreshold)"
+   IDS_STRING203 "DYN HEIGHT FIELD DESC SET DATA%LLLL%?dynHeightFieldDescSetData@@YAXHHHH@Z"
+   IDS_STRING204 "DYN HEIGHT FIELD DESC SET DATA%LLLLLLL%?dynHeightFieldDescSetData@@YAXHHHHHHH@Z"
+   IDS_STRING205 "DYN MAKE HEIGHT FIELD[%DLL%dynMakeHeightField%dynMakeHeightField(int ID, int heightFieldDescID)"
+   IDS_STRING206 "DYN MAKE HEIGHT FIELD%LL%dynMakeHeightField%dynMakeHeightField(int ID, int heightFieldDescID)"
+   IDS_STRING207 "DYN INSTANCE HEIGHT FIELD[%DLLFFF%?dynInstanceHeightField@@YAKHHMMM@Z"
+   IDS_STRING208 "DYN INSTANCE HEIGHT FIELD%LLFFF%?dynInstanceHeightField@@YAKHHMMM@Z"
+   IDS_STRING209 "DYN INSTANCE HEIGHT FIELD[%DLLFFFLL%?dynInstanceHeightField@@YAKHHMMMHH@Z"
+   IDS_STRING210 "DYN INSTANCE HEIGHT FIELD%LLFFFLL%?dynInstanceHeightField@@YAKHHMMMHH@Z"
+   IDS_STRING211 "DYN DELETE HEIGHT FIELD DESC%L%dynDeleteHeightFieldDesc%dynDeleteHeightFieldDesc(int ID)"
+   IDS_STRING212 "DYN DELETE HEIGHT FIELD%L%dynDeleteHeightField%dynDeleteHeightField(int ID)"
+
+   //-- Controllers
+   IDS_STRING213 "DYN MAKE CONTROLLER CAPSULE%LF%?dynMakeControllerCapsule@@YAKHM@Z"
+   IDS_STRING214 "DYN MAKE CONTROLLER CAPSULE[%DLF%?dynMakeControllerCapsule@@YAKHM@Z"
+   IDS_STRING215 "DYN MAKE CONTROLLER CAPSULE%LFFF%?dynMakeControllerCapsule@@YAKHMMM@Z"
+   IDS_STRING216 "DYN MAKE CONTROLLER CAPSULE[%DLFFF%?dynMakeControllerCapsule@@YAKHMMM@Z"
+   IDS_STRING217 "DYN MAKE CONTROLLER BOX%LF%?dynMakeControllerBox@@YAKHM@Z"
+   IDS_STRING218 "DYN MAKE CONTROLLER BOX[%DLF%?dynMakeControllerBox@@YAKHM@Z"
+   IDS_STRING219 "DYN MAKE CONTROLLER BOX%LFFF%?dynMakeControllerBox@@YAKHMMM@Z"
+   IDS_STRING220 "DYN MAKE CONTROLLER BOX[%DLFFF%?dynMakeControllerBox@@YAKHMMM@Z"
+   IDS_STRING221 "DYN CONTROLLER SET STEP OFFSET%LF%dynControllerSetStepOffset%dynControllerSetStepOffset(int ID, float stepOffset)"
+   IDS_STRING222 "DYN CONTROLLER BOX SET EXTENTS%LFFF%dynControllerBoxSetExtents%dynControllerBoxSetExtents(int ID, float x, float y, float z)"
+   IDS_STRING223 "DYN CONTROLLER CAPSULE SET RADIUS%LF%dynControllerCapsuleSetRadius%dynControllerCapsuleSetRadius(int ID, float radius)"
+   IDS_STRING224 "DYN CONTROLLER CAPSULE SET HEIGHT%LF%dynControllerCapsuleSetHeight%dynControllerCapsuleSetHeight(int ID, float height)"
+   IDS_STRING225 "DYN CONTROLLER SET Y OFFSET%LF%dynControllerSetYOffset%dynControllerSetYOffset(int ID, float yOffset)"
+   IDS_STRING226 "DYN CONTROLLER MOVE[%LLFFF%?dynControllerMove@@YAHHMMM@Z"
+   //IDS_STRING226 "DYN CONTROLLER MOVE[%LLFFF%dynControllerMove%dynControllerMove(int ID, float x, float y, float z)"
+   IDS_STRING227 "DYN DELETE CONTROLLER%L%dynDeleteController%dynDeleteController(int ID)"
+   
+   //-- Collision Groups
+   IDS_STRING228 "DYN GROUP SET COLLISION%LLD%dynGroupSetCollision%dynGroupSetCollision(int groupA, int groupB, bool enable)"
+   IDS_STRING229 "DYN SET GROUP%LL%?dynSetGroup@@YAXHH@Z"
+   IDS_STRING230 "DYN GROUP PAIR SET FLAGS%LLL%dynGroupPairSetFlags%dynGroupPairSetFlags(int groupA, int groupB, int flag)"
+   //-- Collision Groups
+   IDS_STRING231 "DYN ACTOR PAIR SET FLAGS%LLL%?dynActorPairSetFlags@@YAXHHH@Z"
+   IDS_STRING232 "DYN CONTACT GET DATA[%L%?dynContactGetData@@YAHXZ"
+   IDS_STRING233 "DYN CONTACT GET ACTOR A[%L%?dynContactGetActorA@@YAHXZ"
+   IDS_STRING234 "DYN CONTACT GET ACTOR B[%L%?dynContactGetActorB@@YAHXZ"
+   IDS_STRING235 "DYN CONTACT GET FLAG[%L%?dynContactGetFlag@@YAHXZ"
+   //-- Contact reports
+   IDS_STRING236 "DYN RAYCAST ALL SHAPES[%LLL%?dynRaycastAllShapes@@YAHHH@Z"
+   IDS_STRING237 "DYN RAYCAST ALL SHAPES%LL%?dynRaycastAllShapes@@YAHHH@Z"
+   IDS_STRING238 "DYN RAYCAST HIT GET DATA[%L%?dynRaycastHitGetData@@YAHXZ"
+   IDS_STRING239 "DYN RAYCAST HIT GET OBJECT[%L%?dynRaycastHitGetObject@@YAHXZ"
+   //-- Raycast
+   IDS_STRING240 "DYN RAYCAST HIT GET DISTANCE[%F%?dynRaycastHitGetDistance@@YAKXZ"
+   IDS_STRING241 "DYN RAYCAST HIT GET WORLD IMPACT%L%?dynRaycastHitGetWorldImpact@@YAXH@Z"
+   IDS_STRING242 "DYN RAYCAST HIT GET WORLD NORMAL%L%?dynRaycastHitGetWorldNormal@@YAXH@Z"
+   IDS_STRING243 "DYN RAYCAST HIT GET U[%F%?dynRaycastHitGetU@@YAMXZ"
+   IDS_STRING244 "DYN RAYCAST HIT GET V[%F%?dynRaycastHitGetV@@YAMXZ"
+
+   IDS_STRING245 "DYN RAYCAST ALL SHAPES[%LLLLL%?dynRaycastAllShapes@@YAHHHHH@Z"
+   IDS_STRING246 "DYN RAYCAST ALL SHAPES%LLLL%?dynRaycastAllShapes@@YAHHHHH@Z"
+   IDS_STRING247 "DYN RAYCAST HIT GET LIMB[%L%?dynRaycastHitGetLimb@@YAHXZ"
+   IDS_STRING248 "DYN RAYCAST SET MAX DISTANCE%F%?dynRaycastSetMaxDistance@@YAXM@Z"
+   IDS_STRING249 "DYN RAYCAST GET MAX DISTANCE[%F%?dynRaycastGetMaxDistance@@YAKXZ"
+   IDS_STRING250 "DYN RAYCAST ALL BOUNDS[%LLLLL%?dynRaycastAllBounds@@YAHHHHH@Z"
+   IDS_STRING251 "DYN RAYCAST ALL BOUNDS%LLLL%?dynRaycastAllBounds@@YAHHHHH@Z"
+   
+   //-- DWORD
+   IDS_STRING253 "DYN RAYCAST ANY BOUNDS[%DLLLL%?dynRaycastAnyBounds@@YAKHHHH@Z"
+   IDS_STRING252 "DYN RAYCAST ANY SHAPE[%DLLLL%?dynRaycastAnyShape@@YAKHHHH@Z"
+   IDS_STRING254 "DYN RAYCAST CLOSEST SHAPE[%DLLLL%?dynRaycastClosestShape@@YAKHHHH@Z"
+   IDS_STRING255 "DYN RAYCAST CLOSEST SHAPE%LLLL%?dynRaycastClosestShape@@YAKHHHH@Z"
+   IDS_STRING256 "DYN RAYCAST CLOSEST BOUNDS[%DLLLL%?dynRaycastClosestBounds@@YAKHHHH@Z"
+   IDS_STRING257 "DYN RAYCAST CLOSEST BOUNDS%LLLL%?dynRaycastClosestBounds@@YAKHHHH@Z"
+
+   IDS_STRING258 "DYN CONTROLLER MOVE%LFFF%?dynControllerMove@@YAHHMMM@Z"
+
+   IDS_STRING259 "DYN CONTROLLER COLLECT C HITS%D%dynControllerCollectCHits%dynControllerCollectCHits(bool collect)"
+   IDS_STRING260 "DYN CONTROLLER COLLECT S HITS%D%dynControllerCollectSHits%dynControllerCollectSHits(bool collect)"
+   
+   IDS_STRING261 "DYN CONTROLLER C HIT GET DATA[%L%dynControllerCHitGetData%dynControllerCHitGetData()"
+   IDS_STRING262 "DYN CONTROLLER C HIT GET DATA%0%dynControllerCHitGetData%dynControllerCHitGetData()"
+   
+   IDS_STRING263 "DYN CONTROLLER C HIT GET CONTROLLER A[%L%dynControllerCHitGetControllerA%dynControllerCHitGetControllerA()"
+   IDS_STRING264 "DYN CONTROLLER C HIT GET CONTROLLER B[%L%dynControllerCHitGetControllerB%dynControllerCHitGetControllerB()"
+   
+   IDS_STRING265 "DYN CONTROLLER S HIT GET DATA[%L%dynControllerSHitGetData%dynControllerSHitGetData()"
+   IDS_STRING266 "DYN CONTROLLER S HIT GET DATA%0%dynControllerSHitGetData%dynControllerSHitGetData()"
+   
+   IDS_STRING267 "DYN CONTROLLER S HIT GET SHAPE[%L%dynControllerSHitGetShape%dynControllerSHitGetShape()"
+   IDS_STRING268 "DYN CONTROLLER S HIT GET DIRECTION%L%dynControllerSHitGetDirection%dynControllerSHitGetDirection(int vector3ID)"
+
+   IDS_STRING269 "DYN CONTROLLER S HIT GET LENGTH[%F%dynControllerSHitGetLength%dynControllerSHitGetLength()"
+   IDS_STRING270 "DYN CONTROLLER S HIT GET CONTROLLER[%L%dynControllerSHitGetController%dynControllerSHitGetController()"
+
+   IDS_STRING271 "DYN CONTROLLER S HIT GET WORLD NORMAL%L%dynControllerSHitGetWorldNormal%dynControllerSHitGetWorldNormal(int vector3ID)"
+   IDS_STRING272 "DYN CONTROLLER S HIT GET WORLD POS%L%dynControllerSHitGetWorldPos%dynControllerSHitGetWorldPos(int vector3ID)"
+
+   IDS_STRING273 "DYN CONTROLLER SET POSITION%LFFF%dynControllerSetPosition%dynControllerSetPosition(int ID, float x, float y, float z)"
+   IDS_STRING274 "DYN CONTROLLER GET POSITION%LL%dynControllerGetPosition%dynControllerGetPosition(int ID, int vector3ID)"
+
+   //-- CCD
+   IDS_STRING275 "DYN MAKE CCD SKELETON BOX[%DLL%dynMakeCCDSkeletonBox%dynMakeCCDSkeletonBox(int objectID, int limbID)"
+   IDS_STRING276 "DYN MAKE CCD SKELETON BOX%LL%dynMakeCCDSkeletonBox%dynMakeCCDSkeletonBox(int objectID, int limbID)"
+   IDS_STRING277 "DYN DELETE CCD SKELETON%LL%dynDeleteCCDSkeleton%dynDeleteCCDSkeleton(int objectID, int limbID)"
+   IDS_STRING278 "DYN CCD SET MOTION THRESHOLD%LLF%dynCCDSetMotionThreshold%dynCCDSetMotionThreshold(int objectID, int limbID, float threshold)"
+   //-- TRIGGER
+   IDS_STRING279 "DYN TRIGGER SET SHAPE%LLLD%dynTriggerSetShape%dynTriggerSetShape(int objectID, int shapeIndex, int flag, bool value)"
+   IDS_STRING280 "DYN TRIGGER GET DATA[%L%dynTriggerGetData%dynTriggerGetData()"
+   IDS_STRING281 "DYN TRIGGER GET TRIGGER OBJECT[%L%dynTriggerGetTriggerObject%dynTriggerGetTriggerObject()"
+   IDS_STRING282 "DYN TRIGGER GET OTHER OBJECT[%L%dynTriggerGetOtherObject%dynTriggerGetOtherObject()"
+   IDS_STRING283 "DYN TRIGGER GET STATUS[%L%dynTriggerGetStatus%dynTriggerGetStatus()"
+   //-- FREEZE
+   IDS_STRING284 "DYN FREEZE POSITION X%LD%dynFreezePositionX%dynFreezePositionX(int objectID, bool freeze)"
+   IDS_STRING285 "DYN FREEZE POSITION Y%LD%dynFreezePositionY%dynFreezePositionY(int objectID, bool freeze)"
+   IDS_STRING286 "DYN FREEZE POSITION Z%LD%dynFreezePositionZ%dynFreezePositionZ(int objectID, bool freeze)"
+   IDS_STRING287 "DYN FREEZE ROTATION X%LD%dynFreezeRotationX%dynFreezeRotationX(int objectID, bool freeze)"
+   IDS_STRING288 "DYN FREEZE ROTATION Y%LD%dynFreezeRotationY%dynFreezeRotationY(int objectID, bool freeze)"
+   IDS_STRING289 "DYN FREEZE ROTATION Z%LD%dynFreezeRotationZ%dynFreezeRotationZ(int objectID, bool freeze)"
+   //-- GROUP/GRAVITY
+   //IDS_STRING290 "DYN GET GROUP[%LL%dynGetGroup%dynGetGroup(int actorID)"  //-- REPLACED WITH OVERLOADED VERSION V1.11 
+   IDS_STRING291 "DYN ENABLE GRAVITY%LD%dynEnableGravity%dynEnableGravity(int objectID, bool gravity)"
+   //-- OVERLAP
+   IDS_STRING292 "DYN OVERLAP CHECK SPHERE[%DLFL%dynOverlapCheckSphere%dynOverlapCheckSphere(int positionVec3ID, float radius, int flag)"
+   IDS_STRING293 "DYN OVERLAP CHECK AABB[%DLLL%dynOverlapCheckAABB%dynOverlapCheckAABB(int worldBoundsMinVec3ID, int worldBoundsMaxVec3ID, int flag)"
+   IDS_STRING294 "DYN OVERLAP CHECK CAPSULE[%DLLFL%dynOverlapCheckCapsule%dynOverlapCheckCapsule(int pos1Vec3ID, int pos2Vec3ID, float radius, int flag)"
+   IDS_STRING295 "DYN OVERLAP CHECK OBB[%DLLLL%dynOverlapCheckOBB%dynOverlapCheckOBB(int positionVec3ID, int dimensionVec3ID, int rotationVec3ID, int flag)"
+   //-- EXISTS
+   IDS_STRING296 "DYN ACTOR EXISTS[%DL%?dynActorExists@@YAKH@Z"
+   IDS_STRING297 "DYN ACTOR EXISTS[%DLL%?dynActorExists@@YAKHH@Z"
+   IDS_STRING298 "DYN TRIANGLE MESH EXISTS[%DL%dynTriangleMeshExists%dynTriangleMeshExists(int meshID)"
+   IDS_STRING299 "DYN CONVEX MESH EXISTS[%DL%dynConvexMeshExists%dynConvexMeshExists(int meshID)"
+   IDS_STRING300 "DYN CONTROLLER EXISTS[%DL%dynControllerExists%dynControllerExists(int objectID)"
+
+   //-- CLOTH
+   //-- Completed earlier in project
+   IDS_STRING99 "DYN COOK CLOTH MESH[%DLLD%?dynCookClothMesh@@YAKHHI@Z"
+   IDS_STRING100 "DYN COOK CLOTH MESH%LLD%?dynCookClothMesh@@YAKHHI@Z"
+   IDS_STRING101 "DYN MAKE CLOTH[%DLL%?dynMakeCloth@@YAKHH@Z"
+   IDS_STRING102 "DYN MAKE CLOTH%LL%?dynMakeCloth@@YAKHH@Z"
+   //new
+   //return
+   IDS_STRING301 "DYN COOK CLOTH MESH[%DLSD%?dynCookClothMesh@@YAKHPADI@Z"
+   //non return
+   IDS_STRING302 "DYN COOK CLOTH MESH%DLLSD%?dynCookClothMesh@@YAKHPADI@Z"
+   //return
+   IDS_STRING303 "DYN LOAD CLOTH MESH[%DSL%dynLoadClothMesh%dynLoadClothMesh(char* file, int clothMeshID)"
+   //non return
+   IDS_STRING304 "DYN LOAD CLOTH MESH%SL%dynLoadClothMesh%dynLoadClothMesh(char* file, int clothMeshID)"
+   IDS_STRING305 "DYN DELETE CLOTH MESH%L%dynDeleteClothMesh%dynDeleteClothMesh(int clothMeshID)"
+   IDS_STRING306 "DYN DELETE CLOTH%L%dynDeleteClothMesh%dynDeleteCloth(int objectID)"
+   IDS_STRING307 "DYN CLOTH EXISTS[%DL%dynClothExists%dynClothExists(int objectID)"
+   IDS_STRING308 "DYN CLOTH SET FLAGS%LD%dynClothSetFlags%dynClothSetFlags(int objectID, unsigned int flags)"
+   IDS_STRING309 "DYN CLOTH ATTACH TO SHAPE%LLLD%dynClothAttachToShape%dynClothAttachToShape(int clothID, int objectID, int shapeIndex, unsigned int attachmentFlags)"
+   IDS_STRING310 "DYN CLOTH ATTACH TO COLLIDING SHAPES%LD%dynClothAttachToCollidingShapes%dynClothAttachToCollidingShapes(int clothID, unsigned int attachmentFlags)"
+   IDS_STRING311 "DYN CLOTH DETACH FROM SHAPE%LLL%dynClothDetachFromShape%dynClothDetachFromShape(int clothID, int objectID, int shapeIndex)"
+   IDS_STRING312 "DYN CLOTH SET BENDING STIFFNESS%LF%dynClothSetBendingStiffness%dynClothSetBendingStiffness(int clothID, float value)"
+   IDS_STRING313 "DYN CLOTH GET BENDING STIFFNESS[%FL%dynClothGetBendingStiffness%dynClothGetBendingStiffness(int clothID)"
+   IDS_STRING314 "DYN CLOTH SET STRETCHING STIFFNESS%LF%dynClothSetStretchingStiffness%dynClothSetStretchingStiffness(int clothID, float value)"
+   IDS_STRING315 "DYN CLOTH GET STRETCHING STIFFNESS[%FL%dynClothGetStretchingStiffness%dynClothGetStretchingStiffness(int clothID)"
+   IDS_STRING316 "DYN CLOTH SET HARD STRETCH LIMITATION FACTOR%LF%dynClothSetHardStretchLimitationFactor%dynClothSetHardStretchLimitationFactor(int clothID, float value)"
+   IDS_STRING317 "DYN CLOTH GET HARD STRETCH LIMITATION FACTOR[%FL%dynClothGetHardStretchLimitationFactor%dynClothGetHardStretchLimitationFactor(int clothID)"
+   IDS_STRING318 "DYN CLOTH SET DAMPING COEFFICIENT%LF%dynClothSetDampingCoefficient%dynClothSetDampingCoefficient(int clothID, float value)"
+   IDS_STRING319 "DYN CLOTH GET DAMPING COEFFICIENT[%FL%dynClothGetDampingCoefficient%dynClothGetDampingCoefficient(int clothID)"
+   IDS_STRING320 "DYN CLOTH SET FRICTION%LF%dynClothSetFriction%dynClothSetFriction(int clothID, float value)"
+   IDS_STRING321 "DYN CLOTH GET FRICTION[%FL%dynClothGetFriction%dynClothGetFriction(int clothID)"
+   IDS_STRING322 "DYN CLOTH SET PRESSURE%LF%dynClothSetPressure%dynClothSetPressure(int clothID, float value)"
+   IDS_STRING323 "DYN CLOTH GET PRESSURE[%FL%dynClothGetPressure%dynClothGetPressure(int clothID)"
+   IDS_STRING324 "DYN CLOTH SET ATTACHMENT TEAR FACTOR%LF%dynClothSetAttachmentTearFactor%dynClothSetAttachmentTearFactor(int clothID, float value)"
+   IDS_STRING325 "DYN CLOTH GET ATTACHMENT TEAR FACTOR[%FL%dynClothGetAttachmentTearFactor%dynClothGetAttachmentTearFactor(int clothID)"
+   IDS_STRING326 "DYN CLOTH SET THICKNESS%LF%dynClothSetThickness%dynClothSetThickness(int clothID, float value)"
+   IDS_STRING327 "DYN CLOTH GET THICKNESS[%FL%dynClothGetThickness%dynClothGetThickness(int clothID)"
+   IDS_STRING328 "DYN CLOTH SET SELF COLLISION THICKNESS%LF%dynClothSetSelfCollisionThickness%dynClothSetSelfCollisionThickness(int clothID, float value)"
+   IDS_STRING329 "DYN CLOTH GET SELF COLLISION THICKNESS[%FL%dynClothGetSelfCollisionThickness%dynClothGetSelfCollisionThickness(int clothID)"
+   IDS_STRING330 "DYN CLOTH GET FLAGS[%DL%dynClothGetFlags%dynClothGetFlags(int clothID)"
+   IDS_STRING331 "DYN CLOTH SET GROUP%LL%dynClothSetGroup%dynClothSetGroup(int clothID, int collisionGroup)"
+   IDS_STRING332 "DYN CLOTH GET GROUP[%LL%dynClothGetGroup%dynClothGetGroup(int clothID)"
+   //-- UTIL
+   IDS_STRING333 "DYN UTIL EXPAND VERTEX BUFFER[%DLLLD%dynUtilExpandVertexBuffer%dynUtilExpandVertexBuffer(int objectID, int extraVertexCount, int extraIndexCount, bool fixPrimitiveCount)"
+   IDS_STRING334 "DYN UTIL EXPAND VERTEX BUFFER%LLLD%dynUtilExpandVertexBuffer%dynUtilExpandVertexBuffer(int objectID, int extraVertexCount, int extraIndexCount, bool fixPrimitiveCount)"
+   //-- EXISTS
+   IDS_STRING335 "DYN CLOTH MESH EXISTS[%DL%dynClothMeshExists%dynClothMeshExists(int clothMeshID)"
+   IDS_STRING336 "DYN CLOTH MESH ATTACH TO CORE%LLFFF%dynClothAttachToCore%dynClothAttachToCore(int clothID, int objectID, float impulseThreshold, float penetrationDepth=0.0f, float maxDeformationDistance = 0.0f)"
+   
+   //-- START
+   IDS_STRING337 "DYN START[%DD%?dynStart@@YAKK@Z"
+   IDS_STRING338 "DYN START%D%?dynStart@@YAKK@Z"
+   IDS_STRING339 "DYN HARDWARE PRESENT[%D%dynHardwarePresent%dynHardwarePresent()"
+   IDS_STRING340 "DYN MAKE SCENE[%DLD%?dynMakeScene@@YAKHK@Z"
+   IDS_STRING341 "DYN MAKE SCENE%LD%?dynMakeScene@@YAKHK@Z"
+   //-- MORE CLOTH
+   IDS_STRING342 "DYN CLOTH SET WIND ACCELERATION%LL%dynClothSetWindAcceleration%dynClothSetWindAcceleration(int clothID, int normalVec3ID)"
+   IDS_STRING343 "DYN CLOTH GET WIND ACCELERATION%LL%dynClothGetWindAcceleration%dynClothGetWindAcceleration(int clothID, int normalVec3ID)"
+   IDS_STRING344 "DYN CLOTH RAYCAST[%DLLL%dynClothRaycast%dynClothRaycast(int clothID, int origVec3ID, int dirVec3ID)"
+   IDS_STRING345 "DYN CLOTH RAYCAST%LLL%dynClothRaycast%dynClothRaycast(int clothID, int origVec3ID, int dirVec3ID)"
+   IDS_STRING346 "DYN CLOTH RAYCAST GET HIT POS%L%dynClothRaycastGetHitPos%dynClothRaycastGetHitPos(int posVec3ID)"
+   IDS_STRING347 "DYN CLOTH RAYCAST GET VERTEX ID[%L%dynClothRaycastGetVertexID%dynClothRaycastGetVertexID()"
+   IDS_STRING348 "DYN CLOTH TEAR VERTEX[%DLLL%dynClothTearVertex%dynClothTearVertex(int clothID, int vertexID, int normalVec3ID)"
+   IDS_STRING349 "DYN CLOTH TEAR VERTEX%LLL%dynClothTearVertex%dynClothTearVertex(int clothID, int vertexID, int normalVec3ID)"
+   IDS_STRING350 "DYN CLOTH GET VERTEX POS%LLL%dynClothGetVertexPos%dynClothGetVertexPos(int clothID, int vertexID, int posVec3ID)"
+   IDS_STRING351 "DYN CLOTH IS SLEEPING[%DL%dynClothIsSleeping%dynClothIsSleeping(int clothID)"
+   IDS_STRING352 "DYN CLOTH PUT TO SLEEP%L%dynClothPutToSleep%dynClothPutToSleep(int clothID)"
+   IDS_STRING353 "DYN CLOTH WAKE UP%LF%dynClothWakeUp%dynClothWakeUp(int clothID, float wakeCounterValue)"
+   IDS_STRING354 "DYN CLOTH ADD FORCE AT VERTEX%LLL%dynClothAddForceAtVertex%dynClothAddForceAtVertex(int clothID, int vertexID, int forceVec3ID)"
+   IDS_STRING355 "DYN CLOTH ADD FORCE AT POS%LLFF%dynClothAddForceAtPos%dynClothAddForceAtPos(int clothID, int posVec3ID, float magnitude, float radius)"
+   IDS_STRING356 "DYN CLOTH ADD DIRECTED FORCE AT POS%LLLF%dynClothAddDirectedForceAtPos%dynClothAddDirectedForceAtPos(int clothID, int posVec3ID, int forceVec3ID, float radius)"
+   //-- MAKE CLOTH WITH FLAGS
+   IDS_STRING357 "DYN MAKE CLOTH[%DLLD%?dynMakeCloth@@YAKHHI@Z"
+   IDS_STRING358 "DYN MAKE CLOTH%LLD%?dynMakeCloth@@YAKHHI@Z"
+
+   //(not done)
+////EXPORTC void dynControllerReportSceneChanged();
+
+   //-- SOFT BODY (completed earlier in project)
+   IDS_STRING149 "DYN COOK SOFT BODY MESH%LS%?dynCookSoftBodyMesh@@YAKHPAD@Z"
+   IDS_STRING150 "DYN COOK SOFT BODY MESH[%DLS%?dynCookSoftBodyMesh@@YAKHPAD@Z"
+   IDS_STRING151 "DYN MAKE SOFT BODY%LLF%?dynMakeSoftBody@@YAKHHM@Z"
+   IDS_STRING152 "DYN MAKE SOFT BODY[%DLLF%?dynMakeSoftBody@@YAKHHM@Z"
+   IDS_STRING153 "DYN MAKE SOFT BODY DEBUG%LL%?dynMakeSoftBodyDebug@@YAKHH@Z"
+   IDS_STRING154 "DYN MAKE SOFT BODY DEBUG[%DLL%?dynMakeSoftBodyDebug@@YAKHH@Z"
+   IDS_STRING155 "DYN UPDATE SOFT BODY DEBUG%LL%?dynUpdateSoftBodyDebug@@YAXHH@Z"
+   //-- end
+   IDS_STRING359 "DYN MAKE SOFT BODY[%DLLFD%?dynMakeSoftBody@@YAKHHMI@Z"
+   IDS_STRING360 "DYN MAKE SOFT BODY%LLFD%?dynMakeSoftBody@@YAKHHMI@Z"
+
+   //NEW
+   IDS_STRING361 "DYN LOAD SOFT BODY MESH[%DLS%dynLoadSoftBodyMesh%dynLoadSoftBodyMesh(int softBodyMeshID, char* file)"
+   IDS_STRING362 "DYN LOAD SOFT BODY MESH%LS%dynLoadSoftBodyMesh%dynLoadSoftBodyMesh(int softBodyMeshID, char* file)"
+   IDS_STRING363 "DYN DELETE SOFT BODY MESH[%DL%dynDeleteSoftBodyMesh%dynDeleteSoftBodyMesh(int softBodyMeshID)"
+   IDS_STRING364 "DYN DELETE SOFT BODY MESH%L%dynDeleteSoftBodyMesh%dynDeleteSoftBodyMesh(int softBodyMeshID)"
+   IDS_STRING365 "DYN DELETE SOFT BODY%L%?dynDeleteSoftBody@@YAXH@Z"
+   IDS_STRING366 "DYN SOFT BODY SET STRETCHING STIFFNESS%LF%dynSoftBodySetStretchingStiffness%dynSoftBodySetStretchingStiffness(int softBodyID, float value)"
+   IDS_STRING367 "DYN SOFT BODY GET STRETCHING STIFFNESS[%FL%dynSoftBodyGetStretchingStiffness%dynGetSoftBodyStretchingStiffness(int softBodyID)"
+   
+   IDS_STRING368 "DYN SOFT BODY ATTACH TO SHAPE%LLLL%?dynSoftBodyAttachToShape@@YAXHHHH@Z"
+   IDS_STRING369 "DYN SOFT BODY ATTACH TO SHAPE%LLLLL%?dynSoftBodyAttachToShape@@YAXHHHHH@Z"
+   IDS_STRING370 "DYN SOFT BODY DETEACH FROM SHAPE%LLL%?dynSoftBodyDetachFromShape@@YAXHHH@Z"
+   IDS_STRING371 "DYN SOFT BODY ATTACH VERTEX TO SHAPE%LLLLFFFL%?dynSoftBodyAttachVertexToShape@@YAXHHHHMMMH@Z"
+   IDS_STRING372 "DYN SOFT BODY ATTACH VERTEX TO SHAPE%LLLLLFFFL%?dynSoftBodyAttachVertexToShape@@YAXHHHHHMMMH@Z"
+
+   IDS_STRING373 "DYN SOFT BODY ATTACH TO COLLIDING SHAPES%LL%dynSoftBodyAttachToCollidingShapes%dynSoftBodyAttachToCollidingShapes(int softBodyID, int attachmentFlag)"
+   IDS_STRING374 "DYN SOFT BODY SET VOLUME STIFFNESS%LF%dynSoftBodySetVolumeStiffness%dynSoftBodySetVolumeStiffness(int softBodyID, float value)"
+   IDS_STRING375 "DYN SOFT BODY SET PARTICLE RADIUS%LF%dynSoftBodySetParticleRadius%dynSoftBodySetParticleRadius(int softBodyID, float value)"
+   IDS_STRING376 "DYN SOFT BODY SET HARD STRETCH LIMITATION FACTOR%LF%dynSoftBodySetHardStretchLimitationFactor%dynSoftBodySetHardStretchLimitationFactor(int softBodyID, float value)"
+   IDS_STRING377 "DYN SOFT BODY SET DAMPING COEFFICIENT%LF%dynSoftBodySetDampingCoefficient%dynSoftBodySetDampingCoefficient(int softBodyID, float value)"
+   IDS_STRING378 "DYN SOFT BODY SET FRICTION%LF%dynSoftBodySetFriction%dynSoftBodySetFriction(int softBodyID, float value)"
+   IDS_STRING379 "DYN SOFT BODY SET ATTACHMENT TEAR FACTOR%LF%dynSoftBodySetAttachmentTearFactor%dynSoftBodySetAttachmentTearFactor(int softBodyID, float value)"
+   IDS_STRING380 "DYN SOFT BODY SET SELF COLLISION THICKNESS%LF%dynSoftBodySetSelfCollisionThickness%dynSoftBodySetSelfCollisionThickness(int softBodyID, float value)"
+   IDS_STRING381 "DYN SOFT BODY SET COLLISION RESPONSE COEFFICIENT%LF%dynSoftBodySetCollisionResponseCoefficient%dynSoftBodySetCollisionResponseCoefficient(int softBodyID, float value)"
+   IDS_STRING382 "DYN SOFT BODY SET ATTACHMENT RESPONSE COEFFICIENT%LF%dynSoftBodySetAttachmentResponseCoefficient%dynSoftBodySetAttachmentResponseCoefficient(int softBodyID, float value)"
+   
+   IDS_STRING383 "DYN SOFT BODY GET VOLUME STIFFNESS[%FL%dynSoftBodyGetVolumeStiffness%dynSoftBodyGetVolumeStiffness(int softBodyID)"
+   IDS_STRING384 "DYN SOFT BODY GET PARTICLE RADIUS[%FL%dynSoftBodyGetParticleRadius%dynSoftBodyGetParticleRadius(int softBodyID)"
+   IDS_STRING385 "DYN SOFT BODY GET HARD STRETCH LIMITATION FACTOR[%FL%dynSoftBodyGetHardStretchLimitationFactor%dynSoftBodyGetHardStretchLimitationFactor(int softBodyID)"
+   IDS_STRING386 "DYN SOFT BODY GET DAMPING COEFFICIENT[%FL%dynSoftBodyGetDampingCoefficient%dynSoftBodyGetDampingCoefficient(int softBodyID)"
+   IDS_STRING387 "DYN SOFT BODY GET FRICTION[%FL%dynSoftBodyGetFriction%dynSoftBodyGetFriction(int softBodyID)"
+   IDS_STRING388 "DYN SOFT BODY GET ATTACHMENT TEAR FACTOR[%FL%dynSoftBodyGetAttachmentTearFactor%dynSoftBodyGetAttachmentTearFactor(int softBodyID)"
+   IDS_STRING389 "DYN SOFT BODY GET SELF COLLISION THICKNESS[%FL%dynSoftBodyGetSelfCollisionThickness%dynSoftBodyGetSelfCollisionThickness(int softBodyID)"
+   IDS_STRING390 "DYN SOFT BODY GET COLLISION RESPONSE COEFFICIENT[%FL%dynSoftBodyGetCollisionResponseCoefficient%dynSoftBodyGetCollisionResponseCoefficient(int softBodyID)"
+   IDS_STRING391 "DYN SOFT BODY GET ATTACHMENT RESPONSE COEFFICIENT[%FL%dynSoftBodyGetAttachmentResponseCoefficient%dynSoftBodyGetAttachmentResponseCoefficient(int softBodyID)"
+   
+   IDS_STRING392 "DYN SOFT BODY FREE VERTEX%LL%dynSoftBodyFreeVertex%dynSoftBodyFreeVertex(int softBodyID, int vertexID)"
+   IDS_STRING393 "DYN SOFT BODY SET GROUP%LL%dynSoftBodySetGroup%dynSoftBodySetGroup(int softBodyID, int group)"
+   IDS_STRING394 "DYN SOFT BODY GET GROUP[%LL%dynSoftBodyGetGroup%dynSoftBodyGetGroup(int softBodyID)"
+   IDS_STRING395 "DYN SOFT BODY SET EXTERNAL ACCELERATION%LL%dynSoftBodySetExternalAcceleration%dynSoftBodySetExternalAcceleration(int softBodyID, int accelerationVec3ID)"
+   IDS_STRING396 "DYN SOFT BODY GET EXTERNAL ACCELERATION%LL%dynSoftBodyGetExternalAcceleration%dynSoftBodyGetExternalAcceleration(int softBodyID, int accelerationVec3ID)"
+   IDS_STRING397 "DYN SOFT BODY IS SLEEPING[%DL%dynSoftBodyIsSleeping%dynSoftBodyIsSleeping(int softBodyID)"
+   IDS_STRING398 "DYN SOFT BODY WAKE UP%LF%dynSoftBodyWakeUp%dynSoftBodyWakeUp(int softBodyID, float wakeCounterValue)"
+   IDS_STRING399 "DYN SOFT BODY PUT TO SLEEP%L%dynSoftBodyPutToSleep%dynSoftBodyPutToSleep(int softBodyID)"
+   IDS_STRING400 "DYN SOFT BODY SET FLAGS%LD%dynSoftBodySetFlags%dynSoftBodySetFlags(int softBodyID, unsigned int flags)"
+   IDS_STRING401 "DYN SODT BODY GET FLAGS[%DL%dynSoftBodyGetFlags%dynSoftBodyGetFlags(int softBodyID)"
+   IDS_STRING402 "DYN SOFT BODY RAYCAST[%DLLL%dynSoftBodyRaycast%dynSoftBodyRaycast(int softBodyID, int origVec3ID, int dirVec3ID)"
+   IDS_STRING403 "DYN SOFT BODY RAYCAST%LLL%dynSoftBodyRaycast%dynSoftBodyRaycast(int softBodyID, int origVec3ID, int dirVec3ID)"
+   IDS_STRING404 "DYN SOFT BODY RAYCAST GET HIT POS%L%dynSoftBodyRaycastGetHitPos%dynSoftBodyRaycastGetHitPos(int posVec3ID)"
+   IDS_STRING405 "DYN SOFT BODY RAYCAST GET VERTEX ID[%L%dynSoftBodyRaycastGetVertexID%dynSoftBodyRaycastGetVertexID()"
+   IDS_STRING406 "DYN SOFT BODY ADD FORCE AT VERTEX%LLL%dynSoftBodyAddForceAtVertex%dynSoftBodyAddForceAtVertex(int softBodyID, int vertexID, int forceVec3ID)"
+   IDS_STRING407 "DYN SOFT BODY ADD FORCE AT POS%LLFF%dynSoftBodyAddForceAtPos%dynSoftBodyAddForceAtPos(int softBodyID, int posVec3ID, float magnitude, float radius)"
+   IDS_STRING408 "DYN SOFT BODY ADD DIRECTED FORCE AT POS%LLLF%dynSoftBodyAddDirectedForceAtPos%dynSoftBodyAddDirectedForceAtPos(int softBodyID, int posVec3ID, int forceVec3ID, float radius)"
+   IDS_STRING409 "DYN SOFT BODY EXISTS[%DL%dynSoftBodyExists%dynSoftBodyExists(int softBodyID)"
+   IDS_STRING410 "DYN SOFT BODY MESH EXISTS[%L%dynSoftBodyMeshExists%dynSoftBodyMeshExists(int softBodyMeshID)"
+ 
+   IDS_STRING411 "DYN MAKE FLUID[%DLDFFDD%dynMakeFluid%dynMakeFluid(int fluidID, unsigned int maxParticles, float particleLife, float collisionRadiusMultiplier, unsigned int flags, bool usePositionData)"
+   IDS_STRING412 "DYN MAKE FLUID%LDFFDD%dynMakeFluid%dynMakeFluid(int fluidID, unsigned int maxParticles, float particleLife, float collisionRadiusMultiplier, unsigned int flags, bool usePositionData)"
+   IDS_STRING413 "DYN DELETE FLUID%L%dynDeleteFluid%dynDeleteFluid(int fluidID)"
+   IDS_STRING414 "DYN UTIL ARRAY VEC3 INIT%D%dynUtilArrayVec3Init%dynUtilArrayVec3Init(unsigned int size)"
+   IDS_STRING415 "DYN UTIL ARRAY VEC3 SET%DL%dynUtilArrayVec3Set%dynUtilArrayVec3Set(unsigned int position, int inVec3ID)"
+   IDS_STRING416 "DYN UTIL ARRAY VEC3 GET%DL%dynUtilArrayVec3Get%dynUtilArrayVec3Get(unsigned int position, int outVec3ID)"
+   IDS_STRING417 "DYN UTIL ARRAY VEC3 CLEAR%0%dynUtilArrayVec3Clear%dynUtilArrayVec3Clear()"
+   IDS_STRING418 "DYN FLUID SYNC OBJECTS%LL%dynFluidSyncObjects%dynFluidSyncObjects(int fluidID, int initialObjectID)"
+   IDS_STRING419 "DYN FLUID FADE OBJECTS%LLFFF%dynFluidFadeObjects%dynFluidFadeObjects(int fluidID, int initialObjectID, float particleLife, float fadeIn, float fadeOut)"
+   IDS_STRING420 "DYN FLUID SET OBJECTS TO CAMERA%LLL%dynFluidSetObjectsToCamera%dynFluidSetObjectsToCamera(int fluidID, int initialObjectID, int cameraID)"
+   IDS_STRING421 "DYN FLUID MAKE EMITTER[%LLFFFLLL%dynFluidMakeEmitter%dynFluidMakeEmitter(int fluidID, float sizeX, float sizeY, float particleLife, int type, int posVec3ID, int rotVec3ID)"
+   IDS_STRING422 "DYN FLUID MAKE EMITTER%LFFFLLL%dynFluidMakeEmitter%dynFluidMakeEmitter(int fluidID, float sizeX, float sizeY, float particleLife, int type, int posVec3ID, int rotVec3ID)"
+   IDS_STRING423 "DYN EMITTER SET FRAME SHAPE%LLLL%dynEmitterSetFrameShape%dynEmitterSetFrameShape(int fluidID, int emitterIndex, int objectID, int shapeIndex)"
+   IDS_STRING424 "DYN FLUID GET COLLISION METHOD[%LL%dynFluidGetCollisionMethod%dynFluidGetCollisionMethod(int fluidID)"
+   IDS_STRING425 "DYN FLUID SET COLLISION METHOD%LL%dynFluidSetCollisionMethod%dynFluidSetCollisionMethod(int fluidID, int flag)"
+   IDS_STRING426 "DYN EMITTER SET RANDOM ANGLE%LLF%dynEmitterSetRandomAngle%dynEmitterSetRandomAngle(int fluidID, int emitterIndex, float angle)"
+   IDS_STRING427 "DYN EMITTER GET RANDOM ANGLE[%FLL%dynEmitterGetRandomAngle%dynEmitterGetRandomAngle(int fluidID, int emitterIndex)"
+
+   IDS_STRING428 "DYN FLUID EXISTS[%DL%dynFluidExists%dynFluidExists(int fluidID)"
+   IDS_STRING429 "DYN FLUID SET SIMULATION METHOD%LL%dynFluidSetSimulationMethod%dynFluidSetSimulationMethod(int fluidID, int method)"
+   IDS_STRING430 "DYN FLUID GET SIMULATION METHOD[%LL%dynFluidGetSimulationMethod%dynFluidGetSimulationMethod(int fluidID)"
+   IDS_STRING431 "DYN FLUID SET STIFFNESS%LF%dynFluidSetStiffness%dynFluidSetStiffness(int fluidID, float value)"
+   IDS_STRING432 "DYN FLUID GET STIFFNESS[%FL%dynFluidGetStiffness%dynFluidGetStiffness(int fluidID)"
+   IDS_STRING433 "DYN FLUID SET VISCOSITY%LF%dynFluidSetViscosity%dynFluidSetViscosity(int fluidID, float value)"
+   IDS_STRING434 "DYN FLUID GET VISCOSITY[%FL%dynFluidGetViscosity%dynFluidGetViscosity(int fluidID)"
+   IDS_STRING435 "DYN FLUID SET DAMPING%LF%dynFluidSetDamping%dynFluidSetDamping(int fluidID, float value)"
+   IDS_STRING436 "DYN FLUID GET DAMPING[%FL%dynFluidGetDamping%dynFluidGetDamping(int fluidID)"
+   IDS_STRING437 "DYN FLUID SET EXTERNAL ACCELERATION%LFFF%dynFluidSetExternalAcceleration%dynFluidSetExternalAcceleration(int fluidID, float x, float y, float z)"   
+   IDS_STRING438 "DYN FLUID GET EXTRNAL ACCELERATION%LL%dynFluidGetExternalAcceleration%dynFluidGetExternalAcceleration(int fluidID, int vector3ID)"
+   IDS_STRING439 "DYN FLUID DELETE EMITTER%LL%dynFluidDeleteEmitter%dynFluidDeleteEmitter(int fluidID, int emitterIndex)"
+   IDS_STRING440 "DYN EMITTER SET RATE%LLF%dynEmitterSetRate%dynEmitterSetRate(int fluidID, int emitterIndex, float rate)"
+   IDS_STRING441 "DYN EMITTER GET RATE[%FLL%dynEmitterGetRate%dynEmitterGetRate(int fluidID, int emitterIndex)"
+   IDS_STRING442 "DYN EMITTER SET VELOCITY MAGNITUDE%LLF%dynEmitterSetVelocityMagnitude%dynEmitterSetVelocityMagnitude(int fluidID, int emitterIndex, float velocityMagnitude)"
+   IDS_STRING443 "DYN EMITTER GET VELOCITY MAGNOTUDE[%FLL%dynEmitterGetVelocityMagnitude%dynEmitterGetVelocityMagnitude(int fluidID, int emitterIndex)"
+
+   IDS_STRING444 "DYN MAKE FF SHAPE BOX[%DLLL%dynMakeFFShapeBox%dynMakeFFShapeBox(int posVector3ID, int rotVector3ID, int dimVector3ID)"
+   IDS_STRING445 "DYN MAKE FF SHAPE BOX%LLL%dynMakeFFShapeBox%dynMakeFFShapeBox(int posVector3ID, int rotVector3ID, int dimVector3ID)"
+   IDS_STRING446 "DYN MAKE FF SHAPE SPHERE[%DLLF%dynMakeFFShapeSphere%dynMakeFFShapeSphere(int posVector3ID, int rotVector3ID, float radius)"
+   IDS_STRING447 "DYN MAKE FF SHAPE SPHERE%LLF%dynMakeFFShapeSphere%dynMakeFFShapeSphere(int posVector3ID, int rotVector3ID, float radius)"
+   IDS_STRING448 "DYN MAKE FF SHAPE CAPSULE[%DLLFF%dynMakeFFShapeCapsule%dynMakeFFShapeCapsule(int posVector3ID, int rotVector3ID, float radius, float height)"
+   IDS_STRING449 "DYN MAKE FF SHAPE CAPSULE%LLFF%dynMakeFFShapeCapsule%dynMakeFFShapeCapsule(int posVector3ID, int rotVector3ID, float radius, float height)"
+   IDS_STRING450 "DYN MAKE FF SHAPE CONVEX[%DLLL%dynMakeFFShapeConvex%dynMakeFFShapeConvex(int posVector3ID, int rotVector3ID, int convexMeshID)"
+   IDS_STRING451 "DYN MAKE FF SHAPE CONVEX%LLL%dynMakeFFShapeConvex%dynMakeFFShapeConvex(int posVector3ID, int rotVector3ID, int convexMeshID)"
+   IDS_STRING452 "DYN MAKE FF LINEAR KERNEL[%DLLLLL%dynMakeFFLinearKernel%dynMakeFFLinearKernel(int ID, int constantVector3ID, int falloffLinearVector3ID, int falloffQuadraticVector3ID, int noiseVector3ID)"
+   IDS_STRING453 "DYN MAKE FF LINEAR KERNEL%LLLLL%dynMakeFFLinearKernel%dynMakeFFLinearKernel(int ID, int constantVector3ID, int falloffLinearVector3ID, int falloffQuadraticVector3ID, int noiseVector3ID)"
+   IDS_STRING454 "DYN MAKE FORCE FIELD[%DLLLL%dynMakeForceField%dynMakeForceField(int ID, int kernelID, int coordinates, int actorID)"
+   IDS_STRING455 "DYN MAKE FORCE FIELD%LLLL%dynMakeForceField%dynMakeForceField(int ID, int kernelID, int coordinates, int actorID)"
+   IDS_STRING456 "DYN MAKE FF SHAPE GROUP[%DLD%dynMakeFFShapeGroup%dynMakeFFShapeGroup(int ID, bool excludeGroup)"
+   IDS_STRING457 "DYN MAKE FF SHAPE GROUP%LD%dynMakeFFShapeGroup%dynMakeFFShapeGroup(int ID, bool excludeGroup)"
+   IDS_STRING458 "DYN FF ADD SHAPE GROUP%LL%dynFFAddShapeGroup%dynFFAddShapeGroup(int ID, int shapeGroupID)"
+   IDS_STRING459 "DYN FF REMOVE SHAPE GROUP%LL%dynFFRemoveShapeGroup%dynFFRemoveShapeGroup(int ID, int shapeGroupID)"
+   IDS_STRING460 "DYN FF CLEAR SHAPES%0%dynFFClearShapes%dynFFClearShapes()"
+   IDS_STRING461 "DYN DELETE FF LINEAR KERNEL%L%dynDeleteFFLinearKernel%dynDeleteFFLinearKernel(int kernelID)"
+   IDS_STRING462 "DYN DELETE FF SHAPE GROUP%L%dynDeleteFFShapeGroup%dynDeleteFFShapeGroup(int shapeGroupID)"
+   IDS_STRING463 "DYN DELETE FORCE FIELD%L%dynDeleteForceField%dynDeleteForceField(int ID)"
+   IDS_STRING464 "DYN FF SHAPE GROUP EXISTS[%DL%dynFFShapeGroupExists%dynFFShapeGroupExists(int ID)"
+   IDS_STRING465 "DYN FF LINEAR KERNEL EXISTS[%DL%dynFFLinearKernelExists%dynFFLinearKernelExists(int ID)"
+   IDS_STRING466 "DYN FORCE FIELD EXISTS[%DL%dynForceFieldExists%dynForceFieldExists(int ID)"
+   IDS_STRING467 "DYN JOINT DESC EXISTS[%DL%dynJointDescExists%dynJointDescExists(int ID)"
+   IDS_STRING468 "DYN MATERIAL EXISTS[%DL%dynMaterialExists%dynMaterialExists(int ID)"
+   IDS_STRING469 "DYN WHEEL UPDATE%LLF%?dynWheelUpdate@@YAXHHM@Z"
+   IDS_STRING470 "DYN WHEEL UPDATE%LLLF%?dynWheelUpdate@@YAXHHHM@Z"
+   IDS_STRING471 "DYN FLUID SCALE OBJECTS%LLFFF%dynFluidScaleObjects%dynFluidScaleObjects(int fluidID, int initialObjectID, float particleLife, float scaleStart, float scaleFinish)"
+   IDS_STRING472 "DYN KINEMATIC ON%L%dynKinematicOn%dynKinematicOn(int objectID)"
+   IDS_STRING473 "DYN KINEMATIC OFF%L%dynKinematicOff%dynKinematicOff(int objectID)"
+   IDS_STRING474 "DYN KINEMATIC MOVE POS%LFFF%dynKinematicMovePos%dynKinematicMovePos(int objectID, float posX, float posY, float posZ)"
+   IDS_STRING475 "DYN KINEMATIC MOVE ROT%LFFF%dynKinematicMoveRot%dynKinematicMoveRot(int objectID, float rotX, float rotY, float rotZ)"
+   IDS_STRING476 "DYN JOINT DESC SET FLAGS%LL%dynJointDescSetFlags%dynJointDescSetFlags(int jointDescID, int flags)"
+
+   IDS_STRING477 "DYN MAKE SHAPE BOX[%DLF%dynMakeShapeBox%dynMakeShapeBox(int objectID, float density)"
+   IDS_STRING478 "DYN MAKE SHAPE BOX%LF%dynMakeShapeBox%dynMakeShapeBox(int objectID, float density)"
+
+   IDS_STRING479 "DYN MAKE SHAPE SPHERE[%DLF%dynMakeShapeSphere%dynMakeShapeSphere(int objectID, float density)"
+   IDS_STRING480 "DYN MAKE SHAPE SPHERE%LF%dynMakeShapeSphere%dynMakeShapeSphere(int objectID, float density)"
+ 
+   IDS_STRING481 "DYN MAKE SHAPE CAPSULE[%DLFFF%dynMakeShapeCapsule%dynMakeShapeCapsule(int objectID, float height, float radius, float density)"
+   IDS_STRING482 "DYN MAKE SHAPE CAPSULE%LFFF%dynMakeShapeCapsule%dynMakeShapeCapsule(int objectID, float height, float radius, float density)"
+
+   IDS_STRING483 "DYN MAKE COMPOUND FROM SHAPES[%DLF%dynMakeCompoundFromShapes%dynMakeCompoundFromShapes(int objectID, float density)"
+   IDS_STRING484 "DYN MAKE COMPOUND FROM SHAPES%LF%dynMakeCompoundFromShapes%dynMakeCompoundFromShapes(int objectID, float density)"
+
+   IDS_STRING485 "DYN CLEAR SHAPES%0%dynClearShapes%dynClearShapes()"
+   IDS_STRING486 "DYN DELETE GROUND PLANE%0%dynDeleteGroundPlane%dynDeleteGroundPlane()"
+
+
+   //-- V1.1
+   IDS_STRING487 "DYN COOK CONVEX MESH[%DLLLS%?dynCookConvexMesh@@YAKHHHPAD@Z"
+   IDS_STRING488 "DYN COOK CONVEX MESH%LLLS%?dynCookConvexMesh@@YAKHHHPAD@Z"
+   IDS_STRING489 "DYN COOK CONVEX MESH[%DLLLL%?dynCookConvexMesh@@YAKHHHH@Z"
+   IDS_STRING490 "DYN COOK CONVEX MESH%LLLL%?dynCookConvexMesh@@YAKHHHH@Z"
+   IDS_STRING491 "DYN MAKE CONVEX MESH[%DLLLLF%?dynMakeConvexMesh@@YAKHHHHM@Z"
+   IDS_STRING492 "DYN MAKE CONVEX MESH%LLLLF%?dynMakeConvexMesh@@YAKHHHHM@Z"
+
+   IDS_STRING493 "DYN BONE SYNC ACTOR%LLL%dynBoneSyncActor%dynBoneSyncActor(int objectID, int meshID, int boneID)"
+   IDS_STRING494 "DYN BONE CLEAR MATRIX%LLL%dynBoneClearMatrix%dynBoneClearMatrix(int objectID, int meshID, int boneID)"
+   IDS_STRING495 "DYN UTIL GET BONE COUNT[%LLL%dynUtilGetBoneCount%dynUtilGetBoneCount(int objectID, int meshID)"
+   IDS_STRING496 "DYN UTIL GET MESH COUNT[%LL%dynUtilGetMeshCount%dynUtilGetMeshCount(int objectID)"
+   IDS_STRING497 "DYN SET BONES%LD%dynSetBones%dynSetBones(int objectID, bool physics)"
+
+   IDS_STRING498 "DYN BONE GET POS%LLLL%dynBoneGetPos%dynBoneGetPos(int objectID, int meshID, int boneID, int vec3Out)"
+
+   IDS_STRING499 "DYN GET MASS[%FLL%?dynGetMass@@YAKHH@Z"
+   IDS_STRING500 "DYN SET MASS%LLF%?dynSetMass@@YAXHHM@Z"
+
+   IDS_STRING501 "DYN SET LINEAR DAMPING%LLF%?dynSetLinearDamping@@YAXHHM@Z"
+   IDS_STRING502 "DYN SET ANGULAR DAMPING%LLF%?dynSetAngularDamping@@YAXHHM@Z"
+   IDS_STRING503 "DYN GET ANGULAR DAMPING[%FLL%?dynGetAngularDamping@@YAKHH@Z"
+   IDS_STRING504 "DYN GET LINEAR DAMPING[%FLL%?dynGetLinearDamping@@YAKHH@Z"
+
+   IDS_STRING505 "DYN SET LINEAR MOMENTUM%LLFFF%?dynSetLinearMomentum@@YAXHHMMM@Z"
+   IDS_STRING506 "DYN SET ANGULAR MOMENTUM%LLFFF%?dynSetAngularMomentum@@YAXHHMMM@Z"
+   IDS_STRING507 "DYN GET ANGULAR MOMENTUM%LLL%?dynGetAngularMomentum@@YAXHHH@Z"
+   IDS_STRING508 "DYN GET LINEAR MOMENTUM%LLL%?dynGetLinearMomentum@@YAXHHH@Z"
+
+   IDS_STRING509 "DYN ACTOR RAISE FLAG%LD%?dynActorRaiseFlag@@YAXHI@Z"
+   IDS_STRING510 "DYN ACTOR RAISE FLAG%LLD%?dynActorRaiseFlag@@YAXHHI@Z"
+
+   IDS_STRING511 "DYN ACTOR CLEAR FLAG%LD%?dynActorClearFlag@@YAXHI@Z"
+   IDS_STRING512 "DYN ACTOR CLEAR FLAG%LLD%?dynActorClearFlag@@YAXHHI@Z"
+
+   IDS_STRING513 "DYN WAKE UP%LF%?dynWakeUp@@YAXHM@Z"
+   IDS_STRING514 "DYN WAKE UP%LLF%?dynWakeUp@@YAXHHM@Z"
+   
+   IDS_STRING515 "DYN PUT TO SLEEP%L%?dynPutToSleep@@YAXH@Z"
+   IDS_STRING516 "DYN PUT TO SLEEP%LL%?dynPutToSleep@@YAXHH@Z"
+
+   IDS_STRING517 "DYN MAKE BOX[%DLLLF%?dynMakeBox@@YAKHHHM@Z"
+   IDS_STRING518 "DYN MAKE BOX%LLLF%?dynMakeBox@@YAKHHHM@Z"
+   
+   IDS_STRING519 "DYN MAKE SPHERE[%DLLLF%?dynMakeSphere@@YAKHHHM@Z"
+   IDS_STRING520 "DYN MAKE SPHERE%LLLF%?dynMakeSphere@@YAKHHHM@Z"
+
+   IDS_STRING521 "DYN MAKE CAPSULE[%DLLLF%?dynMakeCapsule@@YAKHHHM@Z"
+   IDS_STRING522 "DYN MAKE CAPSULE%LLLF%?dynMakeCapsule@@YAKHHHM@Z"
+
+   IDS_STRING523 "DYN SHAPE SET LOC POS%LLLFFF%?dynShapeSetLocPos@@YAXHHHMMM@Z"
+   IDS_STRING524 "DYN SHAPE SET LOC ROT%LLLFFF%?dynShapeSetLocRot@@YAXHHHMMM@Z"
+   IDS_STRING525 "DYN SHAPE SET GLOB POS%LLLFFF%?dynShapeSetGlobPos@@YAXHHHMMM@Z"
+   IDS_STRING526 "DYN SHAPE SET GLOB ROT%LLLFFF%?dynShapeSetGlobRot@@YAXHHHMMM@Z"
+
+   IDS_STRING527 "DYN BODY RAISE FLAG%LD%?dynBodyRaiseFlag@@YAXHI@Z"
+   IDS_STRING528 "DYN BODY RAISE FLAG%LLD%?dynBodyRaiseFlag@@YAXHHI@Z"
+    
+   IDS_STRING529 "DYN BODY CLEAR FLAG%LD%?dynBodyClearFlag@@YAXHI@Z"
+   IDS_STRING530 "DYN BODY CLEAR FLAG%LLD%?dynBodyClearFlag@@YAXHHI@Z"
+ 
+   IDS_STRING531 "DYN BODY READ FLAG[%DLD%?dynBodyReadFlag@@YAKHI@Z"
+   IDS_STRING532 "DYN BODY READ FLAG[%DLLD%?dynBodyReadFlag@@YAKHHI@Z"
+
+   IDS_STRING533 "DYN ACTOR READ FLAG[%DLD%?dynActorReadFlag@@YAKHI@Z"
+   IDS_STRING534 "DYN ACTOR READ FLAG[%DLLD%?dynActorReadFlag@@YAKHI@Z"
+
+   IDS_STRING535 "DYN CONTROLLER MOVE[%LLFFFD%?dynControllerMove@@YAHHMMMI@Z"
+   IDS_STRING536 "DYN CONTROLLER MOVE%LFFFD%?dynControllerMove@@YAHHMMMI@Z"
+
+   IDS_STRING537 "DYN CONTROLLER REPORT SCENE CHANGED%L%dynControllerReportSceneChanged%dynControllerReportSceneChanged(int ID)"
+   IDS_STRING538 "DYN JOINT EXISTS[%DL%dynJointExists%dynJointExists(int jointID)"
+   IDS_STRING539 "DYN JOINT DESC SET MAX TORQUE%LF%dynJointDescSetMaxTorque%dynJointDescSetMaxTorque(int jointDescID, float value)"
+   IDS_STRING540 "DYN JOINT DESC SET MAX FORCE%LF%dynJointDescSetMaxForce%dynJointDescSetMaxForce(int jointDescID, float value)"
+   IDS_STRING541 "DYN JOINT IS BROKEN[%DL%dynJointIsBroken%dynJointIsBroken(int jointID)"
+   IDS_STRING542 "DYN JOINT DESC SET LOCAL ANCHOR%LLFFF%dynJointDescSetLocalAnchor%dynJointDescSetLocalAnchor(int jointDescID, int AorB, float x, float y, float z)"
+   IDS_STRING543 "DYN JOINT DESC SET LOCAL AXIS%LLFFF%dynJointDescSetLocalAxis%dynJointDescSetLocalAxis(int jointDescID, int AorB, float x, float y, float z)"
+   IDS_STRING544 "DYN JOINT DESC SET LOCAL NORMAL%LLFFF%dynJointDescSetLocalNormal%dynJointDescSetLocalNormal(int jointDescID, int AorB, float x, float y, float z)"
+   IDS_STRING545 "DYN JOINT DESC GET LOCAL ANCHOR%LLL%dynJointDescGetLocalAnchor%dynJointDescGetLocalAnchor(int jointDescID, int AorB, int vector3Out)"
+   IDS_STRING546 "DYN JOINT DESC GET LOCAL AXIS%LLL%dynJointDescGetLocalAxis%dynJointDescGetLocalAxis(int jointDescID, int AorB, int vector3Out)"
+   IDS_STRING547 "DYN JOINT DESC GET LOCAL NORMAL%LLL%dynJointDescGetLocalNormal%dynJointDescGetLocalNormal(int jointDescID, int AorB, int vector3Out)"
+   IDS_STRING548 "DYN JOINT DESC IS VALID[%DL%dynJointDescIsValid%dynJointDescIsValid(int jointDescID)"
+
+   IDS_STRING549 "DYN MATERIAL SET DIR OF ANISOTROPY%LFFF%dynMaterialSetDirOfAnisotropy%dynMaterialSetDirOfAnisotropy(int ID, float x, float y, float z)"
+   IDS_STRING550 "DYN MATERIAL SET DYNAMIC FRICTION%LF%dynMaterialSetDynamicFriction%dynMaterialSetDynamicFriction(int ID, float value)"
+
+   IDS_STRING551 "DYN MATERIAL SET DYNAMIC FRICTION V%LF%dynMaterialSetDynamicFrictionV%dynMaterialSetDynamicFrictionV(int ID, float value)"
+   IDS_STRING552 "DYN MATERIAL SET STATIC FRICTION%LF%dynMaterialSetStaticFriction%dynMaterialSetStaticFriction(int ID, float value)"
+   IDS_STRING553 "DYN MATERIAL SET STATIC FRICTION V%LF%dynMaterialSetStaticFrictionV%dynMaterialSetStaticFrictionV(int ID, float value)"
+   IDS_STRING554 "DYN MATERIAL SET FLAGS%LD%dynMaterialSetFlags%dynMaterialSetFlags(int ID, unsigned int flags)"
+
+   IDS_STRING555 "DYN MATERIAL GET DIR OF ANISOTROPY%LL%dynMaterialGetDirOfAnisotropy%dynMaterialGetDirOfAnisotropy(int ID, int vec3Out)"
+   IDS_STRING556 "DYN MATERIAL GET DYNAMIC FRICTION[%FL%dynMaterialGetDynamicFriction%dynMaterialGetDynamicFriction(int ID)"
+   IDS_STRING557 "DYN MATERIAL GET DYNAMIC FRICTION V[%FL%dynMaterialGetDynamicFrictionV%dynMaterialGetDynamicFrictionV(int ID)"
+   IDS_STRING558 "DYN MATERIAL GET STATIC FRICTION[%FL%dynMaterialGetStaticFriction%dynMaterialGetStaticFriction(int ID)"
+   IDS_STRING559 "DYN MATERIAL GET STATIC FRICTION V[%FL%dynMaterialGetStaticFrictionV%dynMaterialGetStaticFrictionV(int ID)"
+   IDS_STRING560 "DYN MATERIAL GET FLAGS[%DL%dynMaterialGetFlags%dynMaterialGetFlags(int ID)"
+   IDS_STRING561 "DYN MATERIAL GET MATERIAL INDEX[%LL%dynMaterialGetMaterialIndex%dynMaterialGetMaterialIndex(int ID)"
+
+   IDS_STRING562 "DYN SET FORCE MODE%L%dynSetForceMode%dynSetForceMode(int mode)"
+
+   IDS_STRING563 "DYN ADD FORCE AT POS%LFFFFFF%?dynAddForceAtPos@@YAXHMMMMMM@Z"
+   IDS_STRING564 "DYN ADD FORCE AT POS%LLFFFFFF%?dynAddForceAtPos@@YAXHHMMMMMM@Z"
+   IDS_STRING565 "DYN ADD FORCE AT LOCAL POS%LFFFFFF%?dynAddForceAtLocalPos@@YAXHMMMMMM@Z"
+   IDS_STRING566 "DYN ADD FORCE AT LOCAL POS%LLFFFFFF%?dynAddForceAtLocalPos@@YAXHHMMMMMM@Z"
+   IDS_STRING567 "DYN ADD LOCAL FORCE AT POS%LFFFFFF%?dynAddLocalForceAtPos@@YAXHMMMMMM@Z"
+   IDS_STRING568 "DYN ADD LOCAL FORCE AT POS%LLFFFFFF%?dynAddLocalForceAtPos@@YAXHHMMMMMM@Z"
+   IDS_STRING569 "DYN ADD LOCAL FORCE AT LOCAL POS%LLFFFFFF%?dynAddLocalForceAtLocalPos@@YAXHHMMMMMM@Z"
+
+   IDS_STRING570 "DYN RAYCAST HIT GET FACE ID[%D%dynRaycastHitGetFaceID%dynRaycastHitGetFaceID()"
+   IDS_STRING571 "DYN MAKE CCD SKELETON VERTEX[%DLL%dynMakeCCDSkeletonVertex%dynMakeCCDSkeletonVertex(int objectID, int limbID)"
+   IDS_STRING572 "DYN MAKE CCD SKELETON VERTEX%LL%dynMakeCCDSkeletonVertex%dynMakeCCDSkeletonVertex(int objectID, int limbID)"
+
+   IDS_STRING573 "DYN JOINT DESC SET SWING DRIVE%LLFFF%dynJointDescSetSwingDrive%dynJointDescSetSwingDrive(int jointDescID, int driveType, float forceLimit, float damping, float spring)"
+   IDS_STRING574 "DYN JOINT DESC SET TWIST DRIVE%LLFFF%dynJointDescSetTwistDrive%dynJointDescSetTwistDrive(int jointDescID, int driveType, float forceLimit, float damping, float spring)"
+    
+   IDS_STRING575 "DYN JOINT DESC SET X DRIVE%LLFFF%dynJointDescSetXDrive%dynJointDescSetXDrive(int jointDescID, int driveType, float forceLimit, float damping, float spring)"
+   IDS_STRING576 "DYN JOINT DESC SET Y DRIVE%LLFFF%dynJointDescSetYDrive%dynJointDescSetYDrive(int jointDescID, int driveType, float forceLimit, float damping, float spring)"
+   IDS_STRING577 "DYN JOINT DESC SET Z DRIVE%LLFFF%dynJointDescSetZDrive%dynJointDescSetZDrive(int jointDescID, int driveType, float forceLimit, float damping, float spring)"
+   IDS_STRING578 "DYN JOINT DESC SET SLERP DRIVE%LLFFF%dynJointDescSetSlerpDrive%dynJointDescSetSlerpDrive(int jointDescID, int driveType, float forceLimit, float damping, float spring)"
+   IDS_STRING579 "DYN JOINT DESC SET GEAR RATIO%LF%dynJointDescSetGearRatio%dynJointDescSetGearRatio(int jointDescID, float ratio)"
+
+   IDS_STRING580 "DYN JOINT SET DRIVE ANGULAR VELOCITY%LFFF%dynJointSetDriveAngularVelocity%dynJointSetDriveAngularVelocity(int jointID, float x, float y, float z)"
+   IDS_STRING581 "DYN JOINT SET DRIVE LINEAR VELOCITY%LFFF%dynJointSetDriveLinearVelocity%dynJointSetDriveLinearVelocity(int jointID, float x, float y, float z)"
+
+   IDS_STRING582 "DYN JOINT SET DRIVE ORIENTATION%LFFFF%dynJointSetDriveOrientation%dynJointSetDriveOrientation(int jointID, float w, float x, float y, float z)"
+   IDS_STRING583 "DYN JOINT SET DRIVE ORIENTATION FROM GLOBAL AXIS%LFFF%dynJointSetDriveOrientationFromGlobalAxis%dynJointSetDriveOrientationFromGlobalAxis(int jointID, float x, float y, float z)"
+   IDS_STRING584 "DYN JOINT SET DRIVE ORIENTATION FROM LOCAL AXIS%LFFF%dynJointSetDriveOrientationFromLocalAxis%dynJointSetDriveOrientationFromLocalAxis(int jointID, float x, float y, float z)"
+   IDS_STRING585 "DYN JOINT SET DRIVE ORIENTATION FROM ANGLE AXIS%LFFFF%dynJointSetDriveOrientationFromAngleAxis%dynJointSetDriveOrientationFromAngleAxis(int jointID, float axisX, float axisY, float axisZ, float angle)" 
+   IDS_STRING586 "DYN JOINT SET DRIVE POSITION%LFFF%dynJointSetDrivePosition%dynJointSetDrivePosition(int jointID, float x, float y, float z)"
+   IDS_STRING587 "DYN FLUID FADE OBJECTS ALPHA%LLFFF%dynFluidFadeObjectsAlpha%dynFluidFadeObjectsAlpha(int fluidID, int initialObjectID, float particleLife, float fadeIn, float fadeOut)"
+   IDS_STRING588 "DYN SHAPE SET FLAG%LLLD%dynShapeSetFlag%dynShapeSetFlag(int objectID, int shapeIndex, int flag, bool value)"
+   IDS_STRING589 "DYN UTIL SET CAMERA TO OBJECT%LLFFFFFFF%dynUtilSetCameraToObject%dynUtilSetCameraToObject(int cameraID, int objectID, float offsetPosX, float offsetPosY, float offsetPosZ, float offsetPointX, float offsetPointY, float offsetPointZ, float smooth)"
+   //-- New v1.11
+   IDS_STRING590 "DYN CONTACT GET LIMB A[%L%dynContactGetLimbA%dynContactGetLimbA()"
+   IDS_STRING591 "DYN CONTACT GET LIMB B[%L%dynContactGetLimbB%dynContactGetLimbB()"
+   IDS_STRING592 "DYN SET GROUP%LLL%?dynSetGroup@@YAXHHH@Z"
+   IDS_STRING593 "DYN GET GROUP[%LLL%?dynGetGroup@@YAHHH@Z"
+   //-- REPLACED FROM EARLIER VERSION
+   IDS_STRING290 "DYN GET GROUP[%LL%?dynGetGroup@@YAHH@Z"
+   IDS_STRING594 "DYN SOFT BODY DETACH FROM SHAPE%LLLL%?dynSoftBodyDetachFromShape@@YAXHHHH@Z"
+   IDS_STRING595 "DYN JOINT DESC SET LINEAR LIMIT%LFFFF%dynJointDescSetLinearLimit%dynJointDescSetLinearLimit(int jointDescID, float value, float spring, float damping, float restitution)"
+   IDS_STRING596 "DYN SET SHAPE GROUP%LLL%?dynSetShapeGroup@@YAXHHH@Z"
+   IDS_STRING597 "DYN SET SHAPE GROUP%LLLL%?dynSetShapeGroup@@YAXHHHH@Z"
+   IDS_STRING598 "DYN SHAPE PAIR SET FLAGS%LLLLL%?dynShapePairSetFlags@@YAXHHHHH@Z"
+   IDS_STRING599 "DYN GET ORIENTATION%LL%?dynGetOrientation@@YAXHH@Z"
+   IDS_STRING600 "DYN GET POSITION%LL%?dynGetPosition@@YAXHH@Z"
+   IDS_STRING601 "DYN GET ORIENTATION%LLL%?dynGetOrientation@@YAXHHH@Z"
+   IDS_STRING602 "DYN GET POSITION%LLL%?dynGetPosition@@YAXHHH@Z"
+   IDS_STRING603 "DYN IS SLEEPING[%DL%?dynIsSleeping@@YAKH@Z"
+   IDS_STRING604 "DYN IS SLEEPING[%DLL%?dynIsSleeping@@YAKHH@Z"
+   IDS_STRING605 "DYN GET VERSION[%L%?dynGetVersion@@YAHXZ"
+
+   IDS_STRING606 "DYN GET ANGULAR VELOCITY[%LLL%?dynGetAngularVelocity@@YAXHHH@Z"
+   IDS_STRING607 "DYN GET LINEAR VELOCITY[%LLL%?dynGetLinearVelocity@@YAXHHH@Z"
+   IDS_STRING608 "DYN SET ANGULAR VELOCITY[%LLFFF%?dynSetAngularVelocity@@YAXHHMMM@Z"
+   IDS_STRING609 "DYN SET LINEAR VELOCITY[%LLFFF%?dynSetLinearVelocity@@YAXHHMMM@Z"
+
+
+//EXPORT  void  dynGetAngularVelocity(int objectID, int limbID, int vector3ID);
+//EXPORT  void  dynGetLinearVelocity(int objectID, int limbID, int vector3ID);
+//EXPORT  void  dynSetAngularVelocity(int objectID, int limbID, float x, float y, float z);
+//EXPORT  void  dynSetLinearVelocity(int objectID, int limbID, float x, float y, float z);
+
+
+}

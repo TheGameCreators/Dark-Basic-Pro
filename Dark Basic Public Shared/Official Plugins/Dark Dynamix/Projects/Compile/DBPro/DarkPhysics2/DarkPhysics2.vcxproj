@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{50ABA501-9CA5-4B12-AE44-827904CDCE0D}</ProjectGuid>
+    <RootNamespace>DarkPhysics2</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.24720.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;DARKPHYSICS2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;DARKPHYSICS2_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_Asc2Bin.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_ColladaExport.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_ColladaImport.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_cooking.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_customcopy.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_File.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_Geometry.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_GraphicsMesh.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_helper.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_hull.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_PhysicsExport.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_PhysicsInstantiator.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_ScaledCopy.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_schema.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_SchemaStream.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_SchemaTypes.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_Streaming.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_string.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_tinystr.h" />
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_tinyxml.h" />
+    <ClInclude Include="..\..\..\..\Project files\Physics Core\Include\Defines.h" />
+    <ClInclude Include="..\..\..\..\Project files\Physics Core\Include\MathUtil.h" />
+    <ClInclude Include="..\..\..\..\Project files\Physics Core\Include\Physics.h" />
+    <ClInclude Include="..\..\..\..\Project files\Physics Core\Include\UserAllocator.h" />
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\D3DUtil.h" />
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\DarkPhy2(dbpro).h" />
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\DarkPhy2.h" />
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\DBCallBacks.h" />
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\DBOData.h" />
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\DBUtil.h" />
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\Globals.h" />
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\Message.h" />
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\..\..\Project files\Physics Dark Basic\Include\Physics.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_Asc2Bin.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_ColladaExport.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_ColladaImport.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_cooking.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_customcopy.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_File.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_Geometry.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_GraphicsMesh.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_helper.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_hull.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_PhysicsExport.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_PhysicsInstantiator.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_ScaledCopy.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_schema.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_SchemaStream.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_Streaming.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_string.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_tinystr.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_tinyxml.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_tinyxmlerror.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_tinyxmlparser.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\MathUtil.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\MeshHash.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\NxMouseDrag.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\Physics.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\RigidBodyConstruction.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\SoftMeshObj.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\Stream.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\TetraGraphics.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\UserAllocator.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\Physics Dark Basic\Source\ActorSync.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\Physics Dark Basic\Source\D3DUtil.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\Physics Dark Basic\Source\DarkPhy2(dbPro).cpp" />
+    <ClCompile Include="..\..\..\..\Project files\Physics Dark Basic\Source\DarkPhy2.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\Physics Dark Basic\Source\DBCallBacks.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\Physics Dark Basic\Source\DBPhyStruct.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\Physics Dark Basic\Source\DBSoftBody.cpp" />
+    <ClCompile Include="..\..\..\..\Project files\Physics Dark Basic\Source\Error.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\Project files\NxuStream2\TheNxuStreamFAQ.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

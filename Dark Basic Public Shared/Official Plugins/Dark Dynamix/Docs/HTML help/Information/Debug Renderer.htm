@@ -1,0 +1,107 @@
+<HTML>
+
+
+    <HEAD>
+        <title> Debug Renderer </title>
+        <link rel="stylesheet" type="text/css" href="ExampleDocs.css"/>
+    </HEAD>
+
+
+    <BODY id = wrap>
+         <H1> 
+            <p align = "center">
+                
+            <img src = "Dark Dynamix logo.png" width = 675px height = 210px/>
+                <br><br> Debug Renderer
+           </p>
+        </H1>
+
+        <center>
+        <IMG SRC="Debug renderer vehicle.png" >
+        </center>
+        <br>
+           The debug renderer allows you to see the simulation directly, this is
+           very useful in allowing you to be sure that the physics simulation
+           is perfectly aligned with what is happening visually. You can see whether
+           the simulations actors are positioned, orientated and scaled correctly in
+           respect to the graphical objects they are representing. 
+           <br><br>
+           The image above(top) is the game objects and the image(bottom) is a representation
+           of how the simulation views the scene, I have took the extra step of hiding the game
+           objects in the bottom image, you don't need to do this, you can view both the simulation
+           and your game/app side by side.
+
+           <br> 
+           <br>
+           To enable the debug renderer you use the 'set parameter' command, with this command you 
+           can set the scale the debug data is drawn at, the scale value obviously does not affect 
+           things like object bounds, it affects things like force arrows etc. You then use the 'set
+           parameter' command to tell the simulation what you wish to visualise from the simulation.
+
+ 
+           
+<H5>DBPro</H5>
+<pre class = "dbpro">
+
+DYN START
+DYN SET PARAMETER NX_VISUALIZATION_SCALE, 1.0
+DYN SET PARAMETER NX_VISUALIZE_COLLISION_SHAPES, 1.0
+//...
+//...
+DYN SIMULATE 
+ do
+   DYN FETCH RESULTS
+      DYN UPDATE
+      DYN DEBUG RENDER
+      //...
+      //...
+   DYN SIMULATE
+
+   sync
+ loop
+DYN FETCH RESULTS
+DYN STOP
+
+</pre>
+
+<H5>Dark GDK</H5>
+<pre class = "gdk">                  
+dynStart();
+dynSetParameter(NX_VISUALIZATION_SCALE, 1.0);
+dynSetParameter(NX_VISUALIZE_COLLISION_SHAPES, 1.0);
+//...
+//...
+dynSimulate(); 
+ while ( LoopGDK ( ) )
+ {
+   dynFetchResults();
+      dynUpdate();
+      dynDebugRender();
+      //...
+      //...
+   dynSimulate();
+
+   dbSync();
+ }
+dynFetchResults();
+dynStop();
+
+</pre>
+
+<br>
+There are many PhysX visualisation constants you can pass into the 'set parameter' command
+to determine what you visualise, this may just be object bounds or it could be joint limits,
+fluid emitters etc.
+<br>
+<br>
+It is important to know that even if you do not draw the debug data in your game loop the data
+will still be collected which could slow down your game/app. To turn debug visualisation off just set the 
+scale to 0, or remove the 'set parameter' command for visualisation scale.  
+<br><br>
+    
+
+    </BODY>
+
+
+</HTML>
+   

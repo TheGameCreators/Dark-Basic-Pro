@@ -1,0 +1,33 @@
+<!--
+RIGID BODY
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN SET TO NEW OBJECT</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns"></span>
+		DYN SET TO NEW OBJECT
+		<span class="parameters">(int nObject, int nLimb, int oObject, int oLimb)
+		</span>
+		<br><br>This command allows you to change the object the given actor will update. The old ID number(s) no longer represent any actor in the simulation.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>newObjectID - ID number of the new object to be updated. If the actor is to now represent a limb, place the ID of the owning object here.
+		<br>newLimbID - ID number of the new limb to be updated, set to 0 if it is the whole object and not a limb that is to be represented by the actor in the simulation.
+		<br>oldObjectID - ID number of the object that the actor currently represents in the simulation. If the actor currently represents a limb then place the ID of the owning object here.
+		<br>oldLimbID - ID number of the limb that the actor currently represents in the simulation, set to 0 if it is the object that is currently represented by the actor and not a limb.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

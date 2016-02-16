@@ -1,0 +1,55 @@
+<!--
+RIGID BODY
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN BODY READ FLAG</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">bool</span>
+		DYN BODY READ FLAG
+		<span class="parameters">(int objectID, unsigned int flag)
+		</span>
+		<br><br>Reads the given flag of the body in the given actor.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the object the actor represents in the simulation.
+		<br>flag - Flag you wish to read.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if flag is raised, FALSE otherwise.
+		<br>
+
+<br><br>
+<center>
+-------------------------------------------------------------------------------
+</center>
+
+		<span class="returns">bool</span>
+		DYN BODY READ FLAG
+		<span class="parameters">(int objectID, int limbID, unsigned int flag)
+		</span>
+		<br><br>Reads the given flag of the body in the given actor. Use this overload if your actor was created from a limb/bone.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the owning object.
+		<br>limbID - ID number of the limb the actor represents in the simulation.
+		<br>flag - Flag you wish to read.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if flag is raised, false otherwise.
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

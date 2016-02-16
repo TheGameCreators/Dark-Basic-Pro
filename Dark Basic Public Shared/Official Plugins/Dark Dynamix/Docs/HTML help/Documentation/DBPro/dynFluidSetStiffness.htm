@@ -1,0 +1,31 @@
+<!--
+FLUID/PARTICLES
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN FLUID SET STIFFNESS</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns"></span>
+		DYN FLUID SET STIFFNESS
+		<span class="parameters">(int fluidID, float stiffness)
+		</span>
+		<br><br>Sets the stiffness value of the given fluid. The stiffness (or gas constant) influences the calculation of the pressure force field. Pressure is calculated from (density-initialDenisty)*stiffness. Low values of stiffness make the fluid more compressible (i.e., springy), while high values make it less compressible. The stiffness value has a weighty impact on the numerical stability of the simulation; setting very high values will result in instability. Reasonable values: 1-200
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>fluidID - ID number of the fluid.
+		<br>stiffness - Stiffness value(must be positive)
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

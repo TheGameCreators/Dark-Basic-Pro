@@ -1,0 +1,98 @@
+<HTML>
+
+
+    <HEAD>
+        <title> Multithreading </title>
+        <link rel="stylesheet" type="text/css" href="ExampleDocs.css"/>
+    </HEAD>
+
+
+    <BODY id = wrap>
+         <H1> 
+            <p align = "center">
+                
+            <img src = "Dark Dynamix logo.png" width = 675px height = 210px/>
+                <br><br> Multithreading
+           </p>
+        </H1>
+
+           With advances in computing technology most computers now have at least two cpu cores.
+           Dark Dynamix takes full advantage of this by running the physics simulation on a seperate
+           thread meaning your games/apps will run faster. <br><br>
+           All the examples take this approach and I recommend you should do the same for your games/apps
+           unless you have a good reason not to. 
+           <br><br>
+           All we have to do is structure our code a little differently, telling the other thread when to
+           simulate and then fetching the simulation results when we need them, a typical game loop may look like this:
+           
+<H5>DBPro</H5>
+<pre class = "dbpro">
+
+DYN START
+...
+...
+//Each call to 'simulate' must be matched with a call to 'fetch results'
+DYN SIMULATE 
+ do
+   DYN FETCH RESULTS
+   DYN UPDATE
+   //Manipulate physics here, eg add forces, make/delete actors etc
+
+
+   DYN SIMULATE
+   
+   //camera commands etc
+   sync
+ loop
+DYN FETCH RESULTS
+DYN STOP
+
+</pre>
+
+<H5>Dark GDK</H5>
+<pre class = "gdk">                  
+dynStart();
+...
+...
+//Each call to 'simulate' must be matched with a call to 'fetch results'
+dynSimulate(); 
+ while ( LoopGDK ( ) )
+ {
+   dynFetchResults();
+   dynUpdate();
+   //Manipulate physics here, eg add forces, make/delete actors etc
+
+
+   dynSimulate();
+   
+   //camera commands etc
+   dbSync();
+ }
+dynFetchResults();
+dynStop();
+
+</pre>
+
+<br>
+At first glance it looks as though 'simulate' and 'fetch results' are the wrong way around
+in the game loop, but if you follow the code through carefully you will see that 'simulate'
+is called first and there is one call to 'fetch results' for every call to 'simulate'.
+The reason it is done like this is that it gives the simulation thread more time to run
+the simulation while the graphics api draws to screen inside the 'sync' command.
+<br><br>
+It is important that you call 'fetch results' before you call 'stop' otherwise you may crash
+the program as the simulation thread may still be simulating. It is also important to not
+delete/create actors while simulating, this could also cause problems, be sure to manipulate
+the actors and delete/create actors in the space between 'fetch results' and 'simulate' in your 
+game loop, not doing so may produce an unstable simulation or even crash the program.
+<br><br>
+If you do not wish to utilise multithreading then you could treat 'simulate', 'fetch results' and
+'update' as though they are one function and always put them together in that order.
+<br> 
+    
+
+    </BODY>
+
+
+</HTML>
+   

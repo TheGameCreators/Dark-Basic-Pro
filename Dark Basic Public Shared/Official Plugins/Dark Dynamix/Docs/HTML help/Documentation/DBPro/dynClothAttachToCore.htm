@@ -1,0 +1,34 @@
+<!--
+CLOTH
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN CLOTH ATTACH TO CORE</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns"></span>
+		DYN CLOTH ATTACH TO CORE
+		<span class="parameters">(int clothID, int objectID, float impulseThreshold, float penetrationDepth, float maxDeformationDistance)
+		</span>
+		<br><br>Allows a cloth to simulate a metal surface, normal simulation will use the attached actor/object until a force over a given magnitude is detected, the simulation will then run on the cloth to simulate metal deformation. Call this function only once right after the cloth is created. Turning cloth into metal and vice versa during the simulation is not recommended. This feature is well suited for volumetric objects like barrels. It cannot handle two dimensional flat pieces well. The core actor's geometry is adjusted automatically. Its size also depends on the cloth thickness. Thus, it is recommended to choose small values for the thickness. At impacts, colliding objects are moved closer to the cloth by the value provided in penetrationDepth which causes a more dramatic collision result. The core actor must have at least one shape, and currently supported shapes are spheres, capsules, boxes and compounds of spheres. It is recommended to specify the density rather than the mass of the core body. This way the mass and inertia tensor are updated when the core deforms.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>clothMeshID - ID number of the object the cloth represents in the simulation.
+		<br>objectID - ID number of the object the attached actor represents in the simulation.
+		<br>impulseThreshold - Threshold for when deformation is allowed. 
+		<br>penetrationDepth - Amount by which colliding objects are brought closer to the cloth. 
+		<br>maxDeformationDistance - Maximum deviation of cloth particles from initial position.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

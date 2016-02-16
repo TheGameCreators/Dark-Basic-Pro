@@ -1,0 +1,55 @@
+<!--
+CONSTRUCTION
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN MAKE CLOTH</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">bool</span>
+		DYN MAKE CLOTH
+		<span class="parameters">(int objectID, int clothMeshID)
+		</span>
+		<br><br>Creates a cloth from a cloth mesh.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the object the actor will represent in the simulation.
+		<br>clothMeshID - ID number of the mesh you wish to create the actor from.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if succeeded, FALSE otherwise.
+		<br>
+
+<br><br>
+<center>
+-------------------------------------------------------------------------------
+</center>
+
+		<span class="returns">bool</span>
+		DYN MAKE CLOTH
+		<span class="parameters">(int objectID, int clothMeshID, unsigned int flags)
+		</span>
+		<br><br>Creates a cloth from a cloth mesh.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the object the actor will represent in the simulation.
+		<br>clothMeshID - ID number of the mesh you wish to create the actor from.
+		<br>flags - Flags for the cloth, allows you to set certain properties for the cloth. If simulating on hardware or simulating with tearing you must set the flag here, all other flags can be set after creation if desired.   
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if succeeded, FALSE otherwise.
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

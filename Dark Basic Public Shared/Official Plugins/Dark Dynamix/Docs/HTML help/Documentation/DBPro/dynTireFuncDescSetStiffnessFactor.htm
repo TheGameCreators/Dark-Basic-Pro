@@ -1,0 +1,31 @@
+<!--
+WHEEL
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN TIRE FUNC DESC SET STIFFNESS FACTOR</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns"></span>
+		DYN TIRE FUNC DESC SET STIFFNESS FACTOR
+		<span class="parameters">(int ID, float stiffnessFactor)
+		</span>
+		<br><br>This function will set the stiffness factor variable of the given tire force function descriptor.  
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>ID - ID number of the tire function descriptor.
+		<br>stiffnessFactor - Scaling factor for tire force. This is an additional overall positive scaling that gets applied to the tire forces before passing them to the solver. Higher values make for better grip. If you raise the other tire force function variables, you may need to lower this. A setting of zero will disable all friction in this direction. Range:(0,inf) Default: 1000000.0(quite stiff)
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

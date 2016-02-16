@@ -1,0 +1,65 @@
+<!--
+RIGID BODY
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN ADD FORCE AT POS</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns"></span>
+		DYN ADD FORCE AT POS
+		<span class="parameters">(int objectID, float x, float y, float z, float posX, float posY, float posZ)
+		</span>
+		<br><br>Applies a force (or impulse) defined in the global coordinate frame, acting at a particular point in global coordinates, to the actor. You can change the force mode with the 'set force mode' command.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the object the actor represents in the simulation.
+		<br>x - Force to be applied along the x axis.
+		<br>y - Force to be applied along the y axis.
+		<br>z - Force to be applied along the z axis.
+		<br>posX - Position the force is to be applied to.
+		<br>posY - Position the force is to be applied to.
+		<br>posZ - Position the force is to be applied to.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+
+<br><br>
+<center>
+-------------------------------------------------------------------------------
+</center>
+
+		<span class="returns"></span>
+		DYN ADD FORCE AT POS
+		<span class="parameters">(int objectID, int limbID, float x, float y, float z, float posX, float posY, float posZ)
+		</span>
+		<br><br>Applies a force (or impulse) defined in the global coordinate frame, acting at a particular point in global coordinates, to the actor. You can change the force mode with the 'set force mode' command. Use this overload if the actor was created from a limb/bone. 
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the owning object.
+		<br>limbID - ID number of the limb the actor represents in the simulation.
+		<br>x - Force to be applied along the x axis.
+		<br>y - Force to be applied along the y axis.
+		<br>z - Force to be applied along the z axis.
+		<br>posX - Position the force is to be applied to.
+		<br>posY - Position the force is to be applied to.
+		<br>posZ - Position the force is to be applied to.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

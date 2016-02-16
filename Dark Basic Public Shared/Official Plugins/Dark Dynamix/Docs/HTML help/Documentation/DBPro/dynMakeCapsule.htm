@@ -1,0 +1,58 @@
+<!--
+CONSTRUCTION
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN MAKE CAPSULE</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">bool</span>
+		DYN MAKE CAPSULE
+		<span class="parameters">(int objectID, float height, float radius, float density)
+		</span>
+		<br><br>Creates a capsule actor.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the object the capsule will represent in the simulation.
+		<br>height - The distance between the two hemispherical ends of the capsule.
+		<br>radius - The radius of the capsules hemispherical ends and its trunk.
+		<br>density - The density of the actor, along with its size this will determine how heavy the actor is. 
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if succeeded, FALSE otherwise.
+		<br>
+
+<br><br>
+<center>
+-------------------------------------------------------------------------------
+</center>
+
+		<span class="returns">bool</span>
+		DYN MAKE CAPSULE
+		<span class="parameters">(int objectID, int boneID, int meshID, float density)
+		</span>
+		<br><br>Creates a capsule actor. This overload creates the capsule from a bone in the given mesh of the object.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the owning object.
+		<br>boneID - ID number of the bone the actor will represent in the simulation.
+		<br>meshID - ID number of the owning mesh.
+		<br>density - The density of the actor, along with its size this will determine how heavy the actor is. 
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if succeeded, FALSE otherwise.
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

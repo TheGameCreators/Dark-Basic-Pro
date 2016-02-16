@@ -1,0 +1,35 @@
+<!--
+CONSTRUCTION
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN MAKE FLUID</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">bool</span>
+		DYN MAKE FLUID
+		<span class="parameters">(int fluidID, unsigned int maxParticles, float particleLife, float collisionRadiusMultiplier, unsigned int flags, bool usePositionData)
+		</span>
+		<br><br>Creates particles which can then be used to simulate things like smoke, water or weather effects.  
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>fluidID - ID number you wish to assign to this fluid. 
+		<br>maxParticles - Maximum amount of particles the fluid.
+		<br>particleLife - Life of the particles, in seconds.
+		<br>collisionRadiusMultiplier - The collision radius of the particles.
+		<br>flags - Allows you to set properties for the fluid such as gravity, two way collision, hardware/software etc.
+		<br>usePositionData - If you set this to TRUE the particles will be initially positioned using position data held in the dynUtilArrayVec3 structure which you must fill first, set to FALSE if you wish to use emitters. 
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if succeeded, FALSE otherwise.
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

@@ -1,0 +1,30 @@
+<!--
+RIGID BODY
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN GET MAX ANGULAR VELOCITY</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">float</span>
+		DYN GET MAX ANGULAR VELOCITY
+		<span class="parameters">(int objectID)
+		</span>
+		<br><br>Returns the maximum angular velocity of the given actor. Because for various internal computations, very quickly rotating actors introduce error into the simulation, which leads to undesired results. However, because some actors, such as car wheels, should be able to rotate quickly, you can override the default setting on a per-actor basis with the below call. Note that objects such as wheels which are approximated with spherical or other smooth collision primitives can be simulated with stability at a much higher angular velocity than, say, a box that has corners.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the object whose associated actor you wish to access.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>The maximum angular velocity of the given actor 
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

@@ -1,0 +1,31 @@
+<HTML> 
+	 <HEAD> 
+		 <TITLE>PHY SET JOINT SWING2 LIMIT</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns"></span>
+		PHY SET JOINT SWING2 LIMIT
+		<span class="parameters">(int jointDescID, float value, float spring, float damping, float restitution)
+		</span>
+		<br><br>This command is used to set a rotational limit about the local z-axis. 
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>jointDescID ID number of the descriptor.
+		<br>value Angle beyond which the limit is active, angle expressed in degrees.
+		<br>spring If greater than zero then the limit is soft, this means the spring will pull the joint back to the given limit.
+		<br>damping If spring is greater than zero then this is the damping of the spring.
+		<br>restitution Controls the amount of bounce when the joint hits a limit, a value of 0 causes the joint to stop dead, a value of 1.0 will cause the joint to bounce back with same velocity at which it hit the limit.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

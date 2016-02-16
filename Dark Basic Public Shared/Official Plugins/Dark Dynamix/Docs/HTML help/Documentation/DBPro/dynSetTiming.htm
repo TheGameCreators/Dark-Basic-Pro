@@ -1,0 +1,32 @@
+<!--
+CORE
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN SET TIMING</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns"></span>
+		DYN SET TIMING
+		<span class="parameters">(float maxTimeStep, int maxIter, int timeStepMethod)
+		</span>
+		<br><br>Sets the timing for the current scene. Simulation is done one time step at a time, typically using a fixed step size ranging between 1/100th of a second and 1/50th of a second. For a real-time simulation, the application must perform several of these time steps to synchronize the physics behavior with the rendered frame rate. Note that longer timesteps lead to poor stability in the simulation, and that values much above the aforementioned range are not recommended.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>maxTimeStep - When using fixed timing this is the maximum timestep the simulation will advance the simulation by. The default is (1/60)/4, as the default timestep is (1/60) the simulation will do 4 substeps for each call to simulate.
+		<br>maxIter - When using fixed timing this is the maximum substeps the simulation will do each time simulate is called. The default value is 4 which directly relates to the default maxTimeStep.
+		<br>timeStepMethod - Set to 0 for fixed timing and 1 for variable timing. When set to 1 the first two parameters have no effect.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

@@ -1,0 +1,633 @@
+<HTML>
+   <HEAD>
+        <title> Ragdolls </title>
+	<link rel="stylesheet" type="text/css" href="ExampleDocs.css"/>
+   </HEAD>
+   
+   <BODY id = "wrap">
+         <center>
+           <img src = "Fulcrum Pro logo.png" width = 35% height = 25%/>
+            <br>      
+            <H1>Ragdolls</H1> 
+        </center>
+
+         <br>
+         <H2> What's a ragdoll? </H2>
+         'Ragdoll' in game development is the term used when the control of your character model is handed
+         over to the physics simulation. This is usually done when your character gets knocked over or dies 
+         and you want it to fall in a more realistic manor than an animation can provide. It will also react
+         to other actors in the simulation meaning that your character will never fall over the same way twice,
+         bringing a new dimension of realism to your game. 
+
+
+         <br>
+         <br>
+         <H2> Example: </H2>
+         <H3> Debug Renderer </H3>
+         After loading our model and initialising the physics we will set up the debug renderer to show us actor shapes, joint positions and joint limits.
+
+         <H5>DBPro</H5>
+            <pre class = "dbpro">
+PHY SET PARAMETER 9, 1
+PHY SET PARAMETER 39, 1
+PHY SET PARAMETER 28, 1
+PHY SET PARAMETER 29, 1
+            </pre>
+ 
+         <H5>DarkGDK</H5>
+            <pre class = "gdk">
+phySetParameter(NX_VISUALIZATION_SCALE, 0.1f);
+phySetParameter(NX_VISUALIZE_COLLISION_SHAPES, 1.0f);
+phySetParameter(NX_VISUALIZE_JOINT_WORLD_AXES, 1.0f);
+phySetParameter(NX_VISUALIZE_JOINT_LIMITS, 1.0f);
+
+            </pre>            
+         <H5>C#    </H5>
+         <H5>VB.Net</H5>
+
+         <br>
+         
+         <H3> Actors </H3>
+         We start by making a physics actor for each limb in the character model, you have the usual
+         choice here of what shape to use for each limb. While box and sphere shapes will give very good results
+         I am going to use a convex shape for each limb, this will not be as efficient as the simpler shapes
+         but it is easy to set up and will give the most realistic physics for your character model.
+         We will iterate through each limb and create a convex mesh actor to represent each one. Note that
+         we need to set the scale multiplier for this particular model otherwise the scale of the actors
+         would be too large for their object/limb counterparts.
+
+         <H5>DBPro</H5>
+<pre class = "dbpro">
+PHY SET SCALE MULTIPLIER 0.1
+limb = 1 
+while limb exist (1, limb)
+  PHY COOK CONVEX MESH 1, limb, limb  
+  PHY MAKE CONVEX MESH 1, limb, limb, 10.0
+  limb = limb + 1
+endwhile
+</pre>
+         <H5>DarkGDK</H5>    
+<pre class = "gdk">
+phySetScaleMultiplier(0.1f);
+int limb = 1;
+while(dbLimbExist(1, limb)){
+  phyCookConvexMesh(1, limb, limb);
+  phyMakeConvexMesh(1, limb, limb, 10.0f);   
+  limb++;
+}
+</pre>        
+         <H5>C#</H5>
+         <H5>VB.Net</H5>
+
+         <br>
+
+         <H3> Joint descriptors </H3>
+            We will now create two joint descriptors for our ragdoll, a joint decriptor
+            is simply a structure that holds the data that determines what properties a joint
+            will have when it's created, this method allows us to use the same descriptor for
+            multiple joints. We fill in all the information apart from what actors will be connected
+            by the joint and the position of the joint, we can provide this information for each joint
+            just before creation. We could create the joints at this point instead of just decriptors,
+            but for this example we will create the joints on the fly, the main advantage of this is that
+            we know the joints will be within their limits, making the ragdoll more stable.
+            
+            <br>
+            <br>
+            The first joint is a spherical joint with limits, we will use this for almost all our joints.
+            The second joint is a fixed joint which we will use to fix the sword to the ninjas hand, you
+            can leave this joint out if you wish him to drop his sword, this goes for any joint, you can
+            have his head fall off or he can be cut in half at the waist etc.
+
+         <H5>DBPro</H5>
+<pre class = "dbpro">
+//SPHERICAL JOINT DESCRIPTOR
+PHY MAKE JOINT DESC 1
+PHY SET JOINT MOTION X 1, 0
+PHY SET JOINT MOTION Y 1, 0
+PHY SET JOINT MOTION Z 1, 0
+PHY SET JOINT SWING1 MOTION 1, 1
+PHY SET JOINT SWING2 MOTION 1, 1
+PHY SET JOINT TWIST MOTION 1, 1
+PHY SET JOINT SWING1 LIMIT 1, 35, 0.0, 0.5, 0.5
+PHY SET JOINT SWING2 LIMIT 1, 35, 0.0, 0.5, 0.5
+PHY SET JOINT TWIST LIMIT HIGH 1, 10, 0.0, 0.5, 0.5
+PHY SET JOINT TWIST LIMIT LOW 1, -10, 0.0, 0.5, 0.5
+PHY SET JOINT GLOBAL AXIS 1, 0, 1, 0
+
+//FIXED JOINT DESCRIPTOR
+PHY MAKE JOINT DESC 2
+PHY SET JOINT MOTION X 2, 0
+PHY SET JOINT MOTION Y 2, 0
+PHY SET JOINT MOTION Z 2, 0
+PHY SET JOINT SWING1 MOTION 2, 0
+PHY SET JOINT SWING2 MOTION 2, 0
+PHY SET JOINT TWIST MOTION 2, 0
+PHY SET JOINT ACTOR A 2, 1, 10
+PHY SET JOINT ACTOR B 2, 1, 11
+</pre>
+         <H5>DarkGDK</H5>
+<pre class = "gdk">
+//SPHERICAL JOINT DESCRIPTOR
+phyMakeJointDesc(1);
+phySetJointMotionX(1, 0);
+phySetJointMotionY(1, 0);
+phySetJointMotionZ(1, 0);
+phySetJointSwing1Motion(1, 1);
+phySetJointSwing2Motion(1, 1);
+phySetJointTwistMotion(1, 1);
+phySetJointSwing1Limit(1, 35, 0.0, 0.5, 0.5);
+phySetJointSwing2Limit(1, 35, 0.0, 0.5, 0.5);
+phySetJointTwistLimitHigh(1, 10, 0.0, 0.5, 0.5);
+phySetJointTwistLimitLow(1, -10, 0.0, 0.5, 0.5);
+phySetJointGlobalAxis(1, 0, 1, 0);
+
+//FIXED JOINT DESCRIPTOR
+phyMakeJointDesc(2);
+phySetJointMotionX(2, 0);
+phySetJointMotionY(2, 0);
+phySetJointMotionZ(2, 0);
+phySetJointSwing1Motion(2, 0);
+phySetJointSwing2Motion(2, 0);
+phySetJointTwistMotion(2, 0);
+phySetJointActorA(2, 1, 10);
+phySetJointActorB(2, 1, 11);
+</pre>           
+         <H5>C#</H5>
+         <H5>VB.Net</H5>
+
+
+         <br>
+         <H3> Joints </H3>
+         We will now create a function to create our joints when needed, we will use the descriptor created above
+         but now we will set the actors and the position of the joint. You will find that with most models
+         the limbs are offset in such a way that retrieving their global positions gives us the natural global position
+         for our joint. If you find this is not the case then its just a matter of refering to the debug renderer until the
+         joint crosshairs intersect the two limb actors at the desired point.
+
+
+         <H5>DBPro</H5>
+
+<pre class = "dbpro">
+FUNCTION makeJoint(id, jointDesc, objectID, limbA, limbB )
+    PHY SET JOINT ACTOR A jointDesc, objectID, limbA
+    PHY SET JOINT ACTOR B jointDesc, objectID, limbB
+    x# = limb position x (objectID, limbA)
+    y# = limb position y (objectID, limbA)
+    z# = limb position z (objectID, limbA)
+    PHY SET JOINT GLOBAL ANCHOR jointDesc, x#, y#, z#
+    PHY MAKE JOINT id, jointDesc  
+ENDFUNCTION
+</pre>
+
+
+         <H5>DarkGDK</H5>
+
+<pre class = "gdk">
+void makeJoint(int objectID, int limbA, int limbB){
+phySetJointActorA(1, objectID, limbA);
+phySetJointActorB(1, objectID, limbB);
+phySetJointGlobalAnchor(1, dbLimbPositionX(objectID, limbA), dbLimbPositionY(objectID, limbA), dbLimbPositionZ(objectID, limbA));
+phyMakeJoint(jointCount, 1);
+jointCount++;
+}
+</pre>
+
+
+         <br>
+         <H3> Ragdoll </H3>
+         We will now create a function that will position and orientate all the actors to the current position
+         and orientation of their limb counterparts, it will then make use of our other function to join all the correct limb
+         actors together. For this we need to know what limb actors should be joined together, this is just a matter of noting
+         the ID numbers of our limbs.
+  
+         <H5>DBPro</H5>
+<pre class = "dbpro">
+FUNCTION setToRagdoll( ninjaID )
+   PHY SET ACTORS TO LIMBS ninjaID 
+
+   jointDescOne = 1
+   jointDescTwo = 2
+   id = 1
+   makeJoint(id, jointDescOne, ninjaID, 1, 2)
+   id = id + 1
+   makeJoint(id, jointDescOne, ninjaID, 3, 2)
+   id = id + 1
+   makeJoint(id, jointDescOne, ninjaID, 4, 3)
+   id = id + 1
+   makeJoint(id, jointDescOne, ninjaID, 5, 2)
+   id = id + 1   
+   makeJoint(id, jointDescOne, ninjaID, 6, 5)
+   id = id + 1   
+   makeJoint(id, jointDescOne, ninjaID, 7, 6)
+   id = id + 1  
+   makeJoint(id, jointDescOne, ninjaID, 8, 2)
+   id = id + 1  
+   makeJoint(id, jointDescOne, ninjaID, 9, 8)
+   id = id + 1  
+   makeJoint(id, jointDescOne, ninjaID, 10, 9)
+   id = id + 1   
+   makeJoint(id, jointDescOne, ninjaID, 12, 1)
+   id = id + 1   
+   makeJoint(id, jointDescOne, ninjaID, 13, 12)
+   id = id + 1  
+   makeJoint(id, jointDescOne, ninjaID, 14, 13)
+   id = id + 1  
+   makeJoint(id, jointDescOne, ninjaID, 15, 1)
+   id = id + 1   
+   makeJoint(id, jointDescOne, ninjaID, 16, 15)
+   id = id + 1
+   makeJoint(id, jointDescOne, ninjaID, 17, 16) 
+   id = id + 1    
+   
+   PHY SET JOINT GLOBAL ANCHOR jointDescTwo, limb position x(ninjaID, 10), limb position y(ninjaID, 10), limb position z(ninjaID, 10)                                
+   PHY MAKE JOINT id, jointDescTwo
+   id = id + 1
+ENDFUNCTION
+</pre>
+
+         <H5>DarkGDK</H5>
+<pre class = "gdk">
+void setToRagdoll(int ninjaID){
+    phySetActorsToLimbs(ninjaID);
+
+    makeJoint(ninjaID, 1, 2);
+    makeJoint(ninjaID, 3, 2);
+    makeJoint(ninjaID, 4, 3);
+    makeJoint(ninjaID, 5, 2);
+    makeJoint(ninjaID, 6, 5);
+    makeJoint(ninjaID, 7, 6);
+    makeJoint(ninjaID, 8, 2);
+    makeJoint(ninjaID, 9, 8);
+    makeJoint(ninjaID, 10, 9);
+    makeJoint(ninjaID, 12, 1);
+    makeJoint(ninjaID, 13, 12);
+    makeJoint(ninjaID, 14, 13);
+    makeJoint(ninjaID, 15, 1);
+    makeJoint(ninjaID, 16, 15);
+    makeJoint(ninjaID, 17, 16);
+
+    phySetJointGlobalAnchor(2, dbLimbPositionX(ninjaID, 10), dbLimbPositionY(ninjaID, 10), dbLimbPositionZ(ninjaID, 10));
+    phyMakeJoint(jointCount, 2);
+    jointCount++;
+}
+</pre>
+
+         <br>
+         <H3> Limb Override </H3>
+         Creating actors from limbs works slightly different from creating actors from objects, when an actor
+         is created for an object the physics simulation takes complete control of that object and updates it
+         automatically. For limbs, you need take the extra step of telling the program to position and orientate
+         the limb using the physics simulation and not the animation. This is because most of the time the animation 
+         will be controlling your character model and you will need to switch between the two on the fly.
+         
+
+         <H5>DBPro</H5>
+<pre class = "dbpro">
+PHY SET LIMBS 1, 1
+</pre>
+         <H5>DarkGDK</H5>  
+<pre class = "gdk">
+phySetLimbs(1, true);
+</pre>          
+         <H5>C#</H5>
+         <H5>VB.Net</H5>
+
+
+      
+         <br>
+         <H3> Complete code </H3>  
+         <H5>DBPro</H5>
+<pre class = "dbpro">
+// Rem Project: Ragdoll
+// Rem Created: Wednesday, December 15, 2010
+// 
+// Rem ***** Main Source File *****
+
+jointDescOne = 1
+jointDescTwo = 2
+jointCount   = 1
+limbOverrideReady = 0
+alive = 1
+
+sync on
+sync rate 60 
+autocam off
+position camera 2, 1, -10
+point camera 0, 1, 0
+
+//make object plane 3, 50, 50
+//rotate object 3, -90, 0, 0
+//color object 3, rgb(100, 255, 100)
+
+load object "H-Ninja-Move.x", 1
+load image "ninja.dds", 1
+texture object 1, 1
+loop object 1, 5
+set object speed 1, 20
+
+Rem *** Physics ***
+PHY START
+PHY MAKE GROUND PLANE
+PHY SET GRAVITY 0, -2.0, 0
+PHY SET PARAMETER 9, 1
+PHY SET PARAMETER 39, 1
+PHY SET PARAMETER 28, 1
+
+//Make convex shape actor for each limb
+PHY SET SCALE MULTIPLIER 0.1
+limb = 1 
+while limb exist (1, limb)
+  PHY COOK CONVEX MESH 1, limb, limb  //MeshID shares limb number in this case 
+  PHY MAKE CONVEX MESH 1, limb, limb, 10.0
+  limb = limb + 1
+endwhile
+
+//SPHERICAL JOINT DESCRIPTOR
+PHY MAKE JOINT DESC 1
+PHY SET JOINT MOTION X 1, 0
+PHY SET JOINT MOTION Y 1, 0
+PHY SET JOINT MOTION Z 1, 0
+PHY SET JOINT SWING1 MOTION 1, 1
+PHY SET JOINT SWING2 MOTION 1, 1
+PHY SET JOINT TWIST MOTION 1, 1
+PHY SET JOINT SWING1 LIMIT 1, 35, 0.0, 0.5, 0.5
+PHY SET JOINT SWING2 LIMIT 1, 35, 0.0, 0.5, 0.5
+PHY SET JOINT TWIST LIMIT HIGH 1, 10, 0.0, 0.5, 0.5
+PHY SET JOINT TWIST LIMIT LOW 1, -10, 0.0, 0.5, 0.5
+PHY SET JOINT GLOBAL AXIS 1, 0, 1, 0
+
+// FIXED JOINT DESCRIPTOR
+//R-HAND - SWORD
+PHY MAKE JOINT DESC 2
+PHY SET JOINT MOTION X 2, 0
+PHY SET JOINT MOTION Y 2, 0
+PHY SET JOINT MOTION Z 2, 0
+PHY SET JOINT SWING1 MOTION 2, 0
+PHY SET JOINT SWING2 MOTION 2, 0
+PHY SET JOINT TWIST MOTION 2, 0
+PHY SET JOINT ACTOR A 2, 1, 10
+PHY SET JOINT ACTOR B 2, 1, 11
+ 
+PHY SIMULATE
+ do
+  PHY FETCH RESULTS
+  
+  //override limbs when actors are in place
+  if (limbOverrideReady = 1)
+     PHY SET LIMBS 1, 1
+     limbOverrideReady = 0 //execute code block once only
+  endif
+  
+  if (alive = 1)
+     if spacekey() = 1
+        setToRagdoll(1)
+        limbOverrideReady = 1
+        alive = 0
+     endif
+     move object 1, -0.02   
+  endif
+ 
+  PHY DEBUG RENDER
+  PHY SIMULATE
+  PHY UPDATE
+  
+  move camera 0, -0.01
+  sync
+ loop
+PHY STOP
+END
+
+FUNCTION makeJoint(id, jointDesc, objectID, limbA, limbB )
+    PHY SET JOINT ACTOR A jointDesc, objectID, limbA
+    PHY SET JOINT ACTOR B jointDesc, objectID, limbB
+    x# = limb position x (objectID, limbA)
+    y# = limb position y (objectID, limbA)
+    z# = limb position z (objectID, limbA)
+    PHY SET JOINT GLOBAL ANCHOR jointDesc, x#, y#, z#
+    PHY MAKE JOINT id, jointDesc  
+ENDFUNCTION
+
+
+FUNCTION setToRagdoll( ninjaID )
+   PHY SET ACTORS TO LIMBS ninjaID 
+   //Physics simulates one frame behind so we need to set
+   //limbs to physics control when limbs are in correct place
+   //PHY SET LIMBS(ninjaID, true)  //Can do this here but better 
+                                   //with a frame delay when limb
+                                   //actors set correctly
+   jointDescOne = 1
+   jointDescTwo = 2
+   id = 1
+   makeJoint(id, jointDescOne, ninjaID, 1, 2)
+   id = id + 1
+   makeJoint(id, jointDescOne, ninjaID, 3, 2)
+   id = id + 1
+   makeJoint(id, jointDescOne, ninjaID, 4, 3)
+   id = id + 1
+   makeJoint(id, jointDescOne, ninjaID, 5, 2)
+   id = id + 1   
+   makeJoint(id, jointDescOne, ninjaID, 6, 5)
+   id = id + 1   
+   makeJoint(id, jointDescOne, ninjaID, 7, 6)
+   id = id + 1  
+   makeJoint(id, jointDescOne, ninjaID, 8, 2)
+   id = id + 1  
+   makeJoint(id, jointDescOne, ninjaID, 9, 8)
+   id = id + 1  
+   makeJoint(id, jointDescOne, ninjaID, 10, 9)
+   id = id + 1   
+   makeJoint(id, jointDescOne, ninjaID, 12, 1)
+   id = id + 1   
+   makeJoint(id, jointDescOne, ninjaID, 13, 12)
+   id = id + 1  
+   makeJoint(id, jointDescOne, ninjaID, 14, 13)
+   id = id + 1  
+   makeJoint(id, jointDescOne, ninjaID, 15, 1)
+   id = id + 1   
+   makeJoint(id, jointDescOne, ninjaID, 16, 15)
+   id = id + 1
+   makeJoint(id, jointDescOne, ninjaID, 17, 16) 
+   id = id + 1    
+   
+   //Comment out this joint to release sword when dead
+   PHY SET JOINT GLOBAL ANCHOR jointDescTwo, limb position x(ninjaID, 10), limb position y(ninjaID, 10), limb position z(ninjaID, 10)                                
+   PHY MAKE JOINT id, jointDescTwo
+   id = id + 1
+ENDFUNCTION
+</pre>
+  
+<br>
+<br>
+         <H5>DarkGDK</H5>
+<pre class = "gdk">
+#include "DarkGDK.h"
+#include "DarkPhy2.h"
+
+int jointCount = 1;
+
+void makeJoint(int objectID, int limbA, int limbB){
+	phySetJointActorA(1, objectID, limbA);
+	phySetJointActorB(1, objectID, limbB);
+	phySetJointGlobalAnchor(1, dbLimbPositionX(objectID, limbA), dbLimbPositionY(objectID, limbA), dbLimbPositionZ(objectID, limbA));
+	phyMakeJoint(jointCount, 1);
+	jointCount++;
+}
+
+void setToRagdoll(int ninjaID){
+	phySetActorsToLimbs(ninjaID);
+	//Physics simulates one frame behind so we need to set
+	//limbs to physics control when limbs are in correct place
+	//phySetLimbs(ninjaID, true);
+
+    makeJoint(ninjaID, 1, 2);
+	makeJoint(ninjaID, 3, 2);
+	makeJoint(ninjaID, 4, 3);
+    makeJoint(ninjaID, 5, 2);
+	makeJoint(ninjaID, 6, 5);
+	makeJoint(ninjaID, 7, 6);
+    makeJoint(ninjaID, 8, 2);
+	makeJoint(ninjaID, 9, 8);
+	makeJoint(ninjaID, 10, 9);
+    makeJoint(ninjaID, 12, 1);
+	makeJoint(ninjaID, 13, 12);
+	makeJoint(ninjaID, 14, 13);
+    makeJoint(ninjaID, 15, 1);
+	makeJoint(ninjaID, 16, 15);
+	makeJoint(ninjaID, 17, 16);
+
+	//== Hand/Sword for ninja1, ninja2 drops sword.
+	if(ninjaID == 1){
+	   phySetJointGlobalAnchor(2, dbLimbPositionX(ninjaID, 10), dbLimbPositionY(ninjaID, 10), dbLimbPositionZ(ninjaID, 10));
+       phyMakeJoint(jointCount, 2);
+	   jointCount++;
+	}
+}
+
+void DarkGDK ( void )
+{
+	bool  alive = true;
+	bool  limbOverrideReady = false;
+	float camSpeed = 1.0;
+
+	phyStart();
+	phyMakeGroundPlane();
+	phySetGravity(0, -2.0, 0);
+	phySetParameter(NX_VISUALIZATION_SCALE, 0.1f);
+	phySetParameter(NX_VISUALIZE_COLLISION_SHAPES, 1.0f);
+	phySetParameter(NX_VISUALIZE_JOINT_WORLD_AXES, 1.0f);
+	phySetParameter(NX_VISUALIZE_JOINT_LIMITS, 1.0f);
+ 
+	dbSyncOn   ( );
+	dbSyncRate ( 60 );
+	dbAutoCamOff();
+	dbPositionCamera(0, 3, -10);
+
+	dbMakeObjectPlane(3, 50, 50);
+	dbRotateObject(3, -90, 0, 0);
+	dbPositionObject(3, 0, -0.1, 0);
+	dbColorObject(3, dbRGB(100, 255, 100));
+
+	dbLoadObject("..//..//..//..//..//Media//3D//Ninja//H-Ninja-Move.x", 1);
+	dbLoopObject(1, 5);
+	dbSetObjectSpeed(1, 20);
+
+	//Make convex shaped actor for each limb 
+	phySetScaleMultiplier(0.1f);
+	int limb = 1;
+	while(dbLimbExist(1, limb)){
+        phyCookConvexMesh(1, limb, limb);
+	    phyMakeConvexMesh(1, limb, limb, 10.0f);   
+        limb++;
+	}
+
+	dbCloneObject(2, 1);
+	dbPositionObject(2, 2, 1, 0);
+	dbRotateObject(2, 0, 20, 0);
+	dbLoopObject(2, 5);
+	dbSetObjectSpeed(2, 10);
+	for(int i = 1; i < dbLimbCount(1); i++){
+	    phyMakeConvexMesh(2, i, i, 10.0f);
+	}
+
+	//== SPHERICAL JOINT DESCRIPTOR(1)
+	phyMakeJointDesc(1);
+	phySetJointMotionX(1, 0);
+	phySetJointMotionY(1, 0);
+	phySetJointMotionZ(1, 0);
+	phySetJointSwing1Motion(1, 1);
+	phySetJointSwing2Motion(1, 1);
+	phySetJointTwistMotion(1, 1);
+	phySetJointSwing1Limit(1, 35, 0.0, 0.5, 0.5);
+	phySetJointSwing2Limit(1, 35, 0.0, 0.5, 0.5);
+	phySetJointTwistLimitHigh(1, 10, 0.0, 0.5, 0.5);
+	phySetJointTwistLimitLow(1, -10, 0.0, 0.5, 0.5);
+	phySetJointGlobalAxis(1, 0, 1, 0);
+
+	//== FIXED JOINT DESCRIPTOR(2)
+    //R-hand - Sword
+	phyMakeJointDesc(2);
+	phySetJointMotionX(2, 0);
+	phySetJointMotionY(2, 0);
+	phySetJointMotionZ(2, 0);
+	phySetJointSwing1Motion(2, 0);
+	phySetJointSwing2Motion(2, 0);
+	phySetJointTwistMotion(2, 0);
+	phySetJointActorA(2, 1, 10);
+	phySetJointActorB(2, 1, 11);
+
+	phySimulate();
+	while ( LoopGDK ( ) )
+	{
+		phyFetchResults();
+
+		if(limbOverrideReady){
+	       phySetLimbs(1, true);
+		   phySetLimbs(2, true);
+		   limbOverrideReady = false;  //just once
+		}
+		if(alive){
+			if(dbSpaceKey()){
+			   setToRagdoll(1);
+			   setToRagdoll(2);
+			   alive = false;
+			   limbOverrideReady = true;
+			}
+            dbMoveObject(1, -0.01);
+            dbMoveObject(2, -0.005);
+            dbPointCamera(dbObjectPositionX(1), dbObjectPositionY(1), dbObjectPositionZ(1));
+		}
+	    phyUpdate();
+		phyDebugRender();
+		phySimulate();
+
+		if(dbLeftKey())
+			dbMoveCameraLeft(0, camSpeed);
+		if(dbRightKey())
+			dbMoveCameraRight(0, camSpeed);
+		if(dbUpKey ())
+            dbMoveCamera(camSpeed);
+		if(dbDownKey ())
+            dbMoveCamera(-camSpeed); 
+		if(dbReturnKey())
+			dbMoveCameraUp (0, camSpeed);
+		if(dbControlKey())
+			dbMoveCameraDown(0, camSpeed);
+		dbSync ( );
+	}
+	phyStop();
+	return;
+}
+
+
+
+</pre>
+
+
+
+ 
+                  
+
+
+    </BODY>
+
+</HTML>

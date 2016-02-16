@@ -1,0 +1,11 @@
+Setup
+
+
+
+1. Include PhysX header folders(Foundation, Physics etc) in VC++ directories
+
+2. Add library files in VC++ directories 
+
+3. Have to add the following to code: #pragma comment(lib,"PhysXLoader.lib")   etc...
+
+4. Project->Project Properties->Configuration Properties->C/C++->Preprocessor  Preprocessor definitions: WIN32

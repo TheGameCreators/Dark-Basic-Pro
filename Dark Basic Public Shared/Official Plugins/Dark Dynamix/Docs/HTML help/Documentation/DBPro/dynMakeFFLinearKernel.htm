@@ -1,0 +1,34 @@
+<!--
+CONSTRUCTION
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN MAKE FF LINEAR KERNEL</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">bool</span>
+		DYN MAKE FF LINEAR KERNEL
+		<span class="parameters">(int ID, int constantVector3ID, int falloffLinearVector3ID, int falloffQuadraticVector3ID, int noiseVector3ID)
+		</span>
+		<br><br>This command will create a linear kernel for use with a force field, this structure holds data which will determine how, and by how much, the force field will affect objects at different positions in the force field. 
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>ID - ID number you wish to assign to this kernel.
+		<br>constantVector3ID - The constant part of force field function. For a force field with cartesian coordinate space, this would affect the CORE direction objects would move in the force field.
+		<br>falloffLinearVector3ID - Affects how strong the force field is relative to its centre with linear falloff. 
+		<br>falloffQuadraticVector3ID - Affects how strong the force field is relative to its centre with quadratic falloff. 
+		<br>noiseVector3ID - Adds the given amount of randomness to how objects are affected along each axis. 
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

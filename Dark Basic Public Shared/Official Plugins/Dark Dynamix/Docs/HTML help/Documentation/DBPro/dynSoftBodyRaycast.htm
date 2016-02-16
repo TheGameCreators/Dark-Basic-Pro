@@ -1,0 +1,32 @@
+<!--
+SOFT BODY
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN SOFT BODY RAYCAST</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">bool</span>
+		DYN SOFT BODY RAYCAST
+		<span class="parameters">(int softBodyID, int origVec3ID, int dirVec3ID)
+		</span>
+		<br><br>Casts a ray against the given soft body. You can retrieve the hit position and the closest vertexID using the other cloth raycast commands, be sure to only do so if this command returns true otherwise the data will be from the last ray that hit. 
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>softBodyID - ID number of the object the soft body represents in the simulation.
+		<br>origVector3ID - Origin of the ray in world space. 
+		<br>dirVector3ID - Direction the ray should travel.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if ray hits, FALSE otherwise.
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

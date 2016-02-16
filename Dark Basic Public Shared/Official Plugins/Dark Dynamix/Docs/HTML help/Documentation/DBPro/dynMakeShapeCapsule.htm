@@ -1,0 +1,31 @@
+<!--
+CONSTRUCTION
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN MAKE SHAPE CAPSULE</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">bool</span>
+		DYN MAKE SHAPE CAPSULE
+		<span class="parameters">(int objectID, float height, float radius, float density)
+		</span>
+		<br><br>Creates a capsule shape using the object given. The shape is added to an internal shape list awaiting the creation of a compound actor. Unlike other 'make' commands this does not sync the object with the shape, the object is free to be deleted after the shape is created, an object is only assigned to these shapes when the compound actor is created. 
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>objectID - ID number of the object the shape will be created from.
+		<br>density - Density value for the shape.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if successful, FALSE otherwise.
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

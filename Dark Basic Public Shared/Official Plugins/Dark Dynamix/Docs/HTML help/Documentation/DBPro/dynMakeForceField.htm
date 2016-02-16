@@ -1,0 +1,32 @@
+<!--
+CONSTRUCTION
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN MAKE FORCE FIELD</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">bool</span>
+		DYN MAKE FORCE FIELD
+		<span class="parameters">(int ID, int kernelID, int coordinates, int actorID)
+		</span>
+		<br><br>This command will create a force field. 
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>ID - ID number you wish to assign to this force field.
+		<br>coordinates - Type of space. NX_FFC_CARTESIAN: The X, Y, and Z axis are equivalent to the force field's own local coordinate system. NX_FFC_SPHERICAL: The X axis is directed outwards from the center of the sphere; the Y and Z axes are the tangents of the spherical surface. NX_FFC_CYLINDRICAL: The X axis is directed outwards from the cylinder axis. The Y axis is the cylinder axis, and the Z axis is the cylindrical surface tangent (directed to make XYZ a right-handed system). The z component of the p vector in the function is always 0, and the target position in this direction is ignored. NX_FFC_TOROIDAL: The X axis is directed outwards from the closest point on the torus' equator; the Y axis is the tangent of the equator at its closest point (directed in the clockwise direction as seen from the direction of the torus' axis), and the Z axis is normal to both forming a right-handed system XYZ.
+		<br>actorID - ID number of the object/actor to attach the force field to, set to 0 if not needed. 
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

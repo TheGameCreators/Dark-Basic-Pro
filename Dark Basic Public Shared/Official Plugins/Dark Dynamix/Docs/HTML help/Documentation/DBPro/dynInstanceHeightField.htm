@@ -1,0 +1,62 @@
+<!--
+CONSTRUCTION
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN INSTANCE HEIGHT FIELD</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns">bool</span>
+		DYN INSTANCE HEIGHT FIELD
+		<span class="parameters">(int ID, int heightFieldID, float heightScale, float rowScale, float columnScale)
+		</span>
+		<br><br>After creating a height field descriptor, filling in the data and then creating a height field you can finally create your height field actor using this command.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>ID - ID number of the object that the height field will represent. As with most static actors there is a very loose connection between actor and object, they share an ID number and not much else, you do need an object to exist though as it uses its position upon creation.
+		<br>heightFieldID - ID number of the height field you wish to instance.
+		<br>heightScale - Scale value for the height.
+		<br>rowScale - Scale value for the rows.
+		<br>columnScale - Scale value for the columns.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if succeeded, FALSE otherwise.
+		<br>
+
+<br><br>
+<center>
+-------------------------------------------------------------------------------
+</center>
+
+		<span class="returns">bool</span>
+		DYN INSTANCE HEIGHT FIELD
+		<span class="parameters">(int ID, int heightFieldID, float heightScale, float rowScale, float columnScale, int materialIndexHighBits, int holeMaterial)
+		</span>
+		<br><br>After creating a height field descriptor, filling in the data and then creating a height field you can finally create your height field actor using this command. This overload allows to to set a materialIndexhighBits value and a hole material.
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>ID - ID number of the object that the height field will represent. As with most static actors there is a very loose connection between actor and object, they share an ID number and not much else, you do need an object to exist though as it uses its position upon creation.
+		<br>heightFieldID - ID number of the height field you wish to instance.
+		<br>heightScale - Scale value for the height.
+		<br>rowScale - Scale value for the rows.
+		<br>columnScale - Scale value for the columns.
+		<br>materialIndexHighBits - The 9 high bits of this number are used to complete the material indices, the low 7 bits must be 0.
+		<br>holeMaterial - The material index which designated holes in the height field.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>TRUE if succeeded, FALSE otherwise.
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>

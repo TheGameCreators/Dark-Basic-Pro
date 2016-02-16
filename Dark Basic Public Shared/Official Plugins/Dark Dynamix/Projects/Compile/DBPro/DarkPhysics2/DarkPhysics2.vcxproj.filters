@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Fulcrum Pro">
+      <UniqueIdentifier>{fcde8354-b8ec-4552-8c24-4a13b77c4f86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fulcrum Pro\Core Physics">
+      <UniqueIdentifier>{076203d3-cc08-43f6-8cd2-c3bd43e3e1c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fulcrum Pro\Dark Basic Physics">
+      <UniqueIdentifier>{58bbcd32-c5e7-45c8-9040-5958e823d852}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serialize">
+      <UniqueIdentifier>{7e04569e-f522-4d9e-b1e0-056eaa33c661}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\D3DUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\DarkPhy2(dbpro).h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\DarkPhy2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\DBCallBacks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\DBOData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\DBUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\Physics Core\Include\Defines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\Globals.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\Physics Core\Include\MathUtil.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\Message.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\Physics Core\Include\Physics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\Physics Dark Basic\Include\resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\Physics Core\Include\UserAllocator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_Asc2Bin.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_ColladaExport.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_ColladaImport.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_cooking.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_customcopy.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_File.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_Geometry.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_GraphicsMesh.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_helper.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_hull.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_PhysicsExport.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_PhysicsInstantiator.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_ScaledCopy.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_schema.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_SchemaStream.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_SchemaTypes.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_Streaming.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_string.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_tinystr.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Project files\NxuStream2\NXU_tinyxml.h">
+      <Filter>Serialize</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\..\..\..\Project files\Physics Dark Basic\Include\Physics.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\MathUtil.cpp">
+      <Filter>Fulcrum Pro\Core Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\MeshHash.cpp">
+      <Filter>Fulcrum Pro\Core Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\NxMouseDrag.cpp">
+      <Filter>Fulcrum Pro\Core Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\Physics.cpp">
+      <Filter>Fulcrum Pro\Core Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\RigidBodyConstruction.cpp">
+      <Filter>Fulcrum Pro\Core Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\SoftMeshObj.cpp">
+      <Filter>Fulcrum Pro\Core Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\Stream.cpp">
+      <Filter>Fulcrum Pro\Core Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\TetraGraphics.cpp">
+      <Filter>Fulcrum Pro\Core Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\Physics Core\Source\UserAllocator.cpp">
+      <Filter>Fulcrum Pro\Core Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\Physics Dark Basic\Source\ActorSync.cpp">
+      <Filter>Fulcrum Pro\Dark Basic Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\Physics Dark Basic\Source\D3DUtil.cpp">
+      <Filter>Fulcrum Pro\Dark Basic Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\Physics Dark Basic\Source\DarkPhy2(dbPro).cpp">
+      <Filter>Fulcrum Pro\Dark Basic Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\Physics Dark Basic\Source\DarkPhy2.cpp">
+      <Filter>Fulcrum Pro\Dark Basic Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\Physics Dark Basic\Source\DBCallBacks.cpp">
+      <Filter>Fulcrum Pro\Dark Basic Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\Physics Dark Basic\Source\DBPhyStruct.cpp">
+      <Filter>Fulcrum Pro\Dark Basic Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\Physics Dark Basic\Source\DBSoftBody.cpp">
+      <Filter>Fulcrum Pro\Dark Basic Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\Physics Dark Basic\Source\Error.cpp">
+      <Filter>Fulcrum Pro\Dark Basic Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_Asc2Bin.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_ColladaExport.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_ColladaImport.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_cooking.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_customcopy.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_File.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_Geometry.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_GraphicsMesh.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_helper.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_hull.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_PhysicsExport.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_PhysicsInstantiator.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_ScaledCopy.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_schema.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_SchemaStream.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_Streaming.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_string.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_tinystr.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_tinyxml.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_tinyxmlerror.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Project files\NxuStream2\NXU_tinyxmlparser.cpp">
+      <Filter>Serialize</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\Project files\NxuStream2\TheNxuStreamFAQ.htm">
+      <Filter>Serialize</Filter>
+    </None>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,33 @@
+<!--
+FLUID/PARTICLES
+-->
+<HTML> 
+	 <HEAD> 
+		 <TITLE>DYN EMITTER SET FRAME SHAPE</TITLE>
+		<link rel="stylesheet" type="text/css" href="style1.css"/>
+	</HEAD>
+
+	<BODY id = "wrap">
+		<span class="returns"></span>
+		DYN EMITTER SET FRAME SHAPE
+		<span class="parameters">(int fluidID, int emitterIndex, int objectID, int shapeIndex)
+		</span>
+		<br><br>This command will glue the emitter to a given shape of a given actor. The world position of the emitter will become the local position relative to the shape it has been attached to. 
+		<br><br>
+		<span class="parameters">Parameters:
+		</span>
+		<br>fluidID - ID number of the fluid the given emitter belongs to.
+		<br>emitterIndex - Index of the emitter, the index was returned when the emitter was created, if there is only one emitter for the given fluid then the index will be 0.
+		<br>objectID - ID number of the object whose actor you wish to glue the emitter to.
+		<br>shapeIndex - Index of the shape inside the given actor, default shape is 0.
+		<br>
+		<br>
+		<br>
+		<span class="returns">Returns:
+		</span>
+		<br>None
+		<br>
+	</BODY>
+</HTML>
+		<br>
+		<br>
