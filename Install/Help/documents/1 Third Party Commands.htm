@@ -27,7 +27,7 @@
 </CENTER><br><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td>
 <BR>
 This document describes how to create your own commands using Visual C++. In order that every chance be given to advance your programming skills into the world of C++, these steps are intended for the most novice of Visual C++ users.<BR>
-<BR>
+<p style="color:rgb(191,0,0);">In the "Help\documents\Files" folder you will find the "Third Party Commands" directory containing three C++ projects describing how to implement third party commands.</p>
 <FONT SIZE=3>Technical Brief<BR>
 </FONT><BR>
 You can add your own commands to DBPro by creating a DLL and placing it in a special folder. The DLL contains regular C++ functions and a string table. The string table describes each command and the function it is associated with. DBPro can automatically scan DLLs for this information and add the commands to the existing language expanding your possibilities. The goal here is to create two commands. PRINT TEXT will create a message box with a string of your choice. GET VALUE will return a value to the DBPro program.<BR>
