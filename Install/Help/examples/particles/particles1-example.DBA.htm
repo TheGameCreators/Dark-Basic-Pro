@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\..\main.htm"><img src="..\..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\commands.htm"><img src="..\..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\..\examples.htm"><img src="..\..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\documents.htm"><img src="..\..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\..\index.htm"><img src="..\..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR><BR><pre><FONT FACE=Courier SIZE=2>rem Particles Showcase
+
+rem Standard Setup Code for all examples
+sync on : sync rate 0 : color backdrop rgb(0,128,0)
+set text font "arial" : set text size 16
+set text to bold : set text transparent
+backdrop off
+
+rem Load image
+ImageNumber=1 : load image "fire.bmp",ImageNumber
+ImageNumberB=2 : load image "sky\spacesphere.bmp",ImageNumberB
+
+rem Make objects
+load object "sky\ss.x",1
+scale object 1,150,150,150
+set object 1,1,1,1,1,0,0,0
+set object texture 1,2,1
+set camera range 1,10000
+position object 1, 0, 3, 0
+yrotate object 1,180
+make object box 2,100,20,50
+position object 2,0,-25,50
+texture object 2,ImageNumberB
+ghost object on 2,2
+
+rem Make particles
+ParticleNumber=1
+make particles ParticleNumber, ImageNumber, 50, 20.0
+position particles ParticleNumber, 0, -28, 0
+color particles ParticleNumber, 255, 128, 0
+set particle emissions ParticleNumber, 10
+set particle speed ParticleNumber, 0.01
+set particle gravity ParticleNumber, 2
+
+rem Setup camera
+position camera 0,3,0
+point camera 0,3,400
+
+rem Main loop
+desc$="Sparkler Effect (Use Mouse Buttons)"
+do
+
+rem Spark Drawing
+changetoparticlescaling#=10.0
+position particle emissions ParticleNumber, (mousex()-320)*changetoparticlescaling#/40.0, (360-mousey())*changetoparticlescaling#/40.0, 10*changetoparticlescaling#
+if mouseclick()>1 then color particles ParticleNumber, rnd(255), rnd(255), rnd(255)
+if mouseclick()=1 or mouseclick()=3
+ set particle emissions ParticleNumber, 10
+ set particle velocity ParticleNumber, 4
+else
+ set particle emissions ParticleNumber, 1
+ set particle velocity ParticleNumber, 1
+endif
+
+rem Show Framerate
+text 20,screen height()-40,desc$
+fps$="DBPro Fps: "+str$(screen fps())
+text screen width()-20-text width(fps$),screen height()-40,fps$
+
+rem Update screen
+sync
+
+rem End loop
+loop</pre></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

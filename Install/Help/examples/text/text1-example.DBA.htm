@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\..\main.htm"><img src="..\..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\commands.htm"><img src="..\..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\..\examples.htm"><img src="..\..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\documents.htm"><img src="..\..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\..\index.htm"><img src="..\..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR><BR><pre><FONT FACE=Courier SIZE=2>rem Text Showcase
+
+rem Declaration for function
+global sinwave#
+
+rem Standard Setup Code for all examples
+sync on : sync rate 0
+
+rem Setup Font
+set text font "book" : set text size 20
+set text to bold : set text transparent
+
+rem Scroll text
+string$=space$(36)
+string$=string$+"Dark Basic Professional gives you the power of past ages as well as the bounty of future technologies..."
+string$=string$+space$(10)
+
+rem Main loop
+desc$="Retro Text Scroller"
+do
+
+rem Nice backdrop
+prettybackdrop()
+
+rem Scrolling text
+spacer=spacer+1
+if spacer>20
+ spacer=0 : scx=scx+1
+ if scx>len(string$) then scx=0
+endif
+sinwave#=wrapvalue(sinwave#+1)
+for x=0 to 32
+ if 1+x+scx<=len(string$) then a$=mid$(string$,1+x+scx) else a$=mid$(string$,(1+x+scx)-len(string$))
+ text (x*20)-spacer,220-(cos(sinwave#+((x+scx)*10))*50),upper$(a$)
+next x
+
+rem Show Framerate
+text 20,screen height()-40,desc$
+fps$="DBPro Fps: "+str$(screen fps())
+text screen width()-20-text width(fps$),screen height()-40,fps$
+
+rem Update screen
+sync
+
+rem End loop
+loop
+
+function prettybackdrop()
+ yy=0
+ red=rgb(128+(cos(sinwave#)*127),0,0)
+ green=rgb(0,128-(sin(sinwave#)*127),0)
+ for y=0 to 49
+  col=1-col
+  ys=10
+  if col=0 then box 0,yy,640,yy+ys,green,red,green,red
+  if col=1 then box 0,yy,640,yy+ys,red,green,red,green
+  yy=yy+ys
+ next y
+endfunction
+</pre></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

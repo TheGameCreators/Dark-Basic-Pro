@@ -1,0 +1,41 @@
+rem World3D Showcase
+
+rem Standard Setup Code
+sync on : sync rate 0 : color backdrop rgb(0,0,64) : backdrop on
+set text font "arial" : set text size 16
+set text to bold : set text transparent
+
+rem Loading prompt
+sync : center text screen width()/2,screen height()/2,"LOADING" : sync
+
+rem Set camera
+set camera range 0.1,5000
+position camera 2,3,2
+rotate camera 0,45,0
+
+rem Load BSP world
+load bsp "ikzdm1.pk3","ikzdm1.bsp"
+set bsp camera collision 1,0,0.75,0
+set bsp collision threshhold 1,0.001
+
+rem Main loop
+desc$="BSP in One Command"
+do
+
+rem Control camera automatically
+control camera using arrowkeys 0,0.1,1
+
+rem Apply simple gravity to camera
+position camera camera position x(),camera position y()-0.1,camera position z()
+
+rem Show Framerate
+text 20,screen height()-40,desc$
+fps$="DBPro Fps: "+str$(screen fps())
+text screen width()-20-text width(fps$),screen height()-40,fps$
+
+rem Update screen
+sync
+
+rem End loop
+loop
+

@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\..\main.htm"><img src="..\..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\commands.htm"><img src="..\..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\..\examples.htm"><img src="..\..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\documents.htm"><img src="..\..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\..\index.htm"><img src="..\..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR><BR><pre><FONT FACE=Courier SIZE=2>rem Music Showcase
+
+rem Standard Setup Code for all examples
+sync on : sync rate 240 : backdrop off
+set text font "arial" : set text size 16
+set text to bold : set text transparent
+
+rem Loading prompt
+sync : center text screen width()/2,screen height()/2,"LOADING" : sync
+
+rem Load room
+load object "world\room.x",1
+xrotate object 1,270
+fix object pivot 1
+rotate object 1,0,0,0
+set object specular 1,0
+
+rem Load for selection
+for t=2 to 5
+ if t=2 then load object "models\harp\harp.x",t : tx=-100 : ta=135
+ if t=3 then load object "models\trumpet\trumpet.x",t : tx=-200 : ta=90
+ if t=4 then load object "models\piano\piano2.x",t : tx=100 : ta=315
+ if t=5 then load object "models\mandolin\mandolin.x",t : tx=-150 : ta=90
+ position object t,tx,0,40-(((t-3)*80))
+ rotate object t,270,ta,0
+ scale object t,25,25,25
+ fix object pivot t
+ rotate object t,0,180,0
+ set object specular t,0
+next t
+
+rem Load music
+load music "music\space.mp3",1 : loop music 1
+load music "music\misty.mp3",2
+load music "music\fun.mp3",3
+load music "music\hero.mp3",4
+
+rem Setup camera and light
+set point light 0,0,0,0
+position camera -450,100,10
+yrotate camera 90
+
+rem Select first globe (via Xangle trigger)
+xrotate object 2,1
+
+rem Main loop
+desc$="Music Room (Select An Instrument)"
+do
+
+rem Control mouse selector
+if mouseclick()=1
+ sel=0
+ if mousex()>70 and mousex()<600
+   sel=1+((mousex()-70)/(530/4))
+   if sel>4 then sel=4
+ endif
+ if sel>0
+  for t=2 to 5
+   if t<>(1+sel) and object angle x(t)=1
+    xrotate object t,0
+   if t=2 then stop music 1
+   if t=3 then stop music 2
+   if t=4 then stop music 3
+   if t=5 then stop music 4
+   endif
+  next t
+  if object angle x(1+sel)=0
+   xrotate object 1+sel,1
+   if sel=1 then loop music 1
+   if sel=2 then loop music 2
+   if sel=3 then loop music 3
+   if sel=4 then loop music 4
+  endif
+ endif
+endif
+
+rem Control selected sphere
+for t=2 to 5
+ a#=wrapvalue(object angle y(t)+1)
+ if object angle x(t)=0 and a#=1.0 then a#=0
+ yrotate object t,a#
+ a#=object angle y(t)
+ position object t,object position x(t),50-(cos(a#)*50),40-(((t-3)*80))
+ if object angle x(t)=1 then lightz#=object position z(t) : lighty#=object position y(t)
+next t
+
+rem Control light
+position light 0,-250,lighty#+50,lightz#
+
+rem Show Framerate
+text 20,screen height()-40,desc$
+fps$="DBPro Fps: "+str$(screen fps())
+text screen width()-20-text width(fps$),screen height()-40,fps$
+
+rem Update screen
+sync
+
+rem End loop
+loop
+</pre></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

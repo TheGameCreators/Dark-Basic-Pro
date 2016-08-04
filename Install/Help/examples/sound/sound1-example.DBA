@@ -1,0 +1,87 @@
+rem Sound Showcase
+
+rem Standard Setup Code for all examples
+sync on : sync rate 240 : backdrop off
+set text font "arial" : set text size 16
+set text to bold : set text transparent
+
+rem Loading prompt
+sync : center text screen width()/2,screen height()/2,"LOADING" : sync
+
+rem Load room
+load object "world\room.x",1
+xrotate object 1,270
+fix object pivot 1
+rotate object 1,0,180,0
+set object specular 1,0
+
+rem Load selectors
+for t=2 to 5
+ load object "models\notes\notes.x",t
+ position object t,-100,32,40-(((t-3)*80))
+ rotate object t,270,90,0
+ scale object t,50,50,50
+ fix object pivot t
+ rotate object t,0,0,0
+ set object specular t,0
+next t
+
+rem Load sound
+load sound "sound\ghost.wav",1
+load sound "sound\hit.wav",2
+load sound "sound\smash.wav",3
+load sound "sound\tube.wav",4
+
+rem Setup camera and light
+set point light 0,0,0,0
+position camera -450,100,10
+set camera fov 45
+yrotate camera 90
+
+rem Select first note (via Xangle trigger)
+yrotate object 2,1
+
+rem Main loop
+desc$="Sound Room (Select A Note)"
+do
+
+rem Control mouse selector
+if mouseclick()=1
+ sel=0
+ if mousex()>70 and mousex()<600
+   sel=1+((mousex()-70)/(530/4))
+   if sel>4 then sel=4
+ endif
+ if sel>0
+  if object angle y(1+sel)=0
+   yrotate object 1+sel,1
+   if sel=1 then play sound 1
+   if sel=2 then play sound 2
+   if sel=3 then play sound 3
+   if sel=4 then play sound 4
+  endif
+ endif
+endif
+
+rem Control selected
+for pace=0 to 9
+ for t=2 to 5
+  if object angle y(t)>0 then rotate object t,0,wrapvalue(object angle y(t)+1),0
+  if object angle y(t)>0 then lightz#=object position z(t) : lighty#=object position y(t)
+ next t
+next pace
+
+rem Control light
+position light 0,-200,lighty#,lightz#
+
+rem Show Framerate
+text 20,screen height()-40,desc$
+fps$="DBPro Fps: "+str$(screen fps())
+text screen width()-20-text width(fps$),screen height()-40,fps$
+
+rem Update screen
+sync
+
+rem End loop
+loop
+

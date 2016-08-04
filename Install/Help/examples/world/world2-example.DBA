@@ -1,0 +1,77 @@
+rem Terrain Functionality
+
+rem Standard Setup Code for all examples
+sync on : sync rate 0 : color backdrop 0
+set text font "arial" : set text size 16
+set text to bold : set text transparent
+
+rem Make Simple Terrain
+TerrainNumber=1
+make terrain TerrainNumber,"land.bmp"
+
+rem Position The Terrain
+position terrain TerrainNumber, 0, 0, 1025
+
+rem Texture terrain
+ImageNumber=1
+load image "grass.bmp",ImageNumber
+texture terrain TerrainNumber,ImageNumber
+size#=1025
+
+rem Load sky object
+load object "sky\sb.x",1
+scale object 1,40,40,40
+set object cull 1,0
+set object light 1,0
+set object texture 1,2,1
+
+rem Position camera in center of terrain
+position camera 512,10,512
+
+rem Main loop
+desc$="LOD Terrain from Bitmap"
+while mouseclick()=0
+
+rem Control camera over terrain
+control camera using arrowkeys 0,1,1
+cx#=camera position x(0)
+cz#=camera position z(0)
+if cx#<0.0 then cx#=0
+if cx#>size# then cx#=size#
+if cz#<0.0 then cz#=0
+if cz#>size# then cz#=size#
+position camera cx#,get terrain height(TerrainNumber,cx#,cz#)+5,cz#
+
+rem Terrain Data
+set cursor 0,0
+print "TERRAIN DATA"
+print " exist:";terrain exist(TerrainNumber)
+if terrain exist(TerrainNumber)=1
+ print " x:";terrain position x(TerrainNumber)
+ print " y:";terrain position y(TerrainNumber)
+ print " z:";terrain position z(TerrainNumber)
+ print " height:";get terrain height(TerrainNumber, cx#, cz#)
+ print " totalheight:";get total terrain height(TerrainNumber)
+endif
+print
+print "CAMERA DATA"
+print " x:";camera position x(0)
+print " y:";camera position y(0)
+print " z:";camera position z(0)
+
+rem Position sky at player
+position object 1,camera position x(0),camera position y(0)-150,camera position z(0)
+
+rem Show Framerate
+text 20,screen height()-40,desc$
+fps$="DBPro Fps: "+str$(screen fps())
+text screen width()-20-text width(fps$),screen height()-40,fps$
+
+rem Update screen
+sync
+
+rem End loop
+endwhile
+
+rem Delete Terrain
+delete terrain TerrainNumber

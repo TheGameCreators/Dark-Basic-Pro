@@ -1,0 +1,83 @@
+rem Sprite Showcase
+
+rem Standard Setup Code for all examples
+sync on : sync rate 240 : backdrop on : color backdrop 0
+
+rem Load images
+set image colorkey 255,0,255
+create animated sprite 1, "animspr.bmp", 4, 4, 16
+load image "ship.bmp",2
+load image "backdrop.bmp",3
+
+rem Setup backdrop sprite
+sprite 1001,0,0,3 : sprite 1002,0,0,3
+set sprite priority 1001,0 : set sprite priority 1002,0
+size sprite 1001,1024,1024 : size sprite 1002,1024,1024
+
+rem Setup asteroid sprite
+sprite 1,320,240,16 : size sprite 1,128,128 : offset sprite 1,64,64
+
+rem Array for finer asteroid data
+dim ast#(100)
+
+rem Copy animating sprite
+for t=2 to 99
+ clone sprite 1,t
+ sprite t,rnd(640+256)-128,rnd(1400)-400,16
+ ast#(t)=sprite y(t)
+ rotate sprite t,rnd(350)
+ set sprite frame t,rnd(15)
+ set sprite t,0,1
+ a#=rnd(350) : s#=32
+ sss#=64+(cos(a#)*s#)
+ size sprite t,sss#,sss#
+ offset sprite t,sss#/2,sss#/2
+ if t<50
+  set sprite priority t,1
+ else
+  set sprite priority t,3
+ endif
+next t
+
+rem Setup ship sprite
+sprite 100,200,140,2
+set sprite priority 100,2
+
+rem Backdrop shift
+shiftx#=0
+
+rem Main loop
+do
+
+ rem Move backdrop
+ shiftx#=shiftx#+2.0
+ sya#=wrapvalue(sya#+0.1)
+ sy#=-260+(cos(sya#)*260)
+ if shiftx#>1024.0 then shiftx#=shiftx#-1024
+ sprite 1001,0-shiftx#,sy#,3 : sprite 1002,1024-shiftx#,sy#,3
+
+ rem Control sprite auto-animation
+ for t=1 to 99
+  a#=wrapvalue(sprite angle(t)+1+rnd(2))
+  rotate sprite t,90
+  move sprite t,-3.0
+  ast#(t)=ast#(t)-(sin(sya#)*0.3)
+  if sprite x(t)<-128 then move sprite t,(640+256) : a#=rnd(350)
+  sprite t,sprite x(t),ast#(t),sprite image(t)
+  play sprite t,1,16,50
+  rotate sprite t,a#
+ next t
+
+ rem Glide ship
+ g#=wrapvalue(g#+1)
+ h#=wrapvalue(h#+0.5)
+ sprite 100,200,140+(sin(g#)*10),2
+ scale sprite 100,100+sin(h#)*20.0
+ rotate sprite 100,sin(sya#)*10.0
+
+ rem Update screen
+ sync
+
+rem End loop
+loop
+

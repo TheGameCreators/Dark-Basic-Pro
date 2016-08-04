@@ -1,0 +1,35 @@
+; **** Dark BASIC Professional Project File ****
+version=DBP1.00
+project name=
+
+; **** Executable Information  ***
+build type=exe
+; exe, media, installer,alone
+
+; ** Media file compression **
+compression=no
+; ** Media file encryption **
+encryption=no
+
+; **** debugger information ****
+; If the editor sets this to yes, it is running in debug mode
+CLI=no
+
+; **** display mode information ****
+app title=DarkBASIC Pro Example
+; graphics mode options: fullscreen, window, desktop,fulldesktop, hidden
+graphics mode=fulldesktop
+fullscreen resolution=640x480x16
+; arbitrary sizes are valid for windowed mode 
+window resolution=640x480
+
+; **** External Files Information ****
+; **** Media ****
+; **** Icons ****
+; **** Cursors ****
+
+; **** source file information ****
+; source file information for example program
+main=particles1-example.dba
+final source=particles1-example.dba
+executable=%temp\temp.exe
