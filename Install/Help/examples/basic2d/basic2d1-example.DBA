@@ -1,0 +1,129 @@
+rem Basic2D Showcase
+
+rem Standard Setup Code for all examples
+sync on : sync rate 0
+set text font "arial" : set text size 16
+set text to bold : set text transparent
+
+rem Nice backdrop
+load bitmap "parchment.jpg"
+
+rem Produce Title
+ink rgb(0,0,0),0 : center text (screen width()/2)+1,7,"2D Graphics Support"
+ink rgb(255,255,255),0 : center text screen width()/2,6,"2D Graphics Support"
+
+rem Create an array to hold pixeldatas
+bitsperpixel=bitmap depth()/8
+workA = make memory(640*480*bitsperpixel)
+fill memory workA, 0, 640*480*bitsperpixel
+
+rem Create Art Space
+set current bitmap 0
+box 48,48,640-48,450-48,rgb(255,255,0),rgb(255,200,255),rgb(255,255,200),rgb(200,255,255)
+lock pixels
+pitch=get pixels pitch() : ptr=get pixels pointer()
+workAptr=workA : linesize=640*bitsperpixel
+for y=0 to 479
+ copy memory workAptr, ptr, linesize : inc workAptr,640*bitsperpixel : inc ptr,pitch
+next y
+unlock pixels
+
+rem Main loop
+do
+
+rem Draw to Memory
+mx=mousex() : my=mousey()
+focus=16*(1+size)
+if mx>focus and mx<640-focus and my>focus and my<479-focus
+ for focus=1 to 16*(1+size)
+  for y=my-focus to my+focus
+   penwidth=focus-abs(y-my)
+   for x=mx-penwidth to mx+penwidth
+    workptr=workA+(x*bitsperpixel)+(y*640*bitsperpixel)
+    col = *workptr
+    colb = col && %1111111111111111
+    if bitsperpixel=2
+     cr = (col && %11111000000000000000000000000000)>>27
+     cg = (col && %00000111111000000000000000000000)>>21
+     cb = (col && %00000000000111110000000000000000)>>16
+     dec cr
+     dec cg
+     dec cb
+    endif
+    if bitsperpixel=4
+     cr = rgbr(col) - 1
+     cg = rgbg(col) - 1
+     cb = rgbb(col) - 1
+    endif
+    if nocap=0
+     if cr<0 then cr=0
+     if cg<0 then cg=0
+     if cb<0 then cb=0
+    endif
+    if bitsperpixel=2
+     col = (cr<<27)+(cg<<21)+(cb<<16)
+     *workptr = col+colb
+    endif
+    if bitsperpixel=4
+     col = rgb(cr,cg,cb)
+     *workptr = col
+    endif
+   next x
+  next y
+ next focus
+endif
+
+rem Draw Memory to screen
+workAptr=workA+(640*48*bitsperpixel)
+ymax=450-48
+lock pixels
+linesize=(640-48-48)*bitsperpixel
+pitch=get pixels pitch()
+ptr=get pixels pointer()+(48*pitch)
+for y=48 to ymax
+ copy memory ptr+(48*bitsperpixel), workAptr+(48*bitsperpixel), linesize
+ inc workAptr,640*bitsperpixel
+ inc ptr,pitch
+next y
+unlock pixels
+
+rem Show Buttons
+over=0
+for but=1 to 3
+ for high=0 to 1
+  if high=0 then ink rgb(20,20,20),0 : bx=-1 : by=-1
+  if high=1 then ink rgb(100,200,100),0 : bx=0 : by=0
+  if high=1 and mousey()>420 and mousey()<460
+   if but=1 and abs(mousex()-170)<50 then ink rgb(255,255,255),0 : over=1
+   if but=2 and abs(mousex()-320)<50 then ink rgb(255,255,255),0 : over=2
+   if but=3 and abs(mousex()-470)<50 then ink rgb(255,255,255),0 : over=3
+  endif
+  if but=1 then but$="SIZE"
+  if but=2 then but$="PLASMA"
+  if but=3 then but$="EXIT"
+  center text 320+bx+((but-2)*150),420+by,but$
+ next high
+next but
+
+rem Controls
+if mouseclick()=1
+ if once=0
+  once=1
+  if over=1 then size=size+1
+  if over=2 then nocap=1-nocap
+  if size=3 then size=0
+  if over=3 then delete memory workA : end
+ endif
+else
+ once=0
+endif
+
+rem Update screen
+sync
+
+rem End loop
+loop
+
+rem Free memory
+delete memory workA
+delete memory workB

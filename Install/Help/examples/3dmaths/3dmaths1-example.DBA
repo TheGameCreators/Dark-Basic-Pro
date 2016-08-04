@@ -1,0 +1,183 @@
+rem 3DMaths Showcase
+rem A COMPLETE FVF, USAGE and
+rem TYPE list at end of program
+
+ObjectNumber=1
+VertexShaderNumber=1
+
+rem Constants for vertex shader
+#constant CSCALE          1
+#constant CTRANSLATION    2
+#constant CXROTATE        3
+#constant CYROTATE        4
+#constant CZROTATE        5
+#constant CROTATION       6
+#constant CWORLD          7
+#constant CVIEW           8
+#constant CPROJECTION     9
+#constant CTEMP           10
+#constant CLIGHT          11
+#constant CDEGTORAD       ( 3.14 / 180.0 )
+
+rem Provide vertex shader with stream count
+set vertex shader streamcount VertexShaderNumber, 4
+
+rem Provide vertex shader with stream
+VSDT_FLOAT2=0x01 : VSDT_FLOAT3=0x02 : VSDT_D3DCOLOR=0x04
+VSDE_POSITION=0 : VSDE_NORMAL=3 : VSDE_DIFFUSE=10 : VSDE_TEXCOORD0=5
+set vertex shader stream VertexShaderNumber, 1, VSDE_POSITION, VSDT_FLOAT3
+set vertex shader stream VertexShaderNumber, 2, VSDE_NORMAL, VSDT_FLOAT3
+set vertex shader stream VertexShaderNumber, 3, VSDE_DIFFUSE, VSDT_D3DCOLOR
+set vertex shader stream VertexShaderNumber, 4, VSDE_TEXCOORD0, VSDT_FLOAT2
+
+rem Create a vertex shader from a text file
+create vertex shader from file VertexShaderNumber, "vshader.vsh"
+
+rem Make simple object
+make object sphere ObjectNumber,100
+
+rem Convert object to correct mesh format
+FVF_XYZ=0x002 : FVF_NORMAL=0x010 : FVF_DIFFUSE=0x040 : FVF_TEX1=0x100
+FVF_FINAL=FVF_XYZ || FVF_NORMAL || FVF_DIFFUSE || FVF_TEX1
+convert object fvf ObjectNumber,FVF_FINAL
+
+rem Check if vertex shader was created
+if vertex shader exist(VertexShaderNumber)=1
+
+ rem Apply vertex shader to object
+ set vertex shader on ObjectNumber, VertexShaderNumber
+
+ rem Create required matrices
+ r=make matrix4(CVIEW)
+ r=make matrix4(CPROJECTION)
+ r=make matrix4(CSCALE)
+ r=make matrix4(CTRANSLATION)
+ r=make matrix4(CXROTATE)
+ r=make matrix4(CYROTATE)
+ r=make matrix4(CZROTATE)
+ r=make matrix4(CROTATION)
+ r=make matrix4(CWORLD)
+ r=make matrix4(CTEMP)
+
+ rem required light vector
+ r=make vector4(CLIGHT)
+
+ rem setup camera and light vector position
+ sync on : position camera 0,0,-500
+ set vector4 CLIGHT,50,20,-200,0
+
+ rem Simple loop
+ while mouseclick()=0
+
+  rem get view and projection matrices
+  view matrix4 CVIEW
+  projection matrix4 CPROJECTION
+
+  rem setup a scale matrix
+  scale matrix4 CSCALE, 2.0, 2.0, 2.0
+
+  rem now setup the position
+  translate matrix4 CTRANSLATION, 0.0, 10.0, 0.0
+
+  rem setup rotation
+  rotate x matrix4 CXROTATE, 0.0 * CDEGTORAD
+  rotate y matrix4 CYROTATE, 0.0 * CDEGTORAD
+  rotate z matrix4 CZROTATE, 45.0 * CDEGTORAD
+
+  rem multiply all 3 rotation matrices together
+  multiply matrix4 CROTATION, CXROTATE, CYROTATE
+  multiply matrix4 CROTATION, CROTATION, CZROTATE
+
+  rem multiply all final matrices
+  multiply matrix4 CTEMP,  CROTATION, CSCALE
+  multiply matrix4 CWORLD, CTEMP,     CSCALE
+  multiply matrix4 CWORLD, CWORLD,    CVIEW
+  multiply matrix4 CWORLD, CWORLD,    CPROJECTION
+
+  rem transpose the matrix
+  transpose matrix4 CWORLD, CWORLD
+
+  rem we send the light vector3 to the vertex shader
+  normalize vector4 CLIGHT, CLIGHT
+  set vertex shader vector VertexShaderNumber, 4, CLIGHT, 4
+
+  rem this is an important part – we send the world matrix to the vertex shader
+  set vertex shader matrix VertexShaderNumber, 0, CWORLD, 4
+
+  rem camera look
+  rotate camera camera angle x()+mousemovey(),camera angle y()+mousemovex(),0
+
+  rem update screen
+  sync
+
+ rem end loop
+ endwhile
+
+ rem Deactivate vertex shader of the object
+ set vertex shader off ObjectNumber
+
+ rem Delete a vertex shader
+ delete vertex shader VertexShaderNumber
+
+endif
+
+rem fvf
+`D3DFVF_RESERVED0        0x001
+`D3DFVF_POSITION_MASK    0x00E
+`D3DFVF_XYZ              0x002
+`D3DFVF_XYZRHW           0x004
+`D3DFVF_XYZB1            0x006
+`D3DFVF_XYZB2            0x008
+`D3DFVF_XYZB3            0x00a
+`D3DFVF_XYZB4            0x00c
+`D3DFVF_XYZB5            0x00e
+`D3DFVF_NORMAL           0x010
+`D3DFVF_PSIZE            0x020
+`D3DFVF_DIFFUSE          0x040
+`D3DFVF_SPECULAR         0x080
+`D3DFVF_TEX0             0x000
+`D3DFVF_TEX1             0x100
+`D3DFVF_TEX2             0x200
+`D3DFVF_TEX3             0x300
+`D3DFVF_TEX4             0x400
+`D3DFVF_TEX5             0x500
+`D3DFVF_TEX6             0x600
+`D3DFVF_TEX7             0x700
+`D3DFVF_TEX8             0x800
+`D3DFVF_LASTBETA_UBYTE4  0x1000
+
+rem usages
+`D3DDECLUSAGE_POSITION = 0,
+`D3DDECLUSAGE_BLENDWEIGHT = 1,
+`D3DDECLUSAGE_BLENDINDICES = 2,
+`D3DDECLUSAGE_NORMAL = 3,
+`D3DDECLUSAGE_PSIZE = 4,
+`D3DDECLUSAGE_TEXCOORD = 5,
+`D3DDECLUSAGE_TANGENT = 6,
+`D3DDECLUSAGE_BINORMAL = 7,
+`D3DDECLUSAGE_TESSFACTOR = 8,
+`D3DDECLUSAGE_POSITIONT = 9,
+`D3DDECLUSAGE_COLOR = 10,
+`D3DDECLUSAGE_FOG = 11,
+`D3DDECLUSAGE_DEPTH = 12,
+`D3DDECLUSAGE_SAMPLE = 13
+
+rem type values
+`D3DDECLTYPE_FLOAT1    =  0,  // 1D float expanded to (value, 0., 0., 1.)
+`D3DDECLTYPE_FLOAT2    =  1,  // 2D float expanded to (value, value, 0., 1.)
+`D3DDECLTYPE_FLOAT3    =  2,  // 3D float expanded to (value, value, value, 1.)
+`D3DDECLTYPE_FLOAT4    =  3,  // 4D float
+`D3DDECLTYPE_D3DCOLOR  =  4,  // 4D packed unsigned bytes mapped to 0. to 1. range
+`D3DDECLTYPE_UBYTE4    =  5,  // 4D unsigned byte
+`D3DDECLTYPE_SHORT2    =  6,  // 2D signed short expanded to (value, value, 0., 1.)
+`D3DDECLTYPE_SHORT4    =  7,  // 4D signed short
+`D3DDECLTYPE_UBYTE4N   =  8,  // Each of 4 bytes is normalized by dividing to 255.0
+`D3DDECLTYPE_SHORT2N   =  9,  // 2D signed short normalized (v[0]/32767.0,v[1]/32767.0,0,1)
+`D3DDECLTYPE_SHORT4N   = 10,  // 4D signed short normalized (v[0]/32767.0,v[1]/32767.0,v[2]/32767.0,v[3]/32767.0)
+`D3DDECLTYPE_USHORT2N  = 11,  // 2D unsigned short normalized (v[0]/65535.0,v[1]/65535.0,0,1)
+`D3DDECLTYPE_USHORT4N  = 12,  // 4D unsigned short normalized (v[0]/65535.0,v[1]/65535.0,v[2]/65535.0,v[3]/65535.0)
+`D3DDECLTYPE_UDEC3     = 13,  // 3D unsigned 10 10 10 format expanded to (value, value, value, 1)
+`D3DDECLTYPE_DEC3N     = 14,  // 3D signed 10 10 10 format expanded to (v[0]/511.0, v[1]/511.0, v[2]/511.0, `1)
+`D3DDECLTYPE_FLOAT16_2 = 15,  // Two 16-bit floating point values, expanded to (value, value, 0, 1)
+`D3DDECLTYPE_FLOAT16_4 = 16,  // Four 16-bit floating point values
+`D3DDECLTYPE_UNUSED    = 17,  // When the type field in a decl is unused.

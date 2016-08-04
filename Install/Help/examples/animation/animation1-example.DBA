@@ -1,0 +1,76 @@
+rem Animation Showcase
+
+rem Standard Setup Code for all examples
+sync on : sync rate 60 : color backdrop rgb(0,128,0)
+set text font "arial" : set text size 20
+set text to bold : set text transparent
+
+rem Produce Title
+ink rgb(0,0,0),0 : center text (screen width()/2)+1,7,"Full Animation Support"
+ink rgb(255,255,255),0 : center text screen width()/2,6,"Full Animation Support"
+
+rem Load Animation and Set Up
+load animation "avi\demo1.avi",1
+
+rem Set Animation to Loop
+play animation to image 1,1,0,0,animation width(1),animation height(1)
+loop animation 1
+
+rem Create models for 3D animation effect
+make object box 1,350,350,1000
+scale object 1,100,100,-100
+set object 1,1,0,0,0,0,0,0
+texture object 1,1
+make object sphere 2,50
+texture object 2,1
+set sphere mapping on 2,1
+for t=0 to 7
+ make object cube 3+t,25
+ texture object 3+t,1
+next t
+
+rem Main loop
+do
+
+rem 3D effects
+a#=wrapvalue(a#-4)
+scale object 2,100+cos(a#)*25,100+sin(a#)*25,100
+for t=0 to 7
+ position object 3+t,cos(wrapvalue(a#+(t*45)))*40,sin(wrapvalue(a#+(t*45)))*30,sin(wrapvalue(a#+(t*45)))*40
+ if t=0 or t=3 or t=6 then xrotate object 3+t,wrapvalue(object angle x(3+t)+2)
+ if t=1 or t=4 or t=7 then yrotate object 3+t,wrapvalue(object angle y(3+t)+2)
+ if t=2 or t=5 then zrotate object 3+t,wrapvalue(object angle z(3+t)+2)
+next t
+position camera cos(a#)*10,sin(a#)*10,-100
+point camera 0,0,0
+
+rem Show Buttons
+over=0
+for but=1 to 3
+ for high=0 to 1
+  if high=0 then ink rgb(20,20,20),0 : bx=1 : by=1
+  if high=1 then ink rgb(200,200,255),0 : bx=0 : by=0
+  if high=1 and mousey()>420 and mousey()<460
+   if but=1 and abs(mousex()-170)<50 then ink rgb(255,255,255),0 : over=1
+   if but=2 and abs(mousex()-320)<50 then ink rgb(255,255,255),0 : over=2
+   if but=3 and abs(mousex()-470)<50 then ink rgb(255,255,255),0 : over=3
+  endif
+  if but=1 then but$="STOP"
+  if but=2 then but$="PLAY"
+  if but=3 then but$="EXIT"
+  center text 320+bx+((but-2)*150),420+by,but$
+ next high
+next but
+
+rem Controls
+if mouseclick()=1
+ if over=1 then pause animation 1
+ if over=2 then resume animation 1
+ if over=3 then end
+endif
+
+rem Update screen
+sync
+
+rem End loop
+loop
