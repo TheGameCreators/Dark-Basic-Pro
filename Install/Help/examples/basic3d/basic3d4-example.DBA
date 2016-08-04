@@ -1,0 +1,66 @@
+rem Primitive Texturing
+
+rem Standard Setup Code for all examples
+`set window off
+sync on : sync rate 0 : color backdrop rgb(0,128,0)
+set text font "arial" : set text size 16
+set text to bold : set text transparent
+
+rem Load images (textures)
+load image "a.bmp",1
+load image "b.bmp",2
+load image "c.bmp",3
+load image "d.bmp",4
+load image "e.bmp",5
+load image "sphere.bmp",6
+load image "bump.bmp",7
+load image "shade.bmp",8
+load image "edge.dds",9
+
+rem Make object
+make object cube 1,10 : color object 1,rgb(255,0,0)
+make object box 2,10,2,10 : color object 2,rgb(0,255,0)
+make object sphere 3,10,6,6 : color object 3,rgb(0,0,255)
+make object triangle 5,0,0,0,10,0,0,10,10,0
+make object plain 6,10,10
+make object cylinder 7,10
+make object cone 8,10
+make object sphere 4,10
+for x=1 to 8
+ position object x,(x-4)*10,0,0
+next x
+
+rem Set camera and light
+move camera -100
+set point light 0,0,0,0
+
+rem Main loop
+desc$="Texturing Primitives (Press 1-6)"
+do
+
+rem Affect object with textures
+for t=1 to 8
+ if inkey$()="1" then texture object t,1 : desc$="1. Normal Texture"
+ if inkey$()="2" then set light mapping on t,2 : desc$="2. Light Mapping"
+ if inkey$()="3" then set cube mapping on t,1,2,3,4,5,6 : desc$="3. Cube Mapping"
+ if inkey$()="4" then set sphere mapping on t,6 : desc$="4. Sphere Mapping"
+ if inkey$()="5" then set detail mapping on t,4 : desc$="5. Detail Mapping"
+ if inkey$()="6" then set blend mapping on t,5,10 : desc$="6. Custom Blend Mapping"
+ yrotate object t,wrapvalue(object angle y(t)+0.3)
+next t
+
+rem New object creator
+if spacekey()=1 then delete object 4 : make object sphere 4,100
+
+rem Move light using mouse
+position light 0,mousex()-320,240-mousey(),-50
+
+rem Show Framerate
+text 20,screen height()-40,desc$
+text screen width()-170,screen height()-40,"DBPro Fps: "+str$(screen fps())
+
+rem Update screen
+sync
+
+rem End loop
+loop

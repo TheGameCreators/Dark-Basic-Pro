@@ -1,0 +1,144 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\..\main.htm"><img src="..\..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\commands.htm"><img src="..\..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\..\examples.htm"><img src="..\..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\documents.htm"><img src="..\..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\..\index.htm"><img src="..\..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR><BR><pre><FONT FACE=Courier SIZE=2>Rem U5Collection
+Rem Created: 12/06/2003 00:49:08
+rem Version: Upgrade 5 or above
+
+rem Init app
+sync on : sync rate 60
+
+rem Load image
+load image "spec.bmp",1
+
+rem Make matrix and texture with trimmed tile
+load image "spec.bmp",1
+make matrix 1,1000,1000,10,10
+position matrix 1,-500,-50,-500
+prepare matrix texture 1,1,1,1
+set matrix trim 1,0.25,0.25
+update matrix 1
+set matrix priority 1,1
+ghost matrix on 1,0
+
+rem Create a particles object
+make particles 1,1,50,100.0
+ghost particles on 1,0
+
+rem Create an object with an effect (one command)
+make object sphere 1,100,29,28
+set effect on 1,"cartoon.fx",1
+
+rem Theese are the defaults for an object
+enable object zwrite 1
+enable object zread 1
+
+rem Full object material control
+make object sphere 3,100,30,30
+position object 3,-50,50,0
+set object diffuse 3,rgb(255,0,0)
+set object ambience 3,rgb(0,0,0)
+set object emissive 3,rgb(0,0,64)
+set object specular 3,rgb(255,255,255)
+set object specular power 3,5
+
+rem Object using FX system effect
+load object "sphere.x",4
+position object 4,150,50,0
+scale object 4,8000,8000,8000
+load effect "bubble.fx",1,1
+set object effect 4,1
+set limb effect 4,0,1
+
+rem Create copies of the effect object
+for o=5 to 99
+ instance object o,1
+ position object o,rnd(400)-200,rnd(100)-100,rnd(800)
+ scale object o,25+rnd(25),25+rnd(25),25+rnd(25)
+next o
+
+rem Create an object to fade in/out
+make object sphere 2,250
+scale object texture 2,100,100
+
+rem Smooth out object by obj or limb
+set object smoothing 1,100
+set limb smoothing 2,0,100
+
+rem The fading sphere does not respond to zbuffer
+disable object zwrite 2
+disable object zread 2
+
+rem Apply image directly to stage zero of texture
+texture object 2,0,1
+
+rem Change camera aspect to a square
+x#=640-480 : set camera view x#/2,0,640-(x#/2),480
+set camera aspect 1.0
+
+rem Main loop
+do
+ `
+ rem Set light for best effect
+ inc side#,4 : set point light 0,cos(side#)*200,125,-300
+ `
+ rem Hide and Show Object Bounds
+ if tm<75 then show object bounds 1,1
+ if tm>75 then hide object bounds 1
+ if tm>200 then tm=0
+ `
+ rem Use alpha to fade in/out
+ set alpha mapping on 2,abs(tm-100)
+ `
+ rem Rotate original object
+ yrotate object 1,object angle y(1)+0.1
+ `
+ rem Rotate instanced objects
+ for o=5 to 99
+  rotate object o,object angle x(o)+1,object angle y(o)+2,object angle z(o)+3
+ next o
+ `
+ rem Control timer counter
+ tm=tm+1
+ `
+ rem User prompt
+ center text 320,20,"CRAZY COMBINATION OF NEW U5 COMMANDS"
+ `
+ rem Update screen
+ sync
+ `
+rem loopend
+loop
+
+rem Free resources
+ghost particles off 1
+delete effect 1
+
+rem End program
+end
+</pre></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

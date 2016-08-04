@@ -1,0 +1,143 @@
+rem Collision Functionality
+
+sync on : sync rate 60 : hide mouse : color backdrop rgb(100,100,255)
+set text transparent : set text font "Arial" : set text size 20
+
+rem load sounds
+load sound "impact.wav",1
+for s=2 to 10 : clone sound s,1 : next s
+
+rem load images
+load image "marble.bmp",1
+load image "moss.bmp",2
+load image "fur.bmp",3
+
+rem create floor
+make object box 1,400,10,400 : position object 1,0,-5,0
+texture object 1,2 : scale object texture 1,2,2
+
+rem create walls
+make object box 2,400,100,10 : position object 2,0,50,-200
+make object box 3,400,100,10 : position object 3,0,50, 200
+make object box 4,10,100,400 : position object 4,-200,50,0
+make object box 5,10,100,400 : position object 5, 200,50,0
+for t=2 to 5
+ texture object t,2 : scale object texture t,4,1
+next t
+
+rem Set floor and walls to box collision for rectangle roamer
+make object collision box 1,-200,-5,-200,200,5,200,0
+make object collision box 2,-200,-50,-5,200,50,5,0
+make object collision box 3,-200,-50,-5,200,50,5,0
+make object collision box 4,-5,-50,-200,5,50,200,0
+make object collision box 5,-5,-50,-200,5,50,200,0
+
+rem create collision platform
+make object box 6,100,12,100
+position object 6,0,5,0
+texture object 6,1
+
+rem create bouncey ball and set bounce-vars
+make object sphere 11,25
+set object collision to spheres 11
+set object radius 11,15
+texture object 11,1
+y#=75 : iy#=2
+
+rem rectangle roamer for box collision
+make object box 41,40,20,40 : position object 41,95,31,50
+make object collision box 41,-20,-10,-20,20,10,20,0
+texture object 41,1
+set shadow shading on 41
+
+rem load a model in center of world
+load object "alien.x",51
+set object collision to polygons 51
+scale object 51,1500,1500,1500
+position object 51,0,40,0
+xrotate object 51,180
+texture object 51,3
+scale object texture 51,5,5
+set object speed 51,100
+loop object 51
+
+rem create a crate for automatic collision
+make object cube 61,15
+automatic object collision 61,8.0,0
+set object collision to spheres 61
+position object 61,-75,30,75
+texture object 61,1
+set shadow shading on 61
+
+rem setup camera and lights
+set point light 0,0,0,0
+make light 1 : set point light 1,0,0,0 : color light 1,255,-100,-100
+position camera 0,30,-100
+
+rem set automatic collision for camera
+automatic camera collision 0,15,0
+set global collision on
+
+rem loop
+do
+
+rem delete all collision data
+if spacekey()=1
+ gosub _delete_collision
+endif
+
+rem move crate to test automatic object collision
+yrotate object 61,wrapvalue(object angle y(61)-0.2)
+move object down 61,0.5
+move object 61,0.5
+
+rem control camera
+control camera using arrowkeys 0,1,2
+
+rem control bouncey ball
+y#=y#+(iy#/20.0) : iy#=iy#-0.2
+position object 11,object position x(11),y#,object position z(11)
+if object collision(11,0)>0 then iy#=iy#*-1.0 : play sound 1+rnd(9)
+
+rem display types of collision
+if object in screen(11)=1 then center text object screen x(11),object screen y(11)-25,"Polygon Collision"
+if object in screen(41)=1 then center text object screen x(41),object screen y(41)-25,"Sliding Box Collision"
+if object in screen(61)=1 then center text object screen x(61),object screen y(61)-25,"Automated Collision"
+
+rem Add gravity to camera to test automatic collision
+position camera camera position x(),camera position y()-1.01,camera position z()
+
+rem rectangle roamer
+move object 41,0.3
+ballhit=object collision(41,0)
+if ballhit>0
+ spin#=rnd(45)
+ ax#=object position x(41)-get object collision x()
+ ay#=object position y(41)-get object collision y()
+ az#=object position z(41)-get object collision z()
+ position object 41,ax#,ay#,az#
+endif
+if spin#>0
+ spin#=spin#-1.0
+ yrotate object 41,wrapvalue(object angle y(41)+1)
+endif
+
+rem move default light with ball
+position light 0,object position x(11),object position y(11),object position z(11)
+
+rem move coloured light with roamer
+position light 1,object position x(41),object position y(41)+25,object position z(41)
+
+rem update screen
+sync
+
+rem end loop
+loop
+
+_delete_collision:
+ for o=1 to 5
+  delete object collision box o
+ next o
+ set global collision off
+return
+

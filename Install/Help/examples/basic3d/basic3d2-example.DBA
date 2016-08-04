@@ -1,0 +1,678 @@
+rem Basic3D Functionality
+
+rem Standard Setup Code for all examples
+backdrop off : cls : sync on : sync rate 0 : hide mouse
+set text font "arial" : set text size 16
+set text to bold : set text transparent
+
+rem Legacy or New Commands
+legacyonly=rnd(1)
+if legacyonly=1
+ gosub _legacycommands
+else
+ gosub _newcommands
+endif
+
+rem End program
+end
+
+_legacycommands:
+
+rem Test loop
+do
+
+rem Produce random values
+ObjectNumber=1+rnd(500000)
+Wireframe=rnd(1)
+Transparency=rnd(1)
+Cull=rnd(1)
+Filter=rnd(1)
+Light=rnd(1)
+Fog=rnd(1)
+Ambient=rnd(1)
+MeshNumber=1+rnd(5)
+TextureNumber=1+rnd(5)
+LimbNumber=10
+Size=10+rnd(90)
+XSize=10+rnd(90)
+YSize=10+rnd(90)
+ZSize=10+rnd(90)
+StartFrame=1+rnd(10)
+EndFrame=StartFrame+1+rnd(10)
+Speed=50+rnd(50)
+QuarterPercent=100/4
+ImageNumber=1+rnd(5)
+TextureMode=1+rnd(2)
+Percentage#=rnd(100)
+SecondObject=1+rnd(500000)
+TextureMode=1+rnd(2)
+MipMode=1+rnd(2)
+X=rnd(400)-200
+Y=0
+Z=rnd(400)
+NewX=rnd(400)-200
+NewY=0
+NewZ=rnd(400)
+Velocity=1+rnd(9)
+XAngle=rnd(359)
+YAngle=rnd(359)
+ZAngle=rnd(359)
+UValue=rnd(100)/100.0
+VValue=rnd(100)/100.0
+Scale=50+rnd(50)
+XScale=50+rnd(50)
+YScale=50+rnd(50)
+ZScale=50+rnd(50)
+MipmapGeneration=1+rnd(1)
+
+rem Try each command group at random
+r=r+1 : if r>=4 then r=0
+if r=0 then gosub _3dobjects
+if r=1 then gosub _3dmotion
+if r=2 then gosub _3dcollision
+if r=3 then gosub _3dlimbs
+
+rem Display data
+cls 0
+print "BASIC3D EXPRESSION DATA"
+print
+if object exist(ObjectNumber)=1
+if rnd(5)=1
+ print "3D OBJECTS"
+ print "exist:";object exist(ObjectNumber)
+ print "frames:";total object frames(ObjectNumber)
+ print "size:";object size(ObjectNumber)
+ print "x:";object position x(ObjectNumber)
+ print "y:";object position y(ObjectNumber)
+ print "z:";object position z(ObjectNumber)
+ print "anglex:";object angle x(ObjectNumber)
+ print "angley:";object angle y(ObjectNumber)
+ print "anglez:";object angle z(ObjectNumber)
+ print "sizex:";object size x(ObjectNumber)
+ print "sizey:";object size y(ObjectNumber)
+ print "sizez:";object size z(ObjectNumber)
+ print "visible:";object visible(ObjectNumber)
+ print "playing:";object playing(ObjectNumber)
+ print "looping:";object looping(ObjectNumber)
+ print "frame:";object frame(ObjectNumber)
+ print "speed:";object speed(ObjectNumber)
+ print "interpolation:";object interpolation(ObjectNumber)
+ print "object in screen:";object in screen(ObjectNumber)
+ print "object screen x:";object screen x(ObjectNumber)
+ print "object screen y:";object screen y(ObjectNumber)
+ print
+endif
+if rnd(5)=1
+ print "COLLISION"
+ if object exist(SecondObject)=1
+  print "object collision:";object collision(ObjectNumber, SecondObject)
+  print "object hit:";object hit(ObjectNumber, SecondObject)
+ endif
+ print "object col radius:";object collision radius(ObjectNumber)
+ print "object col center x:";object collision center x(ObjectNumber)
+ print "object col center y:";object collision center y(ObjectNumber)
+ print "object col center z:";object collision center z(ObjectNumber)
+ print "object col x:";get object collision x()
+ print "object col y:";get object collision y()
+ print "object col z:";get object collision z()
+ print "static hit:";get static collision hit( 2,2,2,10,10,10, 3,3,3,11,11,11 )
+ print "static col x:";get static collision x()
+ print "static col y:";get static collision y()
+ print "static col z:";get static collision z()
+ print "static line hit:";static line of sight( 0,0,0, 0,0,100, 1, 1 )
+ print "static line col x:";static line of sight x()
+ print "static line col y:";static line of sight y()
+ print "static line col z:";static line of sight z()
+ print
+endif
+if rnd(5)=1
+ print "LIMBS"
+ print "exist:";limb exist(ObjectNumber, LimbNumber)
+ if limb exist(ObjectNumber, LimbNumber)=1
+  print "offsetx:";limb offset x(ObjectNumber, LimbNumber)
+  print "offsety:";limb offset y(ObjectNumber, LimbNumber)
+  print "offsetz:";limb offset z(ObjectNumber, LimbNumber)
+  print "anglex:";limb angle x(ObjectNumber, LimbNumber)
+  print "angley:";limb angle y(ObjectNumber, LimbNumber)
+  print "anglez:";limb angle z(ObjectNumber, LimbNumber)
+  print "positionx:";limb position x(ObjectNumber, LimbNumber)
+  print "positiony:";limb position y(ObjectNumber, LimbNumber)
+  print "positionz:";limb position z(ObjectNumber, LimbNumber)
+  print "directionx:";limb direction x(ObjectNumber, LimbNumber)
+  print "directiony:";limb direction y(ObjectNumber, LimbNumber)
+  print "directionz:";limb direction z(ObjectNumber, LimbNumber)
+  print "texture:";limb texture(ObjectNumber, LimbNumber)
+  print "visible:";limb visible(ObjectNumber, LimbNumber)
+  print "linkvalid:";check limb link(ObjectNumber, LimbNumber)
+  print "name$:";limb texture name(ObjectNumber, LimbNumber)
+ endif
+ print
+endif
+if rnd(5)=1
+ print "MISC"
+ print "mesh exist:";mesh exist(MeshIndex)
+ print "alphablending available:";alphablending available()
+ print "filtering available:";filtering available()
+ print "fog available:";fog available()
+ print "TnL available:";tnl available()
+ print "Polys on nscreen:";statistic(1)
+ print
+endif
+endif
+
+rem Delete Object
+if object exist(ObjectNumber)=1 then delete object ObjectNumber
+
+rem Update screen
+sync
+
+loop
+
+return
+
+_3dobjects:
+
+rem Load Objects
+load object "models\model.x",ObjectNumber
+load object "models\model.x",SecondObject
+
+rem Load Image for object
+load image "iron.jpg",ImageNumber
+
+rem Append Object
+append object "models\extraanim.x", ObjectNumber, total object frames(ObjectNumber)+1
+
+rem Set Object Properties
+set object ObjectNumber, Wireframe, Transparency, Cull
+set object ObjectNumber, Wireframe, Transparency, Cull, Filter
+set object ObjectNumber, Wireframe, Transparency, Cull, Filter, Light
+set object ObjectNumber, Wireframe, Transparency, Cull, Filter, Light, Fog
+set object ObjectNumber, Wireframe, Transparency, Cull, Filter, Light, Fog, Ambient
+
+rem Control Object Animation
+play object ObjectNumber
+play object ObjectNumber,StartFrame
+play object ObjectNumber,StartFrame,EndFrame
+loop object ObjectNumber
+loop object ObjectNumber,StartFrame
+loop object ObjectNumber,StartFrame,EndFrame
+stop object ObjectNumber
+set object frame ObjectNumber, StartFrame
+set object speed ObjectNumber, Speed
+set object interpolation ObjectNumber, QuarterPercent
+
+rem Control Object Orientation
+set object rotation xyz ObjectNumber
+set object rotation zyx ObjectNumber
+
+rem Object Visuals
+hide object ObjectNumber
+show object ObjectNumber
+color object ObjectNumber, rgb(255,255,0)
+scale object ObjectNumber,XSize,YSize,ZSize
+texture object ObjectNumber, ImageNumber
+set object texture ObjectNumber, TextureMode, MipmapGeneration
+scroll object texture ObjectNumber, 0.1, 0.2
+scale object texture ObjectNumber, 75, 75
+ghost object on ObjectNumber
+ghost object off ObjectNumber
+fade object ObjectNumber, Percentage#
+glue object to limb ObjectNumber, SecondObject, 1
+unglue object ObjectNumber
+lock object on ObjectNumber
+lock object off ObjectNumber
+disable object zdepth ObjectNumber
+enable object zdepth ObjectNumber
+
+rem Load mesh
+load mesh "mesh.x",MeshNumber
+
+rem Make Primitives
+delete object ObjectNumber : make object cube ObjectNumber, Size
+delete object ObjectNumber : make object box ObjectNumber, XSize, YSize, ZSize
+delete object ObjectNumber : make object cylinder ObjectNumber, Size
+delete object ObjectNumber : make object cone ObjectNumber, Size
+delete object ObjectNumber : make object plain ObjectNumber, XSize, YSize
+delete object ObjectNumber : make object triangle ObjectNumber, 0, 0, 0, 1, 1, 0, 0, 1, 0
+delete object ObjectNumber : make object sphere ObjectNumber, Size
+delete object ObjectNumber : make object ObjectNumber, MeshNumber, TextureNumber
+
+rem Change Mesh In Object
+LimbNumber=0
+change mesh ObjectNumber, LimbNumber, MeshNumber
+
+rem Delete Mesh
+delete mesh MeshNumber
+
+rem Make Mesh From Object
+make mesh from object MeshNumber, ObjectNumber
+
+rem Delete second object
+delete object SecondObject
+
+rem Remove redundant video items
+flush video memory
+
+return
+
+_3dmotion:
+
+rem Load objects
+load object "model.x",ObjectNumber
+load object "model.x",SecondObject
+
+rem Adjust model to face correct direction
+rotate object ObjectNumber, 270, 0, 0
+fix object pivot ObjectNumber
+
+rem Control object motion using EULER
+position object ObjectNumber, X, Y, Z
+rotate object ObjectNumber, XAngle, YAngle, ZAngle
+xrotate object ObjectNumber, XAngle
+yrotate object ObjectNumber, YAngle
+zrotate object ObjectNumber, ZAngle
+point object ObjectNumber, NewX, NewY, NewZ
+move object ObjectNumber, Velocity
+
+rem Control object motion using FREEFLIGHT
+turn object left ObjectNumber, Velocity
+turn object right ObjectNumber, Velocity
+pitch object up ObjectNumber, Velocity
+pitch object down ObjectNumber, Velocity
+roll object left ObjectNumber, Velocity
+roll object right ObjectNumber, Velocity
+
+rem Align position and angle with other entities
+set object to object orientation ObjectNumber, SecondObject
+set object to camera orientation ObjectNumber
+
+rem Delete second object
+delete object SecondObject
+
+return
+
+_3dcollision:
+
+rem Activate global collision
+set global collision on
+
+rem Load object
+load object "model.x",ObjectNumber
+
+rem Deactivate object collision
+set object collision off ObjectNumber
+
+rem Activate object collision
+set object collision on ObjectNumber
+
+rem Make new collision box for object
+make object collision box ObjectNumber, -50,-50,-50,50,50,50,1
+
+rem Delete collision box from object
+delete object collision box ObjectNumber
+
+rem Set different styles of collision
+set object collision to boxes ObjectNumber
+set object collision to spheres ObjectNumber
+set object collision to polygons ObjectNumber
+
+rem Deactivate global collision
+set global collision off
+
+return
+
+_3dlimbs:
+
+rem Load object
+load object "model.x",ObjectNumber
+
+rem Load Image for object
+load image "iron.jpg",ImageNumber
+
+rem Get details for all object limbs
+perform checklist for object limbs ObjectNumber
+for c=1 to checklist quantity()
+ print checklist string$(c)
+next c
+
+rem Manipulate single limb of the object
+hide limb ObjectNumber, LimbNumber
+show limb ObjectNumber, LimbNumber
+offset limb ObjectNumber, LimbNumber, 0, 0, 100
+rotate limb ObjectNumber, LimbNumber, XAngle, YAngle, ZAngle
+scale limb ObjectNumber, LimbNumber, XScale, YScale, ZScale
+color limb ObjectNumber, LimbNumber, rgb(0,255,0)
+texture limb ObjectNumber, LimbNumber, ImageNumber
+scroll limb texture ObjectNumber, LimbNumber, UValue, VValue
+scale limb texture ObjectNumber, LimbNumber, XScale, YScale
+
+return
+
+_newcommands:
+
+rem Set starting object numbers
+ObjectNumber=1+rnd(49)
+SecondObject=51+rnd(49)
+ImageNumber=1+rnd(5)
+Side=ImageNumber
+
+rem Load image
+load image "iron.jpg",ImageNumber
+
+rem Create a higher quality sphere
+make object sphere ObjectNumber,100,5,30
+texture object ObjectNumber,ImageNumber
+
+rem Test loop
+do
+
+rem Produce random values
+Wireframe=rnd(1)
+Transparency=rnd(1)
+Cull=rnd(1)
+Filter=rnd(1)
+Light=rnd(1)
+Fog=rnd(1)
+Ambient=rnd(1)
+VertexShaderNumber=1+rnd(5)
+
+rem Try each command group at random
+r=r+1 : if r>=5 then r=0
+if r=0 then gosub _newobjectcommands
+if r=1 then gosub _newtexturecommands
+if r=2 then gosub _newvisualcommands
+if r=3 then gosub _newshadercommands
+if r=4 then gosub _newpixelshadercommands
+
+rem Remove any second object
+if object exist(SecondObject)=1 then delete object SecondObject
+
+rem Display data
+s=rnd(2)
+cls
+print "NEW BASIC3D EXPRESSION DATA (";r;")"
+print
+if s=0
+ print "3D DEVICE DATA"
+ print "devicetype:";get device type()
+ print "max lights:";get maximum lights()
+ print "max tex width:";get maximum texture width()
+ print "max tex height:";get maximum texture height()
+ print "max volume extent:";get maximum volume extent()
+ print "max vertexshader version:";get maximum vertex shader version()
+ print "max vertexshader constant:";get maximum vertex shader constants()
+ print "max pixelshader version:";get maximum pixel shader version()
+ print "max pixelshader value:";get maximum pixel shader value()
+ print
+endif
+if s=1
+ print "GENERAL AVAILABILITY FLAGS"
+ print "blit sys to local:";blitsystolocal available()
+ print "calibrate gamma:";calibrategamma available()
+ print "fullscreen gamma:";fullscreengamma available()
+ print "render after flip:";renderafterflip available()
+ print "render windowed:";renderwindowed available()
+ print "tlvertex system memory:";tlvertexsystemmemory available()
+ print "tlvertex video memory:";tlvertexvideomemory available()
+ print "nonlocal video memory:";nonlocalvideomemory available()
+ print "texture system memory:";texturesystemmemory available()
+ print "texture video memory:";texturevideomemory available()
+ print "fog range:";fogrange available()
+ print "fog table:";fogtable available()
+ print "fog vertex:";fogvertex available()
+ print "wbuffer:";wbuffer available()
+ print "wfog:";wfog available()
+ print "zbuffer:";zbuffer available()
+ print "zfog:";zfog available()
+ print
+endif
+if s=2
+ print "TEXTURE AVAILABILITY FLAGS"
+ print "alpha:";alpha available()
+ print "alpha comparison:";alphacomparison available()
+ print "anistropic filtering:";anistropicfiltering available()
+ print "antialias:";antialias available()
+ print "clip and scale points:";clipandscalepoints available()
+ print "clip tlverts:";cliptlverts available()
+ print "color perspective:";colorperspective available()
+ print "color write enable:";colorwriteenable available()
+ print "cubemap:";cubemap available()
+ print "cullccw:";cullccw available()
+ print "cullcw:";cullcw available()
+ print "dither:";dither available()
+ print "mipcubemap:";mipcubemap available()
+ print "mipmap:";mipmap available()
+ print "mipmap lodbias:";mipmaplodbias available()
+ print "mipmap volume:";mipmapvolume available()
+ print "non power of 2 textures:";nonpowtextures available()
+ print "perspective textures:";perspectivetextures available()
+ print "projected textures:";projectedtextures available()
+ print "seperate texture memories:";seperatetexturememories available()
+ print "only square textures:";onlysquaretextures available()
+ print "volumemap:";volumemap available()
+ print
+endif
+
+rem Update screen
+sync
+
+rem Short pause
+sleep 1000
+
+rem End loop
+loop
+
+return
+
+_newobjectcommands:
+
+rem Clone object
+clone object ObjectNumber, SecondObject
+
+rem Move clone slightly so we can see it
+if object exist(SecondObject)=1 then position object SecondObject,50,50,50
+
+rem Move against the object angle
+move object up ObjectNumber, rnd(25)
+move object down ObjectNumber, rnd(25)
+move object left ObjectNumber, rnd(25)
+move object right ObjectNumber, rnd(25)
+
+rem Adjust the collision radius of the object
+set object radius ObjectNumber, 50
+
+return
+
+_newtexturecommands:
+
+rem Apply a texturing style
+set light mapping on ObjectNumber, ImageNumber
+set cube mapping on ObjectNumber, Side, Side, Side, Side, Side, Side
+set sphere mapping on ObjectNumber, ImageNumber
+set detail mapping on ObjectNumber, ImageNumber
+set blend mapping on ObjectNumber, ImageNumber, 10
+set bump mapping on ObjectNumber, ImageNumber
+set cartoon shading on ObjectNumber, ImageNumber, ImageNumber
+
+return
+
+_newvisualcommands:
+
+rem Adjust visual properties of the object
+set object wireframe ObjectNumber, Wireframe
+set object transparency ObjectNumber, Transparency
+set object cull ObjectNumber, Cull
+set object filter ObjectNumber, Filter
+set object light ObjectNumber, Light
+set object fog ObjectNumber, Fog
+set object ambient ObjectNumber, Ambient
+
+return
+
+_newshadercommands:
+
+rem Constants for vertex shader
+#constant CSCALE          1
+#constant CTRANSLATION    2
+#constant CXROTATE        3
+#constant CYROTATE        4
+#constant CZROTATE        5
+#constant CROTATION       6
+#constant CWORLD          7
+#constant CVIEW           8
+#constant CPROJECTION     9
+#constant CTEMP           10
+#constant CLIGHT          11
+#constant CDEGTORAD       ( 3.14 / 180.0 )
+
+rem Provide vertex shader with stream count
+set vertex shader streamcount VertexShaderNumber, 4
+
+rem Provide vertex shader with stream
+VSDT_FLOAT2=0x01 : VSDT_FLOAT3=0x02 : VSDT_D3DCOLOR=0x04
+VSDE_POSITION=0 : VSDE_NORMAL=3 : VSDE_DIFFUSE=5 : VSDE_TEXCOORD0=7
+set vertex shader stream VertexShaderNumber, 1, VSDE_POSITION, VSDT_FLOAT3
+set vertex shader stream VertexShaderNumber, 2, VSDE_NORMAL, VSDT_FLOAT3
+set vertex shader stream VertexShaderNumber, 3, VSDE_DIFFUSE, VSDT_D3DCOLOR
+set vertex shader stream VertexShaderNumber, 4, VSDE_TEXCOORD0, VSDT_FLOAT2
+
+rem Create a vertex shader from a text file
+create vertex shader from file VertexShaderNumber, "vshader.vsh"
+
+rem Make simple object
+if object exist(ObjectNumber)=1 then delete object ObjectNumber
+make object sphere ObjectNumber,100
+
+rem Convert object to correct mesh format
+FVF_XYZ=0x002 : FVF_NORMAL=0x010 : FVF_DIFFUSE=0x040 : FVF_TEX1=0x100
+FVF_FINAL=D3DFVF_XYZ || D3DFVF_NORMAL || D3DFVF_DIFFUSE || D3DFVF_TEX1
+convert object fvf ObjectNumber,FVF_FINAL
+
+rem Check if vertex shader was created
+if vertex shader exist(VertexShaderNumber)=1
+
+ rem Apply vertex shader to object
+ set vertex shader on ObjectNumber, VertexShaderNumber
+
+ rem Create required matrices
+ r=make matrix4(CVIEW)
+ r=make matrix4(CPROJECTION)
+ r=make matrix4(CSCALE)
+ r=make matrix4(CTRANSLATION)
+ r=make matrix4(CXROTATE)
+ r=make matrix4(CYROTATE)
+ r=make matrix4(CZROTATE)
+ r=make matrix4(CROTATION)
+ r=make matrix4(CWORLD)
+ r=make matrix4(CTEMP)
+
+ rem required light vector
+ r=make vector3(CLIGHT)
+
+ rem setup camera and light vector position
+ sync on : position camera 0,0,-500
+ set vector3 CLIGHT,0,0,-500
+
+ rem Simple loop
+ while mouseclick()=0
+
+  rem get view and projection matrices
+  view matrix4 CVIEW
+  projection matrix4 CPROJECTION
+
+  rem setup a scale matrix
+  scale matrix4 CSCALE, 2.0, 2.0, 2.0
+
+  rem now setup the position
+  translate matrix4 CTRANSLATION, 0.0, 10.0, 0.0
+
+  rem setup rotation
+  rotate x matrix4 CXROTATE, 0.0 * CDEGTORAD
+  rotate y matrix4 CYROTATE, 0.0 * CDEGTORAD
+  rotate z matrix4 CZROTATE, 45.0 * CDEGTORAD
+
+  rem multiply all 3 rotation matrices together
+  multiply matrix4 CROTATION, CXROTATE, CYROTATE
+  multiply matrix4 CROTATION, CROTATION, CZROTATE
+
+  rem multiply all final matrices
+  multiply matrix4 CTEMP,  CROTATION, CSCALE
+  multiply matrix4 CWORLD, CTEMP,     CSCALE
+  multiply matrix4 CWORLD, CWORLD,    CVIEW
+  multiply matrix4 CWORLD, CWORLD,    CPROJECTION
+
+  rem transpose the matrix
+  transpose matrix4 CWORLD, CWORLD
+
+  rem we send the light vector3 to the vertex shader
+  set vertex shader vector VertexShaderNumber, 4, CLIGHT, 4
+
+  rem this is an important part – we send the world matrix to the vertex shader
+  set vertex shader matrix VertexShaderNumber, 0, CWORLD, 4
+
+  rem camera look
+  rotate camera camera angle x()+mousemovey(),camera angle y()+mousemovex(),0
+
+  rem update screen
+  sync
+
+ rem end loop
+ endwhile
+
+ rem Deactivate vertex shader of the object
+ set vertex shader off ObjectNumber
+
+ rem Delete a vertex shader
+ delete vertex shader VertexShaderNumber
+
+endif
+
+return
+
+_newpixelshadercommands:
+
+rem Create an object
+if object exist(1)=1 then delete object 1
+make object sphere 1,10
+
+rem If Pixel Shaders supported
+if get maximum pixel shader version()>0
+
+ rem Create a pixel shader from a text file
+ create pixel shader from file PixelShaderNumber, "pixelshader.psh"
+
+ rem Provide pixel shader with a texture
+ ImageNumber=1
+ load image "face.bmp",ImageNumber
+ set pixel shader texture PixelShaderNumber, 0, ImageNumber
+
+ rem Check if pixel shader was created
+ if pixel shader exist(PixelShaderNumber)=1
+
+  rem Apply pixel shader to object
+  set pixel shader on ObjectNumber, PixelShaderNumber
+
+ endif
+
+ rem Main loop
+ while mouseclick()<>2
+  set cursor 0,0 : print "Press Right Mouse Button To Exit"
+ endwhile
+
+ rem Check if pixel shader was created
+ if pixel shader exist(PixelShaderNumber)=1
+
+  rem Deactivate pixel shader of the object
+  set pixel shader off ObjectNumber
+
+  rem Delete a pixel shader
+  delete pixel shader PixelShaderNumber
+
+ endif
+
+else
+ print "No Pixel Shader Support - Press Key" : wait key
+endif
+
+return
+

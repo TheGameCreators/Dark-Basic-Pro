@@ -1,0 +1,98 @@
+Rem Pick Object
+Rem Created: 14/07/2003 18:54:11
+
+rem Init app
+sync on : sync rate 60
+
+rem Make floor
+make object plain 1,300,300
+position object 1,0,-50,0
+xrotate object 1,270
+
+rem Make object to drag
+make object cube 2,100
+set shadow shading on 2
+
+rem Setup camera and light
+set point light 0,-100,500,-100
+position camera -200,0,-200
+point camera 0,0,0
+
+rem main loop
+do
+
+rem Call drag subroutine
+gosub _drag_object
+
+rem User prompt
+center text 320,20,"CLICK AND HOLD OBJECT TO DRAG - RIGHT BUTTON TO ROTATE"
+
+rem Update screen
+sync
+
+rem End loop
+loop
+
+
+_drag_object:
+
+if mouseclick()=0 then pickmode=0 : cursorobj=0
+mclick=mouseclick()
+if mclick>0
+ if pickmode=0
+  cursorobj=pick object(mousex(),mousey(),2,2)
+  if cursorobj>0
+   pickmode=mclick
+   pickdistance#=get pick distance()
+   pickfromx#=get pick vector x()
+   pickfromy#=get pick vector y()
+   pickfromz#=get pick vector z()
+   if pickmode=1
+    objx#=object position x(cursorobj)
+    objy#=object position y(cursorobj)
+    objz#=object position z(cursorobj)
+   else
+    objx#=object angle x(cursorobj)
+    objy#=object angle y(cursorobj)
+    objz#=object angle z(cursorobj)
+    pickdiffx#=mousemovey() : pickdiffx#=0
+    pickdiffy#=mousemovex() : pickdiffy#=0
+   endif
+  else
+   highlightobj=0
+  endif
+ endif
+ if pickmode>0
+  if pickmode=1
+   pick screen mousex(),mousey(),pickdistance#
+   picktox#=get pick vector x()
+   picktoy#=get pick vector y()
+   picktoz#=get pick vector z()
+   pickdiffx#=picktox#-pickfromx#
+   pickdiffy#=picktoy#-pickfromy#
+   pickdiffz#=picktoz#-pickfromz#
+   grid=0
+   if grid=1
+    pickdiffx#=int(pickdiffx#/5)*5
+    pickdiffy#=int(pickdiffy#/5)*5
+    pickdiffz#=int(pickdiffz#/5)*5
+   endif
+   position object cursorobj,objx#+pickdiffx#,objy#+pickdiffy#,objz#+pickdiffz#
+  else
+   pickdiffx#=pickdiffx#+mousemovey()
+   pickdiffy#=pickdiffy#+mousemovex()
+   grid=0
+   if grid=1
+    tpickdiffx#=int(pickdiffx#/22.5)*22.5
+    tpickdiffy#=int(pickdiffy#/22.5)*22.5
+   else
+    tpickdiffx#=pickdiffx#
+    tpickdiffy#=pickdiffy#
+   endif
+   rotate object cursorobj,wrapvalue(objx#-tpickdiffx#),wrapvalue(objy#-tpickdiffy#),objz#
+  endif
+ endif
+endif
+
+return
+

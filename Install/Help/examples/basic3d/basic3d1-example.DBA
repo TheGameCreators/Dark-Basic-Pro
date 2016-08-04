@@ -1,0 +1,187 @@
+rem Basic3D Showcase
+
+rem Standard Setup Code for all examples
+backdrop off : cls : sync on : sync rate 0 : hide mouse
+set text font "arial" : set text size 16
+set text to bold : set text transparent
+
+rem Create availability chart
+dim name$(11)
+set image colorkey 32,32,32
+set text size 14 : cls rgb(32,32,32)
+text 10,0,"MODES AVAILABLE"
+for t=1 to 11
+ if t=1 then name$(t)="[1] Normal Texture"
+ if t=2 then name$(t)="[2] Light Mapping"
+ if t=3 then name$(t)="[3] Cube Mapping"
+ if t=4 then name$(t)="[4] Sphere Mapping"
+ if t=5 then name$(t)="[5] Detail Mapping"
+ if t=6 then name$(t)="[6] Custom Blend Mapping"
+ if t=7 then name$(t)="[7] Bump Mapping"
+ if t=8 then name$(t)="[8] Cartoon Shading"
+ if t=9 then name$(t)="[9] Rainbow Shading"
+ if t=10 then name$(t)="[0] Reflection Shading"
+ if t=11 then name$(t)="[-] Shadow Shading"
+ t$=name$(t) : a$="Available"
+ if t>=7 and t<=11
+  if get maximum vertex shader version()<1.0 then a$="Not Available"
+  if t>=10 and t<=11
+   if statistic(2)=0 then a$="Not Available"
+  endif
+ endif
+ text 10,(t*12),t$+" "+a$
+next t
+get image 31,0,0,256,256
+set text size 16 : cls
+
+rem User Prompt
+center text screen width()/2,screen height()/2,"LOADING" : sync
+
+rem Load music
+load sound "space.wav",1
+set sound volume 1,1
+loop sound 1
+
+rem Load Images
+set image colorkey 255,0,255
+load image "microid.bmp",1
+
+rem Load images (textures)
+load image "a.bmp",2
+load image "b.bmp",3
+load image "c.bmp",4
+load image "models\ast4.bmp",5
+load image "sky\spacesphere.bmp",6
+load image "bump.bmp",7
+load image "shade.bmp",8
+load image "edge.bmp",9
+load image "e.bmp",10
+load image "rainbow.tga",21
+
+rem Load sky cube (textures)
+load image "sky\am1.bmp",11
+load image "sky\am2.bmp",12
+load image "sky\am3.bmp",13
+load image "sky\am4.bmp",14
+load image "sky\am5.bmp",15
+load image "sky\am6.bmp",16
+
+rem Load sky
+set dir "sky"
+load object "am.x",1
+set object specular 1,0
+set object 1,1,1,1,0,0,0,0
+set object texture 1,3,0
+scale object 1,10,10,10
+set dir ".."
+
+rem Load asteroid model
+set dir "models"
+load object "ast4.x",2
+set object specular 2,0
+rotate object 2,270,0,0
+scale object 2,5,5,5
+set dir ".."
+
+rem Reflection plane
+make object plain 3,300,300
+position object 3,0,-50,0
+set object specular 3,0
+hide object 3
+
+rem Set Camera
+autocam off
+set camera range 1,10000
+position camera 0,0,-200
+point camera 0,0,0
+set point light 0,0,300,0
+
+rem Load microid sprite animation
+dim sprx#(50)
+dim spry#(50)
+dim sprs#(50)
+for t=1 to 48 : sprx#(t)=rnd(640) : sprs#(t)=5+(rnd(50)/10.0) : spry#(t)=rnd(screen height()) : next t
+sprite 1,0,0,1
+set sprite 1,0,1
+size sprite 1,128,8
+set sprite alpha 1,32
+
+rem Sprite info panel
+sprite 50,0,0,31 : set sprite 50,0,1
+
+rem First Effect
+set sphere mapping on 2,6
+desc$="4. Sphere Mapping"
+distance#=5.0 : mode=0
+
+do
+
+rem Control effects
+k$=inkey$()
+if k$<>""
+ lk$=k$ : mode=1+(asc(k$)-asc("1"))
+ if k$="0" then mode=10
+ if k$="-" then mode=11
+ if mode=1 then texture object 2,5 : hide object 3 : color object 3,rgb(255,255,255) : desc$=name$(1)
+ if mode=2 then set light mapping on 2,2 : desc$=name$(2)
+ if mode=3 then set cube mapping on 2,11,12,13,14,15,16 : desc$=name$(3)
+ if mode=4 then set sphere mapping on 2,6 : desc$=name$(4)
+ if mode=5 then set detail mapping on 2,3 : desc$=name$(5)
+ if mode=6 then set blend mapping on 2,4,10 : desc$=name$(6)
+ if mode=7 then set bump mapping on 2,7 : desc$=name$(7)
+ if mode=8 then set cartoon shading on 2,8,9 : desc$=name$(8)
+ if mode=9 then set rainbow shading on 2,21 : desc$=name$(9)
+ if mode=10 then set reflection shading on 3 : show object 3 : desc$=name$(10)
+ if mode=11 then color object 3,rgb(255,255,255) : set shadow shading on 2 : show object 3 : desc$=name$(11)
+endif
+
+rem Control light position using mousex
+position light 0,mousex()-320,240-mousey(),-300
+
+rem Rotate sky
+yrotate object 1,wrapvalue(object angle y(1)+0.01)
+
+rem wobble reflection plane for effect
+wob#=wrapvalue(wob#+1)
+rotate object 3,90+180+sin(wob#)*10,wob#,cos(wob#)*5
+position object 3,0,-50+(sin(wob#)*10),0
+
+rem Rotate asteroid
+ay#=wrapvalue(ay#+0.10)
+ax#=wrapvalue(ax#+0.03)
+az#=wrapvalue(az#+0.01)
+rotate object 2,ax#,ay#,az#
+scale object 2,distance#,distance#,distance#
+distance#=distance#+0.04 : if distance#>149.99 then distance#=150.0
+
+rem Music volume
+mvol=70+((distance#/150.0)*30)
+set sound volume 1,mvol
+
+rem Paste many microids
+if mode<>11
+ for t=1 to 48
+  set sprite alpha 1,10+t
+  sx#=10*sprs#(t)
+  sy#=sprs#(t)*1.0
+  if sx#<128 then sx#=128
+  if sy#<8 then sy#=8
+  size sprite 1,sx#,sy#
+  paste sprite 1,sprx#(t),spry#(t)
+  inc sprx#(t),sprs#(t)*2
+  if sprx#(t)>screen width()+64
+   sprx#(t)=-64
+   spry#(t)=rnd(screen height())
+  endif
+ next t
+endif
+
+rem Show Framerate
+text 20,screen height()-40,desc$
+fps$="DBPro Fps: "+str$(screen fps())
+text screen width()-20-text width(fps$),screen height()-40,fps$
+
+rem Update screen
+sync
+
+loop

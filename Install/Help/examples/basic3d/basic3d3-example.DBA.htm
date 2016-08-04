@@ -1,0 +1,185 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\..\main.htm"><img src="..\..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\commands.htm"><img src="..\..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\..\examples.htm"><img src="..\..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\documents.htm"><img src="..\..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\..\index.htm"><img src="..\..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR><BR><pre><FONT FACE=Courier SIZE=2>rem Mesh Manipulation
+
+rem Standard Setup Code for all examples
+`set window off
+sync on : sync rate 0 : color backdrop rgb(0,128,0)
+set text font "arial" : set text size 16
+set text to bold : set text transparent
+ink rgb(255,255,0),0
+
+rem Load model
+ObjectNumber=1
+set dir "models"
+load object "ninja.x",ObjectNumber
+rotate object ObjectNumber,0,0,0
+scale object ObjectNumber,6000,6000,6000
+loop object ObjectNumber
+set dir ".."
+
+rem Create mesh from primitive
+randomize timer()
+pr=1+rnd(5)
+MeshIndex=1
+if pr=1 then make object cube 5,50
+if pr=2 then make object box 5,50,25,10
+if pr=3 then make object sphere 5,50
+if pr=4 then make object cylinder 5,50
+if pr=5 then make object cone 5,50
+if pr=6 then make object plain 5,100,50
+if pr=7 then make object triangle 5,0,0,0,50,50,0,50,0,0
+make mesh from object MeshIndex,5
+delete object 5
+
+rem Sphere to Shape
+if mesh exist(MeshIndex)=1
+ ObjectNumberB=2
+ make object sphere ObjectNumberB,50
+ change mesh ObjectNumberB,0,MeshIndex
+ position object ObjectNumberB,50,100,0
+ set object ObjectNumberB,0,1,1,0,0,0,0
+ set object light ObjectNumberB,1
+ delete mesh MeshIndex
+endif
+
+rem Make a new object from an object
+ObjectNumberC=3 : ImageNumber=1
+load image "models\ninja.bmp",ImageNumber
+make mesh from object MeshIndex,ObjectNumber
+if mesh exist(MeshIndex)=1
+ make object ObjectNumberC, MeshIndex, ImageNumber
+ position object ObjectNumberC, 100, 0, 0
+ set object wireframe ObjectNumberC,1
+ set object light ObjectNumberC,1
+ delete mesh MeshIndex
+endif
+
+rem Load mesh and make object with it
+ObjectNumberD=4
+load mesh "models\ninja.x",MeshIndex
+make object ObjectNumberD,MeshIndex,0
+position object ObjectNumberD,50,0,0
+scale object ObjectNumberD,6000,6000,6000
+
+rem Save and delete a mesh
+save mesh "newmesh.x",MeshIndex
+delete mesh MeshIndex
+
+rem Extract limb from object
+ObjectNumberE=5
+make object from limb ObjectNumberE,ObjectNumber,11
+position object ObjectNumberE,-50,50,0
+
+rem Remove limb from object
+remove limb ObjectNumber,11
+
+rem Create a hierarchy of five cylinders
+ObjectNumberF=6
+MeshIndex1=2 : MeshIndex2=3 : MeshIndex3=4
+make object cube 6,20 : make mesh from object MeshIndex1, 6 : delete object 6
+make object cube 6,50 : make mesh from object MeshIndex3, 6 : delete object 6
+make object cylinder 6,20 : scale object 6,10,300,10
+make mesh from object MeshIndex2, 6 : delete object 6
+make object box ObjectNumberF, 100,2,100
+add limb ObjectNumberF, 1, MeshIndex1 : link limb ObjectNumberF, 0, 1
+add limb ObjectNumberF, 2, MeshIndex2 : link limb ObjectNumberF, 1, 2
+add limb ObjectNumberF, 3, MeshIndex2 : link limb ObjectNumberF, 2, 3
+add limb ObjectNumberF, 4, MeshIndex3 : link limb ObjectNumberF, 3, 4
+offset limb ObjectNumberF, 3, 0, 60, 0
+offset limb ObjectNumberF, 4, 0, 60, 0
+position object ObjectNumberF,-100,0,0
+
+rem Example prompt
+desc$="Normal Object and Object From Mesh"
+
+rem Setup camera
+position camera 0,100,-300
+autocam off
+
+rem Main loop
+do
+
+rem Show all limbs
+set cursor 0,0
+print "LIMBS IN OBJECT"
+perform checklist for object limbs ObjectNumber
+for c=1 to checklist quantity()
+ print "  ";checklist value a(c);" ";checklist string$(c)
+next c
+
+rem Rotate objects
+yrotate object ObjectNumberB,wrapvalue(object angle y(ObjectNumberB)+1)
+yrotate object ObjectNumberC,wrapvalue(object angle y(ObjectNumberC)+1)
+
+rem Rotate limbs
+a#=wrapvalue(a#+1)
+for t=1 to 4
+ if limb exist(ObjectNumberF,t)=1 then rotate limb ObjectNumberF,t,0,0,cos(a#)*-10
+next t
+scale limb ObjectNumberF, 4, 200+cos(a#)*100, 200+cos(a#)*100, 200+cos(a#)*100
+
+rem Rotate head of model while it animates
+rotate limb ObjectNumber,16,0,cos(a#)*45,0
+
+rem Modify texture of each limb of model
+for t=0 to 16
+ if limb exist(ObjectNumber,t)=1
+  scale limb texture ObjectNumber,t,100.01,100.01
+  scroll limb texture ObjectNumber,t,0.001,0.002
+ endif
+next t
+
+rem Manipulate individual limbs
+if a#>180 then hide limb ObjectNumber,9 else show limb ObjectNumber,9
+if a#>180
+ color limb ObjectNumberF,1,rgb(255,255,0)
+else
+ color limb ObjectNumberF,1,rgb(0,0,255)
+endif
+
+rem Space will remove a limb and replace it
+if spacekey()=1 and limb exist(ObjectNumberF,3)=1
+ remove limb ObjectNumberF,4
+ make mesh from object MeshIndex, ObjectNumberE
+ add limb ObjectNumberF, 4, MeshIndex
+ link limb ObjectNumberF, 3, 4
+ offset limb ObjectNumberF, 4, 0, 60, 0
+endif
+
+rem Show Framerate
+text 20,screen height()-40,desc$
+fps$="DBPro Fps: "+str$(screen fps())
+text screen width()-20-text width(fps$),screen height()-40,fps$
+
+rem Update screen
+sync
+
+rem End loop
+loop</pre></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

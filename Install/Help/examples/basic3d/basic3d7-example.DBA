@@ -1,0 +1,338 @@
+Rem FX Mini Browser
+Rem Created: 28/06/2003 03:57:13
+
+rem Init app
+sync on : sync rate 60 : hide mouse : backdrop off
+
+rem Obtain information on shader capabilities
+vs#=get maximum vertex shader version()
+ps#=get maximum pixel shader version()
+
+rem Screen dimensions
+gap=screen height()/20
+topline=gap+60
+halfwidth=screen width()/2
+middleline=screen width()/2
+bottomline=screen height()-gap
+verthalfline=topline+((bottomline-topline)/2)
+rightline=screen width()-gap
+displaymax=((bottomline-topline)/18)-2
+valuesdisplaymax=((bottomline-(verthalfline+gap))/18)-2
+displaywidthmax=((middleline-leftline)/10)-2
+valuesdisplaywidthmax=((rightline-middleline)/10)-9
+
+rem Create list of FX files
+dim list$(0) : empty array list$()
+scandir("fx","")
+listmax=2+array count(list$())
+listtop=1
+
+rem Create list of Effect Values
+type valuestype name$ vartype hooked endtype
+dim values$(0) as valuestype : empty array values$()
+valuesmax=1+array count(values$())
+valuestop=1
+
+rem Setup camera and light for preview camera
+position camera 0,0,0,-1000
+make camera 1 : set camera view 1,middleline,topline,rightline,verthalfline
+set camera aspect 1,(rightline-middleline)/((verthalfline-topline)+0.0)
+backdrop on 1 : color backdrop 1,0
+
+rem Current vars
+highlight=1 : valueshighlight=1 : loadeffect=1
+
+rem Initialise interface screen
+gosub _initscreen
+
+rem Move around world
+do
+
+rem control interface
+if invalues=0
+ `
+ rem control list highlight
+ if scancode()=0 then keypress=0
+ if keypress=0
+  if upkey()=1 and highlight>1 then dec highlight : keypress=1
+  if downkey()=1 and highlight<listmax-1 then inc highlight : keypress=1
+  if returnkey()=1 then autosphere=1-autosphere : keypress=1 : loadeffect=highlight
+  if scancode()=15 then invalues=1 : keypress=1
+  if lower$(inkey$())="t" then transposetoggle=1-transposetoggle : keypress=1 : set effect transpose 1,transposetoggle
+  if inkey$()="1" then set effect technique 1,"tec0" : keypress=1
+  if inkey$()="2" then set effect technique 1,"tec1" : keypress=1
+  if inkey$()="3" then set effect technique 1,"tec2" : keypress=1
+ endif
+ if highlight>listtop+displaymax then listtop=highlight-displaymax
+ if highlight<listtop then listtop=highlight
+ if spacekey()=1 then loadeffect=highlight
+ `
+else
+ `
+ rem control values highlight
+ if scancode()=0 then keypress=0
+ if keypress=0
+  if upkey()=1 and valueshighlight>1 then dec valueshighlight : keypress=1
+  if downkey()=1 and valueshighlight<valuesmax-1 then inc valueshighlight : keypress=1
+  if scancode()=15 then invalues=0 : keypress=1
+  if lower$(inkey$())="t" then transposetoggle=1-transposetoggle : keypress=1 : set effect transpose 1,transposetoggle
+  if spacekey()=1 and effect exist(1)=1
+   name$=values$(valueshighlight-1).name$
+   vartype=values$(valueshighlight-1).vartype
+   select vartype
+    case 1 : set effect constant boolean 1,name$,rnd(1) : endcase
+    case 2 : set effect constant integer 1,name$,rnd(10) : endcase
+    case 3 : set effect constant float 1,name$,rnd(10) : endcase
+    case 4
+     r=make vector4(1)
+     set vector4 1,rnd(100)/100.0,rnd(100)/100.0,rnd(100)/100.0,rnd(100)/100.0
+     set effect constant vector 1,name$,1
+     r=delete vector4(1)
+    endcase
+    case 5
+     r=make matrix4(2)
+     set identity matrix4 2
+     set effect constant matrix 1,name$,2
+     r=delete matrix4(2)
+    endcase
+   endselect
+   gosub _updateeffectvalues
+   keypress=1
+  endif
+ endif
+ if valueshighlight>valuestop+valuesdisplaymax then valuestop=valueshighlight-valuesdisplaymax
+ if valueshighlight<valuestop then valuestop=valueshighlight
+ `
+endif
+
+rem Load model and effect on command
+if loadeffect<>-1
+ effect$=list$(loadeffect-1)
+ gosub _loadmodelandeffect
+ loadeffect=-1
+endif
+
+rem Rotate any model in view
+if object exist(1)=1
+ yrotate object 1,wrapvalue(object angle y(1)+1)
+endif
+
+rem Move light around slightly
+l#=l#+4.0 : set point light 0,camera position x(1)+(cos(l#)*2),camera position y(1)+(sin(l#)*2),camera position z(1)-1
+
+rem refresh interface
+gosub _refreshscreen
+
+rem update screen
+sync
+
+rem end loop
+loop
+
+`
+` Subroutines for Interface
+`
+
+_initscreen:
+
+rem Clear screen
+create bitmap 1,screen width(),screen height()
+set current camera 0 : draw to back
+cls rgb(192,192,192)
+
+rem Setup font
+set text font "Courier New"
+set text transparent
+
+rem Write labels
+set text size 20
+ink rgb(0,0,0),0 : center text halfwidth,(gap/2)-10,"DBPRO FX MINI-BROWSER"
+set text size 16
+center text halfwidth,(gap/2)+10,"[ARROWKEYS] TO NAVIGATE  [TAB] TO TOGGLE  [T] TRANSPOSE TOGGLE"
+center text gap+((middleline-(gap*2))/2),topline-20,"FX FILES"
+center text middleline+((rightline-middleline)/2),topline-20,"PREVIEW AREA"
+center text middleline+((rightline-middleline)/2),verthalfline+gap-20,"EFFECT VALUES"
+center text halfwidth,bottomline+(gap/2)-10,"VERTEX SHADER VERSION:"+str$(vs#)+"  PIXEL SHADER VERSION:"+str$(ps#)
+
+rem Text for boxout
+set current bitmap 0
+set text opaque
+
+return
+
+_refreshscreen:
+
+rem Clear screen
+set current camera 0
+copy bitmap 1,0
+
+ink rgb(0,0,0),rgb(192,192,192)
+if invalues=0
+ center text halfwidth,(gap/2)+30,"[RETURN] TO USE AUTO-SPHERE  [SPACE] TO LOAD EFFECT"
+else
+ center text halfwidth,(gap/2)+30,"[SPACE] TO SET RANDOM VALUE TO EFFECT VALUE"
+endif
+
+rem Panel for FX list
+ink 0,0 : box gap,topline,middleline-gap,bottomline
+ink rgb(255,255,255),0
+for n=0 to displaymax
+ if listtop+n<listmax
+  if listtop+n=highlight and invalues=0
+   ink 0,rgb(255,255,255)
+  else
+   ink rgb(255,255,255),0
+  endif
+  text gap+10,topline+6+(n*18),right$(list$(listtop+n-1),displaywidthmax)
+ endif
+next n
+
+rem Panel for Values list
+ink 0,0 : box middleline,verthalfline+gap,rightline,bottomline
+ink rgb(255,255,255),0
+if effect exist(1)=0
+ `
+ tline=1
+ for n=0 to checklist quantity()
+   if n=0
+    text middleline+10,verthalfline+gap+6,"EFFECT ERRORS REPORT"
+   else
+    desc$=checklist string$(n)
+    tperline=valuesdisplaywidthmax+9
+    for chunk=0 to len(desc$) step tperline
+     text middleline+10,verthalfline+gap+6+(tline*18),left$(right$(desc$,len(desc$)-chunk),tperline)
+     inc tline
+    next chunk
+   endif
+ next n
+ `
+else
+ `
+ for n=0 to valuesdisplaymax
+  if valuestop+n<valuesmax
+   if values$(valuestop+n-1).vartype=0
+    trgb=rgb(128,128,128)
+   else
+    if values$(valuestop+n-1).hooked=1
+     trgb=rgb(192,255,192)
+    else
+     trgb=rgb(255,192,192)
+    endif
+   endif
+   if valuestop+n=valueshighlight and invalues=1
+    ink 0,trgb
+   else
+    ink trgb,0
+   endif
+   text middleline+10,verthalfline+gap+6+(n*18),right$(values$(valuestop+n-1).name$,valuesdisplaywidthmax)
+   text rightline-40,verthalfline+gap+6+(n*18),right$(str$(values$(valuestop+n-1).vartype),2)
+   text rightline-20,verthalfline+gap+6+(n*18),right$(str$(values$(valuestop+n-1).hooked),2)
+  endif
+ next n
+ `
+endif
+
+return
+
+
+`
+` Subroutines for Effects
+`
+
+_loadmodelandeffect:
+
+rem Delete any existing objects
+if object exist(1)=1 then delete object 1
+
+rem Show delay when loading
+color backdrop 1,0
+sync : sync
+
+rem Load effect
+if effect exist(1)=1 then delete effect 1
+load effect "fx\"+effect$,1,1
+if effect exist(1)=0
+ `
+ rem report the errors in the preview window
+ perform checklist for effect errors
+ `
+else
+ `
+rem Use sphere model or not
+if autosphere=1 then make object sphere 1,1,50,50
+ `
+ rem Use default model if effect has one
+ set effect on 1,"fx\"+effect$,1
+ `
+ rem Then apply the full loaded effect so we can use extra effect commands
+ set object effect 1,1
+ `
+ rem Get Effect Values
+ gosub _updateeffectvalues
+ valuestop=1
+ `
+ rem Reset values highlighter
+ valueshighlight=1
+ `
+ rem Move object and camera position in world for greater FX test
+ position object 1,500,100,50
+ position camera 0,camera position x(0)+500,camera position y(0)+100,camera position z(0)+50
+ `
+ rem Center above the object and restore cameras
+ color backdrop 1,rgb(64,64,64)
+ position camera 1,camera position x(0),camera position y(0),camera position z(0)
+ rotate camera 1,camera angle x(0),camera angle y(0),camera angle z(0)
+ position camera 0,0,0,-10000
+ rotate camera 0,0,0,0
+ `
+endif
+
+return
+
+_updateeffectvalues:
+ `
+ perform checklist for effect values 1
+ empty array values$()
+ for c=1 to checklist quantity()
+  array insert at bottom values$()
+  values$().name$=checklist string$(c)
+  values$().vartype=checklist value a(c)
+  values$().hooked=checklist value b(c)
+ next c
+ valuesmax=1+array count(values$())
+ `
+return
+
+`
+` Function to scan for all FX files
+`
+
+function scandir(folder$,rel$)
+ `
+ set dir folder$
+ find first : fin=0
+ while get file type()>-1
+  file$=get file name$()
+  if file$="." or file$=".."
+   rem ignore . and ..
+  else
+   if get file type()=1
+    scandir(file$,rel$+file$+"\")
+    find first
+    if fin>0
+     for t=1 to fin : find next : next t
+    endif
+   else
+    if lower$(right$(file$,3))=".fx"
+     array insert at bottom list$()
+     list$()=rel$+file$
+    endif
+   endif
+  endif
+  find next
+  fin=fin+1
+ endwhile
+ set dir ".."
+ `
+endfunction
+
