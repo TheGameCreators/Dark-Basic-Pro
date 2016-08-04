@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\..\main.htm"><img src="..\..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\commands.htm"><img src="..\..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\..\examples.htm"><img src="..\..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\documents.htm"><img src="..\..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\..\index.htm"><img src="..\..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR><BR><pre><FONT FACE=Courier SIZE=2>rem Light Showcase
+
+rem Choose better display mode
+if check display mode(1024,768,32)=1
+ set display mode 1024,768,32
+else
+ if check display mode(1024,768,16)=1
+  set display mode 1024,768,16
+ endif
+endif
+
+rem Standard Setup Code for all examples
+sync on : sync rate 0 : backdrop off
+set text font "arial" : set text size 16
+set text to bold : set text transparent
+
+rem Load Hero music
+load music "music\hero.mp3",1 : loop music 1
+
+rem User prompt
+sync : center text screen width()/2,screen height()/2,"LOADING" : sync
+
+rem Load Statue Model
+set normalization on
+load object "models\statue.x",1
+load image "models\bumpmap.bmp",1
+xrotate object 1,270 : fix object pivot 1
+set light mapping on 1,1
+set object specular 1,0
+rotate object 1,0,0,0
+
+rem Load room
+load object "world\room.x",2
+xrotate object 2,270 : fix object pivot 2
+set object specular 2,0
+rotate object 2,0,0,0
+
+rem Set dynamic light zero
+hide light 0
+
+rem Create pixie lights and dots
+for l=1 to 7
+ make light l
+ set point light l,0,0,0
+ set light range l,2000
+ make object sphere 2+l,50 : ghost object on 2+l
+ if l>1 then hide light l : hide object 2+l
+next l
+
+rem Main loop
+desc$="Pixie Lights (Select keys 1-7)"
+do
+
+rem Control light visibility
+k$=inkey$()
+if k$>="1" and k$<="7"
+ if keypress=0
+  keypress=1
+  li=1+(asc(k$)-asc("1"))
+  if light visible(li)=1
+   hide light li : hide object 2+li
+  else
+   show light li : show object 2+li
+  endif
+  c#=wrapvalue(180+(a#+(li*85)))
+ endif
+else
+ keypress=0
+endif
+
+rem Rotate around model
+a#=wrapvalue(a#+0.5)
+b#=wrapvalue(b#+0.2)
+c#=wrapvalue(c#+0.05)
+x#=cos(c#)*250.0
+z#=sin(c#)*300.0
+position light 0,x#,150,z#
+position camera x#,100,z#
+point camera 0,150,0
+
+rem Rotate lights around model
+for l=1 to 7
+ x#=cos(a#+(l*85))*300.0
+ z#=sin(a#+(l*85))*150.0
+ position light l,x#,100+(sin(b#)*100),z#
+ position object 2+l,x#,100+(sin(b#)*100),z#
+next l
+
+rem Alter light colours over time
+leva#=wrapvalue(leva#+0.01)
+level#=cos(leva#)
+for l=1 to 7
+ col=127.0+(127.0*level#)
+ rev=col*-1
+ if l=1 then color light l,col,rev,rev
+ if l=2 then color light l,128,col,128
+ if l=3 then color light l,255,255,col*2
+ if l=4 then color light l,col,rev,col
+ if l=5 then color light l,col,col,col
+ if l=6 then color light l,500,500,500
+ if l=7 then color light l,rev*3,rev*3,rev*3
+next l
+
+rem Show Framerate
+text 20,screen height()-40,desc$
+fps$="DBPro Fps: "+str$(screen fps())
+text screen width()-20-text width(fps$),screen height()-40,fps$
+
+rem Update screen
+sync
+
+rem End loop
+loop
+</pre></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

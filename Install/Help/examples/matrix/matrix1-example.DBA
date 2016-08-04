@@ -1,0 +1,80 @@
+rem Matrix Showcase
+
+rem Standard Setup Code for all examples
+sync on : sync rate 0 : color backdrop 0
+set text font "arial" : set text size 16
+set text to bold : set text transparent
+
+rem Create matrix
+load image "face.bmp",1
+load image "water.bmp",2
+for m=1 to 2
+ if m=1 then s=200
+ if m=2 then s=100
+ make matrix m,s,s,36,36
+ if m=1 then position matrix m,-50,20,-50
+ if m=2 then position matrix m,0,120,0
+ prepare matrix texture m,m,36,36
+ ghost matrix on m
+ tc=1
+ for z=35 to 0 step -1
+  x=0
+  while x<=35
+   set matrix tile m,x,z,tc
+   inc tc : inc x
+  endwhile
+ next z
+next m
+
+rem Setup light
+set point light 0,50,500,50
+color light 0,1000,1000,200
+
+rem Setup camera
+position camera 50,170,50
+point camera 50,0,50
+
+rem Main loop
+desc$="Water Matrix (Hit Space)"
+do
+
+rem Space controls wireframe
+if spacekey()=1
+ if wr=0
+  wrstate=1-wrstate
+  if wrstate=0 then set matrix wireframe off 1 : set matrix wireframe off 2
+  if wrstate=1 then set matrix wireframe on 1 : set matrix wireframe on 2
+  wr=1
+ endif
+else
+ wr=0
+endif
+
+rem Control matrix like water
+for m=1 to 2
+ a#=wrapvalue(a#+1)
+ for z=0 to 36
+  for x=0 to 36
+   x#=cos(a#+(x*10))
+   y#=sin(a#+(z*10))
+   nx#=0.0-(cos(a#+(x*10))*0.25)
+   nz#=0.0-(sin(a#+(z*10))*0.25)
+   ny#=1.0-nx#-nz#
+   set matrix height m,x,z,(x#+y#)*15.0
+   set matrix normal m,x,z,nx#,ny#,nz#
+  next x
+ next z
+ update matrix m
+next m
+
+rem Show Framerate
+text 20,screen height()-40,desc$
+fps$="DBPro Fps: "+str$(screen fps())
+text screen width()-20-text width(fps$),screen height()-40,fps$
+
+rem Update screen
+sync
+
+rem End loop
+loop
+

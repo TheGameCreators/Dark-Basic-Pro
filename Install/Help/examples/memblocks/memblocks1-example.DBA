@@ -1,0 +1,54 @@
+rem Memblocks Showcase
+
+rem Requires 640x480x16 fullscreen
+sync on : sync rate 60 : hide mouse
+
+rem Create array for wavedata
+dim wave_table(72)
+for i = 1 to 72
+   wave_table(i) = int(sin(i*5)*20.0)
+next i
+
+rem Load the first image and store it in memblock 1
+load bitmap "groovy.jpg",0
+make memblock from bitmap 1,0
+make memblock from bitmap 2,0
+
+rem Required variables
+linesize = 640 * 2
+topI = 0
+
+rem Main loop
+while mouseclick()=0
+
+ rem Wrap topI variable
+ topI = topI + 1
+ if topI > 72 then topI = 1
+ rollingI = topI
+
+ rem For each vertical position
+ for i = 0 to 479
+
+ rem Calculate positions
+ fromposition = 52 + (i*linesize)
+ toposition = fromposition+(wave_table(rollingI)*2)
+
+ rem Copy data from one area of memblock to another memblock
+ copy memblock 1,2,FromPosition,ToPosition,1200
+
+ rem Advance roll effect
+ rollingI = rollingI+1
+ if rollingI > 72 then rollingI = 1
+
+next i
+
+rem Update screen with memblock containing wave-bitmap
+make bitmap from memblock 0,2 : sync
+
+rem End loop
+endwhile
+
+rem Remove the memblocks before we exit
+delete memblock 1
+delete memblock 2
+

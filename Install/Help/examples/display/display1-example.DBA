@@ -1,0 +1,43 @@
+rem Display Showcase
+bitsperpixel=screen depth()/8
+
+rem Standard Setup Code for all examples
+sync on : sync rate 0
+set text font "arial" : set text size 16
+set text to bold : set text transparent
+
+rem Load nice backdrop
+load bitmap "backdrop.jpg"
+
+rem Main loop
+desc$="Direct Display Access"
+do
+
+rem Draw to the visual bitmap
+ink rgb(0,0,0),0 : box 0,240,640,480
+ink rgb(255,255,0),0 : circle mousex(),mousey(),8
+
+rem Read from display and write elsewhere
+lock backbuffer
+ptr=get backbuffer ptr()
+pitch=get backbuffer pitch()
+adv=pitch*(get backbuffer height()/2)
+chunk=(screen width()-40)*bitsperpixel
+chunka#=wrapvalue(chunka#+8)
+for y=0 to (get backbuffer height()/2)-1 step 2
+ chunkx=20+((cos(wrapvalue(chunka#+(y*2))))*15)
+ copy memory ptr+adv+(y*pitch)+(chunkx*bitsperpixel),ptr+(y*pitch),chunk
+next y
+unlock backbuffer
+
+rem Show Framerate
+text 20,screen height()-40,desc$
+fps$="DBPro Fps: "+str$(screen fps())
+text screen width()-20-text width(fps$),screen height()-40,fps$
+
+rem Update screen
+sync
+
+rem End loop
+loop
+

@@ -1,0 +1,29 @@
+rem Image Showcase
+
+rem Standard Setup Code for all examples
+sync on : sync rate 0
+set text font "arial" : set text size 16
+set text to bold : set text transparent
+
+rem Load image
+load image "image.bmp",1
+desc$="Fast Image Pasting (1000 per cycle)"
+
+rem Main loop
+do
+
+rem Paste a thousand images on screen per cycle
+for t=1 to 1000
+ paste image 1,rnd(680)-16,rnd(520)-32,1
+next t
+
+rem Show Framerate
+text 20,screen height()-40,desc$
+fps$="DBPro Fps: "+str$(screen fps())
+text screen width()-20-text width(fps$),screen height()-40,fps$
+
+rem Update screen
+sync
+
+rem End loop
+loop

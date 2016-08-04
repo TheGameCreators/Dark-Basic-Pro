@@ -1,0 +1,65 @@
+rem Ftp Showcase
+
+rem Standard Setup Code for all examples
+set text font "arial" : set text size 20
+set text to bold : set text transparent
+
+rem a pretty backdrop
+prettybackdrop()
+
+rem Title
+center text screen width()/2,10,"FTP CONNECTION AND VIEW"
+
+rem Connect to FTP
+gosub _connect
+
+rem View FTP Files
+gosub _viewfiles
+
+rem Disconnect from FTP
+ftp disconnect
+
+rem Wait for exit
+print
+print "Press Any Key To Exit"
+wait key
+end
+
+_connect:
+ url$="www.thegamecreators.com"
+ user$="anonymous"
+ pass$="me@isp.com"
+ time#=timer()
+ set cursor 0,30
+ print "Connecting..." : sync
+ ftp connect url$,user$,pass$
+ if get ftp failure()=0
+  time#=timer()-time#
+  print "Connection established in ";time#/1000.0;" seconds."
+ else
+  print "Could not connect to ";url$
+  print "Error:";get ftp error$()
+  wait key
+  end
+ endif
+return
+
+_viewfiles:
+ print "VIEW EACH FTP FILE IN A FOLDER"
+ if get ftp status()=1
+  print "FTP DIR:";get ftp dir$();"..." : sync
+  ftp find first
+  while get ftp file type()<>-1
+   print "Type:";get ftp file type();
+   print " Name:";get ftp file name$();
+   print " Size:";get ftp file size()
+   ftp find next
+   sync
+  endwhile
+ endif
+return
+
+rem Pretty Backdrop Function
+function prettybackdrop()
+ box 0,0,640,480,rgb(0,128,128),rgb(128,0,0),rgb(128,0,128),rgb(128,128,0)
+endfunction

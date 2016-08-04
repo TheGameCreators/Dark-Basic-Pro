@@ -1,0 +1,114 @@
+rem Input Showcase
+
+rem Standard Setup Code for all examples
+sync on : sync rate 120 : hide mouse
+set text font "arial" : set text size 16
+set text to bold : set text transparent
+
+rem Prepare Force Feedback (if available)
+desc$="Machine Gun Joystick"
+ForcePresent=0
+empty checklist
+PERFORM CHECKLIST FOR CONTROL DEVICES
+for c=1 to checklist quantity()
+ if checklist value a(c)=1
+  SET CONTROL DEVICE checklist string$(c)
+  ForcePresent=1
+  desc$=desc$+" (with Force)"
+ endif
+next c
+
+rem Load wall and images
+set image colorkey 255,0,255
+load bitmap "wall.bmp",1
+load image "hole.bmp",1
+load image "crosshair.bmp",2
+load image "fire.bmp",3
+
+rem Load sound
+load sound "gun.wav",1
+for t=2 to 10
+ clone sound t,1
+next t
+
+rem Setup crosshair sprite
+set current bitmap 0
+set sprite 1,0,1
+offset sprite 1,16,16
+draw to back
+
+rem Setup bullet sprite
+sprite 2,-100,-100,1
+set sprite 2,0,1
+offset sprite 2,8,8
+size sprite 2,16,16
+set sprite alpha 2,128
+
+rem Particle effect setup
+autocam off : backdrop off
+make particles 1,3,50,2.0
+rotate particles 1,270,0,0
+set particle speed 1,0.02
+
+rem Set start pos
+posx#=320
+posy#=240
+
+rem Main loop
+do
+
+rem Read joystick
+posx#=posx#+(joystick x()/500.0)
+posy#=posy#+(joystick y()/500.0)
+posx=posx# : posy=posy#
+fire=joystick fire a()
+
+rem Paste backdrop
+copy bitmap 1,0
+
+rem Position crosshair
+sprite 1,posx,posy,2
+
+rem Make bullet hole if triggered
+if fire=1 and cool=0
+
+ rem Make bullet hole
+ set current bitmap 1
+ r#=rnd(359)
+ rx=cos(r#)*rnd(20)
+ ry=sin(r#)*rnd(20)
+ paste sprite 2,posx+rx,posy+ry
+ paste sprite 2,1000,1000
+ set current bitmap 0
+
+ rem Generate some particles
+ position particles 1,0,0,5
+ position particle emissions 1,(posx-320)/120.0,0,(240-posy)/120.0
+ emis=2
+
+ rem Hear machine gun
+ cool=10
+ for t=1 to 10
+  if sound playing(t)=0 then play sound t : t=11
+ next t
+
+ rem Gun recoil
+ if ForcePresent=1 then force shoot 100,100
+
+endif
+if cool>0 then dec cool
+
+rem Control emissions
+set particle emissions 1, emis
+if emis>0 then dec emis
+
+rem Show Framerate
+ink rgb(255,255,255),0 : text 20,screen height()-40,desc$
+fps$="DBPro Fps: "+str$(screen fps())
+text screen width()-20-text width(fps$),screen height()-40,fps$
+
+rem Update screen
+sync
+
+rem End loop
+loop

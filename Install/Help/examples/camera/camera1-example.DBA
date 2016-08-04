@@ -1,0 +1,142 @@
+rem Camera Showcase
+
+rem Standard Setup Code for all examples
+sync on : sync rate 60 : color backdrop rgb(0,128,0)
+set text font "arial" : set text size 16
+set text to bold : set text transparent
+
+rem Some music
+load music "misty.mp3",1 : loop music 1
+
+rem Loading Prompt
+sync : center text screen width()/2,screen height()/2,"LOADING" : sync
+
+rem Load image
+load image "wall.bmp",1
+
+rem Create character
+for t=1 to 2
+ load object "miko\miko.x",t
+ set object specular t,0
+ xrotate object t,270
+ fix object pivot t
+ if t=1
+  position object t,0,0,200
+  rotate object t,0,180,0
+ else
+  position object t,0,0,-200
+  rotate object t,0,0,0
+ endif
+ loop object t,0,9000
+ set object speed t,500
+next t
+
+rem Create sphere room
+load object "Sphere2.x",3
+scale object 3,1000,1000,1000
+scale object texture 3,10,5
+set object specular 3,0
+texture object 3,1
+
+rem Create reflective circular floor
+make object sphere 5,1000
+color object 5,0 : ghost object on 5
+set reflection shading on 5
+scale object 5,100,100,1
+xrotate object 5,90+180
+set object specular 5,0
+
+rem Cut-out view close-up
+make camera 1
+set camera view 1,320+48,16,640-16,240-48
+make light 1 : color light 1,256,512,2024 : set light range 1,1000
+
+rem Create floating globe
+make object sphere 4,125
+scale object texture 4,300,100
+ghost object on 4
+
+rem Create buzz globe
+make object sphere 999,10 : color object 999,rgb(255,0,0)
+make light 7 : color light 7,1024,100,100
+set light range 7,200
+
+rem Setup main camera and light
+set current camera 0
+set camera range 1,7000
+set point light 0,0,0,0
+set light range 0,1500
+color light 0,256,512,256
+camdist#=0.0
+
+rem Rim Object
+for t=7 to 28
+ s#=t : s#=s#/3.0
+ make object cube t,s#
+ texture object t,4
+ set object t,1,1,1,0,0,0,0
+ ghost object on t
+next t
+
+rem Effect Prompt
+desc$="Multicamera and Reflection View"
+
+rem Main loop
+do
+
+rem Character control
+if leftkey()=1 then yrotate object 1,wrapvalue(object angle y(1)-3)
+if rightkey()=1 then yrotate object 1,wrapvalue(object angle y(1)+3)
+
+rem Let camera track character
+a#=object angle y(1)
+x#=object position x(1)
+y#=object position y(1)
+z#=object position z(1)
+set current camera 1
+set camera to follow x#,y#,z#,a#,-115,135,10.0,0
+set current camera 0
+
+rem Handle camera collision within circle
+a#=atanfull(x#,z#)
+d#=sqrt((x#*x#)+(z#*z#))
+if d#>500 then x#=sin(a#)*500 : z#=cos(a#)*500 : position object 1,x#,y#,z#
+
+rem Slowly move camera out
+if camdist#<100.0 then camdist#=camdist#+0.1
+
+rem Slowly rotate sphere room
+xrotate object 3,wrapvalue(object angle x(3)+0.1)
+yrotate object 3,wrapvalue(object angle y(3)+0.2)
+zrotate object 3,wrapvalue(object angle z(3)+0.3)
+
+rem Hover the orb around center
+v#=wrapvalue(v#+0.5) : h#=wrapvalue(h#+2.0)
+position object 4,sin(v#)*-750,100+(cos(h#)*100),cos(v#)*-750 : yrotate object 4,v#+60
+position light 1,sin(v#)*-800,100+(cos(h#)*100),cos(v#)*-800
+position light 0,sin(v#)*-500,100+(cos(h#)*100),cos(v#)*-500
+position camera 0,sin(v#)*(camdist#*7.0),200+(cos(h#)*100),cos(v#)*(camdist#*7.0)
+point camera 0,x#,y#+100,z#
+
+rem Fire light
+position object 999,0,200+(cos(h#+10)*150),sin(h#+10)*150
+position light 7,0,200+(cos(h#)*150),sin(h#)*150
+
+rem Emit particles around rim
+for t=7 to 28
+ r#=wrapvalue(r#+0.5)
+ rotate object t,r#,r#*2,r#*3
+ position object t,cos(r#+t)*500,0,sin(r#+t)*500
+next t
+
+rem Show Framerate
+center text (640-16)-(((640-16)-(320+48))/2),20,"Use Arrow Keys"
+text 20,screen height()-40,desc$
+fps$="DBPro Fps: "+str$(screen fps())
+text screen width()-20-text width(fps$),screen height()-40,fps$
+
+rem Update screen
+sync
+
+rem End loop
+loop

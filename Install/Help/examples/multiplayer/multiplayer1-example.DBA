@@ -1,0 +1,71 @@
+rem Multiplayer Showcase
+
+rem Load backdrop and blob
+load image "face.bmp",1 : load image "blob.bmp",2
+
+rem Start net game
+text 20,20,"Getting net game.." : sync
+
+rem Init
+sync on : sync rate 80 : draw to back
+
+rem Start net game
+PlayerNumber=default net game("gamename","playername",4,1)
+if net game exists()=1
+
+ rem Show name of player as Window Title
+ if PlayerNumber=1
+  set window title "HOST Player "+str$(PlayerNumber)
+ else
+  set window title "CLIENT Player "+str$(PlayerNumber)
+ endif
+
+ rem Launch three more sessions as a demo
+ if PlayerNumber=1
+  cls 0
+  okok=0
+  while okok=0
+   text 20,20,"Make sure Firewall is configured."
+   text 20,35,"Launch More MP.EXE clients to"
+   text 20,50,"see multiplayer in action!"
+   text 20,65,"Remember to enter your local IP"
+   text 20,80,"to HOST or JOIN a network game"
+   text 20,95,"(i.e. 192.168.0.1)"
+   text 20,110,"Press Any Key"
+   tscancode=scancode()
+   if tscancode=31 then okok=1
+   if tscancode<>0 then okok=2
+   sync
+  endwhile
+ endif
+
+ rem Main loop
+ do
+
+  rem Draw Backdrop and handle player blob
+  paste image 1,0,0
+  send net message integer 0,mousex()+(mousey()*640)
+  sprite PlayerNumber, mousex()-32, mousey()-32, 2
+
+  rem Draw Others
+  get net message
+  while net message exists()=1
+   PositionValue=net message integer()
+   OtherNumber=net message player from()
+   OtherY=PositionValue/640
+   OtherX=PositionValue-(OtherY*640)
+   sprite OtherNumber, OtherX, OtherY, 2
+   get net message
+  endwhile
+
+  rem Update and/or Quit key
+  sync : if escapekey()=1 then exit
+
+ loop
+
+ rem End net game
+ free net game
+
+else
+ do : cls 0 : center text 160,113,"COULD NOT CREATED NET GAME" : sync : loop
+endif

@@ -1,0 +1,138 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\..\main.htm"><img src="..\..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\commands.htm"><img src="..\..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\..\examples.htm"><img src="..\..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\documents.htm"><img src="..\..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\..\index.htm"><img src="..\..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR><BR><pre><FONT FACE=Courier SIZE=2>rem Bitmap Showcase
+
+rem Standard Setup Code for all examples
+sync on : sync rate 60 : draw to back
+set text font "arial" : set text size 20
+set text to bold : set text transparent
+
+rem Load backdrop
+load bitmap "foliage.jpg"
+get image 1,0,0,640,480
+
+rem Produce Title
+ink rgb(0,0,0),0 : center text (screen width()/2)+1,7,"BMP DDS DIB JPG PNG RLE TGA"
+ink rgb(255,255,255),0 : center text screen width()/2,6,"BMP DDS DIB JPG PNG RLE TGA"
+
+rem Create offscreen sprite
+set sprite 1,0,1
+set sprite alpha 1,128
+offset sprite 1,(640-96)/4,(450-96)/4
+size sprite 1,(640-96)/2,(450-96)/2
+sprite 1,320,48+((450-96)/2),1
+
+rem Create offscreen bitmap
+create bitmap 2,640,480
+set current bitmap 0
+
+rem Main loop
+do
+
+rem Provide backdrop to visual screen
+set current bitmap 2
+sprite 2,320,240,1
+sr#=350+(cos(a#)*10)
+rotate sprite 2,sr#
+size sprite 2,1000,800
+offset sprite 2,512,384
+set sprite alpha 2,100
+set sprite 2,0,0
+paste sprite 2,320,240
+sprite 2,-2000,-2000,1
+set current bitmap 0
+copy bitmap 2,48,48,640-48,450-48,0,48,48,640-48,450-48
+
+rem Rotate sprite
+a#=wrapvalue(a#+2)
+r#=350+(cos(a#)*10)
+rotate sprite 1,r#
+set sprite alpha 1,128
+sprite 1,320,48+((450-96)/2),1
+set sprite 1,0,0
+s#=s#+0.5 : if s#>100 then s#=100
+size sprite 1,((640-96)/2)*(s#/100.0),((450-96)/2)*(s#/100.0)
+
+rem Show filename
+ink rgb(255,255,255),0
+center text 320,350,file$
+
+rem Show Buttons
+over=0
+for but=1 to 3
+ for high=0 to 1
+  if high=0 then ink rgb(20,20,20),0 : bx=-1 : by=-1
+  if high=1 then ink rgb(100,200,100),0 : bx=0 : by=0
+  if high=1 and mousey()>420 and mousey()<460
+   if but=1 and abs(mousex()-170)<50 then ink rgb(255,255,255),0 : over=1
+   if but=2 and abs(mousex()-320)<50 then ink rgb(255,255,255),0 : over=2
+   if but=3 and abs(mousex()-470)<50 then ink rgb(255,255,255),0 : over=3
+  endif
+  if but=1 then but$="PREV"
+  if but=2 then but$="NEXT"
+  if but=3 then but$="EXIT"
+  center text 320+bx+((but-2)*150),420+by,but$
+ next high
+next but
+
+rem Controls
+if mouseclick()=1
+ if once=0
+  once=1
+  if over=1 then pic=pic-1 : picload=1 : s#=0
+  if over=2 then pic=pic+1 : picload=1 : s#=0
+  if picload=1
+   picload=0
+   if pic<0 then pic=6
+   if pic>6 then pic=0
+   if pic=0 then file$="2DFiles\logo.bmp"
+   if pic=1 then file$="2DFiles\logo.dds"
+   if pic=2 then file$="2DFiles\logo.dib"
+   if pic=3 then file$="2DFiles\logo.jpg"
+   if pic=4 then file$="2DFiles\logo.png"
+   if pic=5 then file$="2DFiles\logo.rle"
+   if pic=6 then file$="2DFiles\logo.tga"
+   load bitmap file$,1
+   if bitmap exist(1)=1
+    get image 1,0,0,bitmap width(1),bitmap height(1),1
+    set current bitmap 0
+    delete bitmap 1
+   endif
+  endif
+  if over=3 then end
+ endif
+else
+ once=0
+endif
+
+rem Update screen
+sync
+
+rem End loop
+loop</pre></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>

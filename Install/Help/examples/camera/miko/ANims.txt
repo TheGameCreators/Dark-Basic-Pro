@@ -1,0 +1,35 @@
+Anims
+
+
+
+00 - 59 : Look, Blow Kiss
+60 - 66 : Ready With Rifle
+67 - 73 : Ready With Pistol
+74 - 83 : Slash With Blade (LOW)
+84 - 101 : Walk
+102 - 119 : Walk With Weapon
+120 - 137 : Sneak With Rifle
+138 - 155 : Stalk With Pistol
+156 - 173 : Overhead Slash With Blade (Arc)
+174 - 183 : Run
+184 - 193 : Run With Rifle (Safe)
+194 - 203 : Run With Rifle (Aimed)
+204 - 213 : Run With Pistol
+214 - 224 : Running Slash With Blade (Arc)
+225 - 238 : Crouch
+239 - 245 : Crouched Rifle Fire/ReCoil
+246 - 252 : Crouched Pistol Fire/ReCoil
+253 - 268 : Crouched Stab With Blade (LOW)
+269 - 300 : Crouched Stalk
+301 - 316 : Crouched Stalk With Rifle
+317 - 332 : Crouched Stalk With Pistol
+333 - 348 : Crouched Stalk, Stab With Blade (LOW)
+349 - 365 : Free Fall
+366 - 370 : Free Fall With Pistol
+371 - 377 : Free Fall With Rifle
+378 - 388 : Free Fall Slash With Blade (MID)
+389 - 400 : Climb Ladder
+401 - 415 : Jump, Land.
+416 - 435 : Die Standing
+436 - 465 : Die Falling
+466 - 480 : Die Crouched
