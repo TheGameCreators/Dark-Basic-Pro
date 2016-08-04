@@ -1,0 +1,9 @@
+rem Extra Source File
+rem Attached to Main Program
+rem (using the #INCLUDE command)
+
+FUNCTION ExtraFunction
+ PRINT "Hello - I am an Extra Function!"
+ PRINT "Hit Any Key"
+ WAIT KEY
+ENDFUNCTION

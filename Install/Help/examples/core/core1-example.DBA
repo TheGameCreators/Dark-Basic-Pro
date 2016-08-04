@@ -1,0 +1,100 @@
+rem Math Showcase
+prettybackdrop()
+
+rem Standard Setup Code for all examples
+set text font "arial" : set text size 20
+set text to bold : set text transparent
+
+rem TITLE
+center text screen width()/2,2,"MATH OPERATIONS"
+set cursor 0,40 : set text size 14
+
+rem VARIABLE DATA TYPES
+r as integer : a as integer : b as integer
+`r as float : a as float : b as float
+`r as boolean : a as boolean : b as boolean
+`r as byte : a as byte : b as byte
+`r as word : a as word : b as word
+`r as dword : a as dword : b as dword
+
+rem LITERAL RADIX FORMS (binary, decimal, octal, hexidecimal)
+a=5
+b=%1011
+b=11
+b=0x0B
+b=0c13
+
+rem VARIABLES
+print "WHERE a=";a;" b=";b
+print
+
+rem BITWISE COMMANDS
+print "BITWISE OPERATIONS"
+r = a >> b : print "SHIFT a >> b = ";r
+r = a << b : print "SHIFT a << b = ";r
+r = a && b : print "AND   a && b = ";r
+r = a || b : print "OR    a || b = ";r
+r = a ~~ b : print "XOR   a ~~ b = ";r
+r = a .. b : print "NOT   a .. b = ";r
+print
+
+rem LOGIC OPERATORS
+print "LOGIC OPERATIONS"
+print "IF a AND b is "; : if a and b then print "TRUE" else print "FALSE"
+print "IF a OR b is "; : if a or b then print "TRUE" else print "FALSE"
+print "IF NOT b is "; : if not b then print "TRUE" else print "FALSE"
+print "IF a = b is "; : if a=b then print "TRUE" else print "FALSE"
+print "IF a <> b is "; : if a<>b then print "TRUE" else print "FALSE"
+print "IF a > b is "; : if a>b then print "TRUE" else print "FALSE"
+print "IF a >= b is "; : if a>=b then print "TRUE" else print "FALSE"
+print "IF a < b is "; : if a<b then print "TRUE" else print "FALSE"
+print "IF a <= b is "; : if a<=b then print "TRUE" else print "FALSE"
+print
+
+rem MATHS
+print "MATH OPERATIONS"
+r = a ^ b : print "a ^ b = ";r;"     ";
+r = a ^ 4 : print "a ^ 4 = ";r;"     ";
+r = a ^ a : print "a ^ a = ";r
+r = a / b : print "a / b = ";r;"     ";
+r = a / 4 : print "a / 4 = ";r;"     ";
+r = a / a : print "a / a = ";r
+r = a %% b : print "a %% b = ";r;"     ";
+r = a %% 4 : print "a %% 4 = ";r;"     ";
+r = a %% a : print "a %% a = ";r
+r = a * b : print "a * b = ";r;"     ";
+r = a * 4 : print "a * 4 = ";r;"     ";
+r = a * a : print "a * a = ";r
+r = a - b : print "a - b = ";r;"     ";
+r = a - 4 : print "a - 4 = ";r;"     ";
+r = a - a : print "a - a = ";r
+r = a + b : print "a + b = ";r;"     ";
+r = a + 4 : print "a + 4 = ";r;"     ";
+r = a + a : print "a + a = ";r;
+
+rem INC/DEC
+inc a : inc a,4
+dec b : dec b,4
+
+rem FOR NEXT
+a=0 : for t=1 to 50000 : a=a+1 : next t
+
+rem Wait for a key
+wait key
+end
+
+rem Data Ranges
+rem Integer = –2,147,483,648 to 2,147,483,647
+rem Float = 3.4E +/- 38 (7 digits)
+rem Boolean = 0 to 255
+rem Byte = 0 to 255
+rem Word = 0 to 65,535
+rem DWord = 0 to 4,294,967,295
+rem Double Integer = –9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+rem Double Float = 1.7E +/- 308 (15 digits)
+
+function prettybackdrop()
+ set current bitmap 0
+ box 0,0,640,480,rgb(0,128,128),rgb(128,0,0),rgb(128,0,128),rgb(128,128,0)
+ set text transparent
+endfunction

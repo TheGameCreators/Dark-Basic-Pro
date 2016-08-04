@@ -1,0 +1,128 @@
+<html>
+<head>
+<title>DarkBASIC Professional Help File</title>
+</head>
+<body background="..\..\gfx\dbpro_bg.jpg">
+<!-- Page Header -->
+<center><table width="340" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td><img src="..\..\gfx\dbph_head_1.jpg" width="102" height="51"></td>
+	<td><a href="..\..\main.htm"><img src="..\..\gfx\dbph_head_2.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\commands.htm"><img src="..\..\gfx\dbph_head_3.jpg" width="50" height="51" border="0"></a></td>
+	<td><a href="..\..\examples.htm"><img src="..\..\gfx\dbph_head_4.jpg" width="47" height="51" border="0"></a></td>
+	<td><a href="..\..\documents.htm"><img src="..\..\gfx\dbph_head_5.jpg" width="46" height="51" border="0"></a></td>
+	<td><a href="..\..\index.htm"><img src="..\..\gfx\dbph_head_6.jpg" width="56" height="51" border="0"></a></td>
+</tr>
+</table></center>
+<font face="Verdana">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr><td>
+<BR><BR><pre><FONT FACE=Courier SIZE=2>rem System Showcase
+
+` This demo showcases the db2dwipes.dll functions
+` Please note that the transition library supports:
+` * Screen resolutions of 640x480, 800x600, and 1024x768
+` * Screen bit depths of 16, 24, or 32 bits.
+`
+` Copyright © 2001
+` Dark Basic Software Limited
+` All Rights Reserved
+`
+` TRANSITIONS BY NUMBER
+`      1 : TransitionProc := BumpDown;
+`      2 : TransitionProc := BumpUp;
+`      3 : TransitionProc := BumpLeft;
+`      4 : TransitionProc := BumpRight;
+`      5 : TransitionProc := TransitionDown;
+`      6 : TransitionProc := TransitionUp;
+`      7 : TransitionProc := TransitionLeft;
+`      8 : TransitionProc := TransitionRight;
+`      9 : TransitionProc := SpiralClockUL;
+`      10 : TransitionProc := SpiralClockBR;
+`      11 : TransitionProc := SpiralCounterClockUL;
+`      12 : TransitionProc := SpiralCounterClockBR;
+`      13 : TransitionPRoc := RandomBlocks;
+`      14 : TransitionProc := HorizontalBlocksDown;
+`      15 : TransitionProc := HorizontalBlocksUp;
+`      16 : TransitionProc := VerticalBlocksLeft;
+`      17 : TransitionProc := VerticalBlocksRight;
+`      18 : TransitionProc := CrossFade;
+`      99 : TransitionProc := CustomBlocks;
+`      100 : TransitionProc := CustomBlocksReverse;
+`
+
+rem You can change the bit depth here, if you like. Be sure your video adapter supports it.
+bitdepth = screen depth()
+
+rem this is the transition speed
+framecount = 90
+
+sync rate 60
+sync on
+backdrop off
+
+rem Load Ripple DLL
+load dll "db2dwipes.dll",1
+
+rem these are the two images we will use for the demo. Please note that we need three bitmaps:
+rem image 1, image 2, and the display bitmap, to show the current transition
+
+load bitmap "screen1.jpg",0
+make memblock from bitmap 1,0
+make memblock from bitmap 2,0
+load bitmap "screen2.jpg",0
+make memblock from bitmap 3,0
+
+s1 = get memblock ptr(1)+12
+s2 = get memblock ptr(2)+12
+s3 = get memblock ptr(3)+12
+
+rem we are going to flip-flop the source and final bitmap pointers, so we can have smooth transitions from
+rem one to another.
+
+StartImagePtr=s3
+FinalImagePtr=s2
+
+for TNum = 1 to 18: rem 18
+  ` flip the source and final image pointers, so the transitions won't reset on us - this looks nicer.
+
+   TempPtr=StartImagePtr
+   StartImagePtr=FinalImagePtr
+   FinalImagePtr=TempPtr
+
+   ` When we get to #18, the last in this loop, we are going to speed it up.
+   ` #18 is the crossfade function, and in 16 bit, there is a max number of
+   ` shade transitions of 32, so why waste CPU time? It is also the slowest
+   ` transition because EVERY pixel is averaged against another for EVERY
+   ` frame. BIG Data throughput!!!
+
+   if TNum = 18 then FrameCount = 32
+
+   ` tell the DLL what we want to do, and with what images
+   call dll 1, "Init_Transition",TNum,640,480,bitdepth,framecount,StartImagePtr,FinalImagePtr
+
+   ` the transition happens here
+   for i = 1 to framecount
+      call dll 1,"Next_Transition_Frame",s1
+      make bitmap from memblock 0,1
+      sync
+   next i
+Next TNum
+
+delete memblock 1
+delete memblock 2
+delete memblock 3
+
+call dll 1,"Free_Screens"
+delete dll 1
+
+end</pre></td></tr></table>
+<br>
+<!-- Page Footer -->
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+	<td align="center"><img src="..\..\gfx\dbph_foot_1.jpg" width="340" height="38"></td>
+</tr>
+</table>
+</body>
+</html>
